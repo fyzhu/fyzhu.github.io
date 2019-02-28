@@ -14,7 +14,7 @@ tags:
 拉布拉多 
 阿拉斯加 
 萨摩耶
-![萨摩耶](https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1256437552,306933866&fm=173&app=25&f=JPEG?w=640&h=364&s=ADCB87584A277A0158E48455030060F7 ''萨摩耶'')
+![萨摩耶](https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1256437552,306933866&fm=173&f.jpg ''萨摩耶'')
 
 柴犬
 
