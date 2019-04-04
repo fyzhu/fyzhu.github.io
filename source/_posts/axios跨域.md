@@ -1,5 +1,5 @@
 ---
-title: axios跨越
+title: axios跨域
 date: 2019-03-12 11:27:41
 tags: question
 ---
