@@ -3,7 +3,7 @@ title: 人性的弱点1之用户成长体系
 url: 104.html
 id: 104
 categories:
-  - 心理学
+  - psychology
 date: 2017-10-27 15:12:54
 tags:
 ---

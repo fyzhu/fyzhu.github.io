@@ -2,7 +2,7 @@
 title: php 线程安全和非线程安全的区别
 date: 2019-02-18 16:30:18
 categories:
-  - 技术
+  - technology
   - back-end
 tags: php
 ---

@@ -1,5 +1,5 @@
 ---
-title: '悟以往之不谏,知来者之可追'
+title: '悟以往之不谏，知来者之可追'
 url: 100.html
 id: 100
 categories:

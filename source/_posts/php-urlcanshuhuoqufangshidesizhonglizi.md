@@ -3,8 +3,8 @@ title: PHP URL参数获取方式的四种例子
 url: 65.html
 id: 65
 categories:
-  - 技术
-  - 后端
+  - technology
+  - back-end
 date: 2017-09-18 13:32:54
 tags:
 ---

@@ -3,7 +3,7 @@ title: 保时捷panamera官方宣传片
 url: 146.html
 id: 146
 categories:
-  - 生活
+  - AD
 date: 2018-01-25 13:58:29
 tags:
   - AD
@@ -14,7 +14,10 @@ tags:
 # 一
 保时捷panamera官方宣传片 courage changes everything(一往无前) 时长2:11配音版 1:16配音版（中文字幕） 
 
+
+<iframe height=498 width=510 src='http://player.youku.com/embed/XMTYxNjA0MTk2NA==' style='width:498px;height:510px' frameborder=0 'allowfullscreen'></iframe>
 http://player.youku.com/embed/XMTYxNjA0MTk2NA== 
+ 
 # 二
 30秒配音版（中文字幕） 
 

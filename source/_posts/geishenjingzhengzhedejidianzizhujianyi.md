@@ -3,7 +3,7 @@ title: 给神经症者的几点自助建议（转载）
 url: 216.html
 id: 216
 categories:
-  - 心理学
+  - psychology
 date: 2018-04-03 19:19:32
 tags:
 ---
