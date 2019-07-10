@@ -1,7 +1,10 @@
 ---
 title: centos关闭防火墙
-date: 2029-03-11 22:06:14
-tags: question
+date: 2019-03-11 22:06:14
+tags: 
+- question
+- server
+- centos
 ---
 参考文档
 防火墙设置
