@@ -8,7 +8,7 @@ subtitle:
 description:
 keywords:
 author: Yvan Zhu
-language:
+language: zh-CN
 timezone:
 
 # URL
@@ -73,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -82,3 +82,14 @@ deploy:
   repo: git@47.93.223.28:/home/git/hexo.git
   branch: master
 
+live2d:
+  enable: true   #开启宠物
+  scriptFrom: local
+  model:
+    use: live2d-widget-model-shizuku
+  display:
+    position: right   #指定宠物显示的位置
+    width: 150    #指定宠物显示的宽度
+    height: 300   #指定宠物显示的高度
+  mobile:
+    show: true  #是否在手机上显示
