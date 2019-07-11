@@ -14,7 +14,7 @@ tags:
 
 # 一
 30秒配音版（中文字幕） 
-<iframe height=498 width=510 src="//player.bilibili.com/player.html?aid=8792900&cid=14502121&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe height=498 width=610 src="//player.bilibili.com/player.html?aid=8792900&cid=14502121&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 https://www.bilibili.com/video/av8792900/
 
