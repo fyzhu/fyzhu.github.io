@@ -95,7 +95,7 @@ live2d:
     show: true  #是否在手机上显示
 # Search 
 search:
-  path: ./public/search.xml
-  field: post
-  format: html
+  path: search.xml
+  field: post # 搜索范围，默认是 post，还可以选择 page、all，设置成 all 表示搜索所有页面
+  format: html 
   limit: 10000
