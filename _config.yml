@@ -93,3 +93,9 @@ live2d:
     height: 300   #指定宠物显示的高度
   mobile:
     show: true  #是否在手机上显示
+# Search 
+search:
+  path: ./public/search.xml
+  field: post
+  format: html
+  limit: 10000
