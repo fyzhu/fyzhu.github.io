@@ -2,11 +2,12 @@
 title: Apache 配置虚拟主机三种方式
 url: 92.html
 id: 92
+tags:
+  - apache
 categories:
   - 技术
   - 服务器
 date: 2017-09-28 15:41:05
-tags:
 ---
 
 一、基于IP 1. 假设服务器有个IP地址为192.168.1.10，使用ifconfig在同一个网络接口eth0上绑定3个IP：

@@ -2,11 +2,12 @@
 title: Apache 配置虚拟目录、虚拟主机
 url: 61.html
 id: 61
+tags:
+  - apache
 categories:
   - 技术
   - 服务器
 date: 2017-09-14 12:06:00
-tags:
 ---
 
 修改httpd.conf的配置 通过whereis httpd找到这个文件 我的在/etc/httpd/conf下 一、虚拟目录 找到<IfModule>这块，加入下面的代码
