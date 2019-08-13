@@ -7,8 +7,6 @@ categories:
 date: 2018-01-25 13:58:29
 tags:
   - AD
-  - 广告
-  - 视频
   - video
 ---
 
