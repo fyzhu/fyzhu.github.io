@@ -13,6 +13,3 @@ en.dreamlist.cn
 report
 
 #### LGBT
-<li>
-test
-</li>
