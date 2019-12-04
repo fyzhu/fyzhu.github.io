@@ -1,14 +1,13 @@
 ---
-title: 让centos支持远程访问mysql
+title: mysql支持远程访问
 url: 71.html
 id: 71
 categories:
   - technology
-  - Server
+  - database
 date: 2017-09-19 11:23:48
 tags:
   - mysql
-  - centos
 ---
 Mysql为了安全性，在默认情况下用户只允许在本地登录，可是在有此情况下，还是需要使用用户进行远程连接，因此为了使其可以远程需要进行如下操作：
 
