@@ -5,8 +5,8 @@ id: 92
 tags:
   - apache
 categories:
-  - 技术
-  - 服务器
+  - technology
+  - Server
 date: 2017-09-28 15:41:05
 ---
 

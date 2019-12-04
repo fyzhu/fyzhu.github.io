@@ -3,7 +3,7 @@ title: 软件为什么不能是秒更的呢
 url: 45.html
 id: 45
 categories:
-  - Idea
+  - idea
 date: 2017-09-06 11:35:55
 tags:
 ---

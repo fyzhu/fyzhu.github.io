@@ -3,8 +3,8 @@ title: pm2实现开机自动启动
 url: 170.html
 id: 170
 categories:
-  - 技术
-  - 服务器
+  - technology
+  - Server
 date: 2018-01-25 18:52:20
 tags:
   - pm2

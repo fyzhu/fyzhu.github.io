@@ -1,6 +1,8 @@
 ---
 title: miniclass.com.cn
 date: 2019-03-06 21:37:50
+categories:
+  - idea
 tags: idea
 ---
 

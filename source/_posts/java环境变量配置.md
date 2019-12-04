@@ -1,8 +1,12 @@
 ---
 title: java环境变量配置
 date: 2019-08-10 20:17:12
+categories:
+  - technology
+  - back-end
 tags:
-- config
+  - config
+  - java
 ---
 # window10下环境变量配置
 

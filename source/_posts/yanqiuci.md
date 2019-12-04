@@ -3,7 +3,7 @@ title: 摸鱼儿·雁丘词
 url: 223.html
 id: 223
 categories:
-  - 文学
+  - literature
 date: 2018-04-09 22:27:23
 tags:
 ---

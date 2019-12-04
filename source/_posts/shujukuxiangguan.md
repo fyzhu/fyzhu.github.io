@@ -3,7 +3,8 @@ title: 数据库相关
 url: 88.html
 id: 88
 categories:
-  - 技术
+  - technology
+  - database
 date: 2017-09-28 15:39:52
 tags:
 ---

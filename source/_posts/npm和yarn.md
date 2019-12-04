@@ -6,6 +6,7 @@ tags:
   - yarn
   - question
 categories:
+  - technology
   - front-end
 ---
 ## 全局操作

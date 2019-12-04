@@ -3,8 +3,8 @@ title: mysql配置用户密码
 url: 73.html
 id: 73
 categories:
-  - 技术
-  - 服务器
+  - technology
+  - database
 date: 2017-09-19 11:30:27
 tags: mysql
 ---

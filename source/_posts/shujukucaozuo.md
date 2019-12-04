@@ -3,8 +3,8 @@ title: 数据库操作
 url: 97.html
 id: 97
 categories:
-  - 技术
-  - 数据库
+  - technology
+  - database
 date: 2017-09-29 10:55:56
 tags:
 ---

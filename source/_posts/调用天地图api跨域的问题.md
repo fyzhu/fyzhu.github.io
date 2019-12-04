@@ -1,6 +1,9 @@
 ---
 title: 调用天地图api跨域的问题
 date: 2019-07-22 10:42:21
+categories:
+  - technology
+  - GIS
 tags:
  - 跨域
  - map

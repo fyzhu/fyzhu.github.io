@@ -3,8 +3,8 @@ title: 'mariadb异常 mysqld: Out of memory Centos 创建swap分区解决(转载
 url: 236.html
 id: 236
 categories:
-  - 技术
-  - 数据库
+  - technology
+  - database
 date: 2018-05-10 14:45:20
 tags:
 ---

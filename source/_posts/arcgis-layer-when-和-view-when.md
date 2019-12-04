@@ -1,6 +1,9 @@
 ---
 title: arcgis layer.when 和 view.when 以及 MapImageLayer
 date: 2019-02-17 19:54:54
+categories:
+  - technology
+  - GIS
 tags: arcgis
 ---
 MapImageLayer加载完之后需要view.goto(layer.fullExtent)才能显示

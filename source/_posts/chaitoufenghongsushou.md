@@ -3,7 +3,7 @@ title: 钗头凤·红酥手
 url: 67.html
 id: 67
 categories:
-  - 文学
+  - literature
 date: 2017-09-19 11:09:13
 tags:
 ---

@@ -1,6 +1,9 @@
 ---
-title: apache 配置文件详解
+title: apache 允许其他主机访问
 date: 2019-02-21 13:13:05
+categories:
+  - technology
+  - Server
 tags:
 - apache
 ---

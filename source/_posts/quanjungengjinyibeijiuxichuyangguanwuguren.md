@@ -3,7 +3,7 @@ title: 劝君更尽一杯酒，西出阳关无故人
 url: 127.html
 id: 127
 categories:
-  - 文学
+  - literature
 date: 2017-11-22 11:51:45
 tags:
 ---

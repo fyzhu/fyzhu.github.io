@@ -3,10 +3,10 @@ title: 'mysql编码问题导致插入中文报错Incorrect string value:'
 url: 249.html
 id: 249
 categories:
-  - 技术
-  - 数据库
+  - technology
+  - database
 date: 2018-05-22 23:35:28
-tags:
+tags: mysql
 ---
 
 设置数据库编码为中文

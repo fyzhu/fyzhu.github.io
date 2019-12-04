@@ -1,6 +1,9 @@
 ---
 title: shell命令
 date: 2019-09-02 09:26:19
+categories:
+  - technology
+  - Server
 tags: shell
 ---
 Bash(Bourne Again Shell)
