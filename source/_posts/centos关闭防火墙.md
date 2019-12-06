@@ -1,9 +1,10 @@
 ---
 title: centos关闭防火墙
 date: 2019-03-11 22:06:14
+categories:
+  - technology
+  - Server
 tags: 
-- question
-- server
 - centos
 ---
 参考文档

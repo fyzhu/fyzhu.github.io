@@ -1,9 +1,9 @@
 ---
-title: English Words (urb, urban, suburb, suburban lodge, cabin)
+title: urb, urban, suburb, suburban lodge, cabin
 url: 9.html
 id: 9
 categories:
-  - 英语
+  - english
 date: 2017-08-23 12:01:53
 tags: english
 ---

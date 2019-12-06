@@ -4,7 +4,6 @@ date: 2019-08-10 22:14:39
 tags:
   - npm
   - yarn
-  - question
 categories:
   - technology
   - front-end
