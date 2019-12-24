@@ -13,6 +13,13 @@ tags:
 $ pm2 start ./build/server.js --name alisaname
 
 ```
+参数
+--name
+--watch
+启动npm命令
+`pm2 start npm --name "xxx" -- run start/dev
+`
+
 #### 查看详细状态信息
 ```
 $ pm2 show  (appname|id)
