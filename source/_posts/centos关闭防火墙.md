@@ -9,10 +9,12 @@ tags:
 ---
 参考文档
 防火墙设置
-
-#停止firewall服务 systemctl stop firewalld.service
-
-#禁止firewall开机启动 systemctl disable firewalld.service
+查看所有打开的端口： firewall-cmd --zone=public --list-ports
+启动： systemctl start firewalld
+关闭： systemctl stop firewalld
+查看状态： systemctl status firewalld 
+开机禁用  ： systemctl disable firewalld
+开机启用  ： systemctl enable firewalld
 
 
 
@@ -32,3 +34,6 @@ SELINUX=disabled #增加
 #使配置立即生效 setenforce 0
 
 iptables
+
+参考文档
+https://www.cnblogs.com/moxiaoan/p/5683743.html

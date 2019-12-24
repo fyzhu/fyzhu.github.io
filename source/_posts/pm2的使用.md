@@ -1,5 +1,5 @@
 ---
-title: pm2的使用
+title: pm2的基本使用
 date: 2019-08-25 22:00:49
 categories:
   - technology

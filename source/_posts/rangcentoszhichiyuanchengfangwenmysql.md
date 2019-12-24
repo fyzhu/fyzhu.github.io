@@ -13,49 +13,49 @@ Mysql为了安全性，在默认情况下用户只允许在本地登录，可是
 
 一、允许root用户在任何地方进行远程登录，并具有所有库任何操作权限，具体操作如下：
 在本机先使用root用户登录mysql：
-mysql -u root -p"youpassword"
+`mysql -u root -p"youpassword"`
 进行授权操作：
-mysql>GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'youpassword' WITH GRANT OPTION;
+`mysql>GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'youpassword' WITH GRANT OPTION;`
 重载授权表：
-FLUSH PRIVILEGES;
+`FLUSH PRIVILEGES;`
 退出mysql数据库：
-exit
+`exit`
 
 二、允许root用户在一个特定的IP进行远程登录，并具有所有库任何操作权限，具体操作如下：
 在本机先使用root用户登录mysql：
-mysql -u root -p"youpassword"
+`mysql -u root -p"youpassword"`
 进行授权操作：
-GRANT ALL PRIVILEGES ON *.* TO root@"172.16.16.152" IDENTIFIED BY "youpassword" WITH GRANT OPTION;
+`GRANT ALL PRIVILEGES ON *.* TO root@"172.16.16.152" IDENTIFIED BY "youpassword" WITH GRANT OPTION;`
 重载授权表：
-FLUSH PRIVILEGES;
+`FLUSH PRIVILEGES;`
 退出mysql数据库：
-exit
+`exit`
 
 三、允许root用户在一个特定的IP进行远程登录，并具有所有库特定操作权限，具体操作如下：
 在本机先使用root用户登录mysql：
-mysql -u root -p"youpassword"
+`mysql -u root -p"youpassword"`
 进行授权操作：
-GRANT select，insert，update，delete ON *.* TO root@"172.16.16.152" IDENTIFIED BY "youpassword";
+`GRANT select，insert，update，delete ON *.* TO root@"172.16.16.152" IDENTIFIED BY "youpassword";`
 重载授权表：
-FLUSH PRIVILEGES;
+`FLUSH PRIVILEGES;`
 退出mysql数据库：
-exit
+`exit`
 
 四、删除用户授权，需要使用REVOKE命令，具体命令格式为：
-REVOKE privileges ON 数据库[.表名] FROM user-name;
+`REVOKE privileges ON 数据库[.表名] FROM user-name;`
 具体实例，先在本机登录mysql:
-mysql -u root -p"youpassword"
+`mysql -u root -p"youpassword"`
 进行授权操作：
-GRANT select，insert，update，delete ON TEST-DB TO test-user@"172.16.16.152" IDENTIFIED BY "youpassword";
+`GRANT select，insert，update，delete ON TEST-DB TO test-user@"172.16.16.152" IDENTIFIED BY "youpassword";`
 再进行删除授权操作：
-REVOKE all on TEST-DB from test-user;
+`REVOKE all on TEST-DB from test-user;`
 ****注：该操作只是清除了用户对于TEST-DB的相关授权权限，但是这个“test-user”这个用户还是存在。
 最后从用户表内清除用户：
-DELETE FROM user WHERE user="test-user";
+`DELETE FROM user WHERE user="test-user";`
 重载授权表：
-FLUSH PRIVILEGES;
+`FLUSH PRIVILEGES;`
 退出mysql数据库：
-exit
+`exit`
 
 五、MYSQL权限详细分类：
 全局管理权限：

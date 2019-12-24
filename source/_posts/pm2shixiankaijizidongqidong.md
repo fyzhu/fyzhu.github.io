@@ -19,3 +19,6 @@ tags:
 1. 使用pm2启动node ：# pm2 start /home/wwwroot/web.js --watch 
 2. dump这些进程列表：# pm2 save 
 3. 生成自启动脚本：# pm2 startup centos
+
+转载
+https://www.cnblogs.com/chyingp/p/pm2-documentation.html
