@@ -8,4 +8,12 @@ date: 2017-08-25 13:56:37
 tags:
 ---
 
-ES6 nodejs/npm/cnpm/yarn vuejs gulp(grunt) webpack mongoDB git koa(express) pug(jade)/EJS less/sass
+ES6 
+nodejs
+vuejs 
+webpack 
+mongoDB 
+git 
+koa(express) 
+pug(jade)/EJS 
+less/sass

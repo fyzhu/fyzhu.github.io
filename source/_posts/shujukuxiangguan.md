@@ -1,5 +1,5 @@
 ---
-title: 数据库相关
+title: 数据库去重
 url: 88.html
 id: 88
 categories:
