@@ -42,5 +42,5 @@ npm install <package>@latest
 npm update <package>
 
 yarn add <package>
-yarn upgrade <package>
+yarn upgrade <package> --latest
 ```
