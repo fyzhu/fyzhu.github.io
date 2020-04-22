@@ -33,3 +33,9 @@ scp -r ./dist/* root@ip:/www/wwwroot/jd.dreamlist.cn/
 ```
 ssh root@ip
 ```
+#### tail
+```
+-n<行数> 显示文件的尾部 n 行内容
+tail test.log -n 30
+
+```
