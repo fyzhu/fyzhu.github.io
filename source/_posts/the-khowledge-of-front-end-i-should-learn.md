@@ -50,6 +50,6 @@ husky commitizen commitlint git-cz
 ## vue源码228
 mvvm 129-4-8
 
-## 设计模式 / ES6 / TS / 数据结构(js/java) 
+## 设计模式 / ES6 / TS / 数据结构(js/java/c++) 
 
 ## todo 935
