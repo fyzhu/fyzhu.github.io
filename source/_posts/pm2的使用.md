@@ -67,4 +67,22 @@ $ pm2 delete all
 $ pm2 update # Save processes, kill PM2 and restore processes
 $ pm2 save # 保存当前应用列表
 ```
-转载自https://juejin.im/post/5be406705188256dbb5176f9
+### 配置文件 process.pord.json
+```
+{
+    "name": "egg",
+    "script": "server.js",
+    "cwd": "./",
+    "exec_mode": "fork",
+    "watch": false,
+    "ignore_watch": ["tmp"],
+    "env": {
+        "NODE_ENV": "production"
+    },
+    "engines": {
+        "node": ">=7.6"
+    }
+}
+$ pm2 start process.prod.json
+```
+转载自https://juejin.im/post/5be406705188256dbb5176f94
