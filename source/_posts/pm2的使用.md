@@ -62,6 +62,10 @@ $ pm2 delete 0
 // 杀死所有进程
 $ pm2 delete all
 ```
+### 清空日志
+```
+$ pm2 flush
+```
 ### 其他命令
 ```
 $ pm2 update # Save processes, kill PM2 and restore processes
