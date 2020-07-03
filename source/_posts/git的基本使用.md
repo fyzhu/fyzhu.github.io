@@ -33,3 +33,8 @@ git reset HEAD .
 ### 已经 commit 
 git reset --hard HEAD^
 git reset --hard commitid
+
+## 修改已提交的commit注释
+git commit --amend
+
+参考：https://www.jianshu.com/p/098d85a58bf1
