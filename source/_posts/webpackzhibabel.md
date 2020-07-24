@@ -8,5 +8,10 @@ categories:
 date: 2017-08-31 23:17:35
 tags:
 ---
-
-loader: 'babel-loader',//由bael变为babel-loader exclude:\_\_dirname +'/node\_modules/',//这种方式更快 include:\_\_dirname+'/src/',//这种方式更快 // exclude:path.resolve(\_\_dirname ,'node\_modules'), // include:path.resolve(\_\_dirname ,'src'),
+```
+loader: 'babel-loader',//由babel变为babel-loader 
+exclude:__dirname +'/node_modules/',//这种方式更快 
+include:__dirname+'/src/',//这种方式更快  
+exclude:path.resolve(__dirname ,'node_modules'),  
+include:path.resolve(__dirname ,'src'),
+```
