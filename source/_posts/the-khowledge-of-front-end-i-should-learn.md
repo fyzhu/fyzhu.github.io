@@ -1,5 +1,13 @@
+<!--
+ * @Descripttion: 
+ * @version: 1.0
+ * @Author: Yvan Zhu
+ * @Date: 2020-07-23 21:19:26
+ * @LastEditors: Yvan Zhu
+ * @LastEditTime: 2020-08-02 11:47:56
+--> 
 ---
-title: 需要学习的前端知识
+title: 需要学习的知识
 url: 13.html
 id: 13
 categories:
@@ -9,8 +17,14 @@ tags:
 ---
 # 复习复习复习
 ES6 
-nodejs
+typescript 412
 vuejs 
+reactjs (384electron)
+ReactNative
+nodejs
+python
+php/java
+flutter
 webpack 
 mongoDB 
 git 
