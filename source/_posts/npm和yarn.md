@@ -44,3 +44,7 @@ npm update <package>
 yarn add <package>
 yarn upgrade <package> --latest
 ```
+## 配置镜像
+```
+npm config set registry https://registry.npm.taobao.org
+```

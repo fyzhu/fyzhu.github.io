@@ -1,11 +1,3 @@
-<!--
- * @Descripttion: 
- * @version: 1.0
- * @Author: Yvan Zhu
- * @Date: 2020-07-23 21:19:26
- * @LastEditors: Yvan Zhu
- * @LastEditTime: 2020-08-02 11:47:56
---> 
 ---
 title: 需要学习的知识
 url: 13.html
