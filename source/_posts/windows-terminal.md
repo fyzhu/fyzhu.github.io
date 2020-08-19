@@ -6,7 +6,11 @@ date: 2020-08-19 10:35:43
 tags:
 ---
 #### 安装 windows Terminal
+1. windows 应用商店安装
+2. github 下载安装
 #### 安装 powershell 7
+github 下载安装
+
 #### 安装字体
 安装字体，否则乱码
 这里仅推荐一款字体：Fira Code。该字体支持 ligature 连字功能，而且是一款专门为代码显示准备的字体。该字体开源，广受海内外程序员好评！
