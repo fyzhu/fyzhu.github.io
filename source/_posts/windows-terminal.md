@@ -105,7 +105,7 @@ https://zhuanlan.zhihu.com/p/137595941
 https://blog.csdn.net/WPwalter/article/details/100159481
 字体：
 https://sspai.com/post/52907
-vscode 乱码 :
+powershell 乱码，vscode 乱码 :
 https://zhuanlan.zhihu.com/p/51901035
 其他：
 guid 生成工具
