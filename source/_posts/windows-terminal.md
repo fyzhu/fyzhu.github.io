@@ -8,6 +8,7 @@ tags:
 #### 安装 windows Terminal
 1. windows 应用商店安装
 2. github 下载安装
+
 #### 安装 powershell 7
 github 下载安装
 
