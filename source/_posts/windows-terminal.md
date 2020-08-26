@@ -18,18 +18,19 @@ github 下载安装
 下载地址：
 https://link.zhihu.com/?target=https%3A//github.com/tonsky/FiraCode/releases/download/3.1/FiraCode_3.1.zip
 #### 配置 windows Terminal
-guid 需要生成
+guid 需要生成，文章末尾有生成 guid 的网站
 ```
 // 默认的配置就是我们的新 powershell（重要！！！）
 "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
 
 {
-    // Powershell 7.1.0-preview.2 配置
+    // Powershell 7.1.0-preview.6 配置
     "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
     "hidden": false,
     "name": "pwsh",
-    // 注意：一定要写上 -nologo，否则开启 powershll 会有一段话输出，很讨厌！
-    "commandline": "C:/Program Files/PowerShell/7-preview/pwsh.exe -nologo",
+    // -nologo 去掉启动时的logo等信息输出
+    "commandline": "D:/Program Files/PowerShell/7-preview/pwsh.exe -nologo",
+    "icon": "D:/Program Files/PowerShell/7-preview/assets/Powershell_avatar.ico",
     "source": "Windows.Terminal.PowershellCore",
     // 启动菜单一定要设置为 <.>，否则后面重要的一步将会无效！
     "startingDirectory": ".",
@@ -40,8 +41,8 @@ guid 需要生成
     "padding": "5, 5, 20, 25",
     "snapOnInput": true,
     "useAcrylic": false,
-    // 颜色
-    "colorScheme": "Homebrew"
+    // 颜色方案
+    // "colorScheme": "Homebrew"
 },
 ```
 #### 安装 powershell 插件
@@ -105,7 +106,7 @@ https://zhuanlan.zhihu.com/p/137595941
 https://blog.csdn.net/WPwalter/article/details/100159481
 字体：
 https://sspai.com/post/52907
-vscode 乱码 :
+powershell 乱码，vscode 乱码 :
 https://zhuanlan.zhihu.com/p/51901035
 其他：
 guid 生成工具
