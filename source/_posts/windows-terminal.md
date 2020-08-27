@@ -31,7 +31,7 @@ guid 需要生成，文章末尾有生成 guid 的网站
     // -nologo 去掉启动时的logo等信息输出
     "commandline": "D:/Program Files/PowerShell/7-preview/pwsh.exe -nologo",
     "icon": "D:/Program Files/PowerShell/7-preview/assets/Powershell_avatar.ico",
-    "source": "Windows.Terminal.PowershellCore",
+    //"source": "Windows.Terminal.PowershellCore",
     // 启动菜单一定要设置为 <.>，否则后面重要的一步将会无效！
     "startingDirectory": ".",
     // 字体
