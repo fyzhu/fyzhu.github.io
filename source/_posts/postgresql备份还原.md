@@ -10,7 +10,7 @@ categories:
 date: 2019-12-04 13:19:33
 ---
 
-一、备份
+#### 一、备份
 1.命令行下备份为纯文本格式
 切换为postgres用户（linux 命令）
 
@@ -25,7 +25,7 @@ windows下使用-U参数切换用户
 pg_dump -h localhost -U postgres -p 5555 dbname > backupfile.bak
 
 2.pgAdmin 4客户端备份为归档文件格式
-二、还原
+#### 二、还原
 纯文本格式的脚本
 使用psql
 
