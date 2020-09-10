@@ -8,3 +8,10 @@ tags:
 ### migration
 php artisan make:migration create_tasks_table
 php artisan migrate
+
+### model
+php artisan make:model User
+
+### contorller
+
+php artisan make:controller UsersContorller --resource
