@@ -40,16 +40,22 @@ $ mv README.md README
 $ git rm README.md
 $ git add README
 ```
-## git merge
 
 ## git gc
 
-## 创建分支
+## 分支操作
+### 拉取分支
+git fetch
+### 创建分支
 git branch xxx
-
-## 切换分支
+### 切换分支
 git checkout xxx
+### 合并分支
+git merge xxx
 
+## 暂存修改
+git stash
+git stash pop
 ## 放弃修改
 ### 未 add，撤消对文件的修改
 git checkout -- file
