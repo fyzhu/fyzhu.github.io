@@ -2,6 +2,8 @@
 
 #### 介绍
 使用hexo搭建的个人博客
+![图解](https://upload-images.jianshu.io/upload_images/1052511-eaa9a57afa53e37a.jpg)
+#### 命令
 
 hexo s server
 hexo clean
