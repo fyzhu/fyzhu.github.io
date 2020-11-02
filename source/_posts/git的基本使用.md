@@ -22,6 +22,9 @@ git remote set-url --delete [--push] <name> <url>
 git remote [-v | --verbose] show [-n] <name>…​
 git remote prune [-n | --dry-run] <name>…​
 git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)…​]
+
+常用
+git remote add origin git@xxx.com:/home/git/test.git
 ```
 
 ## 检查当前文件状态 
