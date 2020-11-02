@@ -8,6 +8,9 @@ tags: shell
 ---
 Bash(Bourne Again Shell)
 
+#### 新建文件
+touch xxx
+
 #### cp -f 不起作用
 默认cp命令是有别名(alias cp='cp -i')的,无法强制覆盖,即使你用 -f 参数也无法强制覆盖文件。
 ##### 加个反斜杠，可以使用\cp 执行cp命令时不走alias
@@ -33,9 +36,16 @@ scp -r ./dist/* root@ip:/www/wwwroot/jd.dreamlist.cn/
 ```
 ssh root@ip
 ```
-#### tail
+#### tail & head
 ```
 -n<行数> 显示文件的尾部 n 行内容
 tail test.log -n 30
 
 ```
+#### chown
+#### chmod
+#### 查找文件内容
+grep 'test' package.json
+
+#### vim 手册
+vimtutor

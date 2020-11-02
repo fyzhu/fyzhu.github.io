@@ -12,3 +12,6 @@ hexo d deploy
 ### 部署
 yarn d 增量部署
 yarn deploy 全新部署
+
+### 备注
+收集所有需要登录的用户的公钥（id_rsa.pub）文件，把所有公钥导入到 /home/git/.ssh/authorized_keys 文件内，一行一个。
