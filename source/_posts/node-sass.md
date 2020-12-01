@@ -7,7 +7,7 @@ tags:
 ---
 ## 下载慢
 npm config set sass_binary_site https://npm.taobao.org/mirrors/node-sass/
-
+yarn config set sass_binary_site https://npm.taobao.org/mirrors/node-sass/ -g
 参考：https://www.jb51.net/article/122820.htm
 
 ## 报错 
