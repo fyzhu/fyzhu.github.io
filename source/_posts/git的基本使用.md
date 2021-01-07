@@ -61,16 +61,20 @@ git stash
 git stash pop
 ## 放弃修改
 ### 未 add，撤消对文件的修改
+```
 git checkout -- file
 git checkout .
+```
 ### 已经 add，取消暂存的文件
 git reset HEAD file
 git reset HEAD .
 ### 已经 commit 
+```
 git reset --hard HEAD^
 git reset --hard commitid
-
+```
 ## 修改已提交的commit
+```
 git commit --amend
-
+```
 参考：https://www.jianshu.com/p/098d85a58bf1
