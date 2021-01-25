@@ -34,3 +34,22 @@ clear all database
 ```
 flushall
 ```
+获取类型
+```
+type key
+```
+获取哈希表中的所有域（field）
+```
+HKEYS key 
+```
+
+获取 hash 值
+```
+HGET KEY_NAME FIELD_NAME 
+```
+获取 hash 值
+```
+HGET KEY_NAME FIELD_NAME 
+```
+参考：
+https://www.runoob.com/redis/redis-tutorial.html

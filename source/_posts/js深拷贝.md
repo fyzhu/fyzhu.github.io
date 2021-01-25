@@ -22,7 +22,7 @@ let obj1 = {
 };
 
 function deepClone(obj) {
-  let cloneObj = {};
+  let cloneObj = Array.isArray(obj) ? [] : {};
 
   for (let key in obj) {
     //遍历
