@@ -48,11 +48,17 @@ $ git add README
 
 ## 分支操作
 ### 拉取分支
-git fetch
+git fetch origin
 ### 创建分支
 git branch xxx
+git branch -a
 ### 切换分支
+```js
 git checkout xxx
+// 创建并切换（远程）分支
+git checkout -b dev（本地分支名） origin/dev（远程分支名）
+// 在此之前确保有远程分支，git fetch 一下
+```
 ### 合并分支
 git merge xxx
 
