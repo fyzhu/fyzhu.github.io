@@ -1,5 +1,5 @@
 ---
-title: vue2源码
+title: Vue2源码
 categories:
   - technology
   - front-end
@@ -16,6 +16,8 @@ new vue => init => $mount => compile => render => vnode => patch => DOM
 #### 依赖触发
 
 #### nextTick
+
+#### 如何实现
 
 ```
 Object.defineProperty()
