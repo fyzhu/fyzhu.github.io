@@ -44,6 +44,10 @@ tail test.log -n 30
 ```
 #### chown
 #### chmod
+给 sh 文件可执行权限
+```
+chmod ugo+x deploy.sh
+```
 #### 查找文件内容
 grep 'test' package.json
 
