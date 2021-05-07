@@ -1,5 +1,5 @@
 ---
-title: Vue2源码
+title: Vue2源码学习
 categories:
   - technology
   - front-end
