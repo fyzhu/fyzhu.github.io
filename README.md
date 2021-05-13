@@ -22,7 +22,7 @@ yarn deploy 全新部署 clean + generate + deploy
 2. 网站部署在 /www/wwwroot/www.zhuyunfeng.com 下给与文件夹 777 权限 chmod -R 777 * ，更换为 www 用户 chown www:www -R www.zhuyunfeng.com ，给与.git 目录 777 权限，不然报错 error: cannot open .git/FETCH_HEAD: Permission denied
 3. git 仓库 git@dreamlist.cn:/home/git/hexo.git
 
-### 最新方法
+### 最新部署方法
 ```
 git --work-tree=/www/wwwroot/zhuyunfeng.com --git-dir=/home/git/hexo.git checkout -f
 ```
