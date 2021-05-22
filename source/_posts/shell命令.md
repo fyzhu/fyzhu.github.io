@@ -36,6 +36,11 @@ scp -r ./dist/* root@ip:/www/wwwroot/jd.dreamlist.cn/
 ```
 ssh root@ip
 ```
+#### ssh-copy-id
+此功能是把当前主机的 id_rsa.pub copy 到目标主机的 authrized_keys 里，从而实现无密码登录目标主机
+```
+ssh-copy-id -i ~/.ssh/id_rsa.pub root@dreamlist.cn
+```
 #### tail & head
 ```
 -n<行数> 显示文件的尾部 n 行内容
