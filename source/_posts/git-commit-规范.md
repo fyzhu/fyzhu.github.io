@@ -17,9 +17,13 @@ tags: git
 feat：新功能（feature）
 fix：修补bug
 docs：文档（documentation）
-style： 格式（不影响代码运行的变动）
+style： 格式 不影响代码含义的改动，例如去掉空格、改变缩进、增删分号
+build:  构造工具的或者外部依赖的改动，例如webpack，npm
 refactor：重构（即不是新增功能，也不是修改bug的代码变动）
+revert: 执行git revert打印的message
 test：增加测试
+perf: 提高性能的改动
+ci: 与CI（持续集成服务）有关的改动
 chore：构建过程或辅助工具的变动
 如果type为feat和fix，则该 commit 将肯定出现在 Change log 之中。
 
