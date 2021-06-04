@@ -75,6 +75,7 @@ git checkout .
 git reset HEAD file
 git reset HEAD .
 ### 已经 commit 
+注意：此操作会丢弃修改
 ```
 git reset --hard HEAD^
 git reset --hard commitid
