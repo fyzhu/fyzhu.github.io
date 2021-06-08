@@ -14,8 +14,8 @@ tags:
 
 flex-direction: row|row-reverse|column|column-reverse|initial|inherit;
 |  value   | description  |
-|  ----  | ----  |
-row	|默认值。灵活的项目将水平显示，正如一个行一样。	
+|:-----|:-----|
+|row	|默认值。灵活的项目将水平显示，正如一个行一样。	|
 row-reverse	|与 row 相同，但是以相反的顺序。	
 column	|灵活的项目将垂直显示，正如一个列一样。	
 column-reverse |与 column 相同，但是以相反的顺序。
