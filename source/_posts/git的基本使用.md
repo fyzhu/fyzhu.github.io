@@ -50,7 +50,14 @@ $ git add README
 
 ## 分支操作
 ### 拉取分支
+```
 git fetch origin
+
+// 以下命令相当于 git pull upstream x.x.x
+git fetch upstream x.x.x
+git log -p FETCH_HEAD 
+git merge FETCH_HEAD
+```
 ### 创建分支
 ```
 git branch xxx
