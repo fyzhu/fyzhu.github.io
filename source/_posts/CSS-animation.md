@@ -37,7 +37,7 @@ animation: name duration timing-function delay iteration-count direction fill-mo
 指定动画是否正在运行或已暂停。
 
 ## @keyframes
-```js
+```css
 @keyframes name
 {
     from {background: red;}
