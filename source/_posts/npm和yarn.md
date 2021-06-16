@@ -1,9 +1,10 @@
 ---
-title: npm和yarn
+title: npm和yarn和pnpm
 date: 2019-08-10 22:14:39
 tags:
   - npm
   - yarn
+  - pnpm
 categories:
   - technology
   - front-end
@@ -16,6 +17,7 @@ yarn 加参数 global
 
 ## 查看npm包
 ```
+npm ls
 npm list
 npm list --depth=0 
 npm list --depth=0 --global
@@ -29,6 +31,8 @@ npm install
 npm i
 
 yarn add
+
+pnpm i
 ```
 ## 删除npm包
 ```
@@ -51,4 +55,10 @@ npm config set registry https://registry.npm.taobao.org
 yarn config set registry https://registry.npm.taobao.org -g
 
 yarn config set sass_binary_site http://cdn.npm.taobao.org/dist/node-sass -g
+```
+## 查看安装过程
+```
+npm i --timing=true --loglevel=verbose
+
+yarn --verbose
 ```
