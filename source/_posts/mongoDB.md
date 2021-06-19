@@ -33,9 +33,14 @@ quit()
 use <database>
 ```
 ### 列出数据库
+```
 show dbs
-
+```
 ### 列出数据表
+```
 show tables
+```
 ### 查询数据
+```
 db.<collection>.find()
+```
