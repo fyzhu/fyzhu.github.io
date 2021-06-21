@@ -5,7 +5,7 @@ categories:
 date: 2021-06-16 10:15:37
 tags:
 ---
-```
+```bash
 cd /Library/LaunchAgents
 sudo vim com.oray.sunlogin.agent.plist
 sudo vim com.oray.sunlogin.startup.plist

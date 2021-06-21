@@ -15,7 +15,7 @@ mongo
 mongo --port 27027
 ```
 连接远程主机上的 MongoDB 实例
-```shell
+```bash
 mongo "mongodb://mongodb0.example.com:28015"
 
 mongo --host mongodb0.example.com:28015
@@ -29,7 +29,7 @@ quit()
 ```
 
 ### 切换数据库
-```shell
+```bash
 use <database>
 ```
 ### 列出数据库
