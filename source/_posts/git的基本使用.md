@@ -5,6 +5,11 @@ categories:
 date: 2020-04-30 15:55:57
 tags: git
 ---
+## git log
+```bash
+git log --author=''
+git log -p xxx
+```
 ## git show 
 
 ## git remote 
@@ -101,6 +106,7 @@ git commit --amend
 ```
 ## 修改配置信息
 ```
+git config --global --list
 git config user.name
 git config --global user.email
 ```
