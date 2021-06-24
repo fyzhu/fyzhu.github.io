@@ -15,7 +15,7 @@ npm 加参数 -g/--global
 
 yarn 加参数 global
 
-## 查看npm包
+## 查看已安装 npm 包
 ```
 npm ls
 npm list
@@ -24,6 +24,11 @@ npm list --depth=0 --global
 
 yarn list
 yarn list global
+```
+## 查看 npm 包版本
+```bash
+npm view xxx version # 最新版本
+npm view xxx versions # 所有已发布版本
 ```
 ## 安装npm包
 ```
