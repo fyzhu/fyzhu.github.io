@@ -17,16 +17,18 @@ yarn 加参数 global
 
 ## 查看已安装 npm 包
 ```
-npm ls
-npm list
+npm ls/list
+npm ls/list xxx
 npm list --depth=0 
 npm list --depth=0 --global
 
 yarn list
-yarn list global
+yarn list xxx
+yarn global list 
 ```
 ## 查看 npm 包版本
 ```bash
+npm info xxx 
 npm view xxx version # 最新版本
 npm view xxx versions # 所有已发布版本
 ```
