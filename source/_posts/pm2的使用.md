@@ -32,6 +32,14 @@ $ pm2 list
 ```
 $ pm2 monit
 ```
+#### 显示某个进程的信息
+```
+$ pm2 info <appname>/<id>
+```
+#### 显示某个进程的日志
+```
+$ pm2 log <appname>/<id>
+```
 #### 显示所有进程的日志信息
 ```
 $ pm2 logs
