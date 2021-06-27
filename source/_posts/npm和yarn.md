@@ -20,7 +20,7 @@ yarn 加参数 global
 npm ls/list
 npm ls/list xxx
 npm list --depth=0 
-npm list --depth=0 --global
+npm list --depth=0 --global/-g
 
 yarn list
 yarn list xxx
