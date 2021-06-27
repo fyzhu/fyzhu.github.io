@@ -47,6 +47,14 @@ npm uninstall <package>
 
 yarn remove <package>
 ```
+## 查看可升级的包
+```
+npm outdated
+```
+
+黄色表示不符合我们指定的语意化版本范围 - 不需要升级
+
+红色表示符合指定的语意化版本范围 - 需要升级
 ## 更新npm包
 ```
 npm install <package>@latest
