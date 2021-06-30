@@ -30,11 +30,5 @@
     "hexo-server": "^0.3.3",
     "husky": "^6.0.0",
     "live2d-widget-model-shizuku": "^1.0.5"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn d",
-      "post-commit": "git push"
-    }
   }
 }
