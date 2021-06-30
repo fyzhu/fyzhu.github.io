@@ -28,7 +28,7 @@ $ pm2 show  (appname|id)
 ```
 $ pm2 list
 ```
-### 监控每个 node 进程的 cpu 和内存使用情况
+### 监控某个 node 进程的 cpu 和内存使用情况
 ```
 $ pm2 monit
 ```
