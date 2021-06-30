@@ -5,7 +5,8 @@
   "scripts": {
     "deploy": "hexo clean && hexo g && hexo deploy",
     "d": "hexo d -g",
-    "s": "hexo s"
+    "s": "hexo s",
+    "prepare": "husky install"
   },
   "hexo": {
     "version": "5.4.0"
