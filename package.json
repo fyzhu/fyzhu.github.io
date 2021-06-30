@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "deploy": "hexo clean && hexo g && hexo deploy",
-    "d": "hexo d -g"
+    "d": "hexo d -g",
+    "s": "hexo s"
   },
   "hexo": {
     "version": "5.4.0"
