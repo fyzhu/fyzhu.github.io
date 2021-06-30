@@ -7,6 +7,11 @@ categories:
 tags:
  - pm2
 ---
+### 初始化
+```bash
+$ pm2 init
+$ pm2 ecosystem
+```
 ### 启动
 ```bash
 # start命令启动对应的node server文件
@@ -73,8 +78,46 @@ $ pm2 flush
 $ pm2 update # Save processes, kill PM2 and restore processes
 $ pm2 save # 保存当前应用列表
 ```
-### 配置文件 process.pord.json
+### 配置文件 
+#### js 格式
+
+请注意，使用 js 配置文件要求文件名结尾为 .config.js
+
+例如：ecosystem.config.js
+```js
+module.exports = {
+  apps : [{
+    name: 'API',
+    script: 'app.js',
+    args: 'one two',
+    instances: 1,
+    autorestart: true,
+    watch: false,
+    max_memory_restart: '1G',
+    env: {
+      NODE_ENV: 'development'
+    },
+    env_production: {
+      NODE_ENV: 'production'
+    }
+  }],
+
+  deploy : {
+    production : {
+      user : 'node',
+      host : '212.83.163.1',
+      ref  : 'origin/master',
+      repo : 'git@github.com:repo.git',
+      path : '/var/www/production',
+      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
+    }
+  }
+};
 ```
+#### json 格式
+例如：process.pord.json
+
+```json
 {
     "name": "egg",
     "script": "server.js",
@@ -88,7 +131,7 @@ $ pm2 save # 保存当前应用列表
     "instances": 4,
     "error_file": "logs/err.log",
     "out_file": "logs/out.log",
-    "log_date_format": "YYYY-MM-DD HH:mm:ss"
+    "log_date_format": "YYYY-MM-DD HH:mm:ss",
     "env": {
         "NODE_ENV": "production"
     },
@@ -96,6 +139,35 @@ $ pm2 save # 保存当前应用列表
         "node": ">=7.6"
     }
 }
+
+```
+可以根据需要设置任意多个JSON应用程序声明。
+```
+{
+  "apps": [
+      {
+      "name": "testOne",
+      "script": " testOne/server.js",
+      "instances": 1,
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "max_memory_restart": "500M"
+    },
+    {
+      "name": "testTwo",
+      "script": " testTwo/server.js",
+      "instances": 1,
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "max_memory_restart": "500M"
+    }
+  ]
+}
+```
+启动
+```
 $ pm2 start process.prod.json
 ```
-转载自https://juejin.im/post/5be406705188256dbb5176f94
+参考：
+
+https://www.cnblogs.com/huiguo/p/12694542.html
+
+https://juejin.im/post/5be406705188256dbb5176f94
