@@ -7,7 +7,7 @@ categories:
 tags:
  - pm2
 ---
-#### 启动
+### 启动
 ```
 // start命令启动对应的node server文件
 $ pm2 start ./build/server.js --name alisaname
@@ -20,35 +20,35 @@ $ pm2 start ./build/server.js --name alisaname
 `pm2 start npm --name "xxx" -- run start/dev
 `
 
-#### 查看详细状态信息
+### 查看详细状态信息
 ```
 $ pm2 show  (appname|id)
 ```
-#### 查看所有启动的进程列表
+### 查看所有启动的进程列表
 ```
 $ pm2 list
 ```
-#### 监控每个 node 进程的 cpu 和内存使用情况
+### 监控每个 node 进程的 cpu 和内存使用情况
 ```
 $ pm2 monit
 ```
-#### 显示某个进程的信息
+### 显示某个进程的信息
 ```
 $ pm2 info <appname>/<id>
 ```
-#### 显示某个进程的日志
+### 显示某个进程的日志
 ```
 $ pm2 log <appname>/<id>
 ```
-#### 显示所有进程的日志信息
+### 显示所有进程的日志信息
 ```
 $ pm2 logs
 ```
-#### 监控运行这些进程的机器的状态
+### 监控运行这些进程的机器的状态
 ```
 $ pm2 web
 ```
-#### 停止 指定/所有 进程
+### 停止 指定/所有 进程
 ```
 // 停止id为0的进程
 $ pm2 stop 0
@@ -56,14 +56,14 @@ $ pm2 stop 0
 $ pm2 stop all
 
 ```
-#### 重启 指定/所有 进程
+### 重启 指定/所有 进程
 ```
 // 重启id为0的进程
 $ pm2 restart 0
 // 重启所有进程
 $ pm2 restart all
 ```
-#### 杀死 指定/所有 进程
+### 杀死 指定/所有 进程
 ```
 // 杀死id为0的进程
 $ pm2 delete 0
