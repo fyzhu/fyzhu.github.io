@@ -33,9 +33,9 @@ $ pm2 list
 ```
 $ pm2 show  <appname>/<id>
 ```
-### 监控某个 node 进程的 cpu 和内存使用情况
+### 监控进程的 cpu 和内存使用情况
 ```
-$ pm2 monit <appname>/<id>
+$ pm2 monit
 ```
 ### 显示某个进程的信息
 ```
@@ -49,7 +49,7 @@ $ pm2 log <appname>/<id>
 ```
 $ pm2 logs
 ```
-### 监控运行这些进程的机器的状态
+### 运行健壮的 computer API endpoint
 ```
 $ pm2 web
 ```
@@ -77,6 +77,7 @@ $ pm2 flush
 ```bash
 $ pm2 update # Save processes, kill PM2 and restore processes
 $ pm2 save # 保存当前应用列表
+$ pm2 startup # 产生 init 脚本 保持进程活着
 ```
 ### 配置文件 
 #### js 格式
@@ -222,6 +223,7 @@ force：默认false，如果true，可以重复启动一个脚本。pm2不建议
 restart_delay：异常重启情况下，延时重启时间；
 
 参考：
+https://pm2.keymetrics.io/
 
 https://www.cnblogs.com/huiguo/p/12694542.html
 
