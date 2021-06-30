@@ -8,29 +8,29 @@ tags:
  - pm2
 ---
 ### 启动
-```
-// start命令启动对应的node server文件
+```bash
+# start命令启动对应的node server文件
 $ pm2 start ./build/server.js --name alisaname
-
 ```
 参数
---name
---watch
+`--name`
+`--watch`
 启动npm命令
-`pm2 start npm --name "xxx" -- run start/dev
-`
+```bash
+$ pm2 start npm --name "xxx" -- run start/dev
+```
 
-### 查看详细状态信息
-```
-$ pm2 show  (appname|id)
-```
 ### 查看所有启动的进程列表
 ```
 $ pm2 list
 ```
+### 查看详细状态信息
+```
+$ pm2 show  <appname>/<id>
+```
 ### 监控某个 node 进程的 cpu 和内存使用情况
 ```
-$ pm2 monit
+$ pm2 monit <appname>/<id>
 ```
 ### 显示某个进程的信息
 ```
@@ -50,24 +50,18 @@ $ pm2 web
 ```
 ### 停止 指定/所有 进程
 ```
-// 停止id为0的进程
-$ pm2 stop 0
-// 停止所有进程
+$ pm2 stop <appname>/<id>
 $ pm2 stop all
 
 ```
 ### 重启 指定/所有 进程
 ```
-// 重启id为0的进程
-$ pm2 restart 0
-// 重启所有进程
+$ pm2 restart <appname>/<id>
 $ pm2 restart all
 ```
 ### 杀死 指定/所有 进程
 ```
-// 杀死id为0的进程
-$ pm2 delete 0
-// 杀死所有进程
+$ pm2 delete <appname>/<id>
 $ pm2 delete all
 ```
 ### 清空日志
@@ -75,7 +69,7 @@ $ pm2 delete all
 $ pm2 flush
 ```
 ### 其他命令
-```
+```bash
 $ pm2 update # Save processes, kill PM2 and restore processes
 $ pm2 save # 保存当前应用列表
 ```
@@ -87,7 +81,14 @@ $ pm2 save # 保存当前应用列表
     "cwd": "./",
     "exec_mode": "fork",
     "watch": false,
-    "ignore_watch": ["tmp"],
+    "ignore_watch": [
+        "node_modules",
+        "logs"
+    ],
+    "instances": 4,
+    "error_file": "logs/err.log",
+    "out_file": "logs/out.log",
+    "log_date_format": "YYYY-MM-DD HH:mm:ss"
     "env": {
         "NODE_ENV": "production"
     },
