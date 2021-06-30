@@ -166,6 +166,7 @@ module.exports = {
 ```
 $ pm2 start process.prod.json
 ```
+#### YAML 格式
 #### 常用配置项说明
 
 apps： json结构，apps是一个数组，每一个数组成员就是对应一个pm2中运行的应用；
