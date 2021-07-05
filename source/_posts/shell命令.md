@@ -56,3 +56,8 @@ chmod ugo+x deploy.sh
 #### 查找文件内容
 grep 'test' package.json
 
+#### ln
+
+创建软链接
+
+#### which
