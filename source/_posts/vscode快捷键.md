@@ -26,3 +26,6 @@ window 下
 3. 自动格式化代码的快捷键：ctrl+k, ctrl+f;
 
                    先按下ctrl和K，再按下ctrl和f;
+
+## 全局搜索
+command + shift + F
