@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "deploy": "hexo clean && hexo g && hexo deploy",
-    "d": "hexo d -g"
+    "d": "hexo d -g",
+    "s": "hexo s",
+    "prepare": "husky install"
   },
   "hexo": {
     "version": "5.4.0"
@@ -26,6 +28,7 @@
     "hexo-renderer-marked": "^1.0.1",
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.3.3",
+    "husky": "^6.0.0",
     "live2d-widget-model-shizuku": "^1.0.5"
   }
 }
