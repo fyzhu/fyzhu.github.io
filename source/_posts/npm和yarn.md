@@ -11,9 +11,9 @@ categories:
 ---
 ## 全局操作
 
-npm 加参数 -g/--global
+npm 加参数 `-g/--global`
 
-yarn 加参数 global
+yarn 加参数 `global`
 
 ## 查看已安装 npm 包
 ```
