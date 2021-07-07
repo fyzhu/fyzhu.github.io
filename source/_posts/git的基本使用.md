@@ -114,6 +114,9 @@ git config --global user.email
 ![git reset](https://upload-images.jianshu.io/upload_images/4428238-fcad08ebe26933a6.png?imageMogr2/auto-orient/strip|imageView2/2/w/638/format/webp)
 ### 不加参数
 保留工作目录，并清空暂存区
+
+reset 如果不加参数，那么默认使用 --mixed 参数。它的行为是：保留工作目录，并且清空暂存区。也就是说，工作目录的修改、暂存区的内容以及由 reset 所导致的新的文件差异，都会被放进工作目录。简而言之，就是「把所有差异都混合（mixed）放在工作目录中」。
+
 ### --hard
 重置stage区和工作目录
 ### --soft
