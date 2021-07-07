@@ -111,6 +111,7 @@ git config user.name
 git config --global user.email
 ```
 ## git reset
+![git reset](https://upload-images.jianshu.io/upload_images/4428238-fcad08ebe26933a6.png?imageMogr2/auto-orient/strip|imageView2/2/w/638/format/webp)
 ### 不加参数
 保留工作目录，并清空暂存区
 ### --hard
