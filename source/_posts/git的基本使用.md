@@ -110,4 +110,13 @@ git config --global --list
 git config user.name
 git config --global user.email
 ```
+## git reset
+### 不加参数
+保留工作目录，并清空暂存区
+### --hard
+重置stage区和工作目录
+### --soft
+保留工作目录，并把重置 HEAD 所带来的新的差异放进暂存区
+
 参考：https://www.jianshu.com/p/098d85a58bf1
+https://www.jianshu.com/p/c2ec5f06cf1a
