@@ -25,7 +25,7 @@ vscode 新晋大神，已占领前端
 ## 三、服务器集成环境 
 Wampserver3.0+ 免费，集成了Apache，mysql，php，傻瓜式安装，第一次安装不同的电脑可能需要配置一下Apache，hosts之类的。 3.0以上版本更新了电脑右下角常驻logo，更好看了。 
 
-phpstudy 自从了解了phpstudy我才发现它比wampserver强多了，可以切换nginx/apache/IIS，可以各种版本切换，各种实用功能，只是study的名字，以及简单的logo让我一直一位它是一个不专业的软件，目前wampserver基本满足需求，暂时没换phpstudy
+phpstudy 自从了解了phpstudy我才发现它比wampserver强多了，可以切换nginx/apache/IIS，可以各种版本切换，各种实用功能，只是study的名字，以及简单的logo让我一直以为它是一个不专业的软件
 
 ## 四、数据库管理软件 
 Navicat logo好看，UI美观，操作数据库简单可视化。 只是在本地导入导出的时候老出问题，用phpmyadmin就可以，暂时不知什么原因。 
