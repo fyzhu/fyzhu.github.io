@@ -61,3 +61,6 @@ grep 'test' package.json
 创建软链接
 
 #### which
+
+#### 显示行号
+set nu
