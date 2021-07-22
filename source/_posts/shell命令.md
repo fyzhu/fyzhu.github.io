@@ -58,7 +58,17 @@ grep 'test' package.json
 
 #### ln
 
-创建软链接
+创建链接
+
+Linux链接分两种，一种被称为硬链接（Hard Link），另一种被称为符号链接（Symbolic Link）。默认情况下，ln命令产生硬链接。
+##### hard link
+ln f1 f2 
+##### soft link (Symbolic Link)
+ln -s f1 f3
+
+##### list
+ls -li   # -i参数显示文件的inode节点信息
+
 
 #### which
 

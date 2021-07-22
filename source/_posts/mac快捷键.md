@@ -17,3 +17,5 @@ tags:
 浏览器全屏(窗口全屏的基础上) command + shift + F
 
 vscode 全局搜索 command + shift + F
+### 显示隐藏文件、文件夹
+点击空白处 然后 command + shift + 。
