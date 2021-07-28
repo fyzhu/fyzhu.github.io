@@ -74,3 +74,8 @@ ls -li   # -i参数显示文件的inode节点信息
 
 #### 显示行号
 set nu
+
+#### 查看端口占用
+sudo lsof -i :8080
+#### 杀死进程
+sudo kill -9 进程pid

@@ -77,3 +77,13 @@ npm i --timing=true --loglevel=verbose
 
 yarn --verbose
 ```
+## npm root
+## npm link
+## npm explain
+npm why
+
+npm 官方文档
+https://docs.npmjs.com/cli/v7/commands
+
+
+
