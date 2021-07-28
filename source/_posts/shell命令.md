@@ -79,3 +79,8 @@ set nu
 sudo lsof -i :8080
 #### 杀死进程
 sudo kill -9 进程pid
+
+#### nohup
+
+参考：
+https://www.runoob.com/linux/linux-command-manual.html
