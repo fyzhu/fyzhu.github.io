@@ -8,7 +8,7 @@ tags:
 ### 设置环境变量
 ```
 export http_proxy=http://127.0.0.1:8123/
-
+export ALL_PROXY=socks5://127.0.0.1:1086
 export PATH=$PATH:<PATH 1>:<PATH 2>:<PATH 3>
 ```
 等号前后不能有空格
@@ -17,6 +17,7 @@ export PATH=$PATH:<PATH 1>:<PATH 2>:<PATH 3>
 ### 删除环境变量
 ```
 unset http_proxy
+unset ALL_PROXY
 ```
 ### 查看环境变量
 ```
