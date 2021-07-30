@@ -77,13 +77,22 @@ git checkout -b dev（本地分支名） origin/dev（远程分支名）
 ```
 ### 合并分支
 git merge xxx
-
+### 删除分支
+删除本地（先切换到其他分支）
+```bash
+git branch -d xxx
+git branch -D xxx # 强制删除
+```
+删除远程
+```shell
+git push origin --delete xxx
+```
 ## 暂存修改
 ```
 git stash
 git stash pop
 ```
-## 放弃修改
+## ！放弃修改
 ### 未 add，撤消对文件的修改
 ```
 git checkout -- file
@@ -95,10 +104,12 @@ git reset HEAD file
 git reset HEAD .
 ```
 ### 已经 commit 
-注意：此操作会丢弃修改
-```
-git reset --hard HEAD^
-git reset --hard commitid
+
+```bash
+git reset # 默认为 mixed 模式
+git reset --soft
+git reset --hard HEAD^ # 注意：此操作会丢弃修改
+git reset --hard commitid # 注意：此操作会丢弃修改
 ```
 ## 修改已提交的commit
 ```
@@ -111,16 +122,19 @@ git config user.name
 git config --global user.email
 ```
 ## git reset
-![git reset](https://upload-images.jianshu.io/upload_images/4428238-fcad08ebe26933a6.png?imageMogr2/auto-orient/strip|imageView2/2/w/638/format/webp)
+![git reset from jianshu](https://upload-images.jianshu.io/upload_images/4428238-fcad08ebe26933a6.png?imageMogr2/auto-orient/strip|imageView2/2/w/638/format/webp)
 ### 不加参数
 保留工作目录，并清空暂存区
 
-reset 如果不加参数，那么默认使用 --mixed 参数。它的行为是：保留工作目录，并且清空暂存区。也就是说，工作目录的修改、暂存区的内容以及由 reset 所导致的新的文件差异，都会被放进工作目录。简而言之，就是「把所有差异都混合（mixed）放在工作目录中」。
+reset 如果不加参数，那么默认使用 `--mixed` 参数。它的行为是：保留工作目录，并且清空暂存区。也就是说，工作目录的修改、暂存区的内容以及由 reset 所导致的新的文件差异，都会被放进工作目录。简而言之，就是「把所有差异都混合（mixed）放在工作目录中」。
 
-### --hard
+### hard
 重置stage区和工作目录
-### --soft
+### soft
 保留工作目录，并把重置 HEAD 所带来的新的差异放进暂存区
 
-参考：https://www.jianshu.com/p/098d85a58bf1
-https://www.jianshu.com/p/c2ec5f06cf1a
+## 参考
+
+[Git 修改已提交的commit注释](https://www.jianshu.com/p/098d85a58bf1)
+
+[Git Reset 三种模式](https://www.jianshu.com/p/c2ec5f06cf1a)
