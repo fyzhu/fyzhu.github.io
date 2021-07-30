@@ -138,3 +138,5 @@ reset 如果不加参数，那么默认使用 `--mixed` 参数。它的行为是
 [Git 修改已提交的commit注释](https://www.jianshu.com/p/098d85a58bf1)
 
 [Git Reset 三种模式](https://www.jianshu.com/p/c2ec5f06cf1a)
+
+[git删除本地分支和删除远程分支](https://www.cnblogs.com/liyong888/p/9822410.html)
