@@ -116,7 +116,7 @@ module.exports = {
 };
 ```
 #### json 格式
-例如：process.pord.json
+例如：process.prod.json
 
 ```json
 {
