@@ -111,6 +111,14 @@ git reset --soft
 git reset --hard HEAD^ # 注意：此操作会丢弃修改
 git reset --hard commitid # 注意：此操作会丢弃修改
 ```
+提交 reset 操作至远端
+
+```bash
+git push -f origin master
+```
+However, you should avoid doing this if anyone else is working with your remote repository and has pulled your changes.
+
+In that case, it would be better to `revert` the commits that you don't want, then pushing as normal.
 ## 修改已提交的commit
 ```
 git commit --amend

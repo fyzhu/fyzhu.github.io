@@ -14,7 +14,7 @@ hexo d deploy
 ### 部署
 ```
 hexo d 直接部署 deploy
-yarn d 增量部署 generate + deploy
+yarn d 增量部署 generate + deploy # node 12
 yarn deploy 全新部署 clean + generate + deploy  # 增加插件，样式错乱时请使用此方法
 ```
 ### 备注
