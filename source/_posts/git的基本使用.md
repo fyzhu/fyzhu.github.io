@@ -5,6 +5,10 @@ categories:
 date: 2020-04-30 15:55:57
 tags: git
 ---
+## branch 与 tag 重名
+heads/v21.08  
+tags/v21.08
+
 ## git log
 ```bash
 git log --author=''
@@ -111,7 +115,7 @@ git reset --soft
 git reset --hard HEAD^ # 注意：此操作会丢弃修改
 git reset --hard commitid # 注意：此操作会丢弃修改
 ```
-提交 reset 操作至远端
+强制提交 reset 操作至远端
 
 ```bash
 git push -f origin master
@@ -147,4 +151,6 @@ reset 如果不加参数，那么默认使用 `--mixed` 参数。它的行为是
 
 [Git Reset 三种模式](https://www.jianshu.com/p/c2ec5f06cf1a)
 
-[git删除本地分支和删除远程分支](https://www.cnblogs.com/liyong888/p/9822410.html)
+[git 删除本地分支和删除远程分支](https://www.cnblogs.com/liyong888/p/9822410.html)  
+
+[git 分支命名规范](https://www.cnblogs.com/yorkyang/p/9147309.html)
