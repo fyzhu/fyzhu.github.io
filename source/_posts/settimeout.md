@@ -34,14 +34,14 @@ setTimeout(code,millisec)
 
 ### 第一个参数
 
-```
+```js
 setTimeout(console.log(this),3000);//console.log(this)会立即执行
 
 setTimeout('console.log(this)',3000);//console.log(this)加引号之后3s之后执行
 
 setTimeout(function(){console.log(this)},3000);//console.log(this)3s之后执行
 ```
-```
+```js
 {
   function test(){
     console.log(this);
@@ -49,7 +49,7 @@ setTimeout(function(){console.log(this)},3000);//console.log(this)3s之后执行
   setTimeout(test,3000);//console.log(this)3s之后执行
 }
 ```
-```
+```js
 {
   function test(){
     console.log(this);
@@ -57,7 +57,7 @@ setTimeout(function(){console.log(this)},3000);//console.log(this)3s之后执行
   setTimeout(test(),3000);//console.log(this)立即执行
 }
 ```
-```
+```js
 {
   function test(){
     console.log(this);
@@ -75,7 +75,7 @@ setTimeout(function(){console.log(this)},3000);//console.log(this)3s之后执行
 参考：http://www.cnblogs.com/hutaoer/p/3423782.html 
 
 第一段代码：
-```
+```js
 var test = "in the window";
  
 setTimeout(function() {alert('outer ' + test)}, 0); // 输出 outer in the window ，默认在window的全局作用域下
@@ -88,7 +88,7 @@ function f() {
 f();
 ```
 第二段代码：
-```
+```js
 var test = "in the window";
  
 setTimeout(function() {alert('outer' + test)}, 0); // outer in the window  ，没有问题，在全局下调用，访问全局中的test
@@ -101,7 +101,7 @@ function f() {
 f();
 ```
 第三段代码：
-```
+```js
 var test = "in the window";
 
 setTimeout(function() {
