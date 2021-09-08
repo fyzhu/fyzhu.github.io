@@ -43,7 +43,7 @@ pnpm i
 ```
 ## 删除npm包
 ```
-npm uninstall <package>
+npm uninstall/remove/rm/r/un/unlink <package>
 
 yarn remove <package>
 ```

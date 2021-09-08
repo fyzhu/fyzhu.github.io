@@ -88,7 +88,7 @@ git branch -d xxx
 git branch -D xxx # 强制删除
 ```
 删除远程
-```shell
+```bash
 git push origin --delete xxx
 ```
 ## 暂存修改

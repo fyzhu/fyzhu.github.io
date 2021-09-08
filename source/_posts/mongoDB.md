@@ -7,11 +7,11 @@ tags:
 ---
 ### 连接
 默认端口 27017
-```shell
+```bash
 mongo
 ```
 指定端口 27027
-```shell
+```bash
 mongo --port 27027
 ```
 连接远程主机上的 MongoDB 实例
@@ -24,7 +24,7 @@ mongo --host mongodb0.example.com --port 28015
 
 ```
 ### 退出
-```shell
+```bash
 quit()
 ```
 
