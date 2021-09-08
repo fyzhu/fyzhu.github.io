@@ -19,3 +19,7 @@ Ctrl + U 删除所有在光标左侧的命令字符；
 Ctrl + K 删除所有在光标右侧的命令字符；
 Ctrl + W 删除光标左侧的一个“单词”，这里的“单词”指的是用空格隔开的一个字符串。例如 -a 就是一个“单词”；
 Ctrl + Y 粘贴用 Ctrl + U、 Ctrl + K 或 Ctrl + W “删除”的字符串，有点像“剪切-粘贴”。
+
+
+参考：
+https://www.imooc.com/read/39/article/463
