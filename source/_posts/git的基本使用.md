@@ -154,3 +154,5 @@ reset 如果不加参数，那么默认使用 `--mixed` 参数。它的行为是
 [git 删除本地分支和删除远程分支](https://www.cnblogs.com/liyong888/p/9822410.html)  
 
 [git 分支命名规范](https://www.cnblogs.com/yorkyang/p/9147309.html)
+
+[git commit和issue关联](https://www.jianshu.com/p/f381af75ab85)
