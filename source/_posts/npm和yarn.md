@@ -17,7 +17,7 @@ yarn 加参数 `global`
 
 ## 查看已安装 npm 包
 ```
-npm ls/list
+npm ls/list/la/ll
 npm ls/list xxx
 npm list --depth=0 
 npm list --depth=0 --global/-g
@@ -28,7 +28,7 @@ yarn global list
 ```
 ## 查看 npm 包版本
 ```bash
-npm info xxx 
+npm view/info/show/v xxx 
 npm view xxx version # 最新版本
 npm view xxx versions # 所有已发布版本
 ```
@@ -50,7 +50,9 @@ yarn remove <package>
 ## 查看可升级的包
 ```
 npm outdated
+yarn outdated
 ```
+npm 颜色：
 
 黄色表示不符合我们指定的语意化版本范围 - 不需要升级
 
@@ -81,6 +83,10 @@ yarn --verbose
 ## npm link
 ## npm explain
 npm why
+## npm dedupe
+```bash
+npm ddp #Reduce duplication
+```
 
 npm 官方文档
 https://docs.npmjs.com/cli/v7/commands
