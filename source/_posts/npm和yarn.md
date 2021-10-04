@@ -87,7 +87,16 @@ npm why
 ```bash
 npm ddp #Reduce duplication
 ```
+## 代理
+```
+yarn config set proxy http://127.0.0.1:15236
+yarn config set https-proxy http://127.0.0.1:15236
 
+npm config set https-proxy
+
+yarn config delete proxy
+yarn config delete https-proxy
+```
 npm 官方文档
 https://docs.npmjs.com/cli/v7/commands
 
