@@ -27,14 +27,14 @@ mongo --host mongodb0.example.com --port 28015
 ```bash
 quit()
 ```
+### 列出数据库
+```
+show dbs
+```
 
 ### 切换数据库
 ```bash
 use <database>
-```
-### 列出数据库
-```
-show dbs
 ```
 ### 列出数据表
 ```
