@@ -43,4 +43,6 @@ show tables
 ### 查询数据
 ```
 db.<collection>.find()
+db.<collection>.find().count()
+db.<collection>.find().pretty()
 ```
