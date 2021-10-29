@@ -19,3 +19,6 @@ tags:
 vscode 全局搜索 command + shift + F
 ### 显示隐藏文件、文件夹
 点击空白处 然后 command + shift + 。
+
+### 截屏、录屏
+command + shift + 5
