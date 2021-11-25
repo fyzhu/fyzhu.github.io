@@ -82,5 +82,7 @@ sudo kill -9 进程pid
 
 #### nohup
 
+#### 查看ip
+ifconfig | grep "inet " | grep -v 127.0.0.1
 参考：
 https://www.runoob.com/linux/linux-command-manual.html
