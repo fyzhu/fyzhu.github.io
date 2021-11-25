@@ -26,3 +26,8 @@ tags:
 ![Dockerfile 语法1](https://img.mukewang.com/5efdeeec00018f3e19201080.jpg)
 ![Dockerfile 语法2](https://img.mukewang.com/5efdef1b0001ff5b19201080.jpg)
 
+### 网络
+bridge 网络
+host 网络
+
+参考：https://www.jb51.net/article/149173.htm
