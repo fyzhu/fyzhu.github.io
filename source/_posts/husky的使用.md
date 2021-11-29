@@ -5,13 +5,13 @@ categories:
 date: 2021-06-30 20:08:28
 tags:
 ---
-新版husky实践
+新版 husky 实践
 
-1. 安装husky  
-```shell
+1. 安装 husky  
+```bash
 npm install -D husky
 ```
-2. 在packgae.json中添加prepare脚本
+2. 在 packgae.json 中添加 prepare 脚本
 ```json
 {
   "scripts": {
@@ -35,4 +35,5 @@ npm run test
 可以看到该脚本的功能就是执行npm run test这个命令
 
 
+参考：
 https://zhuanlan.zhihu.com/p/366786798
