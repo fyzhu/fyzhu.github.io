@@ -38,13 +38,13 @@ ctrl+w 删除上一个单词
 
 ### motions
 1. hjkl
-2. wb move word by word
-3. WB move WORD by WORD
-4. e/ge
+2. w/b move word by word
+3. W/B move WORD by WORD
+4. e/ge move to the end of a word
 5. E/gE
-6. f(character) find in line
+6. f(character) find character in line
 7. F(character)
-8. t(character) until
+8. t(character) until character in line
 9. T(character)
 10. ; / , 继续搜索
 11. 0 first character of a line
@@ -55,12 +55,43 @@ ctrl+w 删除上一个单词
 16. ctrl + d / ctrl + u
 17. /{pattern} search forward
 18. ?{pattern} search backward
-19. n / N 搜索上一个/下一个
-20. ? without a pattern change the direction
-21. gg top of a file
-22. {line}gg
-23. G end of a file
+19. n / N next/previous
+20. ctrl + o go back
+21. ? without a pattern change the direction
+22. gg top of a file
+23. {line}gg
+24. G end of a file
 
 ### operators
 1. u to undo
 2. ctrl + r to redo
+3. d delete
+   1. d2w delete two words
+   2. dt; delete until ;
+   3. df; delete until ;(include ;)
+   4. d/hello delete until hello
+   5. diw
+   6. di"/'/`
+4. dd delete a complete line
+5. D delete from the cursor until the end of the line
+6. c change (combine d and i)
+7. cc change a complete line
+8. C change from the cursor until the end of the line
+9. . repeat change
+10. y
+    1.  y1w copy one word
+11. yy copy a complete line
+12. Y copy from the cursor until the end of the line
+13. p 在当前位置之后
+14. P 在当前位置之前
+
+### text-object
+1. w word
+2. s sentence
+3. p paragraph
+4. " quotes  special
+5. ' single quote special 
+6. ` backtick special
+7. () b
+8. {} B
+9. []
