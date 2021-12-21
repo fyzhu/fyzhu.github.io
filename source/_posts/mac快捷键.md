@@ -22,3 +22,8 @@ vscode 全局搜索 command + shift + F
 
 ### 截屏、录屏
 command + shift + 5
+### chrome 浏览器
+control + tab 切换到下一个标签
+command + 数字键 切换到指定数字顺序的标签
+command + option + ← 切换到左边的标签  
+command + option + → 切换到右边的标签  

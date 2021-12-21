@@ -53,14 +53,15 @@ ctrl+w 删除上一个单词
 14. g_ end non-blank character of a line
 15. { / } move entire paragraphs
 16. ctrl + d / ctrl + u
-17. /{pattern} search forward
-18. ?{pattern} search backward
-19. n / N next/previous
-20. ctrl + o go back
-21. ? without a pattern change the direction
-22. gg top of a file
-23. {line}gg
-24. G end of a file
+17. ctrl + f / ctrl + b 
+18. /{pattern} search forward
+19. ?{pattern} search backward
+20. n / N next/previous
+21. ctrl + o go back
+22. ? without a pattern change the direction
+23. gg top of a file
+24. {line}gg
+25. G end of a file
 
 ### operators
 1. u to undo
