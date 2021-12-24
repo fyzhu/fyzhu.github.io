@@ -104,16 +104,26 @@ module.exports = {
   }],
 
   deploy : {
-    production : {
-      user : 'node',
-      host : '212.83.163.1',
+    production : { // 任务名
+      user : 'node', // 服务器登录用户名
+      host : '212.83.163.1', // 可为数组
+      port : '22',
       ref  : 'origin/master',
       repo : 'git@github.com:repo.git',
-      path : '/var/www/production',
+      path : '/var/www/production', // 服务器网站存放地址
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
     }
   }
 };
+```
+
+##### 部署时注意
+path 给予权限
+```bash
+# setup
+pm2 deploy ecosystem.config.js production(任务名) setup
+# deploy
+pm2 deploy ecosystem.config.js production(任务名)
 ```
 #### json 格式
 例如：process.prod.json
