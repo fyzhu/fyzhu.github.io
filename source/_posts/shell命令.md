@@ -8,6 +8,9 @@ tags: shell
 ---
 Bash(Bourne Again Shell)
 
+#### 查看文件夹大小
+du -sh
+
 #### 新建文件
 touch xxx
 
