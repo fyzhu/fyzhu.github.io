@@ -99,6 +99,10 @@ git stash list
 git stash show
 ```
 ## ！放弃修改
+###  untracked files
+```
+git clean -fd
+```
 ### 未 add，撤消对文件的修改
 ```
 git checkout -- file
