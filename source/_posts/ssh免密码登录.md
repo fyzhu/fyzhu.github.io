@@ -22,3 +22,4 @@ ssh root@ip 就可以免密码登录了
 3. 选择登录方式为public Key
 4. 选择第一步下载的公钥
 
+[参考](https://cloud.tencent.com/developer/article/1780788)
