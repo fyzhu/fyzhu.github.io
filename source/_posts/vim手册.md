@@ -79,10 +79,10 @@ ctrl+w 删除上一个单词
 7. cc change a complete line
 8. C change from the cursor until the end of the line
 9. . repeat change
-10. y
-    1.  y1w copy one word
+10. y copy
+    1.  yw/y1w copy one word
+    2.  y$ copy from the cursor until the end of the line
 11. yy copy a complete line
-12. Y copy from the cursor until the end of the line
 13. p 在当前位置之后
 14. P 在当前位置之前
 
