@@ -20,6 +20,7 @@ Emoji	Raw Emoji Code	Description
 🔨	:hammer:	when refactoring code  
 🔧  :wrench: Add or update configuration files.  
 💄	:lipstick:	when improving UI/Cosmetic  
+💅  :nail_care: style
 🍻  :beers: Write code drunkenly.  
 📰	:newspaper:	when creating a new file  
 🚑	:ambulance:	when fixing a bug  
