@@ -10,7 +10,7 @@ tags:
 为什么 foreach 不行，而 普通 for 循环 和 for…of 却正常呢？
 
 我们得先从 [foreach 的源码](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#polyfill) 看起：
-```
+```js
 // Production steps of ECMA-262, Edition 5, 15.4.4.18
 // Reference: http://es5.github.io/#x15.4.4.18
 if (!Array.prototype.forEach) {
@@ -77,7 +77,7 @@ if (!Array.prototype.forEach) {
 ```
 摘抄最重要的部分：
 
-```
+```js
 /* 
 O 为传入数组
 len 为传入数组长度
@@ -101,7 +101,7 @@ while (k < len) {
 
 如果我们尝试把 Array.prototype.forEach 改造一下，让它不要忽视，就可以达到效果了，如下：
 
- ```
+ ```js
  Array.prototype.forEach = async function(callback/*, thisArg*/) {
    
    		// ………
