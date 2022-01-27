@@ -83,32 +83,27 @@ O 为传入数组
 len 为传入数组长度
 callback 为传入回调函数
 */
-
 while (k < len) {
-
-      var kValue; 
-      if (k in O) { 
-        kValue = O[k]; 
-        callback.call(T, kValue, k, O);
-      } 
-  
-      k++;
+  var kValue; 
+  if (k in O) { 
+    kValue = O[k]; 
+    callback.call(T, kValue, k, O);
+  } 
+  k++;
 }
 ```
-可以看到callback.call(T, kValue, k, O);这一句，callback 其实是我们传入的一个被 async 封装的 promise 对象，而 Array.prototype.forEach 内部并未对这个promise 对象做任何处理，只是忽略它。
+可以看到 `callback.call(T, kValue, k, O);` 这一句，callback 其实是我们传入的一个被 async 封装的 promise 对象，而 Array.prototype.forEach 内部并未对这个 promise 对象做任何处理，只是忽略它。
 
 ## 解决方案
 
 如果我们尝试把 Array.prototype.forEach 改造一下，让它不要忽视，就可以达到效果了，如下：
 
  ```js
- Array.prototype.forEach = async function(callback/*, thisArg*/) {
-   
-   		// ………
-			await callback.call(T, kValue, k, O);
-   		// ………
-         
-	};
+Array.prototype.forEach = async function(callback/*, thisArg*/) {
+  // ………
+  await callback.call(T, kValue, k, O);
+  // ………
+};
 ```
 
 你总不能去侵入式的改造Array.prototype.forEach吧！所以最简单的办法就是抛弃 foreach，使用 for…of 或者 for 循环！
