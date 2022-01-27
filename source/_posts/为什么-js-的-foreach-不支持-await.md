@@ -9,7 +9,7 @@ tags:
 
 为什么 foreach 不行，而 普通 for 循环 和 for…of 却正常呢？
 
-我们得先从 [foreach 的源码](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach>) 看起：
+我们得先从 [foreach 的源码](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#polyfill) 看起：
 ```
 // Production steps of ECMA-262, Edition 5, 15.4.4.18
 // Reference: http://es5.github.io/#x15.4.4.18
