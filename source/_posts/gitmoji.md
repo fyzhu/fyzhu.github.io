@@ -9,6 +9,7 @@ tags:
 Emoji	Raw Emoji Code	Description  
 🎉	:tada:	Initial Commit  
 ✨	:sparkles:	when introducing New Features  
+🐎	:racehorse:	when improving performance  
 ⚡	:zap:	when introducing Backward-InCompatible Features, maybe with @CHANGED Comment Tag  
 🚀	:rocket:	Anything related to Deployments/DevOps  
 📚	:books:	when writing docs  
@@ -21,7 +22,6 @@ Emoji	Raw Emoji Code	Description
 🍻  :beers: Write code drunkenly.  
 📰	:newspaper:	when creating a new file  
 📝	:pencil:	when performing minor changes/fixing the code or language  
-🐎	:racehorse:	when improving performance  
 🚑	:ambulance:	when fixing a bug  
 🐧	:penguin:	when fixing something on Linux  
 🍎	:apple:	when fixing something on Mac OS  
