@@ -13,15 +13,15 @@ Emoji	Raw Emoji Code	Description
 ⚡	:zap:	when introducing Backward-InCompatible Features, maybe with @CHANGED Comment Tag  
 🚀	:rocket:	Anything related to Deployments/DevOps  
 📚	:books:	when writing docs  
-📝  :memo: Add or update documentation.  
 🎨	:art:	when improving the format/structure of the code  
+📝  :memo: Add or update documentation.  
+📝	:pencil:	when performing minor changes/fixing the code or language  
 🐛	:bug:	when reporting a bug, with @FIXMEComment Tag  
 🔨	:hammer:	when refactoring code  
 🔧  :wrench: Add or update configuration files.  
 💄	:lipstick:	when improving UI/Cosmetic  
 🍻  :beers: Write code drunkenly.  
 📰	:newspaper:	when creating a new file  
-📝	:pencil:	when performing minor changes/fixing the code or language  
 🚑	:ambulance:	when fixing a bug  
 🐧	:penguin:	when fixing something on Linux  
 🍎	:apple:	when fixing something on Mac OS  
