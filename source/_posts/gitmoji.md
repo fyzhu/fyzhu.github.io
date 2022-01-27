@@ -12,9 +12,12 @@ Emoji	Raw Emoji Code	Description
 ⚡	:zap:	when introducing Backward-InCompatible Features, maybe with @CHANGED Comment Tag  
 🚀	:rocket:	Anything related to Deployments/DevOps  
 📚	:books:	when writing docs  
+📝  :memo: Add or update documentation.  
 🎨	:art:	when improving the format/structure of the code  
 🐛	:bug:	when reporting a bug, with @FIXMEComment Tag  
 🔨	:hammer:	when refactoring code  
+🔧  :wrench: Add or update configuration files.  
+💄	:lipstick:	when improving UI/Cosmetic  
 📰	:newspaper:	when creating a new file  
 📝	:pencil:	when performing minor changes/fixing the code or language  
 🐎	:racehorse:	when improving performance  
@@ -33,7 +36,6 @@ Emoji	Raw Emoji Code	Description
 ⏩	:fast_forward:	when forward-porting features from an older version/branch  
 ⏪	:rewind:	when backporting features from a newer version/branch  
 👕	:shirt:	when removing linter/strict/deprecation warnings  
-💄	:lipstick:	when improving UI/Cosmetic  
 ♿	:wheelchair:	when improving accessibility  
 🌐	:globe_with_meridians:	when dealing with globalization/internationalization/i18n/g11n  
 🚧	:construction:	WIP(Work In Progress) Commits, maybe with @REVIEW Comment Tag  
