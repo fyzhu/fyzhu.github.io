@@ -18,8 +18,6 @@ font-weight可取值：100～900和normal、bold、bolder、lighter。
 
 ## bolder、lighter
 bolder、lighter表示其字重值是基于从其父元素继承而来的字重计算所得的，与normal、bold所代表的字重并无关系。  
-其值通常是根据下表计算而得的：
-![](https://upload-images.jianshu.io/upload_images/3638693-76f32093152c82ff.png?imageMogr2/auto-orient/strip|imageView2/2/w/929/format/webp)
 
 参考  
 作者：人不中二枉少年  
