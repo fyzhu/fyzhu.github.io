@@ -21,6 +21,7 @@ animation: name duration timing-function delay iteration-count direction fill-mo
 
 ## animation-iteration-count	
 定义动画的播放次数。
+
 |  value   | description  |
 |  ----  | ----  |
 |n|	一个数字，定义应该播放多少次动画	|

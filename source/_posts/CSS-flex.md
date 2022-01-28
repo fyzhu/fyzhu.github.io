@@ -13,6 +13,8 @@ tags:
 规定灵活项目的方向
 
 flex-direction: row|row-reverse|column|column-reverse|initial|inherit;
+
+
 |  value   | description  |
 |:-----|:-----|
 |row	|默认值。灵活的项目将水平显示，正如一个行一样。	|
