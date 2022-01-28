@@ -1,7 +1,7 @@
 ---
 title: font-weight
 categories:
-  - 未分类
+  - CSS
 date: 2022-01-28 18:17:12
 tags:
 ---

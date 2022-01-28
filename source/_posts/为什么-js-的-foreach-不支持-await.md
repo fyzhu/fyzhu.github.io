@@ -1,7 +1,7 @@
 ---
 title: 为什么 js 的 foreach 不支持 await
 categories:
-  - 未分类
+  - JS
 date: 2022-01-27 17:49:15
 tags:
 ---
