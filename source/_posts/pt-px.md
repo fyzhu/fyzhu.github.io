@@ -16,8 +16,10 @@ tags:
 ### pt
 物理单位  
 1 pt = 1/72 inch  
-1 pt 里如果包含 2 px ，那么是二倍屏
-1 pt 里如果包含 3 px ，那么是三倍屏
+1 inch = 72 pt  
+72 pt = 96 px  
+绝对长度单位，多用于打印  
+
 
 ### inch
 1 inch = 2.54 cm 
@@ -31,7 +33,7 @@ css
 -webkit-min-device-pixel-ratio
 ### dpr (devicePixelRatio)
 设备像素比
-
+![dpi 和 dpr](https://img-blog.csdnimg.cn/20190612152430172.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3h1ZWxpXzIwMTc=,size_16,color_FFFFFF,t_70)
 window.devicePixelRatio是设备物理像素和设备独立像素（device-independent pixels，dips）之间的比率。是一个约数？
 window.devicePixelRatio = 物理像素 / 设备独立像素 
 ### DIP (Device Independent Pixel) 
@@ -40,7 +42,7 @@ css 像素是逻辑像素，并不是真实像素
 Windows / Mac 电脑都可以设置设备独立像素
 
 ### dpi (dots per inch)
-
+和 ppi 基本相同
 ### ppi (pixels per inch)
 ![ppi 计算公式](https://images2015.cnblogs.com/blog/984702/201704/984702-20170412161418626-799396908.png)
 
@@ -48,11 +50,13 @@ ppi在120-160之间的手机被归为低密度手机，160-240被归为中密度
 ![](https://images2015.cnblogs.com/blog/984702/201704/984702-20170412163336783-427220997.png)
 ### 总结
 CSS 只与设备独立像素有关系，尺寸相同，设备独立像素相同的屏幕，网页上的同一张图片显示的尺寸是相同的，只不过清晰度会有所不同。所以会有二倍图，三倍图。
-宽 100px 的图片在 1:1 的屏幕上css设置为 100px，在 2:1 的屏幕上可以使用200px 的图片，css 同样设置为 100px 。
+宽 100px 的图片在 1:1 的屏幕上css设置为 100px，在 2:1 的屏幕上可以使用200px 的图片，css 同样设置为 100px 。  
+设备独立像素 (DIP) 是与设备无关的，可以调整的逻辑像素。
 
 
 ### 参考：  
 [1 pt 的图形大小与其在屏幕上显示出的大小之间有什么关系？](https://www.zhihu.com/question/19851058)  
+[pt](http://www.w3chtml.com/css3/units/length/pt.html)
 
 [设备像素比（devicePixelRatio）](https://blog.csdn.net/xueli_2017/article/details/91492971)
 

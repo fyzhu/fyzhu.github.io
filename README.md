@@ -32,3 +32,7 @@ git --work-tree=/www/wwwroot/zhuyunfeng.com --git-dir=/home/git/hexo.git checkou
 The "mode" argument must be integer.
 
 使用低版本 node(12)
+
+### todo
+- [ ] 自动抓取图片
+- [ ] 统计每篇文章查看次数
