@@ -33,12 +33,15 @@ jobs:
       - name: Install Dependencies
         run: npm install
         
-      # - name: Build
-      #   run: npm run b
+      - name: Build
+        run: npm run b
 
       - name: Deploy
-        run: |
-          git config --global user.email "i@zhuyunfeng.com"
-          git config --global user.name "vivian"
-          npm run d
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} #secrets.ACCESS_TOKEN是项目配置的密钥
+          BRANCH: master # The branch the action should deploy to.
+          FOLDER: public # The folder the action should deploy.
+          # CLEAN: true # Automatically remove deleted files from the deploy branch
+          # BUILD_SCRIPT: npm install && npm run build
 
