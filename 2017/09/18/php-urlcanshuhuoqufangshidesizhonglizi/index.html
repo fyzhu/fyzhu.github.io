@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.zhuyunfeng.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"appID":"LV7MSV035J","apiKey":"36c9db7e95455da7f0f976c4051e3905","indexName":"zhuyunfeng","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="这篇文章主要介绍了PHP URL参数获取方式的四种例子,php url参数解析的4种方法,需要的朋友可以参考下 在已知URL参数的情况下，我们可以根据自身情况采用$_GET来获取相应的参数信息（$_GET[‘name’]）;那，在未知情况下如何获取到URL上的参数信息呢？  利用$_SERVER内置数组变量相对较为原始的$_SERVER[‘QUERY_STRING’]来获取，URL的参数，通常使用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP URL参数获取方式的四种例子">
+<meta property="og:url" content="http://www.zhuyunfeng.com/2017/09/18/php-urlcanshuhuoqufangshidesizhonglizi/index.html">
+<meta property="og:site_name" content="Yvan Zhu&#39;s blog">
+<meta property="og:description" content="这篇文章主要介绍了PHP URL参数获取方式的四种例子,php url参数解析的4种方法,需要的朋友可以参考下 在已知URL参数的情况下，我们可以根据自身情况采用$_GET来获取相应的参数信息（$_GET[‘name’]）;那，在未知情况下如何获取到URL上的参数信息呢？  利用$_SERVER内置数组变量相对较为原始的$_SERVER[‘QUERY_STRING’]来获取，URL的参数，通常使用">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-09-18T13:32:54.000Z">
+<meta property="article:modified_time" content="2022-03-02T08:46:50.874Z">
+<meta property="article:author" content="Yvan Zhu">
+<meta property="article:tag" content="php">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://www.zhuyunfeng.com/2017/09/18/php-urlcanshuhuoqufangshidesizhonglizi/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>PHP URL参数获取方式的四种例子 | Yvan Zhu's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Yvan Zhu's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2017/09/18/php-urlcanshuhuoqufangshidesizhonglizi/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          PHP URL参数获取方式的四种例子
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-09-18 13:32:54" itemprop="dateCreated datePublished" datetime="2017-09-18T13:32:54+00:00">2017-09-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-02 08:46:50" itemprop="dateModified" datetime="2022-03-02T08:46:50+00:00">2022-03-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/back-end/" itemprop="url" rel="index"><span itemprop="name">back-end</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>这篇文章主要介绍了PHP URL参数获取方式的四种例子,php url参数解析的4种方法,需要的朋友可以参考下</p>
+<p>在已知URL参数的情况下，我们可以根据自身情况采用$_GET来获取相应的参数信息（$_GET[‘name’]）;那，在未知情况下如何获取到URL上的参数信息呢？ </p>
+<h2 id="利用-SERVER内置数组变量"><a href="#利用-SERVER内置数组变量" class="headerlink" title="利用$_SERVER内置数组变量"></a>利用$_SERVER内置数组变量</h2><p>相对较为原始的$_SERVER[‘QUERY_STRING’]来获取，URL的参数，通常使用这个变量返回的会是类似这样的数据：name=tank&amp;sex=1 如果需要包含文件名的话可以使用$_SERVER[“REQUEST_URI”](返回类似：/index.php?name=tank&amp;sex=1) </p>
+<h2 id="利用pathinfo内置函数"><a href="#利用pathinfo内置函数" class="headerlink" title="利用pathinfo内置函数"></a>利用pathinfo内置函数</h2><p>复制代码代码如下:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php $test = pathinfo(&quot;http://localhost/index.php&quot;); print_r($test); /* 结果如下 Array ( \[dirname\] =&gt; http://localhost //url的路径 \[basename\] =&gt; index.php  //完整文件名 \[extension\] =&gt; php  //文件名后缀 \[filename\] =&gt; index //文件名 ) */ ?&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="利用parse-url内置函数"><a href="#利用parse-url内置函数" class="headerlink" title="利用parse_url内置函数"></a>利用parse_url内置函数</h2><p>复制代码代码如下:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php $test = parse\_url(&quot;http://localhost/index.php?name=tank&amp;sex=1#top&quot;); print\_r($test); /* 结果如下 Array ( \[scheme\] =&gt; http //使用什么协议 \[host\] =&gt; localhost //主机名 \[path\] =&gt; /index.php //路径 \[query\] =&gt; name=tank&amp;sex=1 // 所传的参数 \[fragment\] =&gt; top //后面根的锚点 ) */ ?&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="利用basename内置函数"><a href="#利用basename内置函数" class="headerlink" title="利用basename内置函数"></a>利用basename内置函数</h2><p>复制代码代码如下:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php $test = basename(&quot;http://localhost/index.php?name=tank&amp;sex=1#top&quot;); echo $test; /* 结果如下 index.php?name=tank&amp;sex=1#top */ ?&gt;</span><br></pre></td></tr></table></figure>
+<p>另外，还有就是自己通过正则匹配的处理方式来获取需要的值了。这种方式较为精确，效率暂不考虑。。。 下面拓展实践下正则处理方式：</p>
+<p>复制代码代码如下:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php preg\_match\_all(&quot;/(\\w+=\\w+)(#\\w+)?/i&quot;,&quot;http://localhost/index.php?name=tank&amp;sex=1#top&quot;,$match); print_r($match); /* 结果如下 Array ( \[0\] =&gt; Array ( \[0\] =&gt; name=tank \[1\] =&gt; sex=1#top ) \[1\] =&gt; Array ( \[0\] =&gt; name=tank \[1\] =&gt; sex=1 ) \[2\] =&gt; Array ( \[0\] =&gt; \[1\] =&gt; #top ) ) */ ?&gt;</span><br></pre></td></tr></table></figure>
+<p>补充 函数dirname() 路途漫漫…还有待继续挖掘… </p>
+<p>转载至<a target="_blank" rel="noopener" href="http://www.jb51.net/article/47396.htm">http://www.jb51.net/article/47396.htm</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/php/" rel="tag"># php</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2017/09/14/apache-peizhixunimuluxunizhuji/" rel="prev" title="Apache 配置虚拟目录、虚拟主机">
+      <i class="fa fa-chevron-left"></i> Apache 配置虚拟目录、虚拟主机
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2017/09/19/chaitoufenghongsushou/" rel="next" title="钗头凤·红酥手">
+      钗头凤·红酥手 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A9%E7%94%A8-SERVER%E5%86%85%E7%BD%AE%E6%95%B0%E7%BB%84%E5%8F%98%E9%87%8F"><span class="nav-number">1.</span> <span class="nav-text">利用$_SERVER内置数组变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A9%E7%94%A8pathinfo%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">利用pathinfo内置函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A9%E7%94%A8parse-url%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">利用parse_url内置函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A9%E7%94%A8basename%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0"><span class="nav-number">4.</span> <span class="nav-text">利用basename内置函数</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Yvan Zhu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">167</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yvan Zhu</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

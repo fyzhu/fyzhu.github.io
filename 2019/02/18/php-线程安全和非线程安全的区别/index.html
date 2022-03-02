@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.zhuyunfeng.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"appID":"LV7MSV035J","apiKey":"36c9db7e95455da7f0f976c4051e3905","indexName":"zhuyunfeng","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="如何选择PHP版本（选择线程安全还是非线程安全）：在Windows下安装PHP，在选择PHP版本上很有讲究。 Windows下的PHP版本分两种：线程安全版本与非线程安全版本。 如果你打算使用IIS，则你可以以ISAPI或FastCGI这两种方式来安装PHP。CGI的方式因为效率低下，故不予考虑。 如果你要在IIS中以FastCGI方式使用PHP，则你应该使用PHP的非线程安全的版本（Non-Th">
+<meta property="og:type" content="article">
+<meta property="og:title" content="php 线程安全和非线程安全的区别">
+<meta property="og:url" content="http://www.zhuyunfeng.com/2019/02/18/php-%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E5%92%8C%E9%9D%9E%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E5%8C%BA%E5%88%AB/index.html">
+<meta property="og:site_name" content="Yvan Zhu&#39;s blog">
+<meta property="og:description" content="如何选择PHP版本（选择线程安全还是非线程安全）：在Windows下安装PHP，在选择PHP版本上很有讲究。 Windows下的PHP版本分两种：线程安全版本与非线程安全版本。 如果你打算使用IIS，则你可以以ISAPI或FastCGI这两种方式来安装PHP。CGI的方式因为效率低下，故不予考虑。 如果你要在IIS中以FastCGI方式使用PHP，则你应该使用PHP的非线程安全的版本（Non-Th">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-02-18T16:30:18.000Z">
+<meta property="article:modified_time" content="2022-03-02T08:46:50.874Z">
+<meta property="article:author" content="Yvan Zhu">
+<meta property="article:tag" content="php">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://www.zhuyunfeng.com/2019/02/18/php-%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E5%92%8C%E9%9D%9E%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E5%8C%BA%E5%88%AB/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>php 线程安全和非线程安全的区别 | Yvan Zhu's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Yvan Zhu's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2019/02/18/php-%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E5%92%8C%E9%9D%9E%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E5%8C%BA%E5%88%AB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          php 线程安全和非线程安全的区别
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-02-18 16:30:18" itemprop="dateCreated datePublished" datetime="2019-02-18T16:30:18+00:00">2019-02-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-02 08:46:50" itemprop="dateModified" datetime="2022-03-02T08:46:50+00:00">2022-03-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/back-end/" itemprop="url" rel="index"><span itemprop="name">back-end</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>如何选择PHP版本（选择线程安全还是非线程安全）：<br>在Windows下安装PHP，在选择PHP版本上很有讲究。</p>
+<p>Windows下的PHP版本分两种：线程安全版本与非线程安全版本。</p>
+<p>如果你打算使用IIS，则你可以以ISAPI或FastCGI这两种方式来安装PHP。CGI的方式因为效率低下，故不予考虑。</p>
+<p>如果你要在IIS中以FastCGI方式使用PHP，则你应该使用PHP的非线程安全的版本（Non-Thread Safe，NTS）。原因是以FastCGI方式安装PHP时，PHP拥有独立的进程，并且FastCGI是单一线程的，不存在多个线程之间可能引发的相互干扰（这种干扰通常都是由于全局变量和静态变量导致的）。由于省去了线程安全的检查，因此使用FastCGI方式比ISAPI方式的效率更高一些。</p>
+<p>如果你要在IIS中以ISAPI的方式使用PHP，则你应该使用PHP的线程安全版本（Thread Safe，TS）。原因是PHP以ISAPI方式安装时，PHP没有独立的进程，而是作为DLL被IIS加载运行的，即是依附于Web服务器进程的。当Web服务器运行在多线程模式下（IIS正是这种情况），PHP自然也就运行在多线程模式下。只要是在多线程模式下运行，就可能存在线程安全问题，因此应选择PHP的线程安全版本。</p>
+<p>但在这里还有必要说明一下，尽管Apache本身是线程安全的，同时你也选择了PHP的线程安全版本，但由于一些Apache和PHP下的第三方扩展最初是基于Unix的多进程思想开发出来的，在设计开发时没有考虑线程安全的问题，因此，不排除在这种情况下仍然存在IIS被某些第三方扩展搞崩溃的可能。</p>
+<p>如果你打算使用Apache，则你可以以模块、ISAPI、FastCGI这三种方式来安装PHP。CGI的方式因为效率低下，故不予考虑。</p>
+<p>如果你要在Apache中以模块方式安装PHP，则你应该使用PHP的线程安全的版本。原因是当PHP作为Apache的模块安装时，PHP没有独立的进程，而是作为模块以DLL的形式被加载到Apache中的，是随Apache的启动而启动的，而Windows下的Apache为多线程工作模式，因此PHP自然也就运行在多线程模式下。因此，这种情况下应使用PHP的线程安全版本。</p>
+<p>再来看ISAPI的情况。通常认为ISAPI是配合IIS使用的，因为ISAPI最初就是微软为IIS开发的。但Apache现在也可以通过加载mod_isapi.so模块来实现ISAPI的功能，以允许PHP以ISAPI的方式安装。.so文件是Apache自1.3版本后制定的用于Windows下的模块命名规则，对于Windows下的Apache而言，.so与.dll文件一样，都是动态链接库文件。</p>
+<p>当要以ISAPI方式来安装PHP时，通常是加载一个名如phpXisapi.dll的DLL文件，其中的X为阿拉伯数字4、5等等这样子。</p>
+<p>但一般不建议在Apache中以ISAPI方式来安装PHP，原因是到目前为止，Apache通过mod_isapi.so模块来实现的ISAPI功能并不完整，并未完整实现微软对ISAPI所制定的全部规范。</p>
+<p>同样的，由于以ISAPI方式来安装PHP时，PHP也没有独立的进程，也是作为模块被加载到Apache中的，因此，同样也需要使用PHP的线程安全版本。</p>
+<p>如果你要在Apache中以FastCGI方式使用PHP，则同在IIS中使用FastCGI的PHP的情况一样，你应该使用PHP的非线程安全的版本。原因是在Apache中以FastCGI方式安装PHP时，PHP拥有独立的进程，并且FastCGI是单一线程的，故应使用PHP的非线程安全版本以提高性能。</p>
+<p>转载自：<a target="_blank" rel="noopener" href="https://blog.csdn.net/FAST_13469ND/article/details/82048649">https://blog.csdn.net/FAST_13469ND/article/details/82048649</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/php/" rel="tag"># php</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/02/18/idealist/" rel="prev" title="idealist">
+      <i class="fa fa-chevron-left"></i> idealist
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/02/18/thinkphp-centos%E4%B8%8B%E9%A6%96%E9%A1%B5redirected-you-too-many-times/" rel="next" title="thinkphp centos下首页redirected you too many times.">
+      thinkphp centos下首页redirected you too many times. <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Yvan Zhu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">167</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yvan Zhu</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

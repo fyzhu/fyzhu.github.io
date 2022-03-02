@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.zhuyunfeng.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"appID":"LV7MSV035J","apiKey":"36c9db7e95455da7f0f976c4051e3905","indexName":"zhuyunfeng","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="1.2 两种模式 streaming 流模式 （浏览器模式）实时的 buffering 缓冲模式 把所有的数据准备好之后才返回给客户端 可以控制最后的服务器响应   12res.write()res.end() 1.3 使用场景 2.1 工具条常用功能 备注 重放 清除 调试 模式切换 解析 保持会话 过滤请求（只看chrome）  2.2 状态栏操作 capturing 是否工作 过滤会话 会话">
+<meta property="og:type" content="article">
+<meta property="og:title" content="fiddler学习笔记">
+<meta property="og:url" content="http://www.zhuyunfeng.com/2020/05/22/fiddler%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Yvan Zhu&#39;s blog">
+<meta property="og:description" content="1.2 两种模式 streaming 流模式 （浏览器模式）实时的 buffering 缓冲模式 把所有的数据准备好之后才返回给客户端 可以控制最后的服务器响应   12res.write()res.end() 1.3 使用场景 2.1 工具条常用功能 备注 重放 清除 调试 模式切换 解析 保持会话 过滤请求（只看chrome）  2.2 状态栏操作 capturing 是否工作 过滤会话 会话">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img4.mukewang.com/5ec780180001c60b12800720.jpg">
+<meta property="og:image" content="https://img2.mukewang.com/5ec781f00001b90b12800720.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190627112123574.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTEwNjg3MDI=,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-05-22T15:23:27.000Z">
+<meta property="article:modified_time" content="2022-03-02T08:46:50.870Z">
+<meta property="article:author" content="Yvan Zhu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img4.mukewang.com/5ec780180001c60b12800720.jpg">
+
+<link rel="canonical" href="http://www.zhuyunfeng.com/2020/05/22/fiddler%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>fiddler学习笔记 | Yvan Zhu's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Yvan Zhu's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2020/05/22/fiddler%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          fiddler学习笔记
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-05-22 15:23:27" itemprop="dateCreated datePublished" datetime="2020-05-22T15:23:27+00:00">2020-05-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-02 08:46:50" itemprop="dateModified" datetime="2022-03-02T08:46:50+00:00">2022-03-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="1-2-两种模式"><a href="#1-2-两种模式" class="headerlink" title="1.2 两种模式"></a>1.2 两种模式</h2><ol>
+<li>streaming 流模式 （浏览器模式）实时的</li>
+<li>buffering 缓冲模式 把所有的数据准备好之后才返回给客户端 可以控制最后的服务器响应</li>
+</ol>
+<p><img src="https://img4.mukewang.com/5ec780180001c60b12800720.jpg" alt="fiddler 使用场景"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">res.write()</span><br><span class="line">res.end()</span><br></pre></td></tr></table></figure>
+<h2 id="1-3-使用场景"><a href="#1-3-使用场景" class="headerlink" title="1.3 使用场景"></a>1.3 使用场景</h2><p><img src="https://img2.mukewang.com/5ec781f00001b90b12800720.jpg" alt="fiddler 使用场景"></p>
+<h2 id="2-1-工具条常用功能"><a href="#2-1-工具条常用功能" class="headerlink" title="2.1 工具条常用功能"></a>2.1 工具条常用功能</h2><ol>
+<li>备注</li>
+<li>重放</li>
+<li>清除</li>
+<li>调试</li>
+<li>模式切换</li>
+<li>解析</li>
+<li>保持会话</li>
+<li>过滤请求（只看chrome）</li>
+</ol>
+<h2 id="2-2-状态栏操作"><a href="#2-2-状态栏操作" class="headerlink" title="2.2 状态栏操作"></a>2.2 状态栏操作</h2><ol>
+<li>capturing 是否工作</li>
+<li>过滤会话</li>
+<li>会话数量</li>
+<li>会话详细地址</li>
+</ol>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ol>
+<li>捕获HTTPS（参考教程）</li>
+<li>捕获chrome浏览器，安装插件 SwithyOmega</li>
+<li>不能捕获js，可能是缓存的问题，勾选禁用缓存</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20190627112123574.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTEwNjg3MDI=,size_16,color_FFFFFF,t_70" alt="捕获js"></p>
+<p>课程地址<br><a target="_blank" rel="noopener" href="https://www.imooc.com/learn/37">https://www.imooc.com/learn/37</a><br>教程地址<br><a target="_blank" rel="noopener" href="https://kb.cnblogs.com/page/130367/#introduce">https://kb.cnblogs.com/page/130367/#introduce</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/05/22/%E5%B9%BF%E5%8E%A6%E4%B8%87%E9%97%B4%E5%A4%9C%E7%9C%A0%E4%B8%8D%E8%B6%B3%E4%BA%94%E5%B0%BA-%E7%B2%AE%E7%94%B0%E5%8D%83%E9%A1%B7%E6%97%A5%E9%A3%9F%E4%B8%8D%E8%BF%87%E4%B8%89%E9%A4%90/" rel="prev" title="广厦万间夜眠不足五尺,粮田千顷日食不过三餐">
+      <i class="fa fa-chevron-left"></i> 广厦万间夜眠不足五尺,粮田千顷日食不过三餐
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/06/02/javascript/js%20%E6%B3%A8%E9%87%8A%E8%A7%84%E8%8C%83/" rel="next" title="js 代码注释规范">
+      js 代码注释规范 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">1.2 两种模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">2.</span> <span class="nav-text">1.3 使用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E5%B7%A5%E5%85%B7%E6%9D%A1%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD"><span class="nav-number">3.</span> <span class="nav-text">2.1 工具条常用功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E7%8A%B6%E6%80%81%E6%A0%8F%E6%93%8D%E4%BD%9C"><span class="nav-number">4.</span> <span class="nav-text">2.2 状态栏操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">5.</span> <span class="nav-text">问题</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Yvan Zhu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">167</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yvan Zhu</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
