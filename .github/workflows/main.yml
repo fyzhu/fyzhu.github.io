@@ -25,10 +25,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: Set git email
-        run: git config --global user.email "i@zhuyunfeng.com"
-
       # Runs a set of commands using the runners shell
       - name: Clone theme
         run: |
@@ -37,5 +33,11 @@ jobs:
       - name: Install Dependencies
         run: npm install
         
-      - name: Build
-        run: npm run b
+      # - name: Build
+      #   run: npm run b
+
+      - name: Deploy
+        run: |
+          git config --global user.email "i@zhuyunfeng.com"
+          npm run d
+
