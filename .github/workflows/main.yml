@@ -28,8 +28,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Clone theme
         run: |
-          echo Add other actions to build,
           git clone https://github.com/fyzhu/hexo-theme-next themes/next
+          cd themes/next
+          git checkout dev
       - name: Install Dependencies
         run: npm install
         
