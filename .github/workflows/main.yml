@@ -39,5 +39,6 @@ jobs:
       - name: Deploy
         run: |
           git config --global user.email "i@zhuyunfeng.com"
+          git config --global user.name "vivian"
           npm run d
 
