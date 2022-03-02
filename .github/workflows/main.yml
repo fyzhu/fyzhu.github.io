@@ -40,8 +40,8 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} #secrets.ACCESS_TOKEN是项目配置的密钥
-          BRANCH: master # The branch the action should deploy to.
+          BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: public # The folder the action should deploy.
-          # CLEAN: true # Automatically remove deleted files from the deploy branch
+          CLEAN: true # Automatically remove deleted files from the deploy branch
           # BUILD_SCRIPT: npm install && npm run build
 
