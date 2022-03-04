@@ -91,5 +91,8 @@ ifconfig | grep "inet " | grep -v 127.0.0.1
 #### 进程相关
 ##### ps
 ##### top
+按P – 以 CPU 占用率大小的顺序排列进程列表
+
+按M – 以内存占用率大小的顺序排列进程列表
 参考：
 https://www.runoob.com/linux/linux-command-manual.html
