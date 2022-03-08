@@ -150,6 +150,15 @@ reset 如果不加参数，那么默认使用 `--mixed` 参数。它的行为是
 重置stage区和工作目录
 ### soft
 保留工作目录，并把重置 HEAD 所带来的新的差异放进暂存区
+## git tag
+### 查看
+git tag
+### 增加
+git tag v0.0.1  
+git push origin v0.0.1
+### 删除
+git tag -d v0.0.1  
+git push origin --delete v0.0.1
 
 ## 参考
 
