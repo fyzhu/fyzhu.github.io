@@ -999,6 +999,9 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
 <p>reset 如果不加参数，那么默认使用 <code>--mixed</code> 参数。它的行为是：保留工作目录，并且清空暂存区。也就是说，工作目录的修改、暂存区的内容以及由 reset 所导致的新的文件差异，都会被放进工作目录。简而言之，就是「把所有差异都混合（mixed）放在工作目录中」。</p>
 <h3 id="hard"><a href="#hard" class="headerlink" title="hard"></a>hard</h3><p>重置stage区和工作目录</p>
 <h3 id="soft"><a href="#soft" class="headerlink" title="soft"></a>soft</h3><p>保留工作目录，并把重置 HEAD 所带来的新的差异放进暂存区</p>
+<h2 id="git-tag"><a href="#git-tag" class="headerlink" title="git tag"></a>git tag</h2><h3 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h3><p>git tag</p>
+<h3 id="增加"><a href="#增加" class="headerlink" title="增加"></a>增加</h3><p>git tag v0.0.1<br>git push origin v0.0.1</p>
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><p>git tag -d v0.0.1<br>git push origin –delete v0.0.1</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.jianshu.com/p/098d85a58bf1">Git 修改已提交的commit注释</a></p>
 <p><a href="https://www.jianshu.com/p/c2ec5f06cf1a">Git Reset 三种模式</a></p>
 <p><a href="https://www.cnblogs.com/liyong888/p/9822410.html">git 删除本地分支和删除远程分支</a>  </p>
