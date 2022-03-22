@@ -1,5 +1,5 @@
 ---
-title: centos下解压.zip文件
+title: centos下压缩解压.zip文件
 url: 20.html
 id: 20
 categories:
@@ -10,48 +10,51 @@ tags:
   - centos
 ---
 
-以下命令均在/home目录下操作
+以下命令均在 /home 目录下操作
+```bash
 cd /home #进入/home目录
+```
 
 
-1、把/home目录下面的mydata目录压缩为mydata.zip
+1、把 /home 目录下面的 mydata 目录压缩为 mydata.zip
+```bash
 zip -r mydata.zip mydata #压缩mydata目录
+```
 
-
-2、把/home目录下面的mydata.zip解压到mydatabak目录里面
+2、把 /home 目录下面的 mydata.zip 解压到 mydatabak 目录里面
+```bash
 unzip mydata.zip -d mydatabak
+```
 
-
-3、把/home目录下面的abc文件夹和123.txt压缩成为abc123.zip
-
+3、把 /home 目录下面的 abc 文件夹和 123.txt 压缩成为 abc123.zip
+```bash
 zip -r abc123.zip abc 123.txt
+```
 
- 
-
-4、把/home目录下面的wwwroot.zip直接解压到/home目录里面
-
+4、把 /home 目录下面的 wwwroot.zip 直接解压到 /home 目录里面
+```bash 
 unzip wwwroot.zip
+```
 
-
-5、把/home目录下面的abc12.zip、abc23.zip、abc34.zip同时解压到/home目录里面
-
+5、把 /home 目录下面的 abc12.zip、abc23.zip、abc34.zip 同时解压到 /home 目录里面
+```bash
 unzip abc\*.zip
+```
 
-
-6、查看把/home目录下面的wwwroot.zip里面的内容
-
+6、查看把 /home 目录下面的 wwwroot.zip 里面的内容
+```bash
 unzip -v wwwroot.zip
+```
 
-
-7、验证/home目录下面的wwwroot.zip是否完整
-
+7、验证 /home 目录下面的 wwwroot.zip 是否完整
+```bash
 unzip -t wwwroot.zip
+```
 
-
-8、把/home目录下面wwwroot.zip里面的所有文件解压到第一级目录
-
+8、把 /home 目录下面 wwwroot.zip 里面的所有文件解压到第一级目录
+```bash
 unzip -j wwwroot.zip
-
+```
 =====================================================
 主要参数
 -c：将解压缩的结果
