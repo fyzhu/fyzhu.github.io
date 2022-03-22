@@ -38,3 +38,7 @@ report
 8. 读 PBR 标准的 shader 源码，照着定制 3D 文字的渲染算法。
 9. 读 Photopea 的 shader 源码（需要 monkey-patch 一下），看它是怎么在 WebGL 和 canvas 之间无缝切换的。
 
+# focus os
+# todo widget
+# iyiqi chrome extension
+# 电视应用
