@@ -132,6 +132,7 @@ In that case, it would be better to `revert` the commits that you don't want, th
 ## 修改已提交的commit
 ```
 git commit --amend
+git commit --amend --reset-author
 ```
 ## 修改配置信息
 ```
