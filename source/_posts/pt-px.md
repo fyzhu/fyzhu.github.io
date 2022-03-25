@@ -55,9 +55,10 @@ CSS 只与设备独立像素有关系，尺寸相同，设备独立像素相同�
 
 
 ### 参考：  
-[1 pt 的图形大小与其在屏幕上显示出的大小之间有什么关系？](https://www.zhihu.com/question/19851058)  
-[pt](http://www.w3chtml.com/css3/units/length/pt.html)
+1. [1 pt 的图形大小与其在屏幕上显示出的大小之间有什么关系？](https://www.zhihu.com/question/19851058)
 
-[设备像素比（devicePixelRatio）](https://blog.csdn.net/xueli_2017/article/details/91492971)
+2. [pt](http://www.w3chtml.com/css3/units/length/pt.html)
 
-[CSS像素、设备独立像素、设备像素之间关系](https://www.cnblogs.com/jiangzilong/p/6700023.html)
+3. [设备像素比（devicePixelRatio）](https://blog.csdn.net/xueli_2017/article/details/91492971)
+
+4. [CSS像素、设备独立像素、设备像素之间关系](https://www.cnblogs.com/jiangzilong/p/6700023.html)
