@@ -84,7 +84,15 @@ sudo lsof -i :8080
 sudo kill -9 进程pid
 
 #### nohup
+英文全称 no hang up（不挂起），用于在系统后台不挂断地运行命令，退出终端不会影响程序的运行。
+```
+nohup Command [ Arg … ] [　& ]
+```
+Command：要执行的命令。
 
+Arg：一些参数，可以指定输出文件。
+
+&：让命令在后台执行，终端退出后命令仍旧执行。
 #### 查看ip
 ifconfig | grep "inet " | grep -v 127.0.0.1
 
