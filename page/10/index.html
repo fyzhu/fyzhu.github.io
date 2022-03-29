@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
+<meta name="generator" content="Hexo 5.4.1">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">167</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">168</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,92 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2019/07/13/Mac%E4%B8%8B%E4%BD%BF%E7%94%A8mysql/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/07/13/Mac%E4%B8%8B%E4%BD%BF%E7%94%A8mysql/" class="post-title-link" itemprop="url">Mac下使用mysql</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-07-13 12:07:49" itemprop="dateCreated datePublished" datetime="2019-07-13T12:07:49+00:00">2019-07-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-29 11:15:13" itemprop="dateModified" datetime="2022-03-29T11:15:13+00:00">2022-03-29</time>
+              </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2019/07/13/Mac%E4%B8%8B%E4%BD%BF%E7%94%A8mysql/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://www.zhuyunfeng.com/2019/07/13/Mac%E4%B8%8B%E4%BD%BF%E7%94%A8mysql/" class="cy_cmt_count" data-xid="2019/07/13/Mac下使用mysql/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
+<li>去官网下载安装</li>
+<li>使用 homebrew 安装</li>
+</ol>
+<h2 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mysql.server start</span><br></pre></td></tr></table></figure>
+<h2 id="设置密码"><a href="#设置密码" class="headerlink" title="设置密码"></a>设置密码</h2><p>homebrew安装默认是没有密码的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; alter user &#x27;root&#x27;@&#x27;localhost&#x27; identified with mysql_native_password by &#x27;123456&#x27;;</span><br><span class="line">Query OK, 0 rows affected (0.10 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; flush privileges;</span><br><span class="line">Query OK, 0 rows affected (0.01 sec)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2019/07/11/%E6%8A%80%E8%83%BD%E6%A0%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +327,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-28 08:38:23" itemprop="dateModified" datetime="2022-03-28T08:38:23+00:00">2022-03-28</time>
+                <time title="修改时间：2022-03-29 11:15:13" itemprop="dateModified" datetime="2022-03-29T11:15:13+00:00">2022-03-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -343,7 +429,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-28 08:38:23" itemprop="dateModified" datetime="2022-03-28T08:38:23+00:00">2022-03-28</time>
+                <time title="修改时间：2022-03-29 11:15:13" itemprop="dateModified" datetime="2022-03-29T11:15:13+00:00">2022-03-29</time>
               </span>
 
           
@@ -426,7 +512,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-28 08:38:23" itemprop="dateModified" datetime="2022-03-28T08:38:23+00:00">2022-03-28</time>
+                <time title="修改时间：2022-03-29 11:15:13" itemprop="dateModified" datetime="2022-03-29T11:15:13+00:00">2022-03-29</time>
               </span>
 
           
@@ -507,7 +593,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-28 08:38:23" itemprop="dateModified" datetime="2022-03-28T08:38:23+00:00">2022-03-28</time>
+                <time title="修改时间：2022-03-29 11:15:13" itemprop="dateModified" datetime="2022-03-29T11:15:13+00:00">2022-03-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -610,7 +696,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-28 08:38:23" itemprop="dateModified" datetime="2022-03-28T08:38:23+00:00">2022-03-28</time>
+                <time title="修改时间：2022-03-29 11:15:13" itemprop="dateModified" datetime="2022-03-29T11:15:13+00:00">2022-03-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -708,7 +794,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-28 08:38:23" itemprop="dateModified" datetime="2022-03-28T08:38:23+00:00">2022-03-28</time>
+                <time title="修改时间：2022-03-29 11:15:13" itemprop="dateModified" datetime="2022-03-29T11:15:13+00:00">2022-03-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -803,7 +889,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-28 08:38:23" itemprop="dateModified" datetime="2022-03-28T08:38:23+00:00">2022-03-28</time>
+                <time title="修改时间：2022-03-29 11:15:13" itemprop="dateModified" datetime="2022-03-29T11:15:13+00:00">2022-03-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -900,7 +986,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-28 08:38:23" itemprop="dateModified" datetime="2022-03-28T08:38:23+00:00">2022-03-28</time>
+                <time title="修改时间：2022-03-29 11:15:13" itemprop="dateModified" datetime="2022-03-29T11:15:13+00:00">2022-03-29</time>
               </span>
 
           
@@ -987,7 +1073,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-28 08:38:23" itemprop="dateModified" datetime="2022-03-28T08:38:23+00:00">2022-03-28</time>
+                <time title="修改时间：2022-03-29 11:15:13" itemprop="dateModified" datetime="2022-03-29T11:15:13+00:00">2022-03-29</time>
               </span>
 
           
@@ -1020,86 +1106,6 @@
           <p>使用百度地图的echart中的地图压缩算法对geojson进行压缩完成后，使用larevel返回，会报这个错误</p>
 <p>参考文档<br><a target="_blank" rel="noopener" href="https://www.e-learn.cn/content/wangluowenzhang/169226">https://www.e-learn.cn/content/wangluowenzhang/169226</a></p>
 
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2019/02/18/thinkphp-centos%E4%B8%8B%E9%A6%96%E9%A1%B5redirected-you-too-many-times/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/02/18/thinkphp-centos%E4%B8%8B%E9%A6%96%E9%A1%B5redirected-you-too-many-times/" class="post-title-link" itemprop="url">thinkphp centos下首页redirected you too many times.</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-02-18 16:32:39" itemprop="dateCreated datePublished" datetime="2019-02-18T16:32:39+00:00">2019-02-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-28 08:38:23" itemprop="dateModified" datetime="2022-03-28T08:38:23+00:00">2022-03-28</time>
-              </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2019/02/18/thinkphp-centos%E4%B8%8B%E9%A6%96%E9%A1%B5redirected-you-too-many-times/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://www.zhuyunfeng.com/2019/02/18/thinkphp-centos%E4%B8%8B%E9%A6%96%E9%A1%B5redirected-you-too-many-times/" class="cy_cmt_count" data-xid="2019/02/18/thinkphp-centos下首页redirected-you-too-many-times/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
       
     </div>
 
@@ -1183,7 +1189,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">167</span>
+          <span class="site-state-item-count">168</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

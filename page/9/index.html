@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
+<meta name="generator" content="Hexo 5.4.1">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">167</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">168</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,119 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2019/12/04/postgresql%E5%A4%87%E4%BB%BD%E8%BF%98%E5%8E%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/04/postgresql%E5%A4%87%E4%BB%BD%E8%BF%98%E5%8E%9F/" class="post-title-link" itemprop="url">postgresql备份还原</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-12-04 13:19:33" itemprop="dateCreated datePublished" datetime="2019-12-04T13:19:33+00:00">2019-12-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-29 11:15:13" itemprop="dateModified" datetime="2022-03-29T11:15:13+00:00">2022-03-29</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/database/" itemprop="url" rel="index"><span itemprop="name">database</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2019/12/04/postgresql%E5%A4%87%E4%BB%BD%E8%BF%98%E5%8E%9F/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://www.zhuyunfeng.com/2019/12/04/postgresql%E5%A4%87%E4%BB%BD%E8%BF%98%E5%8E%9F/" class="cy_cmt_count" data-xid="2019/12/04/postgresql备份还原/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="一、备份"><a href="#一、备份" class="headerlink" title="一、备份"></a>一、备份</h4><p>1.命令行下备份为纯文本格式<br>切换为postgres用户（linux 命令）</p>
+<p>su - postgres</p>
+<p>备份到backupfile.bak</p>
+<p>pg_dump dbname &gt; backupfile.bak</p>
+<p>windows下使用-U参数切换用户</p>
+<p>pg_dump -h localhost -U postgres -p 5555 dbname &gt; backupfile.bak</p>
+<p>2.pgAdmin 4客户端备份为归档文件格式</p>
+<h4 id="二、还原"><a href="#二、还原" class="headerlink" title="二、还原"></a>二、还原</h4><p>纯文本格式的脚本<br>使用psql</p>
+<p>1.cd到postgresql安装目录，如：d:\program files\postgresql\10\bin&gt;</p>
+<p>2.执行 psql -U postgres -d dbname -p 5555 &lt; backupfile.bak</p>
+<p>另：使用CMD，不要使用powershell</p>
+<p>不加-U（大写），windows下默认是administrator用户，-p是端口</p>
+<p>归档文件格式（.sql文件，.backup文件）<br>使用pg_restore</p>
+<p>参数：-d 数据库 -j 线程数（可以多线程提高速度） -v 详细模式（显示还原过程）-U（用户名，windows下需要加这项）</p>
+<p>pg_restore –dbname=mydb –jobs=4 –verbose mydb.backup</p>
+<p>简写：pg_restore -d mydb -j 4 -v mydb.backup</p>
+<p>备注</p>
+<p>命令行启动postgresql</p>
+<p>pg_ctl start -D ../data</p>
+<p>../data为你的数据存放路径</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2019/09/02/shell%E5%91%BD%E4%BB%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +354,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-28 08:38:23" itemprop="dateModified" datetime="2022-03-28T08:38:23+00:00">2022-03-28</time>
+                <time title="修改时间：2022-03-29 11:15:13" itemprop="dateModified" datetime="2022-03-29T11:15:13+00:00">2022-03-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -288,9 +401,9 @@
 <h4 id="查看文件夹大小"><a href="#查看文件夹大小" class="headerlink" title="查看文件夹大小"></a>查看文件夹大小</h4><p>du -sh</p>
 <h4 id="新建文件"><a href="#新建文件" class="headerlink" title="新建文件"></a>新建文件</h4><p>touch xxx</p>
 <h4 id="cp-f-不起作用"><a href="#cp-f-不起作用" class="headerlink" title="cp -f 不起作用"></a>cp -f 不起作用</h4><p>默认cp命令是有别名(alias cp=’cp -i’)的,无法强制覆盖,即使你用 -f 参数也无法强制覆盖文件。</p>
-<h5 id="加个反斜杠，可以使用-cp-执行-cp-命令时不走-alias"><a href="#加个反斜杠，可以使用-cp-执行-cp-命令时不走-alias" class="headerlink" title="加个反斜杠，可以使用 \cp 执行 cp 命令时不走 alias"></a>加个反斜杠，可以使用 \cp 执行 cp 命令时不走 alias</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\cp -rf </span><br></pre></td></tr></table></figure>
+<h5 id="加个反斜杠，可以使用-cp-执行-cp-命令时不走-alias"><a href="#加个反斜杠，可以使用-cp-执行-cp-命令时不走-alias" class="headerlink" title="加个反斜杠，可以使用 \cp 执行 cp 命令时不走 alias"></a>加个反斜杠，可以使用 \cp 执行 cp 命令时不走 alias</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\<span class="built_in">cp</span> -rf </span><br></pre></td></tr></table></figure>
 <p>-r 文件夹<br>-f 强制覆盖，不提示</p>
-<h5 id="临时取消-cp-的alias"><a href="#临时取消-cp-的alias" class="headerlink" title="临时取消 cp 的alias"></a>临时取消 cp 的alias</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">unalias</span> cp</span><br><span class="line">cp a /<span class="built_in">test</span>/a</span><br></pre></td></tr></table></figure>
+<h5 id="临时取消-cp-的alias"><a href="#临时取消-cp-的alias" class="headerlink" title="临时取消 cp 的alias"></a>临时取消 cp 的alias</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">unalias</span> <span class="built_in">cp</span></span><br><span class="line"><span class="built_in">cp</span> a /test/a</span><br></pre></td></tr></table></figure>
 
 <h4 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h4><p>scp 是 secure copy的缩写, scp是linux系统下基于ssh登陆进行安全的远程文件拷贝命令。<br>scp [可选参数] file_source file_target </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r ./dist/* root@ip:/www/wwwroot/jd.dreamlist.cn/</span><br></pre></td></tr></table></figure>
@@ -368,7 +481,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-28 08:38:23" itemprop="dateModified" datetime="2022-03-28T08:38:23+00:00">2022-03-28</time>
+                <time title="修改时间：2022-03-29 11:15:13" itemprop="dateModified" datetime="2022-03-29T11:15:13+00:00">2022-03-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -430,12 +543,12 @@
 <h3 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ pm2 update <span class="comment"># Save processes, kill PM2 and restore processes</span></span><br><span class="line">$ pm2 save <span class="comment"># 保存当前应用列表</span></span><br><span class="line">$ pm2 startup <span class="comment"># 产生 init 脚本 保持进程活着</span></span><br></pre></td></tr></table></figure>
 <h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><h4 id="js-格式"><a href="#js-格式" class="headerlink" title="js 格式"></a>js 格式</h4><p>请注意，使用 js 配置文件要求文件名结尾为 .config.js</p>
 <p>例如：ecosystem.config.js</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="attr">apps</span> : [&#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;API&#x27;</span>,</span><br><span class="line">    <span class="attr">script</span>: <span class="string">&#x27;app.js&#x27;</span>,</span><br><span class="line">    <span class="attr">args</span>: <span class="string">&#x27;one two&#x27;</span>,</span><br><span class="line">    <span class="attr">instances</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">autorestart</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">watch</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">max_memory_restart</span>: <span class="string">&#x27;1G&#x27;</span>,</span><br><span class="line">    <span class="attr">env</span>: &#123;</span><br><span class="line">      <span class="attr">NODE_ENV</span>: <span class="string">&#x27;development&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">env_production</span>: &#123;</span><br><span class="line">      <span class="attr">NODE_ENV</span>: <span class="string">&#x27;production&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;],</span><br><span class="line"></span><br><span class="line">  <span class="attr">deploy</span> : &#123;</span><br><span class="line">    <span class="attr">production</span> : &#123; <span class="comment">// 任务名</span></span><br><span class="line">      <span class="attr">user</span> : <span class="string">&#x27;node&#x27;</span>, <span class="comment">// 服务器登录用户名</span></span><br><span class="line">      <span class="attr">host</span> : <span class="string">&#x27;212.83.163.1&#x27;</span>, <span class="comment">// 可为数组</span></span><br><span class="line">      <span class="attr">port</span> : <span class="string">&#x27;22&#x27;</span>,</span><br><span class="line">      <span class="attr">ref</span>  : <span class="string">&#x27;origin/master&#x27;</span>,</span><br><span class="line">      <span class="attr">repo</span> : <span class="string">&#x27;git@github.com:repo.git&#x27;</span>,</span><br><span class="line">      <span class="attr">path</span> : <span class="string">&#x27;/var/www/production&#x27;</span>, <span class="comment">// 服务器网站存放地址</span></span><br><span class="line">      <span class="string">&#x27;post-deploy&#x27;</span> : <span class="string">&#x27;npm install &amp;&amp; pm2 reload ecosystem.config.js --env production&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  apps : [&#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;API&#x27;</span>,</span><br><span class="line">    <span class="attr">script</span>: <span class="string">&#x27;app.js&#x27;</span>,</span><br><span class="line">    <span class="attr">args</span>: <span class="string">&#x27;one two&#x27;</span>,</span><br><span class="line">    <span class="attr">instances</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">autorestart</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">watch</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">max_memory_restart</span>: <span class="string">&#x27;1G&#x27;</span>,</span><br><span class="line">    <span class="attr">env</span>: &#123;</span><br><span class="line">      <span class="attr">NODE_ENV</span>: <span class="string">&#x27;development&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">env_production</span>: &#123;</span><br><span class="line">      <span class="attr">NODE_ENV</span>: <span class="string">&#x27;production&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;],</span><br><span class="line"></span><br><span class="line">  deploy : &#123;</span><br><span class="line">    production : &#123; <span class="comment">// 任务名</span></span><br><span class="line">      user : <span class="string">&#x27;node&#x27;</span>, <span class="comment">// 服务器登录用户名</span></span><br><span class="line">      host : <span class="string">&#x27;212.83.163.1&#x27;</span>, <span class="comment">// 可为数组</span></span><br><span class="line">      port : <span class="string">&#x27;22&#x27;</span>,</span><br><span class="line">      ref  : <span class="string">&#x27;origin/master&#x27;</span>,</span><br><span class="line">      repo : <span class="string">&#x27;git@github.com:repo.git&#x27;</span>,</span><br><span class="line">      path : <span class="string">&#x27;/var/www/production&#x27;</span>, <span class="comment">// 服务器网站存放地址</span></span><br><span class="line">      <span class="string">&#x27;post-deploy&#x27;</span> : <span class="string">&#x27;npm install &amp;&amp; pm2 reload ecosystem.config.js --env production&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <h5 id="部署时注意"><a href="#部署时注意" class="headerlink" title="部署时注意"></a>部署时注意</h5><p>path 给予权限</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># setup</span></span><br><span class="line">pm2 deploy ecosystem.config.js production(任务名) setup</span><br><span class="line"><span class="comment"># deploy</span></span><br><span class="line">pm2 deploy ecosystem.config.js production(任务名)</span><br></pre></td></tr></table></figure>
 <h4 id="json-格式"><a href="#json-格式" class="headerlink" title="json 格式"></a>json 格式</h4><p>例如：process.prod.json</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;egg&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;script&quot;</span>: <span class="string">&quot;server.js&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;cwd&quot;</span>: <span class="string">&quot;./&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;exec_mode&quot;</span>: <span class="string">&quot;cluster&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;watch&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">&quot;ignore_watch&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;node_modules&quot;</span>,</span><br><span class="line">        <span class="string">&quot;logs&quot;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;instances&quot;</span>: <span class="number">4</span>,</span><br><span class="line">    <span class="attr">&quot;error_file&quot;</span>: <span class="string">&quot;logs/err.log&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;out_file&quot;</span>: <span class="string">&quot;logs/out.log&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;log_date_format&quot;</span>: <span class="string">&quot;YYYY-MM-DD HH:mm:ss&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;env&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;NODE_ENV&quot;</span>: <span class="string">&quot;production&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;engines&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;node&quot;</span>: <span class="string">&quot;&gt;=7.6&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;egg&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;script&quot;</span><span class="punctuation">:</span> <span class="string">&quot;server.js&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cwd&quot;</span><span class="punctuation">:</span> <span class="string">&quot;./&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;exec_mode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cluster&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;watch&quot;</span><span class="punctuation">:</span> <span class="keyword">false</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;ignore_watch&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;node_modules&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;logs&quot;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;instances&quot;</span><span class="punctuation">:</span> <span class="number">4</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;error_file&quot;</span><span class="punctuation">:</span> <span class="string">&quot;logs/err.log&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;out_file&quot;</span><span class="punctuation">:</span> <span class="string">&quot;logs/out.log&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;log_date_format&quot;</span><span class="punctuation">:</span> <span class="string">&quot;YYYY-MM-DD HH:mm:ss&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;env&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;NODE_ENV&quot;</span><span class="punctuation">:</span> <span class="string">&quot;production&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;engines&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;node&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&gt;=7.6&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>可以根据需要设置任意多个JSON应用程序声明。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;apps&quot;: [</span><br><span class="line">      &#123;</span><br><span class="line">      &quot;name&quot;: &quot;testOne&quot;,</span><br><span class="line">      &quot;script&quot;: &quot; testOne/server.js&quot;,</span><br><span class="line">      &quot;instances&quot;: 1,</span><br><span class="line">      &quot;log_date_format&quot;: &quot;YYYY-MM-DD HH:mm Z&quot;,</span><br><span class="line">      &quot;max_memory_restart&quot;: &quot;500M&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;name&quot;: &quot;testTwo&quot;,</span><br><span class="line">      &quot;script&quot;: &quot; testTwo/server.js&quot;,</span><br><span class="line">      &quot;instances&quot;: 1,</span><br><span class="line">      &quot;log_date_format&quot;: &quot;YYYY-MM-DD HH:mm Z&quot;,</span><br><span class="line">      &quot;max_memory_restart&quot;: &quot;500M&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>启动</p>
@@ -520,7 +633,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-28 08:38:23" itemprop="dateModified" datetime="2022-03-28T08:38:23+00:00">2022-03-28</time>
+                <time title="修改时间：2022-03-29 11:15:13" itemprop="dateModified" datetime="2022-03-29T11:15:13+00:00">2022-03-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -644,7 +757,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-28 08:38:23" itemprop="dateModified" datetime="2022-03-28T08:38:23+00:00">2022-03-28</time>
+                <time title="修改时间：2022-03-29 11:15:13" itemprop="dateModified" datetime="2022-03-29T11:15:13+00:00">2022-03-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -754,7 +867,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-28 08:38:23" itemprop="dateModified" datetime="2022-03-28T08:38:23+00:00">2022-03-28</time>
+                <time title="修改时间：2022-03-29 11:15:13" itemprop="dateModified" datetime="2022-03-29T11:15:13+00:00">2022-03-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -852,7 +965,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-28 08:38:23" itemprop="dateModified" datetime="2022-03-28T08:38:23+00:00">2022-03-28</time>
+                <time title="修改时间：2022-03-29 11:15:13" itemprop="dateModified" datetime="2022-03-29T11:15:13+00:00">2022-03-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -946,7 +1059,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-28 08:38:23" itemprop="dateModified" datetime="2022-03-28T08:38:23+00:00">2022-03-28</time>
+                <time title="修改时间：2022-03-29 11:15:13" itemprop="dateModified" datetime="2022-03-29T11:15:13+00:00">2022-03-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1045,7 +1158,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-28 08:38:23" itemprop="dateModified" datetime="2022-03-28T08:38:23+00:00">2022-03-28</time>
+                <time title="修改时间：2022-03-29 11:15:13" itemprop="dateModified" datetime="2022-03-29T11:15:13+00:00">2022-03-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1142,7 +1255,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-28 08:38:23" itemprop="dateModified" datetime="2022-03-28T08:38:23+00:00">2022-03-28</time>
+                <time title="修改时间：2022-03-29 11:15:13" itemprop="dateModified" datetime="2022-03-29T11:15:13+00:00">2022-03-29</time>
               </span>
 
           
@@ -1178,92 +1291,6 @@
 <li>文件夹<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm -r --cached foldername</span><br></pre></td></tr></table></figure></li>
 </ol>
 
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2019/07/13/Mac%E4%B8%8B%E4%BD%BF%E7%94%A8mysql/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/07/13/Mac%E4%B8%8B%E4%BD%BF%E7%94%A8mysql/" class="post-title-link" itemprop="url">Mac下使用mysql</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-07-13 12:07:49" itemprop="dateCreated datePublished" datetime="2019-07-13T12:07:49+00:00">2019-07-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-28 08:38:23" itemprop="dateModified" datetime="2022-03-28T08:38:23+00:00">2022-03-28</time>
-              </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2019/07/13/Mac%E4%B8%8B%E4%BD%BF%E7%94%A8mysql/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://www.zhuyunfeng.com/2019/07/13/Mac%E4%B8%8B%E4%BD%BF%E7%94%A8mysql/" class="cy_cmt_count" data-xid="2019/07/13/Mac下使用mysql/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
-<li>去官网下载安装</li>
-<li>使用 homebrew 安装</li>
-</ol>
-<h2 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mysql.server start</span><br></pre></td></tr></table></figure>
-<h2 id="设置密码"><a href="#设置密码" class="headerlink" title="设置密码"></a>设置密码</h2><p>homebrew安装默认是没有密码的</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; alter user &#x27;root&#x27;@&#x27;localhost&#x27; identified with mysql_native_password by &#x27;123456&#x27;;</span><br><span class="line">Query OK, 0 rows affected (0.10 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; flush privileges;</span><br><span class="line">Query OK, 0 rows affected (0.01 sec)</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -1347,7 +1374,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">167</span>
+          <span class="site-state-item-count">168</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
