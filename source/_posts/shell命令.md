@@ -98,9 +98,16 @@ ifconfig | grep "inet " | grep -v 127.0.0.1
 
 #### 进程相关
 ##### ps
+ps -ef & ps aux  
+-ef是System V展示风格，而aux是BSD风格。 
+
 ##### top
 按P – 以 CPU 占用率大小的顺序排列进程列表
 
 按M – 以内存占用率大小的顺序排列进程列表
 参考：
 https://www.runoob.com/linux/linux-command-manual.html
+
+top & ps
+
+https://www.cnblogs.com/tudachui/p/9516009.html
