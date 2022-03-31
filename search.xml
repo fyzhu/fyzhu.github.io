@@ -2176,8 +2176,11 @@ timeout(100).then((value) =&gt; &#123;
 <p>Arg：一些参数，可以指定输出文件。</p>
 <p>&amp;：让命令在后台执行，终端退出后命令仍旧执行。</p>
 <h4 id="查看ip"><a href="#查看ip" class="headerlink" title="查看ip"></a>查看ip</h4><p>ifconfig | grep “inet “ | grep -v 127.0.0.1</p>
-<h4 id="进程相关"><a href="#进程相关" class="headerlink" title="进程相关"></a>进程相关</h4><h5 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h5><h5 id="top"><a href="#top" class="headerlink" title="top"></a>top</h5><p>按P – 以 CPU 占用率大小的顺序排列进程列表</p>
+<h4 id="进程相关"><a href="#进程相关" class="headerlink" title="进程相关"></a>进程相关</h4><h5 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h5><p>ps -ef &amp; ps aux<br>-ef是System V展示风格，而aux是BSD风格。 </p>
+<h5 id="top"><a href="#top" class="headerlink" title="top"></a>top</h5><p>按P – 以 CPU 占用率大小的顺序排列进程列表</p>
 <p>按M – 以内存占用率大小的顺序排列进程列表<br>参考：<br><a href="https://www.runoob.com/linux/linux-command-manual.html">https://www.runoob.com/linux/linux-command-manual.html</a></p>
+<p>top &amp; ps</p>
+<p><a href="https://www.cnblogs.com/tudachui/p/9516009.html">https://www.cnblogs.com/tudachui/p/9516009.html</a></p>
 ]]></content>
       <categories>
         <category>technology</category>
