@@ -57,3 +57,27 @@ server{
     }
 ```
 参考：https://www.cnblogs.com/PengfeiSong/p/12993446.html
+
+### 导入配置文件
+`include servers/*;`
+相对于当前文件
+### 配置多 server
+
+```
+{
+    server {
+        listen 80;
+        server_name a.com;
+        location = / {
+            proxy_pass http://localhost:3000/;
+        }
+    }
+    server {
+        listen 80;
+        server_name b.com;
+        location = / {
+            proxy_pass http://localhost:8000/;
+        }
+    }
+}
+```
