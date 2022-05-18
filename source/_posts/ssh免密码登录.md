@@ -14,9 +14,10 @@ windows：
 linux：
 
 `/***/.ssh` 一般为： `/root/.ssh`  
+
 如果没有，创建密钥  
 ```bash
-ssh-keygen -t  rsa # 一直默认回车就可以
+ssh-keygen -t rsa # 一直默认回车就可以
 ```
 ## 终端下 ssh 命令登录
 把本地公钥添加到服务器的 .ssh/authorized_key 里  
