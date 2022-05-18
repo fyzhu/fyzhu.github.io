@@ -2307,8 +2307,9 @@ timeout(100).then((value) =&gt; &#123;
     <content><![CDATA[<p>查看服务器和本地是否存在密钥，<br>密钥存放目录一般为当前用户家目录下的.ssh里<br>windows：</p>
 <p><code>C:\Users\***\.ssh</code>  </p>
 <p>linux：</p>
-<p><code>/***/.ssh</code> 一般为： <code>/root/.ssh</code><br>如果没有，创建密钥  </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t  rsa <span class="comment"># 一直默认回车就可以</span></span><br></pre></td></tr></table></figure>
+<p><code>/***/.ssh</code> 一般为： <code>/root/.ssh</code>  </p>
+<p>如果没有，创建密钥  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa <span class="comment"># 一直默认回车就可以</span></span><br></pre></td></tr></table></figure>
 <h2 id="终端下-ssh-命令登录"><a href="#终端下-ssh-命令登录" class="headerlink" title="终端下 ssh 命令登录"></a>终端下 ssh 命令登录</h2><p>把本地公钥添加到服务器的 .ssh/authorized_key 里<br>如果没有authorized_key 这个文件，手动创建<br>ssh root@ip 就可以免密码登录了</p>
 <h2 id="使用-xshell-等-ssh-工具登录"><a href="#使用-xshell-等-ssh-工具登录" class="headerlink" title="使用 xshell 等 ssh 工具登录"></a>使用 xshell 等 ssh 工具登录</h2><ol>
 <li>把服务器的公钥下载到本地</li>
