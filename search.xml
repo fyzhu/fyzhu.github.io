@@ -1647,7 +1647,9 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
   <entry>
     <title>nvm基本使用</title>
     <url>/2019/12/24/nvm%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<p>查看本地</p>
+    <content><![CDATA[<p>change mirror</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node</span><br></pre></td></tr></table></figure>
+<p>查看本地</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm list/ls</span><br></pre></td></tr></table></figure>
 <p>查看</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm ls-remote</span><br></pre></td></tr></table></figure>
