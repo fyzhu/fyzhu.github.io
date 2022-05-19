@@ -5,6 +5,10 @@ categories:
 date: 2019-12-24 18:15:29
 tags:
 ---
+change mirror
+```
+export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
+```
 查看本地
 ```
 nvm list/ls
