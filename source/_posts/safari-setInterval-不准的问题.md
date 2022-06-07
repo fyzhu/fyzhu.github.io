@@ -26,3 +26,5 @@ setTimeout(fixed, 1000);
 
 ```
 [参考](https://www.jb51.net/article/49913.htm)
+
+[不会被 iOS 停掉的网页定时器](https://imququ.com/post/ios-none-freeze-timer.html)
