@@ -9,13 +9,24 @@ date: 2017-09-27 12:33:52
 tags:
 ---
 
-一、边框 border-radius:100%; box-shadow:x偏移量，y偏移量，阴影模糊，阴影扩展，颜色，内外 border-image:url() 70 repeat; 二、颜色相关 rgba    如：background:rgba(255,255,255,0.5); 颜色渐变（线性渐变（linear）、**径向渐变(radial)**） 线性渐变 linear-gradient(方向，颜色（两个至多个）） 例如：background-image:linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet); 三、文字与字体 文本溢出text-overflow **text-overflow**只是用来说明文字溢出时用什么方式显示，要实现溢出时产生**省略号**的效果，还须定义**强制文本在一行内显示**（white-space:nowrap）及**溢出内容为隐藏**（overflow:hidden），只有这样才能实现**溢出文本显示省略号**的效果，代码如下：
+一、边框 
+border-radius:100%; 
+box-shadow:x偏移量，y偏移量，阴影模糊，阴影扩展，颜色，内外 
+border-image:url() 70 repeat; 
+二、颜色相关 
+rgba    如：background:rgba(255,255,255,0.5); 
+颜色渐变（线性渐变（linear）、**径向渐变(radial)**） 线性渐变 linear-gradient(方向，颜色（两个至多个）） 
+例如：background-image:linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet); 
+三、文字与字体 
+文本溢出text-overflow **text-overflow**只是用来说明文字溢出时用什么方式显示，要实现溢出时产生**省略号**的效果，还须定义**强制文本在一行内显示**（white-space:nowrap）及**溢出内容为隐藏**（overflow:hidden），只有这样才能实现**溢出文本显示省略号**的效果，代码如下：
+```css
+text-overflow: ellipsis; 
+overflow: hidden; 
+white-space: nowrap;
+```
 
-text-overflow:ellipsis; 
-overflow:hidden; 
-white-space:nowrap;
-
-同时，**word-wrap**也可以用来设置**文本行为**，当前行超过指定容器的边界时是否断开转行。 嵌入字体@font-face 例如 @font-face { font-family: "MOOC Font"; src: url("http://www.imooc.com/Amaranth-BoldItalic.otf"); } 直接使用font-family: "MOOC Font";   text-shadow: X-Offset Y-Offset blur color;
+同时，**word-wrap**也可以用来设置**文本行为**，当前行超过指定容器的边界时是否断开转行。 嵌入字体@font-face 
+例如 @font-face { font-family: "MOOC Font"; src: url("http://www.imooc.com/Amaranth-BoldItalic.otf"); } 直接使用font-family: "MOOC Font";   text-shadow: X-Offset Y-Offset blur color;
 
 X-Offset：表示阴影的水平偏移距离，其值为正值时阴影向右偏移，反之向左偏移；
 
@@ -78,3 +89,5 @@ box-sizing: border-box;
 -----------------------
 
 box-sizing: content-box;
+
+[十天精通CSS3学后笔记](https://www.imooc.com/article/18400)
