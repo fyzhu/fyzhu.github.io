@@ -548,28 +548,6 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
       </categories>
   </entry>
   <entry>
-    <title>程序员用过都说好的工具软件</title>
-    <url>/2017/09/19/chengxuyuanyongguodoushuohaodegongjuruanjian/</url>
-    <content><![CDATA[<h2 id="一、远程-FTP"><a href="#一、远程-FTP" class="headerlink" title="一、远程+FTP"></a>一、远程+FTP</h2><p>Xshell Xftp 这两个简直不能再好用，收费软件，可以申请试用，没广告，界面简洁大气，UI设计，各种喜欢。  </p>
-<p>FileZilla(ftp) 开源免费，不太喜欢它的logo，最大的特点就是相比其他ftp界面左右各多一栏上级目录，感觉占地方，还不实用。</p>
-<h2 id="二、编辑器"><a href="#二、编辑器" class="headerlink" title="二、编辑器"></a>二、编辑器</h2><p>notepad++ 免费，尤其喜欢它的logo，绿色的变色龙，界面美观，但是快捷键和其他编辑器不太一样，其他功能都过于简单，适合右键快速打开代码，替代记事本。</p>
-<p>sublime3.0 功能强大，可以安装很多插件，更新到3.0版，logo变成了扁平版，更好看了，可以免费用，但是老弹窗让你购买。 </p>
-<p>idea家族各种编辑器 可以免费试用一个月，比上面两个编辑器稍显笨重，但是集成了CMD感觉比较方便。 </p>
-<p>vscode 新晋大神，已占领前端</p>
-<h2 id="三、服务器集成环境"><a href="#三、服务器集成环境" class="headerlink" title="三、服务器集成环境"></a>三、服务器集成环境</h2><p>Wampserver3.0+ 免费，集成了Apache，mysql，php，傻瓜式安装，第一次安装不同的电脑可能需要配置一下Apache，hosts之类的。 3.0以上版本更新了电脑右下角常驻logo，更好看了。 </p>
-<p>phpstudy 自从了解了phpstudy我才发现它比wampserver强多了，可以切换nginx/apache/IIS，可以各种版本切换，各种实用功能，只是study的名字，以及简单的logo让我一直以为它是一个不专业的软件</p>
-<h2 id="四、数据库管理软件"><a href="#四、数据库管理软件" class="headerlink" title="四、数据库管理软件"></a>四、数据库管理软件</h2><p>Navicat logo好看，UI美观，操作数据库简单可视化。 只是在本地导入导出的时候老出问题，用phpmyadmin就可以，暂时不知什么原因。 </p>
-<p>phpmyadmin 导入几乎不出错，兼容性特别好</p>
-<h2 id="五、命令行利器"><a href="#五、命令行利器" class="headerlink" title="五、命令行利器"></a>五、命令行利器</h2><p>cmder (windows)</p>
-<p>iTerm2 (mac)</p>
-<h2 id="六、抓包工具"><a href="#六、抓包工具" class="headerlink" title="六、抓包工具"></a>六、抓包工具</h2><p>fiddler 还没学会怎么用   </p>
-<p>以上几款软件不仅是在使用上简单方便，而且界面UI美观，这是我推荐这几款软件的理由，甚至有一些是完全免费的软件。如果大家有能力的话，推荐大家使用收费版，支持这些优秀的软件。</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-  </entry>
-  <entry>
     <title>纯CSS绘制三角形（各种角度）</title>
     <url>/2018/01/10/chuncsshuizhisanjiaoxinggezhongjiaodu/</url>
     <content><![CDATA[<p>CSS三角形绘制方法，学会了这个，其它的也就简单。</p>
@@ -640,7 +618,9 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
   <entry>
     <title>CSS3</title>
     <url>/2017/09/27/css3/</url>
-    <content><![CDATA[<p>一、边框<br>border-radius:100%;<br>box-shadow:x偏移量，y偏移量，阴影模糊，阴影扩展，颜色，内外<br>border-image:url() 70 repeat;<br>二、颜色相关<br>rgba    如：background:rgba(255,255,255,0.5);<br>颜色渐变（线性渐变（linear）、<strong>径向渐变(radial)</strong>） 线性渐变 linear-gradient(方向，颜色（两个至多个））<br>例如：background-image:linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet);<br>三、文字与字体<br>文本溢出text-overflow <strong>text-overflow</strong>只是用来说明文字溢出时用什么方式显示，要实现溢出时产生<strong>省略号</strong>的效果，还须定义<strong>强制文本在一行内显示</strong>（white-space:nowrap）及<strong>溢出内容为隐藏</strong>（overflow:hidden），只有这样才能实现<strong>溢出文本显示省略号</strong>的效果，代码如下：</p>
+    <content><![CDATA[<h1 id="一、边框"><a href="#一、边框" class="headerlink" title="一、边框"></a>一、边框</h1><p>border-radius:100%;<br>box-shadow:x偏移量，y偏移量，阴影模糊，阴影扩展，颜色，内外<br>border-image:url() 70 repeat; </p>
+<h1 id="二、颜色相关"><a href="#二、颜色相关" class="headerlink" title="二、颜色相关"></a>二、颜色相关</h1><p>rgba    如：background:rgba(255,255,255,0.5);<br>颜色渐变（线性渐变（linear）、<strong>径向渐变(radial)</strong>） 线性渐变 linear-gradient(方向，颜色（两个至多个））<br>例如：background-image:linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet); </p>
+<h1 id="三、文字与字体"><a href="#三、文字与字体" class="headerlink" title="三、文字与字体"></a>三、文字与字体</h1><p>文本溢出text-overflow <strong>text-overflow</strong>只是用来说明文字溢出时用什么方式显示，要实现溢出时产生<strong>省略号</strong>的效果，还须定义<strong>强制文本在一行内显示</strong>（white-space:nowrap）及<strong>溢出内容为隐藏</strong>（overflow:hidden），只有这样才能实现<strong>溢出文本显示省略号</strong>的效果，代码如下：</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">text-overflow</span>: ellipsis; </span><br><span class="line"><span class="attribute">overflow</span>: hidden; </span><br><span class="line"><span class="attribute">white-space</span>: nowrap;</span><br></pre></td></tr></table></figure>
 
 <p>同时，<strong>word-wrap</strong>也可以用来设置<strong>文本行为</strong>，当前行超过指定容器的边界时是否断开转行。 嵌入字体@font-face<br>例如 @font-face { font-family: “MOOC Font”; src: url(“<a href="http://www.imooc.com/Amaranth-BoldItalic.otf&quot;">http://www.imooc.com/Amaranth-BoldItalic.otf&quot;</a>); } 直接使用font-family: “MOOC Font”;   text-shadow: X-Offset Y-Offset blur color;</p>
@@ -648,16 +628,20 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
 <p>Y-Offset：是指阴影的垂直偏移距离，如果其值是正值时，阴影向下偏移，反之向上偏移；</p>
 <p>Blur：是指阴影的模糊程度，其值不能是负值，如果值越大，阴影越模糊，反之阴影越清晰，如果不需要阴影模糊可以将Blur值设置为0；</p>
 <p>Color：是指阴影的颜色，其可以使用rgba色。</p>
-<h2 id="四、与背景相关的样式"><a href="#四、与背景相关的样式" class="headerlink" title="四、与背景相关的样式"></a>四、与背景相关的样式</h2><h2 id="background-origin"><a href="#background-origin" class="headerlink" title="background-origin"></a>background-origin</h2><p>设置元素背景图片的<strong>原始起始位置</strong>。 语法：</p>
+<h1 id="四、与背景相关的样式"><a href="#四、与背景相关的样式" class="headerlink" title="四、与背景相关的样式"></a>四、与背景相关的样式</h1><p>background-origin</p>
+<p>设置元素背景图片的<strong>原始起始位置</strong>。 语法：</p>
 <p>background-origin ： border-box | padding-box | content-box;</p>
 <p>参数分别表示背景图片是从<strong>边框</strong>，还是<strong>内边距（默认值）</strong>，或者是<strong>内容区域</strong>开始显示。</p>
-<h2 id="background-clip"><a href="#background-clip" class="headerlink" title="background-clip"></a>background-clip</h2><p>用来将背景图片做适当的<strong>裁剪</strong>以适应实际需要。 语法：</p>
+<p>background-clip</p>
+<p>用来将背景图片做适当的<strong>裁剪</strong>以适应实际需要。 语法：</p>
 <p>background-clip ： border-box | padding-box | content-box | no-clip</p>
 <p>参数分别表示从<strong>边框、</strong>或<strong>内填充</strong>，或者<strong>内容区域</strong>向外裁剪背景。<strong>no-clip</strong>表示不裁切，和<strong>参数border-box</strong>显示同样的效果。<code>backgroud-clip</code>默认值为<strong>border-box</strong>。</p>
-<h2 id="background-size"><a href="#background-size" class="headerlink" title=" background-size"></a> background-size</h2><p>设置背景图片的大小，以<strong>长度值</strong>或<strong>百分比</strong>显示，还可以通过<strong>cover</strong>和<strong>contain</strong>来对图片进行伸缩。 语法：</p>
+<p> background-size</p>
+<p>设置背景图片的大小，以<strong>长度值</strong>或<strong>百分比</strong>显示，还可以通过<strong>cover</strong>和<strong>contain</strong>来对图片进行伸缩。 语法：</p>
 <p>background-size: auto | &lt;长度值&gt; | &lt;百分比&gt; | cover | contain</p>
 <p>取值说明： <strong>1、auto</strong>：默认值，不改变背景图片的原始高度和宽度； <strong>2、&lt;长度值&gt;</strong>：成对出现如200px 50px，将背景图片宽高依次设置为前面两个值，当设置一个值时，将其作为图片宽度值来<strong>等比缩放</strong>； <strong>3、&lt;百分比&gt;</strong>：0％~100％之间的任何值，将背景图片宽高依次设置为所在元素宽高乘以前面百分比得出的数值，当设置一个值时同上； <strong>4、cover</strong>：顾名思义为<strong>覆盖</strong>，即将背景图片等比缩放以<strong>填满整个容器</strong>； <strong>5、contain</strong>：容纳，即将背景图片等比缩放至<strong>某一边紧贴容器边缘为止</strong>。</p>
-<h2 id="multiple-backgrounds"><a href="#multiple-backgrounds" class="headerlink" title="multiple backgrounds"></a>multiple backgrounds</h2><p>多重背景，也就是CSS2里<strong>background</strong>的属性外加<strong>origin</strong>、<strong>clip</strong>和<strong>size</strong>组成的新background的多次叠加，缩写时为用<strong>逗号</strong>隔开的每组值；用分解写法时，如果有多个背景图片，而其他属性只有一个（例如background-repeat只有一个），表明所有背景图片应用该属性值。 语法缩写如下：</p>
+<p>multiple backgrounds</p>
+<p>多重背景，也就是CSS2里<strong>background</strong>的属性外加<strong>origin</strong>、<strong>clip</strong>和<strong>size</strong>组成的新background的多次叠加，缩写时为用<strong>逗号</strong>隔开的每组值；用分解写法时，如果有多个背景图片，而其他属性只有一个（例如background-repeat只有一个），表明所有背景图片应用该属性值。 语法缩写如下：</p>
 <p>background ： [background-color] | [background-image] | [background-position][/background-size] | [background-repeat] | [background-attachment] | [background-clip] | [background-origin],…</p>
 <p><strong>注意：</strong></p>
 <ol>
@@ -666,8 +650,10 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
 <li>如果有多个背景图片，而其他属性只有一个（例如 background-repeat 只有一个），表明所有背景图片应用该属性值。</li>
 <li>background-color 只能设置一个。</li>
 </ol>
-<p>导航综合练习 .nav li{background:linear-gradient(to bottom,#dd2926,#a82724,#dd2926) no-repeat right / 1px 15px;}   五、CSS3选择器   六、变形与动画   七、布局样式相关</p>
-<h2 id="盒子模型content-box-border-box"><a href="#盒子模型content-box-border-box" class="headerlink" title="盒子模型content-box  border-box"></a>盒子模型content-box  border-box</h2><h2 id="box-sizing-border-box"><a href="#box-sizing-border-box" class="headerlink" title="box-sizing: border-box;"></a>box-sizing: border-box;</h2><p>box-sizing: content-box;</p>
+<p>导航综合练习 .nav li{background:linear-gradient(to bottom,#dd2926,#a82724,#dd2926) no-repeat right / 1px 15px;}   </p>
+<h1 id="五、CSS3选择器"><a href="#五、CSS3选择器" class="headerlink" title="五、CSS3选择器"></a>五、CSS3选择器</h1><h1 id="六、变形与动画"><a href="#六、变形与动画" class="headerlink" title="六、变形与动画"></a>六、变形与动画</h1><h1 id="七、布局样式相关"><a href="#七、布局样式相关" class="headerlink" title="七、布局样式相关"></a>七、布局样式相关</h1><p>盒子模型content-box  border-box</p>
+<p>box-sizing: border-box;</p>
+<p>box-sizing: content-box;</p>
 <p><a href="https://www.imooc.com/article/18400">十天精通CSS3学后笔记</a></p>
 ]]></content>
       <categories>
@@ -2464,6 +2450,28 @@ timeout(100).then((value) =&gt; &#123;
       <tags>
         <tag>question</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>程序员用过都说好的工具软件</title>
+    <url>/2017/09/19/tools/</url>
+    <content><![CDATA[<h2 id="一、远程-FTP"><a href="#一、远程-FTP" class="headerlink" title="一、远程+FTP"></a>一、远程+FTP</h2><p>Xshell Xftp 这两个简直不能再好用，收费软件，可以申请试用，没广告，界面简洁大气，UI设计，各种喜欢。  </p>
+<p>FileZilla(ftp) 开源免费，不太喜欢它的logo，最大的特点就是相比其他ftp界面左右各多一栏上级目录，感觉占地方，还不实用。</p>
+<h2 id="二、编辑器"><a href="#二、编辑器" class="headerlink" title="二、编辑器"></a>二、编辑器</h2><p>notepad++ 免费，尤其喜欢它的logo，绿色的变色龙，界面美观，但是快捷键和其他编辑器不太一样，其他功能都过于简单，适合右键快速打开代码，替代记事本。</p>
+<p>sublime3.0 功能强大，可以安装很多插件，更新到3.0版，logo变成了扁平版，更好看了，可以免费用，但是老弹窗让你购买。 </p>
+<p>idea家族各种编辑器 可以免费试用一个月，比上面两个编辑器稍显笨重，但是集成了CMD感觉比较方便。 </p>
+<p>vscode 新晋大神，已占领前端</p>
+<h2 id="三、服务器集成环境"><a href="#三、服务器集成环境" class="headerlink" title="三、服务器集成环境"></a>三、服务器集成环境</h2><p>Wampserver3.0+ 免费，集成了Apache，mysql，php，傻瓜式安装，第一次安装不同的电脑可能需要配置一下Apache，hosts之类的。 3.0以上版本更新了电脑右下角常驻logo，更好看了。 </p>
+<p>phpstudy 自从了解了phpstudy我才发现它比wampserver强多了，可以切换nginx/apache/IIS，可以各种版本切换，各种实用功能，只是study的名字，以及简单的logo让我一直以为它是一个不专业的软件</p>
+<h2 id="四、数据库管理软件"><a href="#四、数据库管理软件" class="headerlink" title="四、数据库管理软件"></a>四、数据库管理软件</h2><p>Navicat logo好看，UI美观，操作数据库简单可视化。 只是在本地导入导出的时候老出问题，用phpmyadmin就可以，暂时不知什么原因。 </p>
+<p>phpmyadmin 导入几乎不出错，兼容性特别好</p>
+<h2 id="五、命令行利器"><a href="#五、命令行利器" class="headerlink" title="五、命令行利器"></a>五、命令行利器</h2><p>cmder (windows)</p>
+<p>iTerm2 (mac)</p>
+<h2 id="六、抓包工具"><a href="#六、抓包工具" class="headerlink" title="六、抓包工具"></a>六、抓包工具</h2><p>fiddler 还没学会怎么用   </p>
+<p>以上几款软件不仅是在使用上简单方便，而且界面UI美观，这是我推荐这几款软件的理由，甚至有一些是完全免费的软件。如果大家有能力的话，推荐大家使用收费版，支持这些优秀的软件。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
   </entry>
   <entry>
     <title>touchmove &amp; mousemove</title>
