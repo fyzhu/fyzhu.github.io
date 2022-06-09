@@ -640,9 +640,10 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
   <entry>
     <title>CSS3</title>
     <url>/2017/09/27/css3/</url>
-    <content><![CDATA[<p>一、边框 border-radius:100%; box-shadow:x偏移量，y偏移量，阴影模糊，阴影扩展，颜色，内外 border-image:url() 70 repeat; 二、颜色相关 rgba    如：background:rgba(255,255,255,0.5); 颜色渐变（线性渐变（linear）、<strong>径向渐变(radial)</strong>） 线性渐变 linear-gradient(方向，颜色（两个至多个）） 例如：background-image:linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet); 三、文字与字体 文本溢出text-overflow <strong>text-overflow</strong>只是用来说明文字溢出时用什么方式显示，要实现溢出时产生<strong>省略号</strong>的效果，还须定义<strong>强制文本在一行内显示</strong>（white-space:nowrap）及<strong>溢出内容为隐藏</strong>（overflow:hidden），只有这样才能实现<strong>溢出文本显示省略号</strong>的效果，代码如下：</p>
-<p>text-overflow:ellipsis;<br>overflow:hidden;<br>white-space:nowrap;</p>
-<p>同时，<strong>word-wrap</strong>也可以用来设置<strong>文本行为</strong>，当前行超过指定容器的边界时是否断开转行。 嵌入字体@font-face 例如 @font-face { font-family: “MOOC Font”; src: url(“<a href="http://www.imooc.com/Amaranth-BoldItalic.otf&quot;">http://www.imooc.com/Amaranth-BoldItalic.otf&quot;</a>); } 直接使用font-family: “MOOC Font”;   text-shadow: X-Offset Y-Offset blur color;</p>
+    <content><![CDATA[<p>一、边框<br>border-radius:100%;<br>box-shadow:x偏移量，y偏移量，阴影模糊，阴影扩展，颜色，内外<br>border-image:url() 70 repeat;<br>二、颜色相关<br>rgba    如：background:rgba(255,255,255,0.5);<br>颜色渐变（线性渐变（linear）、<strong>径向渐变(radial)</strong>） 线性渐变 linear-gradient(方向，颜色（两个至多个））<br>例如：background-image:linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet);<br>三、文字与字体<br>文本溢出text-overflow <strong>text-overflow</strong>只是用来说明文字溢出时用什么方式显示，要实现溢出时产生<strong>省略号</strong>的效果，还须定义<strong>强制文本在一行内显示</strong>（white-space:nowrap）及<strong>溢出内容为隐藏</strong>（overflow:hidden），只有这样才能实现<strong>溢出文本显示省略号</strong>的效果，代码如下：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">text-overflow</span>: ellipsis; </span><br><span class="line"><span class="attribute">overflow</span>: hidden; </span><br><span class="line"><span class="attribute">white-space</span>: nowrap;</span><br></pre></td></tr></table></figure>
+
+<p>同时，<strong>word-wrap</strong>也可以用来设置<strong>文本行为</strong>，当前行超过指定容器的边界时是否断开转行。 嵌入字体@font-face<br>例如 @font-face { font-family: “MOOC Font”; src: url(“<a href="http://www.imooc.com/Amaranth-BoldItalic.otf&quot;">http://www.imooc.com/Amaranth-BoldItalic.otf&quot;</a>); } 直接使用font-family: “MOOC Font”;   text-shadow: X-Offset Y-Offset blur color;</p>
 <p>X-Offset：表示阴影的水平偏移距离，其值为正值时阴影向右偏移，反之向左偏移；</p>
 <p>Y-Offset：是指阴影的垂直偏移距离，如果其值是正值时，阴影向下偏移，反之向上偏移；</p>
 <p>Blur：是指阴影的模糊程度，其值不能是负值，如果值越大，阴影越模糊，反之阴影越清晰，如果不需要阴影模糊可以将Blur值设置为0；</p>
@@ -667,6 +668,7 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
 </ol>
 <p>导航综合练习 .nav li{background:linear-gradient(to bottom,#dd2926,#a82724,#dd2926) no-repeat right / 1px 15px;}   五、CSS3选择器   六、变形与动画   七、布局样式相关</p>
 <h2 id="盒子模型content-box-border-box"><a href="#盒子模型content-box-border-box" class="headerlink" title="盒子模型content-box  border-box"></a>盒子模型content-box  border-box</h2><h2 id="box-sizing-border-box"><a href="#box-sizing-border-box" class="headerlink" title="box-sizing: border-box;"></a>box-sizing: border-box;</h2><p>box-sizing: content-box;</p>
+<p><a href="https://www.imooc.com/article/18400">十天精通CSS3学后笔记</a></p>
 ]]></content>
       <categories>
         <category>技术</category>
@@ -2151,6 +2153,17 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
 ]]></content>
       <categories>
         <category>idea</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>safari setInterval 不准的问题</title>
+    <url>/2022/06/07/safari-setInterval-%E4%B8%8D%E5%87%86%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"> </span><br><span class="line"><span class="keyword">var</span> startTime = <span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">getTime</span>(); </span><br><span class="line"><span class="keyword">var</span> count = <span class="number">0</span>; </span><br><span class="line"><span class="built_in">setInterval</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123; </span><br><span class="line">  <span class="keyword">var</span> i = <span class="number">0</span>; </span><br><span class="line">  <span class="keyword">while</span>(i++ &lt; <span class="number">100000000</span>); </span><br><span class="line">&#125;, <span class="number">0</span>); </span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fixed</span>(<span class="params"></span>) &#123; </span><br><span class="line">  count++; </span><br><span class="line">  <span class="keyword">var</span> offset = <span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">getTime</span>() - (startTime + count * <span class="number">1000</span>); </span><br><span class="line">  <span class="keyword">var</span> nextTime = <span class="number">1000</span> - offset; </span><br><span class="line">  <span class="keyword">if</span> (nextTime &lt; <span class="number">0</span>) nextTime = <span class="number">0</span>; </span><br><span class="line">  <span class="built_in">setTimeout</span>(fixed, nextTime); </span><br><span class="line"></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">getTime</span>() - (startTime + count * <span class="number">1000</span>)); </span><br><span class="line">&#125; </span><br><span class="line"><span class="built_in">setTimeout</span>(fixed, <span class="number">1000</span>); </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><a href="https://www.jb51.net/article/49913.htm">参考</a></p>
+<p><a href="https://imququ.com/post/ios-none-freeze-timer.html">不会被 iOS 停掉的网页定时器</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
       </categories>
   </entry>
   <entry>

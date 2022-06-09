@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">170</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">171</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,131 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2021/05/09/mongoDB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/09/mongoDB/" class="post-title-link" itemprop="url">MongoDB 快速上手</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-05-09 12:30:05" itemprop="dateCreated datePublished" datetime="2021-05-09T12:30:05+00:00">2021-05-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-06-09 15:56:16" itemprop="dateModified" datetime="2022-06-09T15:56:16+00:00">2022-06-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2021/05/09/mongoDB/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://www.zhuyunfeng.com/2021/05/09/mongoDB/" class="cy_cmt_count" data-xid="2021/05/09/mongoDB/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h3><p>默认端口 27017</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongo</span><br></pre></td></tr></table></figure>
+<p>指定端口 27027</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongo --port 27027</span><br></pre></td></tr></table></figure>
+<p>连接远程主机上的 MongoDB 实例</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mongo <span class="string">&quot;mongodb://mongodb0.example.com:28015&quot;</span></span><br><span class="line"></span><br><span class="line">mongo --host mongodb0.example.com:28015</span><br><span class="line"></span><br><span class="line">mongo --host mongodb0.example.com --port 28015</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">quit()</span><br></pre></td></tr></table></figure>
+<h3 id="列出数据库"><a href="#列出数据库" class="headerlink" title="列出数据库"></a>列出数据库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show dbs</span><br></pre></td></tr></table></figure>
+
+<h3 id="切换数据库"><a href="#切换数据库" class="headerlink" title="切换数据库"></a>切换数据库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use &lt;database&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="列出数据表"><a href="#列出数据表" class="headerlink" title="列出数据表"></a>列出数据表</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show tables</span><br></pre></td></tr></table></figure>
+<h3 id="查询数据"><a href="#查询数据" class="headerlink" title="查询数据"></a>查询数据</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">db.&lt;collection&gt;.find()</span><br><span class="line">db.&lt;collection&gt;.find().count()</span><br><span class="line">db.&lt;collection&gt;.find().pretty()</span><br></pre></td></tr></table></figure>
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><h4 id="osx"><a href="#osx" class="headerlink" title="osx"></a>osx</h4><p>安装完成后，我们可以把 MongoDB 的二进制命令文件目录（安装目录/bin）添加到 PATH 路径中：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=/usr/local/mongodb/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
+<p>启动：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --dbpath /usr/local/var/mongodb --logpath /usr/local/var/log/mongodb/mongo.log --fork</span><br></pre></td></tr></table></figure>
+<ul>
+<li>–dbpath 设置数据存放目录</li>
+<li>–logpath 设置日志存放目录</li>
+<li>–fork 在后台运行<br>查看 mongod 服务是否启动：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps aux | grep -v grep | grep mongod</span><br></pre></td></tr></table></figure>
+<a target="_blank" rel="noopener" href="https://www.runoob.com/mongodb/mongodb-osx-install.html">OSX MongoDB</a><h4 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h4></li>
+</ul>
+<p>启动</p>
+<ol>
+<li>进入 bin 目录中执行 mongod.exe 文件 或 把 bin 目录添加到 path</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\mongodb\bin\mongod --dbpath c:\data\db</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>如果已存在 MongoDB 服务，可以使用 net 命令启动</p>
+<pre><code class="bash">net start MongoDB</code></pre>
+</li>
+<li><p>服务面板启动</p>
+</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/mongodb/mongodb-window-install.html">Windows MongoDB</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2021/04/20/javascript/vue%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +366,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-05-19 01:39:03" itemprop="dateModified" datetime="2022-05-19T01:39:03+00:00">2022-05-19</time>
+                <time title="修改时间：2022-06-09 15:56:16" itemprop="dateModified" datetime="2022-06-09T15:56:16+00:00">2022-06-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -337,7 +462,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-05-19 01:39:03" itemprop="dateModified" datetime="2022-05-19T01:39:03+00:00">2022-05-19</time>
+                <time title="修改时间：2022-06-09 15:56:16" itemprop="dateModified" datetime="2022-06-09T15:56:16+00:00">2022-06-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -444,7 +569,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-05-19 01:39:03" itemprop="dateModified" datetime="2022-05-19T01:39:03+00:00">2022-05-19</time>
+                <time title="修改时间：2022-06-09 15:56:16" itemprop="dateModified" datetime="2022-06-09T15:56:16+00:00">2022-06-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -546,7 +671,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-05-19 01:39:03" itemprop="dateModified" datetime="2022-05-19T01:39:03+00:00">2022-05-19</time>
+                <time title="修改时间：2022-06-09 15:56:16" itemprop="dateModified" datetime="2022-06-09T15:56:16+00:00">2022-06-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -662,7 +787,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-05-19 01:39:03" itemprop="dateModified" datetime="2022-05-19T01:39:03+00:00">2022-05-19</time>
+                <time title="修改时间：2022-06-09 15:56:16" itemprop="dateModified" datetime="2022-06-09T15:56:16+00:00">2022-06-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -757,7 +882,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-05-19 01:39:03" itemprop="dateModified" datetime="2022-05-19T01:39:03+00:00">2022-05-19</time>
+                <time title="修改时间：2022-06-09 15:56:16" itemprop="dateModified" datetime="2022-06-09T15:56:16+00:00">2022-06-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -851,7 +976,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-05-19 01:39:03" itemprop="dateModified" datetime="2022-05-19T01:39:03+00:00">2022-05-19</time>
+                <time title="修改时间：2022-06-09 15:56:16" itemprop="dateModified" datetime="2022-06-09T15:56:16+00:00">2022-06-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -983,7 +1108,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-05-19 01:39:03" itemprop="dateModified" datetime="2022-05-19T01:39:03+00:00">2022-05-19</time>
+                <time title="修改时间：2022-06-09 15:56:16" itemprop="dateModified" datetime="2022-06-09T15:56:16+00:00">2022-06-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1087,7 +1212,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-05-19 01:39:03" itemprop="dateModified" datetime="2022-05-19T01:39:03+00:00">2022-05-19</time>
+                <time title="修改时间：2022-06-09 15:56:16" itemprop="dateModified" datetime="2022-06-09T15:56:16+00:00">2022-06-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1142,105 +1267,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2021/01/11/javascript/js%208%20%E7%A7%8D%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/11/javascript/js%208%20%E7%A7%8D%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="post-title-link" itemprop="url">js 数据类型</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-01-11 20:17:12" itemprop="dateCreated datePublished" datetime="2021-01-11T20:17:12+00:00">2021-01-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-05-19 01:39:03" itemprop="dateModified" datetime="2022-05-19T01:39:03+00:00">2022-05-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2021/01/11/javascript/js%208%20%E7%A7%8D%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://www.zhuyunfeng.com/2021/01/11/javascript/js%208%20%E7%A7%8D%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="cy_cmt_count" data-xid="2021/01/11/javascript/js 8 种数据类型/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="js-8-种数据类型"><a href="#js-8-种数据类型" class="headerlink" title="js 8 种数据类型"></a>js 8 种数据类型</h2><p><img src="C:%5CUsers%5CYvan%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210111181230568.png" alt="image-20210111181230568"></p>
-<h2 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h2><p><img src="C:%5CUsers%5CYvan%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210111180636320.png" alt="image-20210111180636320"></p>
-<h2 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h2><p><img src="C:%5CUsers%5CYvan%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210111180709997.png" alt="image-20210111180709997"></p>
-<h3 id="myInstanceof"><a href="#myInstanceof" class="headerlink" title="myInstanceof"></a>myInstanceof</h3><p><img src="C:%5CUsers%5CYvan%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210111180815057.png" alt="image-20210111180815057"></p>
-<h2 id="Object-prototype-toString-call"><a href="#Object-prototype-toString-call" class="headerlink" title="Object.prototype.toString.call()"></a>Object.prototype.toString.call()</h2><p><img src="C:%5CUsers%5CYvan%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210111181005227.png" alt="image-20210111181005227"></p>
-<h2 id="通用的数据类型判断方法"><a href="#通用的数据类型判断方法" class="headerlink" title="通用的数据类型判断方法"></a>通用的数据类型判断方法</h2><p><img src="C:%5CUsers%5CYvan%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210111181129536.png" alt="image-20210111181129536"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1306,7 +1336,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">170</span>
+          <span class="site-state-item-count">171</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
