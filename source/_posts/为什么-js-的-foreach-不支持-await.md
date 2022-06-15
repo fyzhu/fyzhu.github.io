@@ -1,5 +1,5 @@
 ---
-title: 为什么 js 的 foreach 不支持 await
+title: 为什么 js 的 forEach 不支持 await
 categories:
   - JS
 date: 2022-01-27 17:49:15
@@ -7,9 +7,9 @@ tags:
 ---
 ## 问题
 
-为什么 foreach 不行，而 普通 for 循环 和 for…of 却正常呢？
+为什么 forEach 不行，而 普通 for 循环 和 for…of 却正常呢？
 
-我们得先从 [foreach 的源码](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#polyfill) 看起：
+我们得先从 [forEach 的源码](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#polyfill) 看起：
 ```js
 // Production steps of ECMA-262, Edition 5, 15.4.4.18
 // Reference: http://es5.github.io/#x15.4.4.18
@@ -106,6 +106,6 @@ Array.prototype.forEach = async function(callback/*, thisArg*/) {
 };
 ```
 
-你总不能去侵入式的改造Array.prototype.forEach吧！所以最简单的办法就是抛弃 foreach，使用 for…of 或者 for 循环！
+你总不能去侵入式的改造Array.prototype.forEach吧！所以最简单的办法就是抛弃 forEach，使用 for…of 或者 for 循环！
 
 ## [参考](https://www.cnblogs.com/xjnotxj/p/10629900.html)
