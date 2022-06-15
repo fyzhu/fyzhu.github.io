@@ -20,9 +20,17 @@ rgba    如：background:rgba(255,255,255,0.5);
 # 三、文字与字体 
 文本溢出text-overflow **text-overflow**只是用来说明文字溢出时用什么方式显示，要实现溢出时产生**省略号**的效果，还须定义**强制文本在一行内显示**（white-space:nowrap）及**溢出内容为隐藏**（overflow:hidden），只有这样才能实现**溢出文本显示省略号**的效果，代码如下：
 ```css
-text-overflow: ellipsis; 
-overflow: hidden; 
-white-space: nowrap;
+  text-overflow: ellipsis; 
+  overflow: hidden; 
+  white-space: nowrap;
+```
+多行之后显示省略号
+```css
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; // 两行之后显示省略号
 ```
 
 同时，**word-wrap**也可以用来设置**文本行为**，当前行超过指定容器的边界时是否断开转行。 嵌入字体@font-face 
