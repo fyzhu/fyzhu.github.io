@@ -18,8 +18,11 @@ nginx -s stop
 ### 重载
 nginx -s reload
 
-### 检查配置s文件
-nginx -t
+### 检查配置文件
+```bash
+nginx -t # 可以查看配置文件所在路径
+
+```
 ### 跨域
 ```
 server{

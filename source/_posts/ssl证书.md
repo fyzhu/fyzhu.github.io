@@ -10,7 +10,7 @@ tags:
 ### 浏览器报错 ERR_SSL_PROTOCOL_ERROR
 或 curl 报错 wrong version number
 
-修改 nginx 配置
+修改 nginx 配置，`nginx -t` 查看配置文件所在路径
 
 listen 443 ssl;
 
