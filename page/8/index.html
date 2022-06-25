@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">171</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">172</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,105 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2020/04/19/node-sass/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/19/node-sass/" class="post-title-link" itemprop="url">node-sass 踩坑之旅</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-04-19 17:08:09" itemprop="dateCreated datePublished" datetime="2020-04-19T17:08:09+00:00">2020-04-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-06-25 15:51:44" itemprop="dateModified" datetime="2022-06-25T15:51:44+00:00">2022-06-25</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2020/04/19/node-sass/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://www.zhuyunfeng.com/2020/04/19/node-sass/" class="cy_cmt_count" data-xid="2020/04/19/node-sass/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="下载慢"><a href="#下载慢" class="headerlink" title="下载慢"></a>下载慢</h2><p>npm config set sass_binary_site <a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/node-sass/">https://npm.taobao.org/mirrors/node-sass/</a><br>yarn config set sass_binary_site <a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/node-sass/">https://npm.taobao.org/mirrors/node-sass/</a> -g<br>参考：<a target="_blank" rel="noopener" href="https://www.jb51.net/article/122820.htm">https://www.jb51.net/article/122820.htm</a></p>
+<h2 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h2><p>Error: Node Sass does not yet support your current environment</p>
+<p>原因：node 版本更换导致的</p>
+<p>解决方法：</p>
+<ol>
+<li>更换回原 node 版本</li>
+<li>npm rebuild node-sass</li>
+<li>卸载 node-sass 重新安装</li>
+</ol>
+<p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/yaya07755/article/details/96834875">https://blog.csdn.net/yaya07755/article/details/96834875</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2020/04/17/nvm-windows/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +340,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-06-22 12:43:46" itemprop="dateModified" datetime="2022-06-22T12:43:46+00:00">2022-06-22</time>
+                <time title="修改时间：2022-06-25 15:51:44" itemprop="dateModified" datetime="2022-06-25T15:51:44+00:00">2022-06-25</time>
               </span>
 
           
@@ -324,7 +423,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-06-22 12:43:46" itemprop="dateModified" datetime="2022-06-22T12:43:46+00:00">2022-06-22</time>
+                <time title="修改时间：2022-06-25 15:51:44" itemprop="dateModified" datetime="2022-06-25T15:51:44+00:00">2022-06-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -416,7 +515,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-06-22 12:43:46" itemprop="dateModified" datetime="2022-06-22T12:43:46+00:00">2022-06-22</time>
+                <time title="修改时间：2022-06-25 15:51:44" itemprop="dateModified" datetime="2022-06-25T15:51:44+00:00">2022-06-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -506,7 +605,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-06-22 12:43:46" itemprop="dateModified" datetime="2022-06-22T12:43:46+00:00">2022-06-22</time>
+                <time title="修改时间：2022-06-25 15:51:44" itemprop="dateModified" datetime="2022-06-25T15:51:44+00:00">2022-06-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -598,7 +697,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-06-22 12:43:46" itemprop="dateModified" datetime="2022-06-22T12:43:46+00:00">2022-06-22</time>
+                <time title="修改时间：2022-06-25 15:51:44" itemprop="dateModified" datetime="2022-06-25T15:51:44+00:00">2022-06-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -688,7 +787,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-06-22 12:43:46" itemprop="dateModified" datetime="2022-06-22T12:43:46+00:00">2022-06-22</time>
+                <time title="修改时间：2022-06-25 15:51:44" itemprop="dateModified" datetime="2022-06-25T15:51:44+00:00">2022-06-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -791,7 +890,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-06-22 12:43:46" itemprop="dateModified" datetime="2022-06-22T12:43:46+00:00">2022-06-22</time>
+                <time title="修改时间：2022-06-25 15:51:44" itemprop="dateModified" datetime="2022-06-25T15:51:44+00:00">2022-06-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -896,7 +995,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-06-22 12:43:46" itemprop="dateModified" datetime="2022-06-22T12:43:46+00:00">2022-06-22</time>
+                <time title="修改时间：2022-06-25 15:51:44" itemprop="dateModified" datetime="2022-06-25T15:51:44+00:00">2022-06-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -993,7 +1092,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-06-22 12:43:46" itemprop="dateModified" datetime="2022-06-22T12:43:46+00:00">2022-06-22</time>
+                <time title="修改时间：2022-06-25 15:51:44" itemprop="dateModified" datetime="2022-06-25T15:51:44+00:00">2022-06-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1036,123 +1135,6 @@
 <h2 id="systemctl-命令"><a href="#systemctl-命令" class="headerlink" title="systemctl 命令"></a>systemctl 命令</h2><p><code>systemctl start/stop/status/restart servicename</code></p>
 <h1 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h1><h2 id="chkconfig-命令"><a href="#chkconfig-命令" class="headerlink" title="chkconfig 命令"></a>chkconfig 命令</h2><p>添加到 chkconfig 列表<br><code>chkconfig --add servicename</code><br>开启/关闭<br><code>chkconfig servicename on/off</code><br>查询当前所有自动启动的服务<br><code>chkconfig --list</code><br>查询指定的服务<br><code>chkconfig --list servicename</code></p>
 <h2 id="systemctl-命令-1"><a href="#systemctl-命令-1" class="headerlink" title="systemctl 命令"></a>systemctl 命令</h2><p><code>systemctl enable/disable servicename</code></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2019/12/06/redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/12/06/redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">redis常用命令</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-12-06 16:50:12" itemprop="dateCreated datePublished" datetime="2019-12-06T16:50:12+00:00">2019-12-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-06-22 12:43:46" itemprop="dateModified" datetime="2022-06-22T12:43:46+00:00">2022-06-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/technology/Server/" itemprop="url" rel="index"><span itemprop="name">Server</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2019/12/06/redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://www.zhuyunfeng.com/2019/12/06/redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="cy_cmt_count" data-xid="2019/12/06/redis常用命令/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>连接</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli -h host -p port -a password</span><br></pre></td></tr></table></figure>
-<p>显示所有</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keys *</span><br></pre></td></tr></table></figure>
-<p>设置一个</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set key value</span><br></pre></td></tr></table></figure>
-<p>获取一个</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">get key</span><br></pre></td></tr></table></figure>
-<p>删除一个</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">del key</span><br></pre></td></tr></table></figure>
-<p>清空当前数据库</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flushdb</span><br></pre></td></tr></table></figure>
-<p>clear all database</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flushall</span><br></pre></td></tr></table></figure>
-<p>获取类型</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type key</span><br></pre></td></tr></table></figure>
-<p>获取哈希表中的所有域（field）</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEYS key </span><br></pre></td></tr></table></figure>
-
-<p>获取 hash 值</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HGET KEY_NAME FIELD_NAME </span><br></pre></td></tr></table></figure>
-<p>获取 hash 值</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HGET KEY_NAME FIELD_NAME </span><br></pre></td></tr></table></figure>
-<p>参考：<br><a target="_blank" rel="noopener" href="https://www.runoob.com/redis/redis-tutorial.html">https://www.runoob.com/redis/redis-tutorial.html</a></p>
 
       
     </div>
@@ -1237,7 +1219,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">171</span>
+          <span class="site-state-item-count">172</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
