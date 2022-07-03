@@ -3,12 +3,16 @@
   <entry>
     <title>2018年1月29日工作学习总结</title>
     <url>/2018/01/29/2018nian1yue29rigongzuoxuexizongjie/</url>
-    <content><![CDATA[<p>学习总结<br>一、html元素分类<br>按默认样式分类 1块级元素 div,  p 2行内元素 span em strong 3inline-block select<br>按内容分类 见html5官网<br>二、HTML元素嵌套关系<br>块级元素可以包含行内元素 块级元素不一定能包含块级元素，比如p不能包含div 行内元素一般不包含块级元素，a 比较特殊<br>三、css hack 替代方案：特性检测 替代方案：针对性加class 案例checkbox</p>
-<div id="checkbox">
-<input type="checkbox" id="checkbox">
-<label>i am label</label>
-</div>
-
+    <content><![CDATA[<p>学习总结 </p>
+<h1 id="一、html元素分类"><a href="#一、html元素分类" class="headerlink" title="一、html元素分类"></a>一、html元素分类</h1><p>按默认样式分类 </p>
+<ol>
+<li>块级元素 div,  p </li>
+<li>行内元素 span em strong </li>
+<li>inline-block select<br>按内容分类 见html5官网 <h1 id="二、HTML元素嵌套关系"><a href="#二、HTML元素嵌套关系" class="headerlink" title="二、HTML元素嵌套关系"></a>二、HTML元素嵌套关系</h1>块级元素可以包含行内元素 块级元素不一定能包含块级元素，比如p不能包含div </li>
+</ol>
+<p>行内元素一般不包含块级元素，a 比较特殊 </p>
+<h1 id="三、css-hack"><a href="#三、css-hack" class="headerlink" title="三、css hack"></a>三、css hack</h1><p>替代方案：特性检测<br>替代方案：针对性加class<br>案例checkbox</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div id=&quot;checkbox&quot;&gt;</span><br><span class="line">&lt;input type=&quot;checkbox&quot; id=&quot;checkbox&quot;&gt;</span><br><span class="line">&lt;label&gt;i am label&lt;/label&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 <p>案例tabs 案例tree 案例幻灯片<br>今日问题1： 元素的margin问题<br>问题2： h1,h2,h3,…,h6的使用规范<br>问题3： 网站初始样式规范</p>
 ]]></content>
       <categories>
@@ -1596,6 +1600,14 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
       </categories>
   </entry>
   <entry>
+    <title>nvm-windows踩坑之旅</title>
+    <url>/2020/04/17/nvm-windows/</url>
+    <content><![CDATA[<h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><p><a href="https://github.com/coreybutler/nvm-windows/releases">https://github.com/coreybutler/nvm-windows/releases</a></p>
+<h3 id="安装路径不要有空格"><a href="#安装路径不要有空格" class="headerlink" title="安装路径不要有空格"></a>安装路径不要有空格</h3><p>nvm-windows 对空格支持的不是很好，安装路径最好不要有空格<br>作者说会在1.1.8这个版本解决这个问题<br>This issue should be resolved as of version 1.1.8. Please note I’m woefully behind in cutting this new release, but am working on a new release process. In the meantime, it’s possible to download the source or use a patched version from <a href="https://github.com/s-h-a-d-o-w/nvm-windows/releases">https://github.com/s-h-a-d-o-w/nvm-windows/releases</a> (from the person who submitted the fix).</p>
+<h3 id="使用淘宝镜像"><a href="#使用淘宝镜像" class="headerlink" title="使用淘宝镜像"></a>使用淘宝镜像</h3><p>如果用 nvm 安装 node 和 npm 很慢，可以配置 nvm 使用淘宝镜像<br>nvm node_mirror <a href="https://npm.taobao.org/mirrors/node/">https://npm.taobao.org/mirrors/node/</a><br>nvm npm_mirror <a href="https://npm.taobao.org/mirrors/npm/">https://npm.taobao.org/mirrors/npm/</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>npm和yarn和pnpm</title>
     <url>/2019/08/10/npm%E5%92%8Cyarn/</url>
     <content><![CDATA[<h2 id="全局操作"><a href="#全局操作" class="headerlink" title="全局操作"></a>全局操作</h2><p>npm 加参数 <code>-g/--global</code></p>
@@ -1625,14 +1637,6 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
         <tag>yarn</tag>
         <tag>pnpm</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>nvm-windows踩坑之旅</title>
-    <url>/2020/04/17/nvm-windows/</url>
-    <content><![CDATA[<h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><p><a href="https://github.com/coreybutler/nvm-windows/releases">https://github.com/coreybutler/nvm-windows/releases</a></p>
-<h3 id="安装路径不要有空格"><a href="#安装路径不要有空格" class="headerlink" title="安装路径不要有空格"></a>安装路径不要有空格</h3><p>nvm-windows 对空格支持的不是很好，安装路径最好不要有空格<br>作者说会在1.1.8这个版本解决这个问题<br>This issue should be resolved as of version 1.1.8. Please note I’m woefully behind in cutting this new release, but am working on a new release process. In the meantime, it’s possible to download the source or use a patched version from <a href="https://github.com/s-h-a-d-o-w/nvm-windows/releases">https://github.com/s-h-a-d-o-w/nvm-windows/releases</a> (from the person who submitted the fix).</p>
-<h3 id="使用淘宝镜像"><a href="#使用淘宝镜像" class="headerlink" title="使用淘宝镜像"></a>使用淘宝镜像</h3><p>如果用 nvm 安装 node 和 npm 很慢，可以配置 nvm 使用淘宝镜像<br>nvm node_mirror <a href="https://npm.taobao.org/mirrors/node/">https://npm.taobao.org/mirrors/node/</a><br>nvm npm_mirror <a href="https://npm.taobao.org/mirrors/npm/">https://npm.taobao.org/mirrors/npm/</a></p>
-]]></content>
   </entry>
   <entry>
     <title>nvm基本使用</title>
