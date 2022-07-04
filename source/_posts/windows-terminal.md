@@ -5,18 +5,21 @@ categories:
 date: 2020-08-19 10:35:43
 tags:
 ---
-#### 安装 windows Terminal
+### 安装 windows Terminal
 1. windows 应用商店安装
 2. github 下载安装
 
-#### 安装 powershell 7
+### 安装 powershell 7
 github 下载安装
 
-#### 安装字体
+### 安装字体
 安装字体，否则乱码
-这里仅推荐一款字体：Fira Code。该字体支持 ligature 连字功能，而且是一款专门为代码显示准备的字体。该字体开源，广受海内外程序员好评！
+这里仅推荐一款字体：Fira Code。该字体支持 ligature 连字功能，而且是一款专门为代码显示准备的字体。该字体开源，广受海内外程序员好评！  
 下载地址：
-https://link.zhihu.com/?target=https%3A//github.com/tonsky/FiraCode/releases/download/3.1/FiraCode_3.1.zip
+https://github.com/tonsky/FiraCode/releases/download/3.1/FiraCode_3.1.zip  
+解压  
+进入 ttf 文件夹  
+双击字体文件安装
 #### 配置 windows Terminal
 guid 需要生成，文章末尾有生成 guid 的网站
 ```
@@ -45,7 +48,7 @@ guid 需要生成，文章末尾有生成 guid 的网站
     // "colorScheme": "Homebrew"
 },
 ```
-#### 安装 powershell 插件
+### 安装 powershell 插件
 ```
 # 1. 安装 PSReadline 包，该插件可以让命令行很好用，类似 zsh
 Install-Module -Name PSReadLine -AllowPrerelease -Force
@@ -56,7 +59,7 @@ Install-Module posh-git -Scope CurrentUser
 # 3. 安装 oh-my-posh 包，让你的命令行更酷炫、优雅
 Install-Module oh-my-posh -Scope CurrentUser
 ```
-#### 添加 Powershell 启动参数
+### 添加 Powershell 启动参数
 ```
 notepad $PROFILE
 ```
