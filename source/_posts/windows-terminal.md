@@ -13,14 +13,13 @@ tags:
 github 下载安装
 
 ### 安装字体
-安装字体，否则乱码
-这里仅推荐一款字体：Fira Code。该字体支持 ligature 连字功能，而且是一款专门为代码显示准备的字体。该字体开源，广受海内外程序员好评！  
-下载地址：
-https://github.com/tonsky/FiraCode/releases/download/3.1/FiraCode_3.1.zip  
+安装字体，否则乱码   
+[下载地址](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip)  
 解压  
 进入 ttf 文件夹  
-双击字体文件安装
-#### 配置 windows Terminal
+双击字体文件依次安装 或 全选-》右键-》安装
+### 配置 windows Terminal
+
 guid 需要生成，文章末尾有生成 guid 的网站
 ```
 // 默认的配置就是我们的新 powershell（重要！！！）
@@ -57,11 +56,12 @@ Install-Module -Name PSReadLine -AllowPrerelease -Force
 Install-Module posh-git -Scope CurrentUser
 
 # 3. 安装 oh-my-posh 包，让你的命令行更酷炫、优雅
-Install-Module oh-my-posh -Scope CurrentUser
+# Install-Module oh-my-posh -Scope CurrentUser # 已废弃
+winget install JanDeDobbeleer.OhMyPosh -s winget
 ```
 ### 添加 Powershell 启动参数
-```
-notepad $PROFILE
+```bash
+notepad $PROFILE # 打开配置文件，没有的话手动新建一个
 ```
 ```
 
@@ -70,10 +70,11 @@ notepad $PROFILE
 Import-Module posh-git
 
 # 引入 oh-my-posh
-Import-Module oh-my-posh
+# Import-Module oh-my-posh
 
 # 设置 PowerShell 主题
-Set-Theme Paradox
+# Set-Theme Paradox
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json"
 #------------------------------- Import Modules END   -------------------------------
 
 
@@ -103,7 +104,8 @@ Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 
 ```
 
-参考：
+参考：  
+[on-my-posh 官网](https://ohmyposh.dev/)  
 https://www.cnblogs.com/Rohn/p/12940312.html
 https://zhuanlan.zhihu.com/p/137595941
 https://blog.csdn.net/WPwalter/article/details/100159481
