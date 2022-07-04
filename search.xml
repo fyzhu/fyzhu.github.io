@@ -340,19 +340,6 @@ http://player.youku.com/embed/XMTYxNjA0MTk2NA==
       </tags>
   </entry>
   <entry>
-    <title>不错的物理科普书</title>
-    <url>/2017/09/12/bucuodekepushu/</url>
-    <content><![CDATA[<p>《宇宙的琴弦》作者：B·格林</p>
-<p>《时间的形状：相对论史话》 作者：汪洁 </p>
-<p>《上帝掷骰（tou）子吗：量子物理史话》 作者：曹天元   </p>
-<p>《七堂极简物理课》作者：卡洛 罗韦力 这个讲的比较简单 </p>
-<p>《猫、爱因斯坦和密码学：我也能看懂的量子通信》 作者：秦罡（gang）</p>
-]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-  </entry>
-  <entry>
     <title>buglist</title>
     <url>/2019/02/17/buglist/</url>
     <content><![CDATA[<p>1.windows10 word excel等的预览功能导致文件夹卡死<br>2.windows10点击右下角下图标，输入法切换时导致小图标抖动</p>
@@ -1600,14 +1587,6 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
       </categories>
   </entry>
   <entry>
-    <title>nvm-windows踩坑之旅</title>
-    <url>/2020/04/17/nvm-windows/</url>
-    <content><![CDATA[<h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><p><a href="https://github.com/coreybutler/nvm-windows/releases">https://github.com/coreybutler/nvm-windows/releases</a></p>
-<h3 id="安装路径不要有空格"><a href="#安装路径不要有空格" class="headerlink" title="安装路径不要有空格"></a>安装路径不要有空格</h3><p>nvm-windows 对空格支持的不是很好，安装路径最好不要有空格<br>作者说会在1.1.8这个版本解决这个问题<br>This issue should be resolved as of version 1.1.8. Please note I’m woefully behind in cutting this new release, but am working on a new release process. In the meantime, it’s possible to download the source or use a patched version from <a href="https://github.com/s-h-a-d-o-w/nvm-windows/releases">https://github.com/s-h-a-d-o-w/nvm-windows/releases</a> (from the person who submitted the fix).</p>
-<h3 id="使用淘宝镜像"><a href="#使用淘宝镜像" class="headerlink" title="使用淘宝镜像"></a>使用淘宝镜像</h3><p>如果用 nvm 安装 node 和 npm 很慢，可以配置 nvm 使用淘宝镜像<br>nvm node_mirror <a href="https://npm.taobao.org/mirrors/node/">https://npm.taobao.org/mirrors/node/</a><br>nvm npm_mirror <a href="https://npm.taobao.org/mirrors/npm/">https://npm.taobao.org/mirrors/npm/</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>npm和yarn和pnpm</title>
     <url>/2019/08/10/npm%E5%92%8Cyarn/</url>
     <content><![CDATA[<h2 id="全局操作"><a href="#全局操作" class="headerlink" title="全局操作"></a>全局操作</h2><p>npm 加参数 <code>-g/--global</code></p>
@@ -1637,6 +1616,14 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
         <tag>yarn</tag>
         <tag>pnpm</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>nvm-windows踩坑之旅</title>
+    <url>/2020/04/17/nvm-windows/</url>
+    <content><![CDATA[<h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><p><a href="https://github.com/coreybutler/nvm-windows/releases">https://github.com/coreybutler/nvm-windows/releases</a></p>
+<h3 id="安装路径不要有空格"><a href="#安装路径不要有空格" class="headerlink" title="安装路径不要有空格"></a>安装路径不要有空格</h3><p>nvm-windows 对空格支持的不是很好，安装路径最好不要有空格<br>作者说会在1.1.8这个版本解决这个问题<br>This issue should be resolved as of version 1.1.8. Please note I’m woefully behind in cutting this new release, but am working on a new release process. In the meantime, it’s possible to download the source or use a patched version from <a href="https://github.com/s-h-a-d-o-w/nvm-windows/releases">https://github.com/s-h-a-d-o-w/nvm-windows/releases</a> (from the person who submitted the fix).</p>
+<h3 id="使用淘宝镜像"><a href="#使用淘宝镜像" class="headerlink" title="使用淘宝镜像"></a>使用淘宝镜像</h3><p>如果用 nvm 安装 node 和 npm 很慢，可以配置 nvm 使用淘宝镜像<br>nvm node_mirror <a href="https://npm.taobao.org/mirrors/node/">https://npm.taobao.org/mirrors/node/</a><br>nvm npm_mirror <a href="https://npm.taobao.org/mirrors/npm/">https://npm.taobao.org/mirrors/npm/</a></p>
+]]></content>
   </entry>
   <entry>
     <title>nvm基本使用</title>
@@ -2716,16 +2703,16 @@ timeout(100).then((value) =&gt; &#123;
   <entry>
     <title>windows terminal</title>
     <url>/2020/08/19/windows-terminal/</url>
-    <content><![CDATA[<h4 id="安装-windows-Terminal"><a href="#安装-windows-Terminal" class="headerlink" title="安装 windows Terminal"></a>安装 windows Terminal</h4><ol>
+    <content><![CDATA[<h3 id="安装-windows-Terminal"><a href="#安装-windows-Terminal" class="headerlink" title="安装 windows Terminal"></a>安装 windows Terminal</h3><ol>
 <li>windows 应用商店安装</li>
 <li>github 下载安装</li>
 </ol>
-<h4 id="安装-powershell-7"><a href="#安装-powershell-7" class="headerlink" title="安装 powershell 7"></a>安装 powershell 7</h4><p>github 下载安装</p>
-<h4 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h4><p>安装字体，否则乱码<br>这里仅推荐一款字体：Fira Code。该字体支持 ligature 连字功能，而且是一款专门为代码显示准备的字体。该字体开源，广受海内外程序员好评！<br>下载地址：<br><a href="https://link.zhihu.com/?target=https%3A//github.com/tonsky/FiraCode/releases/download/3.1/FiraCode_3.1.zip">https://link.zhihu.com/?target=https%3A//github.com/tonsky/FiraCode/releases/download/3.1/FiraCode_3.1.zip</a></p>
+<h3 id="安装-powershell-7"><a href="#安装-powershell-7" class="headerlink" title="安装 powershell 7"></a>安装 powershell 7</h3><p>github 下载安装</p>
+<h3 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h3><p>安装字体，否则乱码<br>这里仅推荐一款字体：Fira Code。该字体支持 ligature 连字功能，而且是一款专门为代码显示准备的字体。该字体开源，广受海内外程序员好评！<br>下载地址：<br><a href="https://github.com/tonsky/FiraCode/releases/download/3.1/FiraCode_3.1.zip">https://github.com/tonsky/FiraCode/releases/download/3.1/FiraCode_3.1.zip</a><br>解压<br>进入 ttf 文件夹<br>双击字体文件安装</p>
 <h4 id="配置-windows-Terminal"><a href="#配置-windows-Terminal" class="headerlink" title="配置 windows Terminal"></a>配置 windows Terminal</h4><p>guid 需要生成，文章末尾有生成 guid 的网站</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 默认的配置就是我们的新 powershell（重要！！！）</span><br><span class="line">&quot;defaultProfile&quot;: &quot;&#123;574e775e-4f2a-5b96-ac1e-a2962a402336&#125;&quot;,</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    // Powershell 7.1.0-preview.6 配置</span><br><span class="line">    &quot;guid&quot;: &quot;&#123;574e775e-4f2a-5b96-ac1e-a2962a402336&#125;&quot;,</span><br><span class="line">    &quot;hidden&quot;: false,</span><br><span class="line">    &quot;name&quot;: &quot;pwsh&quot;,</span><br><span class="line">    // -nologo 去掉启动时的logo等信息输出</span><br><span class="line">    &quot;commandline&quot;: &quot;D:/Program Files/PowerShell/7-preview/pwsh.exe -nologo&quot;,</span><br><span class="line">    &quot;icon&quot;: &quot;D:/Program Files/PowerShell/7-preview/assets/Powershell_avatar.ico&quot;,</span><br><span class="line">    //&quot;source&quot;: &quot;Windows.Terminal.PowershellCore&quot;,</span><br><span class="line">    // 启动菜单一定要设置为 &lt;.&gt;，否则后面重要的一步将会无效！</span><br><span class="line">    &quot;startingDirectory&quot;: &quot;.&quot;,</span><br><span class="line">    // 字体</span><br><span class="line">    &quot;fontFace&quot;: &quot;Fira Code&quot;,</span><br><span class="line">    &quot;fontSize&quot;: 11,</span><br><span class="line">    &quot;historySize&quot;: 9001,</span><br><span class="line">    &quot;padding&quot;: &quot;5, 5, 20, 25&quot;,</span><br><span class="line">    &quot;snapOnInput&quot;: true,</span><br><span class="line">    &quot;useAcrylic&quot;: false,</span><br><span class="line">    // 颜色方案</span><br><span class="line">    // &quot;colorScheme&quot;: &quot;Homebrew&quot;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-<h4 id="安装-powershell-插件"><a href="#安装-powershell-插件" class="headerlink" title="安装 powershell 插件"></a>安装 powershell 插件</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 1. 安装 PSReadline 包，该插件可以让命令行很好用，类似 zsh</span><br><span class="line">Install-Module -Name PSReadLine -AllowPrerelease -Force</span><br><span class="line"></span><br><span class="line"># 2. 安装 posh-git 包，让你的 git 更好用</span><br><span class="line">Install-Module posh-git -Scope CurrentUser</span><br><span class="line"></span><br><span class="line"># 3. 安装 oh-my-posh 包，让你的命令行更酷炫、优雅</span><br><span class="line">Install-Module oh-my-posh -Scope CurrentUser</span><br></pre></td></tr></table></figure>
-<h4 id="添加-Powershell-启动参数"><a href="#添加-Powershell-启动参数" class="headerlink" title="添加 Powershell 启动参数"></a>添加 Powershell 启动参数</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">notepad $PROFILE</span><br></pre></td></tr></table></figure>
+<h3 id="安装-powershell-插件"><a href="#安装-powershell-插件" class="headerlink" title="安装 powershell 插件"></a>安装 powershell 插件</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 1. 安装 PSReadline 包，该插件可以让命令行很好用，类似 zsh</span><br><span class="line">Install-Module -Name PSReadLine -AllowPrerelease -Force</span><br><span class="line"></span><br><span class="line"># 2. 安装 posh-git 包，让你的 git 更好用</span><br><span class="line">Install-Module posh-git -Scope CurrentUser</span><br><span class="line"></span><br><span class="line"># 3. 安装 oh-my-posh 包，让你的命令行更酷炫、优雅</span><br><span class="line">Install-Module oh-my-posh -Scope CurrentUser</span><br></pre></td></tr></table></figure>
+<h3 id="添加-Powershell-启动参数"><a href="#添加-Powershell-启动参数" class="headerlink" title="添加 Powershell 启动参数"></a>添加 Powershell 启动参数</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">notepad $PROFILE</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#------------------------------- Import Modules BEGIN -------------------------------</span><br><span class="line"># 引入 posh-git</span><br><span class="line">Import-Module posh-git</span><br><span class="line"></span><br><span class="line"># 引入 oh-my-posh</span><br><span class="line">Import-Module oh-my-posh</span><br><span class="line"></span><br><span class="line"># 设置 PowerShell 主题</span><br><span class="line">Set-Theme Paradox</span><br><span class="line">#------------------------------- Import Modules END   -------------------------------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#-------------------------------  Set Hot-keys BEGIN  -------------------------------</span><br><span class="line"># 设置 Tab 键补全</span><br><span class="line"># Set-PSReadlineKeyHandler -Key Tab -Function Complete</span><br><span class="line"></span><br><span class="line"># 设置 Ctrl+d 为菜单补全和 Intellisense</span><br><span class="line">Set-PSReadLineKeyHandler -Key &quot;Tab&quot; -Function MenuComplete</span><br><span class="line"></span><br><span class="line"># 设置 Ctrl+d 为退出 PowerShell</span><br><span class="line">Set-PSReadlineKeyHandler -Key &quot;Ctrl+d&quot; -Function ViExit</span><br><span class="line"></span><br><span class="line"># 设置 Ctrl+z 为撤销</span><br><span class="line">Set-PSReadLineKeyHandler -Key &quot;Ctrl+z&quot; -Function Undo</span><br><span class="line"></span><br><span class="line"># 设置向上键为后向搜索历史记录</span><br><span class="line">Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward</span><br><span class="line"></span><br><span class="line"># 设置向下键为前向搜索历史纪录</span><br><span class="line">Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward</span><br><span class="line">#-------------------------------  Set Hot-keys END    -------------------------------</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>参考：<br><a href="https://www.cnblogs.com/Rohn/p/12940312.html">https://www.cnblogs.com/Rohn/p/12940312.html</a><br><a href="https://zhuanlan.zhihu.com/p/137595941">https://zhuanlan.zhihu.com/p/137595941</a><br><a href="https://blog.csdn.net/WPwalter/article/details/100159481">https://blog.csdn.net/WPwalter/article/details/100159481</a><br>字体：<br><a href="https://sspai.com/post/52907">https://sspai.com/post/52907</a><br>powershell 乱码，vscode 乱码 :<br><a href="https://zhuanlan.zhihu.com/p/51901035">https://zhuanlan.zhihu.com/p/51901035</a><br>其他：<br>guid 生成工具<br><a href="https://www.qvdv.com/tools/qvdv-guid.html">https://www.qvdv.com/tools/qvdv-guid.html</a></p>
@@ -3678,5 +3665,18 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       <tags>
         <tag>vue</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>不错的物理科普书</title>
+    <url>/2017/09/12/bucuodekepushu/</url>
+    <content><![CDATA[<p>《宇宙的琴弦》作者：B·格林</p>
+<p>《时间的形状：相对论史话》 作者：汪洁 </p>
+<p>《上帝掷骰（tou）子吗：量子物理史话》 作者：曹天元   </p>
+<p>《七堂极简物理课》作者：卡洛 罗韦力 这个讲的比较简单 </p>
+<p>《猫、爱因斯坦和密码学：我也能看懂的量子通信》 作者：秦罡（gang）</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
   </entry>
 </search>
