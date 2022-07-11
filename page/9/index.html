@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">172</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">173</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,99 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2019/12/24/centos%E6%9C%8D%E5%8A%A1%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/24/centos%E6%9C%8D%E5%8A%A1%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8/" class="post-title-link" itemprop="url">centos服务自动启动</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-12-24 10:16:57" itemprop="dateCreated datePublished" datetime="2019-12-24T10:16:57+00:00">2019-12-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2019/12/24/centos%E6%9C%8D%E5%8A%A1%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://www.zhuyunfeng.com/2019/12/24/centos%E6%9C%8D%E5%8A%A1%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8/" class="cy_cmt_count" data-xid="2019/12/24/centos服务自动启动/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h1><h2 id="service-命令"><a href="#service-命令" class="headerlink" title="service 命令"></a>service 命令</h2><p><code>service start/stop/status/restart servicename</code></p>
+<h2 id="systemctl-命令"><a href="#systemctl-命令" class="headerlink" title="systemctl 命令"></a>systemctl 命令</h2><p><code>systemctl start/stop/status/restart servicename</code></p>
+<h1 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h1><h2 id="chkconfig-命令"><a href="#chkconfig-命令" class="headerlink" title="chkconfig 命令"></a>chkconfig 命令</h2><p>添加到 chkconfig 列表<br><code>chkconfig --add servicename</code><br>开启/关闭<br><code>chkconfig servicename on/off</code><br>查询当前所有自动启动的服务<br><code>chkconfig --list</code><br>查询指定的服务<br><code>chkconfig --list servicename</code></p>
+<h2 id="systemctl-命令-1"><a href="#systemctl-命令-1" class="headerlink" title="systemctl 命令"></a>systemctl 命令</h2><p><code>systemctl enable/disable servicename</code></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2019/12/06/redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +334,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -358,7 +451,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -461,7 +554,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -560,7 +653,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -660,7 +753,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -773,7 +866,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -903,7 +996,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1055,7 +1148,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1179,7 +1272,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1239,104 +1332,6 @@
 <h2 id="npm-dedupe"><a href="#npm-dedupe" class="headerlink" title="npm dedupe"></a>npm dedupe</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm ddp <span class="comment">#Reduce duplication</span></span><br></pre></td></tr></table></figure>
 <h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">yarn config set proxy http://127.0.0.1:15236</span><br><span class="line">yarn config set https-proxy http://127.0.0.1:15236</span><br><span class="line"></span><br><span class="line">npm config set https-proxy</span><br><span class="line"></span><br><span class="line">yarn config delete proxy</span><br><span class="line">yarn config delete https-proxy</span><br></pre></td></tr></table></figure>
 <p>npm 官方文档<br><a target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/v7/commands">https://docs.npmjs.com/cli/v7/commands</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2019/08/10/java%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/08/10/java%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">java环境变量配置</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-08-10 20:17:12" itemprop="dateCreated datePublished" datetime="2019-08-10T20:17:12+00:00">2019-08-10</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/technology/back-end/" itemprop="url" rel="index"><span itemprop="name">back-end</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2019/08/10/java%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://www.zhuyunfeng.com/2019/08/10/java%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/" class="cy_cmt_count" data-xid="2019/08/10/java环境变量配置/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="window10下环境变量配置"><a href="#window10下环境变量配置" class="headerlink" title="window10下环境变量配置"></a>window10下环境变量配置</h1><h2 id="新建JAVA-HOME"><a href="#新建JAVA-HOME" class="headerlink" title="新建JAVA_HOME"></a>新建JAVA_HOME</h2><p>变量名：JAVA_HOME<br>变量值：电脑上JDK安装的绝对路径</p>
-<h2 id="新建-修改-CLASSPATH-变量"><a href="#新建-修改-CLASSPATH-变量" class="headerlink" title="新建/修改 CLASSPATH 变量"></a>新建/修改 CLASSPATH 变量</h2><p>变量名：CLASSPATH<br>变量值：.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</p>
-<h2 id="修改Path-变量"><a href="#修改Path-变量" class="headerlink" title="修改Path 变量"></a>修改Path 变量</h2><p>新建两条路径：</p>
-<p>%JAVA_HOME%\bin<br>%JAVA_HOME%\jre\bin</p>
-<p>参考文档<br><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/windows10-java-setup.html">https://www.runoob.com/w3cnote/windows10-java-setup.html</a></p>
 
       
     </div>
@@ -1421,7 +1416,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">172</span>
+          <span class="site-state-item-count">173</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

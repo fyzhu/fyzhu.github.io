@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">172</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">173</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,103 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2021/07/04/nginx%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/07/04/nginx%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">nginx配置及使用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-07-04 16:52:25" itemprop="dateCreated datePublished" datetime="2021-07-04T16:52:25+00:00">2021-07-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2021/07/04/nginx%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://www.zhuyunfeng.com/2021/07/04/nginx%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/" class="cy_cmt_count" data-xid="2021/07/04/nginx配置及使用/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>401-7-4<br><img src="https://img.mukewang.com/szimg/5fa518a400014c8019201080.jpg" alt="nginx 配置"></p>
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>nginx</p>
+<h3 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h3><p>nginx -s stop</p>
+<h3 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h3><p>nginx -s reload</p>
+<h3 id="检查配置文件"><a href="#检查配置文件" class="headerlink" title="检查配置文件"></a>检查配置文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nginx -t <span class="comment"># 可以查看配置文件所在路径</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">server&#123;</span><br><span class="line">        listen 5000;</span><br><span class="line">        server_name localhost;</span><br><span class="line">        location = / &#123;</span><br><span class="line">            proxy_pass http://localhost:3000/;</span><br><span class="line">        &#125;</span><br><span class="line">        location /test &#123;</span><br><span class="line">            proxy_pass http://localhost:3000/test;</span><br><span class="line"></span><br><span class="line">            #   指定允许跨域的方法，*代表所有</span><br><span class="line">            add_header Access-Control-Allow-Methods *;</span><br><span class="line"></span><br><span class="line">            #   预检命令的缓存，如果不缓存每次会发送两次请求</span><br><span class="line">            add_header Access-Control-Max-Age 3600;</span><br><span class="line"></span><br><span class="line">            #   带cookie请求需要加上这个字段，并设置为true</span><br><span class="line">            add_header Access-Control-Allow-Credentials true;</span><br><span class="line"></span><br><span class="line">            #   表示允许这个域跨域调用（客户端发送请求的域名和端口） </span><br><span class="line">            #   $http_origin动态获取请求客户端请求的域   不用*的原因是带cookie的请求不支持*号</span><br><span class="line">            add_header Access-Control-Allow-Origin $http_origin;</span><br><span class="line"></span><br><span class="line">            #   表示请求头的字段 动态获取</span><br><span class="line">            add_header Access-Control-Allow-Headers </span><br><span class="line">            $http_access_control_request_headers;</span><br><span class="line"></span><br><span class="line">            #   OPTIONS预检命令，预检命令通过时才发送请求</span><br><span class="line">            #   检查请求的类型是不是预检命令</span><br><span class="line">            if ($request_method = OPTIONS)&#123;</span><br><span class="line">                return 200;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/PengfeiSong/p/12993446.html">https://www.cnblogs.com/PengfeiSong/p/12993446.html</a></p>
+<h3 id="导入配置文件"><a href="#导入配置文件" class="headerlink" title="导入配置文件"></a>导入配置文件</h3><p><code>include servers/*;</code><br>相对于当前文件</p>
+<h3 id="配置多-server"><a href="#配置多-server" class="headerlink" title="配置多 server"></a>配置多 server</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        server_name a.com;</span><br><span class="line">        location = / &#123;</span><br><span class="line">            proxy_pass http://localhost:3000/;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        server_name b.com;</span><br><span class="line">        location = / &#123;</span><br><span class="line">            proxy_pass http://localhost:8000/;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2021/07/01/dom%E4%B9%8Bscroll/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +338,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -331,7 +428,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -423,7 +520,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -528,7 +625,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -714,7 +811,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -811,7 +908,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -909,7 +1006,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1012,7 +1109,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1144,7 +1241,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1190,120 +1287,6 @@
 <p>每览昔人兴感之由，若合一契，未尝不临文嗟悼，不能喻之于怀。固知一死生为虚诞，齐彭殇为妄作。后之视今，亦犹今之视昔，悲夫！故列叙时人，录其所述，虽世殊事异，所以兴怀，其致一也。后之览者，亦将有感于斯文。</p>
 <h3 id="译文"><a href="#译文" class="headerlink" title="译文"></a>译文</h3><p>永和九年，时在癸丑之年，三月上旬，我们会集在会稽郡山阴城的兰亭，为了做禊事。众多贤才都汇聚到这里，年龄大的小的都聚集在这里。兰亭这个地方有高峻的山峰，茂盛的树林，高高的竹子。又有清澈湍急的溪流，辉映环绕在亭子的四周，我们引溪水作为流觞的曲水，排列坐在曲水旁边，虽然没有演奏音乐的盛况，但喝点酒，作点诗，也足够来畅快叙述幽深内藏的感情了。这一天，天气晴朗，和风温暖，仰首观览到宇宙的浩大，俯看观察大地上众多的万物，用来舒展眼力，开阔胸怀，足够来极尽视听的欢娱，实在很快乐。人与人相互交往，很快便度过一生。有的人从自己的情趣思想中取出一些东西，在室内（跟朋友）面对面地交谈；有的人通过寄情于自己精神情怀所寄托的事物，在形体之外,不受任何约束地放纵地生活。虽然各有各的爱好，安静与躁动各不相同，但当他们对所接触的事物感到高兴时，一时感到自得，感到高兴和满足，竟然不知道衰老将要到来。等到对得到或喜爱的东西已经厌倦，感情随着事物的变化而变化，感慨随之产生。过去所喜欢的东西，转瞬间，已经成为旧迹，尚且不能不因为它引发心中的感触，况且寿命长短，听凭造化，最后归结于消灭。古人说：“死生毕竟是件大事啊。”怎么能不让人悲痛呢？每当看到前人所发感慨的原因，其缘由像一张符契那样相和，总难免要在读前人文章时叹息哀伤，不能明白于心。本来知道把生死等同的说法是不真实的，把长寿和短命等同起来的说法是妄造的。后人看待今人，也就像今人看待前人，可悲呀。所以一个一个记下当时与会的人，录下他们所作的诗篇。纵使时代变了，事情不同了，但触发人们情怀的原因，他们的思想情趣是一样的。后世的读者，也将对这次集会的诗文有所感慨。</p>
 
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2021/06/04/CSS-animation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/06/04/CSS-animation/" class="post-title-link" itemprop="url">CSS-animation</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-06-04 10:00:16" itemprop="dateCreated datePublished" datetime="2021-06-04T10:00:16+00:00">2021-06-04</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2021/06/04/CSS-animation/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://www.zhuyunfeng.com/2021/06/04/CSS-animation/" class="cy_cmt_count" data-xid="2021/06/04/CSS-animation/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>animation: name duration timing-function delay iteration-count direction fill-mode play-state;</p>
-<h2 id="animation-name"><a href="#animation-name" class="headerlink" title="animation-name"></a>animation-name</h2><p>指定要绑定到选择器的关键帧的名称</p>
-<h2 id="animation-duration"><a href="#animation-duration" class="headerlink" title="animation-duration"></a>animation-duration</h2><p>动画指定需要多少秒或毫秒完成</p>
-<h2 id="animation-timing-function"><a href="#animation-timing-function" class="headerlink" title="animation-timing-function"></a>animation-timing-function</h2><p>设置动画将如何完成一个周期</p>
-<h2 id="animation-delay"><a href="#animation-delay" class="headerlink" title="animation-delay"></a>animation-delay</h2><p>设置动画在启动前的延迟间隔。</p>
-<h2 id="animation-iteration-count"><a href="#animation-iteration-count" class="headerlink" title="animation-iteration-count"></a>animation-iteration-count</h2><p>定义动画的播放次数。</p>
-<table>
-<thead>
-<tr>
-<th>value</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>n</td>
-<td>一个数字，定义应该播放多少次动画</td>
-</tr>
-<tr>
-<td>infinite</td>
-<td>指定动画应该播放无限次（永远）</td>
-</tr>
-</tbody></table>
-<h2 id="animation-direction"><a href="#animation-direction" class="headerlink" title="animation-direction"></a>animation-direction</h2><p>指定是否应该轮流反向播放动画。</p>
-<h2 id="animation-fill-mode"><a href="#animation-fill-mode" class="headerlink" title="animation-fill-mode"></a>animation-fill-mode</h2><p>规定当动画不播放时（当动画完成时，或当动画有一个延迟未开始播放时），要应用到元素的样式。</p>
-<h2 id="animation-play-state"><a href="#animation-play-state" class="headerlink" title="animation-play-state"></a>animation-play-state</h2><p>指定动画是否正在运行或已暂停。</p>
-<h2 id="keyframes"><a href="#keyframes" class="headerlink" title="@keyframes"></a>@keyframes</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> name</span><br><span class="line">&#123;</span><br><span class="line">    <span class="selector-tag">from</span> &#123;<span class="attribute">background</span>: red;&#125;</span><br><span class="line">    <span class="selector-tag">to</span> &#123;<span class="attribute">background</span>: yellow;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> name</span><br><span class="line">&#123;</span><br><span class="line">    <span class="number">0%</span>   &#123;<span class="attribute">background</span>: red;&#125;</span><br><span class="line">    <span class="number">25%</span>  &#123;<span class="attribute">background</span>: yellow;&#125;</span><br><span class="line">    <span class="number">50%</span>  &#123;<span class="attribute">background</span>: blue;&#125;</span><br><span class="line">    <span class="number">100%</span> &#123;<span class="attribute">background</span>: green;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -1387,7 +1370,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">172</span>
+          <span class="site-state-item-count">173</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">172</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">173</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,98 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2017/09/12/guanyulinuxfuwuqiyongphpfasongyoujian/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/09/12/guanyulinuxfuwuqiyongphpfasongyoujian/" class="post-title-link" itemprop="url">关于linux服务器用php发送邮件</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-09-12 11:00:51" itemprop="dateCreated datePublished" datetime="2017-09-12T11:00:51+00:00">2017-09-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2017/09/12/guanyulinuxfuwuqiyongphpfasongyoujian/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://www.zhuyunfeng.com/2017/09/12/guanyulinuxfuwuqiyongphpfasongyoujian/" class="cy_cmt_count" data-xid="2017/09/12/guanyulinuxfuwuqiyongphpfasongyoujian/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>sendmail<br>yum/apt-get install sendmail<br>开启fsockopen函数<br>服务器如何开启php的fsockopen函数？<br><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/09ea3eded1d8bcc0aede3920.html">https://jingyan.baidu.com/article/09ea3eded1d8bcc0aede3920.html</a><br>yum install openssl openssl-devel<br>端口：25 阿里云已经禁用25端口 请改为：465并把协议换成ssl<br>详情查看文章：<a target="_blank" rel="noopener" href="https://blog.hellozwh.com/?post=282">https://blog.hellozwh.com/?post=282</a></p>
+<h4 id="一、PHP-mail-函数"><a href="#一、PHP-mail-函数" class="headerlink" title="一、PHP mail() 函数"></a>一、PHP mail() 函数</h4><p>PHP mail() 函数用于从脚本中发送电子邮件。 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php </span><br><span class="line">  $to = &quot;someone@example.com&quot;; </span><br><span class="line">  $subject = &quot;Test mail&quot;; </span><br><span class="line">  $message = &quot;Hello! This is a simple email message.&quot;; </span><br><span class="line">  $from = &quot;someonelse@example.com&quot;; </span><br><span class="line">  $headers = &quot;From: $from&quot;; </span><br><span class="line">  mail($to,$subject,$message,$headers); </span><br><span class="line">  echo &quot;Mail Sent.&quot;; </span><br><span class="line">?&gt;  </span><br></pre></td></tr></table></figure>
+<h4 id="二、php利用smtp类轻松的发送电子邮件"><a href="#二、php利用smtp类轻松的发送电子邮件" class="headerlink" title="二、php利用smtp类轻松的发送电子邮件"></a>二、php利用smtp类轻松的发送电子邮件</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php </span><br><span class="line">  require\_once &quot;Smtp.class.php&quot;; </span><br><span class="line">  //******************** 配置信息 ******************************** </span><br><span class="line">  $smtpserver = &quot;smtp.126.com&quot;;//SMTP服务器 </span><br><span class="line">  $smtpserverport =25;//SMTP服务器端口 </span><br><span class="line">  $smtpusermail = &quot;new2008oh@126.com&quot;;//SMTP服务器的用户邮箱 </span><br><span class="line">  $smtpemailto = $\_POST\[&#x27;toemail&#x27;\];//发送给谁 </span><br><span class="line">  $smtpuser = &quot;new2008oh&quot;;//SMTP服务器的用户帐号(或填写new2008oh@126.com，这项有些邮箱需要完整的) </span><br><span class="line">  $smtppass = &quot;您的邮箱密码&quot;;//SMTP服务器的用户密码 </span><br><span class="line">  $mailtitle = $\_POST\[&#x27;title&#x27;\];//邮件主题 </span><br><span class="line">  $mailcontent = &quot;&lt;h1&gt;&quot;.$\_POST\[&#x27;content&#x27;\].&quot;&lt;/h1&gt;&quot;;//邮件内容 </span><br><span class="line">  $mailtype = &quot;HTML&quot;;//邮件格式（HTML/TXT）,TXT为文本邮件 </span><br><span class="line">  //************************ 配置信息 **************************** </span><br><span class="line">  $smtp = new Smtp($smtpserver,$smtpserverport,true,$smtpuser,$smtppass);// true 表示是否使用身份验证</span><br><span class="line">  $smtp-&gt;debug = false;//是否显示发送的调试信息 </span><br><span class="line">  $state = $smtp-&gt;sendmail($smtpemailto, $smtpusermail, $mailtitle, $mailcontent, $mailtype); </span><br><span class="line">  echo &quot;&lt;div style=&#x27;width:300px; margin:36px auto;&#x27;&gt;&quot;; </span><br><span class="line">  if($state==&quot;&quot;)&#123; </span><br><span class="line">    echo &quot;对不起，邮件发送失败！请检查邮箱填写是否有误。&quot;; </span><br><span class="line">    echo &quot;&lt;a href=&#x27;index.html&#x27;&gt;点此返回&lt;/a&gt;&quot;; </span><br><span class="line">    exit(); </span><br><span class="line">  &#125; </span><br><span class="line">  echo &quot;恭喜！邮件发送成功！！&quot;; </span><br><span class="line">  echo &quot;&lt;a href=&#x27;index.html&#x27;&gt;点此返回&lt;/a&gt;&quot;; </span><br><span class="line">  echo &quot;&lt;/div&gt;&quot;; </span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2017/09/06/ruanjianweishenmebunengshimiaogengdene/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +333,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -331,7 +423,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -429,7 +521,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -525,7 +617,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -618,7 +710,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -724,7 +816,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -819,7 +911,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -941,7 +1033,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1033,7 +1125,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1074,104 +1166,6 @@
       
           <p>语音识别和语音合成将是智能音箱以及人工智能发展的关键，这就像是电容屏之于智能手机，现在的语音识别和语音合成就像当年的电阻屏，如果能发展到电容屏的阶段，智能音箱以及人工智能将有一个质的飞跃。</p>
 
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2017/08/25/the-khowledge-of-front-end-i-should-learn/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/08/25/the-khowledge-of-front-end-i-should-learn/" class="post-title-link" itemprop="url">需要学习的知识</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2017-08-25 13:56:37" itemprop="dateCreated datePublished" datetime="2017-08-25T13:56:37+00:00">2017-08-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2017/08/25/the-khowledge-of-front-end-i-should-learn/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://www.zhuyunfeng.com/2017/08/25/the-khowledge-of-front-end-i-should-learn/" class="cy_cmt_count" data-xid="2017/08/25/the-khowledge-of-front-end-i-should-learn/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="复习复习复习"><a href="#复习复习复习" class="headerlink" title="复习复习复习"></a>复习复习复习</h1><p>ES6<br>typescript 412<br>vuejs<br>reactjs (384electron)<br>ReactNative<br>nodejs<br>python<br>php/java<br>flutter<br>webpack<br>mongoDB<br>git<br>koa(express)<br>pug(jade)/EJS<br>less/sass</p>
-<h2 id="vue-router"><a href="#vue-router" class="headerlink" title="vue-router"></a>vue-router</h2><p>手写路由 280-2-8<br>vue.config.js</p>
-<h2 id="express-amp-koa"><a href="#express-amp-koa" class="headerlink" title="express &amp; koa"></a>express &amp; koa</h2><p>178 trailer<br>320 blog<br>342 lincms<br>354 restfull api</p>
-<p>中间件原理 320-9-15 blog<br>实现自己的koa2 218-11 mpvue</p>
-<p>koa中间件 280-3-3 meituan<br>洋葱模型<br>中间件 是一个函数 参数 ctx 异步 next()</p>
-<h2 id="全栈项目"><a href="#全栈项目" class="headerlink" title="全栈项目"></a>全栈项目</h2><p>博客 320<br>Restfull API 354<br>lincms 342<br>美团 nuxt 280<br>trailer </p>
-<h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><p>428-12-1<br>npm whoami<br>npm config ls<br>npm adduser</p>
-<h2 id="commit"><a href="#commit" class="headerlink" title="commit"></a>commit</h2><p>husky commitizen commitlint git-cz</p>
-<h2 id="vue源码228"><a href="#vue源码228" class="headerlink" title="vue源码228"></a>vue源码228</h2><p>mvvm 129-4-8</p>
-<h2 id="设计模式-ES6-TS-数据结构-js-java-c"><a href="#设计模式-ES6-TS-数据结构-js-java-c" class="headerlink" title="设计模式 / ES6 / TS / 数据结构(js/java/c++)"></a>设计模式 / ES6 / TS / 数据结构(js/java/c++)</h2><h2 id="todo-935"><a href="#todo-935" class="headerlink" title="todo 935"></a>todo 935</h2>
       
     </div>
 
@@ -1255,7 +1249,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">172</span>
+          <span class="site-state-item-count">173</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

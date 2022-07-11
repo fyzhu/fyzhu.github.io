@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">172</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">173</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,104 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2018/01/25/shenmeshifanxiangdailizhuanzai/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/01/25/shenmeshifanxiangdailizhuanzai/" class="post-title-link" itemprop="url">什么是反向代理（转载）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-01-25 19:11:34" itemprop="dateCreated datePublished" datetime="2018-01-25T19:11:34+00:00">2018-01-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/%E6%9C%8D%E5%8A%A1%E5%99%A8/" itemprop="url" rel="index"><span itemprop="name">服务器</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2018/01/25/shenmeshifanxiangdailizhuanzai/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://www.zhuyunfeng.com/2018/01/25/shenmeshifanxiangdailizhuanzai/" class="cy_cmt_count" data-xid="2018/01/25/shenmeshifanxiangdailizhuanzai/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>作者：车小胖 链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/24723688/answer/160252724">https://www.zhihu.com/question/24723688/answer/160252724</a> 来源：知乎 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>很久以前，老王去饭店吃饭，需要先到饭店，七荤八素点好菜，坐等饭菜上桌，然后大快朵颐，不亦乐乎。 有了第三方订餐外卖平台（<strong>代理</strong>），老王懒得动身前往饭店，老王打个电话或用APP，先选好某个饭店，再点好菜，外卖小哥会送上门来。 由于某个品牌的饭店口碑特别好，食客络绎不绝涌入，第三方订餐电话也不绝于耳，但是限于饭店接待能力有限，无法提供及时服务，很多食客等得不耐烦了，纷纷铩羽而归，饭店老总看着煮熟的鸭子飞走了，心疼不已。 痛定思痛，老总又成立了几个连锁饭店，形成一个集群，对外提供统一标准的菜品服务，电话订餐电话400-xxx-7777，当食客涌入饭店总台，总台将食客用大巴运到各个连锁店，这样食客既不需要排队，各连锁店都能高速运转起来，一举两得，老总乐开了花，并为此种运作模式起名为<strong>“反向代理”（Reverse Proxy)。</strong> <strong>反向代理</strong> 在计算机世界里，由于单个服务器的处理客户端（用户）请求能力有一个极限，当用户的接入请求蜂拥而入时，会造成服务器忙不过来的局面，可以使用多个服务器来共同分担成千上万的用户请求，这些服务器提供相同的服务，对于用户来说，根本感觉不到任何差别。</p>
+<p>&amp;amp;lt;img data-rawheight=”199” src=”<a target="_blank" rel="noopener" href="https://pic4.zhimg.com/50/v2-3b4274d49d3babd1cc2ba521b72892aa\_hd.jpg&quot;">https://pic4.zhimg.com/50/v2-3b4274d49d3babd1cc2ba521b72892aa\_hd.jpg&quot;</a> data-rawwidth=”400” class=”content_image” width=”400”&amp;amp;gt;</p>
+<p><img src="https://pic4.zhimg.com/80/v2-3b4274d49d3babd1cc2ba521b72892aa_hd.jpg" alt=""></p>
+<p><strong>反向代理的实现</strong> 1）需要有一个负载均衡设备来分发用户请求，将用户请求分发到空闲的服务器上 2）服务器返回自己的服务到负载均衡设备 3）负载均衡将服务器的服务返回用户 以上的潜台词是：用户和负载均衡设备直接通信，<strong>也意味着用户做服务器域名解析时，解析得到的IP其实是负载均衡的IP，而不是服务器的IP</strong>，这样有一个好处是，当新加入/移走服务器时，仅仅需要修改负载均衡的服务器列表，而不会影响现有的服务。 谈完反向代理服务，再来谈谈终端用户常用的代理服务。 <strong>代理</strong> 1）用户希望代理服务器帮助自己，和要访问服务器通信，为了实现此目标，需要以下工作： a) 用户IP报文的目的IP = 代理服务器IP b) 用户报文端口号 = 代理服务器监听端口号 c) HTTP 消息里的URL要提供服务器的链接 2）代理服务器可以根据c)里的链接与服务器直接通信 3）服务器返回网页 4）代理服务器打包3）中的网页，返回用户。 <strong>代理服务器应用场景</strong> <strong>场景一</strong> 如果不采用代理，用户的IP、端口号直接暴露在Internet（尽管地址转换NAT），外部主机依然可以根据IP、端口号来开采主机安全漏洞，所以在企业网，一般都是采用代理服务器访问互联网。 <strong>那有同学会有疑问，那代理服务器就没有安全漏洞吗？</strong> 相比千千万万的用户主机，代理服务器数量有限，修补安全漏洞更方便快捷。 <strong>场景二</strong> 在一个家庭局域网，家长觉得外部的世界是洪水猛兽，为了不让小盆友们学坏，决定不让小盆友们访问一些网站，可小盆友们有强烈的逆反心理，侬越是不让我看，我越是想看，于是小盆友们使用了代理服务器，这些代理服务器将禁止访问的网页打包好，然后再转交给小盆友，仅此而已。 当然关键的关键是<strong>代理服务器不在禁止名单当中！</strong></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2018/01/25/pm2shixiankaijizidongqidong/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +339,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -346,7 +444,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -436,7 +534,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -550,7 +648,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -653,7 +751,7 @@ http://player.youku.com/embed/XMTYxNjA0MTk2NA==
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -772,7 +870,7 @@ http://player.youku.com/embed/XMTYxNjA0MTk2NA==
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -862,7 +960,7 @@ http://player.youku.com/embed/XMTYxNjA0MTk2NA==
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -955,7 +1053,7 @@ http://player.youku.com/embed/XMTYxNjA0MTk2NA==
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1049,7 +1147,7 @@ http://player.youku.com/embed/XMTYxNjA0MTk2NA==
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
+                <time title="修改时间：2022-07-11 08:45:47" itemprop="dateModified" datetime="2022-07-11T08:45:47+00:00">2022-07-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1093,120 +1191,6 @@ http://player.youku.com/embed/XMTYxNjA0MTk2NA==
 
       
           <p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/xiaohh/p/4789813.html">http://www.cnblogs.com/xiaohh/p/4789813.html</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2017/11/20/centosdajianftp/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/11/20/centosdajianftp/" class="post-title-link" itemprop="url">centos搭建ftp</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2017-11-20 14:04:53" itemprop="dateCreated datePublished" datetime="2017-11-20T14:04:53+00:00">2017-11-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-11 08:37:46" itemprop="dateModified" datetime="2022-07-11T08:37:46+00:00">2022-07-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF/%E6%9C%8D%E5%8A%A1%E5%99%A8/" itemprop="url" rel="index"><span itemprop="name">服务器</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2017/11/20/centosdajianftp/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://www.zhuyunfeng.com/2017/11/20/centosdajianftp/" class="cy_cmt_count" data-xid="2017/11/20/centosdajianftp/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>目前Linux大部分部署的FTP服务器都是vsftpd，至于为什么，暂时没什么必要深究。 1.安装vsftpd</p>
-<pre><code># yum check-update
-# yum -y install vsftpd</code></pre><p>2.配置参数</p>
-<pre><code># vi /etc/vsftpd/vsftpd.conf</code></pre><p>修改为如下参数</p>
-<pre><code>anonymous_enable=NO
-chroot_local_user=YES
-allow_writeable_chroot=YES
-pasv_enable=YES
-pasv_min_port=40000
-pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
-<p><a target="_blank" rel="noopener" href="http://blog.csdn.net/bluishglc/article/details/42398811">vsftpd 配置:chroot_local_user与chroot_list_enable详解</a></p>
-<p>3.重启ftp</p>
-<pre><code># systemctl restart vsftpd.service
-# systemctl enable vsftpd.service</code></pre><p>4.修改防火墙配置</p>
-<pre><code># firewall-cmd --permanent --add-service=ftp
-# firewall-cmd --reload
-# setsebool -P ftp_home_dir on</code></pre><p>5.为ftp创建一个用户test1（指定目录为/home/www，不允许远程登录shell）</p>
-<pre><code># useradd -d /home/www -m test1 -s /sbin/nologin
-# cd /home/www
-# chmod -R 777 *</code></pre><p>6.为ftp用户设置一个密码</p>
-<pre><code># passwd test1</code></pre><p>这样搭建的ftp默认只能按照主动方式连接，连接时请修改一下ftp设置 阿里云服务器记得开启21端口</p>
 
       
     </div>
@@ -1291,7 +1275,7 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">172</span>
+          <span class="site-state-item-count">173</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
