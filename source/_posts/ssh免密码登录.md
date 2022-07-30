@@ -21,7 +21,10 @@ ssh-keygen -t rsa # 一直默认回车就可以
 ```
 ## 终端下 ssh 命令登录
 把本地公钥添加到服务器的 .ssh/authorized_key 里  
-如果没有authorized_key 这个文件，手动创建  
+```bash
+ssh-copy-id -i ~/.ssh/id_rsa.pub root@xxx.com
+```
+如果没有 `authorized_key` 这个文件，手动创建  
 ssh root@ip 就可以免密码登录了
 
 ## 使用 xshell 等 ssh 工具登录
