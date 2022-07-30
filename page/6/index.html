@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">175</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">176</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,105 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2020/09/10/php%E5%A4%84%E7%90%86postgresql%E5%9B%BE%E7%89%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/09/10/php%E5%A4%84%E7%90%86postgresql%E5%9B%BE%E7%89%87/" class="post-title-link" itemprop="url">php处理postgresql图片</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-09-10 14:49:37" itemprop="dateCreated datePublished" datetime="2020-09-10T14:49:37+00:00">2020-09-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-07-30 15:54:56" itemprop="dateModified" datetime="2022-07-30T15:54:56+00:00">2022-07-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2020/09/10/php%E5%A4%84%E7%90%86postgresql%E5%9B%BE%E7%89%87/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://www.zhuyunfeng.com/2020/09/10/php%E5%A4%84%E7%90%86postgresql%E5%9B%BE%E7%89%87/" class="cy_cmt_count" data-xid="2020/09/10/php处理postgresql图片/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="连接pgsql数据库"><a href="#连接pgsql数据库" class="headerlink" title="连接pgsql数据库"></a>连接pgsql数据库</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$host        = &quot;host=xxx&quot;;</span><br><span class="line">$port        = &quot;port=5432&quot;;</span><br><span class="line">$dbname      = &quot;dbname=xxx&quot;;</span><br><span class="line">$credentials = &quot;user=postgres password=xxx&quot;;</span><br><span class="line"></span><br><span class="line">$db = pg_connect( &quot;$host $port $dbname $credentials&quot;  );</span><br><span class="line">if(!$db)&#123;</span><br><span class="line">  echo &quot;Error : Unable to open database\n&quot;;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">  echo &quot;Opened database successfully\n&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="查询数据库输出图片"><a href="#查询数据库输出图片" class="headerlink" title="查询数据库输出图片"></a>查询数据库输出图片</h4><h5 id="方法一-base64格式"><a href="#方法一-base64格式" class="headerlink" title="方法一 base64格式"></a>方法一 base64格式</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$sql =  &quot;SELECT id,encode(picture, &#x27;BASE64&#x27;) as picture FROM water_flow_pictures_data WHERE id=&quot;.$_GET[&#x27;imgid&#x27;];</span><br><span class="line"></span><br><span class="line">$ret = pg_query($db, $sql);</span><br><span class="line">if(!$ret)&#123;</span><br><span class="line">  echo pg_last_error($db);</span><br><span class="line">  exit;</span><br><span class="line">&#125;</span><br><span class="line">while($row = pg_fetch_row($ret))&#123;</span><br><span class="line">  // 方法一</span><br><span class="line">  echo &#x27;&lt;img src=&quot;data:image/jpg;base64,&#x27; . $row[1] .&#x27;&quot;/&gt;&#x27;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$sql =  &quot;SELECT id,picture FROM water_flow_pictures_data WHERE id=&quot;.$_GET[&#x27;imgid&#x27;];</span><br><span class="line"></span><br><span class="line">$ret = pg_query($db, $sql);</span><br><span class="line">if(!$ret)&#123;</span><br><span class="line">  echo pg_last_error($db);</span><br><span class="line">  exit;</span><br><span class="line">&#125;</span><br><span class="line">while($row = pg_fetch_row($ret))&#123;</span><br><span class="line">  // 方法二</span><br><span class="line">  header(&quot;Content-Type: image/jpeg&quot;);</span><br><span class="line">  echo pg_unescape_bytea($row[1]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="缩放后输出（也可压缩质量）"><a href="#缩放后输出（也可压缩质量）" class="headerlink" title="缩放后输出（也可压缩质量）"></a>缩放后输出（也可压缩质量）</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">// 获取原图属性</span><br><span class="line">list($width, $height, $type, $attr) = getimagesizefromstring(pg_unescape_bytea($row[1]));</span><br><span class="line">$newWidth = $_GET[&#x27;width&#x27;]?$_GET[&#x27;width&#x27;]: $width;</span><br><span class="line">$newHeight = $height/$width * $newWidth;</span><br><span class="line"></span><br><span class="line">$image =imagecreatefromstring(pg_unescape_bytea($row[1]));</span><br><span class="line">$quality  = 0; // 图片输出质量，0 为最低</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// Create a blank image and add some text</span><br><span class="line">$im = imagecreatetruecolor($newWidth, $newHeight);</span><br><span class="line">imagecopyresized($im,$image,0,0,0,0,$newWidth,$newHeight,$width,$height);</span><br><span class="line">// $text_color = imagecolorallocate($im, 233, 14, 91);</span><br><span class="line">// imagestring($im, 1, 5, 5,  &#x27;A Simple Text String&#x27;, $text_color);</span><br><span class="line"></span><br><span class="line">// Set the content type header - in this case image/jpeg</span><br><span class="line">header(&#x27;Content-Type: image/jpeg&#x27;);</span><br><span class="line"></span><br><span class="line">// Output the image</span><br><span class="line">imagejpeg($im, null, $quality);</span><br><span class="line"></span><br><span class="line">// Free up memory</span><br><span class="line">imagedestroy($im);</span><br></pre></td></tr></table></figure>
+
+<h4 id="关闭数据库"><a href="#关闭数据库" class="headerlink" title="关闭数据库"></a>关闭数据库</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pg_close($db);</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a target="_blank" rel="noopener" href="https://www.php.net/manual/en/ref.image.php">https://www.php.net/manual/en/ref.image.php</a><br><a target="_blank" rel="noopener" href="https://www.runoob.com/php/php-image-gd.html">https://www.runoob.com/php/php-image-gd.html</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2020/08/23/laravel%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +340,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-25 08:29:30" itemprop="dateModified" datetime="2022-07-25T08:29:30+00:00">2022-07-25</time>
+                <time title="修改时间：2022-07-30 15:54:56" itemprop="dateModified" datetime="2022-07-30T15:54:56+00:00">2022-07-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -333,7 +432,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-25 08:29:30" itemprop="dateModified" datetime="2022-07-25T08:29:30+00:00">2022-07-25</time>
+                <time title="修改时间：2022-07-30 15:54:56" itemprop="dateModified" datetime="2022-07-30T15:54:56+00:00">2022-07-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -372,17 +471,32 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="安装-windows-Terminal"><a href="#安装-windows-Terminal" class="headerlink" title="安装 windows Terminal"></a>安装 windows Terminal</h3><ol>
+          <h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>terminal 中使用 powershell 可以选择 nerd-fonts 和 powerline fonts 字体<br>单独使用 powershell 只能选择 powerline fonts 字体，部分图标可能无法显示<br>vscode 中是单独使用 powershell , 但 vscode 可以配置 nerd-fonts 字体<br>综上，可以选择一个使用图标比较少的主题 paradox  </p>
+<h3 id="安装-windows-Terminal"><a href="#安装-windows-Terminal" class="headerlink" title="安装 windows Terminal"></a>安装 windows Terminal</h3><ol>
 <li>windows 应用商店安装</li>
 <li>github 下载安装</li>
 </ol>
-<h3 id="安装-powershell-7"><a href="#安装-powershell-7" class="headerlink" title="安装 powershell 7"></a>安装 powershell 7</h3><p>github 下载安装</p>
-<h3 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h3><p>安装字体，否则乱码<br><a target="_blank" rel="noopener" href="https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip">下载地址</a><br>解压<br>进入 ttf 文件夹<br>双击字体文件依次安装 或 全选-》右键-》安装</p>
-<h3 id="配置-windows-Terminal"><a href="#配置-windows-Terminal" class="headerlink" title="配置 windows Terminal"></a>配置 windows Terminal</h3><p>guid 需要生成，文章末尾有生成 guid 的网站</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">// 默认的配置就是我们的新 powershell（重要！！！）</span><br><span class="line">&quot;defaultProfile&quot;: &quot;&#123;574e775e-4f2a-5b96-ac1e-a2962a402336&#125;&quot;,</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    // Powershell 7.1.0-preview.6 配置</span><br><span class="line">    &quot;guid&quot;: &quot;&#123;574e775e-4f2a-5b96-ac1e-a2962a402336&#125;&quot;,</span><br><span class="line">    &quot;hidden&quot;: false,</span><br><span class="line">    &quot;name&quot;: &quot;pwsh&quot;,</span><br><span class="line">    // -nologo 去掉启动时的logo等信息输出</span><br><span class="line">    &quot;commandline&quot;: &quot;D:/Program Files/PowerShell/7-preview/pwsh.exe -nologo&quot;,</span><br><span class="line">    &quot;icon&quot;: &quot;D:/Program Files/PowerShell/7-preview/assets/Powershell_avatar.ico&quot;,</span><br><span class="line">    //&quot;source&quot;: &quot;Windows.Terminal.PowershellCore&quot;,</span><br><span class="line">    // 启动菜单一定要设置为 &lt;.&gt;，否则后面重要的一步将会无效！</span><br><span class="line">    &quot;startingDirectory&quot;: &quot;.&quot;,</span><br><span class="line">    // 字体</span><br><span class="line">    &quot;fontFace&quot;: &quot;Fira Code&quot;,</span><br><span class="line">    &quot;fontSize&quot;: 11,</span><br><span class="line">    &quot;historySize&quot;: 9001,</span><br><span class="line">    &quot;padding&quot;: &quot;5, 5, 20, 25&quot;,</span><br><span class="line">    &quot;snapOnInput&quot;: true,</span><br><span class="line">    &quot;useAcrylic&quot;: false,</span><br><span class="line">    // 颜色方案</span><br><span class="line">    // &quot;colorScheme&quot;: &quot;Homebrew&quot;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-<h3 id="安装-powershell-插件"><a href="#安装-powershell-插件" class="headerlink" title="安装 powershell 插件"></a>安装 powershell 插件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 1. 安装 PSReadline 包，该插件可以让命令行很好用，类似 zsh</span><br><span class="line">Install-Module -Name PSReadLine -AllowPrerelease -Force</span><br><span class="line"></span><br><span class="line"># 2. 安装 posh-git 包，让你的 git 更好用</span><br><span class="line">Install-Module posh-git -Scope CurrentUser</span><br><span class="line"></span><br><span class="line"># 3. 安装 oh-my-posh 包，让你的命令行更酷炫、优雅</span><br><span class="line"># Install-Module oh-my-posh -Scope CurrentUser # 已废弃</span><br><span class="line">winget install JanDeDobbeleer.OhMyPosh -s winget</span><br></pre></td></tr></table></figure>
-<h3 id="添加-Powershell-启动参数"><a href="#添加-Powershell-启动参数" class="headerlink" title="添加 Powershell 启动参数"></a>添加 Powershell 启动参数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">notepad <span class="variable">$PROFILE</span> <span class="comment"># 打开配置文件，没有的话手动新建一个</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#------------------------------- Import Modules BEGIN -------------------------------</span><br><span class="line"># 引入 posh-git</span><br><span class="line">Import-Module posh-git</span><br><span class="line"></span><br><span class="line"># 引入 oh-my-posh</span><br><span class="line"># Import-Module oh-my-posh</span><br><span class="line"></span><br><span class="line"># 设置 PowerShell 主题</span><br><span class="line"># Set-Theme Paradox</span><br><span class="line">oh-my-posh init pwsh --config &quot;$env:POSH_THEMES_PATH\jandedobbeleer.omp.json&quot;</span><br><span class="line">#------------------------------- Import Modules END   -------------------------------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#-------------------------------  Set Hot-keys BEGIN  -------------------------------</span><br><span class="line"># 设置 Tab 键补全</span><br><span class="line"># Set-PSReadlineKeyHandler -Key Tab -Function Complete</span><br><span class="line"></span><br><span class="line"># 设置 Ctrl+d 为菜单补全和 Intellisense</span><br><span class="line">Set-PSReadLineKeyHandler -Key &quot;Tab&quot; -Function MenuComplete</span><br><span class="line"></span><br><span class="line"># 设置 Ctrl+d 为退出 PowerShell</span><br><span class="line">Set-PSReadlineKeyHandler -Key &quot;Ctrl+d&quot; -Function ViExit</span><br><span class="line"></span><br><span class="line"># 设置 Ctrl+z 为撤销</span><br><span class="line">Set-PSReadLineKeyHandler -Key &quot;Ctrl+z&quot; -Function Undo</span><br><span class="line"></span><br><span class="line"># 设置向上键为后向搜索历史记录</span><br><span class="line">Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward</span><br><span class="line"></span><br><span class="line"># 设置向下键为前向搜索历史纪录</span><br><span class="line">Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward</span><br><span class="line">#-------------------------------  Set Hot-keys END    -------------------------------</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="安装-powershell-7"><a href="#安装-powershell-7" class="headerlink" title="安装 powershell 7"></a>安装 powershell 7</h3><p>github 下载安装<br>如果继续使用 powershell 5.1  </p>
+<ol>
+<li>可能需要 Change the execution policy<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ExecutionPolicy -ExecutionPolicy RemoteSigned</span><br></pre></td></tr></table></figure></li>
+<li>升级 PowerShellGet (否则接下来无法安装 PSReadline)<br>Windows PowerShell 5.1 comes with version 1.0.0.1 of PowerShellGet preinstalled.<br>This version of PowerShellGet has a limited features and doesn’t support the updated capabilities of the PowerShell Gallery. To be supported, you must update to the latest version.<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Install-Module -Name PowerShellGet -Force</span><br><span class="line">Exit</span><br></pre></td></tr></table></figure>
+<h3 id="安装-powershell-插件"><a href="#安装-powershell-插件" class="headerlink" title="安装 powershell 插件"></a>安装 powershell 插件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 1. 安装 PSReadline 包，该插件可以让命令行很好用，类似 zsh</span><br><span class="line">Install-Module -Name PSReadLine -AllowPrerelease -Force</span><br><span class="line"></span><br><span class="line"># 2. 安装 posh-git 包，让你的 git 更好用</span><br><span class="line">Install-Module posh-git -Scope CurrentUser</span><br><span class="line"></span><br><span class="line"># 3. 安装 oh-my-posh 包，让你的命令行更酷炫、优雅</span><br><span class="line">winget install JanDeDobbeleer.OhMyPosh -s winget</span><br></pre></td></tr></table></figure>
+<h3 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h3>安装字体，否则乱码   <h4 id="nerd-fonts"><a href="#nerd-fonts" class="headerlink" title="nerd-fonts"></a>nerd-fonts</h4></li>
+<li>下载安装<br><a target="_blank" rel="noopener" href="https://www.nerdfonts.com/">nerd fonts 官网</a><br><a target="_blank" rel="noopener" href="https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip">Meslo下载地址</a><br>解压<br>进入 ttf 文件夹<br>双击字体文件依次安装 或 全选-》右键-》安装</li>
+<li>命令安装（beta，需要管理员身份)<br>oh-my-posh font install<h4 id="powerline-fonts"><a href="#powerline-fonts" class="headerlink" title="powerline fonts"></a>powerline fonts</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/powerline/fonts.git</span><br><span class="line"><span class="built_in">cd</span> .\fonts\</span><br><span class="line">.\install.ps1</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line">del .\fonts\ -Recurse -Force</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="配置-windows-Terminal"><a href="#配置-windows-Terminal" class="headerlink" title="配置 windows Terminal"></a>配置 windows Terminal</h3><ol>
+<li>可视化界面配置</li>
+<li>json 文件配置<br>guid 需要生成，文章末尾有生成 guid 的网站<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">// 默认的配置就是我们的新 powershell（重要！！！）</span><br><span class="line">&quot;defaultProfile&quot;: &quot;&#123;574e775e-4f2a-5b96-ac1e-a2962a402336&#125;&quot;,</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    // Powershell 7.1.0-preview.6 配置</span><br><span class="line">    &quot;guid&quot;: &quot;&#123;574e775e-4f2a-5b96-ac1e-a2962a402336&#125;&quot;,</span><br><span class="line">    &quot;hidden&quot;: false,</span><br><span class="line">    &quot;name&quot;: &quot;pwsh&quot;,</span><br><span class="line">    // -nologo 去掉启动时的logo等信息输出</span><br><span class="line">    &quot;commandline&quot;: &quot;D:/Program Files/PowerShell/7-preview/pwsh.exe -nologo&quot;,</span><br><span class="line">    &quot;icon&quot;: &quot;D:/Program Files/PowerShell/7-preview/assets/Powershell_avatar.ico&quot;,</span><br><span class="line">    //&quot;source&quot;: &quot;Windows.Terminal.PowershellCore&quot;,</span><br><span class="line">    // 启动菜单一定要设置为 &lt;.&gt;，否则后面重要的一步将会无效！</span><br><span class="line">    &quot;startingDirectory&quot;: &quot;.&quot;,</span><br><span class="line">    // 字体</span><br><span class="line">    &quot;fontFace&quot;: &quot;Fira Code&quot;,</span><br><span class="line">    &quot;fontSize&quot;: 11,</span><br><span class="line">    &quot;historySize&quot;: 9001,</span><br><span class="line">    &quot;padding&quot;: &quot;5, 5, 20, 25&quot;,</span><br><span class="line">    &quot;snapOnInput&quot;: true,</span><br><span class="line">    &quot;useAcrylic&quot;: false,</span><br><span class="line">    // 颜色方案</span><br><span class="line">    // &quot;colorScheme&quot;: &quot;Homebrew&quot;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="添加-Powershell-启动参数"><a href="#添加-Powershell-启动参数" class="headerlink" title="添加 Powershell 启动参数"></a>添加 Powershell 启动参数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">notepad <span class="variable">$PROFILE</span> <span class="comment"># 打开配置文件</span></span><br></pre></td></tr></table></figure>
+<p>如果上面代码报错找不到文件，新建一个</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">New-Item -Path <span class="variable">$PROFILE</span> -Type File -Force</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#------------------------------- Import Modules BEGIN -------------------------------</span><br><span class="line"># 引入 posh-git</span><br><span class="line">Import-Module posh-git</span><br><span class="line"></span><br><span class="line"># 初始化 oh-my-posh 并设置 PowerShell 主题</span><br><span class="line">oh-my-posh init pwsh --config &quot;$env:POSH_THEMES_PATH\paradox.omp.json&quot; | Invoke-Expression</span><br><span class="line"># oh-my-posh init pwsh --config &quot;$env:POSH_THEMES_PATH\jandedobbeleer.omp.json&quot; | Invoke-Expression</span><br><span class="line">#------------------------------- Import Modules END   -------------------------------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#-------------------------------  Set Hot-keys BEGIN  -------------------------------</span><br><span class="line"># 设置 Tab 键补全</span><br><span class="line"># Set-PSReadlineKeyHandler -Key Tab -Function Complete</span><br><span class="line"></span><br><span class="line"># 设置 Ctrl+d 为菜单补全和 Intellisense</span><br><span class="line">Set-PSReadLineKeyHandler -Key &quot;Tab&quot; -Function MenuComplete</span><br><span class="line"></span><br><span class="line"># 设置 Ctrl+d 为退出 PowerShell</span><br><span class="line">Set-PSReadlineKeyHandler -Key &quot;Ctrl+d&quot; -Function ViExit</span><br><span class="line"></span><br><span class="line"># 设置 Ctrl+z 为撤销</span><br><span class="line">Set-PSReadLineKeyHandler -Key &quot;Ctrl+z&quot; -Function Undo</span><br><span class="line"></span><br><span class="line">#-------------------------------  Set Hot-keys END    -------------------------------</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>参考：<br><a target="_blank" rel="noopener" href="https://ohmyposh.dev/">on-my-posh 官网</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Rohn/p/12940312.html">https://www.cnblogs.com/Rohn/p/12940312.html</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/137595941">https://zhuanlan.zhihu.com/p/137595941</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/WPwalter/article/details/100159481">https://blog.csdn.net/WPwalter/article/details/100159481</a><br>字体：<br><a target="_blank" rel="noopener" href="https://sspai.com/post/52907">https://sspai.com/post/52907</a><br>powershell 乱码，vscode 乱码 :<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/51901035">https://zhuanlan.zhihu.com/p/51901035</a><br>其他：<br>guid 生成工具<br><a target="_blank" rel="noopener" href="https://www.qvdv.com/tools/qvdv-guid.html">https://www.qvdv.com/tools/qvdv-guid.html</a></p>
 
@@ -435,7 +549,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-25 08:29:30" itemprop="dateModified" datetime="2022-07-25T08:29:30+00:00">2022-07-25</time>
+                <time title="修改时间：2022-07-30 15:54:56" itemprop="dateModified" datetime="2022-07-30T15:54:56+00:00">2022-07-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -532,7 +646,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-25 08:29:30" itemprop="dateModified" datetime="2022-07-25T08:29:30+00:00">2022-07-25</time>
+                <time title="修改时间：2022-07-30 15:54:56" itemprop="dateModified" datetime="2022-07-30T15:54:56+00:00">2022-07-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -628,7 +742,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-25 08:29:30" itemprop="dateModified" datetime="2022-07-25T08:29:30+00:00">2022-07-25</time>
+                <time title="修改时间：2022-07-30 15:54:56" itemprop="dateModified" datetime="2022-07-30T15:54:56+00:00">2022-07-30</time>
               </span>
 
           
@@ -710,7 +824,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-25 08:29:30" itemprop="dateModified" datetime="2022-07-25T08:29:30+00:00">2022-07-25</time>
+                <time title="修改时间：2022-07-30 15:54:56" itemprop="dateModified" datetime="2022-07-30T15:54:56+00:00">2022-07-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -804,7 +918,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-25 08:29:30" itemprop="dateModified" datetime="2022-07-25T08:29:30+00:00">2022-07-25</time>
+                <time title="修改时间：2022-07-30 15:54:56" itemprop="dateModified" datetime="2022-07-30T15:54:56+00:00">2022-07-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -909,7 +1023,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-25 08:29:30" itemprop="dateModified" datetime="2022-07-25T08:29:30+00:00">2022-07-25</time>
+                <time title="修改时间：2022-07-30 15:54:56" itemprop="dateModified" datetime="2022-07-30T15:54:56+00:00">2022-07-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1004,7 +1118,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-25 08:29:30" itemprop="dateModified" datetime="2022-07-25T08:29:30+00:00">2022-07-25</time>
+                <time title="修改时间：2022-07-30 15:54:56" itemprop="dateModified" datetime="2022-07-30T15:54:56+00:00">2022-07-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1053,119 +1167,6 @@
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># composer install</span><br></pre></td></tr></table></figure>
 
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2020/07/03/centos%E4%B8%8Bphp%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/03/centos%E4%B8%8Bphp%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95/" class="post-title-link" itemprop="url">centos下php安装扩展</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-03 10:44:46" itemprop="dateCreated datePublished" datetime="2020-07-03T10:44:46+00:00">2020-07-03</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-25 08:29:30" itemprop="dateModified" datetime="2022-07-25T08:29:30+00:00">2022-07-25</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2020/07/03/centos%E4%B8%8Bphp%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://www.zhuyunfeng.com/2020/07/03/centos%E4%B8%8Bphp%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95/" class="cy_cmt_count" data-xid="2020/07/03/centos下php安装扩展/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>centos7.5<br>使用宝塔安装php7.3<br>宝塔安装的 php 没有 fileinfo 扩展</p>
-<h3 id="安装扩展"><a href="#安装扩展" class="headerlink" title="安装扩展"></a>安装扩展</h3><h4 id="下载扩展"><a href="#下载扩展" class="headerlink" title="下载扩展"></a>下载扩展</h4><p>可以单独下载扩展，也可以下载整个php</p>
-<p>下载整个php：把版本换为你需要的版本</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># wget -O php-7.3.19.tar.gz http://cn2.php.net/get/php-7.3.19.tar.gz/from/this/mirror</span><br></pre></td></tr></table></figure>
-
-<h4 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># tar -zxvf php-7.3.19.tar.gz</span><br></pre></td></tr></table></figure>
-<h4 id="进入扩展目录"><a href="#进入扩展目录" class="headerlink" title="进入扩展目录"></a>进入扩展目录</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># cd php-7.3.19/ext/fileinfo/</span><br></pre></td></tr></table></figure>
-
-<h4 id="生成配置"><a href="#生成配置" class="headerlink" title="生成配置"></a>生成配置</h4><ol>
-<li>在扩展目录 (fileinfo) 下运行你安装的 php bin 目录下的 phpize </li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[fileinfo]# /www/server/php/73/bin/phpize</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>配置</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[fileinfo]# ./configure --with-php-config=/www/server/php/73/bin/php-config</span><br></pre></td></tr></table></figure>
-<h4 id="编译并安装"><a href="#编译并安装" class="headerlink" title="编译并安装"></a>编译并安装</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-<h4 id="更改配置文件-php-ini"><a href="#更改配置文件-php-ini" class="headerlink" title="更改配置文件 php.ini"></a>更改配置文件 php.ini</h4><p>把 extension=fileinfo 前面的分号去掉<br>也可以使用命令，类似</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># echo &quot;extension = oauth.so&quot; &gt;&gt; /www/server/php/73/etc/php.ini</span><br></pre></td></tr></table></figure>
-<h4 id="重载php"><a href="#重载php" class="headerlink" title="重载php"></a>重载php</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># /etc/init.d/php-fpm-73 reload</span><br></pre></td></tr></table></figure>
-<h4 id="检查是否安装成功"><a href="#检查是否安装成功" class="headerlink" title="检查是否安装成功"></a>检查是否安装成功</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># php -m|grep -i fileinfo</span><br></pre></td></tr></table></figure>
-
-
-<p>参考文章1：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qivan/article/details/64439911">https://blog.csdn.net/qivan/article/details/64439911</a><br>参考文章2：<a target="_blank" rel="noopener" href="https://www.php.cn/topic/bt/429078.html">https://www.php.cn/topic/bt/429078.html</a></p>
 
       
     </div>
@@ -1250,7 +1251,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">175</span>
+          <span class="site-state-item-count">176</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

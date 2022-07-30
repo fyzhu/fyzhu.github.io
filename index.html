@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">175</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">176</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,95 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2022/07/30/%E9%A1%B9%E7%9B%AE%E5%8D%87%E7%BA%A7es6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/07/30/%E9%A1%B9%E7%9B%AE%E5%8D%87%E7%BA%A7es6/" class="post-title-link" itemprop="url">项目升级es6</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-07-30 23:47:36 / 修改时间：15:54:56" itemprop="dateCreated datePublished" datetime="2022-07-30T23:47:36+00:00">2022-07-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2022/07/30/%E9%A1%B9%E7%9B%AE%E5%8D%87%E7%BA%A7es6/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://www.zhuyunfeng.com/2022/07/30/%E9%A1%B9%E7%9B%AE%E5%8D%87%E7%BA%A7es6/" class="cy_cmt_count" data-xid="2022/07/30/项目升级es6/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>本文主要记录 require 升级为 import 遇到的问题</p>
+<h2 id="dirname-is-not-defined-in-ES-module-scope"><a href="#dirname-is-not-defined-in-ES-module-scope" class="headerlink" title="__dirname is not defined in ES module scope"></a>__dirname is not defined in ES module scope</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> path <span class="keyword">from</span> <span class="string">&#x27;path&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123;fileURLToPath&#125; <span class="keyword">from</span> <span class="string">&#x27;url&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> __filename = <span class="title function_">fileURLToPath</span>(<span class="keyword">import</span>.<span class="property">meta</span>.<span class="property">url</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 👇️ &quot;/home/john/Desktop/javascript&quot;</span></span><br><span class="line"><span class="keyword">const</span> __dirname = path.<span class="title function_">dirname</span>(__filename);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;directory-name 👉️&#x27;</span>, __dirname);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 👇️ &quot;/home/borislav/Desktop/javascript/dist/index.html&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(path.<span class="title function_">join</span>(__dirname, <span class="string">&#x27;/dist&#x27;</span>, <span class="string">&#x27;index.html&#x27;</span>));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="import-json-file"><a href="#import-json-file" class="headerlink" title="import json file"></a>import json file</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json <span class="keyword">from</span> <span class="string">&quot;./foo.json&quot;</span> assert &#123; <span class="attr">type</span>: <span class="string">&quot;json&quot;</span> &#125;;</span><br><span class="line"><span class="title function_">import</span>(<span class="string">&quot;foo.json&quot;</span>, &#123; <span class="attr">assert</span>: &#123; <span class="attr">type</span>: <span class="string">&quot;json&quot;</span> &#125; &#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="import-条件导入"><a href="#import-条件导入" class="headerlink" title="import 条件导入"></a>import 条件导入</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (condition) &#123; <span class="comment">// 报错</span></span><br><span class="line">  <span class="keyword">import</span> moduleA <span class="keyword">from</span> <span class="string">&#x27;./moduleA&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="import-函数"><a href="#import-函数" class="headerlink" title="import 函数"></a>import 函数</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">import</span>(<span class="string">&#x27;./moduleA .js&#x27;</span>)</span><br><span class="line">.<span class="title function_">then</span>(<span class="function"><span class="params">moduleA</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(moduleA);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(condition)&#123;</span><br><span class="line"> <span class="title function_">import</span>(<span class="string">&#x27;moduleA&#x27;</span>).<span class="title function_">then</span>(...);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2022/07/25/V8%E6%98%AF%E5%A6%82%E4%BD%95%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AE%B5JavaScript%E4%BB%A3%E7%A0%81%E7%9A%84/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -233,10 +322,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-07-25 16:12:26 / 修改时间：08:29:30" itemprop="dateCreated datePublished" datetime="2022-07-25T16:12:26+00:00">2022-07-25</time>
+              <time title="创建时间：2022-07-25 16:12:26" itemprop="dateCreated datePublished" datetime="2022-07-25T16:12:26+00:00">2022-07-25</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-07-30 15:54:56" itemprop="dateModified" datetime="2022-07-30T15:54:56+00:00">2022-07-30</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -336,7 +431,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-25 08:29:30" itemprop="dateModified" datetime="2022-07-25T08:29:30+00:00">2022-07-25</time>
+                <time title="修改时间：2022-07-30 15:54:56" itemprop="dateModified" datetime="2022-07-30T15:54:56+00:00">2022-07-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -427,7 +522,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-25 08:29:30" itemprop="dateModified" datetime="2022-07-25T08:29:30+00:00">2022-07-25</time>
+                <time title="修改时间：2022-07-30 15:54:56" itemprop="dateModified" datetime="2022-07-30T15:54:56+00:00">2022-07-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -516,7 +611,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-25 08:29:30" itemprop="dateModified" datetime="2022-07-25T08:29:30+00:00">2022-07-25</time>
+                <time title="修改时间：2022-07-30 15:54:56" itemprop="dateModified" datetime="2022-07-30T15:54:56+00:00">2022-07-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -615,7 +710,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-25 08:29:30" itemprop="dateModified" datetime="2022-07-25T08:29:30+00:00">2022-07-25</time>
+                <time title="修改时间：2022-07-30 15:54:56" itemprop="dateModified" datetime="2022-07-30T15:54:56+00:00">2022-07-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -707,7 +802,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-25 08:29:30" itemprop="dateModified" datetime="2022-07-25T08:29:30+00:00">2022-07-25</time>
+                <time title="修改时间：2022-07-30 15:54:56" itemprop="dateModified" datetime="2022-07-30T15:54:56+00:00">2022-07-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -817,7 +912,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-25 08:29:30" itemprop="dateModified" datetime="2022-07-25T08:29:30+00:00">2022-07-25</time>
+                <time title="修改时间：2022-07-30 15:54:56" itemprop="dateModified" datetime="2022-07-30T15:54:56+00:00">2022-07-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -923,7 +1018,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-25 08:29:30" itemprop="dateModified" datetime="2022-07-25T08:29:30+00:00">2022-07-25</time>
+                <time title="修改时间：2022-07-30 15:54:56" itemprop="dateModified" datetime="2022-07-30T15:54:56+00:00">2022-07-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1029,7 +1124,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-25 08:29:30" itemprop="dateModified" datetime="2022-07-25T08:29:30+00:00">2022-07-25</time>
+                <time title="修改时间：2022-07-30 15:54:56" itemprop="dateModified" datetime="2022-07-30T15:54:56+00:00">2022-07-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1094,101 +1189,6 @@
 <li><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/jiangzilong/p/6700023.html">CSS像素、设备独立像素、设备像素之间关系</a></p>
 </li>
 </ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2022/01/28/font-weight/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/01/28/font-weight/" class="post-title-link" itemprop="url">font-weight</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-01-28 18:17:12" itemprop="dateCreated datePublished" datetime="2022-01-28T18:17:12+00:00">2022-01-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-25 08:29:30" itemprop="dateModified" datetime="2022-07-25T08:29:30+00:00">2022-07-25</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2022/01/28/font-weight/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://www.zhuyunfeng.com/2022/01/28/font-weight/" class="cy_cmt_count" data-xid="2022/01/28/font-weight/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h2><p>font-weight可取值：100～900和normal、bold、bolder、lighter。</p>
-<p>字体所拥有的字重的数量实际上很少存在满足有9个字重刚好跟100～900的CSS字重一一对应的情况，通常字体拥有的字重数量为4至6个。</p>
-<p>不必担心，起码400和700对应的字重至少是每种字体必备的，譬如常见的 Arial、Helvetica、Georgia等等，只有400(normal)和700(bold)。</p>
-<h2 id="normal、bold"><a href="#normal、bold" class="headerlink" title="normal、bold"></a>normal、bold</h2><p>400 等同于 normal，而 700 等同于 bold。</p>
-<h2 id="bolder、lighter"><a href="#bolder、lighter" class="headerlink" title="bolder、lighter"></a>bolder、lighter</h2><p>bolder、lighter表示其字重值是基于从其父元素继承而来的字重计算所得的，与normal、bold所代表的字重并无关系。  </p>
-<p>参考<br>作者：人不中二枉少年<br>链接：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f9c6f9729fbb">https://www.jianshu.com/p/f9c6f9729fbb</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 
       
     </div>
@@ -1273,7 +1273,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">175</span>
+          <span class="site-state-item-count">176</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
