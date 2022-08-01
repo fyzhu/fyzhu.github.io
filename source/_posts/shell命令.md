@@ -56,6 +56,16 @@ tail test.log -n 30
 ```
 chmod ugo+x deploy.sh
 ```
+#### 查看文件属性
+
+```bash
+lsattr .user.ini
+```
+#### 修改文件属性
+
+```bash
+chattr -i .user.ini
+```
 #### 查找文件内容
 grep 'test' package.json
 
