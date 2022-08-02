@@ -29,6 +29,13 @@ npm whoami
 npm publish --access=public # 首次发布
 npm publish
 ```
+### 删除
+
+npm包发布，通常不建议删除（假如有某某用户已经使用了你的npm包，这时候删除npm包是很没道理的）。
+
+```bash
+npm unpublish 依赖包名称 --force
+```
 
 ### 版本管理
 ```
