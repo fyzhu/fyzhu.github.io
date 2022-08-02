@@ -7,11 +7,38 @@ tags:
 ---
 
 ### 创建用户
-在 npm 官网创建 或通过 npm add user 创建
+1. npm 官网创建 
+2. npm add user 创建
 
 ### 登录
+
+```bash
 npm login
+```
 ### 查看当前登录账户
+
+如果提示 `401 Unauthorized - GET https://registry.npmjs.org/-/whoami`，请先登录
+
+```bash
 npm who am i
+npm whoami
+``` 
 ### 发布
-npm publish --access=public
+
+```bash
+npm publish --access=public # 首次发布
+npm publish
+```
+
+### 版本管理
+```
+npm version prerelease
+npm version prepatch
+npm version preminor
+npm version premajor
+npm version patch
+npm version minor
+npm version major
+```
+
+[npm version](https://blog.csdn.net/weixin_40817115/article/details/90384398)
