@@ -281,6 +281,19 @@
       </tags>
   </entry>
   <entry>
+    <title>apache配置mime</title>
+    <url>/2019/08/05/apache%E9%85%8D%E7%BD%AEmime/</url>
+    <content><![CDATA[<h1 id="配置文件里"><a href="#配置文件里" class="headerlink" title="配置文件里"></a>配置文件里</h1><p>AddType application/wasm .wasm</p>
+]]></content>
+      <categories>
+        <category>technology</category>
+        <category>Server</category>
+      </categories>
+      <tags>
+        <tag>apache</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>arcgis layer.when 和 view.when 以及 MapImageLayer</title>
     <url>/2019/02/17/arcgis-layer-when-%E5%92%8C-view-when/</url>
     <content><![CDATA[<p>MapImageLayer加载完之后需要view.goto(layer.fullExtent)才能显示</p>
@@ -295,19 +308,6 @@
       </categories>
       <tags>
         <tag>arcgis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>apache配置mime</title>
-    <url>/2019/08/05/apache%E9%85%8D%E7%BD%AEmime/</url>
-    <content><![CDATA[<h1 id="配置文件里"><a href="#配置文件里" class="headerlink" title="配置文件里"></a>配置文件里</h1><p>AddType application/wasm .wasm</p>
-]]></content>
-      <categories>
-        <category>technology</category>
-        <category>Server</category>
-      </categories>
-      <tags>
-        <tag>apache</tag>
       </tags>
   </entry>
   <entry>
@@ -1515,6 +1515,22 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
       </tags>
   </entry>
   <entry>
+    <title>nginx配置及使用</title>
+    <url>/2021/07/04/nginx%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>401-7-4<br><img src="https://img.mukewang.com/szimg/5fa518a400014c8019201080.jpg" alt="nginx 配置"></p>
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>nginx</p>
+<h3 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h3><p>nginx -s stop</p>
+<h3 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h3><p>nginx -s reload</p>
+<h3 id="检查配置文件"><a href="#检查配置文件" class="headerlink" title="检查配置文件"></a>检查配置文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -t <span class="comment"># 可以查看配置文件所在路径</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server&#123;</span><br><span class="line">        listen 5000;</span><br><span class="line">        server_name localhost;</span><br><span class="line">        location = / &#123;</span><br><span class="line">            proxy_pass http://localhost:3000/;</span><br><span class="line">        &#125;</span><br><span class="line">        location /test &#123;</span><br><span class="line">            proxy_pass http://localhost:3000/test;</span><br><span class="line"></span><br><span class="line">            #   指定允许跨域的方法，*代表所有</span><br><span class="line">            add_header Access-Control-Allow-Methods *;</span><br><span class="line"></span><br><span class="line">            #   预检命令的缓存，如果不缓存每次会发送两次请求</span><br><span class="line">            add_header Access-Control-Max-Age 3600;</span><br><span class="line"></span><br><span class="line">            #   带cookie请求需要加上这个字段，并设置为true</span><br><span class="line">            add_header Access-Control-Allow-Credentials true;</span><br><span class="line"></span><br><span class="line">            #   表示允许这个域跨域调用（客户端发送请求的域名和端口） </span><br><span class="line">            #   $http_origin动态获取请求客户端请求的域   不用*的原因是带cookie的请求不支持*号</span><br><span class="line">            add_header Access-Control-Allow-Origin $http_origin;</span><br><span class="line"></span><br><span class="line">            #   表示请求头的字段 动态获取</span><br><span class="line">            add_header Access-Control-Allow-Headers </span><br><span class="line">            $http_access_control_request_headers;</span><br><span class="line"></span><br><span class="line">            #   OPTIONS预检命令，预检命令通过时才发送请求</span><br><span class="line">            #   检查请求的类型是不是预检命令</span><br><span class="line">            if ($request_method = OPTIONS)&#123;</span><br><span class="line">                return 200;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>参考：<a href="https://www.cnblogs.com/PengfeiSong/p/12993446.html">https://www.cnblogs.com/PengfeiSong/p/12993446.html</a></p>
+<h3 id="导入配置文件"><a href="#导入配置文件" class="headerlink" title="导入配置文件"></a>导入配置文件</h3><p><code>include servers/*;</code><br>相对于当前文件</p>
+<h3 id="配置多-server"><a href="#配置多-server" class="headerlink" title="配置多 server"></a>配置多 server</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        server_name a.com;</span><br><span class="line">        location = / &#123;</span><br><span class="line">            proxy_pass http://localhost:3000/;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        server_name b.com;</span><br><span class="line">        location = / &#123;</span><br><span class="line">            proxy_pass http://localhost:8000/;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>你和头等舱的距离，差的不只是钱（转载）</title>
     <url>/2018/01/25/nihetoudengcangdejulichadebuzhishiqianzhuanzai/</url>
     <content><![CDATA[<p>01</p>
@@ -1590,22 +1606,6 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
         <tag>js</tag>
         <tag>npm</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>nginx配置及使用</title>
-    <url>/2021/07/04/nginx%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>401-7-4<br><img src="https://img.mukewang.com/szimg/5fa518a400014c8019201080.jpg" alt="nginx 配置"></p>
-<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>nginx</p>
-<h3 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h3><p>nginx -s stop</p>
-<h3 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h3><p>nginx -s reload</p>
-<h3 id="检查配置文件"><a href="#检查配置文件" class="headerlink" title="检查配置文件"></a>检查配置文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -t <span class="comment"># 可以查看配置文件所在路径</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server&#123;</span><br><span class="line">        listen 5000;</span><br><span class="line">        server_name localhost;</span><br><span class="line">        location = / &#123;</span><br><span class="line">            proxy_pass http://localhost:3000/;</span><br><span class="line">        &#125;</span><br><span class="line">        location /test &#123;</span><br><span class="line">            proxy_pass http://localhost:3000/test;</span><br><span class="line"></span><br><span class="line">            #   指定允许跨域的方法，*代表所有</span><br><span class="line">            add_header Access-Control-Allow-Methods *;</span><br><span class="line"></span><br><span class="line">            #   预检命令的缓存，如果不缓存每次会发送两次请求</span><br><span class="line">            add_header Access-Control-Max-Age 3600;</span><br><span class="line"></span><br><span class="line">            #   带cookie请求需要加上这个字段，并设置为true</span><br><span class="line">            add_header Access-Control-Allow-Credentials true;</span><br><span class="line"></span><br><span class="line">            #   表示允许这个域跨域调用（客户端发送请求的域名和端口） </span><br><span class="line">            #   $http_origin动态获取请求客户端请求的域   不用*的原因是带cookie的请求不支持*号</span><br><span class="line">            add_header Access-Control-Allow-Origin $http_origin;</span><br><span class="line"></span><br><span class="line">            #   表示请求头的字段 动态获取</span><br><span class="line">            add_header Access-Control-Allow-Headers </span><br><span class="line">            $http_access_control_request_headers;</span><br><span class="line"></span><br><span class="line">            #   OPTIONS预检命令，预检命令通过时才发送请求</span><br><span class="line">            #   检查请求的类型是不是预检命令</span><br><span class="line">            if ($request_method = OPTIONS)&#123;</span><br><span class="line">                return 200;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>参考：<a href="https://www.cnblogs.com/PengfeiSong/p/12993446.html">https://www.cnblogs.com/PengfeiSong/p/12993446.html</a></p>
-<h3 id="导入配置文件"><a href="#导入配置文件" class="headerlink" title="导入配置文件"></a>导入配置文件</h3><p><code>include servers/*;</code><br>相对于当前文件</p>
-<h3 id="配置多-server"><a href="#配置多-server" class="headerlink" title="配置多 server"></a>配置多 server</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        server_name a.com;</span><br><span class="line">        location = / &#123;</span><br><span class="line">            proxy_pass http://localhost:3000/;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        server_name b.com;</span><br><span class="line">        location = / &#123;</span><br><span class="line">            proxy_pass http://localhost:8000/;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
   </entry>
   <entry>
     <title>npm publish</title>
@@ -2378,20 +2378,6 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
-    <title>The dog I like</title>
-    <url>/2018/08/23/the-dog-i-like/</url>
-    <content><![CDATA[<h5 id="柯基"><a href="#柯基" class="headerlink" title="柯基"></a>柯基</h5><h5 id="哈士奇"><a href="#哈士奇" class="headerlink" title="哈士奇"></a>哈士奇</h5><p><img src="http://pic249.nipic.com/file/20191101/28365949_142306695000_2.jpg" alt="husky" title="husky"></p>
-<h5 id="拉布拉多"><a href="#拉布拉多" class="headerlink" title="拉布拉多"></a>拉布拉多</h5><h5 id="阿拉斯加"><a href="#阿拉斯加" class="headerlink" title="阿拉斯加"></a>阿拉斯加</h5><h5 id="萨摩耶"><a href="#萨摩耶" class="headerlink" title="萨摩耶"></a>萨摩耶</h5><p><img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1256437552,306933866&fm=173&f.jpg" alt="萨摩耶" title="萨摩耶"></p>
-<h5 id="柴犬"><a href="#柴犬" class="headerlink" title="柴犬"></a>柴犬</h5><h5 id="金毛"><a href="#金毛" class="headerlink" title="金毛"></a>金毛</h5>]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>dog</tag>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>The director I like</title>
     <url>/2017/09/04/the-director-i-like/</url>
     <content><![CDATA[<p>希区柯克（惊魂记、后窗） </p>
@@ -2407,6 +2393,20 @@ timeout(100).then((value) =&gt; &#123;
       <categories>
         <category>生活</category>
       </categories>
+  </entry>
+  <entry>
+    <title>The dog I like</title>
+    <url>/2018/08/23/the-dog-i-like/</url>
+    <content><![CDATA[<h5 id="柯基"><a href="#柯基" class="headerlink" title="柯基"></a>柯基</h5><h5 id="哈士奇"><a href="#哈士奇" class="headerlink" title="哈士奇"></a>哈士奇</h5><p><img src="http://pic249.nipic.com/file/20191101/28365949_142306695000_2.jpg" alt="husky" title="husky"></p>
+<h5 id="拉布拉多"><a href="#拉布拉多" class="headerlink" title="拉布拉多"></a>拉布拉多</h5><h5 id="阿拉斯加"><a href="#阿拉斯加" class="headerlink" title="阿拉斯加"></a>阿拉斯加</h5><h5 id="萨摩耶"><a href="#萨摩耶" class="headerlink" title="萨摩耶"></a>萨摩耶</h5><p><img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1256437552,306933866&fm=173&f.jpg" alt="萨摩耶" title="萨摩耶"></p>
+<h5 id="柴犬"><a href="#柴犬" class="headerlink" title="柴犬"></a>柴犬</h5><h5 id="金毛"><a href="#金毛" class="headerlink" title="金毛"></a>金毛</h5>]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>dog</tag>
+        <tag>life</tag>
+      </tags>
   </entry>
   <entry>
     <title>需要学习的知识</title>
@@ -2701,18 +2701,6 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
-    <title>webpack入门</title>
-    <url>/2017/09/01/webpackrumen/</url>
-    <content><![CDATA[<p>默认配置文件<br>webpack.config.js<br>webpack命令参数 </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">--config webpack.config.js//指定配置文件 </span><br><span class="line">--progress //打包进度 </span><br><span class="line">--display-modules </span><br><span class="line">--colors </span><br><span class="line">--display-reason </span><br></pre></td></tr></table></figure>
-<p>配置文件webpack.config.js中的参数<br>entry 指定入口文件，可以是字符串、数组、对象<br>output 指定输出<br>路径，文件名<br>path、filename、publicPath [name][hash][chunkhash]<br>plugins 指定插件，是数组，<br>如：html-webpack-plugin 需要先安装 npm install ，然后引用require()<br>module:{loaders:{}}</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-        <category>前端</category>
-      </categories>
-  </entry>
-  <entry>
     <title>vue数组双向绑定</title>
     <url>/2020/02/10/vue%E6%95%B0%E7%BB%84%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A/</url>
     <content><![CDATA[<p>问题1：如何把数组进行双向绑定</p>
@@ -2725,6 +2713,18 @@ timeout(100).then((value) =&gt; &#123;
       <tags>
         <tag>vue</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>webpack入门</title>
+    <url>/2017/09/01/webpackrumen/</url>
+    <content><![CDATA[<p>默认配置文件<br>webpack.config.js<br>webpack命令参数 </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">--config webpack.config.js//指定配置文件 </span><br><span class="line">--progress //打包进度 </span><br><span class="line">--display-modules </span><br><span class="line">--colors </span><br><span class="line">--display-reason </span><br></pre></td></tr></table></figure>
+<p>配置文件webpack.config.js中的参数<br>entry 指定入口文件，可以是字符串、数组、对象<br>output 指定输出<br>路径，文件名<br>path、filename、publicPath [name][hash][chunkhash]<br>plugins 指定插件，是数组，<br>如：html-webpack-plugin 需要先安装 npm install ，然后引用require()<br>module:{loaders:{}}</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>前端</category>
+      </categories>
   </entry>
   <entry>
     <title>webpack之babel</title>
@@ -2754,10 +2754,10 @@ timeout(100).then((value) =&gt; &#123;
 <h3 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h3><p>安装字体，否则乱码   </p>
 <h4 id="nerd-fonts"><a href="#nerd-fonts" class="headerlink" title="nerd-fonts"></a>nerd-fonts</h4><ol>
 <li>下载安装<br><a href="https://www.nerdfonts.com/">nerd fonts 官网</a><br><a href="https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip">Meslo下载地址</a><br>解压<br>进入 ttf 文件夹<br>双击字体文件依次安装 或 全选-》右键-》安装</li>
-<li>命令安装（beta，需要管理员身份)<br>oh-my-posh font install<h4 id="powerline-fonts"><a href="#powerline-fonts" class="headerlink" title="powerline fonts"></a>powerline fonts</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/powerline/fonts.git</span><br><span class="line"><span class="built_in">cd</span> .\fonts\</span><br><span class="line">.\install.ps1</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line">del .\fonts\ -Recurse -Force</span><br></pre></td></tr></table></figure>
-
-</li>
+<li>命令安装（beta，需要管理员身份)<br>oh-my-posh font install</li>
 </ol>
+<h4 id="powerline-fonts"><a href="#powerline-fonts" class="headerlink" title="powerline fonts"></a>powerline fonts</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/powerline/fonts.git</span><br><span class="line"><span class="built_in">cd</span> .\fonts\</span><br><span class="line">.\install.ps1</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line">del .\fonts\ -Recurse -Force</span><br></pre></td></tr></table></figure>
+
 <h3 id="配置-windows-Terminal"><a href="#配置-windows-Terminal" class="headerlink" title="配置 windows Terminal"></a>配置 windows Terminal</h3><ol>
 <li>可视化界面配置</li>
 <li>json 文件配置<br>guid 需要生成，文章末尾有生成 guid 的网站<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 默认的配置就是我们的新 powershell（重要！！！）</span><br><span class="line">&quot;defaultProfile&quot;: &quot;&#123;574e775e-4f2a-5b96-ac1e-a2962a402336&#125;&quot;,</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    // Powershell 7.1.0-preview.6 配置</span><br><span class="line">    &quot;guid&quot;: &quot;&#123;574e775e-4f2a-5b96-ac1e-a2962a402336&#125;&quot;,</span><br><span class="line">    &quot;hidden&quot;: false,</span><br><span class="line">    &quot;name&quot;: &quot;pwsh&quot;,</span><br><span class="line">    // -nologo 去掉启动时的logo等信息输出</span><br><span class="line">    &quot;commandline&quot;: &quot;D:/Program Files/PowerShell/7-preview/pwsh.exe -nologo&quot;,</span><br><span class="line">    &quot;icon&quot;: &quot;D:/Program Files/PowerShell/7-preview/assets/Powershell_avatar.ico&quot;,</span><br><span class="line">    //&quot;source&quot;: &quot;Windows.Terminal.PowershellCore&quot;,</span><br><span class="line">    // 启动菜单一定要设置为 &lt;.&gt;，否则后面重要的一步将会无效！</span><br><span class="line">    &quot;startingDirectory&quot;: &quot;.&quot;,</span><br><span class="line">    // 字体</span><br><span class="line">    &quot;fontFace&quot;: &quot;Fira Code&quot;,</span><br><span class="line">    &quot;fontSize&quot;: 11,</span><br><span class="line">    &quot;historySize&quot;: 9001,</span><br><span class="line">    &quot;padding&quot;: &quot;5, 5, 20, 25&quot;,</span><br><span class="line">    &quot;snapOnInput&quot;: true,</span><br><span class="line">    &quot;useAcrylic&quot;: false,</span><br><span class="line">    // 颜色方案</span><br><span class="line">    // &quot;colorScheme&quot;: &quot;Homebrew&quot;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
@@ -2851,14 +2851,6 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
-    <title>一次升级babel引发的血案</title>
-    <url>/2021/09/07/%E4%B8%80%E6%AC%A1%E5%8D%87%E7%BA%A7babel%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>zsh 自动补全、语法高亮插件</title>
     <url>/2021/11/25/zsh%E6%8F%92%E4%BB%B6/</url>
     <content><![CDATA[<p>在日常使用 zsh 的过程中，如果需要打很多命令，会很麻烦，除了可以使用ctrl+r 的方式来查询历史命令，还可以通过插件的方式来自动匹配命令，提高效率。</p>
@@ -2866,6 +2858,14 @@ timeout(100).then((value) =&gt; &#123;
 <p>第一步，进入 zsh 插件目录，并 clone 项目到此目录中：<br>cd “$ZSH_CUSTOM/plugins”<br>git clone <a href="https://github.com/zsh-users/zsh-syntax-highlighting.git">https://github.com/zsh-users/zsh-syntax-highlighting.git</a><br>git clone <a href="https://github.com/zsh-users/zsh-autosuggestions.git">https://github.com/zsh-users/zsh-autosuggestions.git</a><br>第二步，配置 .zshrc 文件<br>… 上面省略<br>plugins = (git zsh-autosuggestions zsh-syntax-highlighting)<br>… 下面省略<br>最后一步，让配置生效<br>zsh<br>完成！👍</p>
 <p>作者：万有引力万有<br>链接：<a href="https://www.jianshu.com/p/d70f9c4cb47c">https://www.jianshu.com/p/d70f9c4cb47c</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 ]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>一次升级babel引发的血案</title>
+    <url>/2021/09/07/%E4%B8%80%E6%AC%A1%E5%8D%87%E7%BA%A7babel%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88/</url>
+    <content><![CDATA[]]></content>
       <categories>
         <category>未分类</category>
       </categories>
@@ -3451,6 +3451,19 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </categories>
   </entry>
   <entry>
+    <title>茅屋为秋风所破歌</title>
+    <url>/2020/11/24/%E8%8C%85%E5%B1%8B%E4%B8%BA%E7%A7%8B%E9%A3%8E%E6%89%80%E7%A0%B4%E6%AD%8C/</url>
+    <content><![CDATA[<p>杜甫</p>
+<p>八月秋高风怒号⑴，卷我屋上三重茅⑵。茅飞渡江洒江郊，高者挂罥长林梢⑶，下者飘转沉塘坳⑷。</p>
+<p>南村群童欺我老无力，忍能对面为盗贼⑸。公然抱茅入竹去⑹，唇焦口燥呼不得⑺，归来倚杖自叹息。</p>
+<p>俄顷风定云墨色⑻，秋天漠漠向昏黑⑼。布衾多年冷似铁⑽，娇儿恶卧踏里裂⑾。床头屋漏无干处⑿，雨脚如麻未断绝⒀。自经丧乱少睡眠⒁，长夜沾湿何由彻⒂！</p>
+<p>安得广厦千万间⒃，大庇天下寒士俱欢颜⒄，风雨不动安如山。呜呼⒅！何时眼前突兀见此屋⒆，吾庐独破受冻死亦足⒇！</p>
+]]></content>
+      <categories>
+        <category>literature</category>
+      </categories>
+  </entry>
+  <entry>
     <title>茶</title>
     <url>/2018/07/10/%E8%8C%B6/</url>
     <content><![CDATA[<p>茶</p>
@@ -3469,19 +3482,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-]]></content>
-      <categories>
-        <category>literature</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>茅屋为秋风所破歌</title>
-    <url>/2020/11/24/%E8%8C%85%E5%B1%8B%E4%B8%BA%E7%A7%8B%E9%A3%8E%E6%89%80%E7%A0%B4%E6%AD%8C/</url>
-    <content><![CDATA[<p>杜甫</p>
-<p>八月秋高风怒号⑴，卷我屋上三重茅⑵。茅飞渡江洒江郊，高者挂罥长林梢⑶，下者飘转沉塘坳⑷。</p>
-<p>南村群童欺我老无力，忍能对面为盗贼⑸。公然抱茅入竹去⑹，唇焦口燥呼不得⑺，归来倚杖自叹息。</p>
-<p>俄顷风定云墨色⑻，秋天漠漠向昏黑⑼。布衾多年冷似铁⑽，娇儿恶卧踏里裂⑾。床头屋漏无干处⑿，雨脚如麻未断绝⒀。自经丧乱少睡眠⒁，长夜沾湿何由彻⒂！</p>
-<p>安得广厦千万间⒃，大庇天下寒士俱欢颜⒄，风雨不动安如山。呜呼⒅！何时眼前突兀见此屋⒆，吾庐独破受冻死亦足⒇！</p>
 ]]></content>
       <categories>
         <category>literature</category>

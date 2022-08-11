@@ -241,7 +241,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-08-11 14:29:36" itemprop="dateModified" datetime="2022-08-11T14:29:36+00:00">2022-08-11</time>
+                <time title="修改时间：2022-08-11 14:33:46" itemprop="dateModified" datetime="2022-08-11T14:33:46+00:00">2022-08-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -340,7 +340,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-08-11 14:29:36" itemprop="dateModified" datetime="2022-08-11T14:29:36+00:00">2022-08-11</time>
+                <time title="修改时间：2022-08-11 14:33:46" itemprop="dateModified" datetime="2022-08-11T14:33:46+00:00">2022-08-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -432,7 +432,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-08-11 14:29:36" itemprop="dateModified" datetime="2022-08-11T14:29:36+00:00">2022-08-11</time>
+                <time title="修改时间：2022-08-11 14:33:46" itemprop="dateModified" datetime="2022-08-11T14:33:46+00:00">2022-08-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -487,10 +487,10 @@
 <h3 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h3><p>安装字体，否则乱码   </p>
 <h4 id="nerd-fonts"><a href="#nerd-fonts" class="headerlink" title="nerd-fonts"></a>nerd-fonts</h4><ol>
 <li>下载安装<br><a target="_blank" rel="noopener" href="https://www.nerdfonts.com/">nerd fonts 官网</a><br><a target="_blank" rel="noopener" href="https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip">Meslo下载地址</a><br>解压<br>进入 ttf 文件夹<br>双击字体文件依次安装 或 全选-》右键-》安装</li>
-<li>命令安装（beta，需要管理员身份)<br>oh-my-posh font install<h4 id="powerline-fonts"><a href="#powerline-fonts" class="headerlink" title="powerline fonts"></a>powerline fonts</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/powerline/fonts.git</span><br><span class="line"><span class="built_in">cd</span> .\fonts\</span><br><span class="line">.\install.ps1</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line">del .\fonts\ -Recurse -Force</span><br></pre></td></tr></table></figure>
-
-</li>
+<li>命令安装（beta，需要管理员身份)<br>oh-my-posh font install</li>
 </ol>
+<h4 id="powerline-fonts"><a href="#powerline-fonts" class="headerlink" title="powerline fonts"></a>powerline fonts</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/powerline/fonts.git</span><br><span class="line"><span class="built_in">cd</span> .\fonts\</span><br><span class="line">.\install.ps1</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line">del .\fonts\ -Recurse -Force</span><br></pre></td></tr></table></figure>
+
 <h3 id="配置-windows-Terminal"><a href="#配置-windows-Terminal" class="headerlink" title="配置 windows Terminal"></a>配置 windows Terminal</h3><ol>
 <li>可视化界面配置</li>
 <li>json 文件配置<br>guid 需要生成，文章末尾有生成 guid 的网站<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">// 默认的配置就是我们的新 powershell（重要！！！）</span><br><span class="line">&quot;defaultProfile&quot;: &quot;&#123;574e775e-4f2a-5b96-ac1e-a2962a402336&#125;&quot;,</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    // Powershell 7.1.0-preview.6 配置</span><br><span class="line">    &quot;guid&quot;: &quot;&#123;574e775e-4f2a-5b96-ac1e-a2962a402336&#125;&quot;,</span><br><span class="line">    &quot;hidden&quot;: false,</span><br><span class="line">    &quot;name&quot;: &quot;pwsh&quot;,</span><br><span class="line">    // -nologo 去掉启动时的logo等信息输出</span><br><span class="line">    &quot;commandline&quot;: &quot;D:/Program Files/PowerShell/7-preview/pwsh.exe -nologo&quot;,</span><br><span class="line">    &quot;icon&quot;: &quot;D:/Program Files/PowerShell/7-preview/assets/Powershell_avatar.ico&quot;,</span><br><span class="line">    //&quot;source&quot;: &quot;Windows.Terminal.PowershellCore&quot;,</span><br><span class="line">    // 启动菜单一定要设置为 &lt;.&gt;，否则后面重要的一步将会无效！</span><br><span class="line">    &quot;startingDirectory&quot;: &quot;.&quot;,</span><br><span class="line">    // 字体</span><br><span class="line">    &quot;fontFace&quot;: &quot;Fira Code&quot;,</span><br><span class="line">    &quot;fontSize&quot;: 11,</span><br><span class="line">    &quot;historySize&quot;: 9001,</span><br><span class="line">    &quot;padding&quot;: &quot;5, 5, 20, 25&quot;,</span><br><span class="line">    &quot;snapOnInput&quot;: true,</span><br><span class="line">    &quot;useAcrylic&quot;: false,</span><br><span class="line">    // 颜色方案</span><br><span class="line">    // &quot;colorScheme&quot;: &quot;Homebrew&quot;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
@@ -553,7 +553,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-08-11 14:29:36" itemprop="dateModified" datetime="2022-08-11T14:29:36+00:00">2022-08-11</time>
+                <time title="修改时间：2022-08-11 14:33:46" itemprop="dateModified" datetime="2022-08-11T14:33:46+00:00">2022-08-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -650,7 +650,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-08-11 14:29:36" itemprop="dateModified" datetime="2022-08-11T14:29:36+00:00">2022-08-11</time>
+                <time title="修改时间：2022-08-11 14:33:46" itemprop="dateModified" datetime="2022-08-11T14:33:46+00:00">2022-08-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -746,7 +746,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-08-11 14:29:36" itemprop="dateModified" datetime="2022-08-11T14:29:36+00:00">2022-08-11</time>
+                <time title="修改时间：2022-08-11 14:33:46" itemprop="dateModified" datetime="2022-08-11T14:33:46+00:00">2022-08-11</time>
               </span>
 
           
@@ -828,7 +828,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-08-11 14:29:36" itemprop="dateModified" datetime="2022-08-11T14:29:36+00:00">2022-08-11</time>
+                <time title="修改时间：2022-08-11 14:33:46" itemprop="dateModified" datetime="2022-08-11T14:33:46+00:00">2022-08-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -922,7 +922,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-08-11 14:29:36" itemprop="dateModified" datetime="2022-08-11T14:29:36+00:00">2022-08-11</time>
+                <time title="修改时间：2022-08-11 14:33:46" itemprop="dateModified" datetime="2022-08-11T14:33:46+00:00">2022-08-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1027,7 +1027,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-08-11 14:29:36" itemprop="dateModified" datetime="2022-08-11T14:29:36+00:00">2022-08-11</time>
+                <time title="修改时间：2022-08-11 14:33:46" itemprop="dateModified" datetime="2022-08-11T14:33:46+00:00">2022-08-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1122,7 +1122,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-08-11 14:29:36" itemprop="dateModified" datetime="2022-08-11T14:29:36+00:00">2022-08-11</time>
+                <time title="修改时间：2022-08-11 14:33:46" itemprop="dateModified" datetime="2022-08-11T14:33:46+00:00">2022-08-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
