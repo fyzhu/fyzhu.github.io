@@ -2752,8 +2752,8 @@ timeout(100).then((value) =&gt; &#123;
 </ol>
 <h3 id="安装-powershell-插件"><a href="#安装-powershell-插件" class="headerlink" title="安装 powershell 插件"></a>安装 powershell 插件</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 1. 安装 PSReadline 包，该插件可以让命令行很好用，类似 zsh</span><br><span class="line">Install-Module -Name PSReadLine -AllowPrerelease -Force</span><br><span class="line"></span><br><span class="line"># 2. 安装 posh-git 包，让你的 git 更好用</span><br><span class="line">Install-Module posh-git -Scope CurrentUser</span><br><span class="line"></span><br><span class="line"># 3. 安装 oh-my-posh 包，让你的命令行更酷炫、优雅</span><br><span class="line">winget install JanDeDobbeleer.OhMyPosh -s winget</span><br></pre></td></tr></table></figure>
 <h3 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h3><p>安装字体，否则乱码   </p>
-<h4 id="nerd-fonts"><a href="#nerd-fonts" class="headerlink" title="nerd-fonts"></a>nerd-fonts</h4><ol>
-<li>下载安装<br><a href="https://www.nerdfonts.com/">nerd fonts 官网</a><br><a href="https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip">Meslo下载地址</a><br>解压<br>进入 ttf 文件夹<br>双击字体文件依次安装 或 全选-》右键-》安装</li>
+<h4 id="nerd-fonts-推荐"><a href="#nerd-fonts-推荐" class="headerlink" title="nerd-fonts(推荐)"></a>nerd-fonts(推荐)</h4><ol>
+<li>下载安装(推荐)<br><a href="https://www.nerdfonts.com/">nerd fonts 官网</a><br><a href="https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip">Meslo下载地址</a> (推荐)<br>解压<br>进入 ttf 文件夹<br>双击字体文件依次安装 或 全选-》右键-》安装</li>
 <li>命令安装（beta，需要管理员身份)<br>oh-my-posh font install</li>
 </ol>
 <h4 id="powerline-fonts"><a href="#powerline-fonts" class="headerlink" title="powerline fonts"></a>powerline fonts</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/powerline/fonts.git</span><br><span class="line"><span class="built_in">cd</span> .\fonts\</span><br><span class="line">.\install.ps1</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line">del .\fonts\ -Recurse -Force</span><br></pre></td></tr></table></figure>
