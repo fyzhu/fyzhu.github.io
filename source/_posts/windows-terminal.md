@@ -44,10 +44,10 @@ winget install JanDeDobbeleer.OhMyPosh -s winget
 ### 安装字体
 安装字体，否则乱码   
 
-#### nerd-fonts
-1. 下载安装
+#### nerd-fonts(推荐)
+1. 下载安装(推荐)
 [nerd fonts 官网](https://www.nerdfonts.com/)
-[Meslo下载地址](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip)  
+[Meslo下载地址](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip) (推荐) 
 解压  
 进入 ttf 文件夹  
 双击字体文件依次安装 或 全选-》右键-》安装
