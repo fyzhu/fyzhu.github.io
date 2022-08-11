@@ -29,6 +29,7 @@ This version of PowerShellGet has a limited features and doesn't support the upd
 Install-Module -Name PowerShellGet -Force
 Exit
 ```
+
 ### 安装 powershell 插件
 ```
 # 1. 安装 PSReadline 包，该插件可以让命令行很好用，类似 zsh
