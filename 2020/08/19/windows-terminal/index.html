@@ -28,7 +28,7 @@
 <meta property="og:description" content="注意terminal 中使用 powershell 可以选择 nerd-fonts 和 powerline fonts 字体单独使用 powershell 只能选择 powerline fonts 字体，部分图标可能无法显示vscode 中是单独使用 powershell , 但 vscode 可以配置 nerd-fonts 字体综上，可以选择一个使用图标比较少的主题 paradox   安装 w">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-19T10:35:43.000Z">
-<meta property="article:modified_time" content="2022-07-30T15:54:56.155Z">
+<meta property="article:modified_time" content="2022-08-11T14:29:36.821Z">
 <meta property="article:author" content="Yvan Zhu">
 <meta name="twitter:card" content="summary">
 
@@ -245,7 +245,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-30 15:54:56" itemprop="dateModified" datetime="2022-07-30T15:54:56+00:00">2022-07-30</time>
+                <time title="修改时间：2022-08-11 14:29:36" itemprop="dateModified" datetime="2022-08-11T14:29:36+00:00">2022-08-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -293,8 +293,12 @@
 <ol>
 <li>可能需要 Change the execution policy<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ExecutionPolicy -ExecutionPolicy RemoteSigned</span><br></pre></td></tr></table></figure></li>
 <li>升级 PowerShellGet (否则接下来无法安装 PSReadline)<br>Windows PowerShell 5.1 comes with version 1.0.0.1 of PowerShellGet preinstalled.<br>This version of PowerShellGet has a limited features and doesn’t support the updated capabilities of the PowerShell Gallery. To be supported, you must update to the latest version.<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Install-Module -Name PowerShellGet -Force</span><br><span class="line">Exit</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
 <h3 id="安装-powershell-插件"><a href="#安装-powershell-插件" class="headerlink" title="安装 powershell 插件"></a>安装 powershell 插件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 1. 安装 PSReadline 包，该插件可以让命令行很好用，类似 zsh</span><br><span class="line">Install-Module -Name PSReadLine -AllowPrerelease -Force</span><br><span class="line"></span><br><span class="line"># 2. 安装 posh-git 包，让你的 git 更好用</span><br><span class="line">Install-Module posh-git -Scope CurrentUser</span><br><span class="line"></span><br><span class="line"># 3. 安装 oh-my-posh 包，让你的命令行更酷炫、优雅</span><br><span class="line">winget install JanDeDobbeleer.OhMyPosh -s winget</span><br></pre></td></tr></table></figure>
-<h3 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h3>安装字体，否则乱码   <h4 id="nerd-fonts"><a href="#nerd-fonts" class="headerlink" title="nerd-fonts"></a>nerd-fonts</h4></li>
+<h3 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h3><p>安装字体，否则乱码   </p>
+<h4 id="nerd-fonts"><a href="#nerd-fonts" class="headerlink" title="nerd-fonts"></a>nerd-fonts</h4><ol>
 <li>下载安装<br><a target="_blank" rel="noopener" href="https://www.nerdfonts.com/">nerd fonts 官网</a><br><a target="_blank" rel="noopener" href="https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip">Meslo下载地址</a><br>解压<br>进入 ttf 文件夹<br>双击字体文件依次安装 或 全选-》右键-》安装</li>
 <li>命令安装（beta，需要管理员身份)<br>oh-my-posh font install<h4 id="powerline-fonts"><a href="#powerline-fonts" class="headerlink" title="powerline fonts"></a>powerline fonts</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/powerline/fonts.git</span><br><span class="line"><span class="built_in">cd</span> .\fonts\</span><br><span class="line">.\install.ps1</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line">del .\fonts\ -Recurse -Force</span><br></pre></td></tr></table></figure>
 
