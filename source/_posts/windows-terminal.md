@@ -43,6 +43,7 @@ winget install JanDeDobbeleer.OhMyPosh -s winget
 ```
 ### 安装字体
 安装字体，否则乱码   
+
 #### nerd-fonts
 1. 下载安装
 [nerd fonts 官网](https://www.nerdfonts.com/)
@@ -52,6 +53,7 @@ winget install JanDeDobbeleer.OhMyPosh -s winget
 双击字体文件依次安装 或 全选-》右键-》安装
 2. 命令安装（beta，需要管理员身份)  
 oh-my-posh font install
+
 #### powerline fonts
 ```bash
 git clone https://github.com/powerline/fonts.git
