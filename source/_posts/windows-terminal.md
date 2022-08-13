@@ -6,11 +6,9 @@ date: 2020-08-19 10:35:43
 tags:
 ---
 ### 注意
-terminal 中使用 powershell 可以选择 nerd-fonts 和 powerline fonts 字体  
-单独使用 powershell 只能选择 powerline fonts 字体，部分图标可能无法显示   
-vscode 中是单独使用 powershell , 但 vscode 可以配置 nerd-fonts 字体  
-综上，可以选择一个使用图标比较少的主题 paradox  
 
+请使用 nerd-fonts 字体， powerline fonts 字体，部分图标可能无法显示   
+ 
 ### 安装 windows Terminal
 1. windows 应用商店安装
 2. github 下载安装
@@ -21,6 +19,9 @@ github 下载安装
 1. 可能需要 Change the execution policy
 ```bash
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+```
+```bash
+Get-ExecutionPolicy -List
 ```
 2. 升级 PowerShellGet (否则接下来无法安装 PSReadline)
 Windows PowerShell 5.1 comes with version 1.0.0.1 of PowerShellGet preinstalled.  
