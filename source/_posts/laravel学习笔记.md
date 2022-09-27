@@ -15,3 +15,7 @@ php artisan make:model User
 ### contorller
 
 php artisan make:controller UsersContorller --resource
+
+### 快速创建软链接
+
+php artisan storage:link
