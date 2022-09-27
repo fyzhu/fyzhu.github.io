@@ -103,7 +103,7 @@ search:
   limit: 10000
 # algolia search  
 algolia:
-  applicationID: 'LV7MSV035J'
-  apiKey: '36c9db7e95455da7f0f976c4051e3905'
+  applicationID: 'T555GQKTUX'
+  apiKey: '7d845347b76d48d6a2217e816249240b'
   indexName: 'zhuyunfeng'
   chunkSize: 5000
