@@ -155,11 +155,16 @@ reset 如果不加参数，那么默认使用 `--mixed` 参数。它的行为是
 ### 查看
 git tag
 ### 增加
+```
 git tag v0.0.1  
 git push origin v0.0.1
+```
 ### 删除
+```bash
 git tag -d v0.0.1  
 git push origin --delete v0.0.1
+git push origin --delete heads/v0.0.1 # tag 和 branch 同名
+```
 
 ## 参考
 
