@@ -114,10 +114,11 @@
       </categories>
   </entry>
   <entry>
-    <title>Laravel报错Malformed UTF-8 characters, possibly incorrectly encoded</title>
-    <url>/2019/02/18/Laravel%E6%8A%A5%E9%94%99Malformed-UTF-8-characters-possibly-incorrectly-encoded/</url>
-    <content><![CDATA[<p>使用百度地图的echart中的地图压缩算法对geojson进行压缩完成后，使用larevel返回，会报这个错误</p>
+    <title>Laravel报错解决方案</title>
+    <url>/2019/02/18/Laravel%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<h2 id="Malformed-UTF-8-characters-possibly-incorrectly-encoded"><a href="#Malformed-UTF-8-characters-possibly-incorrectly-encoded" class="headerlink" title="Malformed UTF-8 characters, possibly incorrectly encoded"></a>Malformed UTF-8 characters, possibly incorrectly encoded</h2><p>使用百度地图的 echart 中的地图压缩算法对 geojson 进行压缩完成后，使用 larevel 返回，会报这个错误</p>
 <p>参考文档<br><a href="https://www.e-learn.cn/content/wangluowenzhang/169226">https://www.e-learn.cn/content/wangluowenzhang/169226</a></p>
+<h2 id="could-not-find-driver"><a href="#could-not-find-driver" class="headerlink" title="could not find driver"></a>could not find driver</h2><p>打开 php 的数据库扩展（如：pgsql ）</p>
 ]]></content>
       <tags>
         <tag>question</tag>
@@ -1026,8 +1027,9 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
 <h3 id="hard"><a href="#hard" class="headerlink" title="hard"></a>hard</h3><p>重置stage区和工作目录</p>
 <h3 id="soft"><a href="#soft" class="headerlink" title="soft"></a>soft</h3><p>保留工作目录，并把重置 HEAD 所带来的新的差异放进暂存区</p>
 <h2 id="git-tag"><a href="#git-tag" class="headerlink" title="git tag"></a>git tag</h2><h3 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h3><p>git tag</p>
-<h3 id="增加"><a href="#增加" class="headerlink" title="增加"></a>增加</h3><p>git tag v0.0.1<br>git push origin v0.0.1</p>
-<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><p>git tag -d v0.0.1<br>git push origin –delete v0.0.1</p>
+<h3 id="增加"><a href="#增加" class="headerlink" title="增加"></a>增加</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git tag v0.0.1  </span><br><span class="line">git push origin v0.0.1</span><br></pre></td></tr></table></figure>
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git tag -d v0.0.1  </span><br><span class="line">git push origin --delete v0.0.1</span><br><span class="line">git push origin --delete heads/v0.0.1 <span class="comment"># tag 和 branch 同名</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.jianshu.com/p/098d85a58bf1">Git 修改已提交的commit注释</a></p>
 <p><a href="https://www.jianshu.com/p/c2ec5f06cf1a">Git Reset 三种模式</a></p>
 <p><a href="https://www.cnblogs.com/liyong888/p/9822410.html">git 删除本地分支和删除远程分支</a>  </p>
@@ -1151,6 +1153,7 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
     <content><![CDATA[<h3 id="migration"><a href="#migration" class="headerlink" title="migration"></a>migration</h3><p>php artisan make:migration create_tasks_table<br>php artisan migrate</p>
 <h3 id="model"><a href="#model" class="headerlink" title="model"></a>model</h3><p>php artisan make:model User</p>
 <h3 id="contorller"><a href="#contorller" class="headerlink" title="contorller"></a>contorller</h3><p>php artisan make:controller UsersContorller –resource</p>
+<h3 id="快速创建软链接"><a href="#快速创建软链接" class="headerlink" title="快速创建软链接"></a>快速创建软链接</h3><p>php artisan storage:link</p>
 ]]></content>
       <categories>
         <category>未分类</category>
@@ -1610,10 +1613,20 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
   <entry>
     <title>npm publish</title>
     <url>/2020/06/24/npm-publish/</url>
-    <content><![CDATA[<h3 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h3><p>在 npm 官网创建 或通过 npm add user 创建</p>
-<h3 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h3><p>npm login</p>
-<h3 id="查看当前登录账户"><a href="#查看当前登录账户" class="headerlink" title="查看当前登录账户"></a>查看当前登录账户</h3><p>npm who am i</p>
-<h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><p>npm publish –access=public</p>
+    <content><![CDATA[<h3 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h3><ol>
+<li>npm 官网创建 </li>
+<li>npm add user 创建</li>
+</ol>
+<h3 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm login</span><br></pre></td></tr></table></figure>
+<h3 id="查看当前登录账户"><a href="#查看当前登录账户" class="headerlink" title="查看当前登录账户"></a>查看当前登录账户</h3><p>如果提示 <code>401 Unauthorized - GET https://registry.npmjs.org/-/whoami</code>，请先登录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm <span class="built_in">who</span> am i</span><br><span class="line">npm <span class="built_in">whoami</span></span><br></pre></td></tr></table></figure>
+<h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm publish --access=public <span class="comment"># 首次发布</span></span><br><span class="line">npm publish</span><br></pre></td></tr></table></figure>
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><p>npm包发布，通常不建议删除（假如有某某用户已经使用了你的npm包，这时候删除npm包是很没道理的）。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm unpublish 依赖包名称 --force</span><br></pre></td></tr></table></figure>
+
+<h3 id="版本管理"><a href="#版本管理" class="headerlink" title="版本管理"></a>版本管理</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm version prerelease</span><br><span class="line">npm version prepatch</span><br><span class="line">npm version preminor</span><br><span class="line">npm version premajor</span><br><span class="line">npm version patch</span><br><span class="line">npm version minor</span><br><span class="line">npm version major</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://blog.csdn.net/weixin_40817115/article/details/90384398">npm version</a></p>
 ]]></content>
       <categories>
         <category>未分类</category>
@@ -2144,21 +2157,6 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
       </categories>
   </entry>
   <entry>
-    <title>riverChief</title>
-    <url>/2019/02/19/riverChief/</url>
-    <content><![CDATA[<ol>
-<li>could not find driver</li>
-</ol>
-<p>打开php的pgsql扩展</p>
-<ol start="2">
-<li>快速创建软链接。<br>php artisan storage:link</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>project</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>软件为什么不能是秒更的呢</title>
     <url>/2017/09/06/ruanjianweishenmebunengshimiaogengdene/</url>
     <content><![CDATA[<p>MIUI通过周更颠覆了系统更新的频率， 那软件为什么不能提高更新频率呢，客户提交bug下一秒就可以修复啊，当然还是需要热更新之类的技术，不然更新频率太高也会对用户产生负担。 当然另一方面，BS就要比CS更有优势了，不存在下载的问题。</p>
@@ -2243,6 +2241,8 @@ timeout(100).then((value) =&gt; &#123;
 <h4 id="tail-amp-head"><a href="#tail-amp-head" class="headerlink" title="tail &amp; head"></a>tail &amp; head</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-n&lt;行数&gt; 显示文件的尾部 n 行内容</span><br><span class="line">tail test.log -n 30</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h4 id="chown"><a href="#chown" class="headerlink" title="chown"></a>chown</h4><h4 id="chmod"><a href="#chmod" class="headerlink" title="chmod"></a>chmod</h4><p>给 sh 文件可执行权限</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod ugo+x deploy.sh</span><br></pre></td></tr></table></figure>
+<h4 id="查看文件属性"><a href="#查看文件属性" class="headerlink" title="查看文件属性"></a>查看文件属性</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsattr .user.ini</span><br></pre></td></tr></table></figure>
+<h4 id="修改文件属性"><a href="#修改文件属性" class="headerlink" title="修改文件属性"></a>修改文件属性</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chattr -i .user.ini</span><br></pre></td></tr></table></figure>
 <h4 id="查找文件内容"><a href="#查找文件内容" class="headerlink" title="查找文件内容"></a>查找文件内容</h4><p>grep ‘test’ package.json</p>
 <h4 id="ln"><a href="#ln" class="headerlink" title="ln"></a>ln</h4><p>创建链接</p>
 <p>Linux链接分两种，一种被称为硬链接（Hard Link），另一种被称为符号链接（Symbolic Link）。默认情况下，ln命令产生硬链接。</p>
