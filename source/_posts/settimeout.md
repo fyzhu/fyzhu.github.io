@@ -3,7 +3,7 @@ title: 从setTimeout()函数开始谈起
 url: 1.html
 id: 1
 categories:
-  - 技术
+  - technology
 date: 2017-08-22 22:10:49
 tags:
 ---

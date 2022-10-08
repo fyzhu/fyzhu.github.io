@@ -3,8 +3,8 @@ title: 什么是反向代理（转载）
 url: 172.html
 id: 172
 categories:
-  - 技术
-  - 服务器
+  - technology
+  - Server
 date: 2018-01-25 19:11:34
 tags:
 ---

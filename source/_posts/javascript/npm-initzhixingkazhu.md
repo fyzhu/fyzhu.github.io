@@ -3,8 +3,8 @@ title: npm list -g报错
 url: 26.html
 id: 26
 categories:
-  - 技术
-  - 前端
+  - technology
+  - front-end
 date: 2017-08-31 16:05:29
 tags:
   - npm

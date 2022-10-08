@@ -3,7 +3,7 @@ title: The director I like
 url: 37.html
 id: 37
 categories:
-  - 生活
+  - life
 date: 2017-09-04 14:12:52
 tags:
 ---

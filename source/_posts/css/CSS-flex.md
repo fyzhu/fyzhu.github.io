@@ -1,7 +1,9 @@
 ---
 title: CSS-flex
 categories:
-  - CSS
+  - technology
+  - front-end
+  - css
 date: 2021-06-07 10:45:33
 tags:
 ---

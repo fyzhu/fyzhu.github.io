@@ -3,7 +3,7 @@ title: 关于智能音箱以及下一代处理平台的一些思考
 url: 15.html
 id: 15
 categories:
-  - 技术
+  - technology
 date: 2017-08-25 14:01:34
 tags:
 ---

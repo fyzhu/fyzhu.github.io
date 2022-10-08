@@ -1,7 +1,9 @@
 ---
 title: font-weight
 categories:
-  - CSS
+  - technology
+  - front-end
+  - css
 date: 2022-01-28 18:17:12
 tags:
 ---

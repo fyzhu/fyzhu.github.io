@@ -3,8 +3,8 @@ title: centos搭建ftp
 url: 118.html
 id: 118
 categories:
-  - 技术
-  - 服务器
+  - technology
+  - Server
 date: 2017-11-20 14:04:53
 tags:
 ---

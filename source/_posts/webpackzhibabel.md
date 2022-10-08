@@ -3,8 +3,8 @@ title: webpack之babel
 url: 32.html
 id: 32
 categories:
-  - 技术
-  - 前端
+  - technology
+  - front-end
 date: 2017-08-31 23:17:35
 tags:
 ---

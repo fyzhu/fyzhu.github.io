@@ -3,8 +3,8 @@ title: centos 下chmod
 url: 22.html
 id: 22
 categories:
-  - 技术
-  - 服务器
+  - technology
+  - Server
 date: 2017-08-31 14:36:06
 tags:
 ---

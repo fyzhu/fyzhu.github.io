@@ -3,8 +3,8 @@ title: FTP主动模式和被动模式的区别
 url: 122.html
 id: 122
 categories:
-  - 技术
-  - 服务器
+  - technology
+  - Server
 date: 2017-11-20 14:31:07
 tags:
 ---

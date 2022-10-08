@@ -3,7 +3,7 @@ title: 程序员用过都说好的工具软件
 url: 75.html
 id: 75
 categories:
-  - 技术
+  - technology
 date: 2017-09-19 11:56:25
 tags:
 ---

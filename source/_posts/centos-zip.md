@@ -3,8 +3,8 @@ title: centos下压缩解压.zip文件
 url: 20.html
 id: 20
 categories:
-  - 技术
-  - 服务器
+  - technology
+  - Server
 date: 2017-08-31 14:25:53
 tags:
   - centos

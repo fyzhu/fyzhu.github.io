@@ -3,8 +3,8 @@ title: webpack入门
 url: 34.html
 id: 34
 categories:
-  - 技术
-  - 前端
+  - technology
+  - front-end
 date: 2017-09-01 20:10:22
 tags:
 ---

@@ -3,7 +3,7 @@ title: The dog I like
 url: 11.html
 id: 11
 categories:
-  - 生活
+  - life
 date: 2018-08-23 21:48:07
 tags: 
 - dog 

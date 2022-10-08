@@ -3,7 +3,7 @@ title: 超越自卑的活法live笔记
 url: 18.html
 id: 18
 categories:
-  - 生活
+  - life
 date: 2017-08-29 15:42:26
 tags:
 ---

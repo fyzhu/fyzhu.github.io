@@ -3,7 +3,7 @@ title: 不错的物理科普书
 url: 54.html
 id: 54
 categories:
-  - 生活
+  - life
 date: 2017-09-12 15:41:45
 tags:
 ---

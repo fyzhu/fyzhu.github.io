@@ -3,8 +3,8 @@ title: centos安装ssl证书
 url: 94.html
 id: 94
 categories:
-  - 技术
-  - 服务器
+  - technology
+  - Server
 date: 2017-09-28 18:40:00
 tags:
 ---

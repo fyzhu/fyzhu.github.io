@@ -3,8 +3,9 @@ title: 纯CSS绘制三角形（各种角度）
 url: 143.html
 id: 143
 categories:
-  - 技术
-  - 前端
+  - technology
+  - front-end
+  - css
 date: 2018-01-10 11:12:49
 tags:
 ---

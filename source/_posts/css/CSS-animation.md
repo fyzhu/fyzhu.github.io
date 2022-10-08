@@ -1,7 +1,9 @@
 ---
 title: CSS-animation
 categories:
-  - CSS
+  - technology
+  - front-end
+  - css
 date: 2021-06-04 10:00:16
 tags:
 ---

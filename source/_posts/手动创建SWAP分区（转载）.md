@@ -3,8 +3,8 @@ title: 手动创建SWAP分区（转载）
 url: 239.html
 id: 239
 categories:
-  - 技术
-  - 服务器
+  - technology
+  - Server
 date: 2018-05-10 14:47:17
 tags:
 ---

@@ -1,7 +1,9 @@
 ---
 title: 为什么 js 的 forEach 不支持 await
 categories:
-  - JS
+  - technology
+  - front-end
+  - js
 date: 2022-01-27 17:49:15
 tags:
 ---
