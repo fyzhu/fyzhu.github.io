@@ -1,7 +1,9 @@
 ---
 title: 项目升级es6
 categories:
-  - 未分类
+  - technology
+  - front-end
+  - js
 date: 2022-07-30 23:47:36
 tags:
 ---
