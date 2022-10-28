@@ -1684,10 +1684,18 @@ timeout(100).then((value) =&gt; &#123;
 <p>linux：</p>
 <p><code>/***/.ssh</code> 一般为： <code>/root/.ssh</code>  </p>
 <p>如果没有，创建密钥  </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa <span class="comment"># 一直默认回车就可以</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa <span class="comment"># 一直默认回车就可以</span></span><br><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your@email.com&quot;</span> <span class="comment"># github 等仓库</span></span><br></pre></td></tr></table></figure>
 <h2 id="终端下-ssh-命令登录"><a href="#终端下-ssh-命令登录" class="headerlink" title="终端下 ssh 命令登录"></a>终端下 ssh 命令登录</h2><p>把本地公钥添加到服务器的 .ssh/authorized_key 里  </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-copy-id -i ~/.ssh/id_rsa.pub root@xxx.com</span><br></pre></td></tr></table></figure>
-<p>如果没有 <code>authorized_key</code> 这个文件，手动创建<br>ssh root@ip 就可以免密码登录了</p>
+<blockquote>
+<p>如果没有 <code>authorized_key</code> 这个文件，手动创建  </p>
+</blockquote>
+<h3 id="手动-copy"><a href="#手动-copy" class="headerlink" title="手动 copy"></a>手动 copy</h3><h4 id="Windows-Command-Line"><a href="#Windows-Command-Line" class="headerlink" title="Windows Command Line"></a>Windows Command Line</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">type</span> %userprofile%\.ssh\id_ed25519.pub | clip</span><br></pre></td></tr></table></figure>
+<h4 id="Git-Bash-on-Windows-Windows-PowerShell"><a href="#Git-Bash-on-Windows-Windows-PowerShell" class="headerlink" title="Git Bash on Windows / Windows PowerShell:"></a>Git Bash on Windows / Windows PowerShell:</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_ed25519.pub | clip</span><br></pre></td></tr></table></figure>
+<h4 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pbcopy &lt; ~/.ssh/&lt;YOUR KEY&gt;.pub</span><br></pre></td></tr></table></figure>
+<h4 id="GNU-Linux-requires-the-xclip-package"><a href="#GNU-Linux-requires-the-xclip-package" class="headerlink" title="GNU/Linux (requires the xclip package):"></a>GNU/Linux (requires the xclip package):</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">xclip -sel clip &lt; ~/.ssh/id_ed25519.pub</span><br></pre></td></tr></table></figure>
+<h3 id="命令-copy"><a href="#命令-copy" class="headerlink" title="命令 copy"></a>命令 copy</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-copy-id -i ~/.ssh/id_rsa.pub root@xxx.com</span><br></pre></td></tr></table></figure>
+
+<p>ssh root@ip 就可以免密码登录了</p>
 <h2 id="使用-xshell-等-ssh-工具登录"><a href="#使用-xshell-等-ssh-工具登录" class="headerlink" title="使用 xshell 等 ssh 工具登录"></a>使用 xshell 等 ssh 工具登录</h2><ol>
 <li>把服务器的公钥下载到本地</li>
 <li>登录时需要填写用户名 (root)</li>
@@ -3477,22 +3485,6 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
       </categories>
   </entry>
   <entry>
-    <title>font-weight</title>
-    <url>/2022/01/28/technology/front-end/css/font-weight/</url>
-    <content><![CDATA[<h2 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h2><p>font-weight可取值：100～900和normal、bold、bolder、lighter。</p>
-<p>字体所拥有的字重的数量实际上很少存在满足有9个字重刚好跟100～900的CSS字重一一对应的情况，通常字体拥有的字重数量为4至6个。</p>
-<p>不必担心，起码400和700对应的字重至少是每种字体必备的，譬如常见的 Arial、Helvetica、Georgia等等，只有400(normal)和700(bold)。</p>
-<h2 id="normal、bold"><a href="#normal、bold" class="headerlink" title="normal、bold"></a>normal、bold</h2><p>400 等同于 normal，而 700 等同于 bold。</p>
-<h2 id="bolder、lighter"><a href="#bolder、lighter" class="headerlink" title="bolder、lighter"></a>bolder、lighter</h2><p>bolder、lighter表示其字重值是基于从其父元素继承而来的字重计算所得的，与normal、bold所代表的字重并无关系。  </p>
-<p>参考<br>作者：人不中二枉少年<br>链接：<a href="https://www.jianshu.com/p/f9c6f9729fbb">https://www.jianshu.com/p/f9c6f9729fbb</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-]]></content>
-      <categories>
-        <category>technology</category>
-        <category>front-end</category>
-        <category>css</category>
-      </categories>
-  </entry>
-  <entry>
     <title>纯CSS绘制三角形（各种角度）</title>
     <url>/2018/01/10/technology/front-end/css/%E7%BA%AFCSS%E7%BB%98%E5%88%B6%E4%B8%89%E8%A7%92%E5%BD%A2/</url>
     <content><![CDATA[<p>CSS三角形绘制方法，学会了这个，其它的也就简单。</p>
@@ -3567,6 +3559,22 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
       <tags>
         <tag>javascript</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>font-weight</title>
+    <url>/2022/01/28/technology/front-end/css/font-weight/</url>
+    <content><![CDATA[<h2 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h2><p>font-weight可取值：100～900和normal、bold、bolder、lighter。</p>
+<p>字体所拥有的字重的数量实际上很少存在满足有9个字重刚好跟100～900的CSS字重一一对应的情况，通常字体拥有的字重数量为4至6个。</p>
+<p>不必担心，起码400和700对应的字重至少是每种字体必备的，譬如常见的 Arial、Helvetica、Georgia等等，只有400(normal)和700(bold)。</p>
+<h2 id="normal、bold"><a href="#normal、bold" class="headerlink" title="normal、bold"></a>normal、bold</h2><p>400 等同于 normal，而 700 等同于 bold。</p>
+<h2 id="bolder、lighter"><a href="#bolder、lighter" class="headerlink" title="bolder、lighter"></a>bolder、lighter</h2><p>bolder、lighter表示其字重值是基于从其父元素继承而来的字重计算所得的，与normal、bold所代表的字重并无关系。  </p>
+<p>参考<br>作者：人不中二枉少年<br>链接：<a href="https://www.jianshu.com/p/f9c6f9729fbb">https://www.jianshu.com/p/f9c6f9729fbb</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+]]></content>
+      <categories>
+        <category>technology</category>
+        <category>front-end</category>
+        <category>css</category>
+      </categories>
   </entry>
   <entry>
     <title>JS 类</title>

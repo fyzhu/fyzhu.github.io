@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"www.zhuyunfeng.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"appID":"T555GQKTUX","apiKey":"7d845347b76d48d6a2217e816249240b","indexName":"zhuyunfeng","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="查看服务器和本地是否存在密钥，密钥存放目录一般为当前用户家目录下的.ssh里windows： C:\Users\***\.ssh   linux： &#x2F;***&#x2F;.ssh 一般为： &#x2F;root&#x2F;.ssh   如果没有，创建密钥   1ssh-keygen -t rsa # 一直默认回车就可以 终端下 ssh 命令登录把本地公钥添加到服务器的 .ssh&#x2F;authorized_key 里   1ssh-c">
+  <meta name="description" content="查看服务器和本地是否存在密钥，密钥存放目录一般为当前用户家目录下的.ssh里windows： C:\Users\***\.ssh   linux： &#x2F;***&#x2F;.ssh 一般为： &#x2F;root&#x2F;.ssh   如果没有，创建密钥   12ssh-keygen -t rsa # 一直默认回车就可以ssh-keygen -t ed25519 -C &quot;your@email.com&quot; # g">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ssh免密码登录">
 <meta property="og:url" content="http://www.zhuyunfeng.com/2019/12/27/ssh%E5%85%8D%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95/index.html">
 <meta property="og:site_name" content="Yvan Zhu&#39;s blog">
-<meta property="og:description" content="查看服务器和本地是否存在密钥，密钥存放目录一般为当前用户家目录下的.ssh里windows： C:\Users\***\.ssh   linux： &#x2F;***&#x2F;.ssh 一般为： &#x2F;root&#x2F;.ssh   如果没有，创建密钥   1ssh-keygen -t rsa # 一直默认回车就可以 终端下 ssh 命令登录把本地公钥添加到服务器的 .ssh&#x2F;authorized_key 里   1ssh-c">
+<meta property="og:description" content="查看服务器和本地是否存在密钥，密钥存放目录一般为当前用户家目录下的.ssh里windows： C:\Users\***\.ssh   linux： &#x2F;***&#x2F;.ssh 一般为： &#x2F;root&#x2F;.ssh   如果没有，创建密钥   12ssh-keygen -t rsa # 一直默认回车就可以ssh-keygen -t ed25519 -C &quot;your@email.com&quot; # g">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-12-27T14:39:37.000Z">
-<meta property="article:modified_time" content="2022-10-08T08:56:59.155Z">
+<meta property="article:modified_time" content="2022-10-28T05:42:32.596Z">
 <meta property="article:author" content="Yvan Zhu">
 <meta name="twitter:card" content="summary">
 
@@ -245,7 +245,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-08 08:56:59" itemprop="dateModified" datetime="2022-10-08T08:56:59+00:00">2022-10-08</time>
+                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -289,10 +289,18 @@
 <p>linux：</p>
 <p><code>/***/.ssh</code> 一般为： <code>/root/.ssh</code>  </p>
 <p>如果没有，创建密钥  </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa <span class="comment"># 一直默认回车就可以</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa <span class="comment"># 一直默认回车就可以</span></span><br><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your@email.com&quot;</span> <span class="comment"># github 等仓库</span></span><br></pre></td></tr></table></figure>
 <h2 id="终端下-ssh-命令登录"><a href="#终端下-ssh-命令登录" class="headerlink" title="终端下 ssh 命令登录"></a>终端下 ssh 命令登录</h2><p>把本地公钥添加到服务器的 .ssh/authorized_key 里  </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id -i ~/.ssh/id_rsa.pub root@xxx.com</span><br></pre></td></tr></table></figure>
-<p>如果没有 <code>authorized_key</code> 这个文件，手动创建<br>ssh root@ip 就可以免密码登录了</p>
+<blockquote>
+<p>如果没有 <code>authorized_key</code> 这个文件，手动创建  </p>
+</blockquote>
+<h3 id="手动-copy"><a href="#手动-copy" class="headerlink" title="手动 copy"></a>手动 copy</h3><h4 id="Windows-Command-Line"><a href="#Windows-Command-Line" class="headerlink" title="Windows Command Line"></a>Windows Command Line</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span> %userprofile%\.ssh\id_ed25519.pub | clip</span><br></pre></td></tr></table></figure>
+<h4 id="Git-Bash-on-Windows-Windows-PowerShell"><a href="#Git-Bash-on-Windows-Windows-PowerShell" class="headerlink" title="Git Bash on Windows / Windows PowerShell:"></a>Git Bash on Windows / Windows PowerShell:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_ed25519.pub | clip</span><br></pre></td></tr></table></figure>
+<h4 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pbcopy &lt; ~/.ssh/&lt;YOUR KEY&gt;.pub</span><br></pre></td></tr></table></figure>
+<h4 id="GNU-Linux-requires-the-xclip-package"><a href="#GNU-Linux-requires-the-xclip-package" class="headerlink" title="GNU/Linux (requires the xclip package):"></a>GNU/Linux (requires the xclip package):</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xclip -sel clip &lt; ~/.ssh/id_ed25519.pub</span><br></pre></td></tr></table></figure>
+<h3 id="命令-copy"><a href="#命令-copy" class="headerlink" title="命令 copy"></a>命令 copy</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id -i ~/.ssh/id_rsa.pub root@xxx.com</span><br></pre></td></tr></table></figure>
+
+<p>ssh root@ip 就可以免密码登录了</p>
 <h2 id="使用-xshell-等-ssh-工具登录"><a href="#使用-xshell-等-ssh-工具登录" class="headerlink" title="使用 xshell 等 ssh 工具登录"></a>使用 xshell 等 ssh 工具登录</h2><ol>
 <li>把服务器的公钥下载到本地</li>
 <li>登录时需要填写用户名 (root)</li>
@@ -434,7 +442,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%88%E7%AB%AF%E4%B8%8B-ssh-%E5%91%BD%E4%BB%A4%E7%99%BB%E5%BD%95"><span class="nav-number">1.</span> <span class="nav-text">终端下 ssh 命令登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-xshell-%E7%AD%89-ssh-%E5%B7%A5%E5%85%B7%E7%99%BB%E5%BD%95"><span class="nav-number">2.</span> <span class="nav-text">使用 xshell 等 ssh 工具登录</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%88%E7%AB%AF%E4%B8%8B-ssh-%E5%91%BD%E4%BB%A4%E7%99%BB%E5%BD%95"><span class="nav-number">1.</span> <span class="nav-text">终端下 ssh 命令登录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8-copy"><span class="nav-number">1.1.</span> <span class="nav-text">手动 copy</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Windows-Command-Line"><span class="nav-number">1.1.1.</span> <span class="nav-text">Windows Command Line</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Git-Bash-on-Windows-Windows-PowerShell"><span class="nav-number">1.1.2.</span> <span class="nav-text">Git Bash on Windows &#x2F; Windows PowerShell:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#macOS"><span class="nav-number">1.1.3.</span> <span class="nav-text">macOS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GNU-Linux-requires-the-xclip-package"><span class="nav-number">1.1.4.</span> <span class="nav-text">GNU&#x2F;Linux (requires the xclip package):</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4-copy"><span class="nav-number">1.2.</span> <span class="nav-text">命令 copy</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-xshell-%E7%AD%89-ssh-%E5%B7%A5%E5%85%B7%E7%99%BB%E5%BD%95"><span class="nav-number">2.</span> <span class="nav-text">使用 xshell 等 ssh 工具登录</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

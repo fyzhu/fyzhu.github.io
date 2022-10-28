@@ -241,7 +241,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-08 08:56:59" itemprop="dateModified" datetime="2022-10-08T08:56:59+00:00">2022-10-08</time>
+                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -285,10 +285,18 @@
 <p>linux：</p>
 <p><code>/***/.ssh</code> 一般为： <code>/root/.ssh</code>  </p>
 <p>如果没有，创建密钥  </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa <span class="comment"># 一直默认回车就可以</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa <span class="comment"># 一直默认回车就可以</span></span><br><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your@email.com&quot;</span> <span class="comment"># github 等仓库</span></span><br></pre></td></tr></table></figure>
 <h2 id="终端下-ssh-命令登录"><a href="#终端下-ssh-命令登录" class="headerlink" title="终端下 ssh 命令登录"></a>终端下 ssh 命令登录</h2><p>把本地公钥添加到服务器的 .ssh/authorized_key 里  </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id -i ~/.ssh/id_rsa.pub root@xxx.com</span><br></pre></td></tr></table></figure>
-<p>如果没有 <code>authorized_key</code> 这个文件，手动创建<br>ssh root@ip 就可以免密码登录了</p>
+<blockquote>
+<p>如果没有 <code>authorized_key</code> 这个文件，手动创建  </p>
+</blockquote>
+<h3 id="手动-copy"><a href="#手动-copy" class="headerlink" title="手动 copy"></a>手动 copy</h3><h4 id="Windows-Command-Line"><a href="#Windows-Command-Line" class="headerlink" title="Windows Command Line"></a>Windows Command Line</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span> %userprofile%\.ssh\id_ed25519.pub | clip</span><br></pre></td></tr></table></figure>
+<h4 id="Git-Bash-on-Windows-Windows-PowerShell"><a href="#Git-Bash-on-Windows-Windows-PowerShell" class="headerlink" title="Git Bash on Windows / Windows PowerShell:"></a>Git Bash on Windows / Windows PowerShell:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_ed25519.pub | clip</span><br></pre></td></tr></table></figure>
+<h4 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pbcopy &lt; ~/.ssh/&lt;YOUR KEY&gt;.pub</span><br></pre></td></tr></table></figure>
+<h4 id="GNU-Linux-requires-the-xclip-package"><a href="#GNU-Linux-requires-the-xclip-package" class="headerlink" title="GNU/Linux (requires the xclip package):"></a>GNU/Linux (requires the xclip package):</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xclip -sel clip &lt; ~/.ssh/id_ed25519.pub</span><br></pre></td></tr></table></figure>
+<h3 id="命令-copy"><a href="#命令-copy" class="headerlink" title="命令 copy"></a>命令 copy</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id -i ~/.ssh/id_rsa.pub root@xxx.com</span><br></pre></td></tr></table></figure>
+
+<p>ssh root@ip 就可以免密码登录了</p>
 <h2 id="使用-xshell-等-ssh-工具登录"><a href="#使用-xshell-等-ssh-工具登录" class="headerlink" title="使用 xshell 等 ssh 工具登录"></a>使用 xshell 等 ssh 工具登录</h2><ol>
 <li>把服务器的公钥下载到本地</li>
 <li>登录时需要填写用户名 (root)</li>
@@ -346,7 +354,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-08 08:56:59" itemprop="dateModified" datetime="2022-10-08T08:56:59+00:00">2022-10-08</time>
+                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -451,7 +459,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-08 08:56:59" itemprop="dateModified" datetime="2022-10-08T08:56:59+00:00">2022-10-08</time>
+                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -548,7 +556,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-08 08:56:59" itemprop="dateModified" datetime="2022-10-08T08:56:59+00:00">2022-10-08</time>
+                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -641,7 +649,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-08 08:56:59" itemprop="dateModified" datetime="2022-10-08T08:56:59+00:00">2022-10-08</time>
+                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -758,7 +766,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-08 08:56:59" itemprop="dateModified" datetime="2022-10-08T08:56:59+00:00">2022-10-08</time>
+                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -861,7 +869,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-08 08:56:59" itemprop="dateModified" datetime="2022-10-08T08:56:59+00:00">2022-10-08</time>
+                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -960,7 +968,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-08 08:56:59" itemprop="dateModified" datetime="2022-10-08T08:56:59+00:00">2022-10-08</time>
+                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1060,7 +1068,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-08 08:56:59" itemprop="dateModified" datetime="2022-10-08T08:56:59+00:00">2022-10-08</time>
+                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1173,7 +1181,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-08 08:56:59" itemprop="dateModified" datetime="2022-10-08T08:56:59+00:00">2022-10-08</time>
+                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
