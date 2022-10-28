@@ -18,13 +18,36 @@ linux：
 如果没有，创建密钥  
 ```bash
 ssh-keygen -t rsa # 一直默认回车就可以
+ssh-keygen -t ed25519 -C "your@email.com" # github 等仓库
 ```
 ## 终端下 ssh 命令登录
 把本地公钥添加到服务器的 .ssh/authorized_key 里  
+> 如果没有 `authorized_key` 这个文件，手动创建  
+
+### 手动 copy
+#### Windows Command Line
+```bash
+type %userprofile%\.ssh\id_ed25519.pub | clip
+```
+#### Git Bash on Windows / Windows PowerShell:
+
+```bash
+cat ~/.ssh/id_ed25519.pub | clip
+```
+#### macOS
+```bash
+pbcopy < ~/.ssh/<YOUR KEY>.pub
+```
+#### GNU/Linux (requires the xclip package):
+```bash
+xclip -sel clip < ~/.ssh/id_ed25519.pub
+```
+### 命令 copy
+
 ```bash
 ssh-copy-id -i ~/.ssh/id_rsa.pub root@xxx.com
 ```
-如果没有 `authorized_key` 这个文件，手动创建  
+
 ssh root@ip 就可以免密码登录了
 
 ## 使用 xshell 等 ssh 工具登录
