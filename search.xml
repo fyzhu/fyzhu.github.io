@@ -1988,6 +1988,35 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
+    <title>vitepress 如何添加 algolia 搜索</title>
+    <url>/2022/11/01/vitepress-%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0-algolia-%E6%90%9C%E7%B4%A2/</url>
+    <content><![CDATA[<h2 id="注册-algolia-账号"><a href="#注册-algolia-账号" class="headerlink" title="注册 algolia 账号"></a>注册 algolia 账号</h2><p><a href="https://www.algolia.com/">algolia 官网</a></p>
+<h2 id="创建-index"><a href="#创建-index" class="headerlink" title="创建 index"></a>创建 index</h2><p>下一步要用到</p>
+<h2 id="配置中开启-algolia"><a href="#配置中开启-algolia" class="headerlink" title="配置中开启 algolia"></a>配置中开启 algolia</h2><h3 id="appId"><a href="#appId" class="headerlink" title="appId"></a>appId</h3><p>setting -&gt; Team and Access -&gt; API keys -&gt; Application ID</p>
+<h3 id="apiKey"><a href="#apiKey" class="headerlink" title="apiKey"></a>apiKey</h3><blockquote>
+<p>请勿使用 Admin API Key</p>
+</blockquote>
+<p>setting -&gt; Team and Access -&gt; API keys -&gt; Search-Only API Key</p>
+<h3 id="indexName"><a href="#indexName" class="headerlink" title="indexName"></a>indexName</h3><p>上一步创建的 index 的名称</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// docs/.vitepress/config.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">  <span class="attr">title</span>: <span class="string">&quot;xxx&quot;</span>,</span><br><span class="line">  <span class="attr">description</span>: <span class="string">&quot;Just playing around.&quot;</span>,</span><br><span class="line">  <span class="attr">themeConfig</span>: &#123;</span><br><span class="line">    <span class="attr">algolia</span>: &#123;</span><br><span class="line">      <span class="attr">appId</span>: <span class="string">&#x27;xxx&#x27;</span>,</span><br><span class="line">      <span class="attr">apiKey</span>: <span class="string">&#x27;xxxx&#x27;</span>,</span><br><span class="line">      <span class="attr">indexName</span>: <span class="string">&#x27;xxx&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="上传数据到-algolia"><a href="#上传数据到-algolia" class="headerlink" title="上传数据到 algolia"></a>上传数据到 algolia</h2><p>到这一步你的 vitepress 页面中应该能看到搜索框了，但是还无法搜索到结果，因为你还没上传数据到 algolia。</p>
+<p>algolia 官方提供了 crawler(爬虫) 来爬取你网站的数据，但是好像是收费的。</p>
+<p>algolia 也提供了免费的方法，通过官方提供的 docker 上传数据到 algolia。</p>
+<p><a href="https://docsearch.algolia.com/docs/legacy/run-your-own/#run-the-crawl-from-the-docker-image">Run the crawl from the Docker image</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -it --env-file=.<span class="built_in">env</span> -e <span class="string">&quot;CONFIG=<span class="subst">$(cat /path/to/your/config.json | jq -r tostring)</span>&quot;</span> algolia/docsearch-scraper</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>docker 安装使用和 jq 的安装请自行查询</p>
+</blockquote>
+<p>config.json 示例</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;index_name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;test&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;start_urls&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;https://test.com/docs/&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span> <span class="comment">// 此链接是你最终部署文档的地址</span></span><br><span class="line">  <span class="attr">&quot;selectors&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;lvl0&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lvl1&quot;</span><span class="punctuation">:</span> <span class="string">&quot;.content h1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lvl2&quot;</span><span class="punctuation">:</span> <span class="string">&quot;.content h2&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lvl3&quot;</span><span class="punctuation">:</span> <span class="string">&quot;.content h3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lvl4&quot;</span><span class="punctuation">:</span> <span class="string">&quot;.content h4&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lvl5&quot;</span><span class="punctuation">:</span> <span class="string">&quot;.content h5&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;content&quot;</span><span class="punctuation">:</span> <span class="string">&quot;.content p, .content li&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>vscode 调试 js</title>
     <url>/2021/10/29/vscode-%E8%B0%83%E8%AF%95-js/</url>
     <content><![CDATA[<h3 id="调试-npm-script-命令"><a href="#调试-npm-script-命令" class="headerlink" title="调试 npm script 命令"></a>调试 npm script 命令</h3><p>注意：此为 configurations 中的一条配置，具体看下一条</p>
@@ -3485,6 +3514,22 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
       </categories>
   </entry>
   <entry>
+    <title>font-weight</title>
+    <url>/2022/01/28/technology/front-end/css/font-weight/</url>
+    <content><![CDATA[<h2 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h2><p>font-weight可取值：100～900和normal、bold、bolder、lighter。</p>
+<p>字体所拥有的字重的数量实际上很少存在满足有9个字重刚好跟100～900的CSS字重一一对应的情况，通常字体拥有的字重数量为4至6个。</p>
+<p>不必担心，起码400和700对应的字重至少是每种字体必备的，譬如常见的 Arial、Helvetica、Georgia等等，只有400(normal)和700(bold)。</p>
+<h2 id="normal、bold"><a href="#normal、bold" class="headerlink" title="normal、bold"></a>normal、bold</h2><p>400 等同于 normal，而 700 等同于 bold。</p>
+<h2 id="bolder、lighter"><a href="#bolder、lighter" class="headerlink" title="bolder、lighter"></a>bolder、lighter</h2><p>bolder、lighter表示其字重值是基于从其父元素继承而来的字重计算所得的，与normal、bold所代表的字重并无关系。  </p>
+<p>参考<br>作者：人不中二枉少年<br>链接：<a href="https://www.jianshu.com/p/f9c6f9729fbb">https://www.jianshu.com/p/f9c6f9729fbb</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+]]></content>
+      <categories>
+        <category>technology</category>
+        <category>front-end</category>
+        <category>css</category>
+      </categories>
+  </entry>
+  <entry>
     <title>纯CSS绘制三角形（各种角度）</title>
     <url>/2018/01/10/technology/front-end/css/%E7%BA%AFCSS%E7%BB%98%E5%88%B6%E4%B8%89%E8%A7%92%E5%BD%A2/</url>
     <content><![CDATA[<p>CSS三角形绘制方法，学会了这个，其它的也就简单。</p>
@@ -3559,22 +3604,6 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
       <tags>
         <tag>javascript</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>font-weight</title>
-    <url>/2022/01/28/technology/front-end/css/font-weight/</url>
-    <content><![CDATA[<h2 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h2><p>font-weight可取值：100～900和normal、bold、bolder、lighter。</p>
-<p>字体所拥有的字重的数量实际上很少存在满足有9个字重刚好跟100～900的CSS字重一一对应的情况，通常字体拥有的字重数量为4至6个。</p>
-<p>不必担心，起码400和700对应的字重至少是每种字体必备的，譬如常见的 Arial、Helvetica、Georgia等等，只有400(normal)和700(bold)。</p>
-<h2 id="normal、bold"><a href="#normal、bold" class="headerlink" title="normal、bold"></a>normal、bold</h2><p>400 等同于 normal，而 700 等同于 bold。</p>
-<h2 id="bolder、lighter"><a href="#bolder、lighter" class="headerlink" title="bolder、lighter"></a>bolder、lighter</h2><p>bolder、lighter表示其字重值是基于从其父元素继承而来的字重计算所得的，与normal、bold所代表的字重并无关系。  </p>
-<p>参考<br>作者：人不中二枉少年<br>链接：<a href="https://www.jianshu.com/p/f9c6f9729fbb">https://www.jianshu.com/p/f9c6f9729fbb</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-]]></content>
-      <categories>
-        <category>technology</category>
-        <category>front-end</category>
-        <category>css</category>
-      </categories>
   </entry>
   <entry>
     <title>JS 类</title>

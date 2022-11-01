@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">175</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">176</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,138 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2019/09/02/shell%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/02/shell%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">shell命令</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-09-02 09:26:19" itemprop="dateCreated datePublished" datetime="2019-09-02T09:26:19+00:00">2019-09-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-11-01 10:27:37" itemprop="dateModified" datetime="2022-11-01T10:27:37+00:00">2022-11-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/Server/" itemprop="url" rel="index"><span itemprop="name">Server</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2019/09/02/shell%E5%91%BD%E4%BB%A4/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://www.zhuyunfeng.com/2019/09/02/shell%E5%91%BD%E4%BB%A4/" class="cy_cmt_count" data-xid="2019/09/02/shell命令/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Bash(Bourne Again Shell)</p>
+<h4 id="查看文件夹大小"><a href="#查看文件夹大小" class="headerlink" title="查看文件夹大小"></a>查看文件夹大小</h4><p>du -sh</p>
+<h4 id="新建文件"><a href="#新建文件" class="headerlink" title="新建文件"></a>新建文件</h4><p>touch xxx</p>
+<h4 id="cp-f-不起作用"><a href="#cp-f-不起作用" class="headerlink" title="cp -f 不起作用"></a>cp -f 不起作用</h4><p>默认cp命令是有别名(alias cp=’cp -i’)的,无法强制覆盖,即使你用 -f 参数也无法强制覆盖文件。</p>
+<h5 id="加个反斜杠，可以使用-cp-执行-cp-命令时不走-alias"><a href="#加个反斜杠，可以使用-cp-执行-cp-命令时不走-alias" class="headerlink" title="加个反斜杠，可以使用 \cp 执行 cp 命令时不走 alias"></a>加个反斜杠，可以使用 \cp 执行 cp 命令时不走 alias</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\<span class="built_in">cp</span> -rf </span><br></pre></td></tr></table></figure>
+<p>-r 文件夹<br>-f 强制覆盖，不提示</p>
+<h5 id="临时取消-cp-的alias"><a href="#临时取消-cp-的alias" class="headerlink" title="临时取消 cp 的alias"></a>临时取消 cp 的alias</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">unalias</span> <span class="built_in">cp</span></span><br><span class="line"><span class="built_in">cp</span> a /test/a</span><br></pre></td></tr></table></figure>
+
+<h4 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h4><p>scp 是 secure copy的缩写, scp是linux系统下基于ssh登陆进行安全的远程文件拷贝命令。<br>scp [可选参数] file_source file_target </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r ./dist/* root@ip:/www/wwwroot/jd.dreamlist.cn/</span><br></pre></td></tr></table></figure>
+
+<h4 id="ssh"><a href="#ssh" class="headerlink" title="ssh"></a>ssh</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh root@ip</span><br></pre></td></tr></table></figure>
+<h4 id="ssh-copy-id"><a href="#ssh-copy-id" class="headerlink" title="ssh-copy-id"></a>ssh-copy-id</h4><p>此功能是把当前主机的 id_rsa.pub copy 到目标主机的 authrized_keys 里，从而实现无密码登录目标主机</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id -i ~/.ssh/id_rsa.pub root@dreamlist.cn</span><br></pre></td></tr></table></figure>
+<h4 id="tail-amp-head"><a href="#tail-amp-head" class="headerlink" title="tail &amp; head"></a>tail &amp; head</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-n&lt;行数&gt; 显示文件的尾部 n 行内容</span><br><span class="line">tail test.log -n 30</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="chown"><a href="#chown" class="headerlink" title="chown"></a>chown</h4><h4 id="chmod"><a href="#chmod" class="headerlink" title="chmod"></a>chmod</h4><p>给 sh 文件可执行权限</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod ugo+x deploy.sh</span><br></pre></td></tr></table></figure>
+<h4 id="查看文件属性"><a href="#查看文件属性" class="headerlink" title="查看文件属性"></a>查看文件属性</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsattr .user.ini</span><br></pre></td></tr></table></figure>
+<h4 id="修改文件属性"><a href="#修改文件属性" class="headerlink" title="修改文件属性"></a>修改文件属性</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chattr -i .user.ini</span><br></pre></td></tr></table></figure>
+<h4 id="查找文件内容"><a href="#查找文件内容" class="headerlink" title="查找文件内容"></a>查找文件内容</h4><p>grep ‘test’ package.json</p>
+<h4 id="ln"><a href="#ln" class="headerlink" title="ln"></a>ln</h4><p>创建链接</p>
+<p>Linux链接分两种，一种被称为硬链接（Hard Link），另一种被称为符号链接（Symbolic Link）。默认情况下，ln命令产生硬链接。</p>
+<h5 id="hard-link"><a href="#hard-link" class="headerlink" title="hard link"></a>hard link</h5><p>ln f1 f2 </p>
+<h5 id="soft-link-Symbolic-Link"><a href="#soft-link-Symbolic-Link" class="headerlink" title="soft link (Symbolic Link)"></a>soft link (Symbolic Link)</h5><p>ln -s f1 f3</p>
+<h5 id="list"><a href="#list" class="headerlink" title="list"></a>list</h5><p>ls -li   # -i参数显示文件的inode节点信息</p>
+<h4 id="which"><a href="#which" class="headerlink" title="which"></a>which</h4><h4 id="显示行号"><a href="#显示行号" class="headerlink" title="显示行号"></a>显示行号</h4><p>set nu</p>
+<h4 id="查看端口占用"><a href="#查看端口占用" class="headerlink" title="查看端口占用"></a>查看端口占用</h4><p>sudo lsof -i :8080</p>
+<h4 id="杀死进程"><a href="#杀死进程" class="headerlink" title="杀死进程"></a>杀死进程</h4><p>sudo kill -9 进程pid</p>
+<h4 id="nohup"><a href="#nohup" class="headerlink" title="nohup"></a>nohup</h4><p>英文全称 no hang up（不挂起），用于在系统后台不挂断地运行命令，退出终端不会影响程序的运行。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup Command [ Arg … ] [　&amp; ]</span><br></pre></td></tr></table></figure>
+<p>Command：要执行的命令。</p>
+<p>Arg：一些参数，可以指定输出文件。</p>
+<p>&amp;：让命令在后台执行，终端退出后命令仍旧执行。</p>
+<h4 id="查看ip"><a href="#查看ip" class="headerlink" title="查看ip"></a>查看ip</h4><p>ifconfig | grep “inet “ | grep -v 127.0.0.1</p>
+<h4 id="进程相关"><a href="#进程相关" class="headerlink" title="进程相关"></a>进程相关</h4><h5 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h5><p>ps -ef &amp; ps aux<br>-ef是System V展示风格，而aux是BSD风格。 </p>
+<h5 id="top"><a href="#top" class="headerlink" title="top"></a>top</h5><p>按P – 以 CPU 占用率大小的顺序排列进程列表</p>
+<p>按M – 以内存占用率大小的顺序排列进程列表<br>参考：<br><a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-command-manual.html">https://www.runoob.com/linux/linux-command-manual.html</a></p>
+<p>top &amp; ps</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/tudachui/p/9516009.html">https://www.cnblogs.com/tudachui/p/9516009.html</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2019/08/25/pm2%E7%9A%84%E4%BD%BF%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +373,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
+                <time title="修改时间：2022-11-01 10:27:37" itemprop="dateModified" datetime="2022-11-01T10:27:37+00:00">2022-11-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -393,7 +525,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
+                <time title="修改时间：2022-11-01 10:27:37" itemprop="dateModified" datetime="2022-11-01T10:27:37+00:00">2022-11-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -517,7 +649,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
+                <time title="修改时间：2022-11-01 10:27:37" itemprop="dateModified" datetime="2022-11-01T10:27:37+00:00">2022-11-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -627,7 +759,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
+                <time title="修改时间：2022-11-01 10:27:37" itemprop="dateModified" datetime="2022-11-01T10:27:37+00:00">2022-11-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -725,7 +857,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
+                <time title="修改时间：2022-11-01 10:27:37" itemprop="dateModified" datetime="2022-11-01T10:27:37+00:00">2022-11-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -819,7 +951,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
+                <time title="修改时间：2022-11-01 10:27:37" itemprop="dateModified" datetime="2022-11-01T10:27:37+00:00">2022-11-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -918,7 +1050,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
+                <time title="修改时间：2022-11-01 10:27:37" itemprop="dateModified" datetime="2022-11-01T10:27:37+00:00">2022-11-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1015,7 +1147,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
+                <time title="修改时间：2022-11-01 10:27:37" itemprop="dateModified" datetime="2022-11-01T10:27:37+00:00">2022-11-01</time>
               </span>
 
           
@@ -1100,7 +1232,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
+                <time title="修改时间：2022-11-01 10:27:37" itemprop="dateModified" datetime="2022-11-01T10:27:37+00:00">2022-11-01</time>
               </span>
 
           
@@ -1137,108 +1269,6 @@
 <h2 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mysql.server start</span><br></pre></td></tr></table></figure>
 <h2 id="设置密码"><a href="#设置密码" class="headerlink" title="设置密码"></a>设置密码</h2><p>homebrew安装默认是没有密码的</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; alter user &#x27;root&#x27;@&#x27;localhost&#x27; identified with mysql_native_password by &#x27;123456&#x27;;</span><br><span class="line">Query OK, 0 rows affected (0.10 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; flush privileges;</span><br><span class="line">Query OK, 0 rows affected (0.01 sec)</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2019/07/11/%E6%8A%80%E8%83%BD%E6%A0%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/07/11/%E6%8A%80%E8%83%BD%E6%A0%91/" class="post-title-link" itemprop="url">技能树</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-07-11 17:15:31" itemprop="dateCreated datePublished" datetime="2019-07-11T17:15:31+00:00">2019-07-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/technology/front-end/" itemprop="url" rel="index"><span itemprop="name">front-end</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2019/07/11/%E6%8A%80%E8%83%BD%E6%A0%91/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://www.zhuyunfeng.com/2019/07/11/%E6%8A%80%E8%83%BD%E6%A0%91/" class="cy_cmt_count" data-xid="2019/07/11/技能树/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ol>
-<li>canvas</li>
-<li>indexDB</li>
-<li>HLS直播</li>
-<li>小程序</li>
-<li>GIS地图</li>
-<li>echart</li>
-<li>vue</li>
-</ol>
-
       
     </div>
 
@@ -1322,7 +1352,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">175</span>
+          <span class="site-state-item-count">176</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">175</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">176</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,109 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2017/09/14/wordpresszhuanyifuwuqiyudaodewenti/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/09/14/wordpresszhuanyifuwuqiyudaodewenti/" class="post-title-link" itemprop="url">wordpress转移服务器遇到的问题</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-09-14 11:33:39" itemprop="dateCreated datePublished" datetime="2017-09-14T11:33:39+00:00">2017-09-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-11-01 10:27:37" itemprop="dateModified" datetime="2022-11-01T10:27:37+00:00">2022-11-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2017/09/14/wordpresszhuanyifuwuqiyudaodewenti/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://www.zhuyunfeng.com/2017/09/14/wordpresszhuanyifuwuqiyudaodewenti/" class="cy_cmt_count" data-xid="2017/09/14/wordpresszhuanyifuwuqiyudaodewenti/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>1.更换数据库，数据库配置在wp-config.php里</p>
+<p>2.更换域名，修改数据库里wp_options表里的 siteurl（option_id=1)和home(最新版本中option_id一般为2）的链接</p>
+<p>3.找回密码，邮箱无法发送邮件，报错</p>
+<p>无法发送电子邮件 可能原因：您的主机禁用了mail()函数</p>
+<p>Linux服务器安装sendmail</p>
+<p>Centos</p>
+<p>Yum install sendmail</p>
+<p>Ubuntu</p>
+<p>Apt-get install sendmail</p>
+<p>不报错了，但是还是无法收到邮件</p>
+<p>更改数据库wp_users表</p>
+<p>把密码字段修改为hello的MD5值</p>
+<p>5d41402abc4b2a76b9719d911017c592</p>
+<p>可以用hello登录，然后在后台更改密码。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2017/09/12/bucuodekepushu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +344,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
+                <time title="修改时间：2022-11-01 10:27:37" itemprop="dateModified" datetime="2022-11-01T10:27:37+00:00">2022-11-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -335,7 +438,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
+                <time title="修改时间：2022-11-01 10:27:37" itemprop="dateModified" datetime="2022-11-01T10:27:37+00:00">2022-11-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -427,7 +530,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
+                <time title="修改时间：2022-11-01 10:27:37" itemprop="dateModified" datetime="2022-11-01T10:27:37+00:00">2022-11-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -519,7 +622,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
+                <time title="修改时间：2022-11-01 10:27:37" itemprop="dateModified" datetime="2022-11-01T10:27:37+00:00">2022-11-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -609,7 +712,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
+                <time title="修改时间：2022-11-01 10:27:37" itemprop="dateModified" datetime="2022-11-01T10:27:37+00:00">2022-11-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -707,7 +810,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
+                <time title="修改时间：2022-11-01 10:27:37" itemprop="dateModified" datetime="2022-11-01T10:27:37+00:00">2022-11-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -803,7 +906,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
+                <time title="修改时间：2022-11-01 10:27:37" itemprop="dateModified" datetime="2022-11-01T10:27:37+00:00">2022-11-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -896,7 +999,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
+                <time title="修改时间：2022-11-01 10:27:37" itemprop="dateModified" datetime="2022-11-01T10:27:37+00:00">2022-11-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1002,7 +1105,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
+                <time title="修改时间：2022-11-01 10:27:37" itemprop="dateModified" datetime="2022-11-01T10:27:37+00:00">2022-11-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1047,128 +1150,6 @@
       
           <p>chmod也可以用数字来表示权限如 chmod 777 file<br>语法为：chmod abc file<br>其中a,b,c各为一个数字，分别表示User、Group、及Other的权限。<br>r=4，w=2，x=1<br>若要rwx属性则4+2+1=7；<br>若要rw-属性则4+2=6；<br>若要r-x属性则4+1=5。</p>
 <p>给文件夹及文件夹里面的所有文件加权限<br>chmod -R 777 folder</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2017/08/31/technology/centos-zip/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/08/31/technology/centos-zip/" class="post-title-link" itemprop="url">centos下压缩解压.zip文件</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2017-08-31 14:25:53" itemprop="dateCreated datePublished" datetime="2017-08-31T14:25:53+00:00">2017-08-31</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-28 05:42:32" itemprop="dateModified" datetime="2022-10-28T05:42:32+00:00">2022-10-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/technology/Server/" itemprop="url" rel="index"><span itemprop="name">Server</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2017/08/31/technology/centos-zip/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://www.zhuyunfeng.com/2017/08/31/technology/centos-zip/" class="cy_cmt_count" data-xid="2017/08/31/technology/centos-zip/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>以下命令均在 /home 目录下操作</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home <span class="comment">#进入/home目录</span></span><br></pre></td></tr></table></figure>
-
-
-<p>1、把 /home 目录下面的 mydata 目录压缩为 mydata.zip</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zip -r mydata.zip mydata <span class="comment">#压缩mydata目录</span></span><br></pre></td></tr></table></figure>
-
-<p>2、把 /home 目录下面的 mydata.zip 解压到 mydatabak 目录里面</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip mydata.zip -d mydatabak</span><br></pre></td></tr></table></figure>
-
-<p>3、把 /home 目录下面的 abc 文件夹和 123.txt 压缩成为 abc123.zip</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zip -r abc123.zip abc 123.txt</span><br></pre></td></tr></table></figure>
-
-<p>4、把 /home 目录下面的 wwwroot.zip 直接解压到 /home 目录里面</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip wwwroot.zip</span><br></pre></td></tr></table></figure>
-
-<p>5、把 /home 目录下面的 abc12.zip、abc23.zip、abc34.zip 同时解压到 /home 目录里面</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip abc\*.zip</span><br></pre></td></tr></table></figure>
-
-<p>6、查看把 /home 目录下面的 wwwroot.zip 里面的内容</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip -v wwwroot.zip</span><br></pre></td></tr></table></figure>
-
-<p>7、验证 /home 目录下面的 wwwroot.zip 是否完整</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip -t wwwroot.zip</span><br></pre></td></tr></table></figure>
-
-<p>8、把 /home 目录下面 wwwroot.zip 里面的所有文件解压到第一级目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip -j wwwroot.zip</span><br></pre></td></tr></table></figure>
-<p>=====================================================<br>主要参数<br>-c：将解压缩的结果<br>-l：显示压缩文件内所包含的文件<br>-p：与-c参数类似，会将解压缩的结果显示到屏幕上，但不会执行任何的转换<br>-t：检查压缩文件是否正确<br>-u：与-f参数类似，但是除了更新现有的文件外，也会将压缩文件中的其它文件解压缩到目录中<br>-v：执行是时显示详细的信息<br>-z：仅显示压缩文件的备注文字<br>-a：对文本文件进行必要的字符转换<br>-b：不要对文本文件进行字符转换<br>-C：压缩文件中的文件名称区分大小写<br>-j：不处理压缩文件中原有的目录路径<br>-L：将压缩文件中的全部文件名改为小写<br>-M：将输出结果送到more程序处理<br>-n：解压缩时不要覆盖原有的文件<br>-o：不必先询问用户，unzip执行后覆盖原有文件<br>-P&lt;密码&gt;：使用zip的密码选项<br>-q：执行时不显示任何信息<br>-s：将文件名中的空白字符转换为底线字符<br>-V：保留VMS的文件版本信息<br>-X：解压缩时同时回存文件原来的UID/GID</p>
-<p>原文链接<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/inzens/articles/4968898.html">https://www.cnblogs.com/inzens/articles/4968898.html</a></p>
 
       
     </div>
@@ -1253,7 +1234,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">175</span>
+          <span class="site-state-item-count">176</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
