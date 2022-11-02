@@ -45,13 +45,15 @@ export default defineConfig({
 });
 ```
 
-## 上传数据到 algolia
-
 到这一步你的 vitepress 页面中应该能看到搜索框了，但是还无法搜索到结果，因为你还没上传数据到 algolia。
 
-algolia 官方提供了 crawler(爬虫) 来爬取你网站的数据，但是好像是收费的。
+## 上传数据到 algolia
 
-algolia 也提供了免费的方法，通过官方提供的 docker 上传数据到 algolia。
+algolia 官方提供了 [crawler(爬虫)](https://docsearch.algolia.com/docs/manage-your-crawls/) 来爬取你网站的数据，直接在网站上操作，简单方便，但是好像是收费的。
+
+algolia 也提供了免费的方法，运行官方提供的 docker image 上传数据到 algolia。
+
+> 此方法已进入 legacy 阶段，后期可能会废弃。
 
 [Run the crawl from the Docker image](https://docsearch.algolia.com/docs/legacy/run-your-own/#run-the-crawl-from-the-docker-image)
 
@@ -60,7 +62,7 @@ docker run -it --env-file=.env -e "CONFIG=$(cat /path/to/your/config.json | jq -
 ```
 > docker 安装使用和 jq 的安装请自行查询
 
-config.json 示例
+config.json 模板
 ```json
 {
   "index_name": "test",
