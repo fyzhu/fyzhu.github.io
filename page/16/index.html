@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">176</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">177</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,131 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2017/09/28/technology/apache-peizhixunizhujisanzhongfangshi/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/09/28/technology/apache-peizhixunizhujisanzhongfangshi/" class="post-title-link" itemprop="url">Apache 配置虚拟主机三种方式</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-09-28 15:41:05" itemprop="dateCreated datePublished" datetime="2017-09-28T15:41:05+00:00">2017-09-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-11-17 09:01:48" itemprop="dateModified" datetime="2022-11-17T09:01:48+00:00">2022-11-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/Server/" itemprop="url" rel="index"><span itemprop="name">Server</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2017/09/28/technology/apache-peizhixunizhujisanzhongfangshi/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://www.zhuyunfeng.com/2017/09/28/technology/apache-peizhixunizhujisanzhongfangshi/" class="cy_cmt_count" data-xid="2017/09/28/technology/apache-peizhixunizhujisanzhongfangshi/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>一、基于IP 1. 假设服务器有个IP地址为192.168.1.10，使用ifconfig在同一个网络接口eth0上绑定3个IP：</p>
+<p>[root@localhost root]# ifconfig eth0:1 192.168.1.11 [root@localhost root]# ifconfig eth0:2 192.168.1.12 [root@localhost root]# ifconfig eth0:3 192.168.1.13</p>
+<p>2. 修改hosts文件，添加三个域名与之一一对应：</p>
+<p>192.168.1.11   <a target="_blank" rel="noopener" href="http://www.test1.com">www.test1.com</a> 192.168.1.12   <a target="_blank" rel="noopener" href="http://www.test2.com">www.test2.com</a> 192.168.1.13   <a target="_blank" rel="noopener" href="http://www.test3.com">www.test3.com</a></p>
+<p>3. 建立虚拟主机存放网页的根目录，如在/www目录下建立test1、test2、test3文件夹，其中分别存放1.html、2.html、3.html</p>
+<p>/www/test1/1.html /www/test2/2.html /www/test3/3.html</p>
+<p>4. 在httpd.conf中将附加配置文件httpd-vhosts.conf包含进来，接着在httpd-vhosts.conf中写入如下配置：  </p>
+<p><img src="http://common.cnblogs.com/images/copycode.gif" alt="复制代码"></p>
+<p>&lt;VirtualHost 192.168.1.11:80&gt; ServerName <a target="_blank" rel="noopener" href="http://www.test1.com">www.test1.com</a> DocumentRoot /www/test1/ &lt;Directory “/www/test1”&gt; Options Indexes FollowSymLinks AllowOverride None Order allow,deny Allow From All </Directory> </VirtualHost> &lt;VirtualHost 192.168.1.12:80&gt; ServerName <a target="_blank" rel="noopener" href="http://www.test1.com">www.test1.com</a> DocumentRoot /www/test2/ &lt;Directory “/www/test2”&gt; Options Indexes FollowSymLinks AllowOverride None Order allow,deny Allow From All </Directory> </VirtualHost> &lt;VirtualHost 192.168.1.13:80&gt; ServerName <a target="_blank" rel="noopener" href="http://www.test1.com">www.test1.com</a> DocumentRoot /www/test3/ &lt;Directory “/www/test3”&gt; Options Indexes FollowSymLinks AllowOverride None Order allow,deny Allow From All </Directory> </VirtualHost></p>
+<p><img src="http://common.cnblogs.com/images/copycode.gif" alt="复制代码"></p>
+<p>5. 大功告成，测试下每个虚拟主机，分别访问<a target="_blank" rel="noopener" href="http://www.test1.com、www.test2.com、www.test3.com">www.test1.com、www.test2.com、www.test3.com</a>   二、基于主机名 1. 设置域名映射同一个IP，修改hosts：</p>
+<p>192.168.1.10  <a target="_blank" rel="noopener" href="http://www.test1.com">www.test1.com</a> 192.168.1.10  <a target="_blank" rel="noopener" href="http://www.test2.com">www.test2.com</a> 192.168.1.10  <a target="_blank" rel="noopener" href="http://www.test3.com">www.test3.com</a></p>
+<p>2. 跟上面一样，建立虚拟主机存放网页的根目录</p>
+<p>/www/test1/1.html /www/test2/2.html /www/test3/3.html</p>
+<p>3. 在httpd.conf中将附加配置文件httpd-vhosts.conf包含进来，接着在httpd-vhosts.conf中写入如下配置：</p>
+<p>　　为了使用基于域名的虚拟主机，必须指定服务器IP地址（和可能的端口）来使主机接受请求。可以用NameVirtualHost指令来进行配置。 如果服务器上所有的IP地址都会用到， 你可以用*作为NameVirtualHost的参数。在NameVirtualHost指令中指明IP地址并不会使服务器自动侦听那个IP地址。 这里设定的IP地址必须对应服务器上的一个网络接口。　　下一步就是为你建立的每个虚拟主机设定<VirtualHost>配置块，<VirtualHost>的参数与NameVirtualHost指令的参数是一样的。每个<VirtualHost>定义块中，至少都会有一个ServerName指令来指定伺服哪个主机和一个DocumentRoot指令来说明这个主机的内容存在于文件系统的什么地方。 如果在现有的web服务器上增加虚拟主机，必须也为现存的主机建造一个<VirtualHost>定义块。其中ServerName和DocumentRoot所包含的内容应该与全局的保持一致，且要放在配置文件的最前面，扮演默认主机的角色。</p>
+<p><img src="http://common.cnblogs.com/images/copycode.gif" alt="复制代码"></p>
+<p>NameVirtualHost *:80 &lt;VirtualHost *:80&gt;</p>
+<p>ServerName * DocumentRoot /www/ </VirtualHost> &lt;VirtualHost *:80&gt; ServerName <a target="_blank" rel="noopener" href="http://www.test1.com">www.test1.com</a> DocumentRoot /www/test1/ &lt;Directory “/www/test1”&gt; Options Indexes FollowSymLinks AllowOverride None Order allow,deny Allow from all </Directory> </VirtualHost>  </p>
+<p>&lt;VirtualHost *:80&gt; ServerName <a target="_blank" rel="noopener" href="http://www.test2.com">www.test2.com</a> DocumentRoot /www/test2/ &lt;Directory “/www/test2”&gt; Options Indexes FollowSymLinks AllowOverride None Order allow,deny Allow from all </Directory> </VirtualHost></p>
+<p>&lt;VirtualHost *:80&gt; ServerName <a target="_blank" rel="noopener" href="http://www.test3.com">www.test3.com</a> DocumentRoot /www/test3/ &lt;Directory “/www/test3”&gt; Options Indexes FollowSymLinks AllowOverride None Order allow,deny Allow from all </Directory> </VirtualHost></p>
+<p><img src="http://common.cnblogs.com/images/copycode.gif" alt="复制代码"></p>
+<p> 4. 大功告成，测试下每个虚拟主机，分别访问<a target="_blank" rel="noopener" href="http://www.test1.com、www.test2.com、www.test3.com">www.test1.com、www.test2.com、www.test3.com</a>  </p>
+<p>三、基于端口</p>
+<ol>
+<li>修改配置文件</li>
+</ol>
+<p>将原来的 Listen 80 改为 Listen 80 Listen 8080 2. 更改虚拟主机设置：</p>
+<p><img src="http://common.cnblogs.com/images/copycode.gif" alt="复制代码"></p>
+<p>&lt;VirtualHost 192.168.1.10:80&gt; DocumentRoot /var/www/test1/ ServerName <a target="_blank" rel="noopener" href="http://www.test1.com">www.test1.com</a> </VirtualHost> &lt;VirtualHost 192.168.1.10:8080&gt; DocumentRoot /var/www/test2 ServerName <a target="_blank" rel="noopener" href="http://www.test2.com">www.test2.com</a> </VirtualHost></p>
+<p><img src="http://common.cnblogs.com/images/copycode.gif" alt="复制代码"></p>
+<p>转载至<a target="_blank" rel="noopener" href="http://www.cnblogs.com/hi-bazinga/archive/2012/04/23/2466605.html">http://www.cnblogs.com/hi-bazinga/archive/2012/04/23/2466605.html</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2017/09/28/shujukuxiangguan/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +366,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-17 07:38:58" itemprop="dateModified" datetime="2022-11-17T07:38:58+00:00">2022-11-17</time>
+                <time title="修改时间：2022-11-17 09:01:48" itemprop="dateModified" datetime="2022-11-17T09:01:48+00:00">2022-11-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -336,7 +461,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-17 07:38:58" itemprop="dateModified" datetime="2022-11-17T07:38:58+00:00">2022-11-17</time>
+                <time title="修改时间：2022-11-17 09:01:48" itemprop="dateModified" datetime="2022-11-17T09:01:48+00:00">2022-11-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -472,7 +597,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-17 07:38:58" itemprop="dateModified" datetime="2022-11-17T07:38:58+00:00">2022-11-17</time>
+                <time title="修改时间：2022-11-17 09:01:48" itemprop="dateModified" datetime="2022-11-17T09:01:48+00:00">2022-11-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -562,7 +687,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-17 07:38:58" itemprop="dateModified" datetime="2022-11-17T07:38:58+00:00">2022-11-17</time>
+                <time title="修改时间：2022-11-17 09:01:48" itemprop="dateModified" datetime="2022-11-17T09:01:48+00:00">2022-11-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -681,7 +806,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-17 07:38:58" itemprop="dateModified" datetime="2022-11-17T07:38:58+00:00">2022-11-17</time>
+                <time title="修改时间：2022-11-17 09:01:48" itemprop="dateModified" datetime="2022-11-17T09:01:48+00:00">2022-11-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -784,7 +909,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-17 07:38:58" itemprop="dateModified" datetime="2022-11-17T07:38:58+00:00">2022-11-17</time>
+                <time title="修改时间：2022-11-17 09:01:48" itemprop="dateModified" datetime="2022-11-17T09:01:48+00:00">2022-11-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -895,7 +1020,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-17 07:38:58" itemprop="dateModified" datetime="2022-11-17T07:38:58+00:00">2022-11-17</time>
+                <time title="修改时间：2022-11-17 09:01:48" itemprop="dateModified" datetime="2022-11-17T09:01:48+00:00">2022-11-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -995,7 +1120,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-17 07:38:58" itemprop="dateModified" datetime="2022-11-17T07:38:58+00:00">2022-11-17</time>
+                <time title="修改时间：2022-11-17 09:01:48" itemprop="dateModified" datetime="2022-11-17T09:01:48+00:00">2022-11-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1087,7 +1212,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-17 07:38:58" itemprop="dateModified" datetime="2022-11-17T07:38:58+00:00">2022-11-17</time>
+                <time title="修改时间：2022-11-17 09:01:48" itemprop="dateModified" datetime="2022-11-17T09:01:48+00:00">2022-11-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1144,107 +1269,6 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php preg\_match\_all(&quot;/(\\w+=\\w+)(#\\w+)?/i&quot;,&quot;http://localhost/index.php?name=tank&amp;sex=1#top&quot;,$match); print_r($match); /* 结果如下 Array ( \[0\] =&gt; Array ( \[0\] =&gt; name=tank \[1\] =&gt; sex=1#top ) \[1\] =&gt; Array ( \[0\] =&gt; name=tank \[1\] =&gt; sex=1 ) \[2\] =&gt; Array ( \[0\] =&gt; \[1\] =&gt; #top ) ) */ ?&gt;</span><br></pre></td></tr></table></figure>
 <p>补充 函数dirname() 路途漫漫…还有待继续挖掘… </p>
 <p>转载至<a target="_blank" rel="noopener" href="http://www.jb51.net/article/47396.htm">http://www.jb51.net/article/47396.htm</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2017/09/14/technology/apache-peizhixunimuluxunizhuji/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/09/14/technology/apache-peizhixunimuluxunizhuji/" class="post-title-link" itemprop="url">Apache 配置虚拟目录、虚拟主机</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2017-09-14 12:06:00" itemprop="dateCreated datePublished" datetime="2017-09-14T12:06:00+00:00">2017-09-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-17 07:38:58" itemprop="dateModified" datetime="2022-11-17T07:38:58+00:00">2022-11-17</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/technology/Server/" itemprop="url" rel="index"><span itemprop="name">Server</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2017/09/14/technology/apache-peizhixunimuluxunizhuji/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://www.zhuyunfeng.com/2017/09/14/technology/apache-peizhixunimuluxunizhuji/" class="cy_cmt_count" data-xid="2017/09/14/technology/apache-peizhixunimuluxunizhuji/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>修改httpd.conf的配置 通过whereis httpd找到这个文件 我的在/etc/httpd/conf下 </p>
-<h2 id="一、虚拟目录"><a href="#一、虚拟目录" class="headerlink" title="一、虚拟目录"></a>一、虚拟目录</h2><p>找到<IfModule>这块，加入下面的代码</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 虚拟目录，访问D盘下面的web目录</span><br><span class="line">&lt;IfModule dir_module&gt;</span><br><span class="line">    # 设置缺省载入页面</span><br><span class="line">    DirectoryIndex index.html index.htm index.php</span><br><span class="line">    # 设置站点别名，别名与访问路径是相关的，取任何名称都可以（除特殊）</span><br><span class="line">    Alias /myweb &quot;D:/web&quot;</span><br><span class="line">    &lt;Directory D:/web&gt;</span><br><span class="line">    # 设置访问权限</span><br><span class="line">        Order allow,deny</span><br><span class="line">	Allow from all</span><br><span class="line">    &lt;/Directory&gt;</span><br><span class="line">&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure>
-
-<p>修改完成后重启Apache服务器 在浏览器中输入：<a target="_blank" rel="noopener" href="http://localhost/myweb/xx.php">http://localhost/myweb/xx.php</a> 来访问 D:/web 下的文件 </p>
-<h2 id="二、虚拟主机"><a href="#二、虚拟主机" class="headerlink" title="二、虚拟主机"></a>二、虚拟主机</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#配置我们自己的虚拟主机</span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    #修改文档根路径</span><br><span class="line">    DocumentRoot &quot;D:/Program Files (x86)/myenv/apache2.2.25/htdocs&quot;</span><br><span class="line">    #主机名称</span><br><span class="line">    ServerName myvirtualhost.com</span><br><span class="line">    #欢迎页面</span><br><span class="line">    DirectoryIndex index.html</span><br><span class="line">    &lt;Directory &quot;D:/Program Files (x86)/myenv/apache2.2.25/htdocs&quot;&gt;</span><br><span class="line">	Options -Indexes FollowSymLinks</span><br><span class="line">	AllowOverride None</span><br><span class="line">	Order allow,deny</span><br><span class="line">	Allow from all</span><br><span class="line">    &lt;/Directory&gt;</span><br><span class="line">    #错误日志存放位置</span><br><span class="line">    ErrorLog &quot;logs/myvirtualhost.com-error.log&quot;</span><br><span class="line">    CustomLog &quot;logs/myvirtualhost.com-access.log&quot; common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
-
-<p>版权声明：本文为CSDN博主「u010175124」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/u010175124/article/details/18220495">https://blog.csdn.net/u010175124/article/details/18220495</a></p>
 
       
     </div>
@@ -1329,7 +1353,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">176</span>
+          <span class="site-state-item-count">177</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

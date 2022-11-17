@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">176</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">177</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,108 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2021/03/10/technology/front-end/javascript/js%20class/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/10/technology/front-end/javascript/js%20class/" class="post-title-link" itemprop="url">JS 类</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-10 00:00:00" itemprop="dateCreated datePublished" datetime="2021-03-10T00:00:00+00:00">2021-03-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-11-17 09:01:48" itemprop="dateModified" datetime="2022-11-17T09:01:48+00:00">2022-11-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/front-end/" itemprop="url" rel="index"><span itemprop="name">front-end</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2021/03/10/technology/front-end/javascript/js%20class/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://www.zhuyunfeng.com/2021/03/10/technology/front-end/javascript/js%20class/" class="cy_cmt_count" data-xid="2021/03/10/technology/front-end/javascript/js class/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="es5-与-es6-类的区别"><a href="#es5-与-es6-类的区别" class="headerlink" title="es5 与 es6 类的区别"></a>es5 与 es6 类的区别</h3><ol>
+<li>es5 类定义的方法是可枚举的，es6 类定义的方法不可枚举</li>
+<li>es5 构造函数可以作为函数单独执行，es6 类不可以单独执行，必须使用 new 关键字</li>
+<li>es6 类不存在变量提升（hoist），这一点与 ES5 完全不同。</li>
+</ol>
+<p>类的 get 和 set </p>
+<p>存值函数和取值函数是设置在属性(访问器属性)的 Descriptor 对象上的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">CustomHTMLElement</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">element</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">element</span> = element;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">get</span> <span class="title function_">html</span>() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">element</span>.<span class="property">innerHTML</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">set</span> <span class="title function_">html</span>(<span class="params">value</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">element</span>.<span class="property">innerHTML</span> = value;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> descriptor = <span class="title class_">Object</span>.<span class="title function_">getOwnPropertyDescriptor</span>(</span><br><span class="line">  <span class="title class_">CustomHTMLElement</span>.<span class="property"><span class="keyword">prototype</span></span>, <span class="string">&quot;html&quot;</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;get&quot;</span> <span class="keyword">in</span> descriptor  <span class="comment">// true</span></span><br><span class="line"><span class="string">&quot;set&quot;</span> <span class="keyword">in</span> descriptor  <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2021/03/09/technology/front-end/javascript/typescript/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +343,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-17 07:38:58" itemprop="dateModified" datetime="2022-11-17T07:38:58+00:00">2022-11-17</time>
+                <time title="修改时间：2022-11-17 09:01:48" itemprop="dateModified" datetime="2022-11-17T09:01:48+00:00">2022-11-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -357,7 +459,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-17 07:38:58" itemprop="dateModified" datetime="2022-11-17T07:38:58+00:00">2022-11-17</time>
+                <time title="修改时间：2022-11-17 09:01:48" itemprop="dateModified" datetime="2022-11-17T09:01:48+00:00">2022-11-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -452,7 +554,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-17 07:38:58" itemprop="dateModified" datetime="2022-11-17T07:38:58+00:00">2022-11-17</time>
+                <time title="修改时间：2022-11-17 09:01:48" itemprop="dateModified" datetime="2022-11-17T09:01:48+00:00">2022-11-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -546,7 +648,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-17 07:38:58" itemprop="dateModified" datetime="2022-11-17T07:38:58+00:00">2022-11-17</time>
+                <time title="修改时间：2022-11-17 09:01:48" itemprop="dateModified" datetime="2022-11-17T09:01:48+00:00">2022-11-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -678,7 +780,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-17 07:38:58" itemprop="dateModified" datetime="2022-11-17T07:38:58+00:00">2022-11-17</time>
+                <time title="修改时间：2022-11-17 09:01:48" itemprop="dateModified" datetime="2022-11-17T09:01:48+00:00">2022-11-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -782,7 +884,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-17 07:38:58" itemprop="dateModified" datetime="2022-11-17T07:38:58+00:00">2022-11-17</time>
+                <time title="修改时间：2022-11-17 09:01:48" itemprop="dateModified" datetime="2022-11-17T09:01:48+00:00">2022-11-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -872,7 +974,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-17 07:38:58" itemprop="dateModified" datetime="2022-11-17T07:38:58+00:00">2022-11-17</time>
+                <time title="修改时间：2022-11-17 09:01:48" itemprop="dateModified" datetime="2022-11-17T09:01:48+00:00">2022-11-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -967,7 +1069,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-17 07:38:58" itemprop="dateModified" datetime="2022-11-17T07:38:58+00:00">2022-11-17</time>
+                <time title="修改时间：2022-11-17 09:01:48" itemprop="dateModified" datetime="2022-11-17T09:01:48+00:00">2022-11-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1061,7 +1163,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-17 07:38:58" itemprop="dateModified" datetime="2022-11-17T07:38:58+00:00">2022-11-17</time>
+                <time title="修改时间：2022-11-17 09:01:48" itemprop="dateModified" datetime="2022-11-17T09:01:48+00:00">2022-11-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1102,102 +1204,6 @@
       
           <p>李白</p>
 <p>君不见黄河之水天上来，奔流到海不复回。<br>君不见高堂明镜悲白发，朝如青丝暮成雪。<br>人生得意须尽欢，莫使金樽空对月。<br>天生我材必有用，千金散尽还复来。<br>烹羊宰牛且为乐，会须一饮三百杯。<br>岑夫子，丹丘生，将进酒，君莫停。<br>与君歌一曲，请君为我侧耳听。<br>钟鼓馔玉不足贵，但愿长醉不愿醒。<br>古来圣贤皆寂寞，惟有饮者留其名。<br>陈王昔时宴平乐，斗酒十千恣欢谑。<br>主人何为言少钱，径须沽取对君酌。<br>五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2020/11/24/%E5%BF%B5%E5%A5%B4%E5%A8%87%E8%B5%A4%E5%A3%81%E6%80%80%E5%8F%A4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/24/%E5%BF%B5%E5%A5%B4%E5%A8%87%E8%B5%A4%E5%A3%81%E6%80%80%E5%8F%A4/" class="post-title-link" itemprop="url">念奴娇赤壁怀古</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-11-24 13:50:49" itemprop="dateCreated datePublished" datetime="2020-11-24T13:50:49+00:00">2020-11-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-17 07:38:58" itemprop="dateModified" datetime="2022-11-17T07:38:58+00:00">2022-11-17</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/literature/" itemprop="url" rel="index"><span itemprop="name">literature</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2020/11/24/%E5%BF%B5%E5%A5%B4%E5%A8%87%E8%B5%A4%E5%A3%81%E6%80%80%E5%8F%A4/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://www.zhuyunfeng.com/2020/11/24/%E5%BF%B5%E5%A5%B4%E5%A8%87%E8%B5%A4%E5%A3%81%E6%80%80%E5%8F%A4/" class="cy_cmt_count" data-xid="2020/11/24/念奴娇赤壁怀古/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>苏轼</p>
-<p>大江东去，浪淘尽，千古风流人物。<br>故垒西边，人道是，三国周郎赤壁。<br>乱石穿空，惊涛拍岸，卷起千堆雪。(穿空 一作：崩云)<br>江山如画，一时多少豪杰。</p>
-<p>遥想公瑾当年，小乔初嫁了，雄姿英发。<br>羽扇纶巾，谈笑间，樯橹灰飞烟灭。(樯橹 一作：强虏)<br>故国神游，多情应笑我，早生华发。<br>人生如梦，一尊还酹江月。(人生 一作：人间；尊 同：樽)</p>
-<p>译文</p>
-<p>大江之水滚滚不断向东流去，滔滔巨浪淘尽千古英雄人物。<br>那旧营垒的西边，人们说那就是三国时周郎大破曹兵的赤壁。<br>岸边乱石林立，像要刺破天空，惊人的巨浪拍击着江岸，激起的浪花好似千万堆白雪。<br>雄壮的江山奇丽如图画，一时间涌现出多少英雄豪杰。</p>
-<p>遥想当年的周瑜春风得意，小乔刚刚嫁给了他做妻子，英姿雄健风度翩翩神采照人。<br>手摇羽扇头戴纶巾，谈笑之间，就把强敌的战船烧得灰飞烟灭。<br>如今我身临古战场神游往昔，可笑我有如此多的怀古柔情，竟如同未老先衰般鬓发斑白。<br>人生犹如一场梦，且洒一杯酒祭奠江上的明月。</p>
-<p>转自：<a target="_blank" rel="noopener" href="https://so.gushiwen.org/mingju/juv_2f2012ed6c86.aspx">https://so.gushiwen.org/mingju/juv_2f2012ed6c86.aspx</a></p>
 
       
     </div>
@@ -1282,7 +1288,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">176</span>
+          <span class="site-state-item-count">177</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
