@@ -22,8 +22,9 @@ https://www.bilibili.com/video/av8792900/
 <div style="width: 610px; ">
 <iframe  src='http://player.youku.com/embed/XMTYxNjA0MTk2NA==' style='' frameborder=0 'allowfullscreen'></iframe>
 </div>
-http://player.youku.com/embed/XMTYxNjA0MTk2NA== 
- 
+
+[优酷观看](http://player.youku.com/embed/XMTYxNjA0MTk2NA==)
+
 
 
 # 三、2:11（配音版） 
