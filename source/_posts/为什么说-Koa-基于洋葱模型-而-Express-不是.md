@@ -1,11 +1,13 @@
 ---
-title: '为什么说 Koa 基于洋葱模型,而 Express 不是'
+title: '为什么说 Koa 基于洋葱模型，而 Express 不是'
 categories:
   - 未分类
 date: 2022-04-06 19:12:48
 tags:
 ---
-最近看光哥的文章，说 Express 是洋葱模型。我记得 Koa 是洋葱模型，而且这是其与 Express 不同的地方之一。  
+最近看光哥的文章，说 Express 是洋葱模型。
+
+我记得 Koa 是洋葱模型，而且这是其与 Express 不同的地方之一。  
 于是搜索引擎搜索了一通，只有说 Koa 是洋葱模型的，没有说 Express 是洋葱模型的。  
 而且一般都会提供下面的代码证明 Koa 是洋葱模型。
 ```js
@@ -21,15 +23,15 @@ app.use(async (ctx, next) => {
 });
  
 app.use(async (ctx, next) => {
-  console.log('第二层洋葱 - 开始')
+  console.log('  第二层洋葱 - 开始')
   await next();
-  console.log('第二层洋葱 - 结束')
+  console.log('  第二层洋葱 - 结束')
 });
  
 app.use(async ctx => {
-  console.log('第三层洋葱 - 开始')
+  console.log('    第三层洋葱 - 开始')
   ctx.body = 'Hello World';
-  console.log('第三层洋葱 - 结束')
+  console.log('    第三层洋葱 - 结束')
 });
 
 app.listen(3000)
@@ -119,6 +121,7 @@ app.listen(3000);
        第三层洋葱 - 结束
    第二层洋葱 - 结束
 第一层洋葱 - 结束
+（返回请求给前端）
 ```
 
 ```js
@@ -154,5 +157,14 @@ app.listen(3000);
 第一层洋葱 - 开始
    第二层洋葱 - 开始
        第三层洋葱 - 开始
-           我的核心业务
+           我的核心业务（返回请求给前端）
 ```
+
+因为 Express 先返回数据，再`出洋葱`，`出洋葱`的过程就没有意义了，因为结果已经返回给前端了，在`出洋葱`的过程里已经无法改变了。  
+但 Koa 是在`出洋葱`之后返回请求，`进洋葱`，`出洋葱`都可以改变返回的请求。
+
+所以 Express 不算是洋葱模型。
+
+
+参考：
+[【Node】深入浅出 Koa 的洋葱模型](https://juejin.cn/post/7012031464237694983)
