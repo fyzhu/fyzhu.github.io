@@ -3333,6 +3333,28 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
       </tags>
   </entry>
   <entry>
+    <title>centos关闭防火墙</title>
+    <url>/2019/03/11/technology/centos%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99/</url>
+    <content><![CDATA[<p>参考文档<br>防火墙设置<br>查看所有打开的端口： firewall-cmd –zone=public –list-ports<br>启动： systemctl start firewalld<br>关闭： systemctl stop firewalld<br>查看状态： systemctl status firewalld<br>开机禁用  ： systemctl disable firewalld<br>开机启用  ： systemctl enable firewalld</p>
+<p>关闭selinux</p>
+<p>#修改配置文件 vi /etc/selinux/config</p>
+<p>#SELINUX=enforcing #注释掉</p>
+<p>#SELINUXTYPE=targeted #注释掉</p>
+<p>SELINUX=disabled #增加</p>
+<p>:wq! #保存退出</p>
+<p>#使配置立即生效 setenforce 0</p>
+<p>iptables</p>
+<p>参考文档<br><a href="https://www.cnblogs.com/moxiaoan/p/5683743.html">https://www.cnblogs.com/moxiaoan/p/5683743.html</a></p>
+]]></content>
+      <categories>
+        <category>technology</category>
+        <category>Server</category>
+      </categories>
+      <tags>
+        <tag>centos</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>centos服务自动启动</title>
     <url>/2019/12/24/technology/centos%E6%9C%8D%E5%8A%A1%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8/</url>
     <content><![CDATA[<h1 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h1><h2 id="service-命令"><a href="#service-命令" class="headerlink" title="service 命令"></a>service 命令</h2><p><code>service start/stop/status/restart servicename</code></p>
@@ -3358,28 +3380,6 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
       </categories>
   </entry>
   <entry>
-    <title>centos关闭防火墙</title>
-    <url>/2019/03/11/technology/centos%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99/</url>
-    <content><![CDATA[<p>参考文档<br>防火墙设置<br>查看所有打开的端口： firewall-cmd –zone=public –list-ports<br>启动： systemctl start firewalld<br>关闭： systemctl stop firewalld<br>查看状态： systemctl status firewalld<br>开机禁用  ： systemctl disable firewalld<br>开机启用  ： systemctl enable firewalld</p>
-<p>关闭selinux</p>
-<p>#修改配置文件 vi /etc/selinux/config</p>
-<p>#SELINUX=enforcing #注释掉</p>
-<p>#SELINUXTYPE=targeted #注释掉</p>
-<p>SELINUX=disabled #增加</p>
-<p>:wq! #保存退出</p>
-<p>#使配置立即生效 setenforce 0</p>
-<p>iptables</p>
-<p>参考文档<br><a href="https://www.cnblogs.com/moxiaoan/p/5683743.html">https://www.cnblogs.com/moxiaoan/p/5683743.html</a></p>
-]]></content>
-      <categories>
-        <category>technology</category>
-        <category>Server</category>
-      </categories>
-      <tags>
-        <tag>centos</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>微前端是什么</title>
     <url>/2022/06/25/technology/front-end/%E5%BE%AE%E5%89%8D%E7%AB%AF%E6%98%AF%E4%BB%80%E4%B9%88/</url>
     <content><![CDATA[<p>简单说，微前端就是把一个大的前端项目分解为多个小的前端项目。</p>
@@ -3403,11 +3403,11 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
     <url>/2022/07/30/technology/front-end/%E9%A1%B9%E7%9B%AE%E5%8D%87%E7%BA%A7es6/</url>
     <content><![CDATA[<p>本文主要记录 require 升级为 import 遇到的问题</p>
 <h2 id="dirname-is-not-defined-in-ES-module-scope"><a href="#dirname-is-not-defined-in-ES-module-scope" class="headerlink" title="__dirname is not defined in ES module scope"></a>__dirname is not defined in ES module scope</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> path <span class="keyword">from</span> <span class="string">&#x27;path&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123;fileURLToPath&#125; <span class="keyword">from</span> <span class="string">&#x27;url&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> __filename = <span class="title function_">fileURLToPath</span>(<span class="keyword">import</span>.<span class="property">meta</span>.<span class="property">url</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 👇️ &quot;/home/john/Desktop/javascript&quot;</span></span><br><span class="line"><span class="keyword">const</span> __dirname = path.<span class="title function_">dirname</span>(__filename);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;directory-name 👉️&#x27;</span>, __dirname);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 👇️ &quot;/home/borislav/Desktop/javascript/dist/index.html&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(path.<span class="title function_">join</span>(__dirname, <span class="string">&#x27;/dist&#x27;</span>, <span class="string">&#x27;index.html&#x27;</span>));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="import-json-file"><a href="#import-json-file" class="headerlink" title="import json file"></a>import json file</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> json <span class="keyword">from</span> <span class="string">&quot;./foo.json&quot;</span> assert &#123; <span class="attr">type</span>: <span class="string">&quot;json&quot;</span> &#125;;</span><br><span class="line"><span class="title function_">import</span>(<span class="string">&quot;foo.json&quot;</span>, &#123; <span class="attr">assert</span>: &#123; <span class="attr">type</span>: <span class="string">&quot;json&quot;</span> &#125; &#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="import-json-file"><a href="#import-json-file" class="headerlink" title="import json file"></a>import json file</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> json <span class="keyword">from</span> <span class="string">&quot;./foo.json&quot;</span> assert &#123; <span class="attr">type</span>: <span class="string">&quot;json&quot;</span> &#125;;</span><br><span class="line"><span class="keyword">import</span>(<span class="string">&quot;foo.json&quot;</span>, &#123; <span class="attr">assert</span>: &#123; <span class="attr">type</span>: <span class="string">&quot;json&quot;</span> &#125; &#125;);</span><br></pre></td></tr></table></figure>
 
 <h2 id="import-条件导入"><a href="#import-条件导入" class="headerlink" title="import 条件导入"></a>import 条件导入</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (condition) &#123; <span class="comment">// 报错</span></span><br><span class="line">  <span class="keyword">import</span> moduleA <span class="keyword">from</span> <span class="string">&#x27;./moduleA&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="import-函数"><a href="#import-函数" class="headerlink" title="import 函数"></a>import 函数</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">import</span>(<span class="string">&#x27;./moduleA .js&#x27;</span>)</span><br><span class="line">.<span class="title function_">then</span>(<span class="function"><span class="params">moduleA</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(moduleA);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(condition)&#123;</span><br><span class="line"> <span class="title function_">import</span>(<span class="string">&#x27;moduleA&#x27;</span>).<span class="title function_">then</span>(...);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+<h3 id="import-函数"><a href="#import-函数" class="headerlink" title="import 函数"></a>import 函数</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span>(<span class="string">&#x27;./moduleA .js&#x27;</span>)</span><br><span class="line">.<span class="title function_">then</span>(<span class="function"><span class="params">moduleA</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(moduleA);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(condition)&#123;</span><br><span class="line"> <span class="keyword">import</span>(<span class="string">&#x27;moduleA&#x27;</span>).<span class="title function_">then</span>(...);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>technology</category>
         <category>front-end</category>
@@ -3572,29 +3572,22 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
     <url>/2018/01/10/technology/front-end/css/%E7%BA%AFCSS%E7%BB%98%E5%88%B6%E4%B8%89%E8%A7%92%E5%BD%A2/</url>
     <content><![CDATA[<p>CSS三角形绘制方法，学会了这个，其它的也就简单。</p>
 <p>我们的网页因为 CSS 而呈现千变万化的风格。这一看似简单的样式语言在使用中非常灵活，只要你发挥创意就能实现很多比人想象不到的效果。特别是随着 CSS3 的广泛使用，更多新奇的 CSS 作品涌现出来。 今天给大家带来 CSS 三角形绘制方法 <img src="http://files.jb51.net/file_images/article/201310/201310290941121.jpg?201392994443" alt=""></p>
-<p>复制代码代码如下:</p>
-<p>#triangle-up { width: 0; height: 0; border-left: 50px solid transparent; border-right: 50px solid transparent; border-bottom: 100px solid red; }</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-up</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-left</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-right</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-bottom</span>: <span class="number">100px</span> solid red; &#125;</span><br></pre></td></tr></table></figure>
+
 <p><img src="http://files.jb51.net/file_images/article/201310/201310290941322.jpg?201392994757" alt=""></p>
-<p>复制代码代码如下:</p>
-<p>#triangle-down { width: 0; height: 0; border-left: 50px solid transparent; border-right: 50px solid transparent; border-top: 100px solid red; }</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-down</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-left</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-right</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-top</span>: <span class="number">100px</span> solid red; &#125;</span><br></pre></td></tr></table></figure>
 <p><img src="http://files.jb51.net/file_images/article/201310/201310290941433.jpg?201392994835" alt=""></p>
-<p>复制代码代码如下:</p>
-<p>#triangle-left { width: 0; height: 0; border-top: 50px solid transparent; border-right: 100px solid red; border-bottom: 50px solid transparent; }</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-left</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-top</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-right</span>: <span class="number">100px</span> solid red; <span class="attribute">border-bottom</span>: <span class="number">50px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
 <p><img src="http://files.jb51.net/file_images/article/201310/201310290941534.jpg?20139299495" alt=""></p>
-<p>复制代码代码如下:</p>
-<p>#triangle-right { width: 0; height: 0; border-top: 50px solid transparent; border-left: 100px solid red; border-bottom: 50px solid transparent; }</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-right</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-top</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-left</span>: <span class="number">100px</span> solid red; <span class="attribute">border-bottom</span>: <span class="number">50px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
 <p><img src="http://files.jb51.net/file_images/article/201310/201310290942025.jpg?201392994926" alt=""></p>
-<p>复制代码代码如下:</p>
-<p>#triangle-topleft { width: 0; height: 0; border-top: 100px solid red; border-right: 100px solid transparent; }</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-topleft</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-top</span>: <span class="number">100px</span> solid red; <span class="attribute">border-right</span>: <span class="number">100px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
 <p><img src="http://files.jb51.net/file_images/article/201310/201310290942136.jpg?201392994948" alt=""></p>
-<p>复制代码代码如下:</p>
-<p>#triangle-topright { width: 0; height: 0; border-top: 100px solid red; border-left: 100px solid transparent; }</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-topright</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-top</span>: <span class="number">100px</span> solid red; <span class="attribute">border-left</span>: <span class="number">100px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
 <p><img src="http://files.jb51.net/file_images/article/201310/201310290942227.jpg?20139299509" alt=""></p>
-<p>复制代码代码如下:</p>
-<p>#triangle-bottomleft { width: 0; height: 0; border-bottom: 100px solid red; border-right: 100px solid transparent; }</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-bottomleft</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-bottom</span>: <span class="number">100px</span> solid red; <span class="attribute">border-right</span>: <span class="number">100px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
 <p><img src="http://files.jb51.net/file_images/article/201310/201310290942328.jpg?201392995028" alt=""></p>
-<p>复制代码代码如下:</p>
-<p>#triangle-bottomright { width: 0; height: 0; border-bottom: 100px solid red; border-left: 100px solid transparent; }</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-bottomright</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-bottom</span>: <span class="number">100px</span> solid red; <span class="attribute">border-left</span>: <span class="number">100px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
 <p>转载自<a href="http://www.jb51.net/article/42513.htm">http://www.jb51.net/article/42513.htm</a></p>
 ]]></content>
       <categories>
