@@ -25,8 +25,8 @@ pug(jade)/EJS
 less/sass
 
 ## vue-router 
-手写路由 280-2-8
-vue.config.js
+vue-router 的使用 280-2-8
+vue.config.js 开启 vue compiler 版本
 
 ## express & koa
 178 trailer
