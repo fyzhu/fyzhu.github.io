@@ -14,8 +14,8 @@ vuejs
 reactjs (384electron)
 ReactNative
 nodejs
-python
-php/java
+~~python~~
+~~php/java~~
 flutter
 webpack 
 mongoDB 
