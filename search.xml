@@ -1728,7 +1728,7 @@ timeout(100).then((value) =&gt; &#123;
   <entry>
     <title>需要学习的知识</title>
     <url>/2017/08/25/the-khowledge-of-front-end-i-should-learn/</url>
-    <content><![CDATA[<h1 id="复习复习复习"><a href="#复习复习复习" class="headerlink" title="复习复习复习"></a>复习复习复习</h1><p>ES6<br>typescript 412<br>vuejs<br>reactjs (384electron)<br>ReactNative<br>nodejs<br>python<br>php/java<br>flutter<br>webpack<br>mongoDB<br>git<br>koa(express)<br>pug(jade)/EJS<br>less/sass</p>
+    <content><![CDATA[<h1 id="复习复习复习"><a href="#复习复习复习" class="headerlink" title="复习复习复习"></a>复习复习复习</h1><p>ES6<br>typescript 412<br>vuejs<br>reactjs (384electron)<br>ReactNative<br>nodejs<br><del>python</del><br><del>php/java</del><br>flutter<br>webpack<br>mongoDB<br>git<br>koa(express)<br>pug(jade)/EJS<br>less/sass</p>
 <h2 id="vue-router"><a href="#vue-router" class="headerlink" title="vue-router"></a>vue-router</h2><p>vue-router 的使用 280-2-8<br>vue.config.js 开启 vue compiler 版本</p>
 <h2 id="express-amp-koa"><a href="#express-amp-koa" class="headerlink" title="express &amp; koa"></a>express &amp; koa</h2><p>178 trailer<br>320 blog<br>342 lincms<br>354 restfull api</p>
 <p>express 中间件原理实现 320-10-15 blog<br>实现自己的koa2 218-11 mpvue</p>
