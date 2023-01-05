@@ -2942,6 +2942,7 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
     <title>到底什么是 peerDependencies？</title>
     <url>/2023/01/05/fe/peerDependencies/</url>
     <content><![CDATA[<p>在开发插件时使用 peerDependencies</p>
+<p>peerDependencies 是为了解决 插件依赖的核心库的版本和主项目依赖的核心库的版本 不一致的问题</p>
 <p>参考：<a href="https://nodejs.org/es/blog/npm/peer-dependencies/">Peer Dependencies</a></p>
 ]]></content>
       <categories>
@@ -3218,24 +3219,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </categories>
   </entry>
   <entry>
-    <title>centos安装ssl证书</title>
-    <url>/2017/09/28/technology/centosanzhuangsslzhengshu/</url>
-    <content><![CDATA[<p>一为apache启用ssl，首先我们需要为Apache安装mod_ssl模块提供TLS/SSL功能： https是通过mod_ssl实现的，因此检查并安装mod_ssl：</p>
-<p>1</p>
-<p>[iyunv@Centos ~]# ls /etc/httpd/modules/ | grep “mod_ssl”   #默认没有安装mod_ssl # yum list all mod_ssl   #查看mod_ssl的安装包信息 yum install -y mod_ssl  #安装mod_ssl</p>
-<p>检查mod_ssl是安装结果</p>
-<p>1 2</p>
-<p>rpm -qc mod_ssl /etc/httpd/conf.d/ssl.conf      #mod_ssl的配置文件存放位置</p>
-<p>接下来我们修改httpd的SSL配置</p>
-<p>1</p>
-<p>cd /etc/httpd/conf.d #进入HTTPD的SSL配置目录 vim ssl.conf #编辑SSL配置文件</p>
-<pre><code>转载至https://www.iyunv.com/thread-84322-1-1.html     总结： 1.安装mod_ssl模块 2.vim ssl.conf #编辑SSL配置文件 文件路径以及名称可能不一样 我的路径以及名称/etc/httpd/conf.d/ssl.conf</code></pre>]]></content>
-      <categories>
-        <category>technology</category>
-        <category>Server</category>
-      </categories>
-  </entry>
-  <entry>
     <title>centos下压缩解压.zip文件</title>
     <url>/2017/08/31/technology/centos-zip/</url>
     <content><![CDATA[<p>以下命令均在 /home 目录下操作</p>
@@ -3275,6 +3258,24 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       <tags>
         <tag>centos</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>centos安装ssl证书</title>
+    <url>/2017/09/28/technology/centosanzhuangsslzhengshu/</url>
+    <content><![CDATA[<p>一为apache启用ssl，首先我们需要为Apache安装mod_ssl模块提供TLS/SSL功能： https是通过mod_ssl实现的，因此检查并安装mod_ssl：</p>
+<p>1</p>
+<p>[iyunv@Centos ~]# ls /etc/httpd/modules/ | grep “mod_ssl”   #默认没有安装mod_ssl # yum list all mod_ssl   #查看mod_ssl的安装包信息 yum install -y mod_ssl  #安装mod_ssl</p>
+<p>检查mod_ssl是安装结果</p>
+<p>1 2</p>
+<p>rpm -qc mod_ssl /etc/httpd/conf.d/ssl.conf      #mod_ssl的配置文件存放位置</p>
+<p>接下来我们修改httpd的SSL配置</p>
+<p>1</p>
+<p>cd /etc/httpd/conf.d #进入HTTPD的SSL配置目录 vim ssl.conf #编辑SSL配置文件</p>
+<pre><code>转载至https://www.iyunv.com/thread-84322-1-1.html     总结： 1.安装mod_ssl模块 2.vim ssl.conf #编辑SSL配置文件 文件路径以及名称可能不一样 我的路径以及名称/etc/httpd/conf.d/ssl.conf</code></pre>]]></content>
+      <categories>
+        <category>technology</category>
+        <category>Server</category>
+      </categories>
   </entry>
   <entry>
     <title>centos搭建ftp</title>
