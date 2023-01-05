@@ -2939,6 +2939,16 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </tags>
   </entry>
   <entry>
+    <title>到底什么是 peerDependencies？</title>
+    <url>/2023/01/05/fe/peerDependencies/</url>
+    <content><![CDATA[<p>在开发插件时使用 peerDependencies</p>
+<p>参考：<a href="https://nodejs.org/es/blog/npm/peer-dependencies/">Peer Dependencies</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>自我价值感从何而来</title>
     <url>/2017/09/25/psychology/%E4%BD%8E%E8%87%AA%E6%88%91%E4%BB%B7%E5%80%BC/</url>
     <content><![CDATA[<p>我们很容易认为，一个人自我价值感高，是因为这个人够优秀，即他有很多优点和成就。一个人自我价值感低，是因为他的缺点与不足。这是一个最常见的误解。其实，我们很容易发现，自己身边的一些人，尽管外在条件看起来很优秀，但他就是自卑。这是因为，自我价值感的高低，尽管与外在的条件有些关系，但最主要的，还是源自获得的爱的多少。不管一个人外在条件多么出色，只要他曾有严重的爱的缺失，那么他一定会严重自卑。相反，不管一个人看似多么平常，只要他曾有充分的爱，那么他就会非常自信。看上去，自卑似乎是因为某方面的缺陷或缺点，但实质上，这是对自己不能获得爱的忧虑。 </p>
@@ -3208,6 +3218,24 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </categories>
   </entry>
   <entry>
+    <title>centos安装ssl证书</title>
+    <url>/2017/09/28/technology/centosanzhuangsslzhengshu/</url>
+    <content><![CDATA[<p>一为apache启用ssl，首先我们需要为Apache安装mod_ssl模块提供TLS/SSL功能： https是通过mod_ssl实现的，因此检查并安装mod_ssl：</p>
+<p>1</p>
+<p>[iyunv@Centos ~]# ls /etc/httpd/modules/ | grep “mod_ssl”   #默认没有安装mod_ssl # yum list all mod_ssl   #查看mod_ssl的安装包信息 yum install -y mod_ssl  #安装mod_ssl</p>
+<p>检查mod_ssl是安装结果</p>
+<p>1 2</p>
+<p>rpm -qc mod_ssl /etc/httpd/conf.d/ssl.conf      #mod_ssl的配置文件存放位置</p>
+<p>接下来我们修改httpd的SSL配置</p>
+<p>1</p>
+<p>cd /etc/httpd/conf.d #进入HTTPD的SSL配置目录 vim ssl.conf #编辑SSL配置文件</p>
+<pre><code>转载至https://www.iyunv.com/thread-84322-1-1.html     总结： 1.安装mod_ssl模块 2.vim ssl.conf #编辑SSL配置文件 文件路径以及名称可能不一样 我的路径以及名称/etc/httpd/conf.d/ssl.conf</code></pre>]]></content>
+      <categories>
+        <category>technology</category>
+        <category>Server</category>
+      </categories>
+  </entry>
+  <entry>
     <title>centos下压缩解压.zip文件</title>
     <url>/2017/08/31/technology/centos-zip/</url>
     <content><![CDATA[<p>以下命令均在 /home 目录下操作</p>
@@ -3247,24 +3275,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       <tags>
         <tag>centos</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>centos安装ssl证书</title>
-    <url>/2017/09/28/technology/centosanzhuangsslzhengshu/</url>
-    <content><![CDATA[<p>一为apache启用ssl，首先我们需要为Apache安装mod_ssl模块提供TLS/SSL功能： https是通过mod_ssl实现的，因此检查并安装mod_ssl：</p>
-<p>1</p>
-<p>[iyunv@Centos ~]# ls /etc/httpd/modules/ | grep “mod_ssl”   #默认没有安装mod_ssl # yum list all mod_ssl   #查看mod_ssl的安装包信息 yum install -y mod_ssl  #安装mod_ssl</p>
-<p>检查mod_ssl是安装结果</p>
-<p>1 2</p>
-<p>rpm -qc mod_ssl /etc/httpd/conf.d/ssl.conf      #mod_ssl的配置文件存放位置</p>
-<p>接下来我们修改httpd的SSL配置</p>
-<p>1</p>
-<p>cd /etc/httpd/conf.d #进入HTTPD的SSL配置目录 vim ssl.conf #编辑SSL配置文件</p>
-<pre><code>转载至https://www.iyunv.com/thread-84322-1-1.html     总结： 1.安装mod_ssl模块 2.vim ssl.conf #编辑SSL配置文件 文件路径以及名称可能不一样 我的路径以及名称/etc/httpd/conf.d/ssl.conf</code></pre>]]></content>
-      <categories>
-        <category>technology</category>
-        <category>Server</category>
-      </categories>
   </entry>
   <entry>
     <title>centos搭建ftp</title>

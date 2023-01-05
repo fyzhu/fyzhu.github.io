@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">177</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">178</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,122 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2018/01/10/technology/front-end/css/%E7%BA%AFCSS%E7%BB%98%E5%88%B6%E4%B8%89%E8%A7%92%E5%BD%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/01/10/technology/front-end/css/%E7%BA%AFCSS%E7%BB%98%E5%88%B6%E4%B8%89%E8%A7%92%E5%BD%A2/" class="post-title-link" itemprop="url">纯CSS绘制三角形（各种角度）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-01-10 11:12:49" itemprop="dateCreated datePublished" datetime="2018-01-10T11:12:49+00:00">2018-01-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/front-end/" itemprop="url" rel="index"><span itemprop="name">front-end</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/front-end/css/" itemprop="url" rel="index"><span itemprop="name">css</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2018/01/10/technology/front-end/css/%E7%BA%AFCSS%E7%BB%98%E5%88%B6%E4%B8%89%E8%A7%92%E5%BD%A2/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://www.zhuyunfeng.com/2018/01/10/technology/front-end/css/%E7%BA%AFCSS%E7%BB%98%E5%88%B6%E4%B8%89%E8%A7%92%E5%BD%A2/" class="cy_cmt_count" data-xid="2018/01/10/technology/front-end/css/纯CSS绘制三角形/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>CSS三角形绘制方法，学会了这个，其它的也就简单。</p>
+<p>我们的网页因为 CSS 而呈现千变万化的风格。这一看似简单的样式语言在使用中非常灵活，只要你发挥创意就能实现很多比人想象不到的效果。特别是随着 CSS3 的广泛使用，更多新奇的 CSS 作品涌现出来。 今天给大家带来 CSS 三角形绘制方法 <img src="http://files.jb51.net/file_images/article/201310/201310290941121.jpg?201392994443" alt=""></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#triangle-up</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-left</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-right</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-bottom</span>: <span class="number">100px</span> solid red; &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://files.jb51.net/file_images/article/201310/201310290941322.jpg?201392994757" alt=""></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#triangle-down</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-left</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-right</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-top</span>: <span class="number">100px</span> solid red; &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://files.jb51.net/file_images/article/201310/201310290941433.jpg?201392994835" alt=""></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#triangle-left</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-top</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-right</span>: <span class="number">100px</span> solid red; <span class="attribute">border-bottom</span>: <span class="number">50px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://files.jb51.net/file_images/article/201310/201310290941534.jpg?20139299495" alt=""></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#triangle-right</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-top</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-left</span>: <span class="number">100px</span> solid red; <span class="attribute">border-bottom</span>: <span class="number">50px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://files.jb51.net/file_images/article/201310/201310290942025.jpg?201392994926" alt=""></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#triangle-topleft</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-top</span>: <span class="number">100px</span> solid red; <span class="attribute">border-right</span>: <span class="number">100px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://files.jb51.net/file_images/article/201310/201310290942136.jpg?201392994948" alt=""></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#triangle-topright</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-top</span>: <span class="number">100px</span> solid red; <span class="attribute">border-left</span>: <span class="number">100px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://files.jb51.net/file_images/article/201310/201310290942227.jpg?20139299509" alt=""></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#triangle-bottomleft</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-bottom</span>: <span class="number">100px</span> solid red; <span class="attribute">border-right</span>: <span class="number">100px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://files.jb51.net/file_images/article/201310/201310290942328.jpg?201392995028" alt=""></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#triangle-bottomright</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-bottom</span>: <span class="number">100px</span> solid red; <span class="attribute">border-left</span>: <span class="number">100px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
+<p>转载自<a target="_blank" rel="noopener" href="http://www.jb51.net/article/42513.htm">http://www.jb51.net/article/42513.htm</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2017/11/30/caozaijietadezhongzifengzaiyaotadeyeziwomenzhanzhebushuohuajiushifenmeihao/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +357,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:53:59" itemprop="dateModified" datetime="2022-12-22T11:53:59+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -331,7 +447,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -424,7 +540,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -518,7 +634,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:53:59" itemprop="dateModified" datetime="2022-12-22T11:53:59+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -612,7 +728,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -726,7 +842,7 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:53:59" itemprop="dateModified" datetime="2022-12-22T11:53:59+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -816,7 +932,7 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -906,7 +1022,7 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1001,7 +1117,7 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1046,108 +1162,6 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
       
           <p>DELETE   语句每次删除一行，并在事务日志中为所删除的每行记录一项。<br>TRUNCATE   TABLE   通过释放存储表数据所用的数据页来删除数据，并且只在事务日志中记录页的释放。<br><strong>修改表名</strong><br>mysql&gt; alter table student rename person;<br>Query OK, 0 rows affected (0.03 sec)<br><strong>修改字段的数据类型</strong><br>mysql&gt; alter table person modify name varchar(20);<br>Query OK, 0 rows affected (0.18 sec) Records: 0 Duplicates: 0 Warnings: 0<br>此处modify后面的name为字段名，我们将原来的varchar(25)改为varchar(20)<br><strong>修改字段名</strong><br>mysql&gt; alter table person change stu_name name varchar(25);<br>Query OK, 0 rows affected (0.20 sec) Records: 0 Duplicates: 0 Warnings: 0</p>
 
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2017/09/28/technology/centosanzhuangsslzhengshu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/09/28/technology/centosanzhuangsslzhengshu/" class="post-title-link" itemprop="url">centos安装ssl证书</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2017-09-28 18:40:00" itemprop="dateCreated datePublished" datetime="2017-09-28T18:40:00+00:00">2017-09-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/technology/Server/" itemprop="url" rel="index"><span itemprop="name">Server</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2017/09/28/technology/centosanzhuangsslzhengshu/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://www.zhuyunfeng.com/2017/09/28/technology/centosanzhuangsslzhengshu/" class="cy_cmt_count" data-xid="2017/09/28/technology/centosanzhuangsslzhengshu/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>一为apache启用ssl，首先我们需要为Apache安装mod_ssl模块提供TLS/SSL功能： https是通过mod_ssl实现的，因此检查并安装mod_ssl：</p>
-<p>1</p>
-<p>[iyunv@Centos ~]# ls /etc/httpd/modules/ | grep “mod_ssl”   #默认没有安装mod_ssl # yum list all mod_ssl   #查看mod_ssl的安装包信息 yum install -y mod_ssl  #安装mod_ssl</p>
-<p>检查mod_ssl是安装结果</p>
-<p>1 2</p>
-<p>rpm -qc mod_ssl /etc/httpd/conf.d/ssl.conf      #mod_ssl的配置文件存放位置</p>
-<p>接下来我们修改httpd的SSL配置</p>
-<p>1</p>
-<p>cd /etc/httpd/conf.d #进入HTTPD的SSL配置目录 vim ssl.conf #编辑SSL配置文件</p>
-<pre><code>转载至https://www.iyunv.com/thread-84322-1-1.html     总结： 1.安装mod_ssl模块 2.vim ssl.conf #编辑SSL配置文件 文件路径以及名称可能不一样 我的路径以及名称/etc/httpd/conf.d/ssl.conf</code></pre>
       
     </div>
 
@@ -1231,7 +1245,7 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">177</span>
+          <span class="site-state-item-count">178</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1299,7 +1313,7 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

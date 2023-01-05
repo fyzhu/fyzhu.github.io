@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">177</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">178</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,118 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2022/04/06/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4-Koa-%E5%9F%BA%E4%BA%8E%E6%B4%8B%E8%91%B1%E6%A8%A1%E5%9E%8B-%E8%80%8C-Express-%E4%B8%8D%E6%98%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/06/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4-Koa-%E5%9F%BA%E4%BA%8E%E6%B4%8B%E8%91%B1%E6%A8%A1%E5%9E%8B-%E8%80%8C-Express-%E4%B8%8D%E6%98%AF/" class="post-title-link" itemprop="url">为什么说 Koa 基于洋葱模型，而 Express 不是</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-04-06 19:12:48" itemprop="dateCreated datePublished" datetime="2022-04-06T19:12:48+00:00">2022-04-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2022/04/06/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4-Koa-%E5%9F%BA%E4%BA%8E%E6%B4%8B%E8%91%B1%E6%A8%A1%E5%9E%8B-%E8%80%8C-Express-%E4%B8%8D%E6%98%AF/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://www.zhuyunfeng.com/2022/04/06/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4-Koa-%E5%9F%BA%E4%BA%8E%E6%B4%8B%E8%91%B1%E6%A8%A1%E5%9E%8B-%E8%80%8C-Express-%E4%B8%8D%E6%98%AF/" class="cy_cmt_count" data-xid="2022/04/06/为什么说-Koa-基于洋葱模型-而-Express-不是/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最近看光哥的文章，说 Express 是洋葱模型。</p>
+<p>我记得 Koa 是洋葱模型，而且这是其与 Express 不同的地方之一。<br>于是搜索引擎搜索了一通，只有说 Koa 是洋葱模型的，没有说 Express 是洋葱模型的。<br>而且一般都会提供下面的代码证明 Koa 是洋葱模型。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// koa-app.js</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> <span class="title class_">Koa</span> = <span class="built_in">require</span>(<span class="string">&#x27;koa2&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> <span class="title class_">Koa</span>();</span><br><span class="line"> </span><br><span class="line">app.<span class="title function_">use</span>(<span class="keyword">async</span> (ctx, next) =&gt; &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;第一层洋葱 - 开始&#x27;</span>)</span><br><span class="line">  <span class="keyword">await</span> <span class="title function_">next</span>();</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;第一层洋葱 - 结束&#x27;</span>)</span><br><span class="line">&#125;);</span><br><span class="line"> </span><br><span class="line">app.<span class="title function_">use</span>(<span class="keyword">async</span> (ctx, next) =&gt; &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;  第二层洋葱 - 开始&#x27;</span>)</span><br><span class="line">  <span class="keyword">await</span> <span class="title function_">next</span>();</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;  第二层洋葱 - 结束&#x27;</span>)</span><br><span class="line">&#125;);</span><br><span class="line"> </span><br><span class="line">app.<span class="title function_">use</span>(<span class="keyword">async</span> ctx =&gt; &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;    第三层洋葱 - 开始&#x27;</span>)</span><br><span class="line">  ctx.<span class="property">body</span> = <span class="string">&#x27;Hello World&#x27;</span>;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;    第三层洋葱 - 结束&#x27;</span>)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">listen</span>(<span class="number">3000</span>)</span><br></pre></td></tr></table></figure>
+<p>控制台打印如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">第一层洋葱 - 开始</span><br><span class="line">  第二层洋葱 - 开始</span><br><span class="line">    第三层洋葱 - 开始</span><br><span class="line">    第三层洋葱 - 结束</span><br><span class="line">  第二层洋葱 - 结束</span><br><span class="line">第一层洋葱 - 结束</span><br></pre></td></tr></table></figure>
+<p>看样子真像那么回事</p>
+<p>于是我用 Express 试了一下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">&quot;express&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> app = <span class="title function_">express</span>();</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">use</span>(<span class="function">(<span class="params">req, res, next</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;第一层洋葱 - 开始&#x27;</span>);</span><br><span class="line">  <span class="title function_">next</span>();</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;第一层洋葱 - 结束&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line">app.<span class="title function_">use</span>(<span class="function">(<span class="params">req, res, next</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;  第二层洋葱 - 开始&#x27;</span>);</span><br><span class="line">  <span class="title function_">next</span>();</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;  第二层洋葱 - 结束&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line">app.<span class="title function_">use</span>(<span class="function">(<span class="params">req, res, next</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;    第三层洋葱 - 开始&#x27;</span>);</span><br><span class="line">  <span class="title function_">next</span>();</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;    第三层洋葱 - 结束&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">listen</span>(<span class="number">3000</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>控制台打印和 koa 的例子是一样的<br>什么，难道 Express 也是洋葱模型</p>
+<p>其实，以上例子并不能说明 Koa 是洋葱模型，洋葱模型的关键是，在<code>请求返回之前</code>，你的请求是不是经过中间件两次，而且按照先进后出的顺序。</p>
+<p>Koa 模型<br>进洋葱 -&gt; 出洋葱 -&gt; 返回请求<br>Express 模型<br>进洋葱 -&gt; 返回请求 -&gt; 出洋葱</p>
+<p>以下代码才真正能体现 Koa 的洋葱模型</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">Koa</span> = <span class="built_in">require</span>(<span class="string">&quot;koa2&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> <span class="title class_">Koa</span>();</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">indent</span> = (<span class="params">n</span>) =&gt; <span class="keyword">new</span> <span class="title class_">Array</span>(n).<span class="title function_">join</span>(<span class="string">&quot;&amp;nbsp;&quot;</span>);</span><br><span class="line">app.<span class="title function_">use</span>(<span class="keyword">async</span> (ctx, next) =&gt; &#123;</span><br><span class="line">  ctx.<span class="property">body</span> = <span class="string">&quot;&lt;h3&gt;第一层洋葱 - 开始&lt;/h3&gt;&quot;</span>;</span><br><span class="line">  <span class="keyword">await</span> <span class="title function_">next</span>();</span><br><span class="line">  ctx.<span class="property">body</span> += <span class="string">&quot;&lt;h3&gt;第一层洋葱 - 结束&lt;/h3&gt;&quot;</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">use</span>(<span class="keyword">async</span> (ctx, next) =&gt; &#123;</span><br><span class="line">  ctx.<span class="property">body</span> += <span class="string">`&lt;h3&gt;<span class="subst">$&#123;indent(<span class="number">4</span>)&#125;</span>第二层洋葱 - 开始&lt;/h3&gt;`</span>;</span><br><span class="line">  <span class="keyword">await</span> <span class="title function_">next</span>();</span><br><span class="line">  ctx.<span class="property">body</span> += <span class="string">`&lt;h3&gt;<span class="subst">$&#123;indent(<span class="number">4</span>)&#125;</span>第二层洋葱 - 结束&lt;/h3&gt;`</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">use</span>(<span class="keyword">async</span> (ctx, next) =&gt; &#123;</span><br><span class="line">  ctx.<span class="property">body</span> += <span class="string">`&lt;h3&gt;<span class="subst">$&#123;indent(<span class="number">8</span>)&#125;</span>第三层洋葱 - 开始&lt;/h3&gt;`</span>;</span><br><span class="line">  <span class="title function_">next</span>();</span><br><span class="line">  ctx.<span class="property">body</span> += <span class="string">`&lt;h3&gt;<span class="subst">$&#123;indent(<span class="number">8</span>)&#125;</span>第三层洋葱 - 结束&lt;/h3&gt;`</span>;</span><br><span class="line">&#125;);</span><br><span class="line">app.<span class="title function_">use</span>(<span class="function">(<span class="params">ctx</span>) =&gt;</span> &#123;</span><br><span class="line">  ctx.<span class="property">body</span> += <span class="string">`&lt;h3&gt;<span class="subst">$&#123;indent(<span class="number">12</span>)&#125;</span>koa 核心业务&lt;/h3&gt;`</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">listen</span>(<span class="number">3000</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>浏览器显示结果</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">第一层洋葱 - 开始</span><br><span class="line">   第二层洋葱 - 开始</span><br><span class="line">       第三层洋葱 - 开始</span><br><span class="line">           koa 核心业务</span><br><span class="line">       第三层洋葱 - 结束</span><br><span class="line">   第二层洋葱 - 结束</span><br><span class="line">第一层洋葱 - 结束</span><br><span class="line">（返回请求给前端）</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">&quot;express&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> app = <span class="title function_">express</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">indent</span> = (<span class="params">n</span>) =&gt; <span class="keyword">new</span> <span class="title class_">Array</span>(n).<span class="title function_">join</span>(<span class="string">&quot;&amp;nbsp;&quot;</span>);</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">use</span>(<span class="function">(<span class="params">req, res, next</span>) =&gt;</span> &#123;</span><br><span class="line">  res.<span class="property">body</span> = <span class="string">&quot;&lt;h3&gt;第一层洋葱 - 开始&lt;/h3&gt;&quot;</span>;</span><br><span class="line">  <span class="title function_">next</span>();</span><br><span class="line">  res.<span class="property">body</span> += <span class="string">&quot;&lt;h3&gt;第一层洋葱 - 结束&lt;/h3&gt;&quot;</span>;</span><br><span class="line">&#125;);</span><br><span class="line">app.<span class="title function_">use</span>(<span class="function">(<span class="params">req, res, next</span>) =&gt;</span> &#123;</span><br><span class="line">  res.<span class="property">body</span> += <span class="string">`&lt;h3&gt;<span class="subst">$&#123;indent(<span class="number">4</span>)&#125;</span>第二层洋葱 - 开始&lt;/h3&gt;`</span>;</span><br><span class="line">  <span class="title function_">next</span>();</span><br><span class="line">  res.<span class="property">body</span> += <span class="string">`&lt;h3&gt;<span class="subst">$&#123;indent(<span class="number">4</span>)&#125;</span>第二层洋葱 - 结束&lt;/h3&gt;`</span>;</span><br><span class="line">&#125;);</span><br><span class="line">app.<span class="title function_">use</span>(<span class="function">(<span class="params">req, res, next</span>) =&gt;</span> &#123;</span><br><span class="line">  res.<span class="property">body</span> += <span class="string">`&lt;h3&gt;<span class="subst">$&#123;indent(<span class="number">8</span>)&#125;</span>第三层洋葱 - 开始&lt;/h3&gt;`</span>;</span><br><span class="line">  <span class="title function_">next</span>();</span><br><span class="line">  res.<span class="property">body</span> += <span class="string">`&lt;h3&gt;<span class="subst">$&#123;indent(<span class="number">8</span>)&#125;</span>第三层洋葱 - 结束&lt;/h3&gt;`</span>;</span><br><span class="line">&#125;);</span><br><span class="line">app.<span class="title function_">use</span>(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">  res.<span class="property">body</span> += <span class="string">`&lt;h3&gt;<span class="subst">$&#123;indent(<span class="number">12</span>)&#125;</span>我的核心业务&lt;/h3&gt;`</span>;</span><br><span class="line">  res.<span class="title function_">send</span>(res.<span class="property">body</span>);</span><br><span class="line">&#125;);</span><br><span class="line">app.<span class="title function_">listen</span>(<span class="number">3000</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>浏览器显示</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">第一层洋葱 - 开始</span><br><span class="line">   第二层洋葱 - 开始</span><br><span class="line">       第三层洋葱 - 开始</span><br><span class="line">           我的核心业务（返回请求给前端）</span><br></pre></td></tr></table></figure>
+
+<p>因为 Express 先返回数据，再<code>出洋葱</code>，<code>出洋葱</code>的过程就没有意义了，因为结果已经返回给前端了，在<code>出洋葱</code>的过程里已经无法改变了。<br>但 Koa 是在<code>出洋葱</code>之后返回请求，<code>进洋葱</code>，<code>出洋葱</code>都可以改变返回的请求。</p>
+<p>所以 Express 不算是洋葱模型。</p>
+<p>参考：<br><a target="_blank" rel="noopener" href="https://juejin.cn/post/7012031464237694983">【Node】深入浅出 Koa 的洋葱模型</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2022/03/29/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%A6%82%E4%BD%95%E8%A1%A8%E7%A4%BA%E5%B0%8F%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +353,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -347,7 +459,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -462,7 +574,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -565,7 +677,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -672,7 +784,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:53:59" itemprop="dateModified" datetime="2022-12-22T11:53:59+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -763,7 +875,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -858,7 +970,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:53:59" itemprop="dateModified" datetime="2022-12-22T11:53:59+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -947,7 +1059,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:53:59" itemprop="dateModified" datetime="2022-12-22T11:53:59+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1051,7 +1163,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1094,100 +1206,6 @@
 <p>语法高亮也是帮助我们不要打错命令的好帮手。</p>
 <p>第一步，进入 zsh 插件目录，并 clone 项目到此目录中：<br>cd “$ZSH_CUSTOM/plugins”<br>git clone <a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-syntax-highlighting.git">https://github.com/zsh-users/zsh-syntax-highlighting.git</a><br>git clone <a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-autosuggestions.git">https://github.com/zsh-users/zsh-autosuggestions.git</a><br>第二步，配置 .zshrc 文件<br>… 上面省略<br>plugins = (git zsh-autosuggestions zsh-syntax-highlighting)<br>… 下面省略<br>最后一步，让配置生效<br>zsh<br>完成！👍</p>
 <p>作者：万有引力万有<br>链接：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/d70f9c4cb47c">https://www.jianshu.com/p/d70f9c4cb47c</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2021/10/29/vscode-%E8%B0%83%E8%AF%95-js/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/29/vscode-%E8%B0%83%E8%AF%95-js/" class="post-title-link" itemprop="url">vscode 调试 js</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-10-29 17:09:53" itemprop="dateCreated datePublished" datetime="2021-10-29T17:09:53+00:00">2021-10-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2021/10/29/vscode-%E8%B0%83%E8%AF%95-js/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://www.zhuyunfeng.com/2021/10/29/vscode-%E8%B0%83%E8%AF%95-js/" class="cy_cmt_count" data-xid="2021/10/29/vscode-调试-js/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="调试-npm-script-命令"><a href="#调试-npm-script-命令" class="headerlink" title="调试 npm script 命令"></a>调试 npm script 命令</h3><p>注意：此为 configurations 中的一条配置，具体看下一条</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Launch via NPM&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;launch&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;runtimeExecutable&quot;</span><span class="punctuation">:</span> <span class="string">&quot;npm&quot;</span><span class="punctuation">,</span> <span class="comment">//runtimeExecutable表示要使用的运行时，默认为node，这里我们配置成了npm</span></span><br><span class="line">  <span class="attr">&quot;runtimeArgs&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;run-script&quot;</span><span class="punctuation">,</span> <span class="string">&quot;dev&quot;</span>    <span class="comment">//这里的dev就对应package.json中的scripts中的dev</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;port&quot;</span><span class="punctuation">:</span> <span class="number">9229</span>    <span class="comment">//这个端口是调试的端口，不是项目启动的端口</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="调试指定-js-文件"><a href="#调试指定-js-文件" class="headerlink" title="调试指定 js 文件"></a>调试指定 js 文件</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="comment">// Use IntelliSense to learn about possible attributes.</span></span><br><span class="line">  <span class="comment">// Hover to view descriptions of existing attributes.</span></span><br><span class="line">  <span class="comment">// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;configurations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;pwa-node&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;launch&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Launch Program&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;skipFiles&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;&lt;node_internals&gt;/**&quot;</span></span><br><span class="line">      <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;program&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;workspaceFolder&#125;/test/filelist.js&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="使用-nodemon-调试"><a href="#使用-nodemon-调试" class="headerlink" title="使用 nodemon 调试"></a>使用 nodemon 调试</h3><p>参考：<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/little-ab/p/11796952.html">https://www.cnblogs.com/little-ab/p/11796952.html</a></p>
 
       
     </div>
@@ -1272,7 +1290,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">177</span>
+          <span class="site-state-item-count">178</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1340,7 +1358,7 @@
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

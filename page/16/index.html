@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">177</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">178</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,108 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2017/09/28/technology/centosanzhuangsslzhengshu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/09/28/technology/centosanzhuangsslzhengshu/" class="post-title-link" itemprop="url">centos安装ssl证书</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-09-28 18:40:00" itemprop="dateCreated datePublished" datetime="2017-09-28T18:40:00+00:00">2017-09-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/Server/" itemprop="url" rel="index"><span itemprop="name">Server</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2017/09/28/technology/centosanzhuangsslzhengshu/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://www.zhuyunfeng.com/2017/09/28/technology/centosanzhuangsslzhengshu/" class="cy_cmt_count" data-xid="2017/09/28/technology/centosanzhuangsslzhengshu/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>一为apache启用ssl，首先我们需要为Apache安装mod_ssl模块提供TLS/SSL功能： https是通过mod_ssl实现的，因此检查并安装mod_ssl：</p>
+<p>1</p>
+<p>[iyunv@Centos ~]# ls /etc/httpd/modules/ | grep “mod_ssl”   #默认没有安装mod_ssl # yum list all mod_ssl   #查看mod_ssl的安装包信息 yum install -y mod_ssl  #安装mod_ssl</p>
+<p>检查mod_ssl是安装结果</p>
+<p>1 2</p>
+<p>rpm -qc mod_ssl /etc/httpd/conf.d/ssl.conf      #mod_ssl的配置文件存放位置</p>
+<p>接下来我们修改httpd的SSL配置</p>
+<p>1</p>
+<p>cd /etc/httpd/conf.d #进入HTTPD的SSL配置目录 vim ssl.conf #编辑SSL配置文件</p>
+<pre><code>转载至https://www.iyunv.com/thread-84322-1-1.html     总结： 1.安装mod_ssl模块 2.vim ssl.conf #编辑SSL配置文件 文件路径以及名称可能不一样 我的路径以及名称/etc/httpd/conf.d/ssl.conf</code></pre>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2017/09/28/technology/apache-peizhixunizhujisanzhongfangshi/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +343,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -366,7 +468,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -461,7 +563,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -597,7 +699,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:53:59" itemprop="dateModified" datetime="2022-12-22T11:53:59+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -687,7 +789,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -806,7 +908,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -909,7 +1011,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:53:59" itemprop="dateModified" datetime="2022-12-22T11:53:59+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1020,7 +1122,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1120,7 +1222,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:53:59" itemprop="dateModified" datetime="2022-12-22T11:53:59+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1162,113 +1264,6 @@
           <h1 id="钗头凤·红酥手"><a href="#钗头凤·红酥手" class="headerlink" title="钗头凤·红酥手"></a>钗头凤·红酥手</h1><p>【作者】陆游 【朝代】宋</p>
 <p>红酥手。黄滕酒。满城春色宫墙柳。东风恶。欢情薄。一怀愁绪，几年离索。错错错。</p>
 <p>春如旧。人空瘦。泪痕红浥鲛绡透。桃花落。闲池阁。山盟虽在，锦书难托。莫莫莫。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2017/09/18/php-urlcanshuhuoqufangshidesizhonglizi/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/09/18/php-urlcanshuhuoqufangshidesizhonglizi/" class="post-title-link" itemprop="url">PHP URL参数获取方式的四种例子</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2017-09-18 13:32:54" itemprop="dateCreated datePublished" datetime="2017-09-18T13:32:54+00:00">2017-09-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/technology/back-end/" itemprop="url" rel="index"><span itemprop="name">back-end</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2017/09/18/php-urlcanshuhuoqufangshidesizhonglizi/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://www.zhuyunfeng.com/2017/09/18/php-urlcanshuhuoqufangshidesizhonglizi/" class="cy_cmt_count" data-xid="2017/09/18/php-urlcanshuhuoqufangshidesizhonglizi/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>这篇文章主要介绍了PHP URL参数获取方式的四种例子,php url参数解析的4种方法,需要的朋友可以参考下</p>
-<p>在已知URL参数的情况下，我们可以根据自身情况采用$_GET来获取相应的参数信息（$_GET[‘name’]）;那，在未知情况下如何获取到URL上的参数信息呢？ </p>
-<h2 id="利用-SERVER内置数组变量"><a href="#利用-SERVER内置数组变量" class="headerlink" title="利用$_SERVER内置数组变量"></a>利用$_SERVER内置数组变量</h2><p>相对较为原始的$_SERVER[‘QUERY_STRING’]来获取，URL的参数，通常使用这个变量返回的会是类似这样的数据：name=tank&amp;sex=1 如果需要包含文件名的话可以使用$_SERVER[“REQUEST_URI”](返回类似：/index.php?name=tank&amp;sex=1) </p>
-<h2 id="利用pathinfo内置函数"><a href="#利用pathinfo内置函数" class="headerlink" title="利用pathinfo内置函数"></a>利用pathinfo内置函数</h2><p>复制代码代码如下:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php $test = pathinfo(&quot;http://localhost/index.php&quot;); print_r($test); /* 结果如下 Array ( \[dirname\] =&gt; http://localhost //url的路径 \[basename\] =&gt; index.php  //完整文件名 \[extension\] =&gt; php  //文件名后缀 \[filename\] =&gt; index //文件名 ) */ ?&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="利用parse-url内置函数"><a href="#利用parse-url内置函数" class="headerlink" title="利用parse_url内置函数"></a>利用parse_url内置函数</h2><p>复制代码代码如下:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php $test = parse\_url(&quot;http://localhost/index.php?name=tank&amp;sex=1#top&quot;); print\_r($test); /* 结果如下 Array ( \[scheme\] =&gt; http //使用什么协议 \[host\] =&gt; localhost //主机名 \[path\] =&gt; /index.php //路径 \[query\] =&gt; name=tank&amp;sex=1 // 所传的参数 \[fragment\] =&gt; top //后面根的锚点 ) */ ?&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="利用basename内置函数"><a href="#利用basename内置函数" class="headerlink" title="利用basename内置函数"></a>利用basename内置函数</h2><p>复制代码代码如下:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php $test = basename(&quot;http://localhost/index.php?name=tank&amp;sex=1#top&quot;); echo $test; /* 结果如下 index.php?name=tank&amp;sex=1#top */ ?&gt;</span><br></pre></td></tr></table></figure>
-<p>另外，还有就是自己通过正则匹配的处理方式来获取需要的值了。这种方式较为精确，效率暂不考虑。。。 下面拓展实践下正则处理方式：</p>
-<p>复制代码代码如下:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php preg\_match\_all(&quot;/(\\w+=\\w+)(#\\w+)?/i&quot;,&quot;http://localhost/index.php?name=tank&amp;sex=1#top&quot;,$match); print_r($match); /* 结果如下 Array ( \[0\] =&gt; Array ( \[0\] =&gt; name=tank \[1\] =&gt; sex=1#top ) \[1\] =&gt; Array ( \[0\] =&gt; name=tank \[1\] =&gt; sex=1 ) \[2\] =&gt; Array ( \[0\] =&gt; \[1\] =&gt; #top ) ) */ ?&gt;</span><br></pre></td></tr></table></figure>
-<p>补充 函数dirname() 路途漫漫…还有待继续挖掘… </p>
-<p>转载至<a target="_blank" rel="noopener" href="http://www.jb51.net/article/47396.htm">http://www.jb51.net/article/47396.htm</a></p>
 
       
     </div>
@@ -1353,7 +1348,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">177</span>
+          <span class="site-state-item-count">178</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1421,7 +1416,7 @@
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

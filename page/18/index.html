@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">177</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">178</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,112 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2017/08/31/technology/front-end/javascript/npm-initzhixingkazhu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/08/31/technology/front-end/javascript/npm-initzhixingkazhu/" class="post-title-link" itemprop="url">npm list -g报错</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-08-31 16:05:29" itemprop="dateCreated datePublished" datetime="2017-08-31T16:05:29+00:00">2017-08-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/front-end/" itemprop="url" rel="index"><span itemprop="name">front-end</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2017/08/31/technology/front-end/javascript/npm-initzhixingkazhu/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://www.zhuyunfeng.com/2017/08/31/technology/front-end/javascript/npm-initzhixingkazhu/" class="cy_cmt_count" data-xid="2017/08/31/technology/front-end/javascript/npm-initzhixingkazhu/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>是因为prefix没有设置导致的。<br>在安装完nodejs后，通过npm下载全局模块默认安装到以下目录：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\_username_\AppData\Roaming\npm</span><br></pre></td></tr></table></figure>
+
+<p>运行下面的命令设置全局模块存放路径：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set prefix &quot;C:\Users\_username_&quot;</span><br></pre></td></tr></table></figure>
+
+
+<p>或者修改.npmrc文件，默认在 <code>C:\Users\_username_</code> 下</p>
+<p>将默认值改为： </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">prefix=C:\Users\_username_ </span><br></pre></td></tr></table></figure>
+<p>注意斜杠\ </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set prefix C:/Users/_username_</span><br></pre></td></tr></table></figure>
+<p>不加引号的话需要写成右斜杠，最好不要用有空格的文件夹</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2017/08/31/technology/centos-chmod/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +347,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -336,7 +442,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -458,7 +564,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:53:59" itemprop="dateModified" datetime="2022-12-22T11:53:59+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -550,7 +656,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -640,7 +746,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -738,7 +844,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -833,7 +939,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-22 11:54:00" itemprop="dateModified" datetime="2022-12-22T11:54:00+00:00">2022-12-22</time>
+                <time title="修改时间：2023-01-05 03:17:07" itemprop="dateModified" datetime="2023-01-05T03:17:07+00:00">2023-01-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -993,7 +1099,7 @@ timeout(100).then((value) =&gt; &#123;
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">177</span>
+          <span class="site-state-item-count">178</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1061,7 +1167,7 @@ timeout(100).then((value) =&gt; &#123;
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
