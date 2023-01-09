@@ -53,11 +53,13 @@ npm version major
 ### 常见报错
 #### 401
 如果提示 `401 Unauthorized - GET https://registry.npmjs.org/-/whoami`，请先登录
+
 #### 403
 `403 Forbidden - PUT https://registry.npmjs.org/xxxx - You do not have permission to publish "xxx"`
 可能包名冲突
 1. 更换包名
 2. 添加 scope，如：`@fyzhu/xxx`
+
 #### 402
 `402 Payment Required - PUT https://registry.npmjs.org/xxx - You must sign up for private packages`
 发私有包需要付费，可以发公共包
