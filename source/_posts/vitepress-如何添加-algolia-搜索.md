@@ -27,6 +27,7 @@ DocSearch 申请条件
 1. 你的网站可以公开访问
 2. 你的网站是开源项目的技术文档或技术博客
 3. 你是此网站的所有者
+   
 ## 注册 algolia 账号
 [algolia 官网](https://www.algolia.com/)
 
