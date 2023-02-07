@@ -36,7 +36,8 @@ git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)…​]
 git remote add origin git@xxx.com:/home/git/test.git
 ```
 
-## 检查当前文件状态 
+## status
+检查当前文件状态 
 ```
 git status
 git status -s
@@ -44,9 +45,11 @@ git status -s
 
 ## git diff
 
-## 移除文件
+## rm
+移除文件
 git rm
-## 移动文件
+## mv
+移动文件
 git mv
 相当于
 ```
@@ -129,11 +132,17 @@ git push -f origin master
 However, you should avoid doing this if anyone else is working with your remote repository and has pulled your changes.
 
 In that case, it would be better to `revert` the commits that you don't want, then pushing as normal.
-## 修改已提交的commit
+## 修改已提交的 commit
+### 修改最新的 commit
 ```
 git commit --amend
 git commit --amend --reset-author
+git commit --amend --reset-author --no-edit
 ```
+### 修改任意一条 commit
+git rebase
+[juejin](https://juejin.cn/post/6844903806224826375)
+[github](https://docs.github.com/en/get-started/using-git/about-git-rebase#an-example-of-using-git-rebase)
 ## 修改配置信息
 ```
 git config --global --list
