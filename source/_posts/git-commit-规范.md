@@ -14,21 +14,21 @@ tags: git
 ### type
 用于说明 commit 的类别，只允许使用下面7个标识。
 
-feat：新功能（feature）
-fix：修补bug
-docs：文档（documentation）
-style： 格式 不影响代码含义的改动，例如去掉空格、改变缩进、增删分号
-build:  构造工具的或者外部依赖的改动，例如webpack，npm
-refactor：重构（即不是新增功能，也不是修改bug的代码变动）
-revert: 执行git revert打印的message
-test：增加测试
-perf: 提高性能的改动
-ci: 与CI（持续集成服务）有关的改动
-chore：构建过程或辅助工具的变动
-如果type为feat和fix，则该 commit 将肯定出现在 Change log 之中。
+feat：新功能（feature）  
+fix：修补 bug  
+docs：文档（documentation）  
+style：格式 不影响代码含义的改动，例如去掉空格、改变缩进、增删分号  
+refactor：重构（即不是新增功能，也不是修改 bug 的代码变动）  
+test：增加测试  
+chore：构建过程或辅助工具的变动  
+build：构造工具的或者外部依赖的改动，例如 webpack，npm  
+revert：执行 git revert 打印的 message  
+perf：提高性能的改动  
+ci：与CI（持续集成服务）有关的改动  
+如果 type 为 feat 和 fix，则该 commit 将肯定出现在 Change log 之中。
 
 ### subject
-subject是 commit 目的的简短描述，不超过50个字符，且结尾不加句号（.）。
+subject 是 commit 目的的简短描述，不超过50个字符，且结尾不加句号（.）。
 ————————————————
 版权声明：本文为CSDN博主「行者向阳」的原创文章，遵循CC 4.0 BY-SA版权协议。
 原文链接：https://blog.csdn.net/y491887095/java/article/details/80594043
