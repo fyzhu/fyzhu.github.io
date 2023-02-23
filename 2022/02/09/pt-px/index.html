@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://images2015.cnblogs.com/blog/984702/201704/984702-20170412161418626-799396908.png">
 <meta property="og:image" content="https://images2015.cnblogs.com/blog/984702/201704/984702-20170412163336783-427220997.png">
 <meta property="article:published_time" content="2022-02-09T16:39:22.000Z">
-<meta property="article:modified_time" content="2023-02-23T08:31:51.117Z">
+<meta property="article:modified_time" content="2023-02-23T10:29:05.783Z">
 <meta property="article:author" content="Yvan Zhu">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190612152430172.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3h1ZWxpXzIwMTc=,size_16,color_FFFFFF,t_70">
@@ -249,7 +249,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-02-23 08:31:51" itemprop="dateModified" datetime="2023-02-23T08:31:51+00:00">2023-02-23</time>
+                <time title="修改时间：2023-02-23 10:29:05" itemprop="dateModified" datetime="2023-02-23T10:29:05+00:00">2023-02-23</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -268,13 +268,11 @@
       <span class="post-meta-item-icon">
         <i class="far fa-comment"></i>
       </span>
-      <span class="post-meta-item-text">Changyan：</span>
+      <span class="post-meta-item-text">Disqus：</span>
     
-    
-      <a title="changyan" href="/2022/02/09/pt-px/#SOHUCS" itemprop="discussionUrl">
-        <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2022/02/09/pt-px/" itemprop="commentCount"></span>
-      </a>
-    
+    <a title="disqus" href="/2022/02/09/pt-px/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/02/09/pt-px/" itemprop="commentCount"></span>
+    </a>
   </span>
   
   
@@ -321,7 +319,7 @@
     
     
         <div class="reward-container">
-  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <div>坚持技术分享，您的支持将鼓励我继续创作！</div>
   <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
     打赏
   </button>
@@ -399,7 +397,9 @@
           
     
   <div class="comments">
-    <div id="SOHUCS"></div>
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
   </div>
   
 
@@ -592,19 +592,36 @@
 
   
 
-  <script>
-  NexT.utils.loadComments(document.querySelector('#SOHUCS'), () => {
-    var appid = 'cyup5ie1m';
-    var conf = '79843ab1b1f4c04ea9291de4a0446c13';
-    var width = window.innerWidth || document.documentElement.clientWidth;
-    if (width < 960) {
-      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://yunfeng.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "http://www.zhuyunfeng.com/2022/02/09/pt-px/";
+    this.page.identifier = "2022/02/09/pt-px/";
+    this.page.title = "Pixel";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
     } else {
-      var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});
+      var d = document, s = d.createElement('script');
+      s.src = 'https://yunfeng.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
     }
   });
-  </script>
-  <script src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+</script>
 
 </body>
 </html>

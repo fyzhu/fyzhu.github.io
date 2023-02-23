@@ -28,7 +28,7 @@
 <meta property="og:description" content="01 我家楼上一哥们特别好玩，他最近读了热门文章《阶层上升通道的大门即将关闭》后， 便经常开长辈们玩笑。 爷爷来玩，他就怼爷爷： “你当年干嘛去了？咋不参加红军？ 要是你当年参军，我家至于这样吗？” 爸爸来玩，他就怼爸爸： “你当年干嘛去了？咋不下海创业呢？” 要是当年你下海，我家至于这样吗？” 前几天，我在电梯里碰到他， 他感叹：“现在阶层固化，寒门再难出贵子了。” 寒门难以出贵子，这倒是事实。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-01-25T15:54:04.000Z">
-<meta property="article:modified_time" content="2023-02-23T08:31:51.117Z">
+<meta property="article:modified_time" content="2023-02-23T10:29:05.783Z">
 <meta property="article:author" content="Yvan Zhu">
 <meta name="twitter:card" content="summary">
 
@@ -245,7 +245,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-02-23 08:31:51" itemprop="dateModified" datetime="2023-02-23T08:31:51+00:00">2023-02-23</time>
+                <time title="修改时间：2023-02-23 10:29:05" itemprop="dateModified" datetime="2023-02-23T10:29:05+00:00">2023-02-23</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -264,13 +264,11 @@
       <span class="post-meta-item-icon">
         <i class="far fa-comment"></i>
       </span>
-      <span class="post-meta-item-text">Changyan：</span>
+      <span class="post-meta-item-text">Disqus：</span>
     
-    
-      <a title="changyan" href="/2018/01/25/nihetoudengcangdejulichadebuzhishiqianzhuanzai/#SOHUCS" itemprop="discussionUrl">
-        <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/01/25/nihetoudengcangdejulichadebuzhishiqianzhuanzai/" itemprop="commentCount"></span>
-      </a>
-    
+    <a title="disqus" href="/2018/01/25/nihetoudengcangdejulichadebuzhishiqianzhuanzai/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/01/25/nihetoudengcangdejulichadebuzhishiqianzhuanzai/" itemprop="commentCount"></span>
+    </a>
   </span>
   
   
@@ -316,7 +314,7 @@
     
     
         <div class="reward-container">
-  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <div>坚持技术分享，您的支持将鼓励我继续创作！</div>
   <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
     打赏
   </button>
@@ -394,7 +392,9 @@
           
     
   <div class="comments">
-    <div id="SOHUCS"></div>
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
   </div>
   
 
@@ -586,19 +586,36 @@
 
   
 
-  <script>
-  NexT.utils.loadComments(document.querySelector('#SOHUCS'), () => {
-    var appid = 'cyup5ie1m';
-    var conf = '79843ab1b1f4c04ea9291de4a0446c13';
-    var width = window.innerWidth || document.documentElement.clientWidth;
-    if (width < 960) {
-      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://yunfeng.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "http://www.zhuyunfeng.com/2018/01/25/nihetoudengcangdejulichadebuzhishiqianzhuanzai/";
+    this.page.identifier = "2018/01/25/nihetoudengcangdejulichadebuzhishiqianzhuanzai/";
+    this.page.title = "你和头等舱的距离，差的不只是钱（转载）";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
     } else {
-      var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});
+      var d = document, s = d.createElement('script');
+      s.src = 'https://yunfeng.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
     }
   });
-  </script>
-  <script src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+</script>
 
 </body>
 </html>
