@@ -163,6 +163,9 @@ reset 如果不加参数，那么默认使用 `--mixed` 参数。它的行为是
 ## git tag
 ### 查看
 git tag
+
+### 切换
+git checkout xxx
 ### 增加
 ```
 git tag v0.0.1  
