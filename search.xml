@@ -477,6 +477,7 @@
 <h3 id="hard"><a href="#hard" class="headerlink" title="hard"></a>hard</h3><p>重置stage区和工作目录</p>
 <h3 id="soft"><a href="#soft" class="headerlink" title="soft"></a>soft</h3><p>保留工作目录，并把重置 HEAD 所带来的新的差异放进暂存区</p>
 <h2 id="git-tag"><a href="#git-tag" class="headerlink" title="git tag"></a>git tag</h2><h3 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h3><p>git tag</p>
+<h3 id="切换"><a href="#切换" class="headerlink" title="切换"></a>切换</h3><p>git checkout xxx</p>
 <h3 id="增加"><a href="#增加" class="headerlink" title="增加"></a>增加</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git tag v0.0.1  </span><br><span class="line">git push origin v0.0.1</span><br></pre></td></tr></table></figure>
 <h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git tag -d v0.0.1  </span><br><span class="line">git push origin --delete v0.0.1</span><br><span class="line">git push origin --delete heads/v0.0.1 <span class="comment"># tag 和 branch 同名</span></span><br></pre></td></tr></table></figure>
 
