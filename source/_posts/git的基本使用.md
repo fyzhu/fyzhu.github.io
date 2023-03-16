@@ -174,8 +174,8 @@ git push origin v0.0.1
 ### 删除
 ```bash
 git tag -d v0.0.1  
-git push origin --delete v0.0.1
-git push origin --delete heads/v0.0.1 # tag 和 branch 同名
+git push origin -d v0.0.1
+git push origin -d heads/v0.0.1 # tag 和 branch 同名
 ```
 
 ## 参考
