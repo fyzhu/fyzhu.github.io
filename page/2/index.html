@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">178</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">179</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,114 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2022/05/16/postMessage/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/16/postMessage/" class="post-title-link" itemprop="url">postMessage</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-05-16 22:31:06" itemprop="dateCreated datePublished" datetime="2022-05-16T22:31:06+00:00">2022-05-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-06-16 10:54:42" itemprop="dateModified" datetime="2023-06-16T10:54:42+00:00">2023-06-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2022/05/16/postMessage/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/05/16/postMessage/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>postMessage 可用于解决以下方面的问题：</p>
+<ol>
+<li>页面和其打开的新窗口的数据传递</li>
+<li>页面与嵌套的 iframe 消息传递</li>
+<li>多窗口之间消息传递</li>
+</ol>
+<h2 id="发送"><a href="#发送" class="headerlink" title="发送"></a>发送</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">otherWindow.<span class="title function_">postMessage</span>(message, targetOrigin, [transfer]);</span><br></pre></td></tr></table></figure>
+<p>otherWindow</p>
+<p>其他窗口的一个引用，比如 iframe 的 contentWindow 属性、执行 window.open 返回的窗口对象、或者是命名过或数值索引的 window.frames。</p>
+<p>message</p>
+<p>要发送的数据。它将会被结构化克隆算法序列化，所以无需自己序列化（部分低版本浏览器只支持字符串，所以发送的数据最好用JSON.stringify() 序列化）。</p>
+<p>targetOrigin</p>
+<p>通过 targetOrigin 属性来指定哪些窗口能接收到消息事件，其值可以是字符串“*”（表示无限制）或者一个 URI（如果要指定和当前窗口同源的话可设置为”/“）。在发送消息的时候，如果目标窗口的协议、主机地址或端口号这三者的任意一项不匹配 targetOrigin 提供的值，那么消息就不会发送。</p>
+<h2 id="接收"><a href="#接收" class="headerlink" title="接收"></a>接收</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;message&quot;</span>, <span class="function">(<span class="params">event</span>)=&gt;</span>&#123;</span><br><span class="line">   <span class="keyword">var</span> origin = event.<span class="property">origin</span>;</span><br><span class="line">   <span class="comment">// 通常，onmessage()事件处理程序应当首先检测其中的origin属性，忽略来自未知源的消息</span></span><br><span class="line">   <span class="keyword">if</span> (origin !== <span class="string">&quot;http://example.org:8080&quot;</span>)</span><br><span class="line">     <span class="keyword">return</span>;</span><br><span class="line">   <span class="comment">// ...</span></span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<p>event 的属性有：</p>
+<ul>
+<li>data: 从其他 window 传递过来的数据副本。 </li>
+<li>origin: 调用 postMessage 时，消息发送窗口的 origin。例如：“<a href="http://example.com:8080”。">http://example.com:8080”。</a></li>
+<li>source: 对发送消息的窗口对象的引用。可以使用此来在具有不同 origin 的两个窗口之间建立双向数据通信。 </li>
+</ul>
+<p>————————————————<br>版权声明：本文为CSDN博主「huangpb0624」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/huangpb123/article/details/83692019">https://blog.csdn.net/huangpb123/article/details/83692019</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2022/04/06/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4-Koa-%E5%9F%BA%E4%BA%8E%E6%B4%8B%E8%91%B1%E6%A8%A1%E5%9E%8B-%E8%80%8C-Express-%E4%B8%8D%E6%98%AF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +349,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-16 05:49:50" itemprop="dateModified" datetime="2023-03-16T05:49:50+00:00">2023-03-16</time>
+                <time title="修改时间：2023-06-16 10:54:42" itemprop="dateModified" datetime="2023-06-16T10:54:42+00:00">2023-06-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -351,7 +459,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-16 05:49:50" itemprop="dateModified" datetime="2023-03-16T05:49:50+00:00">2023-03-16</time>
+                <time title="修改时间：2023-06-16 10:54:42" itemprop="dateModified" datetime="2023-06-16T10:54:42+00:00">2023-06-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -455,7 +563,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-16 05:49:50" itemprop="dateModified" datetime="2023-03-16T05:49:50+00:00">2023-03-16</time>
+                <time title="修改时间：2023-06-16 10:54:42" itemprop="dateModified" datetime="2023-06-16T10:54:42+00:00">2023-06-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -568,7 +676,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-16 05:49:50" itemprop="dateModified" datetime="2023-03-16T05:49:50+00:00">2023-03-16</time>
+                <time title="修改时间：2023-06-16 10:54:42" itemprop="dateModified" datetime="2023-06-16T10:54:42+00:00">2023-06-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -669,7 +777,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-16 05:49:50" itemprop="dateModified" datetime="2023-03-16T05:49:50+00:00">2023-03-16</time>
+                <time title="修改时间：2023-06-16 10:54:42" itemprop="dateModified" datetime="2023-06-16T10:54:42+00:00">2023-06-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -774,7 +882,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-16 05:49:50" itemprop="dateModified" datetime="2023-03-16T05:49:50+00:00">2023-03-16</time>
+                <time title="修改时间：2023-06-16 10:54:42" itemprop="dateModified" datetime="2023-06-16T10:54:42+00:00">2023-06-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -863,7 +971,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-16 05:49:50" itemprop="dateModified" datetime="2023-03-16T05:49:50+00:00">2023-03-16</time>
+                <time title="修改时间：2023-06-16 10:54:42" itemprop="dateModified" datetime="2023-06-16T10:54:42+00:00">2023-06-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -956,7 +1064,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-16 05:49:50" itemprop="dateModified" datetime="2023-03-16T05:49:50+00:00">2023-03-16</time>
+                <time title="修改时间：2023-06-16 10:54:42" itemprop="dateModified" datetime="2023-06-16T10:54:42+00:00">2023-06-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1043,7 +1151,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-16 05:49:50" itemprop="dateModified" datetime="2023-03-16T05:49:50+00:00">2023-03-16</time>
+                <time title="修改时间：2023-06-16 10:54:42" itemprop="dateModified" datetime="2023-06-16T10:54:42+00:00">2023-06-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1095,97 +1203,6 @@
 </ul>
 </blockquote>
 <h2 id="第二级-–-感觉良好"><a href="#第二级-–-感觉良好" class="headerlink" title="第二级 – 感觉良好"></a>第二级 – 感觉良好</h2><p>参考：<br><a target="_blank" rel="noopener" href="https://coolshell.cn/articles/5426.html">https://coolshell.cn/articles/5426.html</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2021/11/25/zsh%E6%8F%92%E4%BB%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/11/25/zsh%E6%8F%92%E4%BB%B6/" class="post-title-link" itemprop="url">zsh 自动补全、语法高亮插件</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-11-25 17:53:38" itemprop="dateCreated datePublished" datetime="2021-11-25T17:53:38+00:00">2021-11-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-16 05:49:50" itemprop="dateModified" datetime="2023-03-16T05:49:50+00:00">2023-03-16</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2021/11/25/zsh%E6%8F%92%E4%BB%B6/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/11/25/zsh插件/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>在日常使用 zsh 的过程中，如果需要打很多命令，会很麻烦，除了可以使用ctrl+r 的方式来查询历史命令，还可以通过插件的方式来自动匹配命令，提高效率。</p>
-<p>语法高亮也是帮助我们不要打错命令的好帮手。</p>
-<p>第一步，进入 zsh 插件目录，并 clone 项目到此目录中：<br>cd “$ZSH_CUSTOM/plugins”<br>git clone <a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-syntax-highlighting.git">https://github.com/zsh-users/zsh-syntax-highlighting.git</a><br>git clone <a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-autosuggestions.git">https://github.com/zsh-users/zsh-autosuggestions.git</a><br>第二步，配置 .zshrc 文件<br>… 上面省略<br>plugins = (git zsh-autosuggestions zsh-syntax-highlighting)<br>… 下面省略<br>最后一步，让配置生效<br>zsh<br>完成！👍</p>
-<p>作者：万有引力万有<br>链接：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/d70f9c4cb47c">https://www.jianshu.com/p/d70f9c4cb47c</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 
       
     </div>
@@ -1270,7 +1287,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">178</span>
+          <span class="site-state-item-count">179</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

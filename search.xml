@@ -2943,6 +2943,14 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </tags>
   </entry>
   <entry>
+    <title>你真的了解 addEventListner 吗?</title>
+    <url>/2023/06/16/fe/addEventListener/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>到底什么是 peerDependencies？</title>
     <url>/2023/01/05/fe/peerDependencies/</url>
     <content><![CDATA[<p>在开发插件时使用 peerDependencies</p>

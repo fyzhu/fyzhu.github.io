@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">178</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">179</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,98 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2017/09/29/shujukucaozuo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/09/29/shujukucaozuo/" class="post-title-link" itemprop="url">数据库删除/清空和修改</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-09-29 10:55:56" itemprop="dateCreated datePublished" datetime="2017-09-29T10:55:56+00:00">2017-09-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-06-16 10:54:42" itemprop="dateModified" datetime="2023-06-16T10:54:42+00:00">2023-06-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/database/" itemprop="url" rel="index"><span itemprop="name">database</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2017/09/29/shujukucaozuo/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/09/29/shujukucaozuo/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>DELETE   语句每次删除一行，并在事务日志中为所删除的每行记录一项。<br>TRUNCATE   TABLE   通过释放存储表数据所用的数据页来删除数据，并且只在事务日志中记录页的释放。<br><strong>修改表名</strong><br>mysql&gt; alter table student rename person;<br>Query OK, 0 rows affected (0.03 sec)<br><strong>修改字段的数据类型</strong><br>mysql&gt; alter table person modify name varchar(20);<br>Query OK, 0 rows affected (0.18 sec) Records: 0 Duplicates: 0 Warnings: 0<br>此处modify后面的name为字段名，我们将原来的varchar(25)改为varchar(20)<br><strong>修改字段名</strong><br>mysql&gt; alter table person change stu_name name varchar(25);<br>Query OK, 0 rows affected (0.20 sec) Records: 0 Duplicates: 0 Warnings: 0</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2017/09/28/technology/centosanzhuangsslzhengshu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +333,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-16 05:49:50" itemprop="dateModified" datetime="2023-03-16T05:49:50+00:00">2023-03-16</time>
+                <time title="修改时间：2023-06-16 10:54:42" itemprop="dateModified" datetime="2023-06-16T10:54:42+00:00">2023-06-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -341,7 +433,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-16 05:49:50" itemprop="dateModified" datetime="2023-03-16T05:49:50+00:00">2023-03-16</time>
+                <time title="修改时间：2023-06-16 10:54:42" itemprop="dateModified" datetime="2023-06-16T10:54:42+00:00">2023-06-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -464,7 +556,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-16 05:49:50" itemprop="dateModified" datetime="2023-03-16T05:49:50+00:00">2023-03-16</time>
+                <time title="修改时间：2023-06-16 10:54:42" itemprop="dateModified" datetime="2023-06-16T10:54:42+00:00">2023-06-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -557,7 +649,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-16 05:49:50" itemprop="dateModified" datetime="2023-03-16T05:49:50+00:00">2023-03-16</time>
+                <time title="修改时间：2023-06-16 10:54:42" itemprop="dateModified" datetime="2023-06-16T10:54:42+00:00">2023-06-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -691,7 +783,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-16 05:49:50" itemprop="dateModified" datetime="2023-03-16T05:49:50+00:00">2023-03-16</time>
+                <time title="修改时间：2023-06-16 10:54:42" itemprop="dateModified" datetime="2023-06-16T10:54:42+00:00">2023-06-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -779,7 +871,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-16 05:49:50" itemprop="dateModified" datetime="2023-03-16T05:49:50+00:00">2023-03-16</time>
+                <time title="修改时间：2023-06-16 10:54:42" itemprop="dateModified" datetime="2023-06-16T10:54:42+00:00">2023-06-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -896,7 +988,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-16 05:49:50" itemprop="dateModified" datetime="2023-03-16T05:49:50+00:00">2023-03-16</time>
+                <time title="修改时间：2023-06-16 10:54:42" itemprop="dateModified" datetime="2023-06-16T10:54:42+00:00">2023-06-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -997,7 +1089,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-16 05:49:50" itemprop="dateModified" datetime="2023-03-16T05:49:50+00:00">2023-03-16</time>
+                <time title="修改时间：2023-06-16 10:54:42" itemprop="dateModified" datetime="2023-06-16T10:54:42+00:00">2023-06-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1106,7 +1198,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-16 05:49:50" itemprop="dateModified" datetime="2023-03-16T05:49:50+00:00">2023-03-16</time>
+                <time title="修改时间：2023-06-16 10:54:42" itemprop="dateModified" datetime="2023-06-16T10:54:42+00:00">2023-06-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1154,96 +1246,6 @@
 <p>四、删除用户授权，需要使用REVOKE命令，具体命令格式为：<br><code>REVOKE privileges ON 数据库[.表名] FROM user-name;</code><br>具体实例，先在本机登录mysql:<br><code>mysql -u root -p&quot;youpassword&quot;</code><br>进行授权操作：<br><code>GRANT select，insert，update，delete ON TEST-DB TO test-user@&quot;172.16.16.152&quot; IDENTIFIED BY &quot;youpassword&quot;;</code><br>再进行删除授权操作：<br><code>REVOKE all on TEST-DB from test-user;</code><br>****注：该操作只是清除了用户对于TEST-DB的相关授权权限，但是这个“test-user”这个用户还是存在。<br>最后从用户表内清除用户：<br><code>DELETE FROM user WHERE user=&quot;test-user&quot;;</code><br>重载授权表：<br><code>FLUSH PRIVILEGES;</code><br>退出mysql数据库：<br><code>exit</code></p>
 <p>五、MYSQL权限详细分类：<br>全局管理权限：<br>FILE: 在MySQL服务器上读写文件。<br>PROCESS: 显示或杀死属于其它用户的服务线程。<br>RELOAD: 重载访问控制表，刷新日志等。<br>SHUTDOWN: 关闭MySQL服务。<br>数据库/数据表/数据列权限：<br>ALTER: 修改已存在的数据表(例如增加/删除列)和索引。<br>CREATE: 建立新的数据库或数据表。<br>DELETE: 删除表的记录。<br>DROP: 删除数据表或数据库。<br>INDEX: 建立或删除索引。<br>INSERT: 增加表的记录。<br>SELECT: 显示/搜索表的记录。<br>UPDATE: 修改表中已存在的记录。<br>特别的权限：<br>ALL: 允许做任何事(和root一样)。<br>USAGE: 只允许登录–其它什么也不允许做。</p>
 <p>转载至Linux公社：<a target="_blank" rel="noopener" href="http://www.linuxidc.com/Linux/2013-06/86459.htm">http://www.linuxidc.com/Linux/2013-06/86459.htm</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2017/09/19/chaitoufenghongsushou/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/09/19/chaitoufenghongsushou/" class="post-title-link" itemprop="url">钗头凤·红酥手</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2017-09-19 11:09:13" itemprop="dateCreated datePublished" datetime="2017-09-19T11:09:13+00:00">2017-09-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-16 05:49:50" itemprop="dateModified" datetime="2023-03-16T05:49:50+00:00">2023-03-16</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/literature/" itemprop="url" rel="index"><span itemprop="name">literature</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2017/09/19/chaitoufenghongsushou/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/09/19/chaitoufenghongsushou/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="钗头凤·红酥手"><a href="#钗头凤·红酥手" class="headerlink" title="钗头凤·红酥手"></a>钗头凤·红酥手</h1><p>【作者】陆游 【朝代】宋</p>
-<p>红酥手。黄滕酒。满城春色宫墙柳。东风恶。欢情薄。一怀愁绪，几年离索。错错错。</p>
-<p>春如旧。人空瘦。泪痕红浥鲛绡透。桃花落。闲池阁。山盟虽在，锦书难托。莫莫莫。</p>
 
       
     </div>
@@ -1328,7 +1330,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">178</span>
+          <span class="site-state-item-count">179</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
