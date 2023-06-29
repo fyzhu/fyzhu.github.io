@@ -197,6 +197,7 @@ git rebase --onto master A B
 # master 到 A 的部分可以视为被删除了
 ```
 [git-rebase](https://git-scm.com/docs/git-rebase)
+[git rebase，看这一篇就够了](https://juejin.cn/post/6969101234338791432)
 ## 参考
 
 [Git 修改已提交的commit注释](https://www.jianshu.com/p/098d85a58bf1)
