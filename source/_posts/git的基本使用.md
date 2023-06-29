@@ -9,14 +9,14 @@ tags: git
 heads/v21.08  
 tags/v21.08
 
-## git log
+## log
 ```bash
 git log --author=''
 git log -p xxx
 ```
-## git show 
+## show 
 
-## git remote 
+## remote 
 ```
 git remote [-v | --verbose]
 git remote add [-t <branch>] [-m <master>] [-f] [--[no-]tags] [--mirror=<fetch|push>] <name> <url>
@@ -43,7 +43,7 @@ git status
 git status -s
 ```
 
-## git diff
+## diff
 
 ## rm
 移除文件
@@ -58,9 +58,9 @@ $ git rm README.md
 $ git add README
 ```
 
-## git gc
+## gc
 
-## 分支操作
+## branch 
 ### 拉取分支
 ```
 git fetch origin
@@ -92,7 +92,7 @@ git branch -D xxx # 强制删除
 ```
 删除远程
 ```bash
-git push origin --delete xxx
+git push origin -d xxx
 ```
 ## 暂存修改
 ```
