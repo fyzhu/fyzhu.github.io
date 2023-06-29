@@ -60,20 +60,25 @@ $ git add README
 
 ## gc
 
-## branch 
+## 分支操作 
 ### 拉取分支
 ```
-git fetch origin
+git fetch origin xxx
 
 // 以下命令相当于 git pull upstream x.x.x
 git fetch upstream x.x.x
 git log -p FETCH_HEAD 
 git merge FETCH_HEAD
 ```
+
 ### 创建分支
 ```
 git branch xxx
 git branch -a
+```
+### 重命名分支
+```
+ git branch -m oldName  newName
 ```
 ### 切换分支
 ```js
@@ -84,6 +89,10 @@ git checkout -b dev（本地分支名） origin/dev（远程分支名）
 ```
 ### 合并分支
 git merge xxx
+### 推送分支
+```
+git push origin x.x.x
+```
 ### 删除分支
 删除本地（先切换到其他分支）
 ```bash
@@ -149,7 +158,7 @@ git config --global --list
 git config user.name
 git config --global user.email
 ```
-## git reset
+## reset
 ![git reset from jianshu](https://upload-images.jianshu.io/upload_images/4428238-fcad08ebe26933a6.png?imageMogr2/auto-orient/strip|imageView2/2/w/638/format/webp)
 ### 不加参数
 保留工作目录，并清空暂存区
@@ -160,7 +169,7 @@ reset 如果不加参数，那么默认使用 `--mixed` 参数。它的行为是
 重置stage区和工作目录
 ### soft
 保留工作目录，并把重置 HEAD 所带来的新的差异放进暂存区
-## git tag
+## tag
 ### 查看
 git tag
 
@@ -177,7 +186,17 @@ git tag -d v0.0.1
 git push origin -d v0.0.1
 git push origin -d heads/v0.0.1 # tag 和 branch 同名
 ```
-
+## rebase
+```
+git rebase master
+```
+```bash
+# master --- A --- B
+git rebase --onto master A B
+# 从 A(不包含) 到 B 的部分会被 rebase 到 master
+# master 到 A 的部分可以视为被删除了
+```
+[git-rebase](https://git-scm.com/docs/git-rebase)
 ## 参考
 
 [Git 修改已提交的commit注释](https://www.jianshu.com/p/098d85a58bf1)
