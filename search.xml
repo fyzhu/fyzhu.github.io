@@ -2950,7 +2950,8 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
   <entry>
     <title>你真的了解 addEventListner 吗?</title>
     <url>/2023/06/16/fe/addEventListener/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p><a href="https://www.cnblogs.com/ziyunfei/p/5545439.html">passive 的事件监听器</a></p>
+]]></content>
       <categories>
         <category>未分类</category>
       </categories>
