@@ -14,10 +14,12 @@ tags:
 6. docker commit 保存改动为新的 image
 7. docker run 运行 container
 8. docker inspect 容器名称 查看容器IP
-9. docker ps 列出 containers
-10. docker stop 停止 containers
-11. docker rm 删除 container
-12. docker cp 在 host 和 container 之间拷贝文件
+9. docker ps 列出运行中的 containers
+10. docker ps -a 列出所有的 containers
+11. docker start 启动 containers
+12. docker stop 停止 containers
+13. docker rm 删除 container
+14. docker cp 在 host 和 container 之间拷贝文件
 ![docker 命令1](https://img.mukewang.com/5efdebd800014a8619201080.jpg)
 ![docker 命令2](https://img.mukewang.com/5efdec250001eb8419201080.jpg)
 
