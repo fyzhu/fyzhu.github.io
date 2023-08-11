@@ -5,7 +5,7 @@ categories:
 date: 2020-07-03 08:47:04
 tags:
 ---
-### docker 命令
+# docker 命令
 1. docker pull 获取 image
 2. docker build 创建 image
 3. docker images 列出 images
@@ -14,12 +14,28 @@ tags:
 6. docker commit 保存改动为新的 image
 7. docker run 运行 container
 8. docker inspect 容器名称 查看容器IP
-9. docker ps 列出运行中的 containers
-10. docker ps -a 列出所有的 containers
-11. docker start 启动 containers
-12. docker stop 停止 containers
-13. docker rm 删除 container
-14. docker cp 在 host 和 container 之间拷贝文件
+## docker ps 
+列出运行中的 containers
+```bash
+docker ps -a #列出所有的 containers
+```
+## docker start 
+启动 containers
+## docker stop 
+停止 containers
+## docker rm 
+删除 container
+## docker cp 
+在 host 和 container 之间拷贝文件
+
+将主机 /www/test 目录拷贝到容器 96f7f14e99ab 的 /www 目录下。
+```bash
+docker cp /www/test 96f7f14e99ab:/www/
+```
+将容器 96f7f14e99ab 的 /www 目录拷贝到主机的 /tmp 目录中。
+```bash
+docker cp  96f7f14e99ab:/www /tmp/
+```
 ![docker 命令1](https://img.mukewang.com/5efdebd800014a8619201080.jpg)
 ![docker 命令2](https://img.mukewang.com/5efdec250001eb8419201080.jpg)
 
