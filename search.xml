@@ -485,9 +485,20 @@
 <h3 id="切换"><a href="#切换" class="headerlink" title="切换"></a>切换</h3><p>git checkout xxx</p>
 <h3 id="增加"><a href="#增加" class="headerlink" title="增加"></a>增加</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git tag v0.0.1  </span><br><span class="line">git push origin v0.0.1</span><br></pre></td></tr></table></figure>
 <h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git tag -d v0.0.1  </span><br><span class="line">git push origin -d v0.0.1</span><br><span class="line">git push origin -d heads/v0.0.1 <span class="comment"># tag 和 branch 同名</span></span><br></pre></td></tr></table></figure>
-<h2 id="rebase"><a href="#rebase" class="headerlink" title="rebase"></a>rebase</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git rebase master</span><br></pre></td></tr></table></figure>
+<h2 id="rebase"><a href="#rebase" class="headerlink" title="rebase"></a>rebase</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git rebase master</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># master --- A --- B</span></span><br><span class="line">git rebase --onto master A B</span><br><span class="line"><span class="comment"># 从 A(不包含) 到 B 的部分会被 rebase 到 master</span></span><br><span class="line"><span class="comment"># master 到 A 的部分可以视为被删除了</span></span><br></pre></td></tr></table></figure>
 <p><a href="https://git-scm.com/docs/git-rebase">git-rebase</a><br><a href="https://juejin.cn/post/6969101234338791432">git rebase，看这一篇就够了</a></p>
+<h2 id="cherry-pick"><a href="#cherry-pick" class="headerlink" title="cherry-pick"></a>cherry-pick</h2><p><code>git cherry-pick</code> 命令的作用，就是将指定的提交（commit）应用于其他分支。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git cherry-pick &lt;commitHash&gt;</span><br></pre></td></tr></table></figure>
+<p>Cherry pick 支持一次转移多个提交。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git cherry-pick &lt;HashA&gt; &lt;HashB&gt;</span><br></pre></td></tr></table></figure>
+<p>上面的命令将 A 和 B 两个提交应用到当前分支。这会在当前分支生成两个对应的新提交。</p>
+<p>如果想要转移一系列的连续提交，可以使用下面的简便语法。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git cherry-pick A..B </span><br></pre></td></tr></table></figure>
+<p>上面的命令可以转移从 A 到 B 的所有提交。它们必须按照正确的顺序放置：提交 A 必须早于提交 B，否则命令将失败，但不会报错。</p>
+<p>注意，使用上面的命令，提交 A 将不会包含在 Cherry pick 中。如果要包含提交 A，可以使用下面的语法。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git cherry-pick A^..B </span><br></pre></td></tr></table></figure>
+<p><a href="http://www.ruanyifeng.com/blog/2020/04/git-cherry-pick.html">git cherry-pick 教程</a></p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.jianshu.com/p/098d85a58bf1">Git 修改已提交的commit注释</a></p>
 <p><a href="https://www.jianshu.com/p/c2ec5f06cf1a">Git Reset 三种模式</a></p>
 <p><a href="https://www.cnblogs.com/liyong888/p/9822410.html">git 删除本地分支和删除远程分支</a>  </p>
