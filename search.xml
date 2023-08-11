@@ -208,17 +208,21 @@
   <entry>
     <title>docker的基本使用</title>
     <url>/2020/07/03/docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="docker-命令"><a href="#docker-命令" class="headerlink" title="docker 命令"></a>docker 命令</h1><ol>
-<li>docker pull 获取 image</li>
-<li>docker build 创建 image</li>
-<li>docker images 列出 images</li>
-<li>docker tag  旧镜像名  新镜像名 </li>
-<li>docker rmi 删除 image</li>
-<li>docker commit 保存改动为新的 image</li>
-<li>docker run 运行 container</li>
-<li>docker inspect 容器名称 查看容器IP<h2 id="docker-ps"><a href="#docker-ps" class="headerlink" title="docker ps"></a>docker ps</h2>列出运行中的 containers<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker ps -a <span class="comment">#列出所有的 containers</span></span><br></pre></td></tr></table></figure>
-<h2 id="docker-start"><a href="#docker-start" class="headerlink" title="docker start"></a>docker start</h2>启动 containers<h2 id="docker-stop"><a href="#docker-stop" class="headerlink" title="docker stop"></a>docker stop</h2>停止 containers<h2 id="docker-rm"><a href="#docker-rm" class="headerlink" title="docker rm"></a>docker rm</h2>删除 container<h2 id="docker-cp"><a href="#docker-cp" class="headerlink" title="docker cp"></a>docker cp</h2>在 host 和 container 之间拷贝文件</li>
-</ol>
+    <content><![CDATA[<h1 id="docker-命令"><a href="#docker-命令" class="headerlink" title="docker 命令"></a>docker 命令</h1><h2 id="docker-pull"><a href="#docker-pull" class="headerlink" title="docker pull"></a>docker pull</h2><p>获取 image</p>
+<h2 id="docker-build"><a href="#docker-build" class="headerlink" title="docker build"></a>docker build</h2><p>创建 image</p>
+<h2 id="docker-images"><a href="#docker-images" class="headerlink" title="docker images"></a>docker images</h2><p>列出 images</p>
+<h2 id="docker-tag"><a href="#docker-tag" class="headerlink" title="docker tag"></a>docker tag</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker tag 旧镜像名  新镜像名 </span><br></pre></td></tr></table></figure>
+<h2 id="docker-rmi"><a href="#docker-rmi" class="headerlink" title="docker rmi"></a>docker rmi</h2><p>删除 image</p>
+<h2 id="docker-commit"><a href="#docker-commit" class="headerlink" title="docker commit"></a>docker commit</h2><p>保存改动为新的 image</p>
+<h2 id="docker-run"><a href="#docker-run" class="headerlink" title="docker run"></a>docker run</h2><p>运行 container</p>
+<h2 id="docker-inspect"><a href="#docker-inspect" class="headerlink" title="docker inspect"></a>docker inspect</h2><p>获取容器/镜像的元数据。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker inspect 容器名称 查看容器IP</span><br></pre></td></tr></table></figure>
+<h2 id="docker-ps"><a href="#docker-ps" class="headerlink" title="docker ps"></a>docker ps</h2><p>列出运行中的 containers</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker ps -a <span class="comment">#列出所有的 containers</span></span><br></pre></td></tr></table></figure>
+<h2 id="docker-start"><a href="#docker-start" class="headerlink" title="docker start"></a>docker start</h2><p>启动 containers</p>
+<h2 id="docker-stop"><a href="#docker-stop" class="headerlink" title="docker stop"></a>docker stop</h2><p>停止 containers</p>
+<h2 id="docker-rm"><a href="#docker-rm" class="headerlink" title="docker rm"></a>docker rm</h2><p>删除 container</p>
+<h2 id="docker-cp"><a href="#docker-cp" class="headerlink" title="docker cp"></a>docker cp</h2><p>在 host 和 container 之间拷贝文件</p>
 <p>将主机 /www/test 目录拷贝到容器 96f7f14e99ab 的 /www 目录下。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">cp</span> /www/test 96f7f14e99ab:/www/</span><br></pre></td></tr></table></figure>
 <p>将容器 96f7f14e99ab 的 /www 目录拷贝到主机的 /tmp 目录中。</p>
