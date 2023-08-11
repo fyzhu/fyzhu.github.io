@@ -6,14 +6,27 @@ date: 2020-07-03 08:47:04
 tags:
 ---
 # docker 命令
-1. docker pull 获取 image
-2. docker build 创建 image
-3. docker images 列出 images
-4. docker tag  旧镜像名  新镜像名 
-5. docker rmi 删除 image
-6. docker commit 保存改动为新的 image
-7. docker run 运行 container
-8. docker inspect 容器名称 查看容器IP
+## docker pull 
+获取 image
+## docker build 
+创建 image
+## docker images 
+列出 images
+## docker tag  
+```bash
+docker tag 旧镜像名  新镜像名 
+```
+## docker rmi 
+删除 image
+## docker commit 
+保存改动为新的 image
+## docker run 
+运行 container
+## docker inspect 
+获取容器/镜像的元数据。
+```bash
+docker inspect 容器名称 查看容器IP
+```
 ## docker ps 
 列出运行中的 containers
 ```bash
