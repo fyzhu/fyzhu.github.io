@@ -48,7 +48,7 @@
 <li>去官网下载安装</li>
 <li>使用 homebrew 安装</li>
 </ol>
-<h2 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ mysql.server start # 或去设置里搜索 MySQL 启动</span><br></pre></td></tr></table></figure>
+<h2 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ mysql.server start <span class="comment"># 或去设置里搜索 MySQL 启动</span></span><br></pre></td></tr></table></figure>
 <h2 id="设置密码"><a href="#设置密码" class="headerlink" title="设置密码"></a>设置密码</h2><p>homebrew安装默认是没有密码的</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mysql&gt; alter user &#x27;root&#x27;@&#x27;localhost&#x27; identified with mysql_native_password by &#x27;123456&#x27;;</span><br><span class="line">Query OK, 0 rows affected (0.10 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; flush privileges;</span><br><span class="line">Query OK, 0 rows affected (0.01 sec)</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
