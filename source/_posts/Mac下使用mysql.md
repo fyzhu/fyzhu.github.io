@@ -13,7 +13,7 @@ tags:
 
 ## 启动服务
 ```
-$ mysql.server start
+$ mysql.server start # 或去设置里搜索 MySQL 启动
 ```
 ## 设置密码
 homebrew安装默认是没有密码的
