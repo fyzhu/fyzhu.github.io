@@ -12,7 +12,7 @@ tags:
 2. 使用 homebrew 安装
 
 ## 启动服务
-```
+```bash
 $ mysql.server start # 或去设置里搜索 MySQL 启动
 ```
 ## 设置密码
