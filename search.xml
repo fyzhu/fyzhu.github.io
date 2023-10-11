@@ -128,240 +128,6 @@
       </tags>
   </entry>
   <entry>
-    <title>草在结它的种子，风在摇它的叶子，我们站着，不说话，就十分美好</title>
-    <url>/2017/11/30/caozaijietadezhongzifengzaiyaotadeyeziwomenzhanzhebushuohuajiushifenmeihao/</url>
-    <content><![CDATA[<h1 id="《门前》——顾城"><a href="#《门前》——顾城" class="headerlink" title="《门前》——顾城"></a>《门前》——顾城</h1><p>我多么希望，有一个门口<br>早晨，阳光照在草上<br>我们站着<br>扶着自己的门扇<br>门很低，但太阳是明亮的<br>草在结它的种子<br>风在摇它的叶子<br>我们站着，不说话<br>就十分美好<br>有门，不用开开<br>是我们的，就十分美好<br>早晨，黑夜还要流浪<br>我们把六弦琴交给他<br>我们不走了<br>我们需要土地<br>需要永不毁灭的土地<br>我们要乘着它<br>度过一生<br>土地是粗糙的，有时狭隘<br>然而，它有历史<br>有一份天空，一份月亮<br>一份露水和早晨<br>我们爱土地<br>我们站着<br>用木鞋挖着泥土<br>门也晒热了<br>我们轻轻靠着，十分美好<br>墙后的草<br>不会再长大了<br>它只用指尖，触了触</p>
-]]></content>
-      <categories>
-        <category>literature</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>钗头凤·红酥手</title>
-    <url>/2017/09/19/chaitoufenghongsushou/</url>
-    <content><![CDATA[<h1 id="钗头凤·红酥手"><a href="#钗头凤·红酥手" class="headerlink" title="钗头凤·红酥手"></a>钗头凤·红酥手</h1><p>【作者】陆游 【朝代】宋</p>
-<p>红酥手。黄滕酒。满城春色宫墙柳。东风恶。欢情薄。一怀愁绪，几年离索。错错错。</p>
-<p>春如旧。人空瘦。泪痕红浥鲛绡透。桃花落。闲池阁。山盟虽在，锦书难托。莫莫莫。</p>
-]]></content>
-      <categories>
-        <category>literature</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>composer的安装</title>
-    <url>/2020/08/06/composer%E7%9A%84%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h4 id="下载安装脚本"><a href="#下载安装脚本" class="headerlink" title="下载安装脚本"></a>下载安装脚本</h4><ol>
-<li>使用命令下载，并重命名为 composer-setup.php<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">php -r &quot;copy(&#x27;https://install.phpcomposer.com/installer&#x27;, &#x27;composer-setup.php&#x27;);&quot;</span><br></pre></td></tr></table></figure></li>
-<li>浏览器下载，并重命名为 composer-setup.php<br>直接访问以下地址<br><a href="https://install.phpcomposer.com/installer">https://install.phpcomposer.com/installer</a></li>
-</ol>
-<h4 id="执行安装过程"><a href="#执行安装过程" class="headerlink" title="执行安装过程"></a>执行安装过程</h4><p>此步骤会生成 composer.phar</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">php composer-setup.php</span><br></pre></td></tr></table></figure>
-<h4 id="删除安装脚本"><a href="#删除安装脚本" class="headerlink" title="删除安装脚本"></a>删除安装脚本</h4><p>可以手动删除，也可以使用以下命令删除</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">php -r &quot;unlink(&#x27;composer-setup.php&#x27;);&quot;</span><br></pre></td></tr></table></figure>
-
-<h4 id="局部安装"><a href="#局部安装" class="headerlink" title="局部安装"></a>局部安装</h4><p>将上述步骤生成的 composer.phar 文件复制到任意目录（比如项目根目录下），然后通过 php composer.phar 指令即可使用 Composer 了！</p>
-<h4 id="全局安装（windows"><a href="#全局安装（windows" class="headerlink" title="全局安装（windows)"></a>全局安装（windows)</h4><ol>
-<li>将 composer.phar 复制到 PHP 的安装目录下面，也就是和 php.exe 在同一级目录。</li>
-<li>在 PHP 安装目录下新建一个 composer.bat 文件，并将下列代码保存到此文件中。<br><code>@php &quot;%~dp0composer.phar&quot; %*</code></li>
-<li>最后重新打开一个命令行窗口试一试执行 composer –version 看看是否正确输出版本号。</li>
-</ol>
-<p>参考<br><a href="https://pkg.phpcomposer.com/#how-to-install-composer">https://pkg.phpcomposer.com/#how-to-install-composer</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>从今天开始学习爱自己</title>
-    <url>/2017/09/25/congjintiankaishixuexiaiziji/</url>
-    <content><![CDATA[<p>2017年9月25日15:44:09</p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>导航滚动悬浮</title>
-    <url>/2017/11/08/daohanggundongxuanfu/</url>
-    <content><![CDATA[<p>做两个导航，第二个隐藏 下拉到一定位置，显示第二个，position:fixed $(function(){ $(window).scroll(function () {$(window).scroll(function () { var top = $(document).scrollTop(); var m=$(“.nav”); if (top &gt; m.offset().top) { m.next().css(‘display’,’block’) }else{ m.next().css(‘display’,’none’) } }) }</p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>deno学习笔记</title>
-    <url>/2020/05/18/deno%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="新特性"><a href="#新特性" class="headerlink" title="新特性"></a>新特性</h2><ol>
-<li>原生支持 ts</li>
-<li>原生支持 import</li>
-<li>可以直接 import 一个线上包</li>
-<li>原生支持 promise 不用写 async</li>
-<li>安全性，需要授权</li>
-</ol>
-<iframe src="//player.bilibili.com/player.html?aid=795633468&bvid=BV14C4y1H76e&cid=192362111&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=498 width=610> </iframe>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>docker的基本使用</title>
-    <url>/2020/07/03/docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="docker-命令"><a href="#docker-命令" class="headerlink" title="docker 命令"></a>docker 命令</h1><h2 id="docker-pull"><a href="#docker-pull" class="headerlink" title="docker pull"></a>docker pull</h2><p>获取 image</p>
-<h2 id="docker-build"><a href="#docker-build" class="headerlink" title="docker build"></a>docker build</h2><p>创建 image</p>
-<h2 id="docker-images"><a href="#docker-images" class="headerlink" title="docker images"></a>docker images</h2><p>列出 images</p>
-<h2 id="docker-tag"><a href="#docker-tag" class="headerlink" title="docker tag"></a>docker tag</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker tag 旧镜像名  新镜像名 </span><br></pre></td></tr></table></figure>
-<h2 id="docker-rmi"><a href="#docker-rmi" class="headerlink" title="docker rmi"></a>docker rmi</h2><p>删除 image</p>
-<h2 id="docker-commit"><a href="#docker-commit" class="headerlink" title="docker commit"></a>docker commit</h2><p>保存改动为新的 image</p>
-<h2 id="docker-run"><a href="#docker-run" class="headerlink" title="docker run"></a>docker run</h2><p>运行 container</p>
-<h2 id="docker-inspect"><a href="#docker-inspect" class="headerlink" title="docker inspect"></a>docker inspect</h2><p>获取容器/镜像的元数据。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker inspect 容器名称 查看容器IP</span><br></pre></td></tr></table></figure>
-<h2 id="docker-ps"><a href="#docker-ps" class="headerlink" title="docker ps"></a>docker ps</h2><p>列出运行中的 containers</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker ps -a <span class="comment">#列出所有的 containers</span></span><br></pre></td></tr></table></figure>
-<h2 id="docker-start"><a href="#docker-start" class="headerlink" title="docker start"></a>docker start</h2><p>启动 containers</p>
-<h2 id="docker-stop"><a href="#docker-stop" class="headerlink" title="docker stop"></a>docker stop</h2><p>停止 containers</p>
-<h2 id="docker-rm"><a href="#docker-rm" class="headerlink" title="docker rm"></a>docker rm</h2><p>删除 container</p>
-<h2 id="docker-cp"><a href="#docker-cp" class="headerlink" title="docker cp"></a>docker cp</h2><p>在 host 和 container 之间拷贝文件</p>
-<p>将主机 /www/test 目录拷贝到容器 96f7f14e99ab 的 /www 目录下。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">cp</span> /www/test 96f7f14e99ab:/www/</span><br></pre></td></tr></table></figure>
-<p>将容器 96f7f14e99ab 的 /www 目录拷贝到主机的 /tmp 目录中。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">cp</span>  96f7f14e99ab:/www /tmp/</span><br></pre></td></tr></table></figure>
-<p><img src="https://img.mukewang.com/5efdebd800014a8619201080.jpg" alt="docker 命令1"><br><img src="https://img.mukewang.com/5efdec250001eb8419201080.jpg" alt="docker 命令2"></p>
-<h3 id="Dockerfile-语法"><a href="#Dockerfile-语法" class="headerlink" title="Dockerfile 语法"></a>Dockerfile 语法</h3><p><img src="https://img.mukewang.com/5efdeeec00018f3e19201080.jpg" alt="Dockerfile 语法1"><br><img src="https://img.mukewang.com/5efdef1b0001ff5b19201080.jpg" alt="Dockerfile 语法2"></p>
-<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><p>bridge 网络<br>host 网络</p>
-<p>参考：<a href="https://www.jb51.net/article/149173.htm">https://www.jb51.net/article/149173.htm</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>docker进入容器</title>
-    <url>/2019/12/06/docker%E8%BF%9B%E5%85%A5%E5%AE%B9%E5%99%A8/</url>
-    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker exec [OPTIONS] CONTAINER COMMAND [ARG...]</span><br></pre></td></tr></table></figure>
-<p>docker run 也可以</p>
-<p>OPTIONS说明：</p>
-<p>-d :分离模式: 在后台运行</p>
-<p>-i :即使没有附加也保持STDIN 打开</p>
-<p>-t :分配一个伪终端</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker exec -it 1f2f04275f80 redis-cli</span><br></pre></td></tr></table></figure>
-
-<p>退出容器<br>exit</p>
-<p>参考<br><a href="https://blog.csdn.net/weixin_38982591/article/details/103989153">https://blog.csdn.net/weixin_38982591/article/details/103989153</a></p>
-]]></content>
-      <categories>
-        <category>technology</category>
-        <category>Server</category>
-      </categories>
-      <tags>
-        <tag>docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>dom之scroll</title>
-    <url>/2021/07/01/dom%E4%B9%8Bscroll/</url>
-    <content><![CDATA[<p>参考：<br><a href="https://www.cnblogs.com/wangyihong/p/8056859.html">https://www.cnblogs.com/wangyihong/p/8056859.html</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>dreamlist</title>
-    <url>/2019/02/18/dreamlist/</url>
-    <content><![CDATA[<p>todolist</p>
-<p>1.治疗鼻咽炎<br>2.治疗近视<br>3.脱毛</p>
-<p>shoping list</p>
-<p>1.vans<br>2.眼霜<br>3.mbp<br>4.revengexstorm</p>
-]]></content>
-      <tags>
-        <tag>list</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>editorconfig 常用配置</title>
-    <url>/2021/12/13/editorconfig-%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">root = true</span><br><span class="line"></span><br><span class="line">[*]</span><br><span class="line">charset = utf-8</span><br><span class="line">end_of_line = lf</span><br><span class="line">indent_size = 2</span><br><span class="line">indent_style = space</span><br><span class="line">insert_final_newline = true</span><br><span class="line">trim_trailing_whitespace = true</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>elegant</title>
-    <url>/2019/02/18/elegant/</url>
-    <content><![CDATA[<p>elegant</p>
-<p>英 [ˈelɪgənt]   美 [ˈɛlɪɡənt]<br>adj.<br>（人或其举止）优美的;漂亮的;简炼的;简洁的</p>
-<p>adj.<br>1<br>(of people or their behaviour 人或其举止) 优美的；文雅的<br>attractive and showing a good sense of style</p>
-<p>同义词： stylish<br>She was tall and elegant.</p>
-<p>她身材修长，优雅大方。</p>
-<p>2<br>(of clothes, places and things 衣服、地方及物品) 漂亮雅致的；陈设讲究的；精美的<br>attractive and designed well</p>
-<p>同义词： stylish<br>an elegant dress</p>
-<p>高雅的连衣裙</p>
-<p>an elegant room/restaurant</p>
-<p>雅致的房间 / 餐厅</p>
-<p>3<br>(of a plan or an idea 计划或想法) 简练的；简洁的；简明的<br>clever but simple</p>
-<p>an elegant solution to the problem</p>
-<p>解决这个问题的简要方法</p>
-<p>来源于：百度翻译</p>
-]]></content>
-      <categories>
-        <category>english</category>
-      </categories>
-      <tags>
-        <tag>english</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>emmet快捷键</title>
-    <url>/2021/07/01/emmet%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
-    <content><![CDATA[<h3 id="快速选择相同项目"><a href="#快速选择相同项目" class="headerlink" title="快速选择相同项目"></a>快速选择相同项目</h3><p>Ctrl + D</p>
-<h3 id="回退一次选择"><a href="#回退一次选择" class="headerlink" title="回退一次选择"></a>回退一次选择</h3><p>Ctrl + U</p>
-<h3 id="跳过选中的项目"><a href="#跳过选中的项目" class="headerlink" title="跳过选中的项目"></a>跳过选中的项目</h3><p>Ctrl + K</p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>fiddler学习笔记</title>
-    <url>/2020/05/22/fiddler%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="1-2-两种模式"><a href="#1-2-两种模式" class="headerlink" title="1.2 两种模式"></a>1.2 两种模式</h2><ol>
-<li>streaming 流模式 （浏览器模式）实时的</li>
-<li>buffering 缓冲模式 把所有的数据准备好之后才返回给客户端 可以控制最后的服务器响应</li>
-</ol>
-<p><img src="https://img4.mukewang.com/5ec780180001c60b12800720.jpg" alt="fiddler 使用场景"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">res.write()</span><br><span class="line">res.end()</span><br></pre></td></tr></table></figure>
-<h2 id="1-3-使用场景"><a href="#1-3-使用场景" class="headerlink" title="1.3 使用场景"></a>1.3 使用场景</h2><p><img src="https://img2.mukewang.com/5ec781f00001b90b12800720.jpg" alt="fiddler 使用场景"></p>
-<h2 id="2-1-工具条常用功能"><a href="#2-1-工具条常用功能" class="headerlink" title="2.1 工具条常用功能"></a>2.1 工具条常用功能</h2><ol>
-<li>备注</li>
-<li>重放</li>
-<li>清除</li>
-<li>调试</li>
-<li>模式切换</li>
-<li>解析</li>
-<li>保持会话</li>
-<li>过滤请求（只看chrome）</li>
-</ol>
-<h2 id="2-2-状态栏操作"><a href="#2-2-状态栏操作" class="headerlink" title="2.2 状态栏操作"></a>2.2 状态栏操作</h2><ol>
-<li>capturing 是否工作</li>
-<li>过滤会话</li>
-<li>会话数量</li>
-<li>会话详细地址</li>
-</ol>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ol>
-<li>捕获HTTPS（参考教程）</li>
-<li>捕获chrome浏览器，安装插件 SwithyOmega</li>
-<li>不能捕获js，可能是缓存的问题，勾选禁用缓存</li>
-</ol>
-<p><img src="https://img-blog.csdnimg.cn/20190627112123574.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTEwNjg3MDI=,size_16,color_FFFFFF,t_70" alt="捕获js"></p>
-<p>课程地址<br><a href="https://www.imooc.com/learn/37">https://www.imooc.com/learn/37</a><br>教程地址<br><a href="https://kb.cnblogs.com/page/130367/#introduce">https://kb.cnblogs.com/page/130367/#introduce</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>FTP主动模式和被动模式的区别</title>
     <url>/2017/11/20/ftpzhudongmoshihebeidongmoshidequbie/</url>
     <content><![CDATA[<p><a href="http://www.cnblogs.com/xiaohh/p/4789813.html">http://www.cnblogs.com/xiaohh/p/4789813.html</a></p>
@@ -458,11 +224,11 @@
 <h2 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h2><p>移动文件<br>git mv<br>相当于</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ mv README.md README</span><br><span class="line">$ git rm README.md</span><br><span class="line">$ git add README</span><br></pre></td></tr></table></figure>
 
-<h2 id="gc"><a href="#gc" class="headerlink" title="gc"></a>gc</h2><h2 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h2><h3 id="拉取分支"><a href="#拉取分支" class="headerlink" title="拉取分支"></a>拉取分支</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git fetch origin xxx</span><br><span class="line"></span><br><span class="line">// 以下命令相当于 git pull upstream x.x.x</span><br><span class="line">git fetch upstream x.x.x</span><br><span class="line">git log -p FETCH_HEAD </span><br><span class="line">git merge FETCH_HEAD</span><br></pre></td></tr></table></figure>
+<h2 id="gc"><a href="#gc" class="headerlink" title="gc"></a>gc</h2><h2 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h2><h3 id="拉取分支"><a href="#拉取分支" class="headerlink" title="拉取分支"></a>拉取分支</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git fetch origin xxx</span><br><span class="line"></span><br><span class="line"><span class="comment"># 以下命令相当于 git pull upstream x.x.x</span></span><br><span class="line">git fetch upstream x.x.x</span><br><span class="line">git <span class="built_in">log</span> -p FETCH_HEAD </span><br><span class="line">git merge FETCH_HEAD</span><br></pre></td></tr></table></figure>
 
 <h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git branch xxx</span><br><span class="line">git branch -a</span><br></pre></td></tr></table></figure>
-<h3 id="重命名分支"><a href="#重命名分支" class="headerlink" title="重命名分支"></a>重命名分支</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git branch -m oldName  newName</span><br></pre></td></tr></table></figure>
-<h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">git checkout xxx</span><br><span class="line"><span class="comment">// 创建并切换（远程）分支</span></span><br><span class="line">git checkout -b dev（本地分支名） origin/dev（远程分支名）</span><br><span class="line"><span class="comment">// 在此之前确保有远程分支，git fetch 一下</span></span><br></pre></td></tr></table></figure>
+<h3 id="重命名分支"><a href="#重命名分支" class="headerlink" title="重命名分支"></a>重命名分支</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在当前分支时</span></span><br><span class="line">git branch -m newName </span><br><span class="line"><span class="comment"># 不在当前分支时</span></span><br><span class="line">git branch -m oldName  newName</span><br></pre></td></tr></table></figure>
+<h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout xxx</span><br><span class="line"><span class="comment"># 创建并切换（远程）分支</span></span><br><span class="line">git checkout -b dev（本地分支名） origin/dev（远程分支名）</span><br><span class="line"><span class="comment"># 在此之前确保有远程分支，git fetch 一下</span></span><br></pre></td></tr></table></figure>
 <h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><p>git merge xxx</p>
 <h3 id="推送分支"><a href="#推送分支" class="headerlink" title="推送分支"></a>推送分支</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push origin x.x.x</span><br></pre></td></tr></table></figure>
 <h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><p>删除本地（先切换到其他分支）</p>
@@ -1690,6 +1456,240 @@ timeout(100).then((value) =&gt; &#123;
 <li>选择第一步下载的公钥</li>
 </ol>
 <p><a href="https://cloud.tencent.com/developer/article/1780788">参考</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>草在结它的种子，风在摇它的叶子，我们站着，不说话，就十分美好</title>
+    <url>/2017/11/30/caozaijietadezhongzifengzaiyaotadeyeziwomenzhanzhebushuohuajiushifenmeihao/</url>
+    <content><![CDATA[<h1 id="《门前》——顾城"><a href="#《门前》——顾城" class="headerlink" title="《门前》——顾城"></a>《门前》——顾城</h1><p>我多么希望，有一个门口<br>早晨，阳光照在草上<br>我们站着<br>扶着自己的门扇<br>门很低，但太阳是明亮的<br>草在结它的种子<br>风在摇它的叶子<br>我们站着，不说话<br>就十分美好<br>有门，不用开开<br>是我们的，就十分美好<br>早晨，黑夜还要流浪<br>我们把六弦琴交给他<br>我们不走了<br>我们需要土地<br>需要永不毁灭的土地<br>我们要乘着它<br>度过一生<br>土地是粗糙的，有时狭隘<br>然而，它有历史<br>有一份天空，一份月亮<br>一份露水和早晨<br>我们爱土地<br>我们站着<br>用木鞋挖着泥土<br>门也晒热了<br>我们轻轻靠着，十分美好<br>墙后的草<br>不会再长大了<br>它只用指尖，触了触</p>
+]]></content>
+      <categories>
+        <category>literature</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>钗头凤·红酥手</title>
+    <url>/2017/09/19/chaitoufenghongsushou/</url>
+    <content><![CDATA[<h1 id="钗头凤·红酥手"><a href="#钗头凤·红酥手" class="headerlink" title="钗头凤·红酥手"></a>钗头凤·红酥手</h1><p>【作者】陆游 【朝代】宋</p>
+<p>红酥手。黄滕酒。满城春色宫墙柳。东风恶。欢情薄。一怀愁绪，几年离索。错错错。</p>
+<p>春如旧。人空瘦。泪痕红浥鲛绡透。桃花落。闲池阁。山盟虽在，锦书难托。莫莫莫。</p>
+]]></content>
+      <categories>
+        <category>literature</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>composer的安装</title>
+    <url>/2020/08/06/composer%E7%9A%84%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h4 id="下载安装脚本"><a href="#下载安装脚本" class="headerlink" title="下载安装脚本"></a>下载安装脚本</h4><ol>
+<li>使用命令下载，并重命名为 composer-setup.php<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">php -r &quot;copy(&#x27;https://install.phpcomposer.com/installer&#x27;, &#x27;composer-setup.php&#x27;);&quot;</span><br></pre></td></tr></table></figure></li>
+<li>浏览器下载，并重命名为 composer-setup.php<br>直接访问以下地址<br><a href="https://install.phpcomposer.com/installer">https://install.phpcomposer.com/installer</a></li>
+</ol>
+<h4 id="执行安装过程"><a href="#执行安装过程" class="headerlink" title="执行安装过程"></a>执行安装过程</h4><p>此步骤会生成 composer.phar</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">php composer-setup.php</span><br></pre></td></tr></table></figure>
+<h4 id="删除安装脚本"><a href="#删除安装脚本" class="headerlink" title="删除安装脚本"></a>删除安装脚本</h4><p>可以手动删除，也可以使用以下命令删除</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">php -r &quot;unlink(&#x27;composer-setup.php&#x27;);&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="局部安装"><a href="#局部安装" class="headerlink" title="局部安装"></a>局部安装</h4><p>将上述步骤生成的 composer.phar 文件复制到任意目录（比如项目根目录下），然后通过 php composer.phar 指令即可使用 Composer 了！</p>
+<h4 id="全局安装（windows"><a href="#全局安装（windows" class="headerlink" title="全局安装（windows)"></a>全局安装（windows)</h4><ol>
+<li>将 composer.phar 复制到 PHP 的安装目录下面，也就是和 php.exe 在同一级目录。</li>
+<li>在 PHP 安装目录下新建一个 composer.bat 文件，并将下列代码保存到此文件中。<br><code>@php &quot;%~dp0composer.phar&quot; %*</code></li>
+<li>最后重新打开一个命令行窗口试一试执行 composer –version 看看是否正确输出版本号。</li>
+</ol>
+<p>参考<br><a href="https://pkg.phpcomposer.com/#how-to-install-composer">https://pkg.phpcomposer.com/#how-to-install-composer</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>从今天开始学习爱自己</title>
+    <url>/2017/09/25/congjintiankaishixuexiaiziji/</url>
+    <content><![CDATA[<p>2017年9月25日15:44:09</p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>导航滚动悬浮</title>
+    <url>/2017/11/08/daohanggundongxuanfu/</url>
+    <content><![CDATA[<p>做两个导航，第二个隐藏 下拉到一定位置，显示第二个，position:fixed $(function(){ $(window).scroll(function () {$(window).scroll(function () { var top = $(document).scrollTop(); var m=$(“.nav”); if (top &gt; m.offset().top) { m.next().css(‘display’,’block’) }else{ m.next().css(‘display’,’none’) } }) }</p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>deno学习笔记</title>
+    <url>/2020/05/18/deno%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="新特性"><a href="#新特性" class="headerlink" title="新特性"></a>新特性</h2><ol>
+<li>原生支持 ts</li>
+<li>原生支持 import</li>
+<li>可以直接 import 一个线上包</li>
+<li>原生支持 promise 不用写 async</li>
+<li>安全性，需要授权</li>
+</ol>
+<iframe src="//player.bilibili.com/player.html?aid=795633468&bvid=BV14C4y1H76e&cid=192362111&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=498 width=610> </iframe>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>docker的基本使用</title>
+    <url>/2020/07/03/docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="docker-命令"><a href="#docker-命令" class="headerlink" title="docker 命令"></a>docker 命令</h1><h2 id="docker-pull"><a href="#docker-pull" class="headerlink" title="docker pull"></a>docker pull</h2><p>获取 image</p>
+<h2 id="docker-build"><a href="#docker-build" class="headerlink" title="docker build"></a>docker build</h2><p>创建 image</p>
+<h2 id="docker-images"><a href="#docker-images" class="headerlink" title="docker images"></a>docker images</h2><p>列出 images</p>
+<h2 id="docker-tag"><a href="#docker-tag" class="headerlink" title="docker tag"></a>docker tag</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker tag 旧镜像名  新镜像名 </span><br></pre></td></tr></table></figure>
+<h2 id="docker-rmi"><a href="#docker-rmi" class="headerlink" title="docker rmi"></a>docker rmi</h2><p>删除 image</p>
+<h2 id="docker-commit"><a href="#docker-commit" class="headerlink" title="docker commit"></a>docker commit</h2><p>保存改动为新的 image</p>
+<h2 id="docker-run"><a href="#docker-run" class="headerlink" title="docker run"></a>docker run</h2><p>运行 container</p>
+<h2 id="docker-inspect"><a href="#docker-inspect" class="headerlink" title="docker inspect"></a>docker inspect</h2><p>获取容器/镜像的元数据。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker inspect 容器名称 查看容器IP</span><br></pre></td></tr></table></figure>
+<h2 id="docker-ps"><a href="#docker-ps" class="headerlink" title="docker ps"></a>docker ps</h2><p>列出运行中的 containers</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker ps -a <span class="comment">#列出所有的 containers</span></span><br></pre></td></tr></table></figure>
+<h2 id="docker-start"><a href="#docker-start" class="headerlink" title="docker start"></a>docker start</h2><p>启动 containers</p>
+<h2 id="docker-stop"><a href="#docker-stop" class="headerlink" title="docker stop"></a>docker stop</h2><p>停止 containers</p>
+<h2 id="docker-rm"><a href="#docker-rm" class="headerlink" title="docker rm"></a>docker rm</h2><p>删除 container</p>
+<h2 id="docker-cp"><a href="#docker-cp" class="headerlink" title="docker cp"></a>docker cp</h2><p>在 host 和 container 之间拷贝文件</p>
+<p>将主机 /www/test 目录拷贝到容器 96f7f14e99ab 的 /www 目录下。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">cp</span> /www/test 96f7f14e99ab:/www/</span><br></pre></td></tr></table></figure>
+<p>将容器 96f7f14e99ab 的 /www 目录拷贝到主机的 /tmp 目录中。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">cp</span>  96f7f14e99ab:/www /tmp/</span><br></pre></td></tr></table></figure>
+<p><img src="https://img.mukewang.com/5efdebd800014a8619201080.jpg" alt="docker 命令1"><br><img src="https://img.mukewang.com/5efdec250001eb8419201080.jpg" alt="docker 命令2"></p>
+<h3 id="Dockerfile-语法"><a href="#Dockerfile-语法" class="headerlink" title="Dockerfile 语法"></a>Dockerfile 语法</h3><p><img src="https://img.mukewang.com/5efdeeec00018f3e19201080.jpg" alt="Dockerfile 语法1"><br><img src="https://img.mukewang.com/5efdef1b0001ff5b19201080.jpg" alt="Dockerfile 语法2"></p>
+<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><p>bridge 网络<br>host 网络</p>
+<p>参考：<a href="https://www.jb51.net/article/149173.htm">https://www.jb51.net/article/149173.htm</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>docker进入容器</title>
+    <url>/2019/12/06/docker%E8%BF%9B%E5%85%A5%E5%AE%B9%E5%99%A8/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker exec [OPTIONS] CONTAINER COMMAND [ARG...]</span><br></pre></td></tr></table></figure>
+<p>docker run 也可以</p>
+<p>OPTIONS说明：</p>
+<p>-d :分离模式: 在后台运行</p>
+<p>-i :即使没有附加也保持STDIN 打开</p>
+<p>-t :分配一个伪终端</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker exec -it 1f2f04275f80 redis-cli</span><br></pre></td></tr></table></figure>
+
+<p>退出容器<br>exit</p>
+<p>参考<br><a href="https://blog.csdn.net/weixin_38982591/article/details/103989153">https://blog.csdn.net/weixin_38982591/article/details/103989153</a></p>
+]]></content>
+      <categories>
+        <category>technology</category>
+        <category>Server</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>dom之scroll</title>
+    <url>/2021/07/01/dom%E4%B9%8Bscroll/</url>
+    <content><![CDATA[<p>参考：<br><a href="https://www.cnblogs.com/wangyihong/p/8056859.html">https://www.cnblogs.com/wangyihong/p/8056859.html</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>dreamlist</title>
+    <url>/2019/02/18/dreamlist/</url>
+    <content><![CDATA[<p>todolist</p>
+<p>1.治疗鼻咽炎<br>2.治疗近视<br>3.脱毛</p>
+<p>shoping list</p>
+<p>1.vans<br>2.眼霜<br>3.mbp<br>4.revengexstorm</p>
+]]></content>
+      <tags>
+        <tag>list</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>editorconfig 常用配置</title>
+    <url>/2021/12/13/editorconfig-%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">root = true</span><br><span class="line"></span><br><span class="line">[*]</span><br><span class="line">charset = utf-8</span><br><span class="line">end_of_line = lf</span><br><span class="line">indent_size = 2</span><br><span class="line">indent_style = space</span><br><span class="line">insert_final_newline = true</span><br><span class="line">trim_trailing_whitespace = true</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>elegant</title>
+    <url>/2019/02/18/elegant/</url>
+    <content><![CDATA[<p>elegant</p>
+<p>英 [ˈelɪgənt]   美 [ˈɛlɪɡənt]<br>adj.<br>（人或其举止）优美的;漂亮的;简炼的;简洁的</p>
+<p>adj.<br>1<br>(of people or their behaviour 人或其举止) 优美的；文雅的<br>attractive and showing a good sense of style</p>
+<p>同义词： stylish<br>She was tall and elegant.</p>
+<p>她身材修长，优雅大方。</p>
+<p>2<br>(of clothes, places and things 衣服、地方及物品) 漂亮雅致的；陈设讲究的；精美的<br>attractive and designed well</p>
+<p>同义词： stylish<br>an elegant dress</p>
+<p>高雅的连衣裙</p>
+<p>an elegant room/restaurant</p>
+<p>雅致的房间 / 餐厅</p>
+<p>3<br>(of a plan or an idea 计划或想法) 简练的；简洁的；简明的<br>clever but simple</p>
+<p>an elegant solution to the problem</p>
+<p>解决这个问题的简要方法</p>
+<p>来源于：百度翻译</p>
+]]></content>
+      <categories>
+        <category>english</category>
+      </categories>
+      <tags>
+        <tag>english</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>emmet快捷键</title>
+    <url>/2021/07/01/emmet%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    <content><![CDATA[<h3 id="快速选择相同项目"><a href="#快速选择相同项目" class="headerlink" title="快速选择相同项目"></a>快速选择相同项目</h3><p>Ctrl + D</p>
+<h3 id="回退一次选择"><a href="#回退一次选择" class="headerlink" title="回退一次选择"></a>回退一次选择</h3><p>Ctrl + U</p>
+<h3 id="跳过选中的项目"><a href="#跳过选中的项目" class="headerlink" title="跳过选中的项目"></a>跳过选中的项目</h3><p>Ctrl + K</p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>fiddler学习笔记</title>
+    <url>/2020/05/22/fiddler%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="1-2-两种模式"><a href="#1-2-两种模式" class="headerlink" title="1.2 两种模式"></a>1.2 两种模式</h2><ol>
+<li>streaming 流模式 （浏览器模式）实时的</li>
+<li>buffering 缓冲模式 把所有的数据准备好之后才返回给客户端 可以控制最后的服务器响应</li>
+</ol>
+<p><img src="https://img4.mukewang.com/5ec780180001c60b12800720.jpg" alt="fiddler 使用场景"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">res.write()</span><br><span class="line">res.end()</span><br></pre></td></tr></table></figure>
+<h2 id="1-3-使用场景"><a href="#1-3-使用场景" class="headerlink" title="1.3 使用场景"></a>1.3 使用场景</h2><p><img src="https://img2.mukewang.com/5ec781f00001b90b12800720.jpg" alt="fiddler 使用场景"></p>
+<h2 id="2-1-工具条常用功能"><a href="#2-1-工具条常用功能" class="headerlink" title="2.1 工具条常用功能"></a>2.1 工具条常用功能</h2><ol>
+<li>备注</li>
+<li>重放</li>
+<li>清除</li>
+<li>调试</li>
+<li>模式切换</li>
+<li>解析</li>
+<li>保持会话</li>
+<li>过滤请求（只看chrome）</li>
+</ol>
+<h2 id="2-2-状态栏操作"><a href="#2-2-状态栏操作" class="headerlink" title="2.2 状态栏操作"></a>2.2 状态栏操作</h2><ol>
+<li>capturing 是否工作</li>
+<li>过滤会话</li>
+<li>会话数量</li>
+<li>会话详细地址</li>
+</ol>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ol>
+<li>捕获HTTPS（参考教程）</li>
+<li>捕获chrome浏览器，安装插件 SwithyOmega</li>
+<li>不能捕获js，可能是缓存的问题，勾选禁用缓存</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20190627112123574.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTEwNjg3MDI=,size_16,color_FFFFFF,t_70" alt="捕获js"></p>
+<p>课程地址<br><a href="https://www.imooc.com/learn/37">https://www.imooc.com/learn/37</a><br>教程地址<br><a href="https://kb.cnblogs.com/page/130367/#introduce">https://kb.cnblogs.com/page/130367/#introduce</a></p>
 ]]></content>
       <categories>
         <category>未分类</category>
