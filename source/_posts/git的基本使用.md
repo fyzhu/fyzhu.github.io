@@ -62,10 +62,10 @@ $ git add README
 
 ## 分支操作 
 ### 拉取分支
-```
+```bash
 git fetch origin xxx
 
-// 以下命令相当于 git pull upstream x.x.x
+# 以下命令相当于 git pull upstream x.x.x
 git fetch upstream x.x.x
 git log -p FETCH_HEAD 
 git merge FETCH_HEAD
@@ -77,15 +77,18 @@ git branch xxx
 git branch -a
 ```
 ### 重命名分支
-```
- git branch -m oldName  newName
+```bash
+# 在当前分支时
+git branch -m newName 
+# 不在当前分支时
+git branch -m oldName  newName
 ```
 ### 切换分支
-```js
+```bash
 git checkout xxx
-// 创建并切换（远程）分支
+# 创建并切换（远程）分支
 git checkout -b dev（本地分支名） origin/dev（远程分支名）
-// 在此之前确保有远程分支，git fetch 一下
+# 在此之前确保有远程分支，git fetch 一下
 ```
 ### 合并分支
 git merge xxx
