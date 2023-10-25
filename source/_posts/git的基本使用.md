@@ -113,6 +113,7 @@ git stash pop
 git stash list
 git stash show
 ```
+[Git(六)：git stash 命令](https://zhuanlan.zhihu.com/p/117553180)
 ## ！放弃修改
 ###  untracked files
 ```
