@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">179</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">180</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,142 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2023/11/08/fe/iconfont/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/08/fe/iconfont/" class="post-title-link" itemprop="url">iconfont 乱码</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-11-08 19:25:13 / 修改时间：11:57:15" itemprop="dateCreated datePublished" datetime="2023-11-08T19:25:13+00:00">2023-11-08</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2023/11/08/fe/iconfont/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/11/08/fe/iconfont/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h1><p><a target="_blank" rel="noopener" href="https://www.w3.org/International/articles/definitions-characters/#charsets">Character encodings: Essential concepts</a>  </p>
+<p>UTF-8 uses 1 byte to represent characters in the ASCII set, two bytes for characters in several more alphabetic blocks, and three bytes for the rest of the BMP. Supplementary characters use 4 bytes.</p>
+<p>UTF-16 uses 2 bytes for any character in the BMP, and 4 bytes for supplementary characters.</p>
+<p>UTF-32 uses 4 bytes for all characters.</p>
+<p>In the following chart, the first line of numbers represents the position of a character in the Unicode coded character set. The other lines show the byte values used to represent that character in a particular character encoding.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Latin A.</th>
+<th>Hebrew alef.</th>
+<th>Han ideograph AN.</th>
+<th>Chinese ideograph meaning ‘stump of tree’.</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Code point</td>
+<td>U+0041</td>
+<td>U+05D0</td>
+<td>U+597D</td>
+<td>U+233B4</td>
+</tr>
+<tr>
+<td>UTF-8</td>
+<td>41</td>
+<td>D7 90</td>
+<td>E5 A5 BD</td>
+<td>F0 A3 8E B4</td>
+</tr>
+<tr>
+<td>UTF-16</td>
+<td>00 41</td>
+<td>05 D0</td>
+<td>59 7D</td>
+<td>D8 4C DF B4</td>
+</tr>
+<tr>
+<td>UTF-32</td>
+<td>00 00 00 41</td>
+<td>00 00 05 D0</td>
+<td>00 00 59 7D</td>
+<td>00 02 33 B4</td>
+</tr>
+</tbody></table>
+<h1 id="乱码原因"><a href="#乱码原因" class="headerlink" title="乱码原因"></a>乱码原因</h1><p>以下 css 进行 sass 压缩 </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&#x27;\4e2d&#x27;</span> // codepoint</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">b</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&quot;\e6df&quot;</span>; // codepoint</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>压缩后（为了方便查看，对压缩后的代码进行了格式化）</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">  <span class="attribute">content</span> &#x27;中&#x27;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">b</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>源代码 <code>\4e2d</code> 占用 5 个字节，压缩后代码 <code>中</code> 占用 3 个字节 <code>E4 B8 AD</code></p>
+<p>浏览器对压缩后的代码解析可能会出错，把 <code>中</code> 按 3 个 codepoint 解析，然后页面中就出现了三个 ascii 码</p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>css-unicode-loader</p>
+<h1 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">encodeURI</span>(<span class="string">&#x27;中&#x27;</span>) <span class="comment">// &#x27;%E4%B8%AD&#x27; 三位 16 进制</span></span><br><span class="line"><span class="keyword">const</span> encoder = <span class="keyword">new</span> <span class="title class_">TextEncoder</span>();</span><br><span class="line"><span class="keyword">const</span> view = encoder.<span class="title function_">encode</span>(<span class="string">&quot;中&quot;</span>); <span class="comment">// [228, 184, 173] 三位十进制</span></span><br><span class="line"><span class="string">&#x27;中&#x27;</span>.<span class="title function_">charCodeAt</span>(<span class="number">0</span>).<span class="title function_">toString</span>(<span class="number">16</span>) <span class="comment">// 4e2d codepoint</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2023/06/16/fe/addEventListener/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +377,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -329,7 +465,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -419,7 +555,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -506,7 +642,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -634,7 +770,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -735,7 +871,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -834,7 +970,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -923,7 +1059,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1010,7 +1146,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1061,96 +1197,6 @@
 </ol>
 <p>各种方案优劣对比</p>
 <p><a target="_blank" rel="noopener" href="https://coding.imooc.com/lesson/520.html#mid=45514">从0打造微前端框架，实战汽车资讯平台</a><br><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2022/04/microservice.html">微服务是什么</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2022/06/07/safari-setInterval-%E4%B8%8D%E5%87%86%E7%9A%84%E9%97%AE%E9%A2%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/06/07/safari-setInterval-%E4%B8%8D%E5%87%86%E7%9A%84%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">safari setInterval 不准的问题</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-06-07 18:10:20" itemprop="dateCreated datePublished" datetime="2022-06-07T18:10:20+00:00">2022-06-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2022/06/07/safari-setInterval-%E4%B8%8D%E5%87%86%E7%9A%84%E9%97%AE%E9%A2%98/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/06/07/safari-setInterval-不准的问题/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line"><span class="keyword">var</span> startTime = <span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">getTime</span>(); </span><br><span class="line"><span class="keyword">var</span> count = <span class="number">0</span>; </span><br><span class="line"><span class="built_in">setInterval</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123; </span><br><span class="line">  <span class="keyword">var</span> i = <span class="number">0</span>; </span><br><span class="line">  <span class="keyword">while</span>(i++ &lt; <span class="number">100000000</span>); </span><br><span class="line">&#125;, <span class="number">0</span>); </span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fixed</span>(<span class="params"></span>) &#123; </span><br><span class="line">  count++; </span><br><span class="line">  <span class="keyword">var</span> offset = <span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">getTime</span>() - (startTime + count * <span class="number">1000</span>); </span><br><span class="line">  <span class="keyword">var</span> nextTime = <span class="number">1000</span> - offset; </span><br><span class="line">  <span class="keyword">if</span> (nextTime &lt; <span class="number">0</span>) nextTime = <span class="number">0</span>; </span><br><span class="line">  <span class="built_in">setTimeout</span>(fixed, nextTime); </span><br><span class="line"></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">getTime</span>() - (startTime + count * <span class="number">1000</span>)); </span><br><span class="line">&#125; </span><br><span class="line"><span class="built_in">setTimeout</span>(fixed, <span class="number">1000</span>); </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><a target="_blank" rel="noopener" href="https://www.jb51.net/article/49913.htm">参考</a></p>
-<p><a target="_blank" rel="noopener" href="https://imququ.com/post/ios-none-freeze-timer.html">不会被 iOS 停掉的网页定时器</a></p>
 
       
     </div>
@@ -1235,7 +1281,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">179</span>
+          <span class="site-state-item-count">180</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

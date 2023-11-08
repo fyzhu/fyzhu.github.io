@@ -172,18 +172,18 @@
       </categories>
   </entry>
   <entry>
-    <title>从今天开始学习爱自己</title>
-    <url>/2017/09/25/congjintiankaishixuexiaiziji/</url>
-    <content><![CDATA[<p>2017年9月25日15:44:09</p>
+    <title>导航滚动悬浮</title>
+    <url>/2017/11/08/daohanggundongxuanfu/</url>
+    <content><![CDATA[<p>做两个导航，第二个隐藏 下拉到一定位置，显示第二个，position:fixed $(function(){ $(window).scroll(function () {$(window).scroll(function () { var top = $(document).scrollTop(); var m=$(“.nav”); if (top &gt; m.offset().top) { m.next().css(‘display’,’block’) }else{ m.next().css(‘display’,’none’) } }) }</p>
 ]]></content>
       <categories>
         <category>未分类</category>
       </categories>
   </entry>
   <entry>
-    <title>导航滚动悬浮</title>
-    <url>/2017/11/08/daohanggundongxuanfu/</url>
-    <content><![CDATA[<p>做两个导航，第二个隐藏 下拉到一定位置，显示第二个，position:fixed $(function(){ $(window).scroll(function () {$(window).scroll(function () { var top = $(document).scrollTop(); var m=$(“.nav”); if (top &gt; m.offset().top) { m.next().css(‘display’,’block’) }else{ m.next().css(‘display’,’none’) } }) }</p>
+    <title>从今天开始学习爱自己</title>
+    <url>/2017/09/25/congjintiankaishixuexiaiziji/</url>
+    <content><![CDATA[<p>2017年9月25日15:44:09</p>
 ]]></content>
       <categories>
         <category>未分类</category>
@@ -372,19 +372,6 @@
       </categories>
   </entry>
   <entry>
-    <title>git如何忽略已经加入版本控制的文件</title>
-    <url>/2019/07/20/git-ignore/</url>
-    <content><![CDATA[<p>如果文件已经加入版本控制，再加入.gitignore文件也还是会提交到版本控制。<br>这时需要首先确保文件已经加入.gitignore文件<br>然后使用如下命令：</p>
-<ol>
-<li>文件<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git rm --cached filename</span><br></pre></td></tr></table></figure></li>
-<li>文件夹<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git rm -r --cached foldername</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>git commit 规范</title>
     <url>/2020/05/18/git-commit-%E8%A7%84%E8%8C%83/</url>
     <content><![CDATA[<h2 id="Commit-message格式"><a href="#Commit-message格式" class="headerlink" title="Commit message格式"></a>Commit message格式</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;type&gt;: &lt;subject&gt;</span><br></pre></td></tr></table></figure>
@@ -397,6 +384,19 @@
       <categories>
         <category>未分类</category>
       </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git如何忽略已经加入版本控制的文件</title>
+    <url>/2019/07/20/git-ignore/</url>
+    <content><![CDATA[<p>如果文件已经加入版本控制，再加入.gitignore文件也还是会提交到版本控制。<br>这时需要首先确保文件已经加入.gitignore文件<br>然后使用如下命令：</p>
+<ol>
+<li>文件<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git rm --cached filename</span><br></pre></td></tr></table></figure></li>
+<li>文件夹<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git rm -r --cached foldername</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
       <tags>
         <tag>git</tag>
       </tags>
@@ -595,6 +595,18 @@
       </tags>
   </entry>
   <entry>
+    <title>laravel学习笔记</title>
+    <url>/2020/08/23/laravel%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h3 id="migration"><a href="#migration" class="headerlink" title="migration"></a>migration</h3><p>php artisan make:migration create_tasks_table<br>php artisan migrate</p>
+<h3 id="model"><a href="#model" class="headerlink" title="model"></a>model</h3><p>php artisan make:model User</p>
+<h3 id="contorller"><a href="#contorller" class="headerlink" title="contorller"></a>contorller</h3><p>php artisan make:controller UsersContorller –resource</p>
+<h3 id="快速创建软链接"><a href="#快速创建软链接" class="headerlink" title="快速创建软链接"></a>快速创建软链接</h3><p>php artisan storage:link</p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>java环境变量配置</title>
     <url>/2019/08/10/java%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h1 id="window10下环境变量配置"><a href="#window10下环境变量配置" class="headerlink" title="window10下环境变量配置"></a>window10下环境变量配置</h1><h2 id="新建JAVA-HOME"><a href="#新建JAVA-HOME" class="headerlink" title="新建JAVA_HOME"></a>新建JAVA_HOME</h2><p>变量名：JAVA_HOME<br>变量值：电脑上JDK安装的绝对路径</p>
@@ -611,18 +623,6 @@
         <tag>config</tag>
         <tag>java</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>laravel学习笔记</title>
-    <url>/2020/08/23/laravel%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h3 id="migration"><a href="#migration" class="headerlink" title="migration"></a>migration</h3><p>php artisan make:migration create_tasks_table<br>php artisan migrate</p>
-<h3 id="model"><a href="#model" class="headerlink" title="model"></a>model</h3><p>php artisan make:model User</p>
-<h3 id="contorller"><a href="#contorller" class="headerlink" title="contorller"></a>contorller</h3><p>php artisan make:controller UsersContorller –resource</p>
-<h3 id="快速创建软链接"><a href="#快速创建软链接" class="headerlink" title="快速创建软链接"></a>快速创建软链接</h3><p>php artisan storage:link</p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
   </entry>
   <entry>
     <title>learn VIM</title>
@@ -648,6 +648,14 @@
       </categories>
   </entry>
   <entry>
+    <title>lock文件是如何保证依赖确定性的</title>
+    <url>/2021/09/08/lock%E6%96%87%E4%BB%B6%E6%98%AF%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E4%BE%9D%E8%B5%96%E7%A1%AE%E5%AE%9A%E6%80%A7%E7%9A%84/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>超越自卑的活法live笔记</title>
     <url>/2017/08/29/live/</url>
     <content><![CDATA[<h2 id="1-自卑是人际排序的产物。"><a href="#1-自卑是人际排序的产物。" class="headerlink" title="1.自卑是人际排序的产物。"></a>1.自卑是人际排序的产物。</h2><p><img src="https://pic3.zhimg.com/v2-5e7494173cbbd7ec9c7a3f4435fdf352_b.jpg" alt="test"> 评价与被评价 努力被目标感驱动 努力被序列感驱动，对努力的模仿，被排序思维支配，追求优越感。   </p>
@@ -656,14 +664,6 @@
 ]]></content>
       <categories>
         <category>life</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>lock文件是如何保证依赖确定性的</title>
-    <url>/2021/09/08/lock%E6%96%87%E4%BB%B6%E6%98%AF%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E4%BE%9D%E8%B5%96%E7%A1%AE%E5%AE%9A%E6%80%A7%E7%9A%84/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>未分类</category>
       </categories>
   </entry>
   <entry>
@@ -808,24 +808,6 @@
       </categories>
   </entry>
   <entry>
-    <title>mariadb支持远程访问</title>
-    <url>/2019/03/11/mariadb%E6%94%AF%E6%8C%81%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/</url>
-    <content><![CDATA[<p>参考文档<a href="https://www.cnblogs.com/24la/p/mariadb-remoting-access.html">https://www.cnblogs.com/24la/p/mariadb-remoting-access.html</a></p>
-<p>首先配置允许访问的用户，采用授权的方式给用户权限</p>
-<p>1<br>GRANT ALL PRIVILEGES ON <em>.</em> TO ‘root’@’%’IDENTIFIED BY ‘123456’ WITH GRANT OPTION;<br> 说明：root是登陆数据库的用户，123456是登陆数据库的密码，*就是意味着任何来源任何主机反正就是权限很大的样子。</p>
-<p>最后配置好权限之后不应该忘记刷新使之生效</p>
-<p>1<br>flush privileges;<br> 再次访问就可以了吧。</p>
-]]></content>
-      <categories>
-        <category>technology</category>
-        <category>database</category>
-      </categories>
-      <tags>
-        <tag>mysql</tag>
-        <tag>mariaDB</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>miniclass.com.cn</title>
     <url>/2019/03/06/miniclass-com-cn/</url>
     <content><![CDATA[<h3 id="slogan"><a href="#slogan" class="headerlink" title="slogan"></a>slogan</h3><p>mini小课，每节课只有一个知识点</p>
@@ -885,6 +867,24 @@
       <categories>
         <category>未分类</category>
       </categories>
+  </entry>
+  <entry>
+    <title>mariadb支持远程访问</title>
+    <url>/2019/03/11/mariadb%E6%94%AF%E6%8C%81%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/</url>
+    <content><![CDATA[<p>参考文档<a href="https://www.cnblogs.com/24la/p/mariadb-remoting-access.html">https://www.cnblogs.com/24la/p/mariadb-remoting-access.html</a></p>
+<p>首先配置允许访问的用户，采用授权的方式给用户权限</p>
+<p>1<br>GRANT ALL PRIVILEGES ON <em>.</em> TO ‘root’@’%’IDENTIFIED BY ‘123456’ WITH GRANT OPTION;<br> 说明：root是登陆数据库的用户，123456是登陆数据库的密码，*就是意味着任何来源任何主机反正就是权限很大的样子。</p>
+<p>最后配置好权限之后不应该忘记刷新使之生效</p>
+<p>1<br>flush privileges;<br> 再次访问就可以了吧。</p>
+]]></content>
+      <categories>
+        <category>technology</category>
+        <category>database</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+        <tag>mariaDB</tag>
+      </tags>
   </entry>
   <entry>
     <title>mysql配置用户密码</title>
@@ -1609,18 +1609,6 @@ timeout(100).then((value) =&gt; &#123;
       </tags>
   </entry>
   <entry>
-    <title>shell快捷键</title>
-    <url>/2021/09/08/shell%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
-    <content><![CDATA[<p>下面列举一些经常使用的快捷键：</p>
-<p>Ctrl + L 用于清理终端的内容，就是清屏的作用。其实 clear 命令也有同样效果，但是你不觉得 Ctrl + L 的按键比输入 clear 这五个字母更快速吗？<br>Ctrl + D 给终端传递 EOF （End Of File，文件结束符），在运行程序时很有用。有些程序我们需要在接收到 EOF 输入时结束，那么这个快捷键就可以派上用场了。比如我们之前演示过，退出 root 用户身份，就可以用 Ctrl + D。如果你在命令行提示符后什么也不输入的情况下直接按下这组快捷键，那么就会关闭当前的终端；<br>Shift + PgUp 用于向上滚屏，与鼠标的滚轮向上滚屏是一个效果；<br>Shift + PgDn 用于向下滚屏，与鼠标的滚轮向下滚屏是一个效果。<br>下面的快捷键在你编辑一条比较长的命令时很有用：</p>
-<p>Ctrl + A 光标跳到一行命令的开头。一般来说，Home 键有相同的效果；<br>Ctrl + E 光标跳到一行命令的结尾。一般来说，End 键有相同的效果；。<br>Ctrl + U 删除所有在光标左侧的命令字符；<br>Ctrl + K 删除所有在光标右侧的命令字符；<br>Ctrl + W 删除光标左侧的一个“单词”，这里的“单词”指的是用空格隔开的一个字符串。例如 -a 就是一个“单词”；<br>Ctrl + Y 粘贴用 Ctrl + U、 Ctrl + K 或 Ctrl + W “删除”的字符串，有点像“剪切-粘贴”。</p>
-<p>参考：<br><a href="https://www.imooc.com/read/39/article/463">https://www.imooc.com/read/39/article/463</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>什么是反向代理（转载）</title>
     <url>/2018/01/25/shenmeshifanxiangdailizhuanzai/</url>
     <content><![CDATA[<p>作者：车小胖 链接：<a href="https://www.zhihu.com/question/24723688/answer/160252724">https://www.zhihu.com/question/24723688/answer/160252724</a> 来源：知乎 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
@@ -1642,6 +1630,18 @@ timeout(100).then((value) =&gt; &#123;
       <categories>
         <category>technology</category>
         <category>database</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>shell快捷键</title>
+    <url>/2021/09/08/shell%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    <content><![CDATA[<p>下面列举一些经常使用的快捷键：</p>
+<p>Ctrl + L 用于清理终端的内容，就是清屏的作用。其实 clear 命令也有同样效果，但是你不觉得 Ctrl + L 的按键比输入 clear 这五个字母更快速吗？<br>Ctrl + D 给终端传递 EOF （End Of File，文件结束符），在运行程序时很有用。有些程序我们需要在接收到 EOF 输入时结束，那么这个快捷键就可以派上用场了。比如我们之前演示过，退出 root 用户身份，就可以用 Ctrl + D。如果你在命令行提示符后什么也不输入的情况下直接按下这组快捷键，那么就会关闭当前的终端；<br>Shift + PgUp 用于向上滚屏，与鼠标的滚轮向上滚屏是一个效果；<br>Shift + PgDn 用于向下滚屏，与鼠标的滚轮向下滚屏是一个效果。<br>下面的快捷键在你编辑一条比较长的命令时很有用：</p>
+<p>Ctrl + A 光标跳到一行命令的开头。一般来说，Home 键有相同的效果；<br>Ctrl + E 光标跳到一行命令的结尾。一般来说，End 键有相同的效果；。<br>Ctrl + U 删除所有在光标左侧的命令字符；<br>Ctrl + K 删除所有在光标右侧的命令字符；<br>Ctrl + W 删除光标左侧的一个“单词”，这里的“单词”指的是用空格隔开的一个字符串。例如 -a 就是一个“单词”；<br>Ctrl + Y 粘贴用 Ctrl + U、 Ctrl + K 或 Ctrl + W “删除”的字符串，有点像“剪切-粘贴”。</p>
+<p>参考：<br><a href="https://www.imooc.com/read/39/article/463">https://www.imooc.com/read/39/article/463</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
       </categories>
   </entry>
   <entry>
@@ -2083,6 +2083,22 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
+    <title>windows服务器添加远程控制用户</title>
+    <url>/2020/08/18/windows%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7/</url>
+    <content><![CDATA[<h4 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h4><p>两种方式</p>
+<ol>
+<li>控制面板-用户帐户-用户帐户-管理其他帐户-添加用户账户</li>
+<li>服务器管理器-工具-计算机管理-系统工具-本地用户和组-用户-右键新用户-记得右键设置密码<h4 id="赋予远程控制组"><a href="#赋予远程控制组" class="headerlink" title="赋予远程控制组"></a>赋予远程控制组</h4>两种方式</li>
+<li>上一步第二种方法直接右键用户选属性-隶属于选项卡-添加 Remote Desktop Users 组</li>
+<li>右键这台电脑-属性-更改设置-远程选项卡-选择用户-添加相应用户</li>
+</ol>
+<p>参考：<br><a href="https://blog.csdn.net/zhuge_Spring/article/details/107005114">https://blog.csdn.net/zhuge_Spring/article/details/107005114</a><br>补充：<br>ie增强的安全配置如何关闭<br><a href="https://jingyan.baidu.com/article/ce09321b63a43c2bfe858f5f.html">https://jingyan.baidu.com/article/ce09321b63a43c2bfe858f5f.html</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>windows terminal</title>
     <url>/2020/08/19/windows-terminal/</url>
     <content><![CDATA[<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>请使用 nerd-fonts 字体， powerline fonts 字体，部分图标可能无法显示   </p>
@@ -2118,22 +2134,6 @@ timeout(100).then((value) =&gt; &#123;
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#------------------------------- Import Modules BEGIN -------------------------------</span><br><span class="line"># 引入 posh-git</span><br><span class="line">Import-Module posh-git</span><br><span class="line"></span><br><span class="line"># 初始化 oh-my-posh 并设置 PowerShell 主题</span><br><span class="line">oh-my-posh init pwsh --config &quot;$env:POSH_THEMES_PATH\paradox.omp.json&quot; | Invoke-Expression</span><br><span class="line"># oh-my-posh init pwsh --config &quot;$env:POSH_THEMES_PATH\jandedobbeleer.omp.json&quot; | Invoke-Expression</span><br><span class="line">#------------------------------- Import Modules END   -------------------------------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#-------------------------------  Set Hot-keys BEGIN  -------------------------------</span><br><span class="line"># 设置 Tab 键补全</span><br><span class="line"># Set-PSReadlineKeyHandler -Key Tab -Function Complete</span><br><span class="line"></span><br><span class="line"># 设置 Ctrl+d 为菜单补全和 Intellisense</span><br><span class="line">Set-PSReadLineKeyHandler -Key &quot;Tab&quot; -Function MenuComplete</span><br><span class="line"></span><br><span class="line"># 设置 Ctrl+d 为退出 PowerShell</span><br><span class="line">Set-PSReadlineKeyHandler -Key &quot;Ctrl+d&quot; -Function ViExit</span><br><span class="line"></span><br><span class="line"># 设置 Ctrl+z 为撤销</span><br><span class="line">Set-PSReadLineKeyHandler -Key &quot;Ctrl+z&quot; -Function Undo</span><br><span class="line"></span><br><span class="line">#-------------------------------  Set Hot-keys END    -------------------------------</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>参考：<br><a href="https://ohmyposh.dev/">on-my-posh 官网</a><br><a href="https://www.cnblogs.com/Rohn/p/12940312.html">https://www.cnblogs.com/Rohn/p/12940312.html</a><br><a href="https://zhuanlan.zhihu.com/p/137595941">https://zhuanlan.zhihu.com/p/137595941</a><br><a href="https://blog.csdn.net/WPwalter/article/details/100159481">https://blog.csdn.net/WPwalter/article/details/100159481</a><br>字体：<br><a href="https://sspai.com/post/52907">https://sspai.com/post/52907</a><br>powershell 乱码，vscode 乱码 :<br><a href="https://zhuanlan.zhihu.com/p/51901035">https://zhuanlan.zhihu.com/p/51901035</a><br>其他：<br>guid 生成工具<br><a href="https://www.qvdv.com/tools/qvdv-guid.html">https://www.qvdv.com/tools/qvdv-guid.html</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>windows服务器添加远程控制用户</title>
-    <url>/2020/08/18/windows%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7/</url>
-    <content><![CDATA[<h4 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h4><p>两种方式</p>
-<ol>
-<li>控制面板-用户帐户-用户帐户-管理其他帐户-添加用户账户</li>
-<li>服务器管理器-工具-计算机管理-系统工具-本地用户和组-用户-右键新用户-记得右键设置密码<h4 id="赋予远程控制组"><a href="#赋予远程控制组" class="headerlink" title="赋予远程控制组"></a>赋予远程控制组</h4>两种方式</li>
-<li>上一步第二种方法直接右键用户选属性-隶属于选项卡-添加 Remote Desktop Users 组</li>
-<li>右键这台电脑-属性-更改设置-远程选项卡-选择用户-添加相应用户</li>
-</ol>
-<p>参考：<br><a href="https://blog.csdn.net/zhuge_Spring/article/details/107005114">https://blog.csdn.net/zhuge_Spring/article/details/107005114</a><br>补充：<br>ie增强的安全配置如何关闭<br><a href="https://jingyan.baidu.com/article/ce09321b63a43c2bfe858f5f.html">https://jingyan.baidu.com/article/ce09321b63a43c2bfe858f5f.html</a></p>
 ]]></content>
       <categories>
         <category>未分类</category>
@@ -2343,26 +2343,6 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
-    <title>前赤壁赋</title>
-    <url>/2018/04/09/%E5%89%8D%E8%B5%A4%E5%A3%81%E8%B5%8B/</url>
-    <content><![CDATA[<h1 id="前赤壁赋"><a href="#前赤壁赋" class="headerlink" title="前赤壁赋"></a>前赤壁赋</h1><p>作者：<a href="https://www.baidu.com/s?wd=%E8%8B%8F%E8%BD%BC&amp;usm=2&amp;ie=utf-8&amp;rsv_cq=%E8%B5%A4%E5%A3%81%E8%B5%8B&amp;rsv_dl=0_left_exactqa_detail_28239">苏轼</a></p>
-<div class="op_exactqa_detail_s_answer">
-<div class="op_exactqa_detail_s_answer_scroll">
-<div class="op_exactqa_detail_s_answer_scroll_content c-gap-right opui-scroll-ctrl-content opui-scroll-onwheel">
-<div>壬戌之秋，七月既望，苏子与客泛舟游于赤壁之下。清风徐来，水波不兴。举酒属客，诵明月之诗，歌窈窕之章。少焉，月出于东山之上，徘徊于斗牛之间。白露横江，水光接天。纵一苇之所如，凌万顷之茫然。浩浩乎如冯虚御风，而不知其所止；飘飘乎如遗世独立，羽化而登仙。
-
-<p>于是饮酒乐甚，扣舷而歌之。歌曰：“桂棹兮兰桨，击空明兮溯流光。渺渺兮予怀，望美人兮天一方。”客有吹洞箫者，倚歌而和之。其声呜呜然，如怨如慕，如泣如诉，余音袅袅，不绝如缕。舞幽壑之潜蛟，泣孤舟之嫠妇。</p>
-<p>苏子愀然，正襟危坐而问客曰：“何为其然也？”客曰：“月明星稀，乌鹊南飞，此非曹孟德之诗乎？西望夏口，东望武昌，山川相缪，郁乎苍苍，此非孟德之困于周郎者乎？方其破荆州，下江陵，顺流而东也，舳舻千里，旌旗蔽空，酾酒临江，横槊赋诗，固一世之雄也，而今安在哉？况吾与子渔樵于江渚之上，侣鱼虾而友麋鹿，驾一叶之扁舟，举匏樽以相属。寄蜉蝣于天地，渺沧海之一粟。哀吾生之须臾，羡长江之无穷。挟飞仙以遨游，抱明月而长终。知不可乎骤得，托遗响于悲风。”</p>
-<p>苏子曰：“客亦知夫水与月乎？逝者如斯，而未尝往也；盈虚者如彼，而卒莫消长也。盖将自其变者而观之，则天地曾不能以一瞬；自其不变者而观之，则物与我皆无尽也，而又何羡乎！且夫天地之间，物各有主，苟非吾之所有，虽一毫而莫取。惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭，是造物者之无尽藏也，而吾与子之所共适。”</p>
-<p>客喜而笑，洗盏更酌。肴核既尽，杯盘狼藉。相与枕藉乎舟中，不知东方之既白。</div></p>
-</div>
-</div>
-</div>]]></content>
-      <categories>
-        <category>literature</category>
-      </categories>
-  </entry>
-  <entry>
     <title>如何获取视频的缓存进度</title>
     <url>/2022/07/11/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E8%A7%86%E9%A2%91%E7%9A%84%E7%BC%93%E5%AD%98%E8%BF%9B%E5%BA%A6/</url>
     <content><![CDATA[]]></content>
@@ -2391,6 +2371,26 @@ timeout(100).then((value) =&gt; &#123;
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#triangle-topleft &#123;</span><br><span class="line">    width: 0;</span><br><span class="line">    height: 0;</span><br><span class="line">    border-top: 100px solid red;</span><br><span class="line">    border-right: 100px solid transparent;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>前赤壁赋</title>
+    <url>/2018/04/09/%E5%89%8D%E8%B5%A4%E5%A3%81%E8%B5%8B/</url>
+    <content><![CDATA[<h1 id="前赤壁赋"><a href="#前赤壁赋" class="headerlink" title="前赤壁赋"></a>前赤壁赋</h1><p>作者：<a href="https://www.baidu.com/s?wd=%E8%8B%8F%E8%BD%BC&amp;usm=2&amp;ie=utf-8&amp;rsv_cq=%E8%B5%A4%E5%A3%81%E8%B5%8B&amp;rsv_dl=0_left_exactqa_detail_28239">苏轼</a></p>
+<div class="op_exactqa_detail_s_answer">
+<div class="op_exactqa_detail_s_answer_scroll">
+<div class="op_exactqa_detail_s_answer_scroll_content c-gap-right opui-scroll-ctrl-content opui-scroll-onwheel">
+<div>壬戌之秋，七月既望，苏子与客泛舟游于赤壁之下。清风徐来，水波不兴。举酒属客，诵明月之诗，歌窈窕之章。少焉，月出于东山之上，徘徊于斗牛之间。白露横江，水光接天。纵一苇之所如，凌万顷之茫然。浩浩乎如冯虚御风，而不知其所止；飘飘乎如遗世独立，羽化而登仙。
+
+<p>于是饮酒乐甚，扣舷而歌之。歌曰：“桂棹兮兰桨，击空明兮溯流光。渺渺兮予怀，望美人兮天一方。”客有吹洞箫者，倚歌而和之。其声呜呜然，如怨如慕，如泣如诉，余音袅袅，不绝如缕。舞幽壑之潜蛟，泣孤舟之嫠妇。</p>
+<p>苏子愀然，正襟危坐而问客曰：“何为其然也？”客曰：“月明星稀，乌鹊南飞，此非曹孟德之诗乎？西望夏口，东望武昌，山川相缪，郁乎苍苍，此非孟德之困于周郎者乎？方其破荆州，下江陵，顺流而东也，舳舻千里，旌旗蔽空，酾酒临江，横槊赋诗，固一世之雄也，而今安在哉？况吾与子渔樵于江渚之上，侣鱼虾而友麋鹿，驾一叶之扁舟，举匏樽以相属。寄蜉蝣于天地，渺沧海之一粟。哀吾生之须臾，羡长江之无穷。挟飞仙以遨游，抱明月而长终。知不可乎骤得，托遗响于悲风。”</p>
+<p>苏子曰：“客亦知夫水与月乎？逝者如斯，而未尝往也；盈虚者如彼，而卒莫消长也。盖将自其变者而观之，则天地曾不能以一瞬；自其不变者而观之，则物与我皆无尽也，而又何羡乎！且夫天地之间，物各有主，苟非吾之所有，虽一毫而莫取。惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭，是造物者之无尽藏也，而吾与子之所共适。”</p>
+<p>客喜而笑，洗盏更酌。肴核既尽，杯盘狼藉。相与枕藉乎舟中，不知东方之既白。</div></p>
+</div>
+</div>
+</div>]]></content>
+      <categories>
+        <category>literature</category>
       </categories>
   </entry>
   <entry>
@@ -2868,6 +2868,14 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </tags>
   </entry>
   <entry>
+    <title>Samsung Galaxy Z Flip4</title>
+    <url>/2022/11/17/AD/Samsung-Galaxy-Z-Flip4/</url>
+    <content><![CDATA[<iframe width="1000" height="508" src="https://www.youtube.com/embed/lqP87f9lZ2M" title="Galaxy Z Flip4: Launch film | Samsung" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>]]></content>
+      <categories>
+        <category>AD</category>
+      </categories>
+  </entry>
+  <entry>
     <title>跨域</title>
     <url>/2019/07/22/%E8%B7%A8%E5%9F%9F/</url>
     <content><![CDATA[<h3 id="为什么会出现跨域"><a href="#为什么会出现跨域" class="headerlink" title="为什么会出现跨域"></a>为什么会出现跨域</h3><p>安全<br>浏览器同源策略<br>同源策略限制了从同一个源加载的文档或脚本如何与来自另一个源的资源进行交互。这是一个用于隔离潜在恶意文件的重要安全机制。<br>cookie<br>CSRF攻击<br>XSS攻击</p>
@@ -2887,14 +2895,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       <tags>
         <tag>跨域</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Samsung Galaxy Z Flip4</title>
-    <url>/2022/11/17/AD/Samsung-Galaxy-Z-Flip4/</url>
-    <content><![CDATA[<iframe width="1000" height="508" src="https://www.youtube.com/embed/lqP87f9lZ2M" title="Galaxy Z Flip4: Launch film | Samsung" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>]]></content>
-      <categories>
-        <category>AD</category>
-      </categories>
   </entry>
   <entry>
     <title>think-different</title>
@@ -2965,6 +2965,69 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
         <tag>AD</tag>
         <tag>video</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>iconfont 乱码</title>
+    <url>/2023/11/08/fe/iconfont/</url>
+    <content><![CDATA[<h1 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h1><p><a href="https://www.w3.org/International/articles/definitions-characters/#charsets">Character encodings: Essential concepts</a>  </p>
+<p>UTF-8 uses 1 byte to represent characters in the ASCII set, two bytes for characters in several more alphabetic blocks, and three bytes for the rest of the BMP. Supplementary characters use 4 bytes.</p>
+<p>UTF-16 uses 2 bytes for any character in the BMP, and 4 bytes for supplementary characters.</p>
+<p>UTF-32 uses 4 bytes for all characters.</p>
+<p>In the following chart, the first line of numbers represents the position of a character in the Unicode coded character set. The other lines show the byte values used to represent that character in a particular character encoding.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Latin A.</th>
+<th>Hebrew alef.</th>
+<th>Han ideograph AN.</th>
+<th>Chinese ideograph meaning ‘stump of tree’.</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Code point</td>
+<td>U+0041</td>
+<td>U+05D0</td>
+<td>U+597D</td>
+<td>U+233B4</td>
+</tr>
+<tr>
+<td>UTF-8</td>
+<td>41</td>
+<td>D7 90</td>
+<td>E5 A5 BD</td>
+<td>F0 A3 8E B4</td>
+</tr>
+<tr>
+<td>UTF-16</td>
+<td>00 41</td>
+<td>05 D0</td>
+<td>59 7D</td>
+<td>D8 4C DF B4</td>
+</tr>
+<tr>
+<td>UTF-32</td>
+<td>00 00 00 41</td>
+<td>00 00 05 D0</td>
+<td>00 00 59 7D</td>
+<td>00 02 33 B4</td>
+</tr>
+</tbody></table>
+<h1 id="乱码原因"><a href="#乱码原因" class="headerlink" title="乱码原因"></a>乱码原因</h1><p>以下 css 进行 sass 压缩 </p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&#x27;\4e2d&#x27;</span> // codepoint</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">b</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&quot;\e6df&quot;</span>; // codepoint</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>压缩后（为了方便查看，对压缩后的代码进行了格式化）</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">  <span class="attribute">content</span> &#x27;中&#x27;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">b</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>源代码 <code>\4e2d</code> 占用 5 个字节，压缩后代码 <code>中</code> 占用 3 个字节 <code>E4 B8 AD</code></p>
+<p>浏览器对压缩后的代码解析可能会出错，把 <code>中</code> 按 3 个 codepoint 解析，然后页面中就出现了三个 ascii 码</p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>css-unicode-loader</p>
+<h1 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h1><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">encodeURI</span>(<span class="string">&#x27;中&#x27;</span>) <span class="comment">// &#x27;%E4%B8%AD&#x27; 三位 16 进制</span></span><br><span class="line"><span class="keyword">const</span> encoder = <span class="keyword">new</span> <span class="title class_">TextEncoder</span>();</span><br><span class="line"><span class="keyword">const</span> view = encoder.<span class="title function_">encode</span>(<span class="string">&quot;中&quot;</span>); <span class="comment">// [228, 184, 173] 三位十进制</span></span><br><span class="line"><span class="string">&#x27;中&#x27;</span>.<span class="title function_">charCodeAt</span>(<span class="number">0</span>).<span class="title function_">toString</span>(<span class="number">16</span>) <span class="comment">// 4e2d codepoint</span></span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
   </entry>
   <entry>
     <title>你真的了解 addEventListner 吗?</title>
@@ -3447,22 +3510,6 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
       </categories>
   </entry>
   <entry>
-    <title>项目升级es6</title>
-    <url>/2022/07/30/technology/front-end/%E9%A1%B9%E7%9B%AE%E5%8D%87%E7%BA%A7es6/</url>
-    <content><![CDATA[<p>本文主要记录 require 升级为 import 遇到的问题</p>
-<h2 id="dirname-is-not-defined-in-ES-module-scope"><a href="#dirname-is-not-defined-in-ES-module-scope" class="headerlink" title="__dirname is not defined in ES module scope"></a>__dirname is not defined in ES module scope</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> path <span class="keyword">from</span> <span class="string">&#x27;path&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123;fileURLToPath&#125; <span class="keyword">from</span> <span class="string">&#x27;url&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> __filename = <span class="title function_">fileURLToPath</span>(<span class="keyword">import</span>.<span class="property">meta</span>.<span class="property">url</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 👇️ &quot;/home/john/Desktop/javascript&quot;</span></span><br><span class="line"><span class="keyword">const</span> __dirname = path.<span class="title function_">dirname</span>(__filename);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;directory-name 👉️&#x27;</span>, __dirname);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 👇️ &quot;/home/borislav/Desktop/javascript/dist/index.html&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(path.<span class="title function_">join</span>(__dirname, <span class="string">&#x27;/dist&#x27;</span>, <span class="string">&#x27;index.html&#x27;</span>));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="import-json-file"><a href="#import-json-file" class="headerlink" title="import json file"></a>import json file</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> json <span class="keyword">from</span> <span class="string">&quot;./foo.json&quot;</span> assert &#123; <span class="attr">type</span>: <span class="string">&quot;json&quot;</span> &#125;;</span><br><span class="line"><span class="keyword">import</span>(<span class="string">&quot;foo.json&quot;</span>, &#123; <span class="attr">assert</span>: &#123; <span class="attr">type</span>: <span class="string">&quot;json&quot;</span> &#125; &#125;);</span><br></pre></td></tr></table></figure>
-
-<h2 id="import-条件导入"><a href="#import-条件导入" class="headerlink" title="import 条件导入"></a>import 条件导入</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (condition) &#123; <span class="comment">// 报错</span></span><br><span class="line">  <span class="keyword">import</span> moduleA <span class="keyword">from</span> <span class="string">&#x27;./moduleA&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="import-函数"><a href="#import-函数" class="headerlink" title="import 函数"></a>import 函数</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span>(<span class="string">&#x27;./moduleA .js&#x27;</span>)</span><br><span class="line">.<span class="title function_">then</span>(<span class="function"><span class="params">moduleA</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(moduleA);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(condition)&#123;</span><br><span class="line"> <span class="keyword">import</span>(<span class="string">&#x27;moduleA&#x27;</span>).<span class="title function_">then</span>(...);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>technology</category>
-        <category>front-end</category>
-        <category>js</category>
-      </categories>
-  </entry>
-  <entry>
     <title>CSS-animation</title>
     <url>/2021/06/04/technology/front-end/css/CSS-animation/</url>
     <content><![CDATA[<p>animation: name duration timing-function delay iteration-count direction fill-mode play-state;</p>
@@ -3597,6 +3644,22 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
         <category>technology</category>
         <category>front-end</category>
         <category>css</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>项目升级es6</title>
+    <url>/2022/07/30/technology/front-end/%E9%A1%B9%E7%9B%AE%E5%8D%87%E7%BA%A7es6/</url>
+    <content><![CDATA[<p>本文主要记录 require 升级为 import 遇到的问题</p>
+<h2 id="dirname-is-not-defined-in-ES-module-scope"><a href="#dirname-is-not-defined-in-ES-module-scope" class="headerlink" title="__dirname is not defined in ES module scope"></a>__dirname is not defined in ES module scope</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> path <span class="keyword">from</span> <span class="string">&#x27;path&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123;fileURLToPath&#125; <span class="keyword">from</span> <span class="string">&#x27;url&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> __filename = <span class="title function_">fileURLToPath</span>(<span class="keyword">import</span>.<span class="property">meta</span>.<span class="property">url</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 👇️ &quot;/home/john/Desktop/javascript&quot;</span></span><br><span class="line"><span class="keyword">const</span> __dirname = path.<span class="title function_">dirname</span>(__filename);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;directory-name 👉️&#x27;</span>, __dirname);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 👇️ &quot;/home/borislav/Desktop/javascript/dist/index.html&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(path.<span class="title function_">join</span>(__dirname, <span class="string">&#x27;/dist&#x27;</span>, <span class="string">&#x27;index.html&#x27;</span>));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="import-json-file"><a href="#import-json-file" class="headerlink" title="import json file"></a>import json file</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> json <span class="keyword">from</span> <span class="string">&quot;./foo.json&quot;</span> assert &#123; <span class="attr">type</span>: <span class="string">&quot;json&quot;</span> &#125;;</span><br><span class="line"><span class="keyword">import</span>(<span class="string">&quot;foo.json&quot;</span>, &#123; <span class="attr">assert</span>: &#123; <span class="attr">type</span>: <span class="string">&quot;json&quot;</span> &#125; &#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="import-条件导入"><a href="#import-条件导入" class="headerlink" title="import 条件导入"></a>import 条件导入</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (condition) &#123; <span class="comment">// 报错</span></span><br><span class="line">  <span class="keyword">import</span> moduleA <span class="keyword">from</span> <span class="string">&#x27;./moduleA&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="import-函数"><a href="#import-函数" class="headerlink" title="import 函数"></a>import 函数</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span>(<span class="string">&#x27;./moduleA .js&#x27;</span>)</span><br><span class="line">.<span class="title function_">then</span>(<span class="function"><span class="params">moduleA</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(moduleA);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(condition)&#123;</span><br><span class="line"> <span class="keyword">import</span>(<span class="string">&#x27;moduleA&#x27;</span>).<span class="title function_">then</span>(...);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>technology</category>
+        <category>front-end</category>
+        <category>js</category>
       </categories>
   </entry>
   <entry>

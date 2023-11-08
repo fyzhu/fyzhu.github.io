@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">179</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">180</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,103 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2019/07/22/%E8%B7%A8%E5%9F%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/07/22/%E8%B7%A8%E5%9F%9F/" class="post-title-link" itemprop="url">跨域</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-07-22 10:51:39" itemprop="dateCreated datePublished" datetime="2019-07-22T10:51:39+00:00">2019-07-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2019/07/22/%E8%B7%A8%E5%9F%9F/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/07/22/跨域/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="为什么会出现跨域"><a href="#为什么会出现跨域" class="headerlink" title="为什么会出现跨域"></a>为什么会出现跨域</h3><p>安全<br>浏览器同源策略<br>同源策略限制了从同一个源加载的文档或脚本如何与来自另一个源的资源进行交互。这是一个用于隔离潜在恶意文件的重要安全机制。<br>cookie<br>CSRF攻击<br>XSS攻击</p>
+<h3 id="跨域在chrome浏览器下的表现"><a href="#跨域在chrome浏览器下的表现" class="headerlink" title="跨域在chrome浏览器下的表现"></a>跨域在chrome浏览器下的表现</h3><h3 id="服务器跨域设置"><a href="#服务器跨域设置" class="headerlink" title="服务器跨域设置"></a>服务器跨域设置</h3><p>服务器可以设置只允许某个域名下的程序访问<br>Cross Origin Resource Share (CORS)<br>CORS是一个跨域资源共享方案，为了解决跨域问题，通过增加一系列请求头和响应头，规范安全地进行跨站数据传输<br>请求头主要包括<br>Origin Origin头在跨域请求或预先请求中，标明发起跨域请求的源域名。<br>响应头主要包括<br>Access-Control-Allow-Origin Access-Control-Allow-Origin头中携带了服务器端验证后的允许的跨域请求域名，可以是一个具体的域名或是一个*（表示任意域名）。</p>
+<h3 id="跨域解决方案"><a href="#跨域解决方案" class="headerlink" title="跨域解决方案"></a>跨域解决方案</h3><ol>
+<li>JSONP</li>
+<li>空iframe加form</li>
+<li>CORS跨域资源共享（Cross-origin resource sharing）</li>
+<li>nginx代理<h3 id="fetch-和-xhr"><a href="#fetch-和-xhr" class="headerlink" title="fetch 和 xhr"></a>fetch 和 xhr</h3><h3 id="withCredentials"><a href="#withCredentials" class="headerlink" title="withCredentials"></a>withCredentials</h3>HTTP 请求方式有许多种，有些请求会触发 CORS 预检请求。“需预检的请求”会使用 OPTIONS 方法发起一个预检请求到服务器，以获知服务器是否允许该实际请求。<br>对于跨域请求浏览器一般不会发送身份凭证信息。如果要发送凭证信息，需要设置 XMLHttpRequest 的 withCredentials 属性为 true：withCredentials: true。此时要求服务器的响应信息中携带 Access-Control-Allow-Credentials: true，否则响应内容将不会返回。<br>对于携带身份凭证的请求，服务器不得设置 Access-Control-Allow-Origin 的值为“*”。因为请求头携带了 Cookie 信息。要将 Access-Control-Allow-Origin 的值设置为<origin>域名。<br>另外，响应头中也携带了 Set-Cookie 字段，尝试对 Cookie 进行修改。如果操作失败，将会抛出异常。<br>————————————————<br>版权声明：本文为CSDN博主「__Amy」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/sansan_7957/article/details/79714486">https://blog.csdn.net/sansan_7957/article/details/79714486</a></li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/withCredentials">https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/withCredentials</a></p>
+<h3 id="webpack-代理设置"><a href="#webpack-代理设置" class="headerlink" title="webpack 代理设置"></a>webpack 代理设置</h3><p>参考：<br><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000017867312">https://segmentfault.com/a/1190000017867312</a><br><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000015597029">https://segmentfault.com/a/1190000015597029</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2019/07/22/%E8%B0%83%E7%94%A8%E5%A4%A9%E5%9C%B0%E5%9B%BEapi%E8%B7%A8%E5%9F%9F%E7%9A%84%E9%97%AE%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +338,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -336,7 +433,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
 
           
@@ -419,7 +516,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
 
           
@@ -503,7 +600,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -603,7 +700,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
 
           
@@ -684,7 +781,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
 
           
@@ -763,7 +860,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -864,7 +961,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -960,7 +1057,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1003,101 +1100,6 @@
 <li>衣服贵，包包贵，化妆品贵<br> 这节课却不收费</li>
 <li>来北京多年 还没出人头地<br> 但我相信你 总有过人之处</li>
 </ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2019/02/21/technology/apache-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/02/21/technology/apache-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/" class="post-title-link" itemprop="url">apache 允许其他主机访问</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-02-21 13:13:05" itemprop="dateCreated datePublished" datetime="2019-02-21T13:13:05+00:00">2019-02-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/technology/Server/" itemprop="url" rel="index"><span itemprop="name">Server</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2019/02/21/technology/apache-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/02/21/technology/apache-配置文件详解/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>1.允许其他主机访问</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    &lt;Directory &quot;F:/wamp/www/test&quot;&gt;</span><br><span class="line">        Options FollowSymLinks</span><br><span class="line">        AllowOverride All</span><br><span class="line">        Order allow,deny</span><br><span class="line">        Allow from all      #允许来自所有主机的访问</span><br><span class="line">        Require all granted #2.4以上需要加这一句</span><br><span class="line">    &lt;/Directory&gt;</span><br><span class="line">    ServerAdmin 826096331@qq.com</span><br><span class="line">    DocumentRoot &quot;F:/wamp/www/test&quot;</span><br><span class="line">    ServerName www.test.com</span><br><span class="line">    DirectoryIndex index.php index.html</span><br><span class="line">    ServerAlias test.com</span><br><span class="line">    ErrorLog &quot;logs/test.bin-error_log&quot;</span><br><span class="line">    CustomLog &quot;logs/test.bin-access_log&quot; common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
-<hr>
-<p>作者：u013032788<br>来源：CSDN<br>原文：<a target="_blank" rel="noopener" href="https://blog.csdn.net/u013032788/article/details/51395622">https://blog.csdn.net/u013032788/article/details/51395622</a><br>版权声明：本文为博主原创文章，转载请附上博文链接！</p>
 
       
     </div>
@@ -1182,7 +1184,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">179</span>
+          <span class="site-state-item-count">180</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

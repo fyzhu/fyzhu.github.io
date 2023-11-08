@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">179</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">180</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,212 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2018/05/10/mariadb%E5%BC%82%E5%B8%B8-mysqld-Out-of-memory-Centos-%E5%88%9B%E5%BB%BAswap%E5%88%86%E5%8C%BA%E8%A7%A3%E5%86%B3-%E8%BD%AC%E8%BD%BD%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/05/10/mariadb%E5%BC%82%E5%B8%B8-mysqld-Out-of-memory-Centos-%E5%88%9B%E5%BB%BAswap%E5%88%86%E5%8C%BA%E8%A7%A3%E5%86%B3-%E8%BD%AC%E8%BD%BD%EF%BC%89/" class="post-title-link" itemprop="url">mariadb异常 mysqld: Out of memory Centos 创建swap分区解决(转载）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-05-10 14:45:20" itemprop="dateCreated datePublished" datetime="2018-05-10T14:45:20+00:00">2018-05-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/database/" itemprop="url" rel="index"><span itemprop="name">database</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2018/05/10/mariadb%E5%BC%82%E5%B8%B8-mysqld-Out-of-memory-Centos-%E5%88%9B%E5%BB%BAswap%E5%88%86%E5%8C%BA%E8%A7%A3%E5%86%B3-%E8%BD%AC%E8%BD%BD%EF%BC%89/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/05/10/mariadb异常-mysqld-Out-of-memory-Centos-创建swap分区解决-转载）/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最近几天,<a target="_blank" rel="noopener" href="http://www.yangshengliang.com/webserver" title="服务器">服务器</a>异常，常报500错误，数据库无法连接，网站不能访问。查看mariadb日志，打开： /var/log/mariadb/mariadb.log</p>
+<pre class="crayon-plain-tag">160915&nbsp;19:44:22&nbsp;InnoDB:&nbsp;Fatal&nbsp;error:&nbsp;cannot&nbsp;allocate&nbsp;memory&nbsp;for&nbsp;the&nbsp;buffer&nbsp;pool
+160915&nbsp;19:44:22&nbsp;[ERROR]&nbsp;Plugin&nbsp;'InnoDB'&nbsp;init&nbsp;function&nbsp;returned&nbsp;error.
+160915&nbsp;19:44:22&nbsp;[ERROR]&nbsp;Plugin&nbsp;'InnoDB'&nbsp;registration&nbsp;as&nbsp;a&nbsp;STORAGE&nbsp;ENGINE&nbsp;failed.
+160915&nbsp;19:44:22&nbsp;[ERROR]&nbsp;mysqld:&nbsp;Out&nbsp;of&nbsp;memory&nbsp;(Needed&nbsp;128917504&nbsp;bytes)
+160915&nbsp;19:44:22&nbsp;[ERROR]&nbsp;mysqld:&nbsp;Out&nbsp;of&nbsp;memory&nbsp;(Needed&nbsp;96681984&nbsp;bytes)
+160915&nbsp;19:44:22&nbsp;[ERROR]&nbsp;mysqld:&nbsp;Out&nbsp;of&nbsp;memory&nbsp;(Needed&nbsp;72499200&nbsp;bytes)</pre>
+
+<p>是内存不够，购买是阿里云主机1G内存，不够用了,可以创建swap分区来解决。</p>
+<p>创建4g swap分区</p>
+<table class="syntaxhighlighter bash" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2">`dd` `if``=``/dev/zero` `of=``/var/swap` `bs=1024 count=4194304 `</div>
+<div class="line number2 index1 alt1">`mkswap ``/var/swap`</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>激活swap分区</p>
+<table class="syntaxhighlighter bash" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2">`swapon ``/var/swap`</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>设置自动挂载</p>
+<table class="syntaxhighlighter bash" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2">`vi` `/etc/fstab`</div>
+<div class="line number2 index1 alt1">`/var/swap`               `swap                    swap    defaults        0 0`</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>重启服务器</p>
+<table class="syntaxhighlighter bash" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2">`shutdown` `-r now`</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>查看内存使用状态</p>
+<table class="syntaxhighlighter bash" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2">`free` `-m`</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="syntaxhighlighter bash" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2">`              ``total        used        ``free`      `shared  buff``/cache`   `available`</div>
+<div class="line number2 index1 alt1">`Mem:            991         347         261          40         382         382`</div>
+<div class="line number3 index2 alt2">`Swap:          4096           0        4096`</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>创建swap分区成功，再没因内存不够而maridb自动关闭了。</p>
+<div>
+
+<p><strong>原文链接地址:</strong> <a target="_blank" rel="noopener" href="https://www.yangshengliang.com/webserver/626.html">mariadb异常 mysqld: Out of memory Centos 创建swap分区解决</a></p>
+</div>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2018/05/10/%E6%B8%85%E5%8D%8E%E4%BF%9D%E5%AE%89%E5%93%A5%E8%B4%BE%E4%BD%9C%E8%83%9C%E8%87%AA%E5%AD%A6%E8%80%83%E5%85%A5%E9%AB%98%E6%A0%A1%E7%9A%84%E5%8A%B1%E5%BF%97%E6%95%85%E4%BA%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +447,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -337,7 +543,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -436,7 +642,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -526,7 +732,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -640,7 +846,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -742,7 +948,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -870,7 +1076,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -966,7 +1172,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1069,7 +1275,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
+                <time title="修改时间：2023-11-08 11:57:15" itemprop="dateModified" datetime="2023-11-08T11:57:15+00:00">2023-11-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1108,118 +1314,6 @@
       
           <p>这两天我看到有个热点，让大家发一条自己五年后的朋友圈，你在哪，干嘛，发什么都可以，这个游戏之所以火，居然不是因为大家参与多，而是很多人想参与的时候发现脑子空白，然后转发给别人。 有天，我和一个姐姐聊天时，她就问我：你想过五年后要活成什么样没有？ 然后我说了一大堆形容词，什么笃定自持之类。 她含笑摇头：太虚。你想想，五年后，你应该穿什么衣服，什么发型，开的什么车，年收入多少，在哪里，做什么，和谁在一起。 我一怔。那一刻，我居然开始支支吾吾起来。 原来，每个人对自己都有期待，但是，我们少有人把自己安排妥当到这个地步。 这个姐姐告诉我，五年前，她给自己描绘了一个画面：她要穿驼色Max Mara大衣，简约长裤，拎黑色大包，黑发，淡妆，和合作伙伴在城市的某个角落喝一杯咖啡，谈公司规划。不为生活费而发愁，只为更好的理想而生活。 这简直和那天站在我面前的她不差分毫，我要感动哭了好么。 常说活成自己想要的样子？我们连那个自己长什么样都不知道。 <img src="https://mmbiz.qpic.cn/mmbiz_png/JicllfJ31xoxJjCO4yRicz4kic1B2sxs0gfkhPgqKTYUIur2WeWa96VmqFGC2PhPHL3diaPjL7h6j28WOfwFhD1HGQ/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1" alt=""> 可五年来，她给了自己一个模子，然后生生逼着自己一步一步地嵌进了那个画框。 如果你期望那一天是瘦的，那么从现在的每一天开始，都要为那个自己少吃一点；如果你希望那个自己穿着最喜欢的那个牌子，那么现在，你就要为了买下那个牌子而赚钱。 <strong>每一天，都要朝那个样子走过去。更重要的是，每一天，都要为那个自己做点什么。</strong> 不得不说，这件事，对我是有震撼的，甚至逐渐改变了我做事的方式。 我以前，是一个多么不喜欢做计划的人。认为随遇而安才是美好姿态，任岁月推我走才是人间正道，可现在，我不想那样了。 今年起，我甚至拥有了人生第一本手账。 原来，一个人对自己的期望要做到这样细致，才不会一不留神就到回头望的地步，却发现自己从未改变过。 我才发现，以前的自己不敢做计划，是因为大部分时候都内心清楚，我会忘记那个目标；更重要的，我害怕失败，我懒，我不想为那个白日梦具体到某一天都要和自己死磕。 <img src="https://mmbiz.qpic.cn/mmbiz_png/JicllfJ31xoxMVibFVHhQBTRcD8CkuVjC9EtNT4hXVMhe1uT8jAicGyzXB4RNQncY34DyabgRfeDc4hfSpSI8DCgA/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1" alt=""> 国内最好的女演员之一周迅，她曾写过一篇文章《想想十年后的自己》： 十八岁之前，我是个不知道自己想要什么的人，那时我每天就在浙江艺术学校里跟着同学唱唱歌，跳跳舞。偶尔有导演来找我拍戏，我就会很兴奋地去拍，无论多小的角色。 如果没有老师跟我的那次谈话，那么也许直到今天，仍然没有人知道周迅是谁。 那是1993年5月的一天，教我专业课的赵老师突然找我谈话：“周迅，你能告诉我，你对于未来的打算吗？”我愣住了。 我不明白老师怎么突然问我如此严肃的问题，更不知道该怎么回答。 <img src="https://mmbiz.qpic.cn/mmbiz_png/JicllfJ31xoxJjCO4yRicz4kic1B2sxs0gfhm3SruiamHrwksepjuppricbOo3Uo1C7Xj5ibmgPWzh9KLHUv2no2kJNA/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1" alt=""> 老师问我：“现在的生活你满意吗？” 我摇摇头。 老师笑了：“不满意的话证明你还有救。你现在就想想，十年以后你会是什么样？” 老师的话音很轻，但是落在我心里却变得很沉重。我脑海里顿时开始风起云涌。 沉默许久，我看着老师的眼睛，忽然就很坚定地说：“我希望十年后的自己成为最好的女演员，同时可以发行一张属于自己的音乐专辑。” 老师问我：“你确定了吗？” 我慢慢地咬紧着嘴唇回答“Yes”，而且拉了很长的音。 老师接着说：“好，既然你确定了，我们就把这个目标倒着算回来。十年以后，你28岁，那时你是一个红透半边天的大明星，同时出了一张专辑。” “那么你27岁的时候，除了接拍各种名导演的戏以外，一定还要有一个完整的音乐作品，可以拿给很多很多的唱片公司听，对不对？” “25岁的时候，在演艺事业上你就要不断进行学习和思考。另外在音乐方面一定要有很棒的作品开始录音了。” “23岁就必须接受各种培训和训练，包括音乐上和肢体上的。” “20岁的时候就要开始作曲，作词。在演戏方面就要接拍大一点的角色了。” 老师的话说得很轻松，但是我却感到一阵恐惧。 这样推下来，我应该马上着手为自己的理想做准备了，可是我现在却什么都不会，什么都没想过，仍然为小丫鬟小舞女之类的角色沾沾自喜。我觉得有一种强大的压力忽然朝自己袭来。 老师平静地笑着说：“周迅，你是一棵好苗子，但是你对人生缺少规划，散漫而且混乱。我希望你能在空闲的时候，想想十年以后的自己，到底要过什么样的生活，到底要实现什么样的目标。如果你确定了目标，那么希望你从现在就开始做。” 一年以后，我从艺校毕业了，老师的话从那天开始一直刻在了我的心底：想想十年后的自己。是的，当我意识到这是一个问题的时候，我发现我整个人都觉醒了。 <img src="https://mmbiz.qpic.cn/mmbiz_png/JicllfJ31xoxJjCO4yRicz4kic1B2sxs0gf585lmqW3e8r3HsSic7NfQJ9DDcicS37MdYN9StSm0JwBeB5iaHS7icHnHA/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1" alt=""> 从学校毕业后，我忙于接拍各种各样的影视剧。 我始终记得，十年后我要做最成功的明星，所以对角色我开始很认真地筛选。后来我拍了《那时花开》，拍了《大明宫词》，我渐渐被大家接受，也慢慢地尝到了成功的快乐。 2003年4月，恰好是老师和我谈话后的十周年，我不知道这是偶然还是必然，我居然真的拥有了属于自己的第一张专辑——《夏天》。 翻翻周迅的获奖记录，也基本上就是从2003年以后开始发力的。2009年，她出演了《风声》，获得了金马奖的提名。在十年后的今天，依旧被当做经典和标杆被致敬。 <strong>我们每个人，能看到的，都是别人最后成功的结果。而很少能去看他们成功之前，到底用了什么样的方法，选了什么样的路径，让自己一路登顶。</strong> 在文末，周迅说：“其实你也和我一样。如果你能及时地问自己一句‘十年后我会怎么样’，你就会发现，你的人生在不知不觉间发生变化。时刻想着十年后的自己，你会朝着自己的梦想越走越近。” <img src="https://mmbiz.qpic.cn/mmbiz_png/JicllfJ31xoxMVibFVHhQBTRcD8CkuVjC9c4FfkUxenXc2kVvLNEiavgdttzUfVNiaMoCHLCWlwCcnun93A64DrhYA/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1" alt=""> 人与人的差距，真的只要五年，五年前那些看起来一无所有的人现在可能走在时代社会的前列，而五年前有些光鲜体面的工作可能会毁了你一生。 因为五年时间社会变化太快了。 五年前，曾经那么火的诺基亚被收购，用了不到五年，说完就完； 五年前，谁要是给我说“现金将变得可有可无，拿着手机出门，就能搞定一切”，我都会觉得Ta神经病； 五年前，我们还用着iphone4，现在9都快出来了…… 这个世界，你跟不上，立马就会被淘汰。 前段时间有个很火的新闻，河北唐山市的地方政府将地方的各个路桥收费站取消，结果这些收费站的人去找领导讨说法。 其中一位大姐说：我今年36岁了，我的青春都交给收费站了，我现在啥也不会，也没人喜欢我们，我也学不了什么东西了。 而且这位大姐说得振振有词，我却觉得很可怕，这位大姐可能一直还生活在五六年前被人羡慕的眼光中，可能从来没有想过五年后的自己是什么样，在这样的时代说出我学不会了，就意味着被这个时代抛弃了，那些一成不变的人，注定是一成不变地死去。 <img src="https://mmbiz.qpic.cn/mmbiz_png/JicllfJ31xoxJjCO4yRicz4kic1B2sxs0gfCuHuecBpRULPan8Zd7XfYwC7x7xoG8asufFHvlLL7K3liaiaTicbYxyGw/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1" alt=""> 网上看到一句话：长得不好看也没有好身世的人，要想在这个残酷的世界杀出一条血路，就只有一样武器了，那就是主动。 <strong>面包不会自己跑进厨房，爱情不会自己跑到你的床上，机会不会蹲守在你人生的路口，人民币更不可能自己钻进你的钱包。</strong> 你只有主动去找它们。畏缩，退缩，犹豫，等待，不可能等到任何东西，只是在等死而已。 生活就是在温水煮青蛙，如果这只青蛙一直觉得头上那片天空就是天空，如果这只青蛙幻想自己是王子却没有跳出这口井的勇气，可能一辈子就这么过完了，你甘心吗？ <img src="https://mmbiz.qpic.cn/mmbiz_png/JicllfJ31xoxMVibFVHhQBTRcD8CkuVjC9GONibSia8Js0m3EbT2VVsy0aAHbibw49ov8d6xYz5hMQadc8MDskRwqog/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1" alt=""> 王尔德曾经说过，我们都深处泥潭，只是有人看到了星辰。可有些人，就是能挣脱泥潭，让自己生活在星辰中。 看看那些真正牛逼哄哄的女人们，在面临动荡和变化，又是怎么自我进化的？ 一开始，她们是部门最肯吃苦耐劳的那个人，早出晚归，给领导提包倒茶，给办公室扛纯净水修马桶，干一切别人不干的事。 后来，她们是办公室最肯动脑子的那一群人，她们会指出方案上明显的常识错误，她们试图理解同事为什么今天情绪那么不好，她们关注更好的理财方式，她们日夜写案子，在哺乳期背着奶上班，成为最辛苦的那一批职业女性—— 她们像杂草一样在这个城市野蛮生长，她们每一天都在为未来的某个自己做点什么，她们的狠劲，使得身边的伴侣也丝毫不敢松懈。因为稍不注意，他们就会失去她们。 终于有一天，好像人生开挂了。 每天手机响个不停，仿佛业务就那么自动找上门来。她开始有时间和朋友出去喝下午茶，顺便谈谈工作。钱，好像就不那么缺了。 她有钱有闲还有自由，成为那些老家女同学们眼里羡慕的人。属于她的稳定到来了——稳定的能力，带给她哪里都能找到饭吃的资源。 <img src="https://mmbiz.qpic.cn/mmbiz_png/JicllfJ31xoxJjCO4yRicz4kic1B2sxs0gfSOo7Grl6hlCOEI9MicpN7l2Yicozd2Xc2K8RIlXDurDxBod4t63r6woA/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1" alt=""> 以前我有个同事，之前辞职回家带娃，等孩子长大了再找工作时已经30岁了，很多同事都是95后。 她从前台做起，工作琐碎而繁杂，但是她就有本事把收发快递这种事，做得井井有条，公司从上到下都觉得她做事特别放心。 回家后，别人看美剧韩剧，她就看书，上辅导班学英语。终于有一次，有个国外的客户来电话，她在和人沟通时，恰好市场副总路过，发现她的口语好得不行，再加上之前工作的好口碑，直接调去做了副总助理，从此一路平步青云。 你有没有期待过，30岁时自己应该过着怎样的生活？ 还在租房吗，还在单身吗？还在做着这份让你看不到太多希望的工作吗？ 如果现在的生活，让你心生抱怨，几年之后你还要继续这样过吗？ 那些过得越来越好的人，真是他们幸运吗？还是我们在睡觉打游戏看韩剧的时候，他们在健身保养学英语？ 真的是他们能力更强吗？还是我们只把期待停留在脑子里，而他们却突破自己不停尝试第一次？ 其实也不用羡慕他们。 <strong>细想想，每一个突破了自己的人，多的就是一份尝试第一次的勇气。</strong> <img src="https://mmbiz.qpic.cn/mmbiz_png/JicllfJ31xoxJjCO4yRicz4kic1B2sxs0gfaaEgZ7mSPAS7v1dDqHlj0ZPo97nGcC7kDH4HIUbaJ33RqderVMicDaQ/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1" alt=""> 那些瘦下来的人，第一次跑步也会累得像狗； 那些皮肤好的人，第一次睡美容觉也得割舍想要熬夜看的剧； 那些英语好的人，第一次开口对话也紧张得要死。     想想五年后的自己，该为她做点什么了。   </p>
 <p>转载自微信公众号：hugo</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2018/01/25/nihetoudengcangdejulichadebuzhishiqianzhuanzai/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2018/01/25/nihetoudengcangdejulichadebuzhishiqianzhuanzai/" class="post-title-link" itemprop="url">你和头等舱的距离，差的不只是钱（转载）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2018-01-25 15:54:04" itemprop="dateCreated datePublished" datetime="2018-01-25T15:54:04+00:00">2018-01-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-10-25 03:33:57" itemprop="dateModified" datetime="2023-10-25T03:33:57+00:00">2023-10-25</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2018/01/25/nihetoudengcangdejulichadebuzhishiqianzhuanzai/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/01/25/nihetoudengcangdejulichadebuzhishiqianzhuanzai/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>01</p>
-<p>我家楼上一哥们特别好玩，他最近读了热门文章《阶层上升通道的大门即将关闭》后， 便经常开长辈们玩笑。 爷爷来玩，他就怼爷爷： “你当年干嘛去了？咋不参加红军？ 要是你当年参军，我家至于这样吗？” 爸爸来玩，他就怼爸爸： “你当年干嘛去了？咋不下海创业呢？” 要是当年你下海，我家至于这样吗？” 前几天，我在电梯里碰到他， 他感叹：“现在阶层固化，寒门再难出贵子了。” 寒门难以出贵子，这倒是事实。 北京大学副教授刘云杉做过统计： 80年代，北大学生三成出自寒门。 90年代，寒门比例开始逐渐下滑。 2000年后，寒门比例仅占一成多。 BBC纪录片《人生七年》证实了这一现象， 他们用49年跟踪了一群不同阶层的孩子， <strong>最后揭露了一个残酷事实：穷人的孩子绝大部分仍然是穷人，富人的孩子绝大部分仍然是富人，阶层在代际间得到了传承。</strong></p>
-<p>02</p>
-<p>为什么穷人无法摆脱贫穷呢？很多专家学者都在研究这个问题， 但都没有给出一个让人信服的答案。 直到十年前，美国经济学家穆来纳森找到心理学家沙菲尔：“我们一起研究这个问题吧！” 经过十年调查研究，他俩终于找到答案。 <strong>穷人无法摆脱贫穷的罪魁是——稀缺心态。</strong> 何谓稀缺心态？ 就是“越是稀缺什么，就越是在意什么”。 我家邻居王阿姨就是这样， 由于她家经济条件不太好， 所以她买菜特别喜欢折腾， 去小区门口新世纪超市一看： “生菜一斤要三块五，太贵。” 于是，她坐六站公交去沃尔玛， “更贵，四块钱一斤。” 于是，她又坐七站路去永辉， “三块钱一斤，太好了。” 她买了5斤，乐呵呵地回家了。 折腾半天，扣去车费，还倒亏5毛。 <strong>穆来纳森说：“人们的视野会因稀缺心态变得狭窄，形成管窥之见，即只能通过‘管子’的孔洞看清少量物体，而无视管外的一切。”</strong> <strong>也就是说，稀缺会俘获一个人的大脑。</strong></p>
-<p>03</p>
-<p><strong>穆来纳森和沙菲尔提出了“带宽”概念。**</strong>所谓带宽，就是指一个人心智的容量。** <strong>如果这个带宽老是被一种稀缺心态所塞满，</strong> <strong>就会影响一个人的认知能力和执行控制力。</strong> 印度克延比都蔬菜市场很是繁荣。 这里，生活着一群很穷的小商贩。 每天清晨，他们会向富人借1000卢比， 然后去进货，卖完可收回1100卢比， 而晚上，他们要还给富人1050卢布。 也就是说，他们一天的收入是50卢比。 其实，只要小贩不把这50卢比全花掉， 每天省下5卢比用于第二天进货。 由于复利效应，他们只需要50天， 就不用再去借这1000卢比的本钱了。 从此，他们收入就会节节攀升， 这样美好的结果，几乎是触手可及。 但是，没有一个小商贩这样做。 “他们天天就那样重复着，分出利息达九年之久。” <strong>穆来纳森说：“长期处于稀缺状态的穷人，会被稀缺心态消耗大量带宽，其判断力和认知能力会因过于关注眼前问题而大大降低，而没有多余带宽来考虑投资和长远发展事宜。”</strong> <strong>稀缺心态会严重影响认知判断能力，</strong> <strong>认知判断能力大幅下降会导致短视。</strong> <strong>也就是说，一个人穷着穷着，就会变傻。</strong></p>
-<p>04</p>
-<p>一位富人想帮一个穷人致富，那年冬天，就送了他一头牛： “好好用牛耕作，秋天就能脱贫了。” 穷人满怀希望开始奋斗。 可没过几天，牛要吃草，人要吃饭， 穷人的日子比以前过得更加艰难了。 穷人想：“不如把牛卖了，买几只羊，先杀一只救急，剩下的可以下小羊，小羊长大了拿去卖，可以赚更多的钱。” 穷人吃完一只羊，小羊没有生下来， 日子又艰难了，便忍不住又吃了一只。 穷人想：“这样下去不行，不如把羊卖了买鸡，鸡很快就会下蛋，鸡蛋一卖，日子可以好转。” 可等不到鸡下蛋，日子又艰难了， 于是，穷人又忍不住杀鸡吃。 杀到只剩一只鸡时，穷人想：“致富是无望了，不如把鸡卖了，打一壶酒，三杯下肚，万事不愁。” 春天，富人带着种子来到穷人家， 却发现牛没了，而穷人正在喝酒。 “活该受穷。”富人一跺脚走了。 <strong>穆来纳森说：“长期处于稀缺状态的穷人，会被稀缺心态消耗大量带宽，用来进行自我控制的心智资源就会很少，所以容易变得非常冲动。”</strong> <strong>稀缺心态会严重影响执行控制力，</strong> <strong>执行控制力大幅下降会导致冲动。</strong> <strong>一个人穷着穷着，就会变成冲动的傻子。</strong> <strong>穷人就是这样陷入穷的恶性循环的：</strong> <strong>稀缺金钱→注意力集中到钱上→大脑浮现各种与钱有关的事，变得冲动失去控制力→心智带宽减少→做出错误认知，做出错误决定→放大对于钱的稀缺心态→恶性循环。</strong></p>
-<p>05</p>
-<p>很多人喜欢这样说：“如果我有钱，我会比马云做得好。” “如果我有钱，绝对比王思聪厉害。” 其实，未必。 长期陷入恶性循环的穷人， 即便偶尔暴富，也会很快变成穷人。 美国国家经济研究局做过一个调查：最近20年来，欧美彩票头奖得主，5年之内，破产率达75%。 为什么会这样？ “因为他们虽然有钱了，但行事还是穷人思维。” 我有位朋友，创业发了， 买了别墅，把农村父母接了过来。 从此，我这朋友就头大起来。 “最热的天，爸妈也不会开空调。” “爸妈经常从外面捡一堆破烂回来。” “家里囤积着各种各样的垃圾袋。” ………… 尽管他家存款千万，但父母依然扔不掉穷人思维。 <strong>阶层固化，其实来源于思维的属性。</strong> <strong>你的思维，决定了你在什么阶层。</strong> <strong>穷不可怕，稀缺导致的穷人思维才可怕。</strong></p>
-<p>06</p>
-<p><strong>如何才能跳出稀缺导致的穷人思维呢？**</strong>第一个：把重要的事情强行拉入管道视野<strong>。 哈佛大学做过一个著名的人生影响跟踪调查， 对象是一群出身环境和智商都差不多的年轻人。 调查结果发现： 27％的人没有理想，生活没有目标。 60％的人理想模糊，生活目标模糊。 10％的人有理想，制定了短期规划。 3％的人有理想，制定了清晰的长期规划。 25年后，这群人的生活状况很有意思： 那3%的人，因为一直有规划地朝着人生理想迈进，所以最后几乎都成了社会顶尖成功人士。 那10％的人，因为不断实现短期目标，最后成了社会的中产，做了律师、工程师、企业主管等等。 那60％的人，生活在社会中下层，没什么特别成绩，就指望孩子将来有出息。 剩下27％的人，成了社会最底层的人，成天抱怨他人，抱怨社会。 **这个调查说明了什么——不同的人生规划，让每个人拉开了距离。</strong> <strong>所以，要跳出稀缺导致的穷人思维，就要强行把重要的事情拉入管道视野——制定清晰的人生规划，短期的长期的，然后一步一步去实现它。</strong> 贫穷的韩信为何能忍受胯下之辱？ 因为他有坚定不移的人生大理想。 正如苏轼所说：“匹夫见辱，拔剑而起，挺身而斗，此不足为勇也。天下有大勇者，卒然临之而不惊，无故加之而不怒，此其所挟持者甚大，而其志甚远也。”</p>
-<p>07</p>
-<p>专栏作家李刚讲过一件趣事：几年前，他老婆想买一套学区房。 他一算存款，连首付都不够。 于是建议：攒点钱再说吧！ 当然，最后胳膊没能拧过大腿， 老婆东挪西借，硬是把首付给付了。 结果才过两年，房价就翻了倍。 李刚高兴得不得了：“幸好买了。” 论理财能力，李刚远在老婆之上。 “我有十几年投资经验，再复杂的金融工具，我也一清二楚，而她连买个银行理财产品还要问人家保不保本。”李刚说。 但这件事，李刚一开始就陷入了穷人思维。 “我没有思考学区房是不是一个必须而且合理的目标，而是首先考虑钱够不够。” 这就是穷人思维和富人思维的区别： <strong>穷人思维的特点是量入为出，</strong> <strong>富人思维的特点是目标导向。</strong> 穷人思维买房，首先考虑：我存款有多少，月收入多少，再倒过来推算，自己该不该买房，买什么房。 富人思维买房，首先考虑：我要不要买房，想买什么房？然后再算，还差多少，怎么解决。 <strong>如何跳出稀缺导致的穷人思维？</strong> <strong>第二个：建立目标导向思维。</strong> 正如李刚所说：如果一个目标是合理的，就不能以“资源不足”为理由，去否定这个目标。 这是至关重要的一条做事原则。</p>
-<p>08</p>
-<p>青年作家李尚龙讲过一个故事：他刚上大学时，宿舍一同学特抠门。 有一次，李尚龙手机没电了， 便找这同学借电话打给家里。 打完，李尚龙把电话还他，转身出了宿舍。 哪知此同学追了出来：“给我五毛钱。” 李尚龙以为听错了：“什么？” 此同学非常认真地说：“你刚才打了两分钟，给我五毛钱。” 李尚龙翻了翻皮夹：“没零钱。” 此同学脸色有点不爽起来。 李尚龙说：“要不这样，午餐我请。” 此同学脸色舒展来开：“好。” 但从此之后，李尚龙便和此人再无交往。 没过多久，一宿舍的人都和此人闹僵了。 大学毕业后，此人三年内换了七次工作， 因为太过斤斤计较，每个单位都不待见他。 李尚龙说：“他穷的，不仅仅是家庭条件，他穷的，更是视野和格局。” 他以为自己占了便宜，其实吃了大亏。 <strong>穷人缺钱，看起来是因为资源不够，实际上最要命的是穷人心态。</strong> <strong>也就是：越是穷的时候，越是在乎钱，越是在乎钱，就越是影响视野和格局。</strong> <strong>如何跳出稀缺导致的穷人思维？</strong> <strong>第三个：越是穷的时候，越是不能在乎钱。</strong> <strong>不明白这一点，很多事情及规划都无从谈起。</strong></p>
-<p>09</p>
-<p>我邻居，买菜折腾那个王阿姨，去年在地摊上给孙子买了双运动鞋， 耐克的仿款，便宜得惊人。 一周后，孙子从学校回来，脚肿了。 “鞋子材质不好，不透气……” 去医院，医生诊断是真菌感染。 结果一治，最后花了700多元。 王阿姨后悔得直跺脚：“早知道就买正品了。” 这就是穷人思维——忽视“冰山成本”。 何谓冰山成本？ 就是看得见的成本，往往只是极小部分。更大的成本，藏在看不见的水下。 忽视冰山成本会有一个后果——占小便宜，吃大亏。 贪图劣质鞋便宜，结果损伤了脚。 贪图劣质食品便宜，结果吃坏了肠胃。 贪图劣质服装便宜，结果没穿几回就扔了。 ………… 最终，付出了比买优质产品多得多的成本。 <strong>穷人的钱很多都耗费在了这样的冰山成本上。</strong> <strong>如何跳出稀缺导致的穷人思维？</strong> <strong>第四个：花钱时必须重视冰山成本。</strong> <strong>一心只想着省钱，往往是在浪费钱。</strong> <strong>不要因贪小便宜而吃大亏。</strong></p>
-<p>10</p>
-<p>我童年一直生活在农村大院，院里有位彭姓人家，生了三个子女， 当时打疫苗，已经开始收费了。 彭家为了省钱，就把很多疫苗也省了。 结果幺女儿得了小儿麻痹症，腿跛了。 借了几万元治腿，结果还是无力回天。 每次看到她，我都特别心痛。 “就因为父母为了省一点点钱，这个妹妹一辈子都被耽误了。” 这就是穷人思维——忽视身边随时可能发生或必将发生的重大变故。 比如，重大疾病的发生。 比如，意外伤害的发生。 这些重大变故一旦发生， 可能一下就会将我们打回“解放前”。 <strong>如何跳出稀缺导致的穷人思维？</strong> <strong>第五个：要规划“余钱”。</strong> 就是不管你生活有多拮据多困难， 一定要抠出一点余钱来未雨绸缪。 比如，买几种必须的保险。 比如，该打的疫苗一点要打。 ………… 如果你只关注眼前利益，很可能赢了一时，但输掉了整个一生。</p>
-<p>11</p>
-<p>企业家凌军讲过他公司两个员工的故事。两个员工是他同时招录进来的同班同学。 刚毕业时，两人都缺钱， 于是就把房子租在了北京五环外。 每天上下班需要四小时，很是累人。 凌军就建议：“你们可以在离单位近点的地方租房，虽然贵一点，但可以节约很多时间。” 员工马骏听了，在单位附近租了房子。 员工张萌没有，他觉得：“太贵了，不能浪费钱，反正我有的是时间。” 三年后，马骏工资翻了两倍。 “我把省下来的时间用到了学习上， 三年努力，我拿到了注册会计师证。” 而张萌呢，三年工资只涨了800元。 他很后悔：“我目光太短浅了。” <strong>如何跳出稀缺导致的穷人思维？</strong> <strong>第六个：要规划“余闲”。</strong> 把余闲用在自身素质的升级上——比如读书计划、技能培训等等。 穷人之穷，往往是双重匮乏：既缺金钱，又缺时间。 所以，我们一定要学会规划余闲， 必要时要像马骏一样学会用钱置换时间。</p>
-<p>12</p>
-<p><strong>自古以来，每个朝代都有阶层固化。**</strong>但无论阶层怎么固化，** <strong>总有5%的穷人可以突围而出。</strong> <strong>因为他们跳出了稀缺导致的穷人思维。</strong> 电影《1942》里，逃荒路上。 张国立演的地主说了一句话： “我知道咋从一个穷人变成财主， 不出十年，你大爷我还是东家， 那时候咱再回来……” 石油大王洛克菲勒也说过一句类似的话： “即使你们把我身上的衣服剥得精光， 然后扔在撒哈拉沙漠的中心地带， 但只要有一支商队从我身边路过。 我就会成为一个新的百万富翁。” <strong>一个人的思维，决定了他在什么阶层。  ** **我们和头等舱的距离，差的不只是钱。</strong></p>
-<p>  转载自公众号：第一女刊</p>
 
       
     </div>
@@ -1304,7 +1398,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">179</span>
+          <span class="site-state-item-count">180</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
