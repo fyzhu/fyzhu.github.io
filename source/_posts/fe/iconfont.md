@@ -58,5 +58,7 @@ const view = encoder.encode("中"); // [228, 184, 173] 三位十进制
 '中'.charCodeAt(0).toString(16) // 4e2d codepoint
 ```
 
-
+sass 开发者一直强调他们把 css 压缩后，会在文件头声明 charset 或者 以 utf-8 with bom 格式保存文件，浏览器会正确处理，之所以导致这个问题，是因为后续的 css 处理(postcss) 把 charset 或 utf-8 with bom 格式丢掉了。
+实际上 sass 的确是按 utf-8 with bom 保存的文件，后续的 css 处理也的确把 utf-8 with bom 格式丢掉了。但这问题和 bom 没关系。
+[The byte-order mark (BOM) in HTML](https://www.w3.org/International/questions/qa-byte-order-mark#problems)
 
