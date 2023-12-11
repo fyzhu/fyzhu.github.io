@@ -62,3 +62,4 @@ CSS 只与设备独立像素有关系，尺寸相同，设备独立像素相同�
 3. [设备像素比（devicePixelRatio）](https://blog.csdn.net/xueli_2017/article/details/91492971)
 
 4. [CSS像素、设备独立像素、设备像素之间关系](https://www.cnblogs.com/jiangzilong/p/6700023.html)
+5. [一文搞懂像素（px）、分辨率、CSS长度单位](https://blog.csdn.net/qq_37384271/article/details/109455766)
