@@ -16,7 +16,7 @@ UTF-32 uses 4 bytes for all characters.
 
 In the following chart, the first line of numbers represents the position of a character in the Unicode coded character set. The other lines show the byte values used to represent that character in a particular character encoding.
 
-| |Latin A.	|Hebrew alef.	|Han ideograph AN.	|Chinese ideograph meaning 'stump of tree'.|
+| |A(Latin A.)	|א(Hebrew alef.)	|好(Han ideograph AN.)	|𣎴(Chinese ideograph meaning 'stump of tree'.)|
 |-|-|-|-|-|
 |Code point|	U+0041|	U+05D0|	U+597D|	U+233B4|
 |UTF-8|	41	|D7 90|	E5 A5 BD|	F0 A3 8E B4|
