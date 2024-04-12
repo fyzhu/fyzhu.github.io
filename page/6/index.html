@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">180</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">181</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,94 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2021/01/13/technology/front-end/javascript/js%E6%B7%B1%E6%8B%B7%E8%B4%9D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/13/technology/front-end/javascript/js%E6%B7%B1%E6%8B%B7%E8%B4%9D/" class="post-title-link" itemprop="url">js 深浅拷贝</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-01-13 17:42:45" itemprop="dateCreated datePublished" datetime="2021-01-13T17:42:45+00:00">2021-01-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-04-12 09:08:17" itemprop="dateModified" datetime="2024-04-12T09:08:17+00:00">2024-04-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2021/01/13/technology/front-end/javascript/js%E6%B7%B1%E6%8B%B7%E8%B4%9D/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/01/13/technology/front-end/javascript/js深拷贝/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h2><h3 id="object-assign"><a href="#object-assign" class="headerlink" title="object.assign"></a>object.assign</h3><h3 id="扩展运算符"><a href="#扩展运算符" class="headerlink" title="扩展运算符"></a>扩展运算符</h3><h3 id="concat-数组"><a href="#concat-数组" class="headerlink" title="concat (数组)"></a>concat (数组)</h3><h3 id="sblice-数组"><a href="#sblice-数组" class="headerlink" title="sblice (数组)"></a>sblice (数组)</h3><h2 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h2><h3 id="JSON-stringfy"><a href="#JSON-stringfy" class="headerlink" title="JSON.stringfy()"></a>JSON.stringfy()</h3><h3 id="手写递归实现"><a href="#手写递归实现" class="headerlink" title="手写递归实现"></a>手写递归实现</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">let obj1 = &#123;</span><br><span class="line">  a: &#123;</span><br><span class="line">    b: 1,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">function deepClone(obj) &#123;</span><br><span class="line">  let cloneObj = Array.isArray(obj) ? [] : &#123;&#125;;</span><br><span class="line"></span><br><span class="line">  for (let key in obj) &#123;</span><br><span class="line">    //遍历</span><br><span class="line"></span><br><span class="line">    if (typeof obj[key] === &quot;object&quot;) &#123;</span><br><span class="line">      cloneObj[key] = deepClone(obj[key]); //是对象就再次调用该函数递归</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      cloneObj[key] = obj[key]; //基本类型的话直接复制值</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return cloneObj;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let obj2 = deepClone(obj1);</span><br><span class="line"></span><br><span class="line">obj1.a.b = 2;</span><br><span class="line"></span><br><span class="line">console.log(obj2); //  &#123;a:&#123;b:1&#125;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="改进后递归实现"><a href="#改进后递归实现" class="headerlink" title="改进后递归实现"></a>改进后递归实现</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line">const isComplexDataType = (obj) =&gt;</span><br><span class="line">  (typeof obj === &quot;object&quot; || typeof obj === &quot;function&quot;) &amp;&amp; obj !== null;</span><br><span class="line"></span><br><span class="line">const deepClone = function (obj, hash = new WeakMap()) &#123;</span><br><span class="line">  if (obj.constructor === Date) return new Date(obj); // 日期对象直接返回一个新的日期对象</span><br><span class="line"></span><br><span class="line">  if (obj.constructor === RegExp) return new RegExp(obj); //正则对象直接返回一个新的正则对象</span><br><span class="line"></span><br><span class="line">  //如果循环引用了就用 weakMap 来解决</span><br><span class="line"></span><br><span class="line">  if (hash.has(obj)) return hash.get(obj);</span><br><span class="line"></span><br><span class="line">  let allDesc = Object.getOwnPropertyDescriptors(obj);</span><br><span class="line"></span><br><span class="line">  //遍历传入参数所有键的特性</span><br><span class="line"></span><br><span class="line">  let cloneObj = Object.create(Object.getPrototypeOf(obj), allDesc);</span><br><span class="line"></span><br><span class="line">  //继承原型链</span><br><span class="line"></span><br><span class="line">  hash.set(obj, cloneObj);</span><br><span class="line"></span><br><span class="line">  for (let key of Reflect.ownKeys(obj)) &#123;</span><br><span class="line">    cloneObj[key] =</span><br><span class="line">      isComplexDataType(obj[key]) &amp;&amp; typeof obj[key] !== &quot;function&quot;</span><br><span class="line">        ? deepClone(obj[key], hash)</span><br><span class="line">        : obj[key];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return cloneObj;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// 下面是验证代码</span><br><span class="line"></span><br><span class="line">let obj = &#123;</span><br><span class="line">  num: 0,</span><br><span class="line"></span><br><span class="line">  str: &quot;&quot;,</span><br><span class="line"></span><br><span class="line">  boolean: true,</span><br><span class="line"></span><br><span class="line">  unf: undefined,</span><br><span class="line"></span><br><span class="line">  nul: null,</span><br><span class="line"></span><br><span class="line">  obj: &#123; name: &quot;我是一个对象&quot;, id: 1 &#125;,</span><br><span class="line"></span><br><span class="line">  arr: [0, 1, 2],</span><br><span class="line"></span><br><span class="line">  func: function () &#123;</span><br><span class="line">    console.log(&quot;我是一个函数&quot;);</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  date: new Date(0),</span><br><span class="line"></span><br><span class="line">  reg: new RegExp(&quot;/我是一个正则/ig&quot;),</span><br><span class="line"></span><br><span class="line">  [Symbol(&quot;1&quot;)]: 1,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Object.defineProperty(obj, &quot;innumerable&quot;, &#123;</span><br><span class="line">  enumerable: false,</span><br><span class="line">  value: &quot;不可枚举属性&quot;,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">obj = Object.create(obj, Object.getOwnPropertyDescriptors(obj));</span><br><span class="line"></span><br><span class="line">obj.loop = obj; // 设置loop成循环引用的属性</span><br><span class="line"></span><br><span class="line">let cloneObj = deepClone(obj);</span><br><span class="line"></span><br><span class="line">cloneObj.arr.push(4);</span><br><span class="line"></span><br><span class="line">console.log(&quot;obj&quot;, obj);</span><br><span class="line"></span><br><span class="line">console.log(&quot;cloneObj&quot;, cloneObj);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2021/01/11/technology/front-end/javascript/js%208%20%E7%A7%8D%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +329,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-18 11:58:38" itemprop="dateModified" datetime="2023-12-18T11:58:38+00:00">2023-12-18</time>
+                <time title="修改时间：2024-04-12 09:08:17" itemprop="dateModified" datetime="2024-04-12T09:08:17+00:00">2024-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -334,7 +422,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-18 11:58:38" itemprop="dateModified" datetime="2023-12-18T11:58:38+00:00">2023-12-18</time>
+                <time title="修改时间：2024-04-12 09:08:17" itemprop="dateModified" datetime="2024-04-12T09:08:17+00:00">2024-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -426,7 +514,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-18 11:58:38" itemprop="dateModified" datetime="2023-12-18T11:58:38+00:00">2023-12-18</time>
+                <time title="修改时间：2024-04-12 09:08:17" itemprop="dateModified" datetime="2024-04-12T09:08:17+00:00">2024-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -515,7 +603,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-18 11:58:38" itemprop="dateModified" datetime="2023-12-18T11:58:38+00:00">2023-12-18</time>
+                <time title="修改时间：2024-04-12 09:08:17" itemprop="dateModified" datetime="2024-04-12T09:08:17+00:00">2024-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -609,7 +697,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-18 11:58:38" itemprop="dateModified" datetime="2023-12-18T11:58:38+00:00">2023-12-18</time>
+                <time title="修改时间：2024-04-12 09:08:17" itemprop="dateModified" datetime="2024-04-12T09:08:17+00:00">2024-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -703,7 +791,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-18 11:58:38" itemprop="dateModified" datetime="2023-12-18T11:58:38+00:00">2023-12-18</time>
+                <time title="修改时间：2024-04-12 09:08:17" itemprop="dateModified" datetime="2024-04-12T09:08:17+00:00">2024-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -800,7 +888,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-18 11:58:38" itemprop="dateModified" datetime="2023-12-18T11:58:38+00:00">2023-12-18</time>
+                <time title="修改时间：2024-04-12 09:08:17" itemprop="dateModified" datetime="2024-04-12T09:08:17+00:00">2024-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -891,7 +979,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-18 11:58:38" itemprop="dateModified" datetime="2023-12-18T11:58:38+00:00">2023-12-18</time>
+                <time title="修改时间：2024-04-12 09:08:17" itemprop="dateModified" datetime="2024-04-12T09:08:17+00:00">2024-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1011,7 +1099,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-18 11:58:38" itemprop="dateModified" datetime="2023-12-18T11:58:38+00:00">2023-12-18</time>
+                <time title="修改时间：2024-04-12 09:08:17" itemprop="dateModified" datetime="2024-04-12T09:08:17+00:00">2024-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1071,104 +1159,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2020/08/18/%E7%8A%B6%E6%80%81%E7%A0%81/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/18/%E7%8A%B6%E6%80%81%E7%A0%81/" class="post-title-link" itemprop="url">状态码</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-08-18 09:59:53" itemprop="dateCreated datePublished" datetime="2020-08-18T09:59:53+00:00">2020-08-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-18 11:58:38" itemprop="dateModified" datetime="2023-12-18T11:58:38+00:00">2023-12-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2020/08/18/%E7%8A%B6%E6%80%81%E7%A0%81/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/08/18/状态码/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="200"><a href="#200" class="headerlink" title="200"></a>200</h4><p>200 OK 请求成功<br>201 Created 已创建新资源<br>202 Accepted 已接受但未完成（异步处理）</p>
-<h4 id="300"><a href="#300" class="headerlink" title="300"></a>300</h4><p>301 Moved Permanently 资源（网页等）被永久转移到其它URL<br>302 Temporarily Moved / Found<br>303 See Other</p>
-<h4 id="400"><a href="#400" class="headerlink" title="400"></a>400</h4><p>400 Bad Request<br>401 Unauthorized 请求要求用户的身份认证<br>403 Forbidden 服务器理解请求客户端的请求，但是拒绝执行此请求<br>404 Not Found 请求的资源（网页等）不存在<br>406 Not Acceptable<br>409 Conflict<br>412 Precondition Failed<br>415 Unsupported Media Type</p>
-<h4 id="500"><a href="#500" class="headerlink" title="500"></a>500</h4><p>500 Internal Server Error 内部服务器错误<br>503 Service Unavailable</p>
-<p>参考：<br><a target="_blank" rel="noopener" href="https://www.runoob.com/http/http-status-codes.html">https://www.runoob.com/http/http-status-codes.html</a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">100 &quot;continue&quot;</span><br><span class="line">101 &quot;switching protocols&quot;</span><br><span class="line">102 &quot;processing&quot;</span><br><span class="line">200 &quot;ok&quot;</span><br><span class="line">201 &quot;created&quot;</span><br><span class="line">202 &quot;accepted&quot;</span><br><span class="line">203 &quot;non-authoritative information&quot;</span><br><span class="line">204 &quot;no content&quot;</span><br><span class="line">205 &quot;reset content&quot;</span><br><span class="line">206 &quot;partial content&quot;</span><br><span class="line">207 &quot;multi-status&quot;</span><br><span class="line">208 &quot;already reported&quot;</span><br><span class="line">226 &quot;im used&quot;</span><br><span class="line">300 &quot;multiple choices&quot;</span><br><span class="line">301 &quot;moved permanently&quot;</span><br><span class="line">302 &quot;found&quot;</span><br><span class="line">303 &quot;see other&quot;</span><br><span class="line">304 &quot;not modified&quot;</span><br><span class="line">305 &quot;use proxy&quot;</span><br><span class="line">307 &quot;temporary redirect&quot;</span><br><span class="line">308 &quot;permanent redirect&quot;</span><br><span class="line">400 &quot;bad request&quot;</span><br><span class="line">401 &quot;unauthorized&quot;</span><br><span class="line">402 &quot;payment required&quot;</span><br><span class="line">403 &quot;forbidden&quot;</span><br><span class="line">404 &quot;not found&quot;</span><br><span class="line">405 &quot;method not allowed&quot;</span><br><span class="line">406 &quot;not acceptable&quot;</span><br><span class="line">407 &quot;proxy authentication required&quot;</span><br><span class="line">408 &quot;request timeout&quot;</span><br><span class="line">409 &quot;conflict&quot;</span><br><span class="line">410 &quot;gone&quot;</span><br><span class="line">411 &quot;length required&quot;</span><br><span class="line">412 &quot;precondition failed&quot;</span><br><span class="line">413 &quot;payload too large&quot;</span><br><span class="line">414 &quot;uri too long&quot;</span><br><span class="line">415 &quot;unsupported media type&quot;</span><br><span class="line">416 &quot;range not satisfiable&quot;</span><br><span class="line">417 &quot;expectation failed&quot;</span><br><span class="line">418 &quot;I&#x27;m a teapot&quot;</span><br><span class="line">422 &quot;unprocessable entity&quot;</span><br><span class="line">423 &quot;locked&quot;</span><br><span class="line">424 &quot;failed dependency&quot;</span><br><span class="line">426 &quot;upgrade required&quot;</span><br><span class="line">428 &quot;precondition required&quot;</span><br><span class="line">429 &quot;too many requests&quot;</span><br><span class="line">431 &quot;request header fields too large&quot;</span><br><span class="line">500 &quot;internal server error&quot;</span><br><span class="line">501 &quot;not implemented&quot;</span><br><span class="line">502 &quot;bad gateway&quot;</span><br><span class="line">503 &quot;service unavailable&quot;</span><br><span class="line">504 &quot;gateway timeout&quot;</span><br><span class="line">505 &quot;http version not supported&quot;</span><br><span class="line">506 &quot;variant also negotiates&quot;</span><br><span class="line">507 &quot;insufficient storage&quot;</span><br><span class="line">508 &quot;loop detected&quot;</span><br><span class="line">510 &quot;not extended&quot;</span><br><span class="line">511 &quot;network authentication required&quot;</span><br></pre></td></tr></table></figure>
-<p>参考：<a target="_blank" rel="noopener" href="https://koa.bootcss.com/#response">https://koa.bootcss.com/#response</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1234,7 +1228,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">180</span>
+          <span class="site-state-item-count">181</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1302,7 +1296,7 @@
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

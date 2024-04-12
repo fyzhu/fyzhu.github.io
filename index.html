@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">180</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">181</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -210,6 +210,111 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2024/04/12/technology/%E9%9F%A9%E4%BF%A1%E7%82%B9%E5%85%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yvan Zhu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yvan Zhu's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/04/12/technology/%E9%9F%A9%E4%BF%A1%E7%82%B9%E5%85%B5/" class="post-title-link" itemprop="url">韩信点兵原理</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-04-12 00:00:00 / 修改时间：09:08:17" itemprop="dateCreated datePublished" datetime="2024-04-12T00:00:00+00:00">2024-04-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2024/04/12/technology/%E9%9F%A9%E4%BF%A1%E7%82%B9%E5%85%B5/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/04/12/technology/韩信点兵/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="韩信点兵原理"><a href="#韩信点兵原理" class="headerlink" title="韩信点兵原理"></a>韩信点兵原理</h1><h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>相传韩信才智过人，从不直接清点自己军队的人数，只要让士兵先后以三人一排、五人一排、七人一排地变换队形，而他每次只掠一眼队伍的排尾就知道总人数了。输入3个非负整数a,b,c ，表示每种队形排尾的人数（a&lt;3,b&lt;5,c&lt;7），输出总人数的最小值（或报告无解）。已知总人数不小于10，不超过100 。</p>
+<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><p>输入3个非负整数a,b,c ，表示每种队形排尾的人数（a&lt;3,b&lt;5,c&lt;7）。例如,输入：2 4 5</p>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><p>输出总人数的最小值（或报告无解，即输出Noanswer）。实例，输出：89</p>
+<h2 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h2><p>2 1 6</p>
+<h2 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h2><p>41</p>
+<p>定理1 如a被n除所得的余数等于b被n除所得的余数，c被n除所得的余数等于d被n除所得的余数， 则ac被n除所得的余数等于b d被n除所得的余数。</p>
+<p>用同余式叙述就是：</p>
+<p>如a≡b（mod n ），c≡d（mod n ）</p>
+<p>则ac≡b d（mod n ）</p>
+<p>定理2 被除数a加上或减去除数b的倍数，再除以b，余数r不变。即</p>
+<p>如a ≡ r（mod b ），则a ± b n≡r（mod b ）</p>
+<p>例如70≡1（mod 3 ）可得70±10×3≡1（mod 3 ） </p>
+<p>韩信点兵法口诀的原理</p>
+<p>①能被5,7除尽数是35k,其中k=2，即70除3正好余1，70a 除3正好余a。</p>
+<p>②能被3,7除尽数是21k,其中k=1，即21除5正好余1，21b 除5正好余b。</p>
+<p>③能被3,5除尽数是15k,其中k=1，即15除7正好余1，15c 除7正好余c。</p>
+<p>这样——</p>
+<p>根据①可知 70a+21b+15c 除3正好余a。</p>
+<p>根据②可知 70a+21b+15c 除5正好余b。</p>
+<p>根据③可知 70a+21b+15c 除7正好余c。 </p>
+<p>这样我们就得到了一个答案  </p>
+<p>除 3 余 a 除 5 余 b 除 7 余 c 的一个答案是 70a+21b+15c  </p>
+<p>而这个数（70a+21b+15c）对（3<em>5</em>7）取余就得到了最小答案  </p>
+<p>（70a+21b+15c）%（3<em>5</em>7）为最小值，然后再判断最小值是否满足条件。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2023/11/08/fe/iconfont/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -241,7 +346,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-18 11:58:38" itemprop="dateModified" datetime="2023-12-18T11:58:38+00:00">2023-12-18</time>
+                <time title="修改时间：2024-04-12 09:08:17" itemprop="dateModified" datetime="2024-04-12T09:08:17+00:00">2024-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -382,7 +487,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-18 11:58:38" itemprop="dateModified" datetime="2023-12-18T11:58:38+00:00">2023-12-18</time>
+                <time title="修改时间：2024-04-12 09:08:17" itemprop="dateModified" datetime="2024-04-12T09:08:17+00:00">2024-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -470,7 +575,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-18 11:58:38" itemprop="dateModified" datetime="2023-12-18T11:58:38+00:00">2023-12-18</time>
+                <time title="修改时间：2024-04-12 09:08:17" itemprop="dateModified" datetime="2024-04-12T09:08:17+00:00">2024-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -560,7 +665,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-18 11:58:38" itemprop="dateModified" datetime="2023-12-18T11:58:38+00:00">2023-12-18</time>
+                <time title="修改时间：2024-04-12 09:08:17" itemprop="dateModified" datetime="2024-04-12T09:08:17+00:00">2024-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -647,7 +752,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-18 11:58:38" itemprop="dateModified" datetime="2023-12-18T11:58:38+00:00">2023-12-18</time>
+                <time title="修改时间：2024-04-12 09:08:17" itemprop="dateModified" datetime="2024-04-12T09:08:17+00:00">2024-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -775,7 +880,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-18 11:58:38" itemprop="dateModified" datetime="2023-12-18T11:58:38+00:00">2023-12-18</time>
+                <time title="修改时间：2024-04-12 09:08:17" itemprop="dateModified" datetime="2024-04-12T09:08:17+00:00">2024-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -876,7 +981,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-18 11:58:38" itemprop="dateModified" datetime="2023-12-18T11:58:38+00:00">2023-12-18</time>
+                <time title="修改时间：2024-04-12 09:08:17" itemprop="dateModified" datetime="2024-04-12T09:08:17+00:00">2024-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -975,7 +1080,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-18 11:58:38" itemprop="dateModified" datetime="2023-12-18T11:58:38+00:00">2023-12-18</time>
+                <time title="修改时间：2024-04-12 09:08:17" itemprop="dateModified" datetime="2024-04-12T09:08:17+00:00">2024-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1064,7 +1169,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-18 11:58:38" itemprop="dateModified" datetime="2023-12-18T11:58:38+00:00">2023-12-18</time>
+                <time title="修改时间：2024-04-12 09:08:17" itemprop="dateModified" datetime="2024-04-12T09:08:17+00:00">2024-04-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1116,111 +1221,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.zhuyunfeng.com/2022/06/25/technology/front-end/%E5%BE%AE%E5%89%8D%E7%AB%AF%E6%98%AF%E4%BB%80%E4%B9%88/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yvan Zhu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yvan Zhu's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/06/25/technology/front-end/%E5%BE%AE%E5%89%8D%E7%AB%AF%E6%98%AF%E4%BB%80%E4%B9%88/" class="post-title-link" itemprop="url">微前端是什么</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-06-25 23:50:13" itemprop="dateCreated datePublished" datetime="2022-06-25T23:50:13+00:00">2022-06-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-18 11:58:38" itemprop="dateModified" datetime="2023-12-18T11:58:38+00:00">2023-12-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/technology/front-end/" itemprop="url" rel="index"><span itemprop="name">front-end</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2022/06/25/technology/front-end/%E5%BE%AE%E5%89%8D%E7%AB%AF%E6%98%AF%E4%BB%80%E4%B9%88/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/06/25/technology/front-end/微前端是什么/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>简单说，微前端就是把一个大的前端项目分解为多个小的前端项目。</p>
-<p>前端项目主要是网站开发，所以微前端就是把一个大网站项目分解为多个小网站项目。</p>
-<p>至于如何分解，一般有三种方案</p>
-<ol>
-<li>iframe </li>
-<li>web component</li>
-<li>自研框架</li>
-</ol>
-<p>各种方案优劣对比</p>
-<p><a target="_blank" rel="noopener" href="https://coding.imooc.com/lesson/520.html#mid=45514">从0打造微前端框架，实战汽车资讯平台</a><br><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2022/04/microservice.html">微服务是什么</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1286,7 +1290,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">180</span>
+          <span class="site-state-item-count">181</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1354,7 +1358,7 @@
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
