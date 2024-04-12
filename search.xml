@@ -548,6 +548,17 @@
       </categories>
   </entry>
   <entry>
+    <title>idealist</title>
+    <url>/2019/02/18/idealist/</url>
+    <content><![CDATA[<ol>
+<li>maplist</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>list</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>新版 husky 的使用</title>
     <url>/2021/06/30/husky%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<p>新版 husky 实践</p>
@@ -570,17 +581,6 @@
       <categories>
         <category>未分类</category>
       </categories>
-  </entry>
-  <entry>
-    <title>idealist</title>
-    <url>/2019/02/18/idealist/</url>
-    <content><![CDATA[<ol>
-<li>maplist</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>list</tag>
-      </tags>
   </entry>
   <entry>
     <title>imagine</title>
@@ -682,24 +682,6 @@
       <categories>
         <category>未分类</category>
       </categories>
-  </entry>
-  <entry>
-    <title>mariadb支持远程访问</title>
-    <url>/2019/03/11/mariadb%E6%94%AF%E6%8C%81%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/</url>
-    <content><![CDATA[<p>参考文档<a href="https://www.cnblogs.com/24la/p/mariadb-remoting-access.html">https://www.cnblogs.com/24la/p/mariadb-remoting-access.html</a></p>
-<p>首先配置允许访问的用户，采用授权的方式给用户权限</p>
-<p>1<br>GRANT ALL PRIVILEGES ON <em>.</em> TO ‘root’@’%’IDENTIFIED BY ‘123456’ WITH GRANT OPTION;<br> 说明：root是登陆数据库的用户，123456是登陆数据库的密码，*就是意味着任何来源任何主机反正就是权限很大的样子。</p>
-<p>最后配置好权限之后不应该忘记刷新使之生效</p>
-<p>1<br>flush privileges;<br> 再次访问就可以了吧。</p>
-]]></content>
-      <categories>
-        <category>technology</category>
-        <category>database</category>
-      </categories>
-      <tags>
-        <tag>mysql</tag>
-        <tag>mariaDB</tag>
-      </tags>
   </entry>
   <entry>
     <title>mariadb异常 mysqld: Out of memory Centos 创建swap分区解决(转载）</title>
@@ -824,6 +806,24 @@
         <category>technology</category>
         <category>database</category>
       </categories>
+  </entry>
+  <entry>
+    <title>mariadb支持远程访问</title>
+    <url>/2019/03/11/mariadb%E6%94%AF%E6%8C%81%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/</url>
+    <content><![CDATA[<p>参考文档<a href="https://www.cnblogs.com/24la/p/mariadb-remoting-access.html">https://www.cnblogs.com/24la/p/mariadb-remoting-access.html</a></p>
+<p>首先配置允许访问的用户，采用授权的方式给用户权限</p>
+<p>1<br>GRANT ALL PRIVILEGES ON <em>.</em> TO ‘root’@’%’IDENTIFIED BY ‘123456’ WITH GRANT OPTION;<br> 说明：root是登陆数据库的用户，123456是登陆数据库的密码，*就是意味着任何来源任何主机反正就是权限很大的样子。</p>
+<p>最后配置好权限之后不应该忘记刷新使之生效</p>
+<p>1<br>flush privileges;<br> 再次访问就可以了吧。</p>
+]]></content>
+      <categories>
+        <category>technology</category>
+        <category>database</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+        <tag>mariaDB</tag>
+      </tags>
   </entry>
   <entry>
     <title>miniclass.com.cn</title>
@@ -1146,27 +1146,6 @@
       </categories>
   </entry>
   <entry>
-    <title>php报错与处理</title>
-    <url>/2020/07/03/php%E6%8A%A5%E9%94%99%E4%B8%8E%E5%A4%84%E7%90%86/</url>
-    <content><![CDATA[<ol>
-<li>failed to open stream: Permission denied</li>
-</ol>
-<p>可能原因：没有目录权限<br>解决方案：更改目录所有者为www</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># chown -R www:www folername</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>failed to open stream: No such file or directory</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># composer install</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-      <tags>
-        <tag>php</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>pm2实现开机自动启动</title>
     <url>/2018/01/25/pm2shixiankaijizidongqidong/</url>
     <content><![CDATA[<p>可以通过<code>pm2 startup</code>来实现开机自启动。细节可<a href="http://pm2.keymetrics.io/docs/usage/startup/">参考</a>。大致流程如下</p>
@@ -1188,6 +1167,27 @@
       </categories>
       <tags>
         <tag>pm2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>php报错与处理</title>
+    <url>/2020/07/03/php%E6%8A%A5%E9%94%99%E4%B8%8E%E5%A4%84%E7%90%86/</url>
+    <content><![CDATA[<ol>
+<li>failed to open stream: Permission denied</li>
+</ol>
+<p>可能原因：没有目录权限<br>解决方案：更改目录所有者为www</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># chown -R www:www folername</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>failed to open stream: No such file or directory</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># composer install</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
       </tags>
   </entry>
   <entry>
@@ -1429,6 +1429,16 @@
       </categories>
   </entry>
   <entry>
+    <title>render函数</title>
+    <url>/2020/08/13/render%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h4 id="createElement-参数"><a href="#createElement-参数" class="headerlink" title="createElement 参数"></a>createElement 参数</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// @returns &#123;VNode&#125;</span><br><span class="line">createElement(</span><br><span class="line">  // &#123;String | Object | Function&#125;</span><br><span class="line">  // 一个 HTML 标签名、组件选项对象，或者</span><br><span class="line">  // resolve 了上述任何一种的一个 async 函数。必填项。</span><br><span class="line">  &#x27;div&#x27;,</span><br><span class="line"></span><br><span class="line">  // &#123;Object&#125;</span><br><span class="line">  // 一个与模板中 attribute 对应的数据对象。可选。</span><br><span class="line">  &#123;</span><br><span class="line">    // (详情见下一节)</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  // &#123;String | Array&#125;</span><br><span class="line">  // 子级虚拟节点 (VNodes)，由 `createElement()` 构建而成，</span><br><span class="line">  // 也可以使用字符串来生成“文本虚拟节点”。可选。</span><br><span class="line">  [</span><br><span class="line">    &#x27;先写一些文字&#x27;,</span><br><span class="line">    createElement(&#x27;h1&#x27;, &#x27;一则头条&#x27;),</span><br><span class="line">    createElement(MyComponent, &#123;</span><br><span class="line">      props: &#123;</span><br><span class="line">        someProp: &#x27;foobar&#x27;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h3 id="深入数据对象"><a href="#深入数据对象" class="headerlink" title="深入数据对象"></a>深入数据对象</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // 与 `v-bind:class` 的 API 相同，</span><br><span class="line">  // 接受一个字符串、对象或字符串和对象组成的数组</span><br><span class="line">  &#x27;class&#x27;: &#123;</span><br><span class="line">    foo: true,</span><br><span class="line">    bar: false</span><br><span class="line">  &#125;,</span><br><span class="line">  // 与 `v-bind:style` 的 API 相同，</span><br><span class="line">  // 接受一个字符串、对象，或对象组成的数组</span><br><span class="line">  style: &#123;</span><br><span class="line">    color: &#x27;red&#x27;,</span><br><span class="line">    fontSize: &#x27;14px&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 普通的 HTML attribute</span><br><span class="line">  attrs: &#123;</span><br><span class="line">    id: &#x27;foo&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 组件 prop</span><br><span class="line">  props: &#123;</span><br><span class="line">    myProp: &#x27;bar&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // DOM property</span><br><span class="line">  domProps: &#123;</span><br><span class="line">    innerHTML: &#x27;baz&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 事件监听器在 `on` 内，</span><br><span class="line">  // 但不再支持如 `v-on:keyup.enter` 这样的修饰器。</span><br><span class="line">  // 需要在处理函数中手动检查 keyCode。</span><br><span class="line">  on: &#123;</span><br><span class="line">    click: this.clickHandler</span><br><span class="line">  &#125;,</span><br><span class="line">  // 仅用于组件，用于监听原生事件，而不是组件内部使用</span><br><span class="line">  // `vm.$emit` 触发的事件。</span><br><span class="line">  nativeOn: &#123;</span><br><span class="line">    click: this.nativeClickHandler</span><br><span class="line">  &#125;,</span><br><span class="line">  // 自定义指令。注意，你无法对 `binding` 中的 `oldValue`</span><br><span class="line">  // 赋值，因为 Vue 已经自动为你进行了同步。</span><br><span class="line">  directives: [</span><br><span class="line">    &#123;</span><br><span class="line">      name: &#x27;my-custom-directive&#x27;,</span><br><span class="line">      value: &#x27;2&#x27;,</span><br><span class="line">      expression: &#x27;1 + 1&#x27;,</span><br><span class="line">      arg: &#x27;foo&#x27;,</span><br><span class="line">      modifiers: &#123;</span><br><span class="line">        bar: true</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  // 作用域插槽的格式为</span><br><span class="line">  // &#123; name: props =&gt; VNode | Array&lt;VNode&gt; &#125;</span><br><span class="line">  scopedSlots: &#123;</span><br><span class="line">    default: props =&gt; createElement(&#x27;span&#x27;, props.text)</span><br><span class="line">  &#125;,</span><br><span class="line">  // 如果组件是其它组件的子组件，需为插槽指定名称</span><br><span class="line">  slot: &#x27;name-of-slot&#x27;,</span><br><span class="line">  // 其它特殊顶层 property</span><br><span class="line">  key: &#x27;myKey&#x27;,</span><br><span class="line">  ref: &#x27;myRef&#x27;,</span><br><span class="line">  // 如果你在渲染函数中给多个元素都应用了相同的 ref 名，</span><br><span class="line">  // 那么 `$refs.myRef` 会变成一个数组。</span><br><span class="line">  refInFor: true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>redis常用命令</title>
     <url>/2019/12/06/redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<p>连接</p>
@@ -1462,16 +1472,6 @@
       </categories>
       <tags>
         <tag>redis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>render函数</title>
-    <url>/2020/08/13/render%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<h4 id="createElement-参数"><a href="#createElement-参数" class="headerlink" title="createElement 参数"></a>createElement 参数</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// @returns &#123;VNode&#125;</span><br><span class="line">createElement(</span><br><span class="line">  // &#123;String | Object | Function&#125;</span><br><span class="line">  // 一个 HTML 标签名、组件选项对象，或者</span><br><span class="line">  // resolve 了上述任何一种的一个 async 函数。必填项。</span><br><span class="line">  &#x27;div&#x27;,</span><br><span class="line"></span><br><span class="line">  // &#123;Object&#125;</span><br><span class="line">  // 一个与模板中 attribute 对应的数据对象。可选。</span><br><span class="line">  &#123;</span><br><span class="line">    // (详情见下一节)</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  // &#123;String | Array&#125;</span><br><span class="line">  // 子级虚拟节点 (VNodes)，由 `createElement()` 构建而成，</span><br><span class="line">  // 也可以使用字符串来生成“文本虚拟节点”。可选。</span><br><span class="line">  [</span><br><span class="line">    &#x27;先写一些文字&#x27;,</span><br><span class="line">    createElement(&#x27;h1&#x27;, &#x27;一则头条&#x27;),</span><br><span class="line">    createElement(MyComponent, &#123;</span><br><span class="line">      props: &#123;</span><br><span class="line">        someProp: &#x27;foobar&#x27;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-<h3 id="深入数据对象"><a href="#深入数据对象" class="headerlink" title="深入数据对象"></a>深入数据对象</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // 与 `v-bind:class` 的 API 相同，</span><br><span class="line">  // 接受一个字符串、对象或字符串和对象组成的数组</span><br><span class="line">  &#x27;class&#x27;: &#123;</span><br><span class="line">    foo: true,</span><br><span class="line">    bar: false</span><br><span class="line">  &#125;,</span><br><span class="line">  // 与 `v-bind:style` 的 API 相同，</span><br><span class="line">  // 接受一个字符串、对象，或对象组成的数组</span><br><span class="line">  style: &#123;</span><br><span class="line">    color: &#x27;red&#x27;,</span><br><span class="line">    fontSize: &#x27;14px&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 普通的 HTML attribute</span><br><span class="line">  attrs: &#123;</span><br><span class="line">    id: &#x27;foo&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 组件 prop</span><br><span class="line">  props: &#123;</span><br><span class="line">    myProp: &#x27;bar&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // DOM property</span><br><span class="line">  domProps: &#123;</span><br><span class="line">    innerHTML: &#x27;baz&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 事件监听器在 `on` 内，</span><br><span class="line">  // 但不再支持如 `v-on:keyup.enter` 这样的修饰器。</span><br><span class="line">  // 需要在处理函数中手动检查 keyCode。</span><br><span class="line">  on: &#123;</span><br><span class="line">    click: this.clickHandler</span><br><span class="line">  &#125;,</span><br><span class="line">  // 仅用于组件，用于监听原生事件，而不是组件内部使用</span><br><span class="line">  // `vm.$emit` 触发的事件。</span><br><span class="line">  nativeOn: &#123;</span><br><span class="line">    click: this.nativeClickHandler</span><br><span class="line">  &#125;,</span><br><span class="line">  // 自定义指令。注意，你无法对 `binding` 中的 `oldValue`</span><br><span class="line">  // 赋值，因为 Vue 已经自动为你进行了同步。</span><br><span class="line">  directives: [</span><br><span class="line">    &#123;</span><br><span class="line">      name: &#x27;my-custom-directive&#x27;,</span><br><span class="line">      value: &#x27;2&#x27;,</span><br><span class="line">      expression: &#x27;1 + 1&#x27;,</span><br><span class="line">      arg: &#x27;foo&#x27;,</span><br><span class="line">      modifiers: &#123;</span><br><span class="line">        bar: true</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  // 作用域插槽的格式为</span><br><span class="line">  // &#123; name: props =&gt; VNode | Array&lt;VNode&gt; &#125;</span><br><span class="line">  scopedSlots: &#123;</span><br><span class="line">    default: props =&gt; createElement(&#x27;span&#x27;, props.text)</span><br><span class="line">  &#125;,</span><br><span class="line">  // 如果组件是其它组件的子组件，需为插槽指定名称</span><br><span class="line">  slot: &#x27;name-of-slot&#x27;,</span><br><span class="line">  // 其它特殊顶层 property</span><br><span class="line">  key: &#x27;myKey&#x27;,</span><br><span class="line">  ref: &#x27;myRef&#x27;,</span><br><span class="line">  // 如果你在渲染函数中给多个元素都应用了相同的 ref 名，</span><br><span class="line">  // 那么 `$refs.myRef` 会变成一个数组。</span><br><span class="line">  refInFor: true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>vue</tag>
       </tags>
   </entry>
   <entry>
@@ -2026,6 +2026,15 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
+    <title>vue和react</title>
+    <url>/2020/01/10/vue%E5%92%8Creact/</url>
+    <content><![CDATA[<p>单向数据流<br>单向绑定，双向绑定<br>父子组件传值<br>声明式/命令式</p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>vue-router的基本使用</title>
     <url>/2020/04/21/vue-router/</url>
     <content><![CDATA[<h2 id="路由跳转"><a href="#路由跳转" class="headerlink" title="路由跳转"></a>路由跳转</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 字符串</span><br><span class="line">this.$router.push(&#x27;/home/first&#x27;)</span><br><span class="line"></span><br><span class="line">// 对象</span><br><span class="line">this.$router.push(&#123; path: &#x27;/home/first&#x27; &#125;)</span><br><span class="line"></span><br><span class="line">// 命名的路由</span><br><span class="line">this.$router.push(&#123; name: &#x27;home&#x27;, params: &#123; userId: wise &#125;&#125;)</span><br></pre></td></tr></table></figure>
@@ -2039,15 +2048,6 @@ timeout(100).then((value) =&gt; &#123;
       <tags>
         <tag>vue</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>vue和react</title>
-    <url>/2020/01/10/vue%E5%92%8Creact/</url>
-    <content><![CDATA[<p>单向数据流<br>单向绑定，双向绑定<br>父子组件传值<br>声明式/命令式</p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
   </entry>
   <entry>
     <title>vue数组双向绑定</title>
@@ -2142,6 +2142,20 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
+    <title>悟以往之不谏，知来者之可追</title>
+    <url>/2017/10/09/wuyiwangzhibujianzhilaizhezhikezhui/</url>
+    <content><![CDATA[<h1 id="归去来兮辞·并序"><a href="#归去来兮辞·并序" class="headerlink" title="归去来兮辞·并序"></a>归去来兮辞·并序</h1><p><a href="http://hanyu.baidu.com/s?wd=%E9%99%B6%E6%B8%8A%E6%98%8E">【作者】陶渊明 </a>【朝代】魏晋</p>
+<p>余家贫，耕植不足以自给。幼稚盈室，瓶无储粟，生生所资，未见其术。亲故多劝余为长吏，脱然有怀，求之靡途。会有四方之事，诸侯以惠爱为德，家叔以余贫苦，遂见用于小邑。于时风波未静，心惮远役，彭泽去家百里，公田之利，足以为酒。故便求之。及少日，眷然有归欤之情。何则？质性自然，非矫厉所得。饥冻虽切，违己交病。尝从人事，皆口腹自役。于是怅然慷慨，深愧平生之志。犹望一稔，当敛裳宵逝。寻程氏妹丧于武昌，情在骏奔，自免去职。仲秋至冬，在官八十余日。因事顺心，命篇曰《归去来兮》。乙巳岁十一月也。</p>
+<p>归去来兮，田园将芜胡不归？既自以心为形役，奚惆怅而独悲？悟已往之不谏，知来者之可追。实迷途其未远，觉今是而昨非。舟遥遥以轻飏，风飘飘而吹衣。问征夫以前路，恨晨光之熹微。</p>
+<p>乃瞻衡宇，载欣载奔。僮仆欢迎，稚子候门。三径就荒，松菊犹存。携幼入室，有酒盈樽。引壶觞以自酌，眄庭柯以怡颜。倚南窗以寄傲，审容膝之易安。园日涉以成趣，门虽设而常关。策扶老以流憩，时矫首而遐观。云无心以出岫，鸟倦飞而知还。景翳翳以将入，抚孤松而盘桓。</p>
+<p>归去来兮，请息交以绝游。世与我而相违，复驾言兮焉求？悦亲戚之情话，乐琴书以消忧。农人告余以春及，将有事于西畴。或命巾车，或棹孤舟。既窈窕以寻壑，亦崎岖而经丘。木欣欣以向荣，泉涓涓而始流。善万物之得时，感吾生之行休。</p>
+<p>已矣乎！寓形宇内复几时？曷不委心任去留？胡为乎遑遑欲何之？富贵非吾愿，帝乡不可期。怀良辰以孤往，或植杖而耘耔。登东皋以舒啸，临清流而赋诗。聊乘化以归尽，乐夫天命复奚疑！</p>
+]]></content>
+      <categories>
+        <category>literature</category>
+      </categories>
+  </entry>
+  <entry>
     <title>wordpress转移服务器遇到的问题</title>
     <url>/2017/09/14/wordpresszhuanyifuwuqiyudaodewenti/</url>
     <content><![CDATA[<p>1.更换数据库，数据库配置在wp-config.php里</p>
@@ -2161,20 +2175,6 @@ timeout(100).then((value) =&gt; &#123;
 ]]></content>
       <categories>
         <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>悟以往之不谏，知来者之可追</title>
-    <url>/2017/10/09/wuyiwangzhibujianzhilaizhezhikezhui/</url>
-    <content><![CDATA[<h1 id="归去来兮辞·并序"><a href="#归去来兮辞·并序" class="headerlink" title="归去来兮辞·并序"></a>归去来兮辞·并序</h1><p><a href="http://hanyu.baidu.com/s?wd=%E9%99%B6%E6%B8%8A%E6%98%8E">【作者】陶渊明 </a>【朝代】魏晋</p>
-<p>余家贫，耕植不足以自给。幼稚盈室，瓶无储粟，生生所资，未见其术。亲故多劝余为长吏，脱然有怀，求之靡途。会有四方之事，诸侯以惠爱为德，家叔以余贫苦，遂见用于小邑。于时风波未静，心惮远役，彭泽去家百里，公田之利，足以为酒。故便求之。及少日，眷然有归欤之情。何则？质性自然，非矫厉所得。饥冻虽切，违己交病。尝从人事，皆口腹自役。于是怅然慷慨，深愧平生之志。犹望一稔，当敛裳宵逝。寻程氏妹丧于武昌，情在骏奔，自免去职。仲秋至冬，在官八十余日。因事顺心，命篇曰《归去来兮》。乙巳岁十一月也。</p>
-<p>归去来兮，田园将芜胡不归？既自以心为形役，奚惆怅而独悲？悟已往之不谏，知来者之可追。实迷途其未远，觉今是而昨非。舟遥遥以轻飏，风飘飘而吹衣。问征夫以前路，恨晨光之熹微。</p>
-<p>乃瞻衡宇，载欣载奔。僮仆欢迎，稚子候门。三径就荒，松菊犹存。携幼入室，有酒盈樽。引壶觞以自酌，眄庭柯以怡颜。倚南窗以寄傲，审容膝之易安。园日涉以成趣，门虽设而常关。策扶老以流憩，时矫首而遐观。云无心以出岫，鸟倦飞而知还。景翳翳以将入，抚孤松而盘桓。</p>
-<p>归去来兮，请息交以绝游。世与我而相违，复驾言兮焉求？悦亲戚之情话，乐琴书以消忧。农人告余以春及，将有事于西畴。或命巾车，或棹孤舟。既窈窕以寻壑，亦崎岖而经丘。木欣欣以向荣，泉涓涓而始流。善万物之得时，感吾生之行休。</p>
-<p>已矣乎！寓形宇内复几时？曷不委心任去留？胡为乎遑遑欲何之？富贵非吾愿，帝乡不可期。怀良辰以孤往，或植杖而耘耔。登东皋以舒啸，临清流而赋诗。聊乘化以归尽，乐夫天命复奚疑！</p>
-]]></content>
-      <categories>
-        <category>literature</category>
       </categories>
   </entry>
   <entry>
@@ -2365,14 +2365,6 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
-    <title>如何获取视频的缓存进度</title>
-    <url>/2022/07/11/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E8%A7%86%E9%A2%91%E7%9A%84%E7%BC%93%E5%AD%98%E8%BF%9B%E5%BA%A6/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>将进酒</title>
     <url>/2020/11/24/%E5%B0%86%E8%BF%9B%E9%85%92/</url>
     <content><![CDATA[<p>李白</p>
@@ -2380,6 +2372,14 @@ timeout(100).then((value) =&gt; &#123;
 ]]></content>
       <categories>
         <category>literature</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>如何获取视频的缓存进度</title>
+    <url>/2022/07/11/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E8%A7%86%E9%A2%91%E7%9A%84%E7%BC%93%E5%AD%98%E8%BF%9B%E5%BA%A6/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>未分类</category>
       </categories>
   </entry>
   <entry>
@@ -2432,6 +2432,18 @@ timeout(100).then((value) =&gt; &#123;
       <categories>
         <category>literature</category>
       </categories>
+  </entry>
+  <entry>
+    <title>技术博客网站</title>
+    <url>/2019/02/16/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/</url>
+    <content><![CDATA[<p>CSDN<br>csdn.net</p>
+<p>博客园<br>cnblogs.com</p>
+<p>简书<br>jianshu.com</p>
+<p>思否<br>segmentfault.com<br>sifou.com</p>
+<p>开源中国<br>oschina.net</p>
+<p>扣钉<br>coding.net</p>
+<p>51cto.com</p>
+]]></content>
   </entry>
   <entry>
     <title>手动创建SWAP分区（转载）</title>
@@ -2607,6 +2619,16 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </categories>
   </entry>
   <entry>
+    <title>浏览器插件修改请求返回数据的原理</title>
+    <url>/2022/07/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E4%BF%AE%E6%94%B9%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE%E7%9A%84%E5%8E%9F%E7%90%86/</url>
+    <content><![CDATA[<h1 id="重写-fetch-和-XHR"><a href="#重写-fetch-和-XHR" class="headerlink" title="重写 fetch 和 XHR"></a>重写 fetch 和 XHR</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>重写 fetch 和 XHR，返回自定义数据。<br>把重写 fetch 和 XHR 的代码通过 <code>&lt;script&gt;&lt;/script&gt;</code> 标签 插入到 html 里</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>当你插入 <code>&lt;script&gt;&lt;/script&gt;</code> 标签的时候，请求可能已经发出了，所以此种方法不能保障拦截所有请求</p>
+<h1 id="tweak"><a href="#tweak" class="headerlink" title="tweak"></a>tweak</h1>]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>技能树</title>
     <url>/2019/07/11/%E6%8A%80%E8%83%BD%E6%A0%91/</url>
     <content><![CDATA[<ol>
@@ -2622,28 +2644,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       <categories>
         <category>technology</category>
         <category>front-end</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>技术博客网站</title>
-    <url>/2019/02/16/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/</url>
-    <content><![CDATA[<p>CSDN<br>csdn.net</p>
-<p>博客园<br>cnblogs.com</p>
-<p>简书<br>jianshu.com</p>
-<p>思否<br>segmentfault.com<br>sifou.com</p>
-<p>开源中国<br>oschina.net</p>
-<p>扣钉<br>coding.net</p>
-<p>51cto.com</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>浏览器插件修改请求返回数据的原理</title>
-    <url>/2022/07/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E4%BF%AE%E6%94%B9%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE%E7%9A%84%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[<h1 id="重写-fetch-和-XHR"><a href="#重写-fetch-和-XHR" class="headerlink" title="重写 fetch 和 XHR"></a>重写 fetch 和 XHR</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>重写 fetch 和 XHR，返回自定义数据。<br>把重写 fetch 和 XHR 的代码通过 <code>&lt;script&gt;&lt;/script&gt;</code> 标签 插入到 html 里</p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>当你插入 <code>&lt;script&gt;&lt;/script&gt;</code> 标签的时候，请求可能已经发出了，所以此种方法不能保障拦截所有请求</p>
-<h1 id="tweak"><a href="#tweak" class="headerlink" title="tweak"></a>tweak</h1>]]></content>
-      <categories>
-        <category>未分类</category>
       </categories>
   </entry>
   <entry>
@@ -2899,6 +2899,30 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </categories>
   </entry>
   <entry>
+    <title>保时捷panamera行政加长版官方宣传片</title>
+    <url>/2018/01/25/AD/%E4%BF%9D%E6%97%B6%E6%8D%B7panamera%E8%A1%8C%E6%94%BF%E5%8A%A0%E9%95%BF%E7%89%88%E5%AE%98%E6%96%B9%E5%AE%A3%E4%BC%A0%E7%89%87/</url>
+    <content><![CDATA[<h1 id="一、30秒配音版（中文字幕）"><a href="#一、30秒配音版（中文字幕）" class="headerlink" title="一、30秒配音版（中文字幕）"></a>一、30秒配音版（中文字幕）</h1><iframe height=498 width=610 src="//player.bilibili.com/player.html?aid=8792900&cid=14502121&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<p><a href="https://www.bilibili.com/video/av8792900/">https://www.bilibili.com/video/av8792900/</a></p>
+<h1 id="二、1-16配音版（中文字幕）"><a href="#二、1-16配音版（中文字幕）" class="headerlink" title="二、1:16配音版（中文字幕）"></a>二、1:16配音版（中文字幕）</h1><p>保时捷panamera官方宣传片 courage changes everything(一往无前) 时长1:16配音版（中文字幕） </p>
+<div style="width: 610px; ">
+<iframe  src='http://player.youku.com/embed/XMTYxNjA0MTk2NA==' style='' frameborder=0 'allowfullscreen'></iframe>
+</div>
+
+<p><a href="http://player.youku.com/embed/XMTYxNjA0MTk2NA==">优酷观看</a></p>
+<h1 id="三、2-11（配音版）"><a href="#三、2-11（配音版）" class="headerlink" title="三、2:11（配音版）"></a>三、2:11（配音版）</h1><p>保时捷全新Panamera Turbo &amp; Panamera 4S 时长 2:11（配音版） </p>
+<h1 id="四、7-09秒（合集）"><a href="#四、7-09秒（合集）" class="headerlink" title="四、7:09秒（合集）"></a>四、7:09秒（合集）</h1><p>保时捷全新Panamera 合集 时长：7:09秒 </p>
+<p><a href="https://www.bilibili.com/video/av5465368/">https://www.bilibili.com/video/av5465368/</a></p>
+]]></content>
+      <categories>
+        <category>AD</category>
+      </categories>
+      <tags>
+        <tag>AD</tag>
+        <tag>video</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>think-different</title>
     <url>/2019/08/13/AD/think-different/</url>
     <content><![CDATA[<h2 id="乔布斯配音无字幕版"><a href="#乔布斯配音无字幕版" class="headerlink" title="乔布斯配音无字幕版"></a>乔布斯配音无字幕版</h2><iframe width=610 height=490 src="//player.bilibili.com/player.html?aid=51035081&cid=89357254&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -2942,30 +2966,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </categories>
       <tags>
         <tag>AD</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>保时捷panamera行政加长版官方宣传片</title>
-    <url>/2018/01/25/AD/%E4%BF%9D%E6%97%B6%E6%8D%B7panamera%E8%A1%8C%E6%94%BF%E5%8A%A0%E9%95%BF%E7%89%88%E5%AE%98%E6%96%B9%E5%AE%A3%E4%BC%A0%E7%89%87/</url>
-    <content><![CDATA[<h1 id="一、30秒配音版（中文字幕）"><a href="#一、30秒配音版（中文字幕）" class="headerlink" title="一、30秒配音版（中文字幕）"></a>一、30秒配音版（中文字幕）</h1><iframe height=498 width=610 src="//player.bilibili.com/player.html?aid=8792900&cid=14502121&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<p><a href="https://www.bilibili.com/video/av8792900/">https://www.bilibili.com/video/av8792900/</a></p>
-<h1 id="二、1-16配音版（中文字幕）"><a href="#二、1-16配音版（中文字幕）" class="headerlink" title="二、1:16配音版（中文字幕）"></a>二、1:16配音版（中文字幕）</h1><p>保时捷panamera官方宣传片 courage changes everything(一往无前) 时长1:16配音版（中文字幕） </p>
-<div style="width: 610px; ">
-<iframe  src='http://player.youku.com/embed/XMTYxNjA0MTk2NA==' style='' frameborder=0 'allowfullscreen'></iframe>
-</div>
-
-<p><a href="http://player.youku.com/embed/XMTYxNjA0MTk2NA==">优酷观看</a></p>
-<h1 id="三、2-11（配音版）"><a href="#三、2-11（配音版）" class="headerlink" title="三、2:11（配音版）"></a>三、2:11（配音版）</h1><p>保时捷全新Panamera Turbo &amp; Panamera 4S 时长 2:11（配音版） </p>
-<h1 id="四、7-09秒（合集）"><a href="#四、7-09秒（合集）" class="headerlink" title="四、7:09秒（合集）"></a>四、7:09秒（合集）</h1><p>保时捷全新Panamera 合集 时长：7:09秒 </p>
-<p><a href="https://www.bilibili.com/video/av5465368/">https://www.bilibili.com/video/av5465368/</a></p>
-]]></content>
-      <categories>
-        <category>AD</category>
-      </categories>
-      <tags>
-        <tag>AD</tag>
-        <tag>video</tag>
       </tags>
   </entry>
   <entry>
@@ -3240,12 +3240,9 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </tags>
   </entry>
   <entry>
-    <title>apache 允许其他主机访问</title>
-    <url>/2019/02/21/technology/apache-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/</url>
-    <content><![CDATA[<p>1.允许其他主机访问</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    &lt;Directory &quot;F:/wamp/www/test&quot;&gt;</span><br><span class="line">        Options FollowSymLinks</span><br><span class="line">        AllowOverride All</span><br><span class="line">        Order allow,deny</span><br><span class="line">        Allow from all      #允许来自所有主机的访问</span><br><span class="line">        Require all granted #2.4以上需要加这一句</span><br><span class="line">    &lt;/Directory&gt;</span><br><span class="line">    ServerAdmin 826096331@qq.com</span><br><span class="line">    DocumentRoot &quot;F:/wamp/www/test&quot;</span><br><span class="line">    ServerName www.test.com</span><br><span class="line">    DirectoryIndex index.php index.html</span><br><span class="line">    ServerAlias test.com</span><br><span class="line">    ErrorLog &quot;logs/test.bin-error_log&quot;</span><br><span class="line">    CustomLog &quot;logs/test.bin-access_log&quot; common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
-<hr>
-<p>作者：u013032788<br>来源：CSDN<br>原文：<a href="https://blog.csdn.net/u013032788/article/details/51395622">https://blog.csdn.net/u013032788/article/details/51395622</a><br>版权声明：本文为博主原创文章，转载请附上博文链接！</p>
+    <title>apache配置mime</title>
+    <url>/2019/08/05/technology/apache%E9%85%8D%E7%BD%AEmime/</url>
+    <content><![CDATA[<h1 id="配置文件里"><a href="#配置文件里" class="headerlink" title="配置文件里"></a>配置文件里</h1><p>AddType application/wasm .wasm</p>
 ]]></content>
       <categories>
         <category>technology</category>
@@ -3256,9 +3253,12 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </tags>
   </entry>
   <entry>
-    <title>apache配置mime</title>
-    <url>/2019/08/05/technology/apache%E9%85%8D%E7%BD%AEmime/</url>
-    <content><![CDATA[<h1 id="配置文件里"><a href="#配置文件里" class="headerlink" title="配置文件里"></a>配置文件里</h1><p>AddType application/wasm .wasm</p>
+    <title>apache 允许其他主机访问</title>
+    <url>/2019/02/21/technology/apache-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/</url>
+    <content><![CDATA[<p>1.允许其他主机访问</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    &lt;Directory &quot;F:/wamp/www/test&quot;&gt;</span><br><span class="line">        Options FollowSymLinks</span><br><span class="line">        AllowOverride All</span><br><span class="line">        Order allow,deny</span><br><span class="line">        Allow from all      #允许来自所有主机的访问</span><br><span class="line">        Require all granted #2.4以上需要加这一句</span><br><span class="line">    &lt;/Directory&gt;</span><br><span class="line">    ServerAdmin 826096331@qq.com</span><br><span class="line">    DocumentRoot &quot;F:/wamp/www/test&quot;</span><br><span class="line">    ServerName www.test.com</span><br><span class="line">    DirectoryIndex index.php index.html</span><br><span class="line">    ServerAlias test.com</span><br><span class="line">    ErrorLog &quot;logs/test.bin-error_log&quot;</span><br><span class="line">    CustomLog &quot;logs/test.bin-access_log&quot; common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>作者：u013032788<br>来源：CSDN<br>原文：<a href="https://blog.csdn.net/u013032788/article/details/51395622">https://blog.csdn.net/u013032788/article/details/51395622</a><br>版权声明：本文为博主原创文章，转载请附上博文链接！</p>
 ]]></content>
       <categories>
         <category>technology</category>
@@ -3286,6 +3286,16 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </tags>
   </entry>
   <entry>
+    <title>axios跨域</title>
+    <url>/2019/03/12/technology/axios%E8%B7%A8%E5%9F%9F/</url>
+    <content><![CDATA[<h3 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h3><p>参考文档<br><a href="https://www.cnblogs.com/wancheng7/p/8987694.html">https://www.cnblogs.com/wancheng7/p/8987694.html</a><br><a href="https://www.cnblogs.com/cap-rq/p/10149789.html">https://www.cnblogs.com/cap-rq/p/10149789.html</a></p>
+]]></content>
+      <tags>
+        <tag>question</tag>
+        <tag>跨域</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>axios发送application/x-www-form-urlencoded类型的请求</title>
     <url>/2020/05/21/technology/axios%E5%8F%91%E9%80%81application-x-www-form-urlencoded%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%AF%B7%E6%B1%82/</url>
     <content><![CDATA[<p>axios 默认发送 json<br>想要发送 application/x-www-form-urlencoded 类型的数据<br>可以使用 qs 这个 node module 包</p>
@@ -3308,16 +3318,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
         <category>technology</category>
         <category>Server</category>
       </categories>
-  </entry>
-  <entry>
-    <title>axios跨域</title>
-    <url>/2019/03/12/technology/axios%E8%B7%A8%E5%9F%9F/</url>
-    <content><![CDATA[<h3 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h3><p>参考文档<br><a href="https://www.cnblogs.com/wancheng7/p/8987694.html">https://www.cnblogs.com/wancheng7/p/8987694.html</a><br><a href="https://www.cnblogs.com/cap-rq/p/10149789.html">https://www.cnblogs.com/cap-rq/p/10149789.html</a></p>
-]]></content>
-      <tags>
-        <tag>question</tag>
-        <tag>跨域</tag>
-      </tags>
   </entry>
   <entry>
     <title>centos下压缩解压.zip文件</title>
@@ -3445,18 +3445,6 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
       </tags>
   </entry>
   <entry>
-    <title>centos服务自动启动</title>
-    <url>/2019/12/24/technology/centos%E6%9C%8D%E5%8A%A1%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8/</url>
-    <content><![CDATA[<h1 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h1><h2 id="service-命令"><a href="#service-命令" class="headerlink" title="service 命令"></a>service 命令</h2><p><code>service start/stop/status/restart servicename</code></p>
-<h2 id="systemctl-命令"><a href="#systemctl-命令" class="headerlink" title="systemctl 命令"></a>systemctl 命令</h2><p><code>systemctl start/stop/status/restart servicename</code></p>
-<h1 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h1><h2 id="chkconfig-命令"><a href="#chkconfig-命令" class="headerlink" title="chkconfig 命令"></a>chkconfig 命令</h2><p>添加到 chkconfig 列表<br><code>chkconfig --add servicename</code><br>开启/关闭<br><code>chkconfig servicename on/off</code><br>查询当前所有自动启动的服务<br><code>chkconfig --list</code><br>查询指定的服务<br><code>chkconfig --list servicename</code></p>
-<h2 id="systemctl-命令-1"><a href="#systemctl-命令-1" class="headerlink" title="systemctl 命令"></a>systemctl 命令</h2><p><code>systemctl enable/disable servicename</code></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>centos关闭防火墙</title>
     <url>/2019/03/11/technology/centos%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99/</url>
     <content><![CDATA[<p>参考文档<br>防火墙设置<br>查看所有打开的端口： firewall-cmd –zone=public –list-ports<br>启动： systemctl start firewalld<br>关闭： systemctl stop firewalld<br>查看状态： systemctl status firewalld<br>开机禁用  ： systemctl disable firewalld<br>开机启用  ： systemctl enable firewalld</p>
@@ -3479,6 +3467,18 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
       </tags>
   </entry>
   <entry>
+    <title>centos服务自动启动</title>
+    <url>/2019/12/24/technology/centos%E6%9C%8D%E5%8A%A1%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8/</url>
+    <content><![CDATA[<h1 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h1><h2 id="service-命令"><a href="#service-命令" class="headerlink" title="service 命令"></a>service 命令</h2><p><code>service start/stop/status/restart servicename</code></p>
+<h2 id="systemctl-命令"><a href="#systemctl-命令" class="headerlink" title="systemctl 命令"></a>systemctl 命令</h2><p><code>systemctl start/stop/status/restart servicename</code></p>
+<h1 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h1><h2 id="chkconfig-命令"><a href="#chkconfig-命令" class="headerlink" title="chkconfig 命令"></a>chkconfig 命令</h2><p>添加到 chkconfig 列表<br><code>chkconfig --add servicename</code><br>开启/关闭<br><code>chkconfig servicename on/off</code><br>查询当前所有自动启动的服务<br><code>chkconfig --list</code><br>查询指定的服务<br><code>chkconfig --list servicename</code></p>
+<h2 id="systemctl-命令-1"><a href="#systemctl-命令-1" class="headerlink" title="systemctl 命令"></a>systemctl 命令</h2><p><code>systemctl enable/disable servicename</code></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>设计模式</title>
     <url>/2021/02/24/technology/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
     <content><![CDATA[<p>设计模式</p>
@@ -3489,6 +3489,25 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
 <h3 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h3>]]></content>
       <categories>
         <category>technology</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>微前端是什么</title>
+    <url>/2022/06/25/technology/front-end/%E5%BE%AE%E5%89%8D%E7%AB%AF%E6%98%AF%E4%BB%80%E4%B9%88/</url>
+    <content><![CDATA[<p>简单说，微前端就是把一个大的前端项目分解为多个小的前端项目。</p>
+<p>前端项目主要是网站开发，所以微前端就是把一个大网站项目分解为多个小网站项目。</p>
+<p>至于如何分解，一般有三种方案</p>
+<ol>
+<li>iframe </li>
+<li>web component</li>
+<li>自研框架</li>
+</ol>
+<p>各种方案优劣对比</p>
+<p><a href="https://coding.imooc.com/lesson/520.html#mid=45514">从0打造微前端框架，实战汽车资讯平台</a><br><a href="https://www.ruanyifeng.com/blog/2022/04/microservice.html">微服务是什么</a></p>
+]]></content>
+      <categories>
+        <category>technology</category>
+        <category>front-end</category>
       </categories>
   </entry>
   <entry>
@@ -3518,28 +3537,10 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
 <p>除 3 余 a 除 5 余 b 除 7 余 c 的一个答案是 70a+21b+15c  </p>
 <p>而这个数（70a+21b+15c）对（3<em>5</em>7）取余就得到了最小答案  </p>
 <p>（70a+21b+15c）%（3<em>5</em>7）为最小值，然后再判断最小值是否满足条件。</p>
+<p>转载自：<a href="https://www.cnblogs.com/zqxLonely/p/4054526.html">https://www.cnblogs.com/zqxLonely/p/4054526.html</a></p>
 ]]></content>
       <categories>
         <category>technology</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>微前端是什么</title>
-    <url>/2022/06/25/technology/front-end/%E5%BE%AE%E5%89%8D%E7%AB%AF%E6%98%AF%E4%BB%80%E4%B9%88/</url>
-    <content><![CDATA[<p>简单说，微前端就是把一个大的前端项目分解为多个小的前端项目。</p>
-<p>前端项目主要是网站开发，所以微前端就是把一个大网站项目分解为多个小网站项目。</p>
-<p>至于如何分解，一般有三种方案</p>
-<ol>
-<li>iframe </li>
-<li>web component</li>
-<li>自研框架</li>
-</ol>
-<p>各种方案优劣对比</p>
-<p><a href="https://coding.imooc.com/lesson/520.html#mid=45514">从0打造微前端框架，实战汽车资讯平台</a><br><a href="https://www.ruanyifeng.com/blog/2022/04/microservice.html">微服务是什么</a></p>
-]]></content>
-      <categories>
-        <category>technology</category>
-        <category>front-end</category>
       </categories>
   </entry>
   <entry>
@@ -3647,6 +3648,22 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
       </categories>
   </entry>
   <entry>
+    <title>font-weight</title>
+    <url>/2022/01/28/technology/front-end/css/font-weight/</url>
+    <content><![CDATA[<h2 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h2><p>font-weight可取值：100～900和normal、bold、bolder、lighter。</p>
+<p>字体所拥有的字重的数量实际上很少存在满足有9个字重刚好跟100～900的CSS字重一一对应的情况，通常字体拥有的字重数量为4至6个。</p>
+<p>不必担心，起码400和700对应的字重至少是每种字体必备的，譬如常见的 Arial、Helvetica、Georgia等等，只有400(normal)和700(bold)。</p>
+<h2 id="normal、bold"><a href="#normal、bold" class="headerlink" title="normal、bold"></a>normal、bold</h2><p>400 等同于 normal，而 700 等同于 bold。</p>
+<h2 id="bolder、lighter"><a href="#bolder、lighter" class="headerlink" title="bolder、lighter"></a>bolder、lighter</h2><p>bolder、lighter表示其字重值是基于从其父元素继承而来的字重计算所得的，与normal、bold所代表的字重并无关系。  </p>
+<p>参考<br>作者：人不中二枉少年<br>链接：<a href="https://www.jianshu.com/p/f9c6f9729fbb">https://www.jianshu.com/p/f9c6f9729fbb</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+]]></content>
+      <categories>
+        <category>technology</category>
+        <category>front-end</category>
+        <category>css</category>
+      </categories>
+  </entry>
+  <entry>
     <title>CSS3</title>
     <url>/2017/09/27/technology/front-end/css/css3/</url>
     <content><![CDATA[<h1 id="一、边框"><a href="#一、边框" class="headerlink" title="一、边框"></a>一、边框</h1><p>border-radius:100%;<br>box-shadow:x偏移量，y偏移量，阴影模糊，阴影扩展，颜色，内外<br>border-image:url() 70 repeat; </p>
@@ -3688,22 +3705,6 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
 <p>box-sizing: border-box;</p>
 <p>box-sizing: content-box;</p>
 <p><a href="https://www.imooc.com/article/18400">十天精通CSS3学后笔记</a></p>
-]]></content>
-      <categories>
-        <category>technology</category>
-        <category>front-end</category>
-        <category>css</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>font-weight</title>
-    <url>/2022/01/28/technology/front-end/css/font-weight/</url>
-    <content><![CDATA[<h2 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h2><p>font-weight可取值：100～900和normal、bold、bolder、lighter。</p>
-<p>字体所拥有的字重的数量实际上很少存在满足有9个字重刚好跟100～900的CSS字重一一对应的情况，通常字体拥有的字重数量为4至6个。</p>
-<p>不必担心，起码400和700对应的字重至少是每种字体必备的，譬如常见的 Arial、Helvetica、Georgia等等，只有400(normal)和700(bold)。</p>
-<h2 id="normal、bold"><a href="#normal、bold" class="headerlink" title="normal、bold"></a>normal、bold</h2><p>400 等同于 normal，而 700 等同于 bold。</p>
-<h2 id="bolder、lighter"><a href="#bolder、lighter" class="headerlink" title="bolder、lighter"></a>bolder、lighter</h2><p>bolder、lighter表示其字重值是基于从其父元素继承而来的字重计算所得的，与normal、bold所代表的字重并无关系。  </p>
-<p>参考<br>作者：人不中二枉少年<br>链接：<a href="https://www.jianshu.com/p/f9c6f9729fbb">https://www.jianshu.com/p/f9c6f9729fbb</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 ]]></content>
       <categories>
         <category>technology</category>
@@ -4015,6 +4016,21 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
       </categories>
   </entry>
   <entry>
+    <title>Vue2源码学习</title>
+    <url>/2021/04/20/technology/front-end/javascript/vue%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/</url>
+    <content><![CDATA[<h3 id="new-Vue-都发生了什么"><a href="#new-Vue-都发生了什么" class="headerlink" title="new Vue 都发生了什么"></a>new Vue 都发生了什么</h3><p>new vue =&gt; init =&gt; $mount =&gt; compile =&gt; render =&gt; vnode =&gt; patch =&gt; DOM</p>
+<h3 id="响应式原理"><a href="#响应式原理" class="headerlink" title="响应式原理"></a>响应式原理</h3><h4 id="依赖收集"><a href="#依赖收集" class="headerlink" title="依赖收集"></a>依赖收集</h4><h4 id="依赖触发"><a href="#依赖触发" class="headerlink" title="依赖触发"></a>依赖触发</h4><h4 id="nextTick"><a href="#nextTick" class="headerlink" title="nextTick"></a>nextTick</h4><h4 id="如何实现"><a href="#如何实现" class="headerlink" title="如何实现"></a>如何实现</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Object.defineProperty()</span><br></pre></td></tr></table></figure>
+
+<h3 id="Virtural-Dom"><a href="#Virtural-Dom" class="headerlink" title="Virtural Dom"></a>Virtural Dom</h3><h3 id="编译原理"><a href="#编译原理" class="headerlink" title="编译原理"></a>编译原理</h3>]]></content>
+      <categories>
+        <category>technology</category>
+        <category>front-end</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>TypeScript</title>
     <url>/2021/03/09/technology/front-end/javascript/typescript/</url>
     <content><![CDATA[<h3 id="联合类型"><a href="#联合类型" class="headerlink" title="联合类型"></a>联合类型</h3><h3 id="Tuple类型"><a href="#Tuple类型" class="headerlink" title="Tuple类型"></a>Tuple类型</h3><h3 id="枚举类型"><a href="#枚举类型" class="headerlink" title="枚举类型"></a>枚举类型</h3><p>限定数据类型的数组</p>
@@ -4045,21 +4061,6 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
         <category>technology</category>
         <category>front-end</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Vue2源码学习</title>
-    <url>/2021/04/20/technology/front-end/javascript/vue%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/</url>
-    <content><![CDATA[<h3 id="new-Vue-都发生了什么"><a href="#new-Vue-都发生了什么" class="headerlink" title="new Vue 都发生了什么"></a>new Vue 都发生了什么</h3><p>new vue =&gt; init =&gt; $mount =&gt; compile =&gt; render =&gt; vnode =&gt; patch =&gt; DOM</p>
-<h3 id="响应式原理"><a href="#响应式原理" class="headerlink" title="响应式原理"></a>响应式原理</h3><h4 id="依赖收集"><a href="#依赖收集" class="headerlink" title="依赖收集"></a>依赖收集</h4><h4 id="依赖触发"><a href="#依赖触发" class="headerlink" title="依赖触发"></a>依赖触发</h4><h4 id="nextTick"><a href="#nextTick" class="headerlink" title="nextTick"></a>nextTick</h4><h4 id="如何实现"><a href="#如何实现" class="headerlink" title="如何实现"></a>如何实现</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Object.defineProperty()</span><br></pre></td></tr></table></figure>
-
-<h3 id="Virtural-Dom"><a href="#Virtural-Dom" class="headerlink" title="Virtural Dom"></a>Virtural Dom</h3><h3 id="编译原理"><a href="#编译原理" class="headerlink" title="编译原理"></a>编译原理</h3>]]></content>
-      <categories>
-        <category>technology</category>
-        <category>front-end</category>
-      </categories>
-      <tags>
-        <tag>vue</tag>
-      </tags>
   </entry>
   <entry>
     <title>为什么 js 的 forEach 不支持 await</title>
