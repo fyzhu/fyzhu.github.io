@@ -1,5 +1,5 @@
 ---
-title: ssl证书
+title: SSL证书
 categories:
   - 未分类
 date: 2021-12-23 18:23:17
