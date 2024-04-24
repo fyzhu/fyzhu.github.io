@@ -148,15 +148,6 @@
       </categories>
   </entry>
   <entry>
-    <title>从今天开始学习爱自己</title>
-    <url>/2017/09/25/congjintiankaishixuexiaiziji/</url>
-    <content><![CDATA[<p>2017年9月25日15:44:09</p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>composer的安装</title>
     <url>/2020/08/06/composer%E7%9A%84%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h4 id="下载安装脚本"><a href="#下载安装脚本" class="headerlink" title="下载安装脚本"></a>下载安装脚本</h4><ol>
@@ -175,6 +166,15 @@
 <li>最后重新打开一个命令行窗口试一试执行 composer –version 看看是否正确输出版本号。</li>
 </ol>
 <p>参考<br><a href="https://pkg.phpcomposer.com/#how-to-install-composer">https://pkg.phpcomposer.com/#how-to-install-composer</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>从今天开始学习爱自己</title>
+    <url>/2017/09/25/congjintiankaishixuexiaiziji/</url>
+    <content><![CDATA[<p>2017年9月25日15:44:09</p>
 ]]></content>
       <categories>
         <category>未分类</category>
@@ -237,15 +237,6 @@
       </categories>
   </entry>
   <entry>
-    <title>dom之scroll</title>
-    <url>/2021/07/01/dom%E4%B9%8Bscroll/</url>
-    <content><![CDATA[<p>参考：<br><a href="https://www.cnblogs.com/wangyihong/p/8056859.html">https://www.cnblogs.com/wangyihong/p/8056859.html</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>docker进入容器</title>
     <url>/2019/12/06/docker%E8%BF%9B%E5%85%A5%E5%AE%B9%E5%99%A8/</url>
     <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker exec [OPTIONS] CONTAINER COMMAND [ARG...]</span><br></pre></td></tr></table></figure>
@@ -266,6 +257,15 @@
       <tags>
         <tag>docker</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>dom之scroll</title>
+    <url>/2021/07/01/dom%E4%B9%8Bscroll/</url>
+    <content><![CDATA[<p>参考：<br><a href="https://www.cnblogs.com/wangyihong/p/8056859.html">https://www.cnblogs.com/wangyihong/p/8056859.html</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
   </entry>
   <entry>
     <title>dreamlist</title>
@@ -1707,6 +1707,7 @@ timeout(100).then((value) =&gt; &#123;
 <p>listen 443 ssl;</p>
 <h3 id="浏览器报错-ERR-CERT-INVALID"><a href="#浏览器报错-ERR-CERT-INVALID" class="headerlink" title="浏览器报错 ERR_CERT_INVALID"></a>浏览器报错 ERR_CERT_INVALID</h3><p>输入 thisisunsafe </p>
 <p>参考： <a href="https://segmentfault.com/a/1190000021843971">https://segmentfault.com/a/1190000021843971</a></p>
+<h3 id="alternative"><a href="#alternative" class="headerlink" title="alternative"></a>alternative</h3><p>caddy</p>
 ]]></content>
       <categories>
         <category>未分类</category>
@@ -1741,6 +1742,20 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
+    <title>The dog I like</title>
+    <url>/2018/08/23/the-dog-i-like/</url>
+    <content><![CDATA[<h5 id="柯基"><a href="#柯基" class="headerlink" title="柯基"></a>柯基</h5><h5 id="哈士奇"><a href="#哈士奇" class="headerlink" title="哈士奇"></a>哈士奇</h5><p><img src="http://pic249.nipic.com/file/20191101/28365949_142306695000_2.jpg" alt="husky" title="husky"></p>
+<h5 id="拉布拉多"><a href="#拉布拉多" class="headerlink" title="拉布拉多"></a>拉布拉多</h5><h5 id="阿拉斯加"><a href="#阿拉斯加" class="headerlink" title="阿拉斯加"></a>阿拉斯加</h5><h5 id="萨摩耶"><a href="#萨摩耶" class="headerlink" title="萨摩耶"></a>萨摩耶</h5><p><img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1256437552,306933866&fm=173&f.jpg" alt="萨摩耶" title="萨摩耶"></p>
+<h5 id="柴犬"><a href="#柴犬" class="headerlink" title="柴犬"></a>柴犬</h5><h5 id="金毛"><a href="#金毛" class="headerlink" title="金毛"></a>金毛</h5>]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>dog</tag>
+        <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>需要学习的知识</title>
     <url>/2017/08/25/the-khowledge-of-front-end-i-should-learn/</url>
     <content><![CDATA[<h1 id="复习复习复习"><a href="#复习复习复习" class="headerlink" title="复习复习复习"></a>复习复习复习</h1><p>ES6<br>typescript 412<br>vuejs<br>reactjs (384electron)<br>ReactNative<br>nodejs<br><del>python</del><br><del>php/java</del><br>flutter<br>webpack<br>mongoDB<br>git<br>koa(express)<br>pug(jade)/EJS<br>less/sass</p>
@@ -1766,28 +1781,6 @@ timeout(100).then((value) =&gt; &#123;
       </tags>
   </entry>
   <entry>
-    <title>The dog I like</title>
-    <url>/2018/08/23/the-dog-i-like/</url>
-    <content><![CDATA[<h5 id="柯基"><a href="#柯基" class="headerlink" title="柯基"></a>柯基</h5><h5 id="哈士奇"><a href="#哈士奇" class="headerlink" title="哈士奇"></a>哈士奇</h5><p><img src="http://pic249.nipic.com/file/20191101/28365949_142306695000_2.jpg" alt="husky" title="husky"></p>
-<h5 id="拉布拉多"><a href="#拉布拉多" class="headerlink" title="拉布拉多"></a>拉布拉多</h5><h5 id="阿拉斯加"><a href="#阿拉斯加" class="headerlink" title="阿拉斯加"></a>阿拉斯加</h5><h5 id="萨摩耶"><a href="#萨摩耶" class="headerlink" title="萨摩耶"></a>萨摩耶</h5><p><img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1256437552,306933866&fm=173&f.jpg" alt="萨摩耶" title="萨摩耶"></p>
-<h5 id="柴犬"><a href="#柴犬" class="headerlink" title="柴犬"></a>柴犬</h5><h5 id="金毛"><a href="#金毛" class="headerlink" title="金毛"></a>金毛</h5>]]></content>
-      <categories>
-        <category>life</category>
-      </categories>
-      <tags>
-        <tag>dog</tag>
-        <tag>life</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>touchmove &amp; mousemove</title>
-    <url>/2021/07/22/touchmove-mousemove/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>程序员用过都说好的工具软件</title>
     <url>/2017/09/19/tools/</url>
     <content><![CDATA[<h2 id="一、远程-FTP"><a href="#一、远程-FTP" class="headerlink" title="一、远程+FTP"></a>一、远程+FTP</h2><p>Xshell Xftp 这两个简直不能再好用，收费软件，可以申请试用，没广告，界面简洁大气，UI设计，各种喜欢。  </p>
@@ -1807,6 +1800,14 @@ timeout(100).then((value) =&gt; &#123;
 ]]></content>
       <categories>
         <category>technology</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>touchmove &amp; mousemove</title>
+    <url>/2021/07/22/touchmove-mousemove/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>未分类</category>
       </categories>
   </entry>
   <entry>
@@ -2026,6 +2027,21 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
+    <title>vue-router的基本使用</title>
+    <url>/2020/04/21/vue-router/</url>
+    <content><![CDATA[<h2 id="路由跳转"><a href="#路由跳转" class="headerlink" title="路由跳转"></a>路由跳转</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 字符串</span><br><span class="line">this.$router.push(&#x27;/home/first&#x27;)</span><br><span class="line"></span><br><span class="line">// 对象</span><br><span class="line">this.$router.push(&#123; path: &#x27;/home/first&#x27; &#125;)</span><br><span class="line"></span><br><span class="line">// 命名的路由</span><br><span class="line">this.$router.push(&#123; name: &#x27;home&#x27;, params: &#123; userId: wise &#125;&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="传参"><a href="#传参" class="headerlink" title="传参"></a>传参</h2><h3 id="query"><a href="#query" class="headerlink" title="query"></a>query</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">http://192.168.1.12:8080/#/detail/?id=123</span><br><span class="line"></span><br><span class="line">let id = this.$route.query.id</span><br></pre></td></tr></table></figure>
+<h3 id="params"><a href="#params" class="headerlink" title="params"></a>params</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    path: &#x27;/detail/:id/&#x27;,</span><br><span class="line">    name: &#x27;detail&#x27;,</span><br><span class="line">    component: detail,</span><br><span class="line">    meta: &#123;</span><br><span class="line">        title: &#x27;详情&#x27;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let id = this.$route.params.id</span><br></pre></td></tr></table></figure>
+
+<h2 id="监听路由变化"><a href="#监听路由变化" class="headerlink" title="监听路由变化"></a>监听路由变化</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">watch:&#123;</span><br><span class="line">  $route(to,from)&#123;</span><br><span class="line">    console.log(to.path);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>vue和react</title>
     <url>/2020/01/10/vue%E5%92%8Creact/</url>
     <content><![CDATA[<p>单向数据流<br>单向绑定，双向绑定<br>父子组件传值<br>声明式/命令式</p>
@@ -2035,13 +2051,12 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
-    <title>vue-router的基本使用</title>
-    <url>/2020/04/21/vue-router/</url>
-    <content><![CDATA[<h2 id="路由跳转"><a href="#路由跳转" class="headerlink" title="路由跳转"></a>路由跳转</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 字符串</span><br><span class="line">this.$router.push(&#x27;/home/first&#x27;)</span><br><span class="line"></span><br><span class="line">// 对象</span><br><span class="line">this.$router.push(&#123; path: &#x27;/home/first&#x27; &#125;)</span><br><span class="line"></span><br><span class="line">// 命名的路由</span><br><span class="line">this.$router.push(&#123; name: &#x27;home&#x27;, params: &#123; userId: wise &#125;&#125;)</span><br></pre></td></tr></table></figure>
-<h2 id="传参"><a href="#传参" class="headerlink" title="传参"></a>传参</h2><h3 id="query"><a href="#query" class="headerlink" title="query"></a>query</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">http://192.168.1.12:8080/#/detail/?id=123</span><br><span class="line"></span><br><span class="line">let id = this.$route.query.id</span><br></pre></td></tr></table></figure>
-<h3 id="params"><a href="#params" class="headerlink" title="params"></a>params</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    path: &#x27;/detail/:id/&#x27;,</span><br><span class="line">    name: &#x27;detail&#x27;,</span><br><span class="line">    component: detail,</span><br><span class="line">    meta: &#123;</span><br><span class="line">        title: &#x27;详情&#x27;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let id = this.$route.params.id</span><br></pre></td></tr></table></figure>
-
-<h2 id="监听路由变化"><a href="#监听路由变化" class="headerlink" title="监听路由变化"></a>监听路由变化</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">watch:&#123;</span><br><span class="line">  $route(to,from)&#123;</span><br><span class="line">    console.log(to.path);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <title>vue数组双向绑定</title>
+    <url>/2020/02/10/vue%E6%95%B0%E7%BB%84%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A/</url>
+    <content><![CDATA[<p>问题1：如何把数组进行双向绑定</p>
+<p>问题2：$set</p>
+<p><a href="https://blog.csdn.net/shizhenweiszw/article/details/88580166">https://blog.csdn.net/shizhenweiszw/article/details/88580166</a><br><a href="https://blog.csdn.net/wxl1555/article/details/79616752">https://blog.csdn.net/wxl1555/article/details/79616752</a></p>
+]]></content>
       <categories>
         <category>未分类</category>
       </categories>
@@ -2060,20 +2075,6 @@ timeout(100).then((value) =&gt; &#123;
         <category>technology</category>
         <category>front-end</category>
       </categories>
-  </entry>
-  <entry>
-    <title>vue数组双向绑定</title>
-    <url>/2020/02/10/vue%E6%95%B0%E7%BB%84%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A/</url>
-    <content><![CDATA[<p>问题1：如何把数组进行双向绑定</p>
-<p>问题2：$set</p>
-<p><a href="https://blog.csdn.net/shizhenweiszw/article/details/88580166">https://blog.csdn.net/shizhenweiszw/article/details/88580166</a><br><a href="https://blog.csdn.net/wxl1555/article/details/79616752">https://blog.csdn.net/wxl1555/article/details/79616752</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-      <tags>
-        <tag>vue</tag>
-      </tags>
   </entry>
   <entry>
     <title>webpack之babel</title>
@@ -2189,6 +2190,18 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
+    <title>zsh 自动补全、语法高亮插件</title>
+    <url>/2021/11/25/zsh%E6%8F%92%E4%BB%B6/</url>
+    <content><![CDATA[<p>在日常使用 zsh 的过程中，如果需要打很多命令，会很麻烦，除了可以使用ctrl+r 的方式来查询历史命令，还可以通过插件的方式来自动匹配命令，提高效率。</p>
+<p>语法高亮也是帮助我们不要打错命令的好帮手。</p>
+<p>第一步，进入 zsh 插件目录，并 clone 项目到此目录中：<br>cd “$ZSH_CUSTOM/plugins”<br>git clone <a href="https://github.com/zsh-users/zsh-syntax-highlighting.git">https://github.com/zsh-users/zsh-syntax-highlighting.git</a><br>git clone <a href="https://github.com/zsh-users/zsh-autosuggestions.git">https://github.com/zsh-users/zsh-autosuggestions.git</a><br>第二步，配置 .zshrc 文件<br>… 上面省略<br>plugins = (git zsh-autosuggestions zsh-syntax-highlighting)<br>… 下面省略<br>最后一步，让配置生效<br>zsh<br>完成！👍</p>
+<p>作者：万有引力万有<br>链接：<a href="https://www.jianshu.com/p/d70f9c4cb47c">https://www.jianshu.com/p/d70f9c4cb47c</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>zsh 设置代理</title>
     <url>/2021/10/03/zsh-%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/</url>
     <content><![CDATA[<p>在 <code>~/.zshrc</code> 文件里添加如下代码</p>
@@ -2201,13 +2214,9 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
-    <title>zsh 自动补全、语法高亮插件</title>
-    <url>/2021/11/25/zsh%E6%8F%92%E4%BB%B6/</url>
-    <content><![CDATA[<p>在日常使用 zsh 的过程中，如果需要打很多命令，会很麻烦，除了可以使用ctrl+r 的方式来查询历史命令，还可以通过插件的方式来自动匹配命令，提高效率。</p>
-<p>语法高亮也是帮助我们不要打错命令的好帮手。</p>
-<p>第一步，进入 zsh 插件目录，并 clone 项目到此目录中：<br>cd “$ZSH_CUSTOM/plugins”<br>git clone <a href="https://github.com/zsh-users/zsh-syntax-highlighting.git">https://github.com/zsh-users/zsh-syntax-highlighting.git</a><br>git clone <a href="https://github.com/zsh-users/zsh-autosuggestions.git">https://github.com/zsh-users/zsh-autosuggestions.git</a><br>第二步，配置 .zshrc 文件<br>… 上面省略<br>plugins = (git zsh-autosuggestions zsh-syntax-highlighting)<br>… 下面省略<br>最后一步，让配置生效<br>zsh<br>完成！👍</p>
-<p>作者：万有引力万有<br>链接：<a href="https://www.jianshu.com/p/d70f9c4cb47c">https://www.jianshu.com/p/d70f9c4cb47c</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-]]></content>
+    <title>一次升级babel引发的血案</title>
+    <url>/2021/09/07/%E4%B8%80%E6%AC%A1%E5%8D%87%E7%BA%A7babel%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88/</url>
+    <content><![CDATA[]]></content>
       <categories>
         <category>未分类</category>
       </categories>
@@ -2228,14 +2237,6 @@ timeout(100).then((value) =&gt; &#123;
 ]]></content>
       <categories>
         <category>technology</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>一次升级babel引发的血案</title>
-    <url>/2021/09/07/%E4%B8%80%E6%AC%A1%E5%8D%87%E7%BA%A7babel%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>未分类</category>
       </categories>
   </entry>
   <entry>
@@ -3320,24 +3321,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </categories>
   </entry>
   <entry>
-    <title>centos安装ssl证书</title>
-    <url>/2017/09/28/technology/centosanzhuangsslzhengshu/</url>
-    <content><![CDATA[<p>一为apache启用ssl，首先我们需要为Apache安装mod_ssl模块提供TLS/SSL功能： https是通过mod_ssl实现的，因此检查并安装mod_ssl：</p>
-<p>1</p>
-<p>[iyunv@Centos ~]# ls /etc/httpd/modules/ | grep “mod_ssl”   #默认没有安装mod_ssl # yum list all mod_ssl   #查看mod_ssl的安装包信息 yum install -y mod_ssl  #安装mod_ssl</p>
-<p>检查mod_ssl是安装结果</p>
-<p>1 2</p>
-<p>rpm -qc mod_ssl /etc/httpd/conf.d/ssl.conf      #mod_ssl的配置文件存放位置</p>
-<p>接下来我们修改httpd的SSL配置</p>
-<p>1</p>
-<p>cd /etc/httpd/conf.d #进入HTTPD的SSL配置目录 vim ssl.conf #编辑SSL配置文件</p>
-<pre><code>转载至https://www.iyunv.com/thread-84322-1-1.html     总结： 1.安装mod_ssl模块 2.vim ssl.conf #编辑SSL配置文件 文件路径以及名称可能不一样 我的路径以及名称/etc/httpd/conf.d/ssl.conf</code></pre>]]></content>
-      <categories>
-        <category>technology</category>
-        <category>Server</category>
-      </categories>
-  </entry>
-  <entry>
     <title>centos下压缩解压.zip文件</title>
     <url>/2017/08/31/technology/centos-zip/</url>
     <content><![CDATA[<p>以下命令均在 /home 目录下操作</p>
@@ -3377,6 +3360,24 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       <tags>
         <tag>centos</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>centos安装ssl证书</title>
+    <url>/2017/09/28/technology/centosanzhuangsslzhengshu/</url>
+    <content><![CDATA[<p>一为apache启用ssl，首先我们需要为Apache安装mod_ssl模块提供TLS/SSL功能： https是通过mod_ssl实现的，因此检查并安装mod_ssl：</p>
+<p>1</p>
+<p>[iyunv@Centos ~]# ls /etc/httpd/modules/ | grep “mod_ssl”   #默认没有安装mod_ssl # yum list all mod_ssl   #查看mod_ssl的安装包信息 yum install -y mod_ssl  #安装mod_ssl</p>
+<p>检查mod_ssl是安装结果</p>
+<p>1 2</p>
+<p>rpm -qc mod_ssl /etc/httpd/conf.d/ssl.conf      #mod_ssl的配置文件存放位置</p>
+<p>接下来我们修改httpd的SSL配置</p>
+<p>1</p>
+<p>cd /etc/httpd/conf.d #进入HTTPD的SSL配置目录 vim ssl.conf #编辑SSL配置文件</p>
+<pre><code>转载至https://www.iyunv.com/thread-84322-1-1.html     总结： 1.安装mod_ssl模块 2.vim ssl.conf #编辑SSL配置文件 文件路径以及名称可能不一样 我的路径以及名称/etc/httpd/conf.d/ssl.conf</code></pre>]]></content>
+      <categories>
+        <category>technology</category>
+        <category>Server</category>
+      </categories>
   </entry>
   <entry>
     <title>centos搭建ftp</title>
@@ -3832,6 +3833,24 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
       </categories>
   </entry>
   <entry>
+    <title>node-sass 踩坑之旅</title>
+    <url>/2020/04/19/technology/front-end/javascript/node-sass/</url>
+    <content><![CDATA[<h2 id="下载慢"><a href="#下载慢" class="headerlink" title="下载慢"></a>下载慢</h2><p>npm config set sass_binary_site <a href="https://npm.taobao.org/mirrors/node-sass/">https://npm.taobao.org/mirrors/node-sass/</a><br>yarn config set sass_binary_site <a href="https://npm.taobao.org/mirrors/node-sass/">https://npm.taobao.org/mirrors/node-sass/</a> -g<br>参考：<a href="https://www.jb51.net/article/122820.htm">https://www.jb51.net/article/122820.htm</a></p>
+<h2 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h2><p>Error: Node Sass does not yet support your current environment</p>
+<p>原因：node 版本更换导致的</p>
+<p>解决方法：</p>
+<ol>
+<li>更换回原 node 版本</li>
+<li>npm rebuild node-sass</li>
+<li>卸载 node-sass 重新安装</li>
+</ol>
+<p>参考：<a href="https://blog.csdn.net/yaya07755/article/details/96834875">https://blog.csdn.net/yaya07755/article/details/96834875</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>npm list -g报错</title>
     <url>/2017/08/31/technology/front-end/javascript/npm-initzhixingkazhu/</url>
     <content><![CDATA[<p>是因为prefix没有设置导致的。<br>在安装完nodejs后，通过npm下载全局模块默认安装到以下目录：</p>
@@ -3856,24 +3875,6 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
         <tag>js</tag>
         <tag>npm</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>node-sass 踩坑之旅</title>
-    <url>/2020/04/19/technology/front-end/javascript/node-sass/</url>
-    <content><![CDATA[<h2 id="下载慢"><a href="#下载慢" class="headerlink" title="下载慢"></a>下载慢</h2><p>npm config set sass_binary_site <a href="https://npm.taobao.org/mirrors/node-sass/">https://npm.taobao.org/mirrors/node-sass/</a><br>yarn config set sass_binary_site <a href="https://npm.taobao.org/mirrors/node-sass/">https://npm.taobao.org/mirrors/node-sass/</a> -g<br>参考：<a href="https://www.jb51.net/article/122820.htm">https://www.jb51.net/article/122820.htm</a></p>
-<h2 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h2><p>Error: Node Sass does not yet support your current environment</p>
-<p>原因：node 版本更换导致的</p>
-<p>解决方法：</p>
-<ol>
-<li>更换回原 node 版本</li>
-<li>npm rebuild node-sass</li>
-<li>卸载 node-sass 重新安装</li>
-</ol>
-<p>参考：<a href="https://blog.csdn.net/yaya07755/article/details/96834875">https://blog.csdn.net/yaya07755/article/details/96834875</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
   </entry>
   <entry>
     <title>npm publish</title>
@@ -3968,38 +3969,6 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
       </categories>
   </entry>
   <entry>
-    <title>TypeScript</title>
-    <url>/2021/03/09/technology/front-end/javascript/typescript/</url>
-    <content><![CDATA[<h3 id="联合类型"><a href="#联合类型" class="headerlink" title="联合类型"></a>联合类型</h3><h3 id="Tuple类型"><a href="#Tuple类型" class="headerlink" title="Tuple类型"></a>Tuple类型</h3><h3 id="枚举类型"><a href="#枚举类型" class="headerlink" title="枚举类型"></a>枚举类型</h3><p>限定数据类型的数组</p>
-<h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><p>修饰符</p>
-<p>public (default类内、字类和类外都可以访问)</p>
-<p>private（类内可以访问）</p>
-<p>protected（类内及子类可以访问）</p>
-<p>readonly</p>
-<p>static （静态属性和方法，可以直接用类名访问）</p>
-<p><img src="C:%5CUsers%5CYvan%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210311190715485.png" alt="image-20210311190715485"></p>
-<p>单例模式 412-2-14</p>
-<p><img src="C:%5CUsers%5CYvan%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210311192652334.png" alt="image-20210311192652334"></p>
-<h3 id="接口-interface"><a href="#接口-interface" class="headerlink" title="接口 interface"></a>接口 interface</h3><p>把对象、方法等共性的东西抽象出来</p>
-<p>和 type 的区别</p>
-<p>readonly</p>
-<p>?可选</p>
-<p>强校验 412-2-11</p>
-<p>class implements interface</p>
-<p>接口互相继承 extends</p>
-<p><img src="C:%5CUsers%5CYvan%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210309210842572.png" alt="image-20210309210842572"></p>
-<p>定义函数</p>
-<p><img src="C:%5CUsers%5CYvan%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210309210744555.png" alt="image-20210309210744555"></p>
-<h3 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h3><p>把多个类共性的东西抽象出来</p>
-<p>只能被继承不能被实例化</p>
-<h3 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h3><h4 id="约束泛型-（鸭子类型）428-2-14"><a href="#约束泛型-（鸭子类型）428-2-14" class="headerlink" title="约束泛型 （鸭子类型）428-2-14"></a>约束泛型 （鸭子类型）428-2-14</h4><p><img src="C:%5CUsers%5CYvan%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210309195529784.png" alt="image-20210309195529784"></p>
-<h4 id="类的泛型"><a href="#类的泛型" class="headerlink" title="类的泛型"></a>类的泛型</h4><h3 id="类型别名"><a href="#类型别名" class="headerlink" title="类型别名"></a>类型别名</h3>]]></content>
-      <categories>
-        <category>technology</category>
-        <category>front-end</category>
-      </categories>
-  </entry>
-  <entry>
     <title>promise如何解决回调地狱</title>
     <url>/2021/02/24/technology/front-end/javascript/promise/</url>
     <content><![CDATA[<h3 id="promise如何解决回调地狱"><a href="#promise如何解决回调地狱" class="headerlink" title="promise如何解决回调地狱"></a>promise如何解决回调地狱</h3><p><img src="C:%5CUsers%5CYvan%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210224154744243.png" alt="image-20210224154744243"></p>
@@ -4042,6 +4011,38 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
 
 
 ]]></content>
+      <categories>
+        <category>technology</category>
+        <category>front-end</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>TypeScript</title>
+    <url>/2021/03/09/technology/front-end/javascript/typescript/</url>
+    <content><![CDATA[<h3 id="联合类型"><a href="#联合类型" class="headerlink" title="联合类型"></a>联合类型</h3><h3 id="Tuple类型"><a href="#Tuple类型" class="headerlink" title="Tuple类型"></a>Tuple类型</h3><h3 id="枚举类型"><a href="#枚举类型" class="headerlink" title="枚举类型"></a>枚举类型</h3><p>限定数据类型的数组</p>
+<h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><p>修饰符</p>
+<p>public (default类内、字类和类外都可以访问)</p>
+<p>private（类内可以访问）</p>
+<p>protected（类内及子类可以访问）</p>
+<p>readonly</p>
+<p>static （静态属性和方法，可以直接用类名访问）</p>
+<p><img src="C:%5CUsers%5CYvan%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210311190715485.png" alt="image-20210311190715485"></p>
+<p>单例模式 412-2-14</p>
+<p><img src="C:%5CUsers%5CYvan%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210311192652334.png" alt="image-20210311192652334"></p>
+<h3 id="接口-interface"><a href="#接口-interface" class="headerlink" title="接口 interface"></a>接口 interface</h3><p>把对象、方法等共性的东西抽象出来</p>
+<p>和 type 的区别</p>
+<p>readonly</p>
+<p>?可选</p>
+<p>强校验 412-2-11</p>
+<p>class implements interface</p>
+<p>接口互相继承 extends</p>
+<p><img src="C:%5CUsers%5CYvan%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210309210842572.png" alt="image-20210309210842572"></p>
+<p>定义函数</p>
+<p><img src="C:%5CUsers%5CYvan%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210309210744555.png" alt="image-20210309210744555"></p>
+<h3 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h3><p>把多个类共性的东西抽象出来</p>
+<p>只能被继承不能被实例化</p>
+<h3 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h3><h4 id="约束泛型-（鸭子类型）428-2-14"><a href="#约束泛型-（鸭子类型）428-2-14" class="headerlink" title="约束泛型 （鸭子类型）428-2-14"></a>约束泛型 （鸭子类型）428-2-14</h4><p><img src="C:%5CUsers%5CYvan%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210309195529784.png" alt="image-20210309195529784"></p>
+<h4 id="类的泛型"><a href="#类的泛型" class="headerlink" title="类的泛型"></a>类的泛型</h4><h3 id="类型别名"><a href="#类型别名" class="headerlink" title="类型别名"></a>类型别名</h3>]]></content>
       <categories>
         <category>technology</category>
         <category>front-end</category>
