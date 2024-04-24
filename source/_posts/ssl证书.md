@@ -19,3 +19,7 @@ listen 443 ssl;
 输入 thisisunsafe 
 
 参考： https://segmentfault.com/a/1190000021843971
+
+### alternative
+
+caddy
