@@ -128,20 +128,20 @@
       </tags>
   </entry>
   <entry>
-    <title>钗头凤·红酥手</title>
-    <url>/2017/09/19/chaitoufenghongsushou/</url>
-    <content><![CDATA[<h1 id="钗头凤·红酥手"><a href="#钗头凤·红酥手" class="headerlink" title="钗头凤·红酥手"></a>钗头凤·红酥手</h1><p>【作者】陆游 【朝代】宋</p>
-<p>红酥手。黄滕酒。满城春色宫墙柳。东风恶。欢情薄。一怀愁绪，几年离索。错错错。</p>
-<p>春如旧。人空瘦。泪痕红浥鲛绡透。桃花落。闲池阁。山盟虽在，锦书难托。莫莫莫。</p>
+    <title>草在结它的种子，风在摇它的叶子，我们站着，不说话，就十分美好</title>
+    <url>/2017/11/30/caozaijietadezhongzifengzaiyaotadeyeziwomenzhanzhebushuohuajiushifenmeihao/</url>
+    <content><![CDATA[<h1 id="《门前》——顾城"><a href="#《门前》——顾城" class="headerlink" title="《门前》——顾城"></a>《门前》——顾城</h1><p>我多么希望，有一个门口<br>早晨，阳光照在草上<br>我们站着<br>扶着自己的门扇<br>门很低，但太阳是明亮的<br>草在结它的种子<br>风在摇它的叶子<br>我们站着，不说话<br>就十分美好<br>有门，不用开开<br>是我们的，就十分美好<br>早晨，黑夜还要流浪<br>我们把六弦琴交给他<br>我们不走了<br>我们需要土地<br>需要永不毁灭的土地<br>我们要乘着它<br>度过一生<br>土地是粗糙的，有时狭隘<br>然而，它有历史<br>有一份天空，一份月亮<br>一份露水和早晨<br>我们爱土地<br>我们站着<br>用木鞋挖着泥土<br>门也晒热了<br>我们轻轻靠着，十分美好<br>墙后的草<br>不会再长大了<br>它只用指尖，触了触</p>
 ]]></content>
       <categories>
         <category>literature</category>
       </categories>
   </entry>
   <entry>
-    <title>草在结它的种子，风在摇它的叶子，我们站着，不说话，就十分美好</title>
-    <url>/2017/11/30/caozaijietadezhongzifengzaiyaotadeyeziwomenzhanzhebushuohuajiushifenmeihao/</url>
-    <content><![CDATA[<h1 id="《门前》——顾城"><a href="#《门前》——顾城" class="headerlink" title="《门前》——顾城"></a>《门前》——顾城</h1><p>我多么希望，有一个门口<br>早晨，阳光照在草上<br>我们站着<br>扶着自己的门扇<br>门很低，但太阳是明亮的<br>草在结它的种子<br>风在摇它的叶子<br>我们站着，不说话<br>就十分美好<br>有门，不用开开<br>是我们的，就十分美好<br>早晨，黑夜还要流浪<br>我们把六弦琴交给他<br>我们不走了<br>我们需要土地<br>需要永不毁灭的土地<br>我们要乘着它<br>度过一生<br>土地是粗糙的，有时狭隘<br>然而，它有历史<br>有一份天空，一份月亮<br>一份露水和早晨<br>我们爱土地<br>我们站着<br>用木鞋挖着泥土<br>门也晒热了<br>我们轻轻靠着，十分美好<br>墙后的草<br>不会再长大了<br>它只用指尖，触了触</p>
+    <title>钗头凤·红酥手</title>
+    <url>/2017/09/19/chaitoufenghongsushou/</url>
+    <content><![CDATA[<h1 id="钗头凤·红酥手"><a href="#钗头凤·红酥手" class="headerlink" title="钗头凤·红酥手"></a>钗头凤·红酥手</h1><p>【作者】陆游 【朝代】宋</p>
+<p>红酥手。黄滕酒。满城春色宫墙柳。东风恶。欢情薄。一怀愁绪，几年离索。错错错。</p>
+<p>春如旧。人空瘦。泪痕红浥鲛绡透。桃花落。闲池阁。山盟虽在，锦书难托。莫莫莫。</p>
 ]]></content>
       <categories>
         <category>literature</category>
@@ -206,37 +206,6 @@
       </categories>
   </entry>
   <entry>
-    <title>docker进入容器</title>
-    <url>/2019/12/06/docker%E8%BF%9B%E5%85%A5%E5%AE%B9%E5%99%A8/</url>
-    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker exec [OPTIONS] CONTAINER COMMAND [ARG...]</span><br></pre></td></tr></table></figure>
-<p>docker run 也可以</p>
-<p>OPTIONS说明：</p>
-<p>-d :分离模式: 在后台运行</p>
-<p>-i :即使没有附加也保持STDIN 打开</p>
-<p>-t :分配一个伪终端</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker exec -it 1f2f04275f80 redis-cli</span><br></pre></td></tr></table></figure>
-
-<p>退出容器<br>exit</p>
-<p>参考<br><a href="https://blog.csdn.net/weixin_38982591/article/details/103989153">https://blog.csdn.net/weixin_38982591/article/details/103989153</a></p>
-]]></content>
-      <categories>
-        <category>technology</category>
-        <category>Server</category>
-      </categories>
-      <tags>
-        <tag>docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>dom之scroll</title>
-    <url>/2021/07/01/dom%E4%B9%8Bscroll/</url>
-    <content><![CDATA[<p>参考：<br><a href="https://www.cnblogs.com/wangyihong/p/8056859.html">https://www.cnblogs.com/wangyihong/p/8056859.html</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>docker的基本使用</title>
     <url>/2020/07/03/docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h1 id="docker-命令"><a href="#docker-命令" class="headerlink" title="docker 命令"></a>docker 命令</h1><h2 id="docker-pull"><a href="#docker-pull" class="headerlink" title="docker pull"></a>docker pull</h2><p>获取 image</p>
@@ -262,6 +231,37 @@
 <h3 id="Dockerfile-语法"><a href="#Dockerfile-语法" class="headerlink" title="Dockerfile 语法"></a>Dockerfile 语法</h3><p><img src="https://img.mukewang.com/5efdeeec00018f3e19201080.jpg" alt="Dockerfile 语法1"><br><img src="https://img.mukewang.com/5efdef1b0001ff5b19201080.jpg" alt="Dockerfile 语法2"></p>
 <h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><p>bridge 网络<br>host 网络</p>
 <p>参考：<a href="https://www.jb51.net/article/149173.htm">https://www.jb51.net/article/149173.htm</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>docker进入容器</title>
+    <url>/2019/12/06/docker%E8%BF%9B%E5%85%A5%E5%AE%B9%E5%99%A8/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker exec [OPTIONS] CONTAINER COMMAND [ARG...]</span><br></pre></td></tr></table></figure>
+<p>docker run 也可以</p>
+<p>OPTIONS说明：</p>
+<p>-d :分离模式: 在后台运行</p>
+<p>-i :即使没有附加也保持STDIN 打开</p>
+<p>-t :分配一个伪终端</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker exec -it 1f2f04275f80 redis-cli</span><br></pre></td></tr></table></figure>
+
+<p>退出容器<br>exit</p>
+<p>参考<br><a href="https://blog.csdn.net/weixin_38982591/article/details/103989153">https://blog.csdn.net/weixin_38982591/article/details/103989153</a></p>
+]]></content>
+      <categories>
+        <category>technology</category>
+        <category>Server</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>dom之scroll</title>
+    <url>/2021/07/01/dom%E4%B9%8Bscroll/</url>
+    <content><![CDATA[<p>参考：<br><a href="https://www.cnblogs.com/wangyihong/p/8056859.html">https://www.cnblogs.com/wangyihong/p/8056859.html</a></p>
 ]]></content>
       <categories>
         <category>未分类</category>
@@ -324,16 +324,6 @@
       </categories>
   </entry>
   <entry>
-    <title>FTP主动模式和被动模式的区别</title>
-    <url>/2017/11/20/ftpzhudongmoshihebeidongmoshidequbie/</url>
-    <content><![CDATA[<p><a href="http://www.cnblogs.com/xiaohh/p/4789813.html">http://www.cnblogs.com/xiaohh/p/4789813.html</a></p>
-]]></content>
-      <categories>
-        <category>technology</category>
-        <category>Server</category>
-      </categories>
-  </entry>
-  <entry>
     <title>fiddler学习笔记</title>
     <url>/2020/05/22/fiddler%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h2 id="1-2-两种模式"><a href="#1-2-两种模式" class="headerlink" title="1.2 两种模式"></a>1.2 两种模式</h2><ol>
@@ -369,6 +359,16 @@
 ]]></content>
       <categories>
         <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>FTP主动模式和被动模式的区别</title>
+    <url>/2017/11/20/ftpzhudongmoshihebeidongmoshidequbie/</url>
+    <content><![CDATA[<p><a href="http://www.cnblogs.com/xiaohh/p/4789813.html">http://www.cnblogs.com/xiaohh/p/4789813.html</a></p>
+]]></content>
+      <categories>
+        <category>technology</category>
+        <category>Server</category>
       </categories>
   </entry>
   <entry>
@@ -439,6 +439,24 @@
 ]]></content>
       <categories>
         <category>technology</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git简直就是来自未来的产品</title>
+    <url>/2018/05/21/git%E7%AE%80%E7%9B%B4%E5%B0%B1%E6%98%AF%E6%9D%A5%E8%87%AA%E6%9C%AA%E6%9D%A5%E7%9A%84%E4%BA%A7%E5%93%81/</url>
+    <content><![CDATA[<p>我第一次了解git的时候，就被这个产品的逻辑给震撼到了，只想说，世间怎么会有这么完美的产品，</p>
+<p>其实注册github的时候我对git并不是很了解，直到我开始学习使用git，才知道git原来是linux之父Linus Torvalds为了帮助管理 Linux 内核开发的。</p>
+<p>Linux和git两个伟大的产品，竟然是出自一人之手，不得不佩服大神Linus Torvalds</p>
+<p>详细的学习了git的使用之后真的是为它的优雅而倾倒，惊为天人，顶礼膜拜。</p>
+<p>git就是来自未来的产品</p>
+<p>2019/02/18更新</p>
+<p>只是各种冲突，问题，对小白用户不是很友好，不知使用客户端操作是不是好一点</p>
+]]></content>
+      <categories>
+        <category>thought</category>
       </categories>
       <tags>
         <tag>git</tag>
@@ -519,35 +537,6 @@
       </tags>
   </entry>
   <entry>
-    <title>git简直就是来自未来的产品</title>
-    <url>/2018/05/21/git%E7%AE%80%E7%9B%B4%E5%B0%B1%E6%98%AF%E6%9D%A5%E8%87%AA%E6%9C%AA%E6%9D%A5%E7%9A%84%E4%BA%A7%E5%93%81/</url>
-    <content><![CDATA[<p>我第一次了解git的时候，就被这个产品的逻辑给震撼到了，只想说，世间怎么会有这么完美的产品，</p>
-<p>其实注册github的时候我对git并不是很了解，直到我开始学习使用git，才知道git原来是linux之父Linus Torvalds为了帮助管理 Linux 内核开发的。</p>
-<p>Linux和git两个伟大的产品，竟然是出自一人之手，不得不佩服大神Linus Torvalds</p>
-<p>详细的学习了git的使用之后真的是为它的优雅而倾倒，惊为天人，顶礼膜拜。</p>
-<p>git就是来自未来的产品</p>
-<p>2019/02/18更新</p>
-<p>只是各种冲突，问题，对小白用户不是很友好，不知使用客户端操作是不是好一点</p>
-]]></content>
-      <categories>
-        <category>thought</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于linux服务器用php发送邮件</title>
-    <url>/2017/09/12/guanyulinuxfuwuqiyongphpfasongyoujian/</url>
-    <content><![CDATA[<p>sendmail<br>yum/apt-get install sendmail<br>开启fsockopen函数<br>服务器如何开启php的fsockopen函数？<br><a href="https://jingyan.baidu.com/article/09ea3eded1d8bcc0aede3920.html">https://jingyan.baidu.com/article/09ea3eded1d8bcc0aede3920.html</a><br>yum install openssl openssl-devel<br>端口：25 阿里云已经禁用25端口 请改为：465并把协议换成ssl<br>详情查看文章：<a href="https://blog.hellozwh.com/?post=282">https://blog.hellozwh.com/?post=282</a></p>
-<h4 id="一、PHP-mail-函数"><a href="#一、PHP-mail-函数" class="headerlink" title="一、PHP mail() 函数"></a>一、PHP mail() 函数</h4><p>PHP mail() 函数用于从脚本中发送电子邮件。 </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?php </span><br><span class="line">  $to = &quot;someone@example.com&quot;; </span><br><span class="line">  $subject = &quot;Test mail&quot;; </span><br><span class="line">  $message = &quot;Hello! This is a simple email message.&quot;; </span><br><span class="line">  $from = &quot;someonelse@example.com&quot;; </span><br><span class="line">  $headers = &quot;From: $from&quot;; </span><br><span class="line">  mail($to,$subject,$message,$headers); </span><br><span class="line">  echo &quot;Mail Sent.&quot;; </span><br><span class="line">?&gt;  </span><br></pre></td></tr></table></figure>
-<h4 id="二、php利用smtp类轻松的发送电子邮件"><a href="#二、php利用smtp类轻松的发送电子邮件" class="headerlink" title="二、php利用smtp类轻松的发送电子邮件"></a>二、php利用smtp类轻松的发送电子邮件</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?php </span><br><span class="line">  require\_once &quot;Smtp.class.php&quot;; </span><br><span class="line">  //******************** 配置信息 ******************************** </span><br><span class="line">  $smtpserver = &quot;smtp.126.com&quot;;//SMTP服务器 </span><br><span class="line">  $smtpserverport =25;//SMTP服务器端口 </span><br><span class="line">  $smtpusermail = &quot;new2008oh@126.com&quot;;//SMTP服务器的用户邮箱 </span><br><span class="line">  $smtpemailto = $\_POST\[&#x27;toemail&#x27;\];//发送给谁 </span><br><span class="line">  $smtpuser = &quot;new2008oh&quot;;//SMTP服务器的用户帐号(或填写new2008oh@126.com，这项有些邮箱需要完整的) </span><br><span class="line">  $smtppass = &quot;您的邮箱密码&quot;;//SMTP服务器的用户密码 </span><br><span class="line">  $mailtitle = $\_POST\[&#x27;title&#x27;\];//邮件主题 </span><br><span class="line">  $mailcontent = &quot;&lt;h1&gt;&quot;.$\_POST\[&#x27;content&#x27;\].&quot;&lt;/h1&gt;&quot;;//邮件内容 </span><br><span class="line">  $mailtype = &quot;HTML&quot;;//邮件格式（HTML/TXT）,TXT为文本邮件 </span><br><span class="line">  //************************ 配置信息 **************************** </span><br><span class="line">  $smtp = new Smtp($smtpserver,$smtpserverport,true,$smtpuser,$smtppass);// true 表示是否使用身份验证</span><br><span class="line">  $smtp-&gt;debug = false;//是否显示发送的调试信息 </span><br><span class="line">  $state = $smtp-&gt;sendmail($smtpemailto, $smtpusermail, $mailtitle, $mailcontent, $mailtype); </span><br><span class="line">  echo &quot;&lt;div style=&#x27;width:300px; margin:36px auto;&#x27;&gt;&quot;; </span><br><span class="line">  if($state==&quot;&quot;)&#123; </span><br><span class="line">    echo &quot;对不起，邮件发送失败！请检查邮箱填写是否有误。&quot;; </span><br><span class="line">    echo &quot;&lt;a href=&#x27;index.html&#x27;&gt;点此返回&lt;/a&gt;&quot;; </span><br><span class="line">    exit(); </span><br><span class="line">  &#125; </span><br><span class="line">  echo &quot;恭喜！邮件发送成功！！&quot;; </span><br><span class="line">  echo &quot;&lt;a href=&#x27;index.html&#x27;&gt;点此返回&lt;/a&gt;&quot;; </span><br><span class="line">  echo &quot;&lt;/div&gt;&quot;; </span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>新版 husky 的使用</title>
     <url>/2021/06/30/husky%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<p>新版 husky 实践</p>
@@ -581,6 +570,17 @@
       <tags>
         <tag>list</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>关于linux服务器用php发送邮件</title>
+    <url>/2017/09/12/guanyulinuxfuwuqiyongphpfasongyoujian/</url>
+    <content><![CDATA[<p>sendmail<br>yum/apt-get install sendmail<br>开启fsockopen函数<br>服务器如何开启php的fsockopen函数？<br><a href="https://jingyan.baidu.com/article/09ea3eded1d8bcc0aede3920.html">https://jingyan.baidu.com/article/09ea3eded1d8bcc0aede3920.html</a><br>yum install openssl openssl-devel<br>端口：25 阿里云已经禁用25端口 请改为：465并把协议换成ssl<br>详情查看文章：<a href="https://blog.hellozwh.com/?post=282">https://blog.hellozwh.com/?post=282</a></p>
+<h4 id="一、PHP-mail-函数"><a href="#一、PHP-mail-函数" class="headerlink" title="一、PHP mail() 函数"></a>一、PHP mail() 函数</h4><p>PHP mail() 函数用于从脚本中发送电子邮件。 </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?php </span><br><span class="line">  $to = &quot;someone@example.com&quot;; </span><br><span class="line">  $subject = &quot;Test mail&quot;; </span><br><span class="line">  $message = &quot;Hello! This is a simple email message.&quot;; </span><br><span class="line">  $from = &quot;someonelse@example.com&quot;; </span><br><span class="line">  $headers = &quot;From: $from&quot;; </span><br><span class="line">  mail($to,$subject,$message,$headers); </span><br><span class="line">  echo &quot;Mail Sent.&quot;; </span><br><span class="line">?&gt;  </span><br></pre></td></tr></table></figure>
+<h4 id="二、php利用smtp类轻松的发送电子邮件"><a href="#二、php利用smtp类轻松的发送电子邮件" class="headerlink" title="二、php利用smtp类轻松的发送电子邮件"></a>二、php利用smtp类轻松的发送电子邮件</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?php </span><br><span class="line">  require\_once &quot;Smtp.class.php&quot;; </span><br><span class="line">  //******************** 配置信息 ******************************** </span><br><span class="line">  $smtpserver = &quot;smtp.126.com&quot;;//SMTP服务器 </span><br><span class="line">  $smtpserverport =25;//SMTP服务器端口 </span><br><span class="line">  $smtpusermail = &quot;new2008oh@126.com&quot;;//SMTP服务器的用户邮箱 </span><br><span class="line">  $smtpemailto = $\_POST\[&#x27;toemail&#x27;\];//发送给谁 </span><br><span class="line">  $smtpuser = &quot;new2008oh&quot;;//SMTP服务器的用户帐号(或填写new2008oh@126.com，这项有些邮箱需要完整的) </span><br><span class="line">  $smtppass = &quot;您的邮箱密码&quot;;//SMTP服务器的用户密码 </span><br><span class="line">  $mailtitle = $\_POST\[&#x27;title&#x27;\];//邮件主题 </span><br><span class="line">  $mailcontent = &quot;&lt;h1&gt;&quot;.$\_POST\[&#x27;content&#x27;\].&quot;&lt;/h1&gt;&quot;;//邮件内容 </span><br><span class="line">  $mailtype = &quot;HTML&quot;;//邮件格式（HTML/TXT）,TXT为文本邮件 </span><br><span class="line">  //************************ 配置信息 **************************** </span><br><span class="line">  $smtp = new Smtp($smtpserver,$smtpserverport,true,$smtpuser,$smtppass);// true 表示是否使用身份验证</span><br><span class="line">  $smtp-&gt;debug = false;//是否显示发送的调试信息 </span><br><span class="line">  $state = $smtp-&gt;sendmail($smtpemailto, $smtpusermail, $mailtitle, $mailcontent, $mailtype); </span><br><span class="line">  echo &quot;&lt;div style=&#x27;width:300px; margin:36px auto;&#x27;&gt;&quot;; </span><br><span class="line">  if($state==&quot;&quot;)&#123; </span><br><span class="line">    echo &quot;对不起，邮件发送失败！请检查邮箱填写是否有误。&quot;; </span><br><span class="line">    echo &quot;&lt;a href=&#x27;index.html&#x27;&gt;点此返回&lt;/a&gt;&quot;; </span><br><span class="line">    exit(); </span><br><span class="line">  &#125; </span><br><span class="line">  echo &quot;恭喜！邮件发送成功！！&quot;; </span><br><span class="line">  echo &quot;&lt;a href=&#x27;index.html&#x27;&gt;点此返回&lt;/a&gt;&quot;; </span><br><span class="line">  echo &quot;&lt;/div&gt;&quot;; </span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
   </entry>
   <entry>
     <title>imagine</title>
@@ -808,23 +808,6 @@
       </categories>
   </entry>
   <entry>
-    <title>miniclass.com.cn</title>
-    <url>/2019/03/06/miniclass-com-cn/</url>
-    <content><![CDATA[<h3 id="slogan"><a href="#slogan" class="headerlink" title="slogan"></a>slogan</h3><p>mini小课，每节课只有一个知识点</p>
-<h4 id="广告文案"><a href="#广告文案" class="headerlink" title="广告文案"></a>广告文案</h4><ol>
-<li>三人行，必有我师<br> 这次你是老师</li>
-<li>衣服贵，包包贵，化妆品贵<br> 这节课却不收费</li>
-<li>来北京多年 还没出人头地<br> 但我相信你 总有过人之处</li>
-</ol>
-]]></content>
-      <categories>
-        <category>idea</category>
-      </categories>
-      <tags>
-        <tag>idea</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>mariadb支持远程访问</title>
     <url>/2019/03/11/mariadb%E6%94%AF%E6%8C%81%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/</url>
     <content><![CDATA[<p>参考文档<a href="https://www.cnblogs.com/24la/p/mariadb-remoting-access.html">https://www.cnblogs.com/24la/p/mariadb-remoting-access.html</a></p>
@@ -840,6 +823,23 @@
       <tags>
         <tag>mysql</tag>
         <tag>mariaDB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>miniclass.com.cn</title>
+    <url>/2019/03/06/miniclass-com-cn/</url>
+    <content><![CDATA[<h3 id="slogan"><a href="#slogan" class="headerlink" title="slogan"></a>slogan</h3><p>mini小课，每节课只有一个知识点</p>
+<h4 id="广告文案"><a href="#广告文案" class="headerlink" title="广告文案"></a>广告文案</h4><ol>
+<li>三人行，必有我师<br> 这次你是老师</li>
+<li>衣服贵，包包贵，化妆品贵<br> 这节课却不收费</li>
+<li>来北京多年 还没出人头地<br> 但我相信你 总有过人之处</li>
+</ol>
+]]></content>
+      <categories>
+        <category>idea</category>
+      </categories>
+      <tags>
+        <tag>idea</tag>
       </tags>
   </entry>
   <entry>
@@ -1191,6 +1191,35 @@
       </tags>
   </entry>
   <entry>
+    <title>postMessage</title>
+    <url>/2022/05/16/postMessage/</url>
+    <content><![CDATA[<p>postMessage 可用于解决以下方面的问题：</p>
+<ol>
+<li>页面和其打开的新窗口的数据传递</li>
+<li>页面与嵌套的 iframe 消息传递</li>
+<li>多窗口之间消息传递</li>
+</ol>
+<h2 id="发送"><a href="#发送" class="headerlink" title="发送"></a>发送</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">otherWindow.<span class="title function_">postMessage</span>(message, targetOrigin, [transfer]);</span><br></pre></td></tr></table></figure>
+<p>otherWindow</p>
+<p>其他窗口的一个引用，比如 iframe 的 contentWindow 属性、执行 window.open 返回的窗口对象、或者是命名过或数值索引的 window.frames。</p>
+<p>message</p>
+<p>要发送的数据。它将会被结构化克隆算法序列化，所以无需自己序列化（部分低版本浏览器只支持字符串，所以发送的数据最好用JSON.stringify() 序列化）。</p>
+<p>targetOrigin</p>
+<p>通过 targetOrigin 属性来指定哪些窗口能接收到消息事件，其值可以是字符串“*”（表示无限制）或者一个 URI（如果要指定和当前窗口同源的话可设置为”/“）。在发送消息的时候，如果目标窗口的协议、主机地址或端口号这三者的任意一项不匹配 targetOrigin 提供的值，那么消息就不会发送。</p>
+<h2 id="接收"><a href="#接收" class="headerlink" title="接收"></a>接收</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;message&quot;</span>, <span class="function">(<span class="params">event</span>)=&gt;</span>&#123;</span><br><span class="line">   <span class="keyword">var</span> origin = event.<span class="property">origin</span>;</span><br><span class="line">   <span class="comment">// 通常，onmessage()事件处理程序应当首先检测其中的origin属性，忽略来自未知源的消息</span></span><br><span class="line">   <span class="keyword">if</span> (origin !== <span class="string">&quot;http://example.org:8080&quot;</span>)</span><br><span class="line">     <span class="keyword">return</span>;</span><br><span class="line">   <span class="comment">// ...</span></span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<p>event 的属性有：</p>
+<ul>
+<li>data: 从其他 window 传递过来的数据副本。 </li>
+<li>origin: 调用 postMessage 时，消息发送窗口的 origin。例如：“<a href="http://example.com:8080”。">http://example.com:8080”。</a></li>
+<li>source: 对发送消息的窗口对象的引用。可以使用此来在具有不同 origin 的两个窗口之间建立双向数据通信。 </li>
+</ul>
+<p>————————————————<br>版权声明：本文为CSDN博主「huangpb0624」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/huangpb123/article/details/83692019">https://blog.csdn.net/huangpb123/article/details/83692019</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>pm2的基本使用</title>
     <url>/2019/08/25/pm2%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ pm2 init</span><br><span class="line">$ pm2 ecosystem</span><br></pre></td></tr></table></figure>
@@ -1260,35 +1289,6 @@
       <tags>
         <tag>pm2</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>postMessage</title>
-    <url>/2022/05/16/postMessage/</url>
-    <content><![CDATA[<p>postMessage 可用于解决以下方面的问题：</p>
-<ol>
-<li>页面和其打开的新窗口的数据传递</li>
-<li>页面与嵌套的 iframe 消息传递</li>
-<li>多窗口之间消息传递</li>
-</ol>
-<h2 id="发送"><a href="#发送" class="headerlink" title="发送"></a>发送</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">otherWindow.<span class="title function_">postMessage</span>(message, targetOrigin, [transfer]);</span><br></pre></td></tr></table></figure>
-<p>otherWindow</p>
-<p>其他窗口的一个引用，比如 iframe 的 contentWindow 属性、执行 window.open 返回的窗口对象、或者是命名过或数值索引的 window.frames。</p>
-<p>message</p>
-<p>要发送的数据。它将会被结构化克隆算法序列化，所以无需自己序列化（部分低版本浏览器只支持字符串，所以发送的数据最好用JSON.stringify() 序列化）。</p>
-<p>targetOrigin</p>
-<p>通过 targetOrigin 属性来指定哪些窗口能接收到消息事件，其值可以是字符串“*”（表示无限制）或者一个 URI（如果要指定和当前窗口同源的话可设置为”/“）。在发送消息的时候，如果目标窗口的协议、主机地址或端口号这三者的任意一项不匹配 targetOrigin 提供的值，那么消息就不会发送。</p>
-<h2 id="接收"><a href="#接收" class="headerlink" title="接收"></a>接收</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;message&quot;</span>, <span class="function">(<span class="params">event</span>)=&gt;</span>&#123;</span><br><span class="line">   <span class="keyword">var</span> origin = event.<span class="property">origin</span>;</span><br><span class="line">   <span class="comment">// 通常，onmessage()事件处理程序应当首先检测其中的origin属性，忽略来自未知源的消息</span></span><br><span class="line">   <span class="keyword">if</span> (origin !== <span class="string">&quot;http://example.org:8080&quot;</span>)</span><br><span class="line">     <span class="keyword">return</span>;</span><br><span class="line">   <span class="comment">// ...</span></span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
-<p>event 的属性有：</p>
-<ul>
-<li>data: 从其他 window 传递过来的数据副本。 </li>
-<li>origin: 调用 postMessage 时，消息发送窗口的 origin。例如：“<a href="http://example.com:8080”。">http://example.com:8080”。</a></li>
-<li>source: 对发送消息的窗口对象的引用。可以使用此来在具有不同 origin 的两个窗口之间建立双向数据通信。 </li>
-</ul>
-<p>————————————————<br>版权声明：本文为CSDN博主「huangpb0624」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/huangpb123/article/details/83692019">https://blog.csdn.net/huangpb123/article/details/83692019</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
   </entry>
   <entry>
     <title>postgresql基本使用</title>
@@ -1429,6 +1429,16 @@
       </categories>
   </entry>
   <entry>
+    <title>render函数</title>
+    <url>/2020/08/13/render%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h4 id="createElement-参数"><a href="#createElement-参数" class="headerlink" title="createElement 参数"></a>createElement 参数</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// @returns &#123;VNode&#125;</span><br><span class="line">createElement(</span><br><span class="line">  // &#123;String | Object | Function&#125;</span><br><span class="line">  // 一个 HTML 标签名、组件选项对象，或者</span><br><span class="line">  // resolve 了上述任何一种的一个 async 函数。必填项。</span><br><span class="line">  &#x27;div&#x27;,</span><br><span class="line"></span><br><span class="line">  // &#123;Object&#125;</span><br><span class="line">  // 一个与模板中 attribute 对应的数据对象。可选。</span><br><span class="line">  &#123;</span><br><span class="line">    // (详情见下一节)</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  // &#123;String | Array&#125;</span><br><span class="line">  // 子级虚拟节点 (VNodes)，由 `createElement()` 构建而成，</span><br><span class="line">  // 也可以使用字符串来生成“文本虚拟节点”。可选。</span><br><span class="line">  [</span><br><span class="line">    &#x27;先写一些文字&#x27;,</span><br><span class="line">    createElement(&#x27;h1&#x27;, &#x27;一则头条&#x27;),</span><br><span class="line">    createElement(MyComponent, &#123;</span><br><span class="line">      props: &#123;</span><br><span class="line">        someProp: &#x27;foobar&#x27;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h3 id="深入数据对象"><a href="#深入数据对象" class="headerlink" title="深入数据对象"></a>深入数据对象</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // 与 `v-bind:class` 的 API 相同，</span><br><span class="line">  // 接受一个字符串、对象或字符串和对象组成的数组</span><br><span class="line">  &#x27;class&#x27;: &#123;</span><br><span class="line">    foo: true,</span><br><span class="line">    bar: false</span><br><span class="line">  &#125;,</span><br><span class="line">  // 与 `v-bind:style` 的 API 相同，</span><br><span class="line">  // 接受一个字符串、对象，或对象组成的数组</span><br><span class="line">  style: &#123;</span><br><span class="line">    color: &#x27;red&#x27;,</span><br><span class="line">    fontSize: &#x27;14px&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 普通的 HTML attribute</span><br><span class="line">  attrs: &#123;</span><br><span class="line">    id: &#x27;foo&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 组件 prop</span><br><span class="line">  props: &#123;</span><br><span class="line">    myProp: &#x27;bar&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // DOM property</span><br><span class="line">  domProps: &#123;</span><br><span class="line">    innerHTML: &#x27;baz&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 事件监听器在 `on` 内，</span><br><span class="line">  // 但不再支持如 `v-on:keyup.enter` 这样的修饰器。</span><br><span class="line">  // 需要在处理函数中手动检查 keyCode。</span><br><span class="line">  on: &#123;</span><br><span class="line">    click: this.clickHandler</span><br><span class="line">  &#125;,</span><br><span class="line">  // 仅用于组件，用于监听原生事件，而不是组件内部使用</span><br><span class="line">  // `vm.$emit` 触发的事件。</span><br><span class="line">  nativeOn: &#123;</span><br><span class="line">    click: this.nativeClickHandler</span><br><span class="line">  &#125;,</span><br><span class="line">  // 自定义指令。注意，你无法对 `binding` 中的 `oldValue`</span><br><span class="line">  // 赋值，因为 Vue 已经自动为你进行了同步。</span><br><span class="line">  directives: [</span><br><span class="line">    &#123;</span><br><span class="line">      name: &#x27;my-custom-directive&#x27;,</span><br><span class="line">      value: &#x27;2&#x27;,</span><br><span class="line">      expression: &#x27;1 + 1&#x27;,</span><br><span class="line">      arg: &#x27;foo&#x27;,</span><br><span class="line">      modifiers: &#123;</span><br><span class="line">        bar: true</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  // 作用域插槽的格式为</span><br><span class="line">  // &#123; name: props =&gt; VNode | Array&lt;VNode&gt; &#125;</span><br><span class="line">  scopedSlots: &#123;</span><br><span class="line">    default: props =&gt; createElement(&#x27;span&#x27;, props.text)</span><br><span class="line">  &#125;,</span><br><span class="line">  // 如果组件是其它组件的子组件，需为插槽指定名称</span><br><span class="line">  slot: &#x27;name-of-slot&#x27;,</span><br><span class="line">  // 其它特殊顶层 property</span><br><span class="line">  key: &#x27;myKey&#x27;,</span><br><span class="line">  ref: &#x27;myRef&#x27;,</span><br><span class="line">  // 如果你在渲染函数中给多个元素都应用了相同的 ref 名，</span><br><span class="line">  // 那么 `$refs.myRef` 会变成一个数组。</span><br><span class="line">  refInFor: true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>redis常用命令</title>
     <url>/2019/12/06/redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<p>连接</p>
@@ -1465,25 +1475,6 @@
       </tags>
   </entry>
   <entry>
-    <title>render函数</title>
-    <url>/2020/08/13/render%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<h4 id="createElement-参数"><a href="#createElement-参数" class="headerlink" title="createElement 参数"></a>createElement 参数</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// @returns &#123;VNode&#125;</span><br><span class="line">createElement(</span><br><span class="line">  // &#123;String | Object | Function&#125;</span><br><span class="line">  // 一个 HTML 标签名、组件选项对象，或者</span><br><span class="line">  // resolve 了上述任何一种的一个 async 函数。必填项。</span><br><span class="line">  &#x27;div&#x27;,</span><br><span class="line"></span><br><span class="line">  // &#123;Object&#125;</span><br><span class="line">  // 一个与模板中 attribute 对应的数据对象。可选。</span><br><span class="line">  &#123;</span><br><span class="line">    // (详情见下一节)</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  // &#123;String | Array&#125;</span><br><span class="line">  // 子级虚拟节点 (VNodes)，由 `createElement()` 构建而成，</span><br><span class="line">  // 也可以使用字符串来生成“文本虚拟节点”。可选。</span><br><span class="line">  [</span><br><span class="line">    &#x27;先写一些文字&#x27;,</span><br><span class="line">    createElement(&#x27;h1&#x27;, &#x27;一则头条&#x27;),</span><br><span class="line">    createElement(MyComponent, &#123;</span><br><span class="line">      props: &#123;</span><br><span class="line">        someProp: &#x27;foobar&#x27;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-<h3 id="深入数据对象"><a href="#深入数据对象" class="headerlink" title="深入数据对象"></a>深入数据对象</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // 与 `v-bind:class` 的 API 相同，</span><br><span class="line">  // 接受一个字符串、对象或字符串和对象组成的数组</span><br><span class="line">  &#x27;class&#x27;: &#123;</span><br><span class="line">    foo: true,</span><br><span class="line">    bar: false</span><br><span class="line">  &#125;,</span><br><span class="line">  // 与 `v-bind:style` 的 API 相同，</span><br><span class="line">  // 接受一个字符串、对象，或对象组成的数组</span><br><span class="line">  style: &#123;</span><br><span class="line">    color: &#x27;red&#x27;,</span><br><span class="line">    fontSize: &#x27;14px&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 普通的 HTML attribute</span><br><span class="line">  attrs: &#123;</span><br><span class="line">    id: &#x27;foo&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 组件 prop</span><br><span class="line">  props: &#123;</span><br><span class="line">    myProp: &#x27;bar&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // DOM property</span><br><span class="line">  domProps: &#123;</span><br><span class="line">    innerHTML: &#x27;baz&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 事件监听器在 `on` 内，</span><br><span class="line">  // 但不再支持如 `v-on:keyup.enter` 这样的修饰器。</span><br><span class="line">  // 需要在处理函数中手动检查 keyCode。</span><br><span class="line">  on: &#123;</span><br><span class="line">    click: this.clickHandler</span><br><span class="line">  &#125;,</span><br><span class="line">  // 仅用于组件，用于监听原生事件，而不是组件内部使用</span><br><span class="line">  // `vm.$emit` 触发的事件。</span><br><span class="line">  nativeOn: &#123;</span><br><span class="line">    click: this.nativeClickHandler</span><br><span class="line">  &#125;,</span><br><span class="line">  // 自定义指令。注意，你无法对 `binding` 中的 `oldValue`</span><br><span class="line">  // 赋值，因为 Vue 已经自动为你进行了同步。</span><br><span class="line">  directives: [</span><br><span class="line">    &#123;</span><br><span class="line">      name: &#x27;my-custom-directive&#x27;,</span><br><span class="line">      value: &#x27;2&#x27;,</span><br><span class="line">      expression: &#x27;1 + 1&#x27;,</span><br><span class="line">      arg: &#x27;foo&#x27;,</span><br><span class="line">      modifiers: &#123;</span><br><span class="line">        bar: true</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  // 作用域插槽的格式为</span><br><span class="line">  // &#123; name: props =&gt; VNode | Array&lt;VNode&gt; &#125;</span><br><span class="line">  scopedSlots: &#123;</span><br><span class="line">    default: props =&gt; createElement(&#x27;span&#x27;, props.text)</span><br><span class="line">  &#125;,</span><br><span class="line">  // 如果组件是其它组件的子组件，需为插槽指定名称</span><br><span class="line">  slot: &#x27;name-of-slot&#x27;,</span><br><span class="line">  // 其它特殊顶层 property</span><br><span class="line">  key: &#x27;myKey&#x27;,</span><br><span class="line">  ref: &#x27;myRef&#x27;,</span><br><span class="line">  // 如果你在渲染函数中给多个元素都应用了相同的 ref 名，</span><br><span class="line">  // 那么 `$refs.myRef` 会变成一个数组。</span><br><span class="line">  refInFor: true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>人性的弱点1之用户成长体系</title>
-    <url>/2017/10/27/renxingderuodian1zhiyonghuyangchengxitong/</url>
-    <content><![CDATA[<p>每个应用软件为了提高打开率，都加入了用户成长体系，最简单常见的就是签到，通过每天的签到获取积分换取奖励或者获得勋章，例如淘宝的淘金币，百度地图的签到抢地主，CF手游中的每天签到领奖励，淘票票每天登陆获取积分（购买电影票获取积分），网易云课堂每天打卡，百词斩每天背单词打卡，QQ音乐每天登陆提高等级，听一个歌手的歌曲达到一定时间获取歌手专属勋章，当然这其中最古老的先驱就是QQ等级了，每天登陆指定时间提高等级。 <img src="http://image.woshipm.com/wp-files/2016/11/1pWLP255zTUpAKn7SpHA.png" alt=""> 当然学习类的应用可以利用每日打卡激励学习者坚持每天的学习，但是其他的应用的签到打卡时间长了就会让人产生被绑架的感觉，必须每天坚持签到打卡，如果有一天断了，你所获得的奖励就会降低，或者无法获得勋章，例如淘宝的淘金币，第一天签到得5金币，第二天得10金币，每天多5金币，一直到30金币最高，如果有一天没签到当再签到时又会回到5金币。支付宝、淘宝、京东的会员系统，甚至在你购物达不到一定金额第二年会降级。 <img src="http://www.zhuyunfeng.com/wp-content/uploads/2017/10/2.jpg" alt=""> 各应用当然是为了利益最大化，驱使你每天打开APP，但是这却对用户造成了困扰，比方说QQ音乐的用户成长体系，你为了表示你对某位歌手的喜爱，你会不停的听他的歌曲，当连续7天听一个歌手的歌曲超过500分钟之后，你就会获得此歌手的专属勋章，当然勋章也分等级，刚开始是初级勋章，你为了提高勋章等级，就会每次打开QQ音乐的时候都特意听一下这位歌手的歌曲，因为每天只要听一首这位歌手的歌曲就会积20分，积分达到一定程度勋章就会升级，当然你如果真是喜欢这位歌手又不会为这些积分所累那就另说。 <img src="http://www.zhuyunfeng.com/wp-content/uploads/2017/10/3.jpg" alt=""> 你为了提高淘票票的等级需要不停的通过淘票票购买电影票；你为了提高支付宝等级不停的购物，使用支付宝支付，充值话费……；你为了获得鼓励金使用支付宝和微信的无现金支付想着今天我不去楼下超市买点东西我就亏了；你为了花掉商家给你的优惠券买一些并不是很需要的商品；你为了提高信用卡额度，消费的时候想是不是能刷这张卡（有点跑远了）。 你刚开始乐此不疲，感觉自己赚到了，时间一长你忽然发现这不是你想要的，你被商家领着往前走。 商家利用你的弱点来达到他们的目的，在这其中我们怎么样才能不受其所累，更好的做自己呢？ 嗯，这是一个值得思考的问题。</p>
-<h2 id="用户成长体系设计分析"><a href="#用户成长体系设计分析" class="headerlink" title="用户成长体系设计分析"></a><a href="http://www.woshipm.com/pd/447292.html">用户成长体系设计分析</a></h2>]]></content>
-      <categories>
-        <category>psychology</category>
-      </categories>
-  </entry>
-  <entry>
     <title>简历</title>
     <url>/2021/02/24/resume/</url>
     <content><![CDATA[<p>有良好的编程思维，熟悉设计模式</p>
@@ -1492,6 +1483,15 @@
       <categories>
         <category>technology</category>
         <category>front-end</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>人性的弱点1之用户成长体系</title>
+    <url>/2017/10/27/renxingderuodian1zhiyonghuyangchengxitong/</url>
+    <content><![CDATA[<p>每个应用软件为了提高打开率，都加入了用户成长体系，最简单常见的就是签到，通过每天的签到获取积分换取奖励或者获得勋章，例如淘宝的淘金币，百度地图的签到抢地主，CF手游中的每天签到领奖励，淘票票每天登陆获取积分（购买电影票获取积分），网易云课堂每天打卡，百词斩每天背单词打卡，QQ音乐每天登陆提高等级，听一个歌手的歌曲达到一定时间获取歌手专属勋章，当然这其中最古老的先驱就是QQ等级了，每天登陆指定时间提高等级。 <img src="http://image.woshipm.com/wp-files/2016/11/1pWLP255zTUpAKn7SpHA.png" alt=""> 当然学习类的应用可以利用每日打卡激励学习者坚持每天的学习，但是其他的应用的签到打卡时间长了就会让人产生被绑架的感觉，必须每天坚持签到打卡，如果有一天断了，你所获得的奖励就会降低，或者无法获得勋章，例如淘宝的淘金币，第一天签到得5金币，第二天得10金币，每天多5金币，一直到30金币最高，如果有一天没签到当再签到时又会回到5金币。支付宝、淘宝、京东的会员系统，甚至在你购物达不到一定金额第二年会降级。 <img src="http://www.zhuyunfeng.com/wp-content/uploads/2017/10/2.jpg" alt=""> 各应用当然是为了利益最大化，驱使你每天打开APP，但是这却对用户造成了困扰，比方说QQ音乐的用户成长体系，你为了表示你对某位歌手的喜爱，你会不停的听他的歌曲，当连续7天听一个歌手的歌曲超过500分钟之后，你就会获得此歌手的专属勋章，当然勋章也分等级，刚开始是初级勋章，你为了提高勋章等级，就会每次打开QQ音乐的时候都特意听一下这位歌手的歌曲，因为每天只要听一首这位歌手的歌曲就会积20分，积分达到一定程度勋章就会升级，当然你如果真是喜欢这位歌手又不会为这些积分所累那就另说。 <img src="http://www.zhuyunfeng.com/wp-content/uploads/2017/10/3.jpg" alt=""> 你为了提高淘票票的等级需要不停的通过淘票票购买电影票；你为了提高支付宝等级不停的购物，使用支付宝支付，充值话费……；你为了获得鼓励金使用支付宝和微信的无现金支付想着今天我不去楼下超市买点东西我就亏了；你为了花掉商家给你的优惠券买一些并不是很需要的商品；你为了提高信用卡额度，消费的时候想是不是能刷这张卡（有点跑远了）。 你刚开始乐此不疲，感觉自己赚到了，时间一长你忽然发现这不是你想要的，你被商家领着往前走。 商家利用你的弱点来达到他们的目的，在这其中我们怎么样才能不受其所累，更好的做自己呢？ 嗯，这是一个值得思考的问题。</p>
+<h2 id="用户成长体系设计分析"><a href="#用户成长体系设计分析" class="headerlink" title="用户成长体系设计分析"></a><a href="http://www.woshipm.com/pd/447292.html">用户成长体系设计分析</a></h2>]]></content>
+      <categories>
+        <category>psychology</category>
       </categories>
   </entry>
   <entry>
@@ -1667,6 +1667,20 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
+    <title>SSL证书</title>
+    <url>/2021/12/23/ssl%E8%AF%81%E4%B9%A6/</url>
+    <content><![CDATA[<h3 id="自签证书"><a href="#自签证书" class="headerlink" title="自签证书"></a>自签证书</h3><p>参考 <a href="https://www.jianshu.com/p/d22baeae50ea">https://www.jianshu.com/p/d22baeae50ea</a></p>
+<h3 id="浏览器报错-ERR-SSL-PROTOCOL-ERROR"><a href="#浏览器报错-ERR-SSL-PROTOCOL-ERROR" class="headerlink" title="浏览器报错 ERR_SSL_PROTOCOL_ERROR"></a>浏览器报错 ERR_SSL_PROTOCOL_ERROR</h3><p>或 curl 报错 wrong version number</p>
+<p>修改 nginx 配置，<code>nginx -t</code> 查看配置文件所在路径</p>
+<p>listen 443 ssl;</p>
+<h3 id="浏览器报错-ERR-CERT-INVALID"><a href="#浏览器报错-ERR-CERT-INVALID" class="headerlink" title="浏览器报错 ERR_CERT_INVALID"></a>浏览器报错 ERR_CERT_INVALID</h3><p>输入 thisisunsafe </p>
+<p>参考： <a href="https://segmentfault.com/a/1190000021843971">https://segmentfault.com/a/1190000021843971</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>ssh免密码登录</title>
     <url>/2019/12/27/ssh%E5%85%8D%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95/</url>
     <content><![CDATA[<p>查看服务器和本地是否存在密钥，<br>密钥存放目录一般为当前用户家目录下的.ssh里<br>windows：</p>
@@ -1693,20 +1707,6 @@ timeout(100).then((value) =&gt; &#123;
 <li>选择第一步下载的公钥</li>
 </ol>
 <p><a href="https://cloud.tencent.com/developer/article/1780788">参考</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>SSL证书</title>
-    <url>/2021/12/23/ssl%E8%AF%81%E4%B9%A6/</url>
-    <content><![CDATA[<h3 id="自签证书"><a href="#自签证书" class="headerlink" title="自签证书"></a>自签证书</h3><p>参考 <a href="https://www.jianshu.com/p/d22baeae50ea">https://www.jianshu.com/p/d22baeae50ea</a></p>
-<h3 id="浏览器报错-ERR-SSL-PROTOCOL-ERROR"><a href="#浏览器报错-ERR-SSL-PROTOCOL-ERROR" class="headerlink" title="浏览器报错 ERR_SSL_PROTOCOL_ERROR"></a>浏览器报错 ERR_SSL_PROTOCOL_ERROR</h3><p>或 curl 报错 wrong version number</p>
-<p>修改 nginx 配置，<code>nginx -t</code> 查看配置文件所在路径</p>
-<p>listen 443 ssl;</p>
-<h3 id="浏览器报错-ERR-CERT-INVALID"><a href="#浏览器报错-ERR-CERT-INVALID" class="headerlink" title="浏览器报错 ERR_CERT_INVALID"></a>浏览器报错 ERR_CERT_INVALID</h3><p>输入 thisisunsafe </p>
-<p>参考： <a href="https://segmentfault.com/a/1190000021843971">https://segmentfault.com/a/1190000021843971</a></p>
 ]]></content>
       <categories>
         <category>未分类</category>
@@ -1827,68 +1827,6 @@ timeout(100).then((value) =&gt; &#123;
       </tags>
   </entry>
   <entry>
-    <title>vitepress 如何开启 algolia 全文搜索</title>
-    <url>/2022/11/01/vitepress-%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0-algolia-%E6%90%9C%E7%B4%A2/</url>
-    <content><![CDATA[<blockquote>
-<p>此文章发表时，官方文档关于搜索部分还未更新。</p>
-</blockquote>
-<h2 id="algolia-工作原理"><a href="#algolia-工作原理" class="headerlink" title="algolia 工作原理"></a>algolia 工作原理</h2><p>你把你的网站数据上传到 algolia, 当你在你的网站上进行搜索时，会向 algolia 发送一个请求，algolia 在你上传的数据中进行搜索，然后把结果返回给你，你在你的网站上进行展示。</p>
-<p>那么最关键的就是申请一个 algolia 账号，然后把你的数据上传上去。</p>
-<p>上传数据有这么几种方法</p>
-<ol>
-<li>手动上传，algolia 支持 json 数据上传。</li>
-<li>使用官方提供的工具上传。（本文主要介绍）</li>
-<li>使用官方提供的 crawler 爬虫自动爬取。（需要拥有 crawler 权限）</li>
-</ol>
-<h2 id="DocSearch"><a href="#DocSearch" class="headerlink" title="DocSearch"></a>DocSearch</h2><p><a href="https://docsearch.algolia.com/">DocSearch</a> 是 algolia 旗下的一款产品，主要做技术文档和技术博客的搜索，免费，但是申请条件比较严苛，需要人工审核。<br>申请通过后可以使用官方提供的 crawler。官方也提供了 vitepress config template，操作比较简单。具体可参考<a href="https://juejin.cn/post/7070109475419455519#heading-2">这篇文章</a>或官方文档。</p>
-<p>DocSearch 申请条件</p>
-<ol>
-<li>你的网站可以公开访问</li>
-<li>你的网站是开源项目的技术文档或技术博客</li>
-<li>你是此网站的所有者</li>
-</ol>
-<h2 id="注册-algolia-账号"><a href="#注册-algolia-账号" class="headerlink" title="注册 algolia 账号"></a>注册 algolia 账号</h2><p><a href="https://www.algolia.com/">algolia 官网</a></p>
-<h2 id="在-algolia-创建-index"><a href="#在-algolia-创建-index" class="headerlink" title="在 algolia 创建 index"></a>在 algolia 创建 index</h2><p>下一步要用到</p>
-<h2 id="配置中开启-algolia"><a href="#配置中开启-algolia" class="headerlink" title="配置中开启 algolia"></a>配置中开启 algolia</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// docs/.vitepress/config.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">  <span class="attr">title</span>: <span class="string">&quot;xxx&quot;</span>,</span><br><span class="line">  <span class="attr">description</span>: <span class="string">&quot;Just playing around.&quot;</span>,</span><br><span class="line">  <span class="attr">themeConfig</span>: &#123;</span><br><span class="line">    <span class="attr">algolia</span>: &#123;</span><br><span class="line">      <span class="attr">appId</span>: <span class="string">&#x27;xxx&#x27;</span>,</span><br><span class="line">      <span class="attr">apiKey</span>: <span class="string">&#x27;xxxx&#x27;</span>,</span><br><span class="line">      <span class="attr">indexName</span>: <span class="string">&#x27;xxx&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="appId"><a href="#appId" class="headerlink" title="appId"></a>appId</h3><p>setting -&gt; Team and Access -&gt; API keys -&gt; Application ID</p>
-<h3 id="apiKey"><a href="#apiKey" class="headerlink" title="apiKey"></a>apiKey</h3><blockquote>
-<p>请勿使用 Admin API Key</p>
-</blockquote>
-<p>setting -&gt; Team and Access -&gt; API keys -&gt; <code>Search-Only API Key</code></p>
-<h3 id="indexName"><a href="#indexName" class="headerlink" title="indexName"></a>indexName</h3><p>上一步创建的 index 的名称</p>
-<p>到这一步你的 vitepress 页面中应该能看到搜索框了，但是还无法搜索到结果，因为你还没上传数据到 algolia。</p>
-<h2 id="上传数据到-algolia"><a href="#上传数据到-algolia" class="headerlink" title="上传数据到 algolia"></a>上传数据到 algolia</h2><p>algolia 官方提供了 <a href="https://docsearch.algolia.com/docs/manage-your-crawls/">crawler(爬虫)</a> 来爬取你网站的数据，直接在网站上操作，简单方便，但是需要 crawler 权限。</p>
-<p>algolia 也提供了免费的方法，运行官方提供的 docker image 上传数据到 algolia。</p>
-<blockquote>
-<p>此方法已进入 legacy 阶段，后期可能会失效。</p>
-</blockquote>
-<p><a href="https://docsearch.algolia.com/docs/legacy/run-your-own/#run-the-crawl-from-the-docker-image">Run the crawl from the Docker image</a></p>
-<blockquote>
-<p>docker 安装使用请自行查询<br><a href="https://github.com/stedolan/jq/wiki/Installation">install jq, a lightweight command-line JSON processor</a></p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -it --env-file=.<span class="built_in">env</span> -e <span class="string">&quot;CONFIG=<span class="subst">$(cat /path/to/your/config.json | jq -r tostring)</span>&quot;</span> algolia/docsearch-scraper</span><br></pre></td></tr></table></figure>
-<p>config.json 模板</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;index_name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;test&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;start_urls&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;https://test.com/docs/&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span> <span class="comment">// 此链接是你最终部署文档的地址</span></span><br><span class="line">  <span class="attr">&quot;selectors&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;lvl0&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lvl1&quot;</span><span class="punctuation">:</span> <span class="string">&quot;.content h1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lvl2&quot;</span><span class="punctuation">:</span> <span class="string">&quot;.content h2&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lvl3&quot;</span><span class="punctuation">:</span> <span class="string">&quot;.content h3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lvl4&quot;</span><span class="punctuation">:</span> <span class="string">&quot;.content h4&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lvl5&quot;</span><span class="punctuation">:</span> <span class="string">&quot;.content h5&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;content&quot;</span><span class="punctuation">:</span> <span class="string">&quot;.content p, .content li&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>vscode 调试 js</title>
-    <url>/2021/10/29/vscode-%E8%B0%83%E8%AF%95-js/</url>
-    <content><![CDATA[<h3 id="调试-npm-script-命令"><a href="#调试-npm-script-命令" class="headerlink" title="调试 npm script 命令"></a>调试 npm script 命令</h3><p>注意：此为 configurations 中的一条配置，具体看下一条</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Launch via NPM&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;launch&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;runtimeExecutable&quot;</span><span class="punctuation">:</span> <span class="string">&quot;npm&quot;</span><span class="punctuation">,</span> <span class="comment">//runtimeExecutable表示要使用的运行时，默认为node，这里我们配置成了npm</span></span><br><span class="line">  <span class="attr">&quot;runtimeArgs&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;run-script&quot;</span><span class="punctuation">,</span> <span class="string">&quot;dev&quot;</span>    <span class="comment">//这里的dev就对应package.json中的scripts中的dev</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;port&quot;</span><span class="punctuation">:</span> <span class="number">9229</span>    <span class="comment">//这个端口是调试的端口，不是项目启动的端口</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="调试指定-js-文件"><a href="#调试指定-js-文件" class="headerlink" title="调试指定 js 文件"></a>调试指定 js 文件</h3><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="comment">// Use IntelliSense to learn about possible attributes.</span></span><br><span class="line">  <span class="comment">// Hover to view descriptions of existing attributes.</span></span><br><span class="line">  <span class="comment">// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;configurations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;pwa-node&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;launch&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Launch Program&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;skipFiles&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;&lt;node_internals&gt;/**&quot;</span></span><br><span class="line">      <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;program&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;workspaceFolder&#125;/test/filelist.js&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="使用-nodemon-调试"><a href="#使用-nodemon-调试" class="headerlink" title="使用 nodemon 调试"></a>使用 nodemon 调试</h3><p>参考：<br><a href="https://www.cnblogs.com/little-ab/p/11796952.html">https://www.cnblogs.com/little-ab/p/11796952.html</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>vim手册</title>
     <url>/2021/06/16/vim%E6%89%8B%E5%86%8C/</url>
     <content><![CDATA[<h3 id="模式"><a href="#模式" class="headerlink" title="模式"></a>模式</h3><ol>
@@ -1994,22 +1932,62 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
-    <title>vscode快捷键</title>
-    <url>/2021/06/11/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
-    <content><![CDATA[<h2 id="代码之间跳转"><a href="#代码之间跳转" class="headerlink" title="代码之间跳转"></a>代码之间跳转</h2><h3 id="调回之前的代码"><a href="#调回之前的代码" class="headerlink" title="调回之前的代码"></a>调回之前的代码</h3><p>Mac 下</p>
-<p><code>ctrl + &#39;-&#39;</code></p>
-<p>window 下</p>
-<p><code>alt + &#39;-&#39;</code></p>
-<h2 id="折叠、展开代码块"><a href="#折叠、展开代码块" class="headerlink" title="折叠、展开代码块"></a>折叠、展开代码块</h2><p>以下命令要确保光标在编辑区域</p>
+    <title>vitepress 如何开启 algolia 全文搜索</title>
+    <url>/2022/11/01/vitepress-%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0-algolia-%E6%90%9C%E7%B4%A2/</url>
+    <content><![CDATA[<blockquote>
+<p>此文章发表时，官方文档关于搜索部分还未更新。</p>
+</blockquote>
+<h2 id="algolia-工作原理"><a href="#algolia-工作原理" class="headerlink" title="algolia 工作原理"></a>algolia 工作原理</h2><p>你把你的网站数据上传到 algolia, 当你在你的网站上进行搜索时，会向 algolia 发送一个请求，algolia 在你上传的数据中进行搜索，然后把结果返回给你，你在你的网站上进行展示。</p>
+<p>那么最关键的就是申请一个 algolia 账号，然后把你的数据上传上去。</p>
+<p>上传数据有这么几种方法</p>
 <ol>
-<li><p>折叠所有区域代码的快捷键：ctrl+k, ctrl+0;</p>
-<pre><code>先按下ctrl和K，再按下ctrl和0; (ctrl 不要松开)</code></pre></li>
-<li><p>展开所有折叠区域代码的快捷键：ctrl +k, ctrl+J;</p>
-<pre><code>先按下ctrl和K，再按下ctrl和J </code></pre></li>
-<li><p>自动格式化代码的快捷键：ctrl+k, ctrl+f;</p>
-<pre><code>先按下ctrl和K，再按下ctrl和f;</code></pre></li>
+<li>手动上传，algolia 支持 json 数据上传。</li>
+<li>使用官方提供的工具上传。（本文主要介绍）</li>
+<li>使用官方提供的 crawler 爬虫自动爬取。（需要拥有 crawler 权限）</li>
 </ol>
-<h2 id="全局搜索"><a href="#全局搜索" class="headerlink" title="全局搜索"></a>全局搜索</h2><p>command + shift + F</p>
+<h2 id="DocSearch"><a href="#DocSearch" class="headerlink" title="DocSearch"></a>DocSearch</h2><p><a href="https://docsearch.algolia.com/">DocSearch</a> 是 algolia 旗下的一款产品，主要做技术文档和技术博客的搜索，免费，但是申请条件比较严苛，需要人工审核。<br>申请通过后可以使用官方提供的 crawler。官方也提供了 vitepress config template，操作比较简单。具体可参考<a href="https://juejin.cn/post/7070109475419455519#heading-2">这篇文章</a>或官方文档。</p>
+<p>DocSearch 申请条件</p>
+<ol>
+<li>你的网站可以公开访问</li>
+<li>你的网站是开源项目的技术文档或技术博客</li>
+<li>你是此网站的所有者</li>
+</ol>
+<h2 id="注册-algolia-账号"><a href="#注册-algolia-账号" class="headerlink" title="注册 algolia 账号"></a>注册 algolia 账号</h2><p><a href="https://www.algolia.com/">algolia 官网</a></p>
+<h2 id="在-algolia-创建-index"><a href="#在-algolia-创建-index" class="headerlink" title="在 algolia 创建 index"></a>在 algolia 创建 index</h2><p>下一步要用到</p>
+<h2 id="配置中开启-algolia"><a href="#配置中开启-algolia" class="headerlink" title="配置中开启 algolia"></a>配置中开启 algolia</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// docs/.vitepress/config.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">  <span class="attr">title</span>: <span class="string">&quot;xxx&quot;</span>,</span><br><span class="line">  <span class="attr">description</span>: <span class="string">&quot;Just playing around.&quot;</span>,</span><br><span class="line">  <span class="attr">themeConfig</span>: &#123;</span><br><span class="line">    <span class="attr">algolia</span>: &#123;</span><br><span class="line">      <span class="attr">appId</span>: <span class="string">&#x27;xxx&#x27;</span>,</span><br><span class="line">      <span class="attr">apiKey</span>: <span class="string">&#x27;xxxx&#x27;</span>,</span><br><span class="line">      <span class="attr">indexName</span>: <span class="string">&#x27;xxx&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="appId"><a href="#appId" class="headerlink" title="appId"></a>appId</h3><p>setting -&gt; Team and Access -&gt; API keys -&gt; Application ID</p>
+<h3 id="apiKey"><a href="#apiKey" class="headerlink" title="apiKey"></a>apiKey</h3><blockquote>
+<p>请勿使用 Admin API Key</p>
+</blockquote>
+<p>setting -&gt; Team and Access -&gt; API keys -&gt; <code>Search-Only API Key</code></p>
+<h3 id="indexName"><a href="#indexName" class="headerlink" title="indexName"></a>indexName</h3><p>上一步创建的 index 的名称</p>
+<p>到这一步你的 vitepress 页面中应该能看到搜索框了，但是还无法搜索到结果，因为你还没上传数据到 algolia。</p>
+<h2 id="上传数据到-algolia"><a href="#上传数据到-algolia" class="headerlink" title="上传数据到 algolia"></a>上传数据到 algolia</h2><p>algolia 官方提供了 <a href="https://docsearch.algolia.com/docs/manage-your-crawls/">crawler(爬虫)</a> 来爬取你网站的数据，直接在网站上操作，简单方便，但是需要 crawler 权限。</p>
+<p>algolia 也提供了免费的方法，运行官方提供的 docker image 上传数据到 algolia。</p>
+<blockquote>
+<p>此方法已进入 legacy 阶段，后期可能会失效。</p>
+</blockquote>
+<p><a href="https://docsearch.algolia.com/docs/legacy/run-your-own/#run-the-crawl-from-the-docker-image">Run the crawl from the Docker image</a></p>
+<blockquote>
+<p>docker 安装使用请自行查询<br><a href="https://github.com/stedolan/jq/wiki/Installation">install jq, a lightweight command-line JSON processor</a></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -it --env-file=.<span class="built_in">env</span> -e <span class="string">&quot;CONFIG=<span class="subst">$(cat /path/to/your/config.json | jq -r tostring)</span>&quot;</span> algolia/docsearch-scraper</span><br></pre></td></tr></table></figure>
+<p>config.json 模板</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;index_name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;test&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;start_urls&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;https://test.com/docs/&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span> <span class="comment">// 此链接是你最终部署文档的地址</span></span><br><span class="line">  <span class="attr">&quot;selectors&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;lvl0&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lvl1&quot;</span><span class="punctuation">:</span> <span class="string">&quot;.content h1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lvl2&quot;</span><span class="punctuation">:</span> <span class="string">&quot;.content h2&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lvl3&quot;</span><span class="punctuation">:</span> <span class="string">&quot;.content h3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lvl4&quot;</span><span class="punctuation">:</span> <span class="string">&quot;.content h4&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lvl5&quot;</span><span class="punctuation">:</span> <span class="string">&quot;.content h5&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;content&quot;</span><span class="punctuation">:</span> <span class="string">&quot;.content p, .content li&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>vscode 调试 js</title>
+    <url>/2021/10/29/vscode-%E8%B0%83%E8%AF%95-js/</url>
+    <content><![CDATA[<h3 id="调试-npm-script-命令"><a href="#调试-npm-script-命令" class="headerlink" title="调试 npm script 命令"></a>调试 npm script 命令</h3><p>注意：此为 configurations 中的一条配置，具体看下一条</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Launch via NPM&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;launch&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;runtimeExecutable&quot;</span><span class="punctuation">:</span> <span class="string">&quot;npm&quot;</span><span class="punctuation">,</span> <span class="comment">//runtimeExecutable表示要使用的运行时，默认为node，这里我们配置成了npm</span></span><br><span class="line">  <span class="attr">&quot;runtimeArgs&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;run-script&quot;</span><span class="punctuation">,</span> <span class="string">&quot;dev&quot;</span>    <span class="comment">//这里的dev就对应package.json中的scripts中的dev</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;port&quot;</span><span class="punctuation">:</span> <span class="number">9229</span>    <span class="comment">//这个端口是调试的端口，不是项目启动的端口</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="调试指定-js-文件"><a href="#调试指定-js-文件" class="headerlink" title="调试指定 js 文件"></a>调试指定 js 文件</h3><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="comment">// Use IntelliSense to learn about possible attributes.</span></span><br><span class="line">  <span class="comment">// Hover to view descriptions of existing attributes.</span></span><br><span class="line">  <span class="comment">// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;configurations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;pwa-node&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;launch&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Launch Program&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;skipFiles&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;&lt;node_internals&gt;/**&quot;</span></span><br><span class="line">      <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;program&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;workspaceFolder&#125;/test/filelist.js&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="使用-nodemon-调试"><a href="#使用-nodemon-调试" class="headerlink" title="使用 nodemon 调试"></a>使用 nodemon 调试</h3><p>参考：<br><a href="https://www.cnblogs.com/little-ab/p/11796952.html">https://www.cnblogs.com/little-ab/p/11796952.html</a></p>
 ]]></content>
       <categories>
         <category>未分类</category>
@@ -2041,6 +2019,28 @@ timeout(100).then((value) =&gt; &#123;
       </tags>
   </entry>
   <entry>
+    <title>vscode快捷键</title>
+    <url>/2021/06/11/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    <content><![CDATA[<h2 id="代码之间跳转"><a href="#代码之间跳转" class="headerlink" title="代码之间跳转"></a>代码之间跳转</h2><h3 id="调回之前的代码"><a href="#调回之前的代码" class="headerlink" title="调回之前的代码"></a>调回之前的代码</h3><p>Mac 下</p>
+<p><code>ctrl + &#39;-&#39;</code></p>
+<p>window 下</p>
+<p><code>alt + &#39;-&#39;</code></p>
+<h2 id="折叠、展开代码块"><a href="#折叠、展开代码块" class="headerlink" title="折叠、展开代码块"></a>折叠、展开代码块</h2><p>以下命令要确保光标在编辑区域</p>
+<ol>
+<li><p>折叠所有区域代码的快捷键：ctrl+k, ctrl+0;</p>
+<pre><code>先按下ctrl和K，再按下ctrl和0; (ctrl 不要松开)</code></pre></li>
+<li><p>展开所有折叠区域代码的快捷键：ctrl +k, ctrl+J;</p>
+<pre><code>先按下ctrl和K，再按下ctrl和J </code></pre></li>
+<li><p>自动格式化代码的快捷键：ctrl+k, ctrl+f;</p>
+<pre><code>先按下ctrl和K，再按下ctrl和f;</code></pre></li>
+</ol>
+<h2 id="全局搜索"><a href="#全局搜索" class="headerlink" title="全局搜索"></a>全局搜索</h2><p>command + shift + F</p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>vue和react</title>
     <url>/2020/01/10/vue%E5%92%8Creact/</url>
     <content><![CDATA[<p>单向数据流<br>单向绑定，双向绑定<br>父子组件传值<br>声明式/命令式</p>
@@ -2048,6 +2048,20 @@ timeout(100).then((value) =&gt; &#123;
       <categories>
         <category>未分类</category>
       </categories>
+  </entry>
+  <entry>
+    <title>vue数组双向绑定</title>
+    <url>/2020/02/10/vue%E6%95%B0%E7%BB%84%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A/</url>
+    <content><![CDATA[<p>问题1：如何把数组进行双向绑定</p>
+<p>问题2：$set</p>
+<p><a href="https://blog.csdn.net/shizhenweiszw/article/details/88580166">https://blog.csdn.net/shizhenweiszw/article/details/88580166</a><br><a href="https://blog.csdn.net/wxl1555/article/details/79616752">https://blog.csdn.net/wxl1555/article/details/79616752</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
   </entry>
   <entry>
     <title>webpack入门</title>
@@ -2069,20 +2083,6 @@ timeout(100).then((value) =&gt; &#123;
         <category>technology</category>
         <category>front-end</category>
       </categories>
-  </entry>
-  <entry>
-    <title>vue数组双向绑定</title>
-    <url>/2020/02/10/vue%E6%95%B0%E7%BB%84%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A/</url>
-    <content><![CDATA[<p>问题1：如何把数组进行双向绑定</p>
-<p>问题2：$set</p>
-<p><a href="https://blog.csdn.net/shizhenweiszw/article/details/88580166">https://blog.csdn.net/shizhenweiszw/article/details/88580166</a><br><a href="https://blog.csdn.net/wxl1555/article/details/79616752">https://blog.csdn.net/wxl1555/article/details/79616752</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-      <tags>
-        <tag>vue</tag>
-      </tags>
   </entry>
   <entry>
     <title>windows terminal</title>
@@ -2189,24 +2189,24 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
-    <title>zsh 设置代理</title>
-    <url>/2021/10/03/zsh-%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/</url>
-    <content><![CDATA[<p>在 <code>~/.zshrc</code> 文件里添加如下代码</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">alias setproxy=&quot;export ALL_PROXY=http://127.0.0.1:15236&quot;</span><br><span class="line">alias unsetproxy=&quot;unset ALL_PROXY&quot;</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 设置代理</span></span><br><span class="line">setproxy</span><br><span class="line"><span class="comment"># 取消代理</span></span><br><span class="line">unsetproxy</span><br></pre></td></tr></table></figure>
-<p><a href="https://blog.csdn.net/weixin_44259233/article/details/108403620">参考</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>zsh 自动补全、语法高亮插件</title>
     <url>/2021/11/25/zsh%E6%8F%92%E4%BB%B6/</url>
     <content><![CDATA[<p>在日常使用 zsh 的过程中，如果需要打很多命令，会很麻烦，除了可以使用ctrl+r 的方式来查询历史命令，还可以通过插件的方式来自动匹配命令，提高效率。</p>
 <p>语法高亮也是帮助我们不要打错命令的好帮手。</p>
 <p>第一步，进入 zsh 插件目录，并 clone 项目到此目录中：<br>cd “$ZSH_CUSTOM/plugins”<br>git clone <a href="https://github.com/zsh-users/zsh-syntax-highlighting.git">https://github.com/zsh-users/zsh-syntax-highlighting.git</a><br>git clone <a href="https://github.com/zsh-users/zsh-autosuggestions.git">https://github.com/zsh-users/zsh-autosuggestions.git</a><br>第二步，配置 .zshrc 文件<br>… 上面省略<br>plugins = (git zsh-autosuggestions zsh-syntax-highlighting)<br>… 下面省略<br>最后一步，让配置生效<br>zsh<br>完成！👍</p>
 <p>作者：万有引力万有<br>链接：<a href="https://www.jianshu.com/p/d70f9c4cb47c">https://www.jianshu.com/p/d70f9c4cb47c</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>zsh 设置代理</title>
+    <url>/2021/10/03/zsh-%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/</url>
+    <content><![CDATA[<p>在 <code>~/.zshrc</code> 文件里添加如下代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">alias setproxy=&quot;export ALL_PROXY=http://127.0.0.1:15236&quot;</span><br><span class="line">alias unsetproxy=&quot;unset ALL_PROXY&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 设置代理</span></span><br><span class="line">setproxy</span><br><span class="line"><span class="comment"># 取消代理</span></span><br><span class="line">unsetproxy</span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/weixin_44259233/article/details/108403620">参考</a></p>
 ]]></content>
       <categories>
         <category>未分类</category>
@@ -2316,6 +2316,21 @@ timeout(100).then((value) =&gt; &#123;
 ]]></content>
   </entry>
   <entry>
+    <title>分布式散列表</title>
+    <url>/2020/09/22/%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%A3%E5%88%97%E8%A1%A8/</url>
+    <content><![CDATA[<ol>
+<li>hashtable</li>
+<li>distributed hash table</li>
+<li>一致性哈希</li>
+<li>kademila算法</li>
+</ol>
+<p><a href="https://www.8btc.com/article/399577">https://www.8btc.com/article/399577</a><br><a href="https://www.8btc.com/article/404686">https://www.8btc.com/article/404686</a><br><a href="https://colobu.com/2018/03/26/distributed-hash-table/">https://colobu.com/2018/03/26/distributed-hash-table/</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>兰亭集序</title>
     <url>/2021/06/07/%E5%85%B0%E4%BA%AD%E9%9B%86%E5%BA%8F/</url>
     <content><![CDATA[<h2 id="兰亭集序"><a href="#兰亭集序" class="headerlink" title="兰亭集序"></a>兰亭集序</h2><p>【作者】王羲之 【朝代】魏晋</p>
@@ -2330,16 +2345,9 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
-    <title>分布式散列表</title>
-    <url>/2020/09/22/%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%A3%E5%88%97%E8%A1%A8/</url>
-    <content><![CDATA[<ol>
-<li>hashtable</li>
-<li>distributed hash table</li>
-<li>一致性哈希</li>
-<li>kademila算法</li>
-</ol>
-<p><a href="https://www.8btc.com/article/399577">https://www.8btc.com/article/399577</a><br><a href="https://www.8btc.com/article/404686">https://www.8btc.com/article/404686</a><br><a href="https://colobu.com/2018/03/26/distributed-hash-table/">https://colobu.com/2018/03/26/distributed-hash-table/</a></p>
-]]></content>
+    <title>如何获取视频的缓存进度</title>
+    <url>/2022/07/11/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E8%A7%86%E9%A2%91%E7%9A%84%E7%BC%93%E5%AD%98%E8%BF%9B%E5%BA%A6/</url>
+    <content><![CDATA[]]></content>
       <categories>
         <category>未分类</category>
       </categories>
@@ -2362,14 +2370,6 @@ timeout(100).then((value) =&gt; &#123;
 </div>]]></content>
       <categories>
         <category>literature</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>如何获取视频的缓存进度</title>
-    <url>/2022/07/11/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E8%A7%86%E9%A2%91%E7%9A%84%E7%BC%93%E5%AD%98%E8%BF%9B%E5%BA%A6/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>未分类</category>
       </categories>
   </entry>
   <entry>
@@ -2432,18 +2432,6 @@ timeout(100).then((value) =&gt; &#123;
       <categories>
         <category>literature</category>
       </categories>
-  </entry>
-  <entry>
-    <title>技术博客网站</title>
-    <url>/2019/02/16/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/</url>
-    <content><![CDATA[<p>CSDN<br>csdn.net</p>
-<p>博客园<br>cnblogs.com</p>
-<p>简书<br>jianshu.com</p>
-<p>思否<br>segmentfault.com<br>sifou.com</p>
-<p>开源中国<br>oschina.net</p>
-<p>扣钉<br>coding.net</p>
-<p>51cto.com</p>
-]]></content>
   </entry>
   <entry>
     <title>手动创建SWAP分区（转载）</title>
@@ -2619,6 +2607,28 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </categories>
   </entry>
   <entry>
+    <title>技术博客网站</title>
+    <url>/2019/02/16/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/</url>
+    <content><![CDATA[<p>CSDN<br>csdn.net</p>
+<p>博客园<br>cnblogs.com</p>
+<p>简书<br>jianshu.com</p>
+<p>思否<br>segmentfault.com<br>sifou.com</p>
+<p>开源中国<br>oschina.net</p>
+<p>扣钉<br>coding.net</p>
+<p>51cto.com</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>浏览器插件修改请求返回数据的原理</title>
+    <url>/2022/07/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E4%BF%AE%E6%94%B9%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE%E7%9A%84%E5%8E%9F%E7%90%86/</url>
+    <content><![CDATA[<h1 id="重写-fetch-和-XHR"><a href="#重写-fetch-和-XHR" class="headerlink" title="重写 fetch 和 XHR"></a>重写 fetch 和 XHR</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>重写 fetch 和 XHR，返回自定义数据。<br>把重写 fetch 和 XHR 的代码通过 <code>&lt;script&gt;&lt;/script&gt;</code> 标签 插入到 html 里</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>当你插入 <code>&lt;script&gt;&lt;/script&gt;</code> 标签的时候，请求可能已经发出了，所以此种方法不能保障拦截所有请求</p>
+<h1 id="tweak"><a href="#tweak" class="headerlink" title="tweak"></a>tweak</h1>]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>技能树</title>
     <url>/2019/07/11/%E6%8A%80%E8%83%BD%E6%A0%91/</url>
     <content><![CDATA[<ol>
@@ -2634,16 +2644,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       <categories>
         <category>technology</category>
         <category>front-end</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>浏览器插件修改请求返回数据的原理</title>
-    <url>/2022/07/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E4%BF%AE%E6%94%B9%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE%E7%9A%84%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[<h1 id="重写-fetch-和-XHR"><a href="#重写-fetch-和-XHR" class="headerlink" title="重写 fetch 和 XHR"></a>重写 fetch 和 XHR</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>重写 fetch 和 XHR，返回自定义数据。<br>把重写 fetch 和 XHR 的代码通过 <code>&lt;script&gt;&lt;/script&gt;</code> 标签 插入到 html 里</p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>当你插入 <code>&lt;script&gt;&lt;/script&gt;</code> 标签的时候，请求可能已经发出了，所以此种方法不能保障拦截所有请求</p>
-<h1 id="tweak"><a href="#tweak" class="headerlink" title="tweak"></a>tweak</h1>]]></content>
-      <categories>
-        <category>未分类</category>
       </categories>
   </entry>
   <entry>
@@ -2870,6 +2870,14 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </tags>
   </entry>
   <entry>
+    <title>Samsung Galaxy Z Flip4</title>
+    <url>/2022/11/17/AD/Samsung-Galaxy-Z-Flip4/</url>
+    <content><![CDATA[<iframe width="1000" height="508" src="https://www.youtube.com/embed/lqP87f9lZ2M" title="Galaxy Z Flip4: Launch film | Samsung" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>]]></content>
+      <categories>
+        <category>AD</category>
+      </categories>
+  </entry>
+  <entry>
     <title>跨域</title>
     <url>/2019/07/22/%E8%B7%A8%E5%9F%9F/</url>
     <content><![CDATA[<h3 id="为什么会出现跨域"><a href="#为什么会出现跨域" class="headerlink" title="为什么会出现跨域"></a>为什么会出现跨域</h3><p>安全<br>浏览器同源策略<br>同源策略限制了从同一个源加载的文档或脚本如何与来自另一个源的资源进行交互。这是一个用于隔离潜在恶意文件的重要安全机制。<br>cookie<br>CSRF攻击<br>XSS攻击</p>
@@ -2889,14 +2897,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       <tags>
         <tag>跨域</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Samsung Galaxy Z Flip4</title>
-    <url>/2022/11/17/AD/Samsung-Galaxy-Z-Flip4/</url>
-    <content><![CDATA[<iframe width="1000" height="508" src="https://www.youtube.com/embed/lqP87f9lZ2M" title="Galaxy Z Flip4: Launch film | Samsung" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>]]></content>
-      <categories>
-        <category>AD</category>
-      </categories>
   </entry>
   <entry>
     <title>think-different</title>
@@ -2945,6 +2945,15 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </tags>
   </entry>
   <entry>
+    <title>你真的了解 addEventListner 吗?</title>
+    <url>/2023/06/16/fe/addEventListener/</url>
+    <content><![CDATA[<p><a href="https://www.cnblogs.com/ziyunfei/p/5545439.html">passive 的事件监听器</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>保时捷panamera行政加长版官方宣传片</title>
     <url>/2018/01/25/AD/%E4%BF%9D%E6%97%B6%E6%8D%B7panamera%E8%A1%8C%E6%94%BF%E5%8A%A0%E9%95%BF%E7%89%88%E5%AE%98%E6%96%B9%E5%AE%A3%E4%BC%A0%E7%89%87/</url>
     <content><![CDATA[<h1 id="一、30秒配音版（中文字幕）"><a href="#一、30秒配音版（中文字幕）" class="headerlink" title="一、30秒配音版（中文字幕）"></a>一、30秒配音版（中文字幕）</h1><iframe height=498 width=610 src="//player.bilibili.com/player.html?aid=8792900&cid=14502121&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -2967,15 +2976,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
         <tag>AD</tag>
         <tag>video</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>你真的了解 addEventListner 吗?</title>
-    <url>/2023/06/16/fe/addEventListener/</url>
-    <content><![CDATA[<p><a href="https://www.cnblogs.com/ziyunfei/p/5545439.html">passive 的事件监听器</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
   </entry>
   <entry>
     <title>iconfont 乱码</title>
@@ -3256,19 +3256,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </tags>
   </entry>
   <entry>
-    <title>apache配置mime</title>
-    <url>/2019/08/05/technology/apache%E9%85%8D%E7%BD%AEmime/</url>
-    <content><![CDATA[<h1 id="配置文件里"><a href="#配置文件里" class="headerlink" title="配置文件里"></a>配置文件里</h1><p>AddType application/wasm .wasm</p>
-]]></content>
-      <categories>
-        <category>technology</category>
-        <category>Server</category>
-      </categories>
-      <tags>
-        <tag>apache</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>arcgis layer.when 和 view.when 以及 MapImageLayer</title>
     <url>/2019/02/17/technology/arcgis-layer-when-%E5%92%8C-view-when/</url>
     <content><![CDATA[<p>MapImageLayer加载完之后需要view.goto(layer.fullExtent)才能显示</p>
@@ -3284,6 +3271,30 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       <tags>
         <tag>arcgis</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>apache配置mime</title>
+    <url>/2019/08/05/technology/apache%E9%85%8D%E7%BD%AEmime/</url>
+    <content><![CDATA[<h1 id="配置文件里"><a href="#配置文件里" class="headerlink" title="配置文件里"></a>配置文件里</h1><p>AddType application/wasm .wasm</p>
+]]></content>
+      <categories>
+        <category>technology</category>
+        <category>Server</category>
+      </categories>
+      <tags>
+        <tag>apache</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>centos 下chmod</title>
+    <url>/2017/08/31/technology/centos-chmod/</url>
+    <content><![CDATA[<p>chmod也可以用数字来表示权限如 chmod 777 file<br>语法为：chmod abc file<br>其中a,b,c各为一个数字，分别表示User、Group、及Other的权限。<br>r=4，w=2，x=1<br>若要rwx属性则4+2+1=7；<br>若要rw-属性则4+2=6；<br>若要r-x属性则4+1=5。</p>
+<p>给文件夹及文件夹里面的所有文件加权限<br>chmod -R 777 folder</p>
+]]></content>
+      <categories>
+        <category>technology</category>
+        <category>Server</category>
+      </categories>
   </entry>
   <entry>
     <title>axios发送application/x-www-form-urlencoded类型的请求</title>
@@ -3348,17 +3359,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       <tags>
         <tag>centos</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>centos 下chmod</title>
-    <url>/2017/08/31/technology/centos-chmod/</url>
-    <content><![CDATA[<p>chmod也可以用数字来表示权限如 chmod 777 file<br>语法为：chmod abc file<br>其中a,b,c各为一个数字，分别表示User、Group、及Other的权限。<br>r=4，w=2，x=1<br>若要rwx属性则4+2+1=7；<br>若要rw-属性则4+2=6；<br>若要r-x属性则4+1=5。</p>
-<p>给文件夹及文件夹里面的所有文件加权限<br>chmod -R 777 folder</p>
-]]></content>
-      <categories>
-        <category>technology</category>
-        <category>Server</category>
-      </categories>
   </entry>
   <entry>
     <title>centos安装ssl证书</title>
