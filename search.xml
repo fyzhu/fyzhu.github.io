@@ -99,6 +99,15 @@
       </categories>
   </entry>
   <entry>
+    <title>buglist</title>
+    <url>/2019/02/17/buglist/</url>
+    <content><![CDATA[<p>1.windows10 word excel等的预览功能导致文件夹卡死<br>2.windows10点击右下角下图标，输入法切换时导致小图标抖动</p>
+]]></content>
+      <tags>
+        <tag>list</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>V8是如何执行一段JavaScript代码的</title>
     <url>/2022/07/25/V8%E6%98%AF%E5%A6%82%E4%BD%95%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AE%B5JavaScript%E4%BB%A3%E7%A0%81%E7%9A%84/</url>
     <content><![CDATA[<h2 id="代码如何执行"><a href="#代码如何执行" class="headerlink" title="代码如何执行"></a>代码如何执行</h2><p>使用高级语言编写的代码需要先编译为机器码（二进制代码）再执行</p>
@@ -117,15 +126,6 @@
       <categories>
         <category>未分类</category>
       </categories>
-  </entry>
-  <entry>
-    <title>buglist</title>
-    <url>/2019/02/17/buglist/</url>
-    <content><![CDATA[<p>1.windows10 word excel等的预览功能导致文件夹卡死<br>2.windows10点击右下角下图标，输入法切换时导致小图标抖动</p>
-]]></content>
-      <tags>
-        <tag>list</tag>
-      </tags>
   </entry>
   <entry>
     <title>草在结它的种子，风在摇它的叶子，我们站着，不说话，就十分美好</title>
@@ -148,6 +148,15 @@
       </categories>
   </entry>
   <entry>
+    <title>从今天开始学习爱自己</title>
+    <url>/2017/09/25/congjintiankaishixuexiaiziji/</url>
+    <content><![CDATA[<p>2017年9月25日15:44:09</p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>composer的安装</title>
     <url>/2020/08/06/composer%E7%9A%84%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h4 id="下载安装脚本"><a href="#下载安装脚本" class="headerlink" title="下载安装脚本"></a>下载安装脚本</h4><ol>
@@ -166,40 +175,6 @@
 <li>最后重新打开一个命令行窗口试一试执行 composer –version 看看是否正确输出版本号。</li>
 </ol>
 <p>参考<br><a href="https://pkg.phpcomposer.com/#how-to-install-composer">https://pkg.phpcomposer.com/#how-to-install-composer</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>从今天开始学习爱自己</title>
-    <url>/2017/09/25/congjintiankaishixuexiaiziji/</url>
-    <content><![CDATA[<p>2017年9月25日15:44:09</p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>导航滚动悬浮</title>
-    <url>/2017/11/08/daohanggundongxuanfu/</url>
-    <content><![CDATA[<p>做两个导航，第二个隐藏 下拉到一定位置，显示第二个，position:fixed $(function(){ $(window).scroll(function () {$(window).scroll(function () { var top = $(document).scrollTop(); var m=$(“.nav”); if (top &gt; m.offset().top) { m.next().css(‘display’,’block’) }else{ m.next().css(‘display’,’none’) } }) }</p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>deno学习笔记</title>
-    <url>/2020/05/18/deno%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="新特性"><a href="#新特性" class="headerlink" title="新特性"></a>新特性</h2><ol>
-<li>原生支持 ts</li>
-<li>原生支持 import</li>
-<li>可以直接 import 一个线上包</li>
-<li>原生支持 promise 不用写 async</li>
-<li>安全性，需要授权</li>
-</ol>
-<iframe src="//player.bilibili.com/player.html?aid=795633468&bvid=BV14C4y1H76e&cid=192362111&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=498 width=610> </iframe>
 ]]></content>
       <categories>
         <category>未分类</category>
@@ -231,6 +206,31 @@
 <h3 id="Dockerfile-语法"><a href="#Dockerfile-语法" class="headerlink" title="Dockerfile 语法"></a>Dockerfile 语法</h3><p><img src="https://img.mukewang.com/5efdeeec00018f3e19201080.jpg" alt="Dockerfile 语法1"><br><img src="https://img.mukewang.com/5efdef1b0001ff5b19201080.jpg" alt="Dockerfile 语法2"></p>
 <h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><p>bridge 网络<br>host 网络</p>
 <p>参考：<a href="https://www.jb51.net/article/149173.htm">https://www.jb51.net/article/149173.htm</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>导航滚动悬浮</title>
+    <url>/2017/11/08/daohanggundongxuanfu/</url>
+    <content><![CDATA[<p>做两个导航，第二个隐藏 下拉到一定位置，显示第二个，position:fixed $(function(){ $(window).scroll(function () {$(window).scroll(function () { var top = $(document).scrollTop(); var m=$(“.nav”); if (top &gt; m.offset().top) { m.next().css(‘display’,’block’) }else{ m.next().css(‘display’,’none’) } }) }</p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>deno学习笔记</title>
+    <url>/2020/05/18/deno%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="新特性"><a href="#新特性" class="headerlink" title="新特性"></a>新特性</h2><ol>
+<li>原生支持 ts</li>
+<li>原生支持 import</li>
+<li>可以直接 import 一个线上包</li>
+<li>原生支持 promise 不用写 async</li>
+<li>安全性，需要授权</li>
+</ol>
+<iframe src="//player.bilibili.com/player.html?aid=795633468&bvid=BV14C4y1H76e&cid=192362111&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=498 width=610> </iframe>
 ]]></content>
       <categories>
         <category>未分类</category>
@@ -402,6 +402,16 @@
       </tags>
   </entry>
   <entry>
+    <title>gitmoji</title>
+    <url>/2022/01/27/gitmoji/</url>
+    <content><![CDATA[<p>Emoji    Raw Emoji Code    Description<br>🎉    :tada:    Initial Commit<br>✨    :sparkles:    when introducing New Features<br>🐎    :racehorse:    when improving performance<br>⚡    :zap:    when introducing Backward-InCompatible Features, maybe with @CHANGED Comment Tag<br>🚀    :rocket:    Anything related to Deployments/DevOps<br>📚    :books:    when writing docs<br>🎨    :art:    when improving the format/structure of the code<br>📝  :memo: Add or update documentation.<br>📝    :pencil:    when performing minor changes/fixing the code or language<br>🐛    :bug:    when reporting a bug, with @FIXMEComment Tag<br>🔨    :hammer:    when refactoring code<br>🔧  :wrench: Add or update configuration files.<br>💄    :lipstick:    when improving UI/Cosmetic<br>💅  :nail_care: style<br>🍻  :beers: Write code drunkenly.<br>📰    :newspaper:    when creating a new file<br>🚑    :ambulance:    when fixing a bug<br>🐧    :penguin:    when fixing something on Linux<br>🍎    :apple:    when fixing something on Mac OS<br>🏁    :checkered_flag:    when fixing something on Windows<br>🔥    :fire:    when removing code or files, maybe with @CHANGED Comment Tag<br>🚜    :tractor:    when change file structure. Usually together with 🎨<br>☔    :umbrella:    when adding tests<br>🔬    :microscope:    when adding code coverage<br>💚    :green_heart:    when fixing the CI build<br>🔒    :lock:    when dealing with security<br>⬆️    :arrow_up:    when upgrading dependencies<br>⬇️    :arrow_down:    when downgrading dependencies<br>⏩    :fast_forward:    when forward-porting features from an older version/branch<br>⏪    :rewind:    when backporting features from a newer version/branch<br>👕    :shirt:    when removing linter/strict/deprecation warnings<br>♿    :wheelchair:    when improving accessibility<br>🌐    :globe_with_meridians:    when dealing with globalization/internationalization/i18n/g11n<br>🚧    :construction:    WIP(Work In Progress) Commits, maybe with @REVIEW Comment Tag<br>💎    :gem:    New Release<br>🥚    :egg:    New Release with Python egg<br>🎡    :ferris_wheel:    New Release with Python wheel package<br>🔖    :bookmark:    Version Tags<br>🔈    :speaker:    when Adding Logging<br>🔇    :mute:    when Reducing Logging<br>💡    :bulb:    New Idea, with @IDEA Comment Tag<br>❄️    :snowflake:    changing Configuration, Usually together with 🐧 or 🎀 or 🚀<br>🎀    :ribbon:    Customer requested application Customization, with @HACK Comment Tag<br>🐘    :elephant:    PostgreSQL Database specific (Migrations, Scripts, Extensions, …)<br>🐬    :dolphin:    MySQL Database specific (Migrations, Scripts, Extensions, …)<br>🍃    :leaves:    MongoDB Database specific (Migrations, Scripts, Extensions, …)<br>🏦    :bank:    Generic Database specific (Migrations, Scripts, Extensions, …)<br>🐳    :whale:    Docker Configuration<br>🤝    :handshake:    when Merge files<br>🍒    :cherries:    when Commit Arise from one or more Cherry-Pick Commit(s)  </p>
+<p>参考<br>链接：<a href="https://www.jianshu.com/p/0bfdf5c41696">https://www.jianshu.com/p/0bfdf5c41696</a><br><a href="https://gitmoji.dev/">https://gitmoji.dev/</a><br><a href="https://github.com/slashsBin/styleguide-git-commit-message">https://github.com/slashsBin/styleguide-git-commit-message</a>  </p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>不同操作系统下回车符不同导致的git warning</title>
     <url>/2019/07/10/giterror/</url>
     <content><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>windows下git报错warning: LF will be replaced by CRLF in ***. The file will have its original line endings in your working directory.</p>
@@ -411,16 +421,6 @@
       <tags>
         <tag>git</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>gitmoji</title>
-    <url>/2022/01/27/gitmoji/</url>
-    <content><![CDATA[<p>Emoji    Raw Emoji Code    Description<br>🎉    :tada:    Initial Commit<br>✨    :sparkles:    when introducing New Features<br>🐎    :racehorse:    when improving performance<br>⚡    :zap:    when introducing Backward-InCompatible Features, maybe with @CHANGED Comment Tag<br>🚀    :rocket:    Anything related to Deployments/DevOps<br>📚    :books:    when writing docs<br>🎨    :art:    when improving the format/structure of the code<br>📝  :memo: Add or update documentation.<br>📝    :pencil:    when performing minor changes/fixing the code or language<br>🐛    :bug:    when reporting a bug, with @FIXMEComment Tag<br>🔨    :hammer:    when refactoring code<br>🔧  :wrench: Add or update configuration files.<br>💄    :lipstick:    when improving UI/Cosmetic<br>💅  :nail_care: style<br>🍻  :beers: Write code drunkenly.<br>📰    :newspaper:    when creating a new file<br>🚑    :ambulance:    when fixing a bug<br>🐧    :penguin:    when fixing something on Linux<br>🍎    :apple:    when fixing something on Mac OS<br>🏁    :checkered_flag:    when fixing something on Windows<br>🔥    :fire:    when removing code or files, maybe with @CHANGED Comment Tag<br>🚜    :tractor:    when change file structure. Usually together with 🎨<br>☔    :umbrella:    when adding tests<br>🔬    :microscope:    when adding code coverage<br>💚    :green_heart:    when fixing the CI build<br>🔒    :lock:    when dealing with security<br>⬆️    :arrow_up:    when upgrading dependencies<br>⬇️    :arrow_down:    when downgrading dependencies<br>⏩    :fast_forward:    when forward-porting features from an older version/branch<br>⏪    :rewind:    when backporting features from a newer version/branch<br>👕    :shirt:    when removing linter/strict/deprecation warnings<br>♿    :wheelchair:    when improving accessibility<br>🌐    :globe_with_meridians:    when dealing with globalization/internationalization/i18n/g11n<br>🚧    :construction:    WIP(Work In Progress) Commits, maybe with @REVIEW Comment Tag<br>💎    :gem:    New Release<br>🥚    :egg:    New Release with Python egg<br>🎡    :ferris_wheel:    New Release with Python wheel package<br>🔖    :bookmark:    Version Tags<br>🔈    :speaker:    when Adding Logging<br>🔇    :mute:    when Reducing Logging<br>💡    :bulb:    New Idea, with @IDEA Comment Tag<br>❄️    :snowflake:    changing Configuration, Usually together with 🐧 or 🎀 or 🚀<br>🎀    :ribbon:    Customer requested application Customization, with @HACK Comment Tag<br>🐘    :elephant:    PostgreSQL Database specific (Migrations, Scripts, Extensions, …)<br>🐬    :dolphin:    MySQL Database specific (Migrations, Scripts, Extensions, …)<br>🍃    :leaves:    MongoDB Database specific (Migrations, Scripts, Extensions, …)<br>🏦    :bank:    Generic Database specific (Migrations, Scripts, Extensions, …)<br>🐳    :whale:    Docker Configuration<br>🤝    :handshake:    when Merge files<br>🍒    :cherries:    when Commit Arise from one or more Cherry-Pick Commit(s)  </p>
-<p>参考<br>链接：<a href="https://www.jianshu.com/p/0bfdf5c41696">https://www.jianshu.com/p/0bfdf5c41696</a><br><a href="https://gitmoji.dev/">https://gitmoji.dev/</a><br><a href="https://github.com/slashsBin/styleguide-git-commit-message">https://github.com/slashsBin/styleguide-git-commit-message</a>  </p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
   </entry>
   <entry>
     <title>git报错The following untracked working tree files would be overwritten by checkout</title>
@@ -572,17 +572,6 @@
       </categories>
   </entry>
   <entry>
-    <title>idealist</title>
-    <url>/2019/02/18/idealist/</url>
-    <content><![CDATA[<ol>
-<li>maplist</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>list</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>imagine</title>
     <url>/2018/07/10/imagine-1/</url>
     <content><![CDATA[<p>imagine    英[ɪˈmædʒɪn]<br>美[ɪˈmædʒɪn]<br>vt.    想像; 想，设想; 料想，猜想; 误认为;<br>vi.    想象; 猜想，推测;<br>[例句]He could not imagine a more peaceful scene<br>他想象不出比这更祥和的景象。<br>[其他]    第三人称单数：imagines 现在分词：imagining 过去式：imagined 过去分词：imagined</p>
@@ -610,6 +599,17 @@
       <tags>
         <tag>config</tag>
         <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>idealist</title>
+    <url>/2019/02/18/idealist/</url>
+    <content><![CDATA[<ol>
+<li>maplist</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>list</tag>
       </tags>
   </entry>
   <entry>
@@ -1429,6 +1429,16 @@
       </categories>
   </entry>
   <entry>
+    <title>render函数</title>
+    <url>/2020/08/13/render%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h4 id="createElement-参数"><a href="#createElement-参数" class="headerlink" title="createElement 参数"></a>createElement 参数</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// @returns &#123;VNode&#125;</span><br><span class="line">createElement(</span><br><span class="line">  // &#123;String | Object | Function&#125;</span><br><span class="line">  // 一个 HTML 标签名、组件选项对象，或者</span><br><span class="line">  // resolve 了上述任何一种的一个 async 函数。必填项。</span><br><span class="line">  &#x27;div&#x27;,</span><br><span class="line"></span><br><span class="line">  // &#123;Object&#125;</span><br><span class="line">  // 一个与模板中 attribute 对应的数据对象。可选。</span><br><span class="line">  &#123;</span><br><span class="line">    // (详情见下一节)</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  // &#123;String | Array&#125;</span><br><span class="line">  // 子级虚拟节点 (VNodes)，由 `createElement()` 构建而成，</span><br><span class="line">  // 也可以使用字符串来生成“文本虚拟节点”。可选。</span><br><span class="line">  [</span><br><span class="line">    &#x27;先写一些文字&#x27;,</span><br><span class="line">    createElement(&#x27;h1&#x27;, &#x27;一则头条&#x27;),</span><br><span class="line">    createElement(MyComponent, &#123;</span><br><span class="line">      props: &#123;</span><br><span class="line">        someProp: &#x27;foobar&#x27;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h3 id="深入数据对象"><a href="#深入数据对象" class="headerlink" title="深入数据对象"></a>深入数据对象</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // 与 `v-bind:class` 的 API 相同，</span><br><span class="line">  // 接受一个字符串、对象或字符串和对象组成的数组</span><br><span class="line">  &#x27;class&#x27;: &#123;</span><br><span class="line">    foo: true,</span><br><span class="line">    bar: false</span><br><span class="line">  &#125;,</span><br><span class="line">  // 与 `v-bind:style` 的 API 相同，</span><br><span class="line">  // 接受一个字符串、对象，或对象组成的数组</span><br><span class="line">  style: &#123;</span><br><span class="line">    color: &#x27;red&#x27;,</span><br><span class="line">    fontSize: &#x27;14px&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 普通的 HTML attribute</span><br><span class="line">  attrs: &#123;</span><br><span class="line">    id: &#x27;foo&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 组件 prop</span><br><span class="line">  props: &#123;</span><br><span class="line">    myProp: &#x27;bar&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // DOM property</span><br><span class="line">  domProps: &#123;</span><br><span class="line">    innerHTML: &#x27;baz&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 事件监听器在 `on` 内，</span><br><span class="line">  // 但不再支持如 `v-on:keyup.enter` 这样的修饰器。</span><br><span class="line">  // 需要在处理函数中手动检查 keyCode。</span><br><span class="line">  on: &#123;</span><br><span class="line">    click: this.clickHandler</span><br><span class="line">  &#125;,</span><br><span class="line">  // 仅用于组件，用于监听原生事件，而不是组件内部使用</span><br><span class="line">  // `vm.$emit` 触发的事件。</span><br><span class="line">  nativeOn: &#123;</span><br><span class="line">    click: this.nativeClickHandler</span><br><span class="line">  &#125;,</span><br><span class="line">  // 自定义指令。注意，你无法对 `binding` 中的 `oldValue`</span><br><span class="line">  // 赋值，因为 Vue 已经自动为你进行了同步。</span><br><span class="line">  directives: [</span><br><span class="line">    &#123;</span><br><span class="line">      name: &#x27;my-custom-directive&#x27;,</span><br><span class="line">      value: &#x27;2&#x27;,</span><br><span class="line">      expression: &#x27;1 + 1&#x27;,</span><br><span class="line">      arg: &#x27;foo&#x27;,</span><br><span class="line">      modifiers: &#123;</span><br><span class="line">        bar: true</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  // 作用域插槽的格式为</span><br><span class="line">  // &#123; name: props =&gt; VNode | Array&lt;VNode&gt; &#125;</span><br><span class="line">  scopedSlots: &#123;</span><br><span class="line">    default: props =&gt; createElement(&#x27;span&#x27;, props.text)</span><br><span class="line">  &#125;,</span><br><span class="line">  // 如果组件是其它组件的子组件，需为插槽指定名称</span><br><span class="line">  slot: &#x27;name-of-slot&#x27;,</span><br><span class="line">  // 其它特殊顶层 property</span><br><span class="line">  key: &#x27;myKey&#x27;,</span><br><span class="line">  ref: &#x27;myRef&#x27;,</span><br><span class="line">  // 如果你在渲染函数中给多个元素都应用了相同的 ref 名，</span><br><span class="line">  // 那么 `$refs.myRef` 会变成一个数组。</span><br><span class="line">  refInFor: true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>redis常用命令</title>
     <url>/2019/12/06/redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<p>连接</p>
@@ -1462,16 +1472,6 @@
       </categories>
       <tags>
         <tag>redis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>render函数</title>
-    <url>/2020/08/13/render%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<h4 id="createElement-参数"><a href="#createElement-参数" class="headerlink" title="createElement 参数"></a>createElement 参数</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// @returns &#123;VNode&#125;</span><br><span class="line">createElement(</span><br><span class="line">  // &#123;String | Object | Function&#125;</span><br><span class="line">  // 一个 HTML 标签名、组件选项对象，或者</span><br><span class="line">  // resolve 了上述任何一种的一个 async 函数。必填项。</span><br><span class="line">  &#x27;div&#x27;,</span><br><span class="line"></span><br><span class="line">  // &#123;Object&#125;</span><br><span class="line">  // 一个与模板中 attribute 对应的数据对象。可选。</span><br><span class="line">  &#123;</span><br><span class="line">    // (详情见下一节)</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  // &#123;String | Array&#125;</span><br><span class="line">  // 子级虚拟节点 (VNodes)，由 `createElement()` 构建而成，</span><br><span class="line">  // 也可以使用字符串来生成“文本虚拟节点”。可选。</span><br><span class="line">  [</span><br><span class="line">    &#x27;先写一些文字&#x27;,</span><br><span class="line">    createElement(&#x27;h1&#x27;, &#x27;一则头条&#x27;),</span><br><span class="line">    createElement(MyComponent, &#123;</span><br><span class="line">      props: &#123;</span><br><span class="line">        someProp: &#x27;foobar&#x27;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-<h3 id="深入数据对象"><a href="#深入数据对象" class="headerlink" title="深入数据对象"></a>深入数据对象</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // 与 `v-bind:class` 的 API 相同，</span><br><span class="line">  // 接受一个字符串、对象或字符串和对象组成的数组</span><br><span class="line">  &#x27;class&#x27;: &#123;</span><br><span class="line">    foo: true,</span><br><span class="line">    bar: false</span><br><span class="line">  &#125;,</span><br><span class="line">  // 与 `v-bind:style` 的 API 相同，</span><br><span class="line">  // 接受一个字符串、对象，或对象组成的数组</span><br><span class="line">  style: &#123;</span><br><span class="line">    color: &#x27;red&#x27;,</span><br><span class="line">    fontSize: &#x27;14px&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 普通的 HTML attribute</span><br><span class="line">  attrs: &#123;</span><br><span class="line">    id: &#x27;foo&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 组件 prop</span><br><span class="line">  props: &#123;</span><br><span class="line">    myProp: &#x27;bar&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // DOM property</span><br><span class="line">  domProps: &#123;</span><br><span class="line">    innerHTML: &#x27;baz&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  // 事件监听器在 `on` 内，</span><br><span class="line">  // 但不再支持如 `v-on:keyup.enter` 这样的修饰器。</span><br><span class="line">  // 需要在处理函数中手动检查 keyCode。</span><br><span class="line">  on: &#123;</span><br><span class="line">    click: this.clickHandler</span><br><span class="line">  &#125;,</span><br><span class="line">  // 仅用于组件，用于监听原生事件，而不是组件内部使用</span><br><span class="line">  // `vm.$emit` 触发的事件。</span><br><span class="line">  nativeOn: &#123;</span><br><span class="line">    click: this.nativeClickHandler</span><br><span class="line">  &#125;,</span><br><span class="line">  // 自定义指令。注意，你无法对 `binding` 中的 `oldValue`</span><br><span class="line">  // 赋值，因为 Vue 已经自动为你进行了同步。</span><br><span class="line">  directives: [</span><br><span class="line">    &#123;</span><br><span class="line">      name: &#x27;my-custom-directive&#x27;,</span><br><span class="line">      value: &#x27;2&#x27;,</span><br><span class="line">      expression: &#x27;1 + 1&#x27;,</span><br><span class="line">      arg: &#x27;foo&#x27;,</span><br><span class="line">      modifiers: &#123;</span><br><span class="line">        bar: true</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  // 作用域插槽的格式为</span><br><span class="line">  // &#123; name: props =&gt; VNode | Array&lt;VNode&gt; &#125;</span><br><span class="line">  scopedSlots: &#123;</span><br><span class="line">    default: props =&gt; createElement(&#x27;span&#x27;, props.text)</span><br><span class="line">  &#125;,</span><br><span class="line">  // 如果组件是其它组件的子组件，需为插槽指定名称</span><br><span class="line">  slot: &#x27;name-of-slot&#x27;,</span><br><span class="line">  // 其它特殊顶层 property</span><br><span class="line">  key: &#x27;myKey&#x27;,</span><br><span class="line">  ref: &#x27;myRef&#x27;,</span><br><span class="line">  // 如果你在渲染函数中给多个元素都应用了相同的 ref 名，</span><br><span class="line">  // 那么 `$refs.myRef` 会变成一个数组。</span><br><span class="line">  refInFor: true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>vue</tag>
       </tags>
   </entry>
   <entry>
@@ -1512,51 +1512,6 @@
 ]]></content>
       <categories>
         <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>从setTimeout()函数开始谈起</title>
-    <url>/2017/08/22/settimeout/</url>
-    <content><![CDATA[<p>最近在阮一峰老师的网站学习es6，在promise小节下面看到下面的代码，作为小白的我看到这个代码的第一反应是setTimeout怎么有三个参数，上网一查才知道，setTimeout可以跟多个参数，第三个及之后的参数都是第一个参数（函数）的参数</p>
-<p>下面是一个<code>Promise</code>对象的简单例子。</p>
-<pre><code>function timeout(ms) &#123;
-  return new Promise((resolve, reject) =&gt; &#123;
-    setTimeout(resolve, ms, &apos;done&apos;);
-  &#125;);
-&#125;
-
-timeout(100).then((value) =&gt; &#123;
-  console.log(value);
-&#125;);</code></pre><h3 id="定义和用法"><a href="#定义和用法" class="headerlink" title="定义和用法"></a>定义和用法</h3><p>setTimeout() 方法用于在指定的毫秒数后调用函数或计算表达式。</p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p>setTimeout(code,millisec)</p>
-<h3 id="第一个参数"><a href="#第一个参数" class="headerlink" title="第一个参数"></a>第一个参数</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">setTimeout</span>(<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>),<span class="number">3000</span>);<span class="comment">//console.log(this)会立即执行</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="string">&#x27;console.log(this)&#x27;</span>,<span class="number">3000</span>);<span class="comment">//console.log(this)加引号之后3s之后执行</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>)&#125;,<span class="number">3000</span>);<span class="comment">//console.log(this)3s之后执行</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">setTimeout</span>(test,<span class="number">3000</span>);<span class="comment">//console.log(this)3s之后执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="title function_">test</span>(),<span class="number">3000</span>);<span class="comment">//console.log(this)立即执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="string">&#x27;test()&#x27;</span>,<span class="number">3000</span>);<span class="comment">//console.log(this)3s之后执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>总结：setTimeout里面的函数有三种正确写法 </p>
-<ol>
-<li>用引号引起来，</li>
-<li>放到匿名函数里，</li>
-<li>使用函数名直接调用，不加括号。   </li>
-</ol>
-<h3 id="第一个参数this的作用域"><a href="#第一个参数this的作用域" class="headerlink" title="第一个参数this的作用域"></a>第一个参数this的作用域</h3><p>参考：<a href="http://www.cnblogs.com/hutaoer/p/3423782.html">http://www.cnblogs.com/hutaoer/p/3423782.html</a> </p>
-<p>第一段代码：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> test = <span class="string">&quot;in the window&quot;</span>;</span><br><span class="line"> </span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;<span class="title function_">alert</span>(<span class="string">&#x27;outer &#x27;</span> + test)&#125;, <span class="number">0</span>); <span class="comment">// 输出 outer in the window ，默认在window的全局作用域下</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>) &#123;</span><br><span class="line"> <span class="keyword">var</span> test = <span class="string">&#x27;in the f!&#x27;</span>; <span class="comment">// 局部变量，window作用域不可访问</span></span><br><span class="line"> <span class="built_in">setTimeout</span>(<span class="string">&#x27;alert(&quot;inner &quot; + test)&#x27;</span>, <span class="number">0</span>); <span class="comment">// 输出 inner in the window, 虽然在f方法的中调用，但执行代码(字符串形式的代码)默认在window全局作用域下，test也指向全局的test</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="title function_">f</span>();</span><br></pre></td></tr></table></figure>
-<p>第二段代码：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> test = <span class="string">&quot;in the window&quot;</span>;</span><br><span class="line"> </span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;<span class="title function_">alert</span>(<span class="string">&#x27;outer&#x27;</span> + test)&#125;, <span class="number">0</span>); <span class="comment">// outer in the window  ，没有问题，在全局下调用，访问全局中的test</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> test = <span class="string">&#x27;in the f!&#x27;</span>;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="title function_">alert</span>(<span class="string">&#x27;inner &#x27;</span>+ test)&#125;, <span class="number">0</span>);  <span class="comment">// inner in the f!  有问题，不是说好了执行函数中的this指向的是window吗？那test也应该对应window下的值才对，怎么test的值却是 f()中的值呢？？？？</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="title function_">f</span>();</span><br></pre></td></tr></table></figure>
-<p>第三段代码：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> test = <span class="string">&quot;in the window&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&#x27;outer &#x27;</span> + test)</span><br><span class="line">&#125;, <span class="number">0</span>); <span class="comment">// in the window</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> test = <span class="string">&#x27;in the f!&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">ff</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&#x27;inner &#x27;</span> + test);<span class="comment">// 能访问到f中的test局部变量</span></span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&#x27;inner &#x27;</span> + <span class="variable language_">this</span>.<span class="property">test</span>);<span class="comment">//window中的test</span></span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">    <span class="built_in">setTimeout</span>(ff, <span class="number">0</span>); <span class="comment">// inner in the f!</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">f</span>();</span><br></pre></td></tr></table></figure>
-<p>  总结：<br>三种写法中</p>
-<ol>
-<li>引号引起来的函数中的this指向和变量作用域都是window， </li>
-<li>匿名函数中的变量作用域是上下文，this指向是window， </li>
-<li>以函数名直接调用中的变量作用域是上下文，this指向是window。 第2和第3其实是一种写法，不同形式。 其实匿名函数中this应该指向词法作用域，这是javascript的一个错误，在箭头函数中已经修复了这个错误。   </li>
-</ol>
-<h3 id="箭头函数中的this作用域"><a href="#箭头函数中的this作用域" class="headerlink" title="箭头函数中的this作用域"></a>箭头函数中的this作用域</h3><p>参考：<br><a href="https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001438565969057627e5435793645b7acaee3b6869d1374000">https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001438565969057627e5435793645b7acaee3b6869d1374000</a></p>
-]]></content>
-      <categories>
-        <category>technology</category>
       </categories>
   </entry>
   <entry>
@@ -1609,6 +1564,51 @@ timeout(100).then((value) =&gt; &#123;
       <tags>
         <tag>shell</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>从setTimeout()函数开始谈起</title>
+    <url>/2017/08/22/settimeout/</url>
+    <content><![CDATA[<p>最近在阮一峰老师的网站学习es6，在promise小节下面看到下面的代码，作为小白的我看到这个代码的第一反应是setTimeout怎么有三个参数，上网一查才知道，setTimeout可以跟多个参数，第三个及之后的参数都是第一个参数（函数）的参数</p>
+<p>下面是一个<code>Promise</code>对象的简单例子。</p>
+<pre><code>function timeout(ms) &#123;
+  return new Promise((resolve, reject) =&gt; &#123;
+    setTimeout(resolve, ms, &apos;done&apos;);
+  &#125;);
+&#125;
+
+timeout(100).then((value) =&gt; &#123;
+  console.log(value);
+&#125;);</code></pre><h3 id="定义和用法"><a href="#定义和用法" class="headerlink" title="定义和用法"></a>定义和用法</h3><p>setTimeout() 方法用于在指定的毫秒数后调用函数或计算表达式。</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p>setTimeout(code,millisec)</p>
+<h3 id="第一个参数"><a href="#第一个参数" class="headerlink" title="第一个参数"></a>第一个参数</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">setTimeout</span>(<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>),<span class="number">3000</span>);<span class="comment">//console.log(this)会立即执行</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="string">&#x27;console.log(this)&#x27;</span>,<span class="number">3000</span>);<span class="comment">//console.log(this)加引号之后3s之后执行</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>)&#125;,<span class="number">3000</span>);<span class="comment">//console.log(this)3s之后执行</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">setTimeout</span>(test,<span class="number">3000</span>);<span class="comment">//console.log(this)3s之后执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="title function_">test</span>(),<span class="number">3000</span>);<span class="comment">//console.log(this)立即执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="string">&#x27;test()&#x27;</span>,<span class="number">3000</span>);<span class="comment">//console.log(this)3s之后执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>总结：setTimeout里面的函数有三种正确写法 </p>
+<ol>
+<li>用引号引起来，</li>
+<li>放到匿名函数里，</li>
+<li>使用函数名直接调用，不加括号。   </li>
+</ol>
+<h3 id="第一个参数this的作用域"><a href="#第一个参数this的作用域" class="headerlink" title="第一个参数this的作用域"></a>第一个参数this的作用域</h3><p>参考：<a href="http://www.cnblogs.com/hutaoer/p/3423782.html">http://www.cnblogs.com/hutaoer/p/3423782.html</a> </p>
+<p>第一段代码：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> test = <span class="string">&quot;in the window&quot;</span>;</span><br><span class="line"> </span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;<span class="title function_">alert</span>(<span class="string">&#x27;outer &#x27;</span> + test)&#125;, <span class="number">0</span>); <span class="comment">// 输出 outer in the window ，默认在window的全局作用域下</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>) &#123;</span><br><span class="line"> <span class="keyword">var</span> test = <span class="string">&#x27;in the f!&#x27;</span>; <span class="comment">// 局部变量，window作用域不可访问</span></span><br><span class="line"> <span class="built_in">setTimeout</span>(<span class="string">&#x27;alert(&quot;inner &quot; + test)&#x27;</span>, <span class="number">0</span>); <span class="comment">// 输出 inner in the window, 虽然在f方法的中调用，但执行代码(字符串形式的代码)默认在window全局作用域下，test也指向全局的test</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="title function_">f</span>();</span><br></pre></td></tr></table></figure>
+<p>第二段代码：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> test = <span class="string">&quot;in the window&quot;</span>;</span><br><span class="line"> </span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;<span class="title function_">alert</span>(<span class="string">&#x27;outer&#x27;</span> + test)&#125;, <span class="number">0</span>); <span class="comment">// outer in the window  ，没有问题，在全局下调用，访问全局中的test</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> test = <span class="string">&#x27;in the f!&#x27;</span>;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="title function_">alert</span>(<span class="string">&#x27;inner &#x27;</span>+ test)&#125;, <span class="number">0</span>);  <span class="comment">// inner in the f!  有问题，不是说好了执行函数中的this指向的是window吗？那test也应该对应window下的值才对，怎么test的值却是 f()中的值呢？？？？</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="title function_">f</span>();</span><br></pre></td></tr></table></figure>
+<p>第三段代码：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> test = <span class="string">&quot;in the window&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&#x27;outer &#x27;</span> + test)</span><br><span class="line">&#125;, <span class="number">0</span>); <span class="comment">// in the window</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> test = <span class="string">&#x27;in the f!&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">ff</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&#x27;inner &#x27;</span> + test);<span class="comment">// 能访问到f中的test局部变量</span></span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&#x27;inner &#x27;</span> + <span class="variable language_">this</span>.<span class="property">test</span>);<span class="comment">//window中的test</span></span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">    <span class="built_in">setTimeout</span>(ff, <span class="number">0</span>); <span class="comment">// inner in the f!</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">f</span>();</span><br></pre></td></tr></table></figure>
+<p>  总结：<br>三种写法中</p>
+<ol>
+<li>引号引起来的函数中的this指向和变量作用域都是window， </li>
+<li>匿名函数中的变量作用域是上下文，this指向是window， </li>
+<li>以函数名直接调用中的变量作用域是上下文，this指向是window。 第2和第3其实是一种写法，不同形式。 其实匿名函数中this应该指向词法作用域，这是javascript的一个错误，在箭头函数中已经修复了这个错误。   </li>
+</ol>
+<h3 id="箭头函数中的this作用域"><a href="#箭头函数中的this作用域" class="headerlink" title="箭头函数中的this作用域"></a>箭头函数中的this作用域</h3><p>参考：<br><a href="https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001438565969057627e5435793645b7acaee3b6869d1374000">https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001438565969057627e5435793645b7acaee3b6869d1374000</a></p>
+]]></content>
+      <categories>
+        <category>technology</category>
+      </categories>
   </entry>
   <entry>
     <title>shell快捷键</title>
@@ -1699,6 +1699,17 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
+    <title>太平洋时间</title>
+    <url>/2017/09/12/taipingyangshijian/</url>
+    <content><![CDATA[<p><strong>PDT</strong>（Pacific Daylight Time）太平洋夏季时间。 相对应的是<a href="https://baike.baidu.com/item/PST"><strong>PST</strong></a>（Pacific Standard Time ）。 夏时制结束后就是PST。 <strong>PST是<a href="https://baike.baidu.com/item/%E5%A4%AA%E5%B9%B3%E6%B4%8B">太平洋</a>标准时间（西八区），与北京时间（东八区）时差-16个小时，也就是北京时间减去16就是PST时间。而PDT比PST早1个小时，就是说PDT与北京时间时差为-15小时。</strong> 在2006年以及之前，美国<a href="https://baike.baidu.com/item/%E5%A4%AA%E5%B9%B3%E6%B4%8B">太平洋</a>时区总是于每年<a href="https://baike.baidu.com/item/%E5%9B%9B%E6%9C%88/67790">四月</a>第一个星期日深夜二时正将本地时间（UTC−8）转成夏令时间（UTC−7） ，并于十月的最后一个星期日深夜二时<a href="https://baike.baidu.com/item/%E6%AD%A3%E8%BD%AC">正转</a>回本地时间。 于2007年生效的2005年能源政策法案，决定了<strong>美国太平洋时区的夏令时间始于每年三月的第二个星期六深夜二时正，并终于每年十一月的第一个<a href="https://baike.baidu.com/item/%E6%98%9F%E6%9C%9F%E6%97%A5/25447">星期日</a>深夜二时正。</strong>而加拿大亦跟随美国的夏令时间制度。</p>
+<p><strong>PDT转换成<a href="https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC/128981">北京</a>时间方法</strong></p>
+<p>PDT从每年3月的第二个星期日到11月的第一个星期日期间和北京<a href="https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%B7%AE">时间差</a>15小时，其余月份和<a href="https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E6%97%B6%E9%97%B4/410384">北京时间</a>差16小时 。例如Oct 02, 2009 at 07:00 PDT= Oct 02, 2009 at 22:00 Beijing Time (7+15=22)</p>
+]]></content>
+      <categories>
+        <category>knowledge</category>
+      </categories>
+  </entry>
+  <entry>
     <title>SSL证书</title>
     <url>/2021/12/23/ssl%E8%AF%81%E4%B9%A6/</url>
     <content><![CDATA[<h3 id="自签证书"><a href="#自签证书" class="headerlink" title="自签证书"></a>自签证书</h3><p>参考 <a href="https://www.jianshu.com/p/d22baeae50ea">https://www.jianshu.com/p/d22baeae50ea</a></p>
@@ -1711,17 +1722,6 @@ timeout(100).then((value) =&gt; &#123;
 ]]></content>
       <categories>
         <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>太平洋时间</title>
-    <url>/2017/09/12/taipingyangshijian/</url>
-    <content><![CDATA[<p><strong>PDT</strong>（Pacific Daylight Time）太平洋夏季时间。 相对应的是<a href="https://baike.baidu.com/item/PST"><strong>PST</strong></a>（Pacific Standard Time ）。 夏时制结束后就是PST。 <strong>PST是<a href="https://baike.baidu.com/item/%E5%A4%AA%E5%B9%B3%E6%B4%8B">太平洋</a>标准时间（西八区），与北京时间（东八区）时差-16个小时，也就是北京时间减去16就是PST时间。而PDT比PST早1个小时，就是说PDT与北京时间时差为-15小时。</strong> 在2006年以及之前，美国<a href="https://baike.baidu.com/item/%E5%A4%AA%E5%B9%B3%E6%B4%8B">太平洋</a>时区总是于每年<a href="https://baike.baidu.com/item/%E5%9B%9B%E6%9C%88/67790">四月</a>第一个星期日深夜二时正将本地时间（UTC−8）转成夏令时间（UTC−7） ，并于十月的最后一个星期日深夜二时<a href="https://baike.baidu.com/item/%E6%AD%A3%E8%BD%AC">正转</a>回本地时间。 于2007年生效的2005年能源政策法案，决定了<strong>美国太平洋时区的夏令时间始于每年三月的第二个星期六深夜二时正，并终于每年十一月的第一个<a href="https://baike.baidu.com/item/%E6%98%9F%E6%9C%9F%E6%97%A5/25447">星期日</a>深夜二时正。</strong>而加拿大亦跟随美国的夏令时间制度。</p>
-<p><strong>PDT转换成<a href="https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC/128981">北京</a>时间方法</strong></p>
-<p>PDT从每年3月的第二个星期日到11月的第一个星期日期间和北京<a href="https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%B7%AE">时间差</a>15小时，其余月份和<a href="https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E6%97%B6%E9%97%B4/410384">北京时间</a>差16小时 。例如Oct 02, 2009 at 07:00 PDT= Oct 02, 2009 at 22:00 Beijing Time (7+15=22)</p>
-]]></content>
-      <categories>
-        <category>knowledge</category>
       </categories>
   </entry>
   <entry>
@@ -2190,24 +2190,24 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
-    <title>zsh 自动补全、语法高亮插件</title>
-    <url>/2021/11/25/zsh%E6%8F%92%E4%BB%B6/</url>
-    <content><![CDATA[<p>在日常使用 zsh 的过程中，如果需要打很多命令，会很麻烦，除了可以使用ctrl+r 的方式来查询历史命令，还可以通过插件的方式来自动匹配命令，提高效率。</p>
-<p>语法高亮也是帮助我们不要打错命令的好帮手。</p>
-<p>第一步，进入 zsh 插件目录，并 clone 项目到此目录中：<br>cd “$ZSH_CUSTOM/plugins”<br>git clone <a href="https://github.com/zsh-users/zsh-syntax-highlighting.git">https://github.com/zsh-users/zsh-syntax-highlighting.git</a><br>git clone <a href="https://github.com/zsh-users/zsh-autosuggestions.git">https://github.com/zsh-users/zsh-autosuggestions.git</a><br>第二步，配置 .zshrc 文件<br>… 上面省略<br>plugins = (git zsh-autosuggestions zsh-syntax-highlighting)<br>… 下面省略<br>最后一步，让配置生效<br>zsh<br>完成！👍</p>
-<p>作者：万有引力万有<br>链接：<a href="https://www.jianshu.com/p/d70f9c4cb47c">https://www.jianshu.com/p/d70f9c4cb47c</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>zsh 设置代理</title>
     <url>/2021/10/03/zsh-%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/</url>
     <content><![CDATA[<p>在 <code>~/.zshrc</code> 文件里添加如下代码</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">alias setproxy=&quot;export ALL_PROXY=http://127.0.0.1:15236&quot;</span><br><span class="line">alias unsetproxy=&quot;unset ALL_PROXY&quot;</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 设置代理</span></span><br><span class="line">setproxy</span><br><span class="line"><span class="comment"># 取消代理</span></span><br><span class="line">unsetproxy</span><br></pre></td></tr></table></figure>
 <p><a href="https://blog.csdn.net/weixin_44259233/article/details/108403620">参考</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>zsh 自动补全、语法高亮插件</title>
+    <url>/2021/11/25/zsh%E6%8F%92%E4%BB%B6/</url>
+    <content><![CDATA[<p>在日常使用 zsh 的过程中，如果需要打很多命令，会很麻烦，除了可以使用ctrl+r 的方式来查询历史命令，还可以通过插件的方式来自动匹配命令，提高效率。</p>
+<p>语法高亮也是帮助我们不要打错命令的好帮手。</p>
+<p>第一步，进入 zsh 插件目录，并 clone 项目到此目录中：<br>cd “$ZSH_CUSTOM/plugins”<br>git clone <a href="https://github.com/zsh-users/zsh-syntax-highlighting.git">https://github.com/zsh-users/zsh-syntax-highlighting.git</a><br>git clone <a href="https://github.com/zsh-users/zsh-autosuggestions.git">https://github.com/zsh-users/zsh-autosuggestions.git</a><br>第二步，配置 .zshrc 文件<br>… 上面省略<br>plugins = (git zsh-autosuggestions zsh-syntax-highlighting)<br>… 下面省略<br>最后一步，让配置生效<br>zsh<br>完成！👍</p>
+<p>作者：万有引力万有<br>链接：<a href="https://www.jianshu.com/p/d70f9c4cb47c">https://www.jianshu.com/p/d70f9c4cb47c</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 ]]></content>
       <categories>
         <category>未分类</category>
@@ -2346,6 +2346,14 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
+    <title>如何获取视频的缓存进度</title>
+    <url>/2022/07/11/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E8%A7%86%E9%A2%91%E7%9A%84%E7%BC%93%E5%AD%98%E8%BF%9B%E5%BA%A6/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>前赤壁赋</title>
     <url>/2018/04/09/%E5%89%8D%E8%B5%A4%E5%A3%81%E8%B5%8B/</url>
     <content><![CDATA[<h1 id="前赤壁赋"><a href="#前赤壁赋" class="headerlink" title="前赤壁赋"></a>前赤壁赋</h1><p>作者：<a href="https://www.baidu.com/s?wd=%E8%8B%8F%E8%BD%BC&amp;usm=2&amp;ie=utf-8&amp;rsv_cq=%E8%B5%A4%E5%A3%81%E8%B5%8B&amp;rsv_dl=0_left_exactqa_detail_28239">苏轼</a></p>
@@ -2363,14 +2371,6 @@ timeout(100).then((value) =&gt; &#123;
 </div>]]></content>
       <categories>
         <category>literature</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>如何获取视频的缓存进度</title>
-    <url>/2022/07/11/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E8%A7%86%E9%A2%91%E7%9A%84%E7%BC%93%E5%AD%98%E8%BF%9B%E5%BA%A6/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>未分类</category>
       </categories>
   </entry>
   <entry>
@@ -2414,21 +2414,6 @@ timeout(100).then((value) =&gt; &#123;
     <content><![CDATA[<p>归园田居·其三</p>
 <p>陶渊明</p>
 <p>种豆南山下，草盛豆苗稀。<br>晨兴理荒秽，带月荷锄归。<br>道狭草木长，夕露沾我衣。<br>衣沾不足惜，但使愿无违。</p>
-]]></content>
-      <categories>
-        <category>literature</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>念奴娇赤壁怀古</title>
-    <url>/2020/11/24/%E5%BF%B5%E5%A5%B4%E5%A8%87%E8%B5%A4%E5%A3%81%E6%80%80%E5%8F%A4/</url>
-    <content><![CDATA[<p>苏轼</p>
-<p>大江东去，浪淘尽，千古风流人物。<br>故垒西边，人道是，三国周郎赤壁。<br>乱石穿空，惊涛拍岸，卷起千堆雪。(穿空 一作：崩云)<br>江山如画，一时多少豪杰。</p>
-<p>遥想公瑾当年，小乔初嫁了，雄姿英发。<br>羽扇纶巾，谈笑间，樯橹灰飞烟灭。(樯橹 一作：强虏)<br>故国神游，多情应笑我，早生华发。<br>人生如梦，一尊还酹江月。(人生 一作：人间；尊 同：樽)</p>
-<p>译文</p>
-<p>大江之水滚滚不断向东流去，滔滔巨浪淘尽千古英雄人物。<br>那旧营垒的西边，人们说那就是三国时周郎大破曹兵的赤壁。<br>岸边乱石林立，像要刺破天空，惊人的巨浪拍击着江岸，激起的浪花好似千万堆白雪。<br>雄壮的江山奇丽如图画，一时间涌现出多少英雄豪杰。</p>
-<p>遥想当年的周瑜春风得意，小乔刚刚嫁给了他做妻子，英姿雄健风度翩翩神采照人。<br>手摇羽扇头戴纶巾，谈笑之间，就把强敌的战船烧得灰飞烟灭。<br>如今我身临古战场神游往昔，可笑我有如此多的怀古柔情，竟如同未老先衰般鬓发斑白。<br>人生犹如一场梦，且洒一杯酒祭奠江上的明月。</p>
-<p>转自：<a href="https://so.gushiwen.org/mingju/juv_2f2012ed6c86.aspx">https://so.gushiwen.org/mingju/juv_2f2012ed6c86.aspx</a></p>
 ]]></content>
       <categories>
         <category>literature</category>
@@ -2608,6 +2593,21 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </categories>
   </entry>
   <entry>
+    <title>念奴娇赤壁怀古</title>
+    <url>/2020/11/24/%E5%BF%B5%E5%A5%B4%E5%A8%87%E8%B5%A4%E5%A3%81%E6%80%80%E5%8F%A4/</url>
+    <content><![CDATA[<p>苏轼</p>
+<p>大江东去，浪淘尽，千古风流人物。<br>故垒西边，人道是，三国周郎赤壁。<br>乱石穿空，惊涛拍岸，卷起千堆雪。(穿空 一作：崩云)<br>江山如画，一时多少豪杰。</p>
+<p>遥想公瑾当年，小乔初嫁了，雄姿英发。<br>羽扇纶巾，谈笑间，樯橹灰飞烟灭。(樯橹 一作：强虏)<br>故国神游，多情应笑我，早生华发。<br>人生如梦，一尊还酹江月。(人生 一作：人间；尊 同：樽)</p>
+<p>译文</p>
+<p>大江之水滚滚不断向东流去，滔滔巨浪淘尽千古英雄人物。<br>那旧营垒的西边，人们说那就是三国时周郎大破曹兵的赤壁。<br>岸边乱石林立，像要刺破天空，惊人的巨浪拍击着江岸，激起的浪花好似千万堆白雪。<br>雄壮的江山奇丽如图画，一时间涌现出多少英雄豪杰。</p>
+<p>遥想当年的周瑜春风得意，小乔刚刚嫁给了他做妻子，英姿雄健风度翩翩神采照人。<br>手摇羽扇头戴纶巾，谈笑之间，就把强敌的战船烧得灰飞烟灭。<br>如今我身临古战场神游往昔，可笑我有如此多的怀古柔情，竟如同未老先衰般鬓发斑白。<br>人生犹如一场梦，且洒一杯酒祭奠江上的明月。</p>
+<p>转自：<a href="https://so.gushiwen.org/mingju/juv_2f2012ed6c86.aspx">https://so.gushiwen.org/mingju/juv_2f2012ed6c86.aspx</a></p>
+]]></content>
+      <categories>
+        <category>literature</category>
+      </categories>
+  </entry>
+  <entry>
     <title>技术博客网站</title>
     <url>/2019/02/16/%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/</url>
     <content><![CDATA[<p>CSDN<br>csdn.net</p>
@@ -2648,6 +2648,15 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </categories>
   </entry>
   <entry>
+    <title>东方欲晓，莫道君行早。踏遍青山人未老，风景这边独好。</title>
+    <url>/2020/03/23/%E6%B8%85%E5%B9%B3%E4%B9%90%E4%BC%9A%E6%98%8C/</url>
+    <content><![CDATA[<p>  清平乐·会昌<br>  ——   毛泽东<br>　东方欲晓，莫道君行早。踏遍青山人未老，风景这边独好。<br>　会昌城外高峰，颠连直接东溟（ming）。战士指看南粤，更加郁郁葱葱。</p>
+]]></content>
+      <categories>
+        <category>literature</category>
+      </categories>
+  </entry>
+  <entry>
     <title>清华保安哥贾作胜自学考入高校的励志故事</title>
     <url>/2018/05/10/%E6%B8%85%E5%8D%8E%E4%BF%9D%E5%AE%89%E5%93%A5%E8%B4%BE%E4%BD%9C%E8%83%9C%E8%87%AA%E5%AD%A6%E8%80%83%E5%85%A5%E9%AB%98%E6%A0%A1%E7%9A%84%E5%8A%B1%E5%BF%97%E6%95%85%E4%BA%8B/</url>
     <content><![CDATA[<p>2011年8月24日，一则&#8221;清华图书馆保安“蹭课”自学，考取山东师范大学&#8221;的消息引爆网络，农家子弟贾作胜一下为人所熟知。</p>
@@ -2662,15 +2671,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
 ]]></content>
       <categories>
         <category>life</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>东方欲晓，莫道君行早。踏遍青山人未老，风景这边独好。</title>
-    <url>/2020/03/23/%E6%B8%85%E5%B9%B3%E4%B9%90%E4%BC%9A%E6%98%8C/</url>
-    <content><![CDATA[<p>  清平乐·会昌<br>  ——   毛泽东<br>　东方欲晓，莫道君行早。踏遍青山人未老，风景这边独好。<br>　会昌城外高峰，颠连直接东溟（ming）。战士指看南粤，更加郁郁葱葱。</p>
-]]></content>
-      <categories>
-        <category>literature</category>
       </categories>
   </entry>
   <entry>
@@ -3257,19 +3257,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </tags>
   </entry>
   <entry>
-    <title>apache配置mime</title>
-    <url>/2019/08/05/technology/apache%E9%85%8D%E7%BD%AEmime/</url>
-    <content><![CDATA[<h1 id="配置文件里"><a href="#配置文件里" class="headerlink" title="配置文件里"></a>配置文件里</h1><p>AddType application/wasm .wasm</p>
-]]></content>
-      <categories>
-        <category>technology</category>
-        <category>Server</category>
-      </categories>
-      <tags>
-        <tag>apache</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>arcgis layer.when 和 view.when 以及 MapImageLayer</title>
     <url>/2019/02/17/technology/arcgis-layer-when-%E5%92%8C-view-when/</url>
     <content><![CDATA[<p>MapImageLayer加载完之后需要view.goto(layer.fullExtent)才能显示</p>
@@ -3298,6 +3285,19 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       <categories>
         <category>未分类</category>
       </categories>
+  </entry>
+  <entry>
+    <title>apache配置mime</title>
+    <url>/2019/08/05/technology/apache%E9%85%8D%E7%BD%AEmime/</url>
+    <content><![CDATA[<h1 id="配置文件里"><a href="#配置文件里" class="headerlink" title="配置文件里"></a>配置文件里</h1><p>AddType application/wasm .wasm</p>
+]]></content>
+      <categories>
+        <category>technology</category>
+        <category>Server</category>
+      </categories>
+      <tags>
+        <tag>apache</tag>
+      </tags>
   </entry>
   <entry>
     <title>axios跨域</title>
@@ -3801,29 +3801,6 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
       </categories>
   </entry>
   <entry>
-    <title>js 代码注释规范</title>
-    <url>/2020/06/02/technology/front-end/javascript/js%20%E6%B3%A8%E9%87%8A%E8%A7%84%E8%8C%83/</url>
-    <content><![CDATA[<h2 id="文件注释"><a href="#文件注释" class="headerlink" title="文件注释"></a>文件注释</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/*!</span><br><span class="line"> * jRaiser 2 Javascript Library</span><br><span class="line"> * waterfall - v1.0.0 (2013-03-15T14:55:51+0800)</span><br><span class="line"> * http://jraiser.org/ | Released under MIT license</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
-<h2 id="普通注释"><a href="#普通注释" class="headerlink" title="普通注释"></a>普通注释</h2><h3 id="单行注释"><a href="#单行注释" class="headerlink" title="单行注释"></a>单行注释</h3><p>总是在单行注释符后留一个空格。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// this is comment</span><br></pre></td></tr></table></figure>
-<p>如果某段代码有功能未实现，或者有待完善，必须添加“TODO”标记，“TODO”前后应留一个空格。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// TODO 未处理IE6-8的兼容性</span><br><span class="line">function setOpacity(node, val) &#123;</span><br><span class="line">    node.style.opacity = val;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h3><p>总是在多行注释的结束符前留一个空格（使星号对齐）。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/*</span><br><span class="line">  this is comment</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
-<h2 id="文档注释"><a href="#文档注释" class="headerlink" title="文档注释"></a>文档注释</h2><h3 id="模块注释"><a href="#模块注释" class="headerlink" title="模块注释"></a>模块注释</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 模块说明</span><br><span class="line"> * @module 模块名</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
-<h3 id="类注释"><a href="#类注释" class="headerlink" title="类注释"></a>类注释</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 类说明</span><br><span class="line"> * @class 类名</span><br><span class="line"> * @constructor</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
-<h3 id="方法注释"><a href="#方法注释" class="headerlink" title="方法注释"></a>方法注释</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 方法说明</span><br><span class="line"> * @method 方法名</span><br><span class="line"> * @for 所属类名</span><br><span class="line"> * @param &#123;参数类型&#125; 参数名 参数说明</span><br><span class="line"> * @return &#123;返回值类型&#125; 返回值说明</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://www.cnblogs.com/chris-oil/p/4067415.html">https://www.cnblogs.com/chris-oil/p/4067415.html</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>js 深浅拷贝</title>
     <url>/2021/01/13/technology/front-end/javascript/js%E6%B7%B1%E6%8B%B7%E8%B4%9D/</url>
     <content><![CDATA[<h2 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h2><h3 id="object-assign"><a href="#object-assign" class="headerlink" title="object.assign"></a>object.assign</h3><h3 id="扩展运算符"><a href="#扩展运算符" class="headerlink" title="扩展运算符"></a>扩展运算符</h3><h3 id="concat-数组"><a href="#concat-数组" class="headerlink" title="concat (数组)"></a>concat (数组)</h3><h3 id="sblice-数组"><a href="#sblice-数组" class="headerlink" title="sblice (数组)"></a>sblice (数组)</h3><h2 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h2><h3 id="JSON-stringfy"><a href="#JSON-stringfy" class="headerlink" title="JSON.stringfy()"></a>JSON.stringfy()</h3><h3 id="手写递归实现"><a href="#手写递归实现" class="headerlink" title="手写递归实现"></a>手写递归实现</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let obj1 = &#123;</span><br><span class="line">  a: &#123;</span><br><span class="line">    b: 1,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">function deepClone(obj) &#123;</span><br><span class="line">  let cloneObj = Array.isArray(obj) ? [] : &#123;&#125;;</span><br><span class="line"></span><br><span class="line">  for (let key in obj) &#123;</span><br><span class="line">    //遍历</span><br><span class="line"></span><br><span class="line">    if (typeof obj[key] === &quot;object&quot;) &#123;</span><br><span class="line">      cloneObj[key] = deepClone(obj[key]); //是对象就再次调用该函数递归</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      cloneObj[key] = obj[key]; //基本类型的话直接复制值</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return cloneObj;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let obj2 = deepClone(obj1);</span><br><span class="line"></span><br><span class="line">obj1.a.b = 2;</span><br><span class="line"></span><br><span class="line">console.log(obj2); //  &#123;a:&#123;b:1&#125;&#125;</span><br></pre></td></tr></table></figure>
@@ -3849,6 +3826,29 @@ pasv_max_port=40100</code></pre><p>关于参数具体意思：</p>
       <categories>
         <category>未分类</category>
       </categories>
+  </entry>
+  <entry>
+    <title>js 代码注释规范</title>
+    <url>/2020/06/02/technology/front-end/javascript/js%20%E6%B3%A8%E9%87%8A%E8%A7%84%E8%8C%83/</url>
+    <content><![CDATA[<h2 id="文件注释"><a href="#文件注释" class="headerlink" title="文件注释"></a>文件注释</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/*!</span><br><span class="line"> * jRaiser 2 Javascript Library</span><br><span class="line"> * waterfall - v1.0.0 (2013-03-15T14:55:51+0800)</span><br><span class="line"> * http://jraiser.org/ | Released under MIT license</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
+<h2 id="普通注释"><a href="#普通注释" class="headerlink" title="普通注释"></a>普通注释</h2><h3 id="单行注释"><a href="#单行注释" class="headerlink" title="单行注释"></a>单行注释</h3><p>总是在单行注释符后留一个空格。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// this is comment</span><br></pre></td></tr></table></figure>
+<p>如果某段代码有功能未实现，或者有待完善，必须添加“TODO”标记，“TODO”前后应留一个空格。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// TODO 未处理IE6-8的兼容性</span><br><span class="line">function setOpacity(node, val) &#123;</span><br><span class="line">    node.style.opacity = val;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h3><p>总是在多行注释的结束符前留一个空格（使星号对齐）。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/*</span><br><span class="line">  this is comment</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
+<h2 id="文档注释"><a href="#文档注释" class="headerlink" title="文档注释"></a>文档注释</h2><h3 id="模块注释"><a href="#模块注释" class="headerlink" title="模块注释"></a>模块注释</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 模块说明</span><br><span class="line"> * @module 模块名</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
+<h3 id="类注释"><a href="#类注释" class="headerlink" title="类注释"></a>类注释</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 类说明</span><br><span class="line"> * @class 类名</span><br><span class="line"> * @constructor</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
+<h3 id="方法注释"><a href="#方法注释" class="headerlink" title="方法注释"></a>方法注释</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 方法说明</span><br><span class="line"> * @method 方法名</span><br><span class="line"> * @for 所属类名</span><br><span class="line"> * @param &#123;参数类型&#125; 参数名 参数说明</span><br><span class="line"> * @return &#123;返回值类型&#125; 返回值说明</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.cnblogs.com/chris-oil/p/4067415.html">https://www.cnblogs.com/chris-oil/p/4067415.html</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
   </entry>
   <entry>
     <title>npm list -g报错</title>
