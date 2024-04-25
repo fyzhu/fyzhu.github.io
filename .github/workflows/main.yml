@@ -38,12 +38,12 @@ jobs:
       - name: Build
         run: npm run b
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.6.2
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} #secrets.ACCESS_TOKEN是项目配置的密钥
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: public # The folder the action should deploy.
-          CLEAN: true # Automatically remove deleted files from the deploy branch
+          # token: ${{ secrets.ACCESS_TOKEN }} #secrets.ACCESS_TOKEN是项目配置的密钥
+          branch: gh-pages # The branch the action should deploy to.
+          folder: public # The folder the action should deploy.
+          clean: true # Automatically remove deleted files from the deploy branch
           # BUILD_SCRIPT: npm install && npm run build
 
