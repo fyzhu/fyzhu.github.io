@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.2">
+<meta name="generator" content="Hexo 7.2.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -28,7 +28,7 @@
 <meta property="og:description" content="大纲 1、swap分区是什么？ 2、为什么需要swap分区？ 3、关于swap分区大小 4、手动创建swap分区 1、swap分区是什么？ swap，即交换分区，除了安装Linux的时候，有多少人关心过它呢？其实，Swap的调整对Linux服务器，特别是Web服务器以及数据库服务器,如Oracle的性能至关重要。 众所周知，现代操作系统都实现了“虚拟内存”这一技术，不但在功能上突破了物理内存的限制">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-05-10T14:47:17.000Z">
-<meta property="article:modified_time" content="2024-04-25T02:29:27.768Z">
+<meta property="article:modified_time" content="2024-04-25T02:46:15.256Z">
 <meta property="article:author" content="Yvan Zhu">
 <meta name="twitter:card" content="summary">
 
@@ -245,7 +245,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -298,7 +298,7 @@
 <p>2、为什么需要swap分区？</p>
 <p>如果系统的物理内存用光了，系统就会跑得很慢，但仍能运行；如果Swap空间用光了，那么系统就会发生错误。例如，Web服务器能根据不同的请求数量衍生出多个服务进程（或线程），如果Swap空间用完，则服务进程无法启动，通常会出现“application is out of memory”的错误，严重时会造成服务进程的死锁。因此Swap空间的分配是很重要的。通常情况下，服务器应用场景中，为安全起见，都会使用swap，防止内存溢出。</p>
 <p>3、关于swap分区大小</p>
-<p>几乎所有Linux 系统管理的书上或者很多资料上都推荐设置swap交换分区大小为物理内存的2倍。这些建议到了现在就不是那么适用了，现在的服务器动不动就是 16GB/32GB 内存，难道相应的交换分区也要扩大到 32GB/64GB？根据 OpenBSD 的安装建议：</p>
+<p>几乎所有Linux 系统管理的书上或者很多资料上都推荐设置swap交换分区大小为物理内存的2倍。这些建议到了现在就不是那么适用了，现在的服务器动不动就是 16GB&#x2F;32GB 内存，难道相应的交换分区也要扩大到 32GB&#x2F;64GB？根据 OpenBSD 的安装建议：</p>
 <p>Many people follow an old rule of thumb that your swap partition should be twice the size of your main system RAM. This rule is nonsense. On a modern system, that’s a LOT of swap, most people prefer that their systems never swap. You don’t want your system to ever run out of RAM+swap, but you usually would rather have enough RAM in the system so it doesn’t need to swap. If you are using a flash device for disk, you probably want no swap partition at all. Use what is appropriate for your needs.</p>
 <p>再看看 RHEL 5 推荐的 swap 分区大小：</p>
 <p>Swap should equal 2x physical RAM for up to 2 GB of physical RAM, and then an additional 1x physical RAM for any amount above 2 GB, but never less than 32 MB. For systems with really large amounts of RAM (more than 32 GB) you can likely get away with a smaller swap partition (around 1x, or less, of physical RAM).</p>
@@ -369,13 +369,13 @@ Calling&nbsp;ioctl()&nbsp;to&nbsp;re-read&nbsp;partition&nbsp;table.
 Syncing&nbsp;disks.
 [root@localhost&nbsp;~]#&nbsp;partprobe&nbsp;/dev/sdb</pre>
 
-<p>OK，/dev/sdb2就是我们新创建的分区。</p>
+<p>OK，&#x2F;dev&#x2F;sdb2就是我们新创建的分区。</p>
 <p><strong>2、使用mkswap命令创建swap文件系统</strong></p>
 <pre class="crayon-plain-tag">[root@localhost&nbsp;~]#&nbsp;mkswap&nbsp;/dev/sdb2
 Setting&nbsp;up&nbsp;swapspace&nbsp;version&nbsp;1,&nbsp;size&nbsp;=&nbsp;518184&nbsp;kB</pre>
 
 <p><strong>3、使用swapon命令激活swap分区</strong></p>
-<h1 id="swapon-device"><a href="#swapon-device" class="headerlink" title="swapon [device]"></a>swapon [device]</h1><h1 id="swapon-a-开启所有标识为swap的分区"><a href="#swapon-a-开启所有标识为swap的分区" class="headerlink" title="swapon -a        # 开启所有标识为swap的分区"></a>swapon -a        # 开启所有标识为swap的分区</h1><pre class="crayon-plain-tag">[root@localhost&nbsp;~]#&nbsp;free&nbsp;-m
+<h1 id="swapon-device"><a href="#swapon-device" class="headerlink" title="swapon [device]"></a>swapon [device]</h1><h1 id="swapon-a-开启所有标识为swap的分区"><a href="#swapon-a-开启所有标识为swap的分区" class="headerlink" title="swapon -a        # 开启所有标识为swap的分区"></a>swapon -a        # 开启所有标识为swap的分区</h1><pre class="crayon-plain-tag">[root@localhost&nbsp;~]#&nbsp;free&nbsp;-m
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;used&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;free&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shared&nbsp;&nbsp;&nbsp;&nbsp;buffers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cached
 Mem:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;122&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;103&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;33
 -/+&nbsp;buffers/cache:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;68&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;53
@@ -391,17 +391,17 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1521&nbsp;&nbsp;&nbsp
 <h1 id="swapoff-device"><a href="#swapoff-device" class="headerlink" title="swapoff [device]"></a>swapoff [device]</h1><h1 id="swapoff-a"><a href="#swapoff-a" class="headerlink" title="swapoff -a"></a>swapoff -a</h1><pre class="crayon-plain-tag">[root@localhost&nbsp;~]#&nbsp;swapoff&nbsp;/dev/sdb2</pre>
 
 <p><strong>5、设置开机自动挂载swap分区</strong></p>
-<p>我们可以编辑/etc/fstab配置文件，在文件末尾增加：</p>
+<p>我们可以编辑&#x2F;etc&#x2F;fstab配置文件，在文件末尾增加：</p>
 <pre class="crayon-plain-tag">/dev/sda5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swap&nbsp;&nbsp;&nbsp;&nbsp;defaults&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;0</pre>
 
 <hr>
 <p>当前系统上，没有任何磁盘空间可以创建分区了，但是又必须要扩展swap时，该如何是好呢？</p>
-<p>在类Unix系统中，/dev/loop（或称vnd (vnode disk)、lofi（循环文件接口））是一种伪设备，这种设备使得文件可以如同块设备一般被访问。在使用之前，循环设备必须与现存文件系统上的文件相关联。这种关联将提供给用户一个应用程序接口，接口将允许文件视为块特殊文件（参见设备文件系统）使用。因此，如果文件中包含一个完整的文件系统，那么这个文件就能如同磁盘设备一般被挂载。</p>
+<p>在类Unix系统中，&#x2F;dev&#x2F;loop（或称vnd (vnode disk)、lofi（循环文件接口））是一种伪设备，这种设备使得文件可以如同块设备一般被访问。在使用之前，循环设备必须与现存文件系统上的文件相关联。这种关联将提供给用户一个应用程序接口，接口将允许文件视为块特殊文件（参见设备文件系统）使用。因此，如果文件中包含一个完整的文件系统，那么这个文件就能如同磁盘设备一般被挂载。</p>
 <p>那么意味着我们可以通过创建本地回环设备，来模拟磁盘分区使用。那么下面就来看看如何使用文件来模拟swap分区。</p>
 <p><strong>1、查看系统swap分区</strong></p>
 <pre class="crayon-plain-tag">[root@localhost&nbsp;~]#&nbsp;cat&nbsp;/proc/swaps&nbsp;
-Filename                Type        Size    Used    Priority
-/dev/sda2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;partition    1052248    71776    -1</pre>
+Filename				Type		Size	Used	Priority
+/dev/sda2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;partition	1052248	71776	-1</pre>
 
 <p><strong>2、使用dd命令创建大文件</strong></p>
 <p>使用下面这条命令，就可以创建一个512M大小的文件，名为swapfile</p>
@@ -416,8 +416,8 @@ Setting&nbsp;up&nbsp;swapspace&nbsp;version&nbsp;1,&nbsp;size&nbsp;=&nbsp;536866
 
 <p><strong>4、使用swapon命令启用swap分区</strong></p>
 <pre class="crayon-plain-tag">[root@localhost&nbsp;~]#&nbsp;cat&nbsp;/proc/swaps
-Filename                Type        Size    Used    Priority
-/dev/sda2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;partition    1052248    71792    -1
+Filename				Type		Size	Used	Priority
+/dev/sda2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;partition	1052248	71792	-1
 [root@localhost&nbsp;~]#&nbsp;free&nbsp;-m
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;used&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;free&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shared&nbsp;&nbsp;&nbsp;&nbsp;buffers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cached
 Mem:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;122&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;119&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50
@@ -425,9 +425,9 @@ Mem:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;122&nbsp;&
 Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1027&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;70&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;957
 [root@localhost&nbsp;~]#&nbsp;swapon&nbsp;swapfile
 [root@localhost&nbsp;~]#&nbsp;cat&nbsp;/proc/swaps
-Filename                Type        Size    Used    Priority
-/dev/sda2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;partition    1052248    71792    -1
-/root/swapfile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file        524280    0    -6
+Filename				Type		Size	Used	Priority
+/dev/sda2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;partition	1052248	71792	-1
+/root/swapfile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file		524280	0	-6
 [root@localhost&nbsp;~]#&nbsp;free&nbsp;-m
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;used&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;free&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shared&nbsp;&nbsp;&nbsp;&nbsp;buffers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cached
 Mem:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;122&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;119&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50
@@ -438,16 +438,16 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
 <pre class="crayon-plain-tag">[root@localhost&nbsp;~]#&nbsp;swapoff&nbsp;swapfile</pre>
 
 <p><strong>6、设置开机自动挂载swap分区</strong></p>
-<p>编辑/etc/fstab文件，写入下面这一行</p>
+<p>编辑&#x2F;etc&#x2F;fstab文件，写入下面这一行</p>
 <pre class="crayon-plain-tag">echo&nbsp;&quot;/root/swapfile&nbsp;swap&nbsp;swap&nbsp;defaults&nbsp;0&nbsp;0&quot;&nbsp;&amp;gt;&amp;gt;&nbsp;/etc/fstab</pre>
 
 <p>总结：</p>
-<p>1. dd if=/dev/zero of=/path/swapfile bs=1k count=2048000</p>
-<p>2. mkswap /path/swapfile</p>
-<p>3. swapon /path/swapfile</p>
-<p>4. 修改/etc/fstab使其启动时自动mount：</p>
-<p>在/etc/fstab中增加如下语句：</p>
-<p>/path/swapfile  swap  swap    defaults 0 0</p>
+<p>1. dd if&#x3D;&#x2F;dev&#x2F;zero of&#x3D;&#x2F;path&#x2F;swapfile bs&#x3D;1k count&#x3D;2048000</p>
+<p>2. mkswap &#x2F;path&#x2F;swapfile</p>
+<p>3. swapon &#x2F;path&#x2F;swapfile</p>
+<p>4. 修改&#x2F;etc&#x2F;fstab使其启动时自动mount：</p>
+<p>在&#x2F;etc&#x2F;fstab中增加如下语句：</p>
+<p>&#x2F;path&#x2F;swapfile  swap  swap    defaults 0 0</p>
 <p>&nbsp;</p>
 <p>转载自：<a target="_blank" rel="noopener" href="http://blog.51cto.com/skypegnu1/1429558">http://blog.51cto.com/skypegnu1/1429558</a></p>
 
@@ -586,7 +586,7 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#swapon-device"><span class="nav-number">1.</span> <span class="nav-text">swapon [device]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#swapon-a-%E5%BC%80%E5%90%AF%E6%89%80%E6%9C%89%E6%A0%87%E8%AF%86%E4%B8%BAswap%E7%9A%84%E5%88%86%E5%8C%BA"><span class="nav-number">2.</span> <span class="nav-text">swapon -a        # 开启所有标识为swap的分区</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#swapoff-device"><span class="nav-number">3.</span> <span class="nav-text">swapoff [device]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#swapoff-a"><span class="nav-number">4.</span> <span class="nav-text">swapoff -a</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#swapon-device"><span class="nav-number">1.</span> <span class="nav-text">swapon [device]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#swapon-a-%E5%BC%80%E5%90%AF%E6%89%80%E6%9C%89%E6%A0%87%E8%AF%86%E4%B8%BAswap%E7%9A%84%E5%88%86%E5%8C%BA"><span class="nav-number">2.</span> <span class="nav-text">swapon -a        # 开启所有标识为swap的分区</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#swapoff-device"><span class="nav-number">3.</span> <span class="nav-text">swapoff [device]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#swapoff-a"><span class="nav-number">4.</span> <span class="nav-text">swapoff -a</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

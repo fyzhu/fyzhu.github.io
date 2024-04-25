@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.2">
+<meta name="generator" content="Hexo 7.2.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -241,7 +241,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -282,7 +282,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="配置文件里"><a href="#配置文件里" class="headerlink" title="配置文件里"></a>配置文件里</h1><p>AddType application/wasm .wasm</p>
+          <h1 id="配置文件里"><a href="#配置文件里" class="headerlink" title="配置文件里"></a>配置文件里</h1><p>AddType application&#x2F;wasm .wasm</p>
 
       
     </div>
@@ -333,7 +333,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -376,8 +376,9 @@
 <li>JSONP</li>
 <li>空iframe加form</li>
 <li>CORS跨域资源共享（Cross-origin resource sharing）</li>
-<li>nginx代理<h3 id="fetch-和-xhr"><a href="#fetch-和-xhr" class="headerlink" title="fetch 和 xhr"></a>fetch 和 xhr</h3><h3 id="withCredentials"><a href="#withCredentials" class="headerlink" title="withCredentials"></a>withCredentials</h3>HTTP 请求方式有许多种，有些请求会触发 CORS 预检请求。“需预检的请求”会使用 OPTIONS 方法发起一个预检请求到服务器，以获知服务器是否允许该实际请求。<br>对于跨域请求浏览器一般不会发送身份凭证信息。如果要发送凭证信息，需要设置 XMLHttpRequest 的 withCredentials 属性为 true：withCredentials: true。此时要求服务器的响应信息中携带 Access-Control-Allow-Credentials: true，否则响应内容将不会返回。<br>对于携带身份凭证的请求，服务器不得设置 Access-Control-Allow-Origin 的值为“*”。因为请求头携带了 Cookie 信息。要将 Access-Control-Allow-Origin 的值设置为<origin>域名。<br>另外，响应头中也携带了 Set-Cookie 字段，尝试对 Cookie 进行修改。如果操作失败，将会抛出异常。<br>————————————————<br>版权声明：本文为CSDN博主「__Amy」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/sansan_7957/article/details/79714486">https://blog.csdn.net/sansan_7957/article/details/79714486</a></li>
+<li>nginx代理</li>
 </ol>
+<h3 id="fetch-和-xhr"><a href="#fetch-和-xhr" class="headerlink" title="fetch 和 xhr"></a>fetch 和 xhr</h3><h3 id="withCredentials"><a href="#withCredentials" class="headerlink" title="withCredentials"></a>withCredentials</h3><p>HTTP 请求方式有许多种，有些请求会触发 CORS 预检请求。“需预检的请求”会使用 OPTIONS 方法发起一个预检请求到服务器，以获知服务器是否允许该实际请求。<br>对于跨域请求浏览器一般不会发送身份凭证信息。如果要发送凭证信息，需要设置 XMLHttpRequest 的 withCredentials 属性为 true：withCredentials: true。此时要求服务器的响应信息中携带 Access-Control-Allow-Credentials: true，否则响应内容将不会返回。<br>对于携带身份凭证的请求，服务器不得设置 Access-Control-Allow-Origin 的值为“*”。因为请求头携带了 Cookie 信息。要将 Access-Control-Allow-Origin 的值设置为<origin>域名。<br>另外，响应头中也携带了 Set-Cookie 字段，尝试对 Cookie 进行修改。如果操作失败，将会抛出异常。<br>————————————————<br>版权声明：本文为CSDN博主「__Amy」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/sansan_7957/article/details/79714486">https://blog.csdn.net/sansan_7957/article/details/79714486</a></p>
 <p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/withCredentials">https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/withCredentials</a></p>
 <h3 id="webpack-代理设置"><a href="#webpack-代理设置" class="headerlink" title="webpack 代理设置"></a>webpack 代理设置</h3><p>参考：<br><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000017867312">https://segmentfault.com/a/1190000017867312</a><br><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000015597029">https://segmentfault.com/a/1190000015597029</a></p>
 
@@ -430,7 +431,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -525,7 +526,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
 
           
@@ -608,7 +609,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
 
           
@@ -692,7 +693,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -792,7 +793,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
 
           
@@ -873,7 +874,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
 
           
@@ -952,7 +953,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -993,12 +994,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>参考文档<br>防火墙设置<br>查看所有打开的端口： firewall-cmd –zone=public –list-ports<br>启动： systemctl start firewalld<br>关闭： systemctl stop firewalld<br>查看状态： systemctl status firewalld<br>开机禁用  ： systemctl disable firewalld<br>开机启用  ： systemctl enable firewalld</p>
+          <p>参考文档<br>防火墙设置<br>查看所有打开的端口： firewall-cmd –zone&#x3D;public –list-ports<br>启动： systemctl start firewalld<br>关闭： systemctl stop firewalld<br>查看状态： systemctl status firewalld<br>开机禁用  ： systemctl disable firewalld<br>开机启用  ： systemctl enable firewalld</p>
 <p>关闭selinux</p>
-<p>#修改配置文件 vi /etc/selinux/config</p>
-<p>#SELINUX=enforcing #注释掉</p>
-<p>#SELINUXTYPE=targeted #注释掉</p>
-<p>SELINUX=disabled #增加</p>
+<p>#修改配置文件 vi &#x2F;etc&#x2F;selinux&#x2F;config</p>
+<p>#SELINUX&#x3D;enforcing #注释掉</p>
+<p>#SELINUXTYPE&#x3D;targeted #注释掉</p>
+<p>SELINUX&#x3D;disabled #增加</p>
 <p>:wq! #保存退出</p>
 <p>#使配置立即生效 setenforce 0</p>
 <p>iptables</p>
@@ -1053,7 +1054,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1096,7 +1097,7 @@
       
           <p>参考文档<a target="_blank" rel="noopener" href="https://www.cnblogs.com/24la/p/mariadb-remoting-access.html">https://www.cnblogs.com/24la/p/mariadb-remoting-access.html</a></p>
 <p>首先配置允许访问的用户，采用授权的方式给用户权限</p>
-<p>1<br>GRANT ALL PRIVILEGES ON <em>.</em> TO ‘root’@’%’IDENTIFIED BY ‘123456’ WITH GRANT OPTION;<br> 说明：root是登陆数据库的用户，123456是登陆数据库的密码，*就是意味着任何来源任何主机反正就是权限很大的样子。</p>
+<p>1<br>GRANT ALL PRIVILEGES ON <em>.</em> TO ‘root‘@’%’IDENTIFIED BY ‘123456’ WITH GRANT OPTION;<br> 说明：root是登陆数据库的用户，123456是登陆数据库的密码，*就是意味着任何来源任何主机反正就是权限很大的样子。</p>
 <p>最后配置好权限之后不应该忘记刷新使之生效</p>
 <p>1<br>flush privileges;<br> 再次访问就可以了吧。</p>
 

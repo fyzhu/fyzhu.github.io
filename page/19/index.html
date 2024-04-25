@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.2">
+<meta name="generator" content="Hexo 7.2.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -241,7 +241,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -282,13 +282,15 @@
 <p>下面是一个<code>Promise</code>对象的简单例子。</p>
 <pre><code>function timeout(ms) &#123;
   return new Promise((resolve, reject) =&gt; &#123;
-    setTimeout(resolve, ms, &apos;done&apos;);
+    setTimeout(resolve, ms, &#39;done&#39;);
   &#125;);
 &#125;
 
 timeout(100).then((value) =&gt; &#123;
   console.log(value);
-&#125;);</code></pre><h3 id="定义和用法"><a href="#定义和用法" class="headerlink" title="定义和用法"></a>定义和用法</h3><p>setTimeout() 方法用于在指定的毫秒数后调用函数或计算表达式。</p>
+&#125;);
+</code></pre>
+<h3 id="定义和用法"><a href="#定义和用法" class="headerlink" title="定义和用法"></a>定义和用法</h3><p>setTimeout() 方法用于在指定的毫秒数后调用函数或计算表达式。</p>
 <h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p>setTimeout(code,millisec)</p>
 <h3 id="第一个参数"><a href="#第一个参数" class="headerlink" title="第一个参数"></a>第一个参数</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">setTimeout</span>(<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>),<span class="number">3000</span>);<span class="comment">//console.log(this)会立即执行</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="string">&#x27;console.log(this)&#x27;</span>,<span class="number">3000</span>);<span class="comment">//console.log(this)加引号之后3s之后执行</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>)&#125;,<span class="number">3000</span>);<span class="comment">//console.log(this)3s之后执行</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">setTimeout</span>(test,<span class="number">3000</span>);<span class="comment">//console.log(this)3s之后执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -299,8 +301,9 @@ timeout(100).then((value) =&gt; &#123;
 <ol>
 <li>用引号引起来，</li>
 <li>放到匿名函数里，</li>
-<li>使用函数名直接调用，不加括号。   </li>
+<li>使用函数名直接调用，不加括号。</li>
 </ol>
+<p>   </p>
 <h3 id="第一个参数this的作用域"><a href="#第一个参数this的作用域" class="headerlink" title="第一个参数this的作用域"></a>第一个参数this的作用域</h3><p>参考：<a target="_blank" rel="noopener" href="http://www.cnblogs.com/hutaoer/p/3423782.html">http://www.cnblogs.com/hutaoer/p/3423782.html</a> </p>
 <p>第一段代码：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> test = <span class="string">&quot;in the window&quot;</span>;</span><br><span class="line"> </span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;<span class="title function_">alert</span>(<span class="string">&#x27;outer &#x27;</span> + test)&#125;, <span class="number">0</span>); <span class="comment">// 输出 outer in the window ，默认在window的全局作用域下</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>) &#123;</span><br><span class="line"> <span class="keyword">var</span> test = <span class="string">&#x27;in the f!&#x27;</span>; <span class="comment">// 局部变量，window作用域不可访问</span></span><br><span class="line"> <span class="built_in">setTimeout</span>(<span class="string">&#x27;alert(&quot;inner &quot; + test)&#x27;</span>, <span class="number">0</span>); <span class="comment">// 输出 inner in the window, 虽然在f方法的中调用，但执行代码(字符串形式的代码)默认在window全局作用域下，test也指向全局的test</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="title function_">f</span>();</span><br></pre></td></tr></table></figure>
@@ -308,12 +311,13 @@ timeout(100).then((value) =&gt; &#123;
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> test = <span class="string">&quot;in the window&quot;</span>;</span><br><span class="line"> </span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;<span class="title function_">alert</span>(<span class="string">&#x27;outer&#x27;</span> + test)&#125;, <span class="number">0</span>); <span class="comment">// outer in the window  ，没有问题，在全局下调用，访问全局中的test</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> test = <span class="string">&#x27;in the f!&#x27;</span>;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="title function_">alert</span>(<span class="string">&#x27;inner &#x27;</span>+ test)&#125;, <span class="number">0</span>);  <span class="comment">// inner in the f!  有问题，不是说好了执行函数中的this指向的是window吗？那test也应该对应window下的值才对，怎么test的值却是 f()中的值呢？？？？</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="title function_">f</span>();</span><br></pre></td></tr></table></figure>
 <p>第三段代码：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> test = <span class="string">&quot;in the window&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&#x27;outer &#x27;</span> + test)</span><br><span class="line">&#125;, <span class="number">0</span>); <span class="comment">// in the window</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> test = <span class="string">&#x27;in the f!&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">ff</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&#x27;inner &#x27;</span> + test);<span class="comment">// 能访问到f中的test局部变量</span></span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&#x27;inner &#x27;</span> + <span class="variable language_">this</span>.<span class="property">test</span>);<span class="comment">//window中的test</span></span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">    <span class="built_in">setTimeout</span>(ff, <span class="number">0</span>); <span class="comment">// inner in the f!</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">f</span>();</span><br></pre></td></tr></table></figure>
-<p>  总结：<br>三种写法中</p>
+<p>  总结：<br>三种写法中</p>
 <ol>
 <li>引号引起来的函数中的this指向和变量作用域都是window， </li>
 <li>匿名函数中的变量作用域是上下文，this指向是window， </li>
-<li>以函数名直接调用中的变量作用域是上下文，this指向是window。 第2和第3其实是一种写法，不同形式。 其实匿名函数中this应该指向词法作用域，这是javascript的一个错误，在箭头函数中已经修复了这个错误。   </li>
+<li>以函数名直接调用中的变量作用域是上下文，this指向是window。 第2和第3其实是一种写法，不同形式。 其实匿名函数中this应该指向词法作用域，这是javascript的一个错误，在箭头函数中已经修复了这个错误。</li>
 </ol>
+<p>   </p>
 <h3 id="箭头函数中的this作用域"><a href="#箭头函数中的this作用域" class="headerlink" title="箭头函数中的this作用域"></a>箭头函数中的this作用域</h3><p>参考：<br><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001438565969057627e5435793645b7acaee3b6869d1374000">https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001438565969057627e5435793645b7acaee3b6869d1374000</a></p>
 
       

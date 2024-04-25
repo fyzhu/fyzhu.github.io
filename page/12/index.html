@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.2">
+<meta name="generator" content="Hexo 7.2.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -241,7 +241,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -334,7 +334,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -375,10 +375,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>1.允许其他主机访问</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    &lt;Directory &quot;F:/wamp/www/test&quot;&gt;</span><br><span class="line">        Options FollowSymLinks</span><br><span class="line">        AllowOverride All</span><br><span class="line">        Order allow,deny</span><br><span class="line">        Allow from all      #允许来自所有主机的访问</span><br><span class="line">        Require all granted #2.4以上需要加这一句</span><br><span class="line">    &lt;/Directory&gt;</span><br><span class="line">    ServerAdmin 826096331@qq.com</span><br><span class="line">    DocumentRoot &quot;F:/wamp/www/test&quot;</span><br><span class="line">    ServerName www.test.com</span><br><span class="line">    DirectoryIndex index.php index.html</span><br><span class="line">    ServerAlias test.com</span><br><span class="line">    ErrorLog &quot;logs/test.bin-error_log&quot;</span><br><span class="line">    CustomLog &quot;logs/test.bin-access_log&quot; common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
-<hr>
-<p>作者：u013032788<br>来源：CSDN<br>原文：<a target="_blank" rel="noopener" href="https://blog.csdn.net/u013032788/article/details/51395622">https://blog.csdn.net/u013032788/article/details/51395622</a><br>版权声明：本文为博主原创文章，转载请附上博文链接！</p>
+          <h2 id="1-允许其他主机访问"><a href="#1-允许其他主机访问" class="headerlink" title="1.允许其他主机访问"></a>1.允许其他主机访问<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    &lt;Directory &quot;F:/wamp/www/test&quot;&gt;</span><br><span class="line">        Options FollowSymLinks</span><br><span class="line">        AllowOverride All</span><br><span class="line">        Order allow,deny</span><br><span class="line">        Allow from all      #允许来自所有主机的访问</span><br><span class="line">        Require all granted #2.4以上需要加这一句</span><br><span class="line">    &lt;/Directory&gt;</span><br><span class="line">    ServerAdmin 826096331@qq.com</span><br><span class="line">    DocumentRoot &quot;F:/wamp/www/test&quot;</span><br><span class="line">    ServerName www.test.com</span><br><span class="line">    DirectoryIndex index.php index.html</span><br><span class="line">    ServerAlias test.com</span><br><span class="line">    ErrorLog &quot;logs/test.bin-error_log&quot;</span><br><span class="line">    CustomLog &quot;logs/test.bin-access_log&quot; common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure></h2><p>作者：u013032788<br>来源：CSDN<br>原文：<a target="_blank" rel="noopener" href="https://blog.csdn.net/u013032788/article/details/51395622">https://blog.csdn.net/u013032788/article/details/51395622</a><br>版权声明：本文为博主原创文章，转载请附上博文链接！</p>
 
       
     </div>
@@ -429,7 +426,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
 
           
@@ -510,7 +507,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
 
           
@@ -588,7 +585,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -693,7 +690,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
 
           
@@ -774,7 +771,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
 
           
@@ -888,7 +885,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -933,8 +930,8 @@
 <p>2<br>(of clothes, places and things 衣服、地方及物品) 漂亮雅致的；陈设讲究的；精美的<br>attractive and designed well</p>
 <p>同义词： stylish<br>an elegant dress</p>
 <p>高雅的连衣裙</p>
-<p>an elegant room/restaurant</p>
-<p>雅致的房间 / 餐厅</p>
+<p>an elegant room&#x2F;restaurant</p>
+<p>雅致的房间 &#x2F; 餐厅</p>
 <p>3<br>(of a plan or an idea 计划或想法) 简练的；简洁的；简明的<br>clever but simple</p>
 <p>an elegant solution to the problem</p>
 <p>解决这个问题的简要方法</p>
@@ -989,7 +986,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
 
           
@@ -1071,7 +1068,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1116,7 +1113,7 @@
 <p>arcgis js 中 layer.when 和 view.when的执行顺序</p>
 <p>当无baseMap时，layer.when先执行，view.when后执行，在view.when中执行view.goto，MapImageLayer正常显示</p>
 <p>当有baseMap时，baseMap加载需要时间，加载完baseMap再加载layer，view.when先执行，layer.when后执行</p>
-<p>当baseMap为天地图时，view.goto有问题，使用view.extent = layer.fullExtent; MapImageLayer有时候会不显示</p>
+<p>当baseMap为天地图时，view.goto有问题，使用view.extent &#x3D; layer.fullExtent; MapImageLayer有时候会不显示</p>
 
       
     </div>

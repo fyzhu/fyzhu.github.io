@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.2">
+<meta name="generator" content="Hexo 7.2.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -241,7 +241,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -278,17 +278,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="找到php-ini文件"><a href="#找到php-ini文件" class="headerlink" title="找到php.ini文件"></a>找到php.ini文件</h2><p>Linux默认文件路径为/etc/php.ini，如果/etc/下找不到此文件，请使用附加方法1<br>如果找不到etc文件夹，请使用附加方法2寻找并修改</p>
-<h2 id="修改upload-max-filesize"><a href="#修改upload-max-filesize" class="headerlink" title="修改upload_max_filesize"></a>修改upload_max_filesize</h2><p>打开php.ini，搜索upload_max_filesize，形如upload_max_filesize=2，即允许上传2M大小到文件，修改为合适大小就可以。</p>
+          <h2 id="找到php-ini文件"><a href="#找到php-ini文件" class="headerlink" title="找到php.ini文件"></a>找到php.ini文件</h2><p>Linux默认文件路径为&#x2F;etc&#x2F;php.ini，如果&#x2F;etc&#x2F;下找不到此文件，请使用附加方法1<br>如果找不到etc文件夹，请使用附加方法2寻找并修改</p>
+<h2 id="修改upload-max-filesize"><a href="#修改upload-max-filesize" class="headerlink" title="修改upload_max_filesize"></a>修改upload_max_filesize</h2><p>打开php.ini，搜索upload_max_filesize，形如upload_max_filesize&#x3D;2，即允许上传2M大小到文件，修改为合适大小就可以。</p>
 <h2 id="重启apache"><a href="#重启apache" class="headerlink" title="重启apache"></a>重启apache</h2><p>sudo service httpd restart</p>
-<h2 id="附加方法1：寻找php-ini"><a href="#附加方法1：寻找php-ini" class="headerlink" title="附加方法1：寻找php.ini"></a>附加方法1：寻找php.ini</h2><p>在网站根目录下新建一个php文件，命名为phpinfo.php<br>打开这个文件输入以下代码<br>&lt;?php<br>phpinfo();//末尾有分号</p>
+<h2 id="附加方法1：寻找php-ini"><a href="#附加方法1：寻找php-ini" class="headerlink" title="附加方法1：寻找php.ini"></a>附加方法1：寻找php.ini</h2><p>在网站根目录下新建一个php文件，命名为phpinfo.php<br>打开这个文件输入以下代码<br>&lt;?php<br>phpinfo();&#x2F;&#x2F;末尾有分号</p>
 <p>访问这个文件即可查看到php.ini的具体路径<br>访问地址<a href="http://ip(如：127.0.0.1)/phpinfo.php">http://ip(如：127.0.0.1)/phpinfo.php</a></p>
 <h2 id="附加方法2：寻找并修改php-ini"><a href="#附加方法2：寻找并修改php-ini" class="headerlink" title="附加方法2：寻找并修改php.ini"></a>附加方法2：寻找并修改php.ini</h2><pre><code>1打开终端
 输入 sudo vi /etc/php.ini  //php.ini的最终路径，以实际为准
 2搜索upload_max_filesize的位置
 输入 /upload_max_filesize 回车，此时会定位到upload_max_filesize，如果有多个匹配项，请找到形如upload_max_filesize=2M到位置
 3修改
-输入i进入修改模式</code></pre><p>将光标移动到需要修改到位置，删除并修改<br>    4保存并退出<br>    输入:wq回车 //注意冒号<br>    5继续接下来到步骤，重启Apache</p>
+输入i进入修改模式
+</code></pre>
+<p>将光标移动到需要修改到位置，删除并修改<br>    4保存并退出<br>    输入:wq回车 &#x2F;&#x2F;注意冒号<br>    5继续接下来到步骤，重启Apache</p>
 
       
     </div>
@@ -339,7 +341,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -436,7 +438,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -535,7 +537,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -652,7 +654,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -743,7 +745,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -780,7 +782,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>axios 默认发送 json<br>想要发送 application/x-www-form-urlencoded 类型的数据<br>可以使用 qs 这个 node module 包</p>
+          <p>axios 默认发送 json<br>想要发送 application&#x2F;x-www-form-urlencoded 类型的数据<br>可以使用 qs 这个 node module 包</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import qs from &#x27;qs&#x27;;</span><br><span class="line">const data = &#123; name:&#x27;xxx&#x27; , age:&#x27;25&#x27;&#125;;  // 我们传的是 js 对象</span><br><span class="line">const options = &#123;</span><br><span class="line">  method: &#x27;POST&#x27;,</span><br><span class="line">  headers: &#123; &#x27;content-type&#x27;: &#x27;application/x-www-form-urlencoded&#x27; &#125;,</span><br><span class="line">  data: qs.stringify(data),   // 用 qs 将js对象转换为字符串 &#x27;name=edward&amp;age=25&#x27;</span><br><span class="line">  url: &#x27;http://www.xxx.com&#x27;</span><br><span class="line">&#125;; </span><br><span class="line">axios(options);</span><br></pre></td></tr></table></figure>
 
 
@@ -835,7 +837,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -928,7 +930,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1023,7 +1025,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1060,7 +1062,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="branch-与-tag-重名"><a href="#branch-与-tag-重名" class="headerlink" title="branch 与 tag 重名"></a>branch 与 tag 重名</h2><p>heads/v21.08<br>tags/v21.08</p>
+          <h2 id="branch-与-tag-重名"><a href="#branch-与-tag-重名" class="headerlink" title="branch 与 tag 重名"></a>branch 与 tag 重名</h2><p>heads&#x2F;v21.08<br>tags&#x2F;v21.08</p>
 <h2 id="log"><a href="#log" class="headerlink" title="log"></a>log</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span> --author=<span class="string">&#x27;&#x27;</span></span><br><span class="line">git <span class="built_in">log</span> -p xxx</span><br></pre></td></tr></table></figure>
 <h2 id="show"><a href="#show" class="headerlink" title="show"></a>show</h2><h2 id="remote"><a href="#remote" class="headerlink" title="remote"></a>remote</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">git remote [-v | --verbose]</span><br><span class="line">git remote add [-t &lt;branch&gt;] [-m &lt;master&gt;] [-f] [--[no-]tags] [--mirror=&lt;fetch|push&gt;] &lt;name&gt; &lt;url&gt;</span><br><span class="line">git remote rename &lt;old&gt; &lt;new&gt;</span><br><span class="line">git remote remove &lt;name&gt;</span><br><span class="line">git remote set-head &lt;name&gt; (-a | --auto | -d | --delete | &lt;branch&gt;)</span><br><span class="line">git remote set-branches [--add] &lt;name&gt; &lt;branch&gt;…​</span><br><span class="line">git remote get-url [--push] [--all] &lt;name&gt;</span><br><span class="line">git remote set-url [--push] &lt;name&gt; &lt;newurl&gt; [&lt;oldurl&gt;]</span><br><span class="line">git remote set-url --add [--push] &lt;name&gt; &lt;newurl&gt;</span><br><span class="line">git remote set-url --delete [--push] &lt;name&gt; &lt;url&gt;</span><br><span class="line">git remote [-v | --verbose] show [-n] &lt;name&gt;…​</span><br><span class="line">git remote prune [-n | --dry-run] &lt;name&gt;…​</span><br><span class="line">git remote [-v | --verbose] update [-p | --prune] [(&lt;group&gt; | &lt;remote&gt;)…​]</span><br><span class="line"></span><br><span class="line">常用</span><br><span class="line">git remote add origin git@xxx.com:/home/git/test.git</span><br></pre></td></tr></table></figure>
 
@@ -1173,7 +1175,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-25 02:29:27" itemprop="dateModified" datetime="2024-04-25T02:29:27+00:00">2024-04-25</time>
+                <time title="修改时间：2024-04-25 02:46:15" itemprop="dateModified" datetime="2024-04-25T02:46:15+00:00">2024-04-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
