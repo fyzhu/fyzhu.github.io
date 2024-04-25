@@ -32,6 +32,17 @@
       </categories>
   </entry>
   <entry>
+    <title>Laravel报错解决方案</title>
+    <url>/2019/02/18/Laravel%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<h2 id="Malformed-UTF-8-characters-possibly-incorrectly-encoded"><a href="#Malformed-UTF-8-characters-possibly-incorrectly-encoded" class="headerlink" title="Malformed UTF-8 characters, possibly incorrectly encoded"></a>Malformed UTF-8 characters, possibly incorrectly encoded</h2><p>使用百度地图的 echart 中的地图压缩算法对 geojson 进行压缩完成后，使用 larevel 返回，会报这个错误</p>
+<p>参考文档<br><a href="https://www.e-learn.cn/content/wangluowenzhang/169226">https://www.e-learn.cn/content/wangluowenzhang/169226</a></p>
+<h2 id="could-not-find-driver"><a href="#could-not-find-driver" class="headerlink" title="could not find driver"></a>could not find driver</h2><p>打开 php 的数据库扩展（如：pgsql ）</p>
+]]></content>
+      <tags>
+        <tag>question</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Mac下使用mysql</title>
     <url>/2019/07/13/Mac%E4%B8%8B%E4%BD%BF%E7%94%A8mysql/</url>
     <content><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
@@ -44,17 +55,6 @@
       <tags>
         <tag>mysql</tag>
         <tag>Mac</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Laravel报错解决方案</title>
-    <url>/2019/02/18/Laravel%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<h2 id="Malformed-UTF-8-characters-possibly-incorrectly-encoded"><a href="#Malformed-UTF-8-characters-possibly-incorrectly-encoded" class="headerlink" title="Malformed UTF-8 characters, possibly incorrectly encoded"></a>Malformed UTF-8 characters, possibly incorrectly encoded</h2><p>使用百度地图的 echart 中的地图压缩算法对 geojson 进行压缩完成后，使用 larevel 返回，会报这个错误</p>
-<p>参考文档<br><a href="https://www.e-learn.cn/content/wangluowenzhang/169226">https://www.e-learn.cn/content/wangluowenzhang/169226</a></p>
-<h2 id="could-not-find-driver"><a href="#could-not-find-driver" class="headerlink" title="could not find driver"></a>could not find driver</h2><p>打开 php 的数据库扩展（如：pgsql ）</p>
-]]></content>
-      <tags>
-        <tag>question</tag>
       </tags>
   </entry>
   <entry>
@@ -1268,22 +1268,6 @@
       </tags>
   </entry>
   <entry>
-    <title>postgresql基本使用</title>
-    <url>/2019/12/24/postgresql%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h4 id="切换postgres用户"><a href="#切换postgres用户" class="headerlink" title="切换postgres用户"></a>切换postgres用户</h4><p><code>$ sudo su - postgres</code></p>
-<h4 id="登录PostgreSQL控制台"><a href="#登录PostgreSQL控制台" class="headerlink" title="登录PostgreSQL控制台"></a>登录PostgreSQL控制台</h4><p><code>$ psql</code><br><code>$ psql -U postgres</code></p>
-<h4 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h4><p><code>postgres-# \q</code></p>
-<h4 id="允许远程访问"><a href="#允许远程访问" class="headerlink" title="允许远程访问"></a>允许远程访问</h4><p>1.修改 <code>pg_hba.conf</code> 在最后面添加</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">host    all             all             0.0.0.0/0               md5</span><br></pre></td></tr></table></figure>
-<p>centos 默认在 &#x2F;var&#x2F;lib&#x2F;pgsql&#x2F;10&#x2F;data 下</p>
-<p>windows 一般在 &#x2F;program files&#x2F;postgresql&#x2F;10&#x2F;data 下</p>
-<p>2.查看 <code>postgresql.conf</code> 是否如下配置</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">listen_addresses = &#x27;*&#x27;</span><br><span class="line">port = 5432</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>postMessage</title>
     <url>/2022/05/16/postMessage/</url>
     <content><![CDATA[<p>postMessage 可用于解决以下方面的问题：</p>
@@ -1308,6 +1292,22 @@
 </ul>
 <p>————————————————<br>版权声明：本文为CSDN博主「huangpb0624」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/huangpb123/article/details/83692019">https://blog.csdn.net/huangpb123/article/details/83692019</a></p>
 ]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>postgresql基本使用</title>
+    <url>/2019/12/24/postgresql%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h4 id="切换postgres用户"><a href="#切换postgres用户" class="headerlink" title="切换postgres用户"></a>切换postgres用户</h4><p><code>$ sudo su - postgres</code></p>
+<h4 id="登录PostgreSQL控制台"><a href="#登录PostgreSQL控制台" class="headerlink" title="登录PostgreSQL控制台"></a>登录PostgreSQL控制台</h4><p><code>$ psql</code><br><code>$ psql -U postgres</code></p>
+<h4 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h4><p><code>postgres-# \q</code></p>
+<h4 id="允许远程访问"><a href="#允许远程访问" class="headerlink" title="允许远程访问"></a>允许远程访问</h4><p>1.修改 <code>pg_hba.conf</code> 在最后面添加</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">host    all             all             0.0.0.0/0               md5</span><br></pre></td></tr></table></figure>
+<p>centos 默认在 &#x2F;var&#x2F;lib&#x2F;pgsql&#x2F;10&#x2F;data 下</p>
+<p>windows 一般在 &#x2F;program files&#x2F;postgresql&#x2F;10&#x2F;data 下</p>
+<p>2.查看 <code>postgresql.conf</code> 是否如下配置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">listen_addresses = &#x27;*&#x27;</span><br><span class="line">port = 5432</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>未分类</category>
       </categories>
@@ -1471,15 +1471,6 @@
       </tags>
   </entry>
   <entry>
-    <title>人性的弱点1之用户成长体系</title>
-    <url>/2017/10/27/renxingderuodian1zhiyonghuyangchengxitong/</url>
-    <content><![CDATA[<p>每个应用软件为了提高打开率，都加入了用户成长体系，最简单常见的就是签到，通过每天的签到获取积分换取奖励或者获得勋章，例如淘宝的淘金币，百度地图的签到抢地主，CF手游中的每天签到领奖励，淘票票每天登陆获取积分（购买电影票获取积分），网易云课堂每天打卡，百词斩每天背单词打卡，QQ音乐每天登陆提高等级，听一个歌手的歌曲达到一定时间获取歌手专属勋章，当然这其中最古老的先驱就是QQ等级了，每天登陆指定时间提高等级。 <img src="http://image.woshipm.com/wp-files/2016/11/1pWLP255zTUpAKn7SpHA.png"> 当然学习类的应用可以利用每日打卡激励学习者坚持每天的学习，但是其他的应用的签到打卡时间长了就会让人产生被绑架的感觉，必须每天坚持签到打卡，如果有一天断了，你所获得的奖励就会降低，或者无法获得勋章，例如淘宝的淘金币，第一天签到得5金币，第二天得10金币，每天多5金币，一直到30金币最高，如果有一天没签到当再签到时又会回到5金币。支付宝、淘宝、京东的会员系统，甚至在你购物达不到一定金额第二年会降级。 <img src="http://www.zhuyunfeng.com/wp-content/uploads/2017/10/2.jpg"> 各应用当然是为了利益最大化，驱使你每天打开APP，但是这却对用户造成了困扰，比方说QQ音乐的用户成长体系，你为了表示你对某位歌手的喜爱，你会不停的听他的歌曲，当连续7天听一个歌手的歌曲超过500分钟之后，你就会获得此歌手的专属勋章，当然勋章也分等级，刚开始是初级勋章，你为了提高勋章等级，就会每次打开QQ音乐的时候都特意听一下这位歌手的歌曲，因为每天只要听一首这位歌手的歌曲就会积20分，积分达到一定程度勋章就会升级，当然你如果真是喜欢这位歌手又不会为这些积分所累那就另说。 <img src="http://www.zhuyunfeng.com/wp-content/uploads/2017/10/3.jpg"> 你为了提高淘票票的等级需要不停的通过淘票票购买电影票；你为了提高支付宝等级不停的购物，使用支付宝支付，充值话费……；你为了获得鼓励金使用支付宝和微信的无现金支付想着今天我不去楼下超市买点东西我就亏了；你为了花掉商家给你的优惠券买一些并不是很需要的商品；你为了提高信用卡额度，消费的时候想是不是能刷这张卡（有点跑远了）。 你刚开始乐此不疲，感觉自己赚到了，时间一长你忽然发现这不是你想要的，你被商家领着往前走。 商家利用你的弱点来达到他们的目的，在这其中我们怎么样才能不受其所累，更好的做自己呢？ 嗯，这是一个值得思考的问题。</p>
-<h2 id="用户成长体系设计分析"><a href="#用户成长体系设计分析" class="headerlink" title="用户成长体系设计分析"></a><a href="http://www.woshipm.com/pd/447292.html">用户成长体系设计分析</a></h2>]]></content>
-      <categories>
-        <category>psychology</category>
-      </categories>
-  </entry>
-  <entry>
     <title>render函数</title>
     <url>/2020/08/13/render%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<h4 id="createElement-参数"><a href="#createElement-参数" class="headerlink" title="createElement 参数"></a>createElement 参数</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// @returns &#123;VNode&#125;</span><br><span class="line">createElement(</span><br><span class="line">  // &#123;String | Object | Function&#125;</span><br><span class="line">  // 一个 HTML 标签名、组件选项对象，或者</span><br><span class="line">  // resolve 了上述任何一种的一个 async 函数。必填项。</span><br><span class="line">  &#x27;div&#x27;,</span><br><span class="line"></span><br><span class="line">  // &#123;Object&#125;</span><br><span class="line">  // 一个与模板中 attribute 对应的数据对象。可选。</span><br><span class="line">  &#123;</span><br><span class="line">    // (详情见下一节)</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  // &#123;String | Array&#125;</span><br><span class="line">  // 子级虚拟节点 (VNodes)，由 `createElement()` 构建而成，</span><br><span class="line">  // 也可以使用字符串来生成“文本虚拟节点”。可选。</span><br><span class="line">  [</span><br><span class="line">    &#x27;先写一些文字&#x27;,</span><br><span class="line">    createElement(&#x27;h1&#x27;, &#x27;一则头条&#x27;),</span><br><span class="line">    createElement(MyComponent, &#123;</span><br><span class="line">      props: &#123;</span><br><span class="line">        someProp: &#x27;foobar&#x27;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
@@ -1488,6 +1479,15 @@
       <tags>
         <tag>vue</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>人性的弱点1之用户成长体系</title>
+    <url>/2017/10/27/renxingderuodian1zhiyonghuyangchengxitong/</url>
+    <content><![CDATA[<p>每个应用软件为了提高打开率，都加入了用户成长体系，最简单常见的就是签到，通过每天的签到获取积分换取奖励或者获得勋章，例如淘宝的淘金币，百度地图的签到抢地主，CF手游中的每天签到领奖励，淘票票每天登陆获取积分（购买电影票获取积分），网易云课堂每天打卡，百词斩每天背单词打卡，QQ音乐每天登陆提高等级，听一个歌手的歌曲达到一定时间获取歌手专属勋章，当然这其中最古老的先驱就是QQ等级了，每天登陆指定时间提高等级。 <img src="http://image.woshipm.com/wp-files/2016/11/1pWLP255zTUpAKn7SpHA.png"> 当然学习类的应用可以利用每日打卡激励学习者坚持每天的学习，但是其他的应用的签到打卡时间长了就会让人产生被绑架的感觉，必须每天坚持签到打卡，如果有一天断了，你所获得的奖励就会降低，或者无法获得勋章，例如淘宝的淘金币，第一天签到得5金币，第二天得10金币，每天多5金币，一直到30金币最高，如果有一天没签到当再签到时又会回到5金币。支付宝、淘宝、京东的会员系统，甚至在你购物达不到一定金额第二年会降级。 <img src="http://www.zhuyunfeng.com/wp-content/uploads/2017/10/2.jpg"> 各应用当然是为了利益最大化，驱使你每天打开APP，但是这却对用户造成了困扰，比方说QQ音乐的用户成长体系，你为了表示你对某位歌手的喜爱，你会不停的听他的歌曲，当连续7天听一个歌手的歌曲超过500分钟之后，你就会获得此歌手的专属勋章，当然勋章也分等级，刚开始是初级勋章，你为了提高勋章等级，就会每次打开QQ音乐的时候都特意听一下这位歌手的歌曲，因为每天只要听一首这位歌手的歌曲就会积20分，积分达到一定程度勋章就会升级，当然你如果真是喜欢这位歌手又不会为这些积分所累那就另说。 <img src="http://www.zhuyunfeng.com/wp-content/uploads/2017/10/3.jpg"> 你为了提高淘票票的等级需要不停的通过淘票票购买电影票；你为了提高支付宝等级不停的购物，使用支付宝支付，充值话费……；你为了获得鼓励金使用支付宝和微信的无现金支付想着今天我不去楼下超市买点东西我就亏了；你为了花掉商家给你的优惠券买一些并不是很需要的商品；你为了提高信用卡额度，消费的时候想是不是能刷这张卡（有点跑远了）。 你刚开始乐此不疲，感觉自己赚到了，时间一长你忽然发现这不是你想要的，你被商家领着往前走。 商家利用你的弱点来达到他们的目的，在这其中我们怎么样才能不受其所累，更好的做自己呢？ 嗯，这是一个值得思考的问题。</p>
+<h2 id="用户成长体系设计分析"><a href="#用户成长体系设计分析" class="headerlink" title="用户成长体系设计分析"></a><a href="http://www.woshipm.com/pd/447292.html">用户成长体系设计分析</a></h2>]]></content>
+      <categories>
+        <category>psychology</category>
+      </categories>
   </entry>
   <entry>
     <title>简历</title>
@@ -1647,10 +1647,9 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
-    <title>数据库去重</title>
-    <url>/2017/09/28/shujukuxiangguan/</url>
-    <content><![CDATA[<h1 id="数据库去重"><a href="#数据库去重" class="headerlink" title="数据库去重"></a>数据库去重</h1><p>使用distinct去重：<br>例：select distinct  column1,column2 … from table_name where ….;<br>注意：1.distinct只能放在去重字段的最前面<br>            2.distinct  后的字段名全部算在去重条件中   也就是如果 column1  且  column2 必须都相同才能算作重复的记录</p>
-<p>数据库子查询怎么写？ 字句查询出去重的数据，单独使用可以正常查出数据 主句想要统计一下数量，但是报错 select count(*) from (SELECT DISTINCT lat,longi from test where id&#x3D;11); 这个语句为什么是错误的？？？</p>
+    <title>数据库删除/清空和修改</title>
+    <url>/2017/09/29/shujukucaozuo/</url>
+    <content><![CDATA[<p>DELETE   语句每次删除一行，并在事务日志中为所删除的每行记录一项。 <br>TRUNCATE   TABLE   通过释放存储表数据所用的数据页来删除数据，并且只在事务日志中记录页的释放。<br><strong>修改表名</strong><br>mysql&gt; alter table student rename person;<br>Query OK, 0 rows affected (0.03 sec)<br><strong>修改字段的数据类型</strong><br>mysql&gt; alter table person modify name varchar(20);<br>Query OK, 0 rows affected (0.18 sec) Records: 0 Duplicates: 0 Warnings: 0<br>此处modify后面的name为字段名，我们将原来的varchar(25)改为varchar(20)<br><strong>修改字段名</strong><br>mysql&gt; alter table person change stu_name name varchar(25);<br>Query OK, 0 rows affected (0.20 sec) Records: 0 Duplicates: 0 Warnings: 0</p>
 ]]></content>
       <categories>
         <category>technology</category>
@@ -1658,9 +1657,10 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
-    <title>数据库删除/清空和修改</title>
-    <url>/2017/09/29/shujukucaozuo/</url>
-    <content><![CDATA[<p>DELETE   语句每次删除一行，并在事务日志中为所删除的每行记录一项。 <br>TRUNCATE   TABLE   通过释放存储表数据所用的数据页来删除数据，并且只在事务日志中记录页的释放。<br><strong>修改表名</strong><br>mysql&gt; alter table student rename person;<br>Query OK, 0 rows affected (0.03 sec)<br><strong>修改字段的数据类型</strong><br>mysql&gt; alter table person modify name varchar(20);<br>Query OK, 0 rows affected (0.18 sec) Records: 0 Duplicates: 0 Warnings: 0<br>此处modify后面的name为字段名，我们将原来的varchar(25)改为varchar(20)<br><strong>修改字段名</strong><br>mysql&gt; alter table person change stu_name name varchar(25);<br>Query OK, 0 rows affected (0.20 sec) Records: 0 Duplicates: 0 Warnings: 0</p>
+    <title>数据库去重</title>
+    <url>/2017/09/28/shujukuxiangguan/</url>
+    <content><![CDATA[<h1 id="数据库去重"><a href="#数据库去重" class="headerlink" title="数据库去重"></a>数据库去重</h1><p>使用distinct去重：<br>例：select distinct  column1,column2 … from table_name where ….;<br>注意：1.distinct只能放在去重字段的最前面<br>            2.distinct  后的字段名全部算在去重条件中   也就是如果 column1  且  column2 必须都相同才能算作重复的记录</p>
+<p>数据库子查询怎么写？ 字句查询出去重的数据，单独使用可以正常查出数据 主句想要统计一下数量，但是报错 select count(*) from (SELECT DISTINCT lat,longi from test where id&#x3D;11); 这个语句为什么是错误的？？？</p>
 ]]></content>
       <categories>
         <category>technology</category>
@@ -2363,14 +2363,6 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
-    <title>如何获取视频的缓存进度</title>
-    <url>/2022/07/11/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E8%A7%86%E9%A2%91%E7%9A%84%E7%BC%93%E5%AD%98%E8%BF%9B%E5%BA%A6/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>前赤壁赋</title>
     <url>/2018/04/09/%E5%89%8D%E8%B5%A4%E5%A3%81%E8%B5%8B/</url>
     <content><![CDATA[<h1 id="前赤壁赋"><a href="#前赤壁赋" class="headerlink" title="前赤壁赋"></a>前赤壁赋</h1><p>作者：<a href="https://www.baidu.com/s?wd=%E8%8B%8F%E8%BD%BC&amp;usm=2&amp;ie=utf-8&amp;rsv_cq=%E8%B5%A4%E5%A3%81%E8%B5%8B&amp;rsv_dl=0_left_exactqa_detail_28239">苏轼</a></p>
@@ -2388,6 +2380,14 @@ timeout(100).then((value) =&gt; &#123;
 </div>]]></content>
       <categories>
         <category>literature</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>如何获取视频的缓存进度</title>
+    <url>/2022/07/11/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E8%A7%86%E9%A2%91%E7%9A%84%E7%BC%93%E5%AD%98%E8%BF%9B%E5%BA%A6/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>未分类</category>
       </categories>
   </entry>
   <entry>
