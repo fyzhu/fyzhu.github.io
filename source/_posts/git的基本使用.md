@@ -145,6 +145,9 @@ git push -f origin master
 However, you should avoid doing this if anyone else is working with your remote repository and has pulled your changes.
 
 In that case, it would be better to `revert` the commits that you don't want, then pushing as normal.
+```bash
+git revert commit_hash
+```
 ## 修改已提交的 commit
 ### 修改最新的 commit
 ```
