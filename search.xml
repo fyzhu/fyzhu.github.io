@@ -58,18 +58,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Mac环境变量设置</title>
-    <url>/2021/06/04/Mac%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE/</url>
-    <content><![CDATA[<h3 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># export 变量名=变量值:变量值</span></span><br><span class="line"><span class="built_in">export</span> http_proxy=http://127.0.0.1:8123/</span><br><span class="line"><span class="built_in">export</span> ALL_PROXY=socks5://127.0.0.1:1086</span><br></pre></td></tr></table></figure>
-<p>等号前后不能有空格<br>用冒号分隔多个值</p>
-<h3 id="删除环境变量"><a href="#删除环境变量" class="headerlink" title="删除环境变量"></a>删除环境变量</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># unset 变量名</span></span><br><span class="line"><span class="built_in">unset</span> http_proxy</span><br><span class="line"><span class="built_in">unset</span> ALL_PROXY</span><br></pre></td></tr></table></figure>
-<h3 id="修改环境变量"><a href="#修改环境变量" class="headerlink" title="修改环境变量"></a>修改环境变量</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在原有 PATH 上增加</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:&lt;PATH 1&gt;:&lt;PATH 2&gt;:&lt;PATH 3&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="查看环境变量"><a href="#查看环境变量" class="headerlink" title="查看环境变量"></a>查看环境变量</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看某一个，在变量名前加 $ 符</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$PATH</span></span><br><span class="line"><span class="comment"># 查看所有</span></span><br><span class="line"><span class="built_in">env</span></span><br><span class="line"><span class="comment"># 打开配置文件</span></span><br><span class="line">open ~/.zshrc</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Mac禁止向日葵开机启动</title>
     <url>/2021/06/16/Mac%E7%A6%81%E6%AD%A2%E5%90%91%E6%97%A5%E8%91%B5%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/</url>
     <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /Library/LaunchAgents</span><br><span class="line">sudo vim com.oray.sunlogin.agent.plist</span><br><span class="line">sudo vim com.oray.sunlogin.startup.plist</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /Library/LaunchDaemons</span><br><span class="line">sudo vim com.oray.sunlogin.helper.plist</span><br><span class="line">sudo vim com.oray.sunlogin.plist</span><br></pre></td></tr></table></figure>
@@ -81,6 +69,18 @@
 <p>来源：简书</p>
 <p>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 ]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Mac环境变量设置</title>
+    <url>/2021/06/04/Mac%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE/</url>
+    <content><![CDATA[<h3 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># export 变量名=变量值:变量值</span></span><br><span class="line"><span class="built_in">export</span> http_proxy=http://127.0.0.1:8123/</span><br><span class="line"><span class="built_in">export</span> ALL_PROXY=socks5://127.0.0.1:1086</span><br></pre></td></tr></table></figure>
+<p>等号前后不能有空格<br>用冒号分隔多个值</p>
+<h3 id="删除环境变量"><a href="#删除环境变量" class="headerlink" title="删除环境变量"></a>删除环境变量</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># unset 变量名</span></span><br><span class="line"><span class="built_in">unset</span> http_proxy</span><br><span class="line"><span class="built_in">unset</span> ALL_PROXY</span><br></pre></td></tr></table></figure>
+<h3 id="修改环境变量"><a href="#修改环境变量" class="headerlink" title="修改环境变量"></a>修改环境变量</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在原有 PATH 上增加</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:&lt;PATH 1&gt;:&lt;PATH 2&gt;:&lt;PATH 3&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="查看环境变量"><a href="#查看环境变量" class="headerlink" title="查看环境变量"></a>查看环境变量</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看某一个，在变量名前加 $ 符</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$PATH</span></span><br><span class="line"><span class="comment"># 查看所有</span></span><br><span class="line"><span class="built_in">env</span></span><br><span class="line"><span class="comment"># 打开配置文件</span></span><br><span class="line">open ~/.zshrc</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>未分类</category>
       </categories>
@@ -120,24 +120,6 @@
       </categories>
   </entry>
   <entry>
-    <title>buglist</title>
-    <url>/2019/02/17/buglist/</url>
-    <content><![CDATA[<p>1.windows10 word excel等的预览功能导致文件夹卡死<br>2.windows10点击右下角下图标，输入法切换时导致小图标抖动</p>
-]]></content>
-      <tags>
-        <tag>list</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>草在结它的种子，风在摇它的叶子，我们站着，不说话，就十分美好</title>
-    <url>/2017/11/30/caozaijietadezhongzifengzaiyaotadeyeziwomenzhanzhebushuohuajiushifenmeihao/</url>
-    <content><![CDATA[<h1 id="《门前》——顾城"><a href="#《门前》——顾城" class="headerlink" title="《门前》——顾城"></a>《门前》——顾城</h1><p>我多么希望，有一个门口<br>早晨，阳光照在草上<br>我们站着<br>扶着自己的门扇<br>门很低，但太阳是明亮的<br>草在结它的种子<br>风在摇它的叶子<br>我们站着，不说话<br>就十分美好<br>有门，不用开开<br>是我们的，就十分美好<br>早晨，黑夜还要流浪<br>我们把六弦琴交给他<br>我们不走了<br>我们需要土地<br>需要永不毁灭的土地<br>我们要乘着它<br>度过一生<br>土地是粗糙的，有时狭隘<br>然而，它有历史<br>有一份天空，一份月亮<br>一份露水和早晨<br>我们爱土地<br>我们站着<br>用木鞋挖着泥土<br>门也晒热了<br>我们轻轻靠着，十分美好<br>墙后的草<br>不会再长大了<br>它只用指尖，触了触</p>
-]]></content>
-      <categories>
-        <category>literature</category>
-      </categories>
-  </entry>
-  <entry>
     <title>钗头凤·红酥手</title>
     <url>/2017/09/19/chaitoufenghongsushou/</url>
     <content><![CDATA[<h1 id="钗头凤·红酥手"><a href="#钗头凤·红酥手" class="headerlink" title="钗头凤·红酥手"></a>钗头凤·红酥手</h1><p>【作者】陆游 【朝代】宋</p>
@@ -147,6 +129,15 @@
       <categories>
         <category>literature</category>
       </categories>
+  </entry>
+  <entry>
+    <title>buglist</title>
+    <url>/2019/02/17/buglist/</url>
+    <content><![CDATA[<p>1.windows10 word excel等的预览功能导致文件夹卡死<br>2.windows10点击右下角下图标，输入法切换时导致小图标抖动</p>
+]]></content>
+      <tags>
+        <tag>list</tag>
+      </tags>
   </entry>
   <entry>
     <title>composer的安装</title>
@@ -260,15 +251,6 @@
       </tags>
   </entry>
   <entry>
-    <title>dom之scroll</title>
-    <url>/2021/07/01/dom%E4%B9%8Bscroll/</url>
-    <content><![CDATA[<p>参考：<br><a href="https://www.cnblogs.com/wangyihong/p/8056859.html">https://www.cnblogs.com/wangyihong/p/8056859.html</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>dreamlist</title>
     <url>/2019/02/18/dreamlist/</url>
     <content><![CDATA[<p>todolist</p>
@@ -281,9 +263,29 @@
       </tags>
   </entry>
   <entry>
+    <title>dom之scroll</title>
+    <url>/2021/07/01/dom%E4%B9%8Bscroll/</url>
+    <content><![CDATA[<p>参考：<br><a href="https://www.cnblogs.com/wangyihong/p/8056859.html">https://www.cnblogs.com/wangyihong/p/8056859.html</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>editorconfig 常用配置</title>
     <url>/2021/12/13/editorconfig-%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">root = true</span><br><span class="line"></span><br><span class="line">[*]</span><br><span class="line">charset = utf-8</span><br><span class="line">end_of_line = lf</span><br><span class="line">indent_size = 2</span><br><span class="line">indent_style = space</span><br><span class="line">insert_final_newline = true</span><br><span class="line">trim_trailing_whitespace = true</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>emmet快捷键</title>
+    <url>/2021/07/01/emmet%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    <content><![CDATA[<h3 id="快速选择相同项目"><a href="#快速选择相同项目" class="headerlink" title="快速选择相同项目"></a>快速选择相同项目</h3><p>Ctrl + D</p>
+<h3 id="回退一次选择"><a href="#回退一次选择" class="headerlink" title="回退一次选择"></a>回退一次选择</h3><p>Ctrl + U</p>
+<h3 id="跳过选中的项目"><a href="#跳过选中的项目" class="headerlink" title="跳过选中的项目"></a>跳过选中的项目</h3><p>Ctrl + K</p>
+]]></content>
       <categories>
         <category>未分类</category>
       </categories>
@@ -312,17 +314,6 @@
       <tags>
         <tag>english</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>emmet快捷键</title>
-    <url>/2021/07/01/emmet%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
-    <content><![CDATA[<h3 id="快速选择相同项目"><a href="#快速选择相同项目" class="headerlink" title="快速选择相同项目"></a>快速选择相同项目</h3><p>Ctrl + D</p>
-<h3 id="回退一次选择"><a href="#回退一次选择" class="headerlink" title="回退一次选择"></a>回退一次选择</h3><p>Ctrl + U</p>
-<h3 id="跳过选中的项目"><a href="#跳过选中的项目" class="headerlink" title="跳过选中的项目"></a>跳过选中的项目</h3><p>Ctrl + K</p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
   </entry>
   <entry>
     <title>fiddler学习笔记</title>
@@ -390,19 +381,6 @@
       </tags>
   </entry>
   <entry>
-    <title>git如何忽略已经加入版本控制的文件</title>
-    <url>/2019/07/20/git-ignore/</url>
-    <content><![CDATA[<p>如果文件已经加入版本控制，再加入.gitignore文件也还是会提交到版本控制。<br>这时需要首先确保文件已经加入.gitignore文件<br>然后使用如下命令：</p>
-<ol>
-<li>文件<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git rm --cached filename</span><br></pre></td></tr></table></figure></li>
-<li>文件夹<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git rm -r --cached foldername</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>不同操作系统下回车符不同导致的git warning</title>
     <url>/2019/07/10/giterror/</url>
     <content><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>windows下git报错warning: LF will be replaced by CRLF in ***. The file will have its original line endings in your working directory.</p>
@@ -424,25 +402,14 @@
       </categories>
   </entry>
   <entry>
-    <title>git报错The following untracked working tree files would be overwritten by checkout</title>
-    <url>/2019/12/04/git%E6%8A%A5%E9%94%99/</url>
-    <content><![CDATA[<p>解决方式：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clean -d -fx</span><br></pre></td></tr></table></figure>
-<p>删除 一些 没有 git add 的 文件；</p>
-<p>git clean 参数 </p>
-<pre><code>-n 显示将要删除的文件和目录；
-
--x -----删除忽略文件已经对git来说不识别的文件
-
--d -----删除未被添加到git的路径中的文件
-
--f -----强制运行
-</code></pre>
-<p>转载自：<a href="https://blog.csdn.net/u013452337/article/details/81360210">https://blog.csdn.net/u013452337/article/details/81360210</a></p>
+    <title>git如何忽略已经加入版本控制的文件</title>
+    <url>/2019/07/20/git-ignore/</url>
+    <content><![CDATA[<p>如果文件已经加入版本控制，再加入.gitignore文件也还是会提交到版本控制。<br>这时需要首先确保文件已经加入.gitignore文件<br>然后使用如下命令：</p>
+<ol>
+<li>文件<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git rm --cached filename</span><br></pre></td></tr></table></figure></li>
+<li>文件夹<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git rm -r --cached foldername</span><br></pre></td></tr></table></figure></li>
+</ol>
 ]]></content>
-      <categories>
-        <category>technology</category>
-      </categories>
       <tags>
         <tag>git</tag>
       </tags>
@@ -517,6 +484,30 @@
 ]]></content>
       <categories>
         <category>未分类</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git报错The following untracked working tree files would be overwritten by checkout</title>
+    <url>/2019/12/04/git%E6%8A%A5%E9%94%99/</url>
+    <content><![CDATA[<p>解决方式：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clean -d -fx</span><br></pre></td></tr></table></figure>
+<p>删除 一些 没有 git add 的 文件；</p>
+<p>git clean 参数 </p>
+<pre><code>-n 显示将要删除的文件和目录；
+
+-x -----删除忽略文件已经对git来说不识别的文件
+
+-d -----删除未被添加到git的路径中的文件
+
+-f -----强制运行
+</code></pre>
+<p>转载自：<a href="https://blog.csdn.net/u013452337/article/details/81360210">https://blog.csdn.net/u013452337/article/details/81360210</a></p>
+]]></content>
+      <categories>
+        <category>technology</category>
       </categories>
       <tags>
         <tag>git</tag>
@@ -812,6 +803,23 @@
       </categories>
   </entry>
   <entry>
+    <title>miniclass.com.cn</title>
+    <url>/2019/03/06/miniclass-com-cn/</url>
+    <content><![CDATA[<h3 id="slogan"><a href="#slogan" class="headerlink" title="slogan"></a>slogan</h3><p>mini小课，每节课只有一个知识点</p>
+<h4 id="广告文案"><a href="#广告文案" class="headerlink" title="广告文案"></a>广告文案</h4><ol>
+<li>三人行，必有我师<br> 这次你是老师</li>
+<li>衣服贵，包包贵，化妆品贵<br> 这节课却不收费</li>
+<li>来北京多年 还没出人头地<br> 但我相信你 总有过人之处</li>
+</ol>
+]]></content>
+      <categories>
+        <category>idea</category>
+      </categories>
+      <tags>
+        <tag>idea</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>mariadb支持远程访问</title>
     <url>/2019/03/11/mariadb%E6%94%AF%E6%8C%81%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/</url>
     <content><![CDATA[<p>参考文档<a href="https://www.cnblogs.com/24la/p/mariadb-remoting-access.html">https://www.cnblogs.com/24la/p/mariadb-remoting-access.html</a></p>
@@ -827,23 +835,6 @@
       <tags>
         <tag>mysql</tag>
         <tag>mariaDB</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>miniclass.com.cn</title>
-    <url>/2019/03/06/miniclass-com-cn/</url>
-    <content><![CDATA[<h3 id="slogan"><a href="#slogan" class="headerlink" title="slogan"></a>slogan</h3><p>mini小课，每节课只有一个知识点</p>
-<h4 id="广告文案"><a href="#广告文案" class="headerlink" title="广告文案"></a>广告文案</h4><ol>
-<li>三人行，必有我师<br> 这次你是老师</li>
-<li>衣服贵，包包贵，化妆品贵<br> 这节课却不收费</li>
-<li>来北京多年 还没出人头地<br> 但我相信你 总有过人之处</li>
-</ol>
-]]></content>
-      <categories>
-        <category>idea</category>
-      </categories>
-      <tags>
-        <tag>idea</tag>
       </tags>
   </entry>
   <entry>
@@ -922,6 +913,22 @@
       </tags>
   </entry>
   <entry>
+    <title>nginx配置及使用</title>
+    <url>/2021/07/04/nginx%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>401-7-4<br><img src="https://img.mukewang.com/szimg/5fa518a400014c8019201080.jpg" alt="nginx 配置"></p>
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>nginx</p>
+<h3 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h3><p>nginx -s stop</p>
+<h3 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h3><p>nginx -s reload</p>
+<h3 id="检查配置文件"><a href="#检查配置文件" class="headerlink" title="检查配置文件"></a>检查配置文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -t <span class="comment"># 可以查看配置文件所在路径</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server&#123;</span><br><span class="line">        listen 5000;</span><br><span class="line">        server_name localhost;</span><br><span class="line">        location = / &#123;</span><br><span class="line">            proxy_pass http://localhost:3000/;</span><br><span class="line">        &#125;</span><br><span class="line">        location /test &#123;</span><br><span class="line">            proxy_pass http://localhost:3000/test;</span><br><span class="line"></span><br><span class="line">            #   指定允许跨域的方法，*代表所有</span><br><span class="line">            add_header Access-Control-Allow-Methods *;</span><br><span class="line"></span><br><span class="line">            #   预检命令的缓存，如果不缓存每次会发送两次请求</span><br><span class="line">            add_header Access-Control-Max-Age 3600;</span><br><span class="line"></span><br><span class="line">            #   带cookie请求需要加上这个字段，并设置为true</span><br><span class="line">            add_header Access-Control-Allow-Credentials true;</span><br><span class="line"></span><br><span class="line">            #   表示允许这个域跨域调用（客户端发送请求的域名和端口） </span><br><span class="line">            #   $http_origin动态获取请求客户端请求的域   不用*的原因是带cookie的请求不支持*号</span><br><span class="line">            add_header Access-Control-Allow-Origin $http_origin;</span><br><span class="line"></span><br><span class="line">            #   表示请求头的字段 动态获取</span><br><span class="line">            add_header Access-Control-Allow-Headers </span><br><span class="line">            $http_access_control_request_headers;</span><br><span class="line"></span><br><span class="line">            #   OPTIONS预检命令，预检命令通过时才发送请求</span><br><span class="line">            #   检查请求的类型是不是预检命令</span><br><span class="line">            if ($request_method = OPTIONS)&#123;</span><br><span class="line">                return 200;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>参考：<a href="https://www.cnblogs.com/PengfeiSong/p/12993446.html">https://www.cnblogs.com/PengfeiSong/p/12993446.html</a></p>
+<h3 id="导入配置文件"><a href="#导入配置文件" class="headerlink" title="导入配置文件"></a>导入配置文件</h3><p><code>include servers/*;</code><br>相对于当前文件</p>
+<h3 id="配置多-server"><a href="#配置多-server" class="headerlink" title="配置多 server"></a>配置多 server</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        server_name a.com;</span><br><span class="line">        location = / &#123;</span><br><span class="line">            proxy_pass http://localhost:3000/;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        server_name b.com;</span><br><span class="line">        location = / &#123;</span><br><span class="line">            proxy_pass http://localhost:8000/;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>mysql编码问题导致插入中文报错Incorrect string value:</title>
     <url>/2018/05/22/mysql%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98%E5%AF%BC%E8%87%B4%E6%8F%92%E5%85%A5%E4%B8%AD%E6%96%87%E6%8A%A5%E9%94%99Incorrect-string-value/</url>
     <content><![CDATA[<p>设置数据库编码为中文</p>
@@ -986,22 +993,6 @@
       <tags>
         <tag>mysql</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>nginx配置及使用</title>
-    <url>/2021/07/04/nginx%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>401-7-4<br><img src="https://img.mukewang.com/szimg/5fa518a400014c8019201080.jpg" alt="nginx 配置"></p>
-<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>nginx</p>
-<h3 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h3><p>nginx -s stop</p>
-<h3 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h3><p>nginx -s reload</p>
-<h3 id="检查配置文件"><a href="#检查配置文件" class="headerlink" title="检查配置文件"></a>检查配置文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -t <span class="comment"># 可以查看配置文件所在路径</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server&#123;</span><br><span class="line">        listen 5000;</span><br><span class="line">        server_name localhost;</span><br><span class="line">        location = / &#123;</span><br><span class="line">            proxy_pass http://localhost:3000/;</span><br><span class="line">        &#125;</span><br><span class="line">        location /test &#123;</span><br><span class="line">            proxy_pass http://localhost:3000/test;</span><br><span class="line"></span><br><span class="line">            #   指定允许跨域的方法，*代表所有</span><br><span class="line">            add_header Access-Control-Allow-Methods *;</span><br><span class="line"></span><br><span class="line">            #   预检命令的缓存，如果不缓存每次会发送两次请求</span><br><span class="line">            add_header Access-Control-Max-Age 3600;</span><br><span class="line"></span><br><span class="line">            #   带cookie请求需要加上这个字段，并设置为true</span><br><span class="line">            add_header Access-Control-Allow-Credentials true;</span><br><span class="line"></span><br><span class="line">            #   表示允许这个域跨域调用（客户端发送请求的域名和端口） </span><br><span class="line">            #   $http_origin动态获取请求客户端请求的域   不用*的原因是带cookie的请求不支持*号</span><br><span class="line">            add_header Access-Control-Allow-Origin $http_origin;</span><br><span class="line"></span><br><span class="line">            #   表示请求头的字段 动态获取</span><br><span class="line">            add_header Access-Control-Allow-Headers </span><br><span class="line">            $http_access_control_request_headers;</span><br><span class="line"></span><br><span class="line">            #   OPTIONS预检命令，预检命令通过时才发送请求</span><br><span class="line">            #   检查请求的类型是不是预检命令</span><br><span class="line">            if ($request_method = OPTIONS)&#123;</span><br><span class="line">                return 200;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>参考：<a href="https://www.cnblogs.com/PengfeiSong/p/12993446.html">https://www.cnblogs.com/PengfeiSong/p/12993446.html</a></p>
-<h3 id="导入配置文件"><a href="#导入配置文件" class="headerlink" title="导入配置文件"></a>导入配置文件</h3><p><code>include servers/*;</code><br>相对于当前文件</p>
-<h3 id="配置多-server"><a href="#配置多-server" class="headerlink" title="配置多 server"></a>配置多 server</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        server_name a.com;</span><br><span class="line">        location = / &#123;</span><br><span class="line">            proxy_pass http://localhost:3000/;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        server_name b.com;</span><br><span class="line">        location = / &#123;</span><br><span class="line">            proxy_pass http://localhost:8000/;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
   </entry>
   <entry>
     <title>你和头等舱的距离，差的不只是钱（转载）</title>
@@ -1135,24 +1126,6 @@
       </tags>
   </entry>
   <entry>
-    <title>php处理postgresql图片</title>
-    <url>/2020/09/10/php%E5%A4%84%E7%90%86postgresql%E5%9B%BE%E7%89%87/</url>
-    <content><![CDATA[<h4 id="连接pgsql数据库"><a href="#连接pgsql数据库" class="headerlink" title="连接pgsql数据库"></a>连接pgsql数据库</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$host        = &quot;host=xxx&quot;;</span><br><span class="line">$port        = &quot;port=5432&quot;;</span><br><span class="line">$dbname      = &quot;dbname=xxx&quot;;</span><br><span class="line">$credentials = &quot;user=postgres password=xxx&quot;;</span><br><span class="line"></span><br><span class="line">$db = pg_connect( &quot;$host $port $dbname $credentials&quot;  );</span><br><span class="line">if(!$db)&#123;</span><br><span class="line">  echo &quot;Error : Unable to open database\n&quot;;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">  echo &quot;Opened database successfully\n&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="查询数据库输出图片"><a href="#查询数据库输出图片" class="headerlink" title="查询数据库输出图片"></a>查询数据库输出图片</h4><h5 id="方法一-base64格式"><a href="#方法一-base64格式" class="headerlink" title="方法一 base64格式"></a>方法一 base64格式</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$sql =  &quot;SELECT id,encode(picture, &#x27;BASE64&#x27;) as picture FROM water_flow_pictures_data WHERE id=&quot;.$_GET[&#x27;imgid&#x27;];</span><br><span class="line"></span><br><span class="line">$ret = pg_query($db, $sql);</span><br><span class="line">if(!$ret)&#123;</span><br><span class="line">  echo pg_last_error($db);</span><br><span class="line">  exit;</span><br><span class="line">&#125;</span><br><span class="line">while($row = pg_fetch_row($ret))&#123;</span><br><span class="line">  // 方法一</span><br><span class="line">  echo &#x27;&lt;img src=&quot;data:image/jpg;base64,&#x27; . $row[1] .&#x27;&quot;/&gt;&#x27;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$sql =  &quot;SELECT id,picture FROM water_flow_pictures_data WHERE id=&quot;.$_GET[&#x27;imgid&#x27;];</span><br><span class="line"></span><br><span class="line">$ret = pg_query($db, $sql);</span><br><span class="line">if(!$ret)&#123;</span><br><span class="line">  echo pg_last_error($db);</span><br><span class="line">  exit;</span><br><span class="line">&#125;</span><br><span class="line">while($row = pg_fetch_row($ret))&#123;</span><br><span class="line">  // 方法二</span><br><span class="line">  header(&quot;Content-Type: image/jpeg&quot;);</span><br><span class="line">  echo pg_unescape_bytea($row[1]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="缩放后输出（也可压缩质量）"><a href="#缩放后输出（也可压缩质量）" class="headerlink" title="缩放后输出（也可压缩质量）"></a>缩放后输出（也可压缩质量）</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 获取原图属性</span><br><span class="line">list($width, $height, $type, $attr) = getimagesizefromstring(pg_unescape_bytea($row[1]));</span><br><span class="line">$newWidth = $_GET[&#x27;width&#x27;]?$_GET[&#x27;width&#x27;]: $width;</span><br><span class="line">$newHeight = $height/$width * $newWidth;</span><br><span class="line"></span><br><span class="line">$image =imagecreatefromstring(pg_unescape_bytea($row[1]));</span><br><span class="line">$quality  = 0; // 图片输出质量，0 为最低</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// Create a blank image and add some text</span><br><span class="line">$im = imagecreatetruecolor($newWidth, $newHeight);</span><br><span class="line">imagecopyresized($im,$image,0,0,0,0,$newWidth,$newHeight,$width,$height);</span><br><span class="line">// $text_color = imagecolorallocate($im, 233, 14, 91);</span><br><span class="line">// imagestring($im, 1, 5, 5,  &#x27;A Simple Text String&#x27;, $text_color);</span><br><span class="line"></span><br><span class="line">// Set the content type header - in this case image/jpeg</span><br><span class="line">header(&#x27;Content-Type: image/jpeg&#x27;);</span><br><span class="line"></span><br><span class="line">// Output the image</span><br><span class="line">imagejpeg($im, null, $quality);</span><br><span class="line"></span><br><span class="line">// Free up memory</span><br><span class="line">imagedestroy($im);</span><br></pre></td></tr></table></figure>
-
-<h4 id="关闭数据库"><a href="#关闭数据库" class="headerlink" title="关闭数据库"></a>关闭数据库</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pg_close($db);</span><br></pre></td></tr></table></figure>
-
-
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.php.net/manual/en/ref.image.php">https://www.php.net/manual/en/ref.image.php</a><br><a href="https://www.runoob.com/php/php-image-gd.html">https://www.runoob.com/php/php-image-gd.html</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>php报错与处理</title>
     <url>/2020/07/03/php%E6%8A%A5%E9%94%99%E4%B8%8E%E5%A4%84%E7%90%86/</url>
     <content><![CDATA[<ol>
@@ -1196,6 +1169,24 @@
       <tags>
         <tag>pm2</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>php处理postgresql图片</title>
+    <url>/2020/09/10/php%E5%A4%84%E7%90%86postgresql%E5%9B%BE%E7%89%87/</url>
+    <content><![CDATA[<h4 id="连接pgsql数据库"><a href="#连接pgsql数据库" class="headerlink" title="连接pgsql数据库"></a>连接pgsql数据库</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$host        = &quot;host=xxx&quot;;</span><br><span class="line">$port        = &quot;port=5432&quot;;</span><br><span class="line">$dbname      = &quot;dbname=xxx&quot;;</span><br><span class="line">$credentials = &quot;user=postgres password=xxx&quot;;</span><br><span class="line"></span><br><span class="line">$db = pg_connect( &quot;$host $port $dbname $credentials&quot;  );</span><br><span class="line">if(!$db)&#123;</span><br><span class="line">  echo &quot;Error : Unable to open database\n&quot;;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">  echo &quot;Opened database successfully\n&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="查询数据库输出图片"><a href="#查询数据库输出图片" class="headerlink" title="查询数据库输出图片"></a>查询数据库输出图片</h4><h5 id="方法一-base64格式"><a href="#方法一-base64格式" class="headerlink" title="方法一 base64格式"></a>方法一 base64格式</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$sql =  &quot;SELECT id,encode(picture, &#x27;BASE64&#x27;) as picture FROM water_flow_pictures_data WHERE id=&quot;.$_GET[&#x27;imgid&#x27;];</span><br><span class="line"></span><br><span class="line">$ret = pg_query($db, $sql);</span><br><span class="line">if(!$ret)&#123;</span><br><span class="line">  echo pg_last_error($db);</span><br><span class="line">  exit;</span><br><span class="line">&#125;</span><br><span class="line">while($row = pg_fetch_row($ret))&#123;</span><br><span class="line">  // 方法一</span><br><span class="line">  echo &#x27;&lt;img src=&quot;data:image/jpg;base64,&#x27; . $row[1] .&#x27;&quot;/&gt;&#x27;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$sql =  &quot;SELECT id,picture FROM water_flow_pictures_data WHERE id=&quot;.$_GET[&#x27;imgid&#x27;];</span><br><span class="line"></span><br><span class="line">$ret = pg_query($db, $sql);</span><br><span class="line">if(!$ret)&#123;</span><br><span class="line">  echo pg_last_error($db);</span><br><span class="line">  exit;</span><br><span class="line">&#125;</span><br><span class="line">while($row = pg_fetch_row($ret))&#123;</span><br><span class="line">  // 方法二</span><br><span class="line">  header(&quot;Content-Type: image/jpeg&quot;);</span><br><span class="line">  echo pg_unescape_bytea($row[1]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="缩放后输出（也可压缩质量）"><a href="#缩放后输出（也可压缩质量）" class="headerlink" title="缩放后输出（也可压缩质量）"></a>缩放后输出（也可压缩质量）</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 获取原图属性</span><br><span class="line">list($width, $height, $type, $attr) = getimagesizefromstring(pg_unescape_bytea($row[1]));</span><br><span class="line">$newWidth = $_GET[&#x27;width&#x27;]?$_GET[&#x27;width&#x27;]: $width;</span><br><span class="line">$newHeight = $height/$width * $newWidth;</span><br><span class="line"></span><br><span class="line">$image =imagecreatefromstring(pg_unescape_bytea($row[1]));</span><br><span class="line">$quality  = 0; // 图片输出质量，0 为最低</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// Create a blank image and add some text</span><br><span class="line">$im = imagecreatetruecolor($newWidth, $newHeight);</span><br><span class="line">imagecopyresized($im,$image,0,0,0,0,$newWidth,$newHeight,$width,$height);</span><br><span class="line">// $text_color = imagecolorallocate($im, 233, 14, 91);</span><br><span class="line">// imagestring($im, 1, 5, 5,  &#x27;A Simple Text String&#x27;, $text_color);</span><br><span class="line"></span><br><span class="line">// Set the content type header - in this case image/jpeg</span><br><span class="line">header(&#x27;Content-Type: image/jpeg&#x27;);</span><br><span class="line"></span><br><span class="line">// Output the image</span><br><span class="line">imagejpeg($im, null, $quality);</span><br><span class="line"></span><br><span class="line">// Free up memory</span><br><span class="line">imagedestroy($im);</span><br></pre></td></tr></table></figure>
+
+<h4 id="关闭数据库"><a href="#关闭数据库" class="headerlink" title="关闭数据库"></a>关闭数据库</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pg_close($db);</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.php.net/manual/en/ref.image.php">https://www.php.net/manual/en/ref.image.php</a><br><a href="https://www.runoob.com/php/php-image-gd.html">https://www.runoob.com/php/php-image-gd.html</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
   </entry>
   <entry>
     <title>pm2的基本使用</title>
@@ -1298,22 +1289,6 @@
       </categories>
   </entry>
   <entry>
-    <title>postgresql基本使用</title>
-    <url>/2019/12/24/postgresql%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h4 id="切换postgres用户"><a href="#切换postgres用户" class="headerlink" title="切换postgres用户"></a>切换postgres用户</h4><p><code>$ sudo su - postgres</code></p>
-<h4 id="登录PostgreSQL控制台"><a href="#登录PostgreSQL控制台" class="headerlink" title="登录PostgreSQL控制台"></a>登录PostgreSQL控制台</h4><p><code>$ psql</code><br><code>$ psql -U postgres</code></p>
-<h4 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h4><p><code>postgres-# \q</code></p>
-<h4 id="允许远程访问"><a href="#允许远程访问" class="headerlink" title="允许远程访问"></a>允许远程访问</h4><p>1.修改 <code>pg_hba.conf</code> 在最后面添加</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">host    all             all             0.0.0.0/0               md5</span><br></pre></td></tr></table></figure>
-<p>centos 默认在 &#x2F;var&#x2F;lib&#x2F;pgsql&#x2F;10&#x2F;data 下</p>
-<p>windows 一般在 &#x2F;program files&#x2F;postgresql&#x2F;10&#x2F;data 下</p>
-<p>2.查看 <code>postgresql.conf</code> 是否如下配置</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">listen_addresses = &#x27;*&#x27;</span><br><span class="line">port = 5432</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>postgresql备份还原</title>
     <url>/2019/12/04/postgresql%E5%A4%87%E4%BB%BD%E8%BF%98%E5%8E%9F/</url>
     <content><![CDATA[<h4 id="一、备份"><a href="#一、备份" class="headerlink" title="一、备份"></a>一、备份</h4><p>1.命令行下备份为纯文本格式<br>切换为postgres用户（linux 命令）</p>
@@ -1344,6 +1319,22 @@
       <tags>
         <tag>PostgreSQL</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>postgresql基本使用</title>
+    <url>/2019/12/24/postgresql%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h4 id="切换postgres用户"><a href="#切换postgres用户" class="headerlink" title="切换postgres用户"></a>切换postgres用户</h4><p><code>$ sudo su - postgres</code></p>
+<h4 id="登录PostgreSQL控制台"><a href="#登录PostgreSQL控制台" class="headerlink" title="登录PostgreSQL控制台"></a>登录PostgreSQL控制台</h4><p><code>$ psql</code><br><code>$ psql -U postgres</code></p>
+<h4 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h4><p><code>postgres-# \q</code></p>
+<h4 id="允许远程访问"><a href="#允许远程访问" class="headerlink" title="允许远程访问"></a>允许远程访问</h4><p>1.修改 <code>pg_hba.conf</code> 在最后面添加</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">host    all             all             0.0.0.0/0               md5</span><br></pre></td></tr></table></figure>
+<p>centos 默认在 &#x2F;var&#x2F;lib&#x2F;pgsql&#x2F;10&#x2F;data 下</p>
+<p>windows 一般在 &#x2F;program files&#x2F;postgresql&#x2F;10&#x2F;data 下</p>
+<p>2.查看 <code>postgresql.conf</code> 是否如下配置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">listen_addresses = &#x27;*&#x27;</span><br><span class="line">port = 5432</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
   </entry>
   <entry>
     <title>Pixel</title>
@@ -1394,25 +1385,6 @@
       </categories>
   </entry>
   <entry>
-    <title>mysql支持远程访问</title>
-    <url>/2017/09/19/rangcentoszhichiyuanchengfangwenmysql/</url>
-    <content><![CDATA[<p>Mysql为了安全性，在默认情况下用户只允许在本地登录，可是在有此情况下，还是需要使用用户进行远程连接，因此为了使其可以远程需要进行如下操作：</p>
-<p>一、允许root用户在任何地方进行远程登录，并具有所有库任何操作权限，具体操作如下：<br>在本机先使用root用户登录mysql：<br><code>mysql -u root -p&quot;youpassword&quot;</code><br>进行授权操作：<br><code>mysql&gt;GRANT ALL PRIVILEGES ON *.* TO &#39;root&#39;@&#39;%&#39; IDENTIFIED BY &#39;youpassword&#39; WITH GRANT OPTION;</code><br>重载授权表：<br><code>FLUSH PRIVILEGES;</code><br>退出mysql数据库：<br><code>exit</code></p>
-<p>二、允许root用户在一个特定的IP进行远程登录，并具有所有库任何操作权限，具体操作如下：<br>在本机先使用root用户登录mysql：<br><code>mysql -u root -p&quot;youpassword&quot;</code><br>进行授权操作：<br><code>GRANT ALL PRIVILEGES ON *.* TO root@&quot;172.16.16.152&quot; IDENTIFIED BY &quot;youpassword&quot; WITH GRANT OPTION;</code><br>重载授权表：<br><code>FLUSH PRIVILEGES;</code><br>退出mysql数据库：<br><code>exit</code></p>
-<p>三、允许root用户在一个特定的IP进行远程登录，并具有所有库特定操作权限，具体操作如下：<br>在本机先使用root用户登录mysql：<br><code>mysql -u root -p&quot;youpassword&quot;</code><br>进行授权操作：<br><code>GRANT select，insert，update，delete ON *.* TO root@&quot;172.16.16.152&quot; IDENTIFIED BY &quot;youpassword&quot;;</code><br>重载授权表：<br><code>FLUSH PRIVILEGES;</code><br>退出mysql数据库：<br><code>exit</code></p>
-<p>四、删除用户授权，需要使用REVOKE命令，具体命令格式为：<br><code>REVOKE privileges ON 数据库[.表名] FROM user-name;</code><br>具体实例，先在本机登录mysql:<br><code>mysql -u root -p&quot;youpassword&quot;</code><br>进行授权操作：<br><code>GRANT select，insert，update，delete ON TEST-DB TO test-user@&quot;172.16.16.152&quot; IDENTIFIED BY &quot;youpassword&quot;;</code><br>再进行删除授权操作：<br><code>REVOKE all on TEST-DB from test-user;</code><br>****注：该操作只是清除了用户对于TEST-DB的相关授权权限，但是这个“test-user”这个用户还是存在。<br>最后从用户表内清除用户：<br><code>DELETE FROM user WHERE user=&quot;test-user&quot;;</code><br>重载授权表：<br><code>FLUSH PRIVILEGES;</code><br>退出mysql数据库：<br><code>exit</code></p>
-<p>五、MYSQL权限详细分类：<br>全局管理权限：<br>FILE: 在MySQL服务器上读写文件。<br>PROCESS: 显示或杀死属于其它用户的服务线程。<br>RELOAD: 重载访问控制表，刷新日志等。<br>SHUTDOWN: 关闭MySQL服务。<br>数据库&#x2F;数据表&#x2F;数据列权限：<br>ALTER: 修改已存在的数据表(例如增加&#x2F;删除列)和索引。<br>CREATE: 建立新的数据库或数据表。<br>DELETE: 删除表的记录。<br>DROP: 删除数据表或数据库。<br>INDEX: 建立或删除索引。<br>INSERT: 增加表的记录。<br>SELECT: 显示&#x2F;搜索表的记录。<br>UPDATE: 修改表中已存在的记录。<br>特别的权限：<br>ALL: 允许做任何事(和root一样)。<br>USAGE: 只允许登录–其它什么也不允许做。</p>
-<p>转载至Linux公社：<a href="http://www.linuxidc.com/Linux/2013-06/86459.htm">http://www.linuxidc.com/Linux/2013-06/86459.htm</a></p>
-]]></content>
-      <categories>
-        <category>technology</category>
-        <category>database</category>
-      </categories>
-      <tags>
-        <tag>mysql</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>react hooks</title>
     <url>/2021/01/13/react-hooks/</url>
     <content><![CDATA[<p>函数式编程将那些跟数据计算无关的操作，都称为 “副效应” （side effect） 。如果函数内部直接包含产生副效应的操作，就不再是纯函数了，我们称之为不纯的函数。<br>钩子（hook）就是 React 函数组件的副效应解决方案</p>
@@ -1434,6 +1406,25 @@
       <categories>
         <category>未分类</category>
       </categories>
+  </entry>
+  <entry>
+    <title>mysql支持远程访问</title>
+    <url>/2017/09/19/rangcentoszhichiyuanchengfangwenmysql/</url>
+    <content><![CDATA[<p>Mysql为了安全性，在默认情况下用户只允许在本地登录，可是在有此情况下，还是需要使用用户进行远程连接，因此为了使其可以远程需要进行如下操作：</p>
+<p>一、允许root用户在任何地方进行远程登录，并具有所有库任何操作权限，具体操作如下：<br>在本机先使用root用户登录mysql：<br><code>mysql -u root -p&quot;youpassword&quot;</code><br>进行授权操作：<br><code>mysql&gt;GRANT ALL PRIVILEGES ON *.* TO &#39;root&#39;@&#39;%&#39; IDENTIFIED BY &#39;youpassword&#39; WITH GRANT OPTION;</code><br>重载授权表：<br><code>FLUSH PRIVILEGES;</code><br>退出mysql数据库：<br><code>exit</code></p>
+<p>二、允许root用户在一个特定的IP进行远程登录，并具有所有库任何操作权限，具体操作如下：<br>在本机先使用root用户登录mysql：<br><code>mysql -u root -p&quot;youpassword&quot;</code><br>进行授权操作：<br><code>GRANT ALL PRIVILEGES ON *.* TO root@&quot;172.16.16.152&quot; IDENTIFIED BY &quot;youpassword&quot; WITH GRANT OPTION;</code><br>重载授权表：<br><code>FLUSH PRIVILEGES;</code><br>退出mysql数据库：<br><code>exit</code></p>
+<p>三、允许root用户在一个特定的IP进行远程登录，并具有所有库特定操作权限，具体操作如下：<br>在本机先使用root用户登录mysql：<br><code>mysql -u root -p&quot;youpassword&quot;</code><br>进行授权操作：<br><code>GRANT select，insert，update，delete ON *.* TO root@&quot;172.16.16.152&quot; IDENTIFIED BY &quot;youpassword&quot;;</code><br>重载授权表：<br><code>FLUSH PRIVILEGES;</code><br>退出mysql数据库：<br><code>exit</code></p>
+<p>四、删除用户授权，需要使用REVOKE命令，具体命令格式为：<br><code>REVOKE privileges ON 数据库[.表名] FROM user-name;</code><br>具体实例，先在本机登录mysql:<br><code>mysql -u root -p&quot;youpassword&quot;</code><br>进行授权操作：<br><code>GRANT select，insert，update，delete ON TEST-DB TO test-user@&quot;172.16.16.152&quot; IDENTIFIED BY &quot;youpassword&quot;;</code><br>再进行删除授权操作：<br><code>REVOKE all on TEST-DB from test-user;</code><br>****注：该操作只是清除了用户对于TEST-DB的相关授权权限，但是这个“test-user”这个用户还是存在。<br>最后从用户表内清除用户：<br><code>DELETE FROM user WHERE user=&quot;test-user&quot;;</code><br>重载授权表：<br><code>FLUSH PRIVILEGES;</code><br>退出mysql数据库：<br><code>exit</code></p>
+<p>五、MYSQL权限详细分类：<br>全局管理权限：<br>FILE: 在MySQL服务器上读写文件。<br>PROCESS: 显示或杀死属于其它用户的服务线程。<br>RELOAD: 重载访问控制表，刷新日志等。<br>SHUTDOWN: 关闭MySQL服务。<br>数据库&#x2F;数据表&#x2F;数据列权限：<br>ALTER: 修改已存在的数据表(例如增加&#x2F;删除列)和索引。<br>CREATE: 建立新的数据库或数据表。<br>DELETE: 删除表的记录。<br>DROP: 删除数据表或数据库。<br>INDEX: 建立或删除索引。<br>INSERT: 增加表的记录。<br>SELECT: 显示&#x2F;搜索表的记录。<br>UPDATE: 修改表中已存在的记录。<br>特别的权限：<br>ALL: 允许做任何事(和root一样)。<br>USAGE: 只允许登录–其它什么也不允许做。</p>
+<p>转载至Linux公社：<a href="http://www.linuxidc.com/Linux/2013-06/86459.htm">http://www.linuxidc.com/Linux/2013-06/86459.htm</a></p>
+]]></content>
+      <categories>
+        <category>technology</category>
+        <category>database</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
   </entry>
   <entry>
     <title>redis常用命令</title>
@@ -1482,15 +1473,6 @@
       </tags>
   </entry>
   <entry>
-    <title>人性的弱点1之用户成长体系</title>
-    <url>/2017/10/27/renxingderuodian1zhiyonghuyangchengxitong/</url>
-    <content><![CDATA[<p>每个应用软件为了提高打开率，都加入了用户成长体系，最简单常见的就是签到，通过每天的签到获取积分换取奖励或者获得勋章，例如淘宝的淘金币，百度地图的签到抢地主，CF手游中的每天签到领奖励，淘票票每天登陆获取积分（购买电影票获取积分），网易云课堂每天打卡，百词斩每天背单词打卡，QQ音乐每天登陆提高等级，听一个歌手的歌曲达到一定时间获取歌手专属勋章，当然这其中最古老的先驱就是QQ等级了，每天登陆指定时间提高等级。 <img src="http://image.woshipm.com/wp-files/2016/11/1pWLP255zTUpAKn7SpHA.png"> 当然学习类的应用可以利用每日打卡激励学习者坚持每天的学习，但是其他的应用的签到打卡时间长了就会让人产生被绑架的感觉，必须每天坚持签到打卡，如果有一天断了，你所获得的奖励就会降低，或者无法获得勋章，例如淘宝的淘金币，第一天签到得5金币，第二天得10金币，每天多5金币，一直到30金币最高，如果有一天没签到当再签到时又会回到5金币。支付宝、淘宝、京东的会员系统，甚至在你购物达不到一定金额第二年会降级。 <img src="http://www.zhuyunfeng.com/wp-content/uploads/2017/10/2.jpg"> 各应用当然是为了利益最大化，驱使你每天打开APP，但是这却对用户造成了困扰，比方说QQ音乐的用户成长体系，你为了表示你对某位歌手的喜爱，你会不停的听他的歌曲，当连续7天听一个歌手的歌曲超过500分钟之后，你就会获得此歌手的专属勋章，当然勋章也分等级，刚开始是初级勋章，你为了提高勋章等级，就会每次打开QQ音乐的时候都特意听一下这位歌手的歌曲，因为每天只要听一首这位歌手的歌曲就会积20分，积分达到一定程度勋章就会升级，当然你如果真是喜欢这位歌手又不会为这些积分所累那就另说。 <img src="http://www.zhuyunfeng.com/wp-content/uploads/2017/10/3.jpg"> 你为了提高淘票票的等级需要不停的通过淘票票购买电影票；你为了提高支付宝等级不停的购物，使用支付宝支付，充值话费……；你为了获得鼓励金使用支付宝和微信的无现金支付想着今天我不去楼下超市买点东西我就亏了；你为了花掉商家给你的优惠券买一些并不是很需要的商品；你为了提高信用卡额度，消费的时候想是不是能刷这张卡（有点跑远了）。 你刚开始乐此不疲，感觉自己赚到了，时间一长你忽然发现这不是你想要的，你被商家领着往前走。 商家利用你的弱点来达到他们的目的，在这其中我们怎么样才能不受其所累，更好的做自己呢？ 嗯，这是一个值得思考的问题。</p>
-<h2 id="用户成长体系设计分析"><a href="#用户成长体系设计分析" class="headerlink" title="用户成长体系设计分析"></a><a href="http://www.woshipm.com/pd/447292.html">用户成长体系设计分析</a></h2>]]></content>
-      <categories>
-        <category>psychology</category>
-      </categories>
-  </entry>
-  <entry>
     <title>简历</title>
     <url>/2021/02/24/resume/</url>
     <content><![CDATA[<p>有良好的编程思维，熟悉设计模式</p>
@@ -1499,6 +1481,15 @@
       <categories>
         <category>technology</category>
         <category>front-end</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>人性的弱点1之用户成长体系</title>
+    <url>/2017/10/27/renxingderuodian1zhiyonghuyangchengxitong/</url>
+    <content><![CDATA[<p>每个应用软件为了提高打开率，都加入了用户成长体系，最简单常见的就是签到，通过每天的签到获取积分换取奖励或者获得勋章，例如淘宝的淘金币，百度地图的签到抢地主，CF手游中的每天签到领奖励，淘票票每天登陆获取积分（购买电影票获取积分），网易云课堂每天打卡，百词斩每天背单词打卡，QQ音乐每天登陆提高等级，听一个歌手的歌曲达到一定时间获取歌手专属勋章，当然这其中最古老的先驱就是QQ等级了，每天登陆指定时间提高等级。 <img src="http://image.woshipm.com/wp-files/2016/11/1pWLP255zTUpAKn7SpHA.png"> 当然学习类的应用可以利用每日打卡激励学习者坚持每天的学习，但是其他的应用的签到打卡时间长了就会让人产生被绑架的感觉，必须每天坚持签到打卡，如果有一天断了，你所获得的奖励就会降低，或者无法获得勋章，例如淘宝的淘金币，第一天签到得5金币，第二天得10金币，每天多5金币，一直到30金币最高，如果有一天没签到当再签到时又会回到5金币。支付宝、淘宝、京东的会员系统，甚至在你购物达不到一定金额第二年会降级。 <img src="http://www.zhuyunfeng.com/wp-content/uploads/2017/10/2.jpg"> 各应用当然是为了利益最大化，驱使你每天打开APP，但是这却对用户造成了困扰，比方说QQ音乐的用户成长体系，你为了表示你对某位歌手的喜爱，你会不停的听他的歌曲，当连续7天听一个歌手的歌曲超过500分钟之后，你就会获得此歌手的专属勋章，当然勋章也分等级，刚开始是初级勋章，你为了提高勋章等级，就会每次打开QQ音乐的时候都特意听一下这位歌手的歌曲，因为每天只要听一首这位歌手的歌曲就会积20分，积分达到一定程度勋章就会升级，当然你如果真是喜欢这位歌手又不会为这些积分所累那就另说。 <img src="http://www.zhuyunfeng.com/wp-content/uploads/2017/10/3.jpg"> 你为了提高淘票票的等级需要不停的通过淘票票购买电影票；你为了提高支付宝等级不停的购物，使用支付宝支付，充值话费……；你为了获得鼓励金使用支付宝和微信的无现金支付想着今天我不去楼下超市买点东西我就亏了；你为了花掉商家给你的优惠券买一些并不是很需要的商品；你为了提高信用卡额度，消费的时候想是不是能刷这张卡（有点跑远了）。 你刚开始乐此不疲，感觉自己赚到了，时间一长你忽然发现这不是你想要的，你被商家领着往前走。 商家利用你的弱点来达到他们的目的，在这其中我们怎么样才能不受其所累，更好的做自己呢？ 嗯，这是一个值得思考的问题。</p>
+<h2 id="用户成长体系设计分析"><a href="#用户成长体系设计分析" class="headerlink" title="用户成长体系设计分析"></a><a href="http://www.woshipm.com/pd/447292.html">用户成长体系设计分析</a></h2>]]></content>
+      <categories>
+        <category>psychology</category>
       </categories>
   </entry>
   <entry>
@@ -1519,55 +1510,6 @@
 ]]></content>
       <categories>
         <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>从setTimeout()函数开始谈起</title>
-    <url>/2017/08/22/settimeout/</url>
-    <content><![CDATA[<p>最近在阮一峰老师的网站学习es6，在promise小节下面看到下面的代码，作为小白的我看到这个代码的第一反应是setTimeout怎么有三个参数，上网一查才知道，setTimeout可以跟多个参数，第三个及之后的参数都是第一个参数（函数）的参数</p>
-<p>下面是一个<code>Promise</code>对象的简单例子。</p>
-<pre><code>function timeout(ms) &#123;
-  return new Promise((resolve, reject) =&gt; &#123;
-    setTimeout(resolve, ms, &#39;done&#39;);
-  &#125;);
-&#125;
-
-timeout(100).then((value) =&gt; &#123;
-  console.log(value);
-&#125;);
-</code></pre>
-<h3 id="定义和用法"><a href="#定义和用法" class="headerlink" title="定义和用法"></a>定义和用法</h3><p>setTimeout() 方法用于在指定的毫秒数后调用函数或计算表达式。</p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p>setTimeout(code,millisec)</p>
-<h3 id="第一个参数"><a href="#第一个参数" class="headerlink" title="第一个参数"></a>第一个参数</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">setTimeout</span>(<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>),<span class="number">3000</span>);<span class="comment">//console.log(this)会立即执行</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="string">&#x27;console.log(this)&#x27;</span>,<span class="number">3000</span>);<span class="comment">//console.log(this)加引号之后3s之后执行</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>)&#125;,<span class="number">3000</span>);<span class="comment">//console.log(this)3s之后执行</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">setTimeout</span>(test,<span class="number">3000</span>);<span class="comment">//console.log(this)3s之后执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="title function_">test</span>(),<span class="number">3000</span>);<span class="comment">//console.log(this)立即执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="string">&#x27;test()&#x27;</span>,<span class="number">3000</span>);<span class="comment">//console.log(this)3s之后执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>总结：setTimeout里面的函数有三种正确写法 </p>
-<ol>
-<li>用引号引起来，</li>
-<li>放到匿名函数里，</li>
-<li>使用函数名直接调用，不加括号。</li>
-</ol>
-<p>   </p>
-<h3 id="第一个参数this的作用域"><a href="#第一个参数this的作用域" class="headerlink" title="第一个参数this的作用域"></a>第一个参数this的作用域</h3><p>参考：<a href="http://www.cnblogs.com/hutaoer/p/3423782.html">http://www.cnblogs.com/hutaoer/p/3423782.html</a> </p>
-<p>第一段代码：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> test = <span class="string">&quot;in the window&quot;</span>;</span><br><span class="line"> </span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;<span class="title function_">alert</span>(<span class="string">&#x27;outer &#x27;</span> + test)&#125;, <span class="number">0</span>); <span class="comment">// 输出 outer in the window ，默认在window的全局作用域下</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>) &#123;</span><br><span class="line"> <span class="keyword">var</span> test = <span class="string">&#x27;in the f!&#x27;</span>; <span class="comment">// 局部变量，window作用域不可访问</span></span><br><span class="line"> <span class="built_in">setTimeout</span>(<span class="string">&#x27;alert(&quot;inner &quot; + test)&#x27;</span>, <span class="number">0</span>); <span class="comment">// 输出 inner in the window, 虽然在f方法的中调用，但执行代码(字符串形式的代码)默认在window全局作用域下，test也指向全局的test</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="title function_">f</span>();</span><br></pre></td></tr></table></figure>
-<p>第二段代码：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> test = <span class="string">&quot;in the window&quot;</span>;</span><br><span class="line"> </span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;<span class="title function_">alert</span>(<span class="string">&#x27;outer&#x27;</span> + test)&#125;, <span class="number">0</span>); <span class="comment">// outer in the window  ，没有问题，在全局下调用，访问全局中的test</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> test = <span class="string">&#x27;in the f!&#x27;</span>;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="title function_">alert</span>(<span class="string">&#x27;inner &#x27;</span>+ test)&#125;, <span class="number">0</span>);  <span class="comment">// inner in the f!  有问题，不是说好了执行函数中的this指向的是window吗？那test也应该对应window下的值才对，怎么test的值却是 f()中的值呢？？？？</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="title function_">f</span>();</span><br></pre></td></tr></table></figure>
-<p>第三段代码：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> test = <span class="string">&quot;in the window&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&#x27;outer &#x27;</span> + test)</span><br><span class="line">&#125;, <span class="number">0</span>); <span class="comment">// in the window</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> test = <span class="string">&#x27;in the f!&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">ff</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&#x27;inner &#x27;</span> + test);<span class="comment">// 能访问到f中的test局部变量</span></span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&#x27;inner &#x27;</span> + <span class="variable language_">this</span>.<span class="property">test</span>);<span class="comment">//window中的test</span></span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">    <span class="built_in">setTimeout</span>(ff, <span class="number">0</span>); <span class="comment">// inner in the f!</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">f</span>();</span><br></pre></td></tr></table></figure>
-<p>  总结：<br>三种写法中</p>
-<ol>
-<li>引号引起来的函数中的this指向和变量作用域都是window， </li>
-<li>匿名函数中的变量作用域是上下文，this指向是window， </li>
-<li>以函数名直接调用中的变量作用域是上下文，this指向是window。 第2和第3其实是一种写法，不同形式。 其实匿名函数中this应该指向词法作用域，这是javascript的一个错误，在箭头函数中已经修复了这个错误。</li>
-</ol>
-<p>   </p>
-<h3 id="箭头函数中的this作用域"><a href="#箭头函数中的this作用域" class="headerlink" title="箭头函数中的this作用域"></a>箭头函数中的this作用域</h3><p>参考：<br><a href="https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001438565969057627e5435793645b7acaee3b6869d1374000">https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001438565969057627e5435793645b7acaee3b6869d1374000</a></p>
-]]></content>
-      <categories>
-        <category>technology</category>
       </categories>
   </entry>
   <entry>
@@ -1620,6 +1562,55 @@ timeout(100).then((value) =&gt; &#123;
       <tags>
         <tag>shell</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>从setTimeout()函数开始谈起</title>
+    <url>/2017/08/22/settimeout/</url>
+    <content><![CDATA[<p>最近在阮一峰老师的网站学习es6，在promise小节下面看到下面的代码，作为小白的我看到这个代码的第一反应是setTimeout怎么有三个参数，上网一查才知道，setTimeout可以跟多个参数，第三个及之后的参数都是第一个参数（函数）的参数</p>
+<p>下面是一个<code>Promise</code>对象的简单例子。</p>
+<pre><code>function timeout(ms) &#123;
+  return new Promise((resolve, reject) =&gt; &#123;
+    setTimeout(resolve, ms, &#39;done&#39;);
+  &#125;);
+&#125;
+
+timeout(100).then((value) =&gt; &#123;
+  console.log(value);
+&#125;);
+</code></pre>
+<h3 id="定义和用法"><a href="#定义和用法" class="headerlink" title="定义和用法"></a>定义和用法</h3><p>setTimeout() 方法用于在指定的毫秒数后调用函数或计算表达式。</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p>setTimeout(code,millisec)</p>
+<h3 id="第一个参数"><a href="#第一个参数" class="headerlink" title="第一个参数"></a>第一个参数</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">setTimeout</span>(<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>),<span class="number">3000</span>);<span class="comment">//console.log(this)会立即执行</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="string">&#x27;console.log(this)&#x27;</span>,<span class="number">3000</span>);<span class="comment">//console.log(this)加引号之后3s之后执行</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>)&#125;,<span class="number">3000</span>);<span class="comment">//console.log(this)3s之后执行</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">setTimeout</span>(test,<span class="number">3000</span>);<span class="comment">//console.log(this)3s之后执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="title function_">test</span>(),<span class="number">3000</span>);<span class="comment">//console.log(this)立即执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="string">&#x27;test()&#x27;</span>,<span class="number">3000</span>);<span class="comment">//console.log(this)3s之后执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>总结：setTimeout里面的函数有三种正确写法 </p>
+<ol>
+<li>用引号引起来，</li>
+<li>放到匿名函数里，</li>
+<li>使用函数名直接调用，不加括号。</li>
+</ol>
+<p>   </p>
+<h3 id="第一个参数this的作用域"><a href="#第一个参数this的作用域" class="headerlink" title="第一个参数this的作用域"></a>第一个参数this的作用域</h3><p>参考：<a href="http://www.cnblogs.com/hutaoer/p/3423782.html">http://www.cnblogs.com/hutaoer/p/3423782.html</a> </p>
+<p>第一段代码：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> test = <span class="string">&quot;in the window&quot;</span>;</span><br><span class="line"> </span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;<span class="title function_">alert</span>(<span class="string">&#x27;outer &#x27;</span> + test)&#125;, <span class="number">0</span>); <span class="comment">// 输出 outer in the window ，默认在window的全局作用域下</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>) &#123;</span><br><span class="line"> <span class="keyword">var</span> test = <span class="string">&#x27;in the f!&#x27;</span>; <span class="comment">// 局部变量，window作用域不可访问</span></span><br><span class="line"> <span class="built_in">setTimeout</span>(<span class="string">&#x27;alert(&quot;inner &quot; + test)&#x27;</span>, <span class="number">0</span>); <span class="comment">// 输出 inner in the window, 虽然在f方法的中调用，但执行代码(字符串形式的代码)默认在window全局作用域下，test也指向全局的test</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="title function_">f</span>();</span><br></pre></td></tr></table></figure>
+<p>第二段代码：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> test = <span class="string">&quot;in the window&quot;</span>;</span><br><span class="line"> </span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;<span class="title function_">alert</span>(<span class="string">&#x27;outer&#x27;</span> + test)&#125;, <span class="number">0</span>); <span class="comment">// outer in the window  ，没有问题，在全局下调用，访问全局中的test</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> test = <span class="string">&#x27;in the f!&#x27;</span>;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="title function_">alert</span>(<span class="string">&#x27;inner &#x27;</span>+ test)&#125;, <span class="number">0</span>);  <span class="comment">// inner in the f!  有问题，不是说好了执行函数中的this指向的是window吗？那test也应该对应window下的值才对，怎么test的值却是 f()中的值呢？？？？</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="title function_">f</span>();</span><br></pre></td></tr></table></figure>
+<p>第三段代码：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> test = <span class="string">&quot;in the window&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="string">&#x27;outer &#x27;</span> + test)</span><br><span class="line">&#125;, <span class="number">0</span>); <span class="comment">// in the window</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> test = <span class="string">&#x27;in the f!&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">ff</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&#x27;inner &#x27;</span> + test);<span class="comment">// 能访问到f中的test局部变量</span></span><br><span class="line">        <span class="title function_">alert</span>(<span class="string">&#x27;inner &#x27;</span> + <span class="variable language_">this</span>.<span class="property">test</span>);<span class="comment">//window中的test</span></span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">    <span class="built_in">setTimeout</span>(ff, <span class="number">0</span>); <span class="comment">// inner in the f!</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">f</span>();</span><br></pre></td></tr></table></figure>
+<p>  总结：<br>三种写法中</p>
+<ol>
+<li>引号引起来的函数中的this指向和变量作用域都是window， </li>
+<li>匿名函数中的变量作用域是上下文，this指向是window， </li>
+<li>以函数名直接调用中的变量作用域是上下文，this指向是window。 第2和第3其实是一种写法，不同形式。 其实匿名函数中this应该指向词法作用域，这是javascript的一个错误，在箭头函数中已经修复了这个错误。</li>
+</ol>
+<p>   </p>
+<h3 id="箭头函数中的this作用域"><a href="#箭头函数中的this作用域" class="headerlink" title="箭头函数中的this作用域"></a>箭头函数中的this作用域</h3><p>参考：<br><a href="https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001438565969057627e5435793645b7acaee3b6869d1374000">https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001438565969057627e5435793645b7acaee3b6869d1374000</a></p>
+]]></content>
+      <categories>
+        <category>technology</category>
+      </categories>
   </entry>
   <entry>
     <title>shell快捷键</title>
@@ -1678,6 +1669,32 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
+    <title>太平洋时间</title>
+    <url>/2017/09/12/taipingyangshijian/</url>
+    <content><![CDATA[<p><strong>PDT</strong>（Pacific Daylight Time）太平洋夏季时间。 相对应的是<a href="https://baike.baidu.com/item/PST"><strong>PST</strong></a>（Pacific Standard Time ）。 夏时制结束后就是PST。 <strong>PST是<a href="https://baike.baidu.com/item/%E5%A4%AA%E5%B9%B3%E6%B4%8B">太平洋</a>标准时间（西八区），与北京时间（东八区）时差-16个小时，也就是北京时间减去16就是PST时间。而PDT比PST早1个小时，就是说PDT与北京时间时差为-15小时。</strong> 在2006年以及之前，美国<a href="https://baike.baidu.com/item/%E5%A4%AA%E5%B9%B3%E6%B4%8B">太平洋</a>时区总是于每年<a href="https://baike.baidu.com/item/%E5%9B%9B%E6%9C%88/67790">四月</a>第一个星期日深夜二时正将本地时间（UTC−8）转成夏令时间（UTC−7） ，并于十月的最后一个星期日深夜二时<a href="https://baike.baidu.com/item/%E6%AD%A3%E8%BD%AC">正转</a>回本地时间。 于2007年生效的2005年能源政策法案，决定了<strong>美国太平洋时区的夏令时间始于每年三月的第二个星期六深夜二时正，并终于每年十一月的第一个<a href="https://baike.baidu.com/item/%E6%98%9F%E6%9C%9F%E6%97%A5/25447">星期日</a>深夜二时正。</strong>而加拿大亦跟随美国的夏令时间制度。</p>
+<p><strong>PDT转换成<a href="https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC/128981">北京</a>时间方法</strong></p>
+<p>PDT从每年3月的第二个星期日到11月的第一个星期日期间和北京<a href="https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%B7%AE">时间差</a>15小时，其余月份和<a href="https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E6%97%B6%E9%97%B4/410384">北京时间</a>差16小时 。例如Oct 02, 2009 at 07:00 PDT&#x3D; Oct 02, 2009 at 22:00 Beijing Time (7+15&#x3D;22)</p>
+]]></content>
+      <categories>
+        <category>knowledge</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>SSL证书</title>
+    <url>/2021/12/23/ssl%E8%AF%81%E4%B9%A6/</url>
+    <content><![CDATA[<h3 id="自签证书"><a href="#自签证书" class="headerlink" title="自签证书"></a>自签证书</h3><p>参考 <a href="https://www.jianshu.com/p/d22baeae50ea">https://www.jianshu.com/p/d22baeae50ea</a></p>
+<h3 id="浏览器报错-ERR-SSL-PROTOCOL-ERROR"><a href="#浏览器报错-ERR-SSL-PROTOCOL-ERROR" class="headerlink" title="浏览器报错 ERR_SSL_PROTOCOL_ERROR"></a>浏览器报错 ERR_SSL_PROTOCOL_ERROR</h3><p>或 curl 报错 wrong version number</p>
+<p>修改 nginx 配置，<code>nginx -t</code> 查看配置文件所在路径</p>
+<p>listen 443 ssl;</p>
+<h3 id="浏览器报错-ERR-CERT-INVALID"><a href="#浏览器报错-ERR-CERT-INVALID" class="headerlink" title="浏览器报错 ERR_CERT_INVALID"></a>浏览器报错 ERR_CERT_INVALID</h3><p>输入 thisisunsafe </p>
+<p>参考： <a href="https://segmentfault.com/a/1190000021843971">https://segmentfault.com/a/1190000021843971</a></p>
+<h3 id="alternative"><a href="#alternative" class="headerlink" title="alternative"></a>alternative</h3><p>caddy</p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>ssh免密码登录</title>
     <url>/2019/12/27/ssh%E5%85%8D%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95/</url>
     <content><![CDATA[<p>查看服务器和本地是否存在密钥，<br>密钥存放目录一般为当前用户家目录下的.ssh里<br>windows：</p>
@@ -1707,32 +1724,6 @@ timeout(100).then((value) =&gt; &#123;
 ]]></content>
       <categories>
         <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>SSL证书</title>
-    <url>/2021/12/23/ssl%E8%AF%81%E4%B9%A6/</url>
-    <content><![CDATA[<h3 id="自签证书"><a href="#自签证书" class="headerlink" title="自签证书"></a>自签证书</h3><p>参考 <a href="https://www.jianshu.com/p/d22baeae50ea">https://www.jianshu.com/p/d22baeae50ea</a></p>
-<h3 id="浏览器报错-ERR-SSL-PROTOCOL-ERROR"><a href="#浏览器报错-ERR-SSL-PROTOCOL-ERROR" class="headerlink" title="浏览器报错 ERR_SSL_PROTOCOL_ERROR"></a>浏览器报错 ERR_SSL_PROTOCOL_ERROR</h3><p>或 curl 报错 wrong version number</p>
-<p>修改 nginx 配置，<code>nginx -t</code> 查看配置文件所在路径</p>
-<p>listen 443 ssl;</p>
-<h3 id="浏览器报错-ERR-CERT-INVALID"><a href="#浏览器报错-ERR-CERT-INVALID" class="headerlink" title="浏览器报错 ERR_CERT_INVALID"></a>浏览器报错 ERR_CERT_INVALID</h3><p>输入 thisisunsafe </p>
-<p>参考： <a href="https://segmentfault.com/a/1190000021843971">https://segmentfault.com/a/1190000021843971</a></p>
-<h3 id="alternative"><a href="#alternative" class="headerlink" title="alternative"></a>alternative</h3><p>caddy</p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>太平洋时间</title>
-    <url>/2017/09/12/taipingyangshijian/</url>
-    <content><![CDATA[<p><strong>PDT</strong>（Pacific Daylight Time）太平洋夏季时间。 相对应的是<a href="https://baike.baidu.com/item/PST"><strong>PST</strong></a>（Pacific Standard Time ）。 夏时制结束后就是PST。 <strong>PST是<a href="https://baike.baidu.com/item/%E5%A4%AA%E5%B9%B3%E6%B4%8B">太平洋</a>标准时间（西八区），与北京时间（东八区）时差-16个小时，也就是北京时间减去16就是PST时间。而PDT比PST早1个小时，就是说PDT与北京时间时差为-15小时。</strong> 在2006年以及之前，美国<a href="https://baike.baidu.com/item/%E5%A4%AA%E5%B9%B3%E6%B4%8B">太平洋</a>时区总是于每年<a href="https://baike.baidu.com/item/%E5%9B%9B%E6%9C%88/67790">四月</a>第一个星期日深夜二时正将本地时间（UTC−8）转成夏令时间（UTC−7） ，并于十月的最后一个星期日深夜二时<a href="https://baike.baidu.com/item/%E6%AD%A3%E8%BD%AC">正转</a>回本地时间。 于2007年生效的2005年能源政策法案，决定了<strong>美国太平洋时区的夏令时间始于每年三月的第二个星期六深夜二时正，并终于每年十一月的第一个<a href="https://baike.baidu.com/item/%E6%98%9F%E6%9C%9F%E6%97%A5/25447">星期日</a>深夜二时正。</strong>而加拿大亦跟随美国的夏令时间制度。</p>
-<p><strong>PDT转换成<a href="https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC/128981">北京</a>时间方法</strong></p>
-<p>PDT从每年3月的第二个星期日到11月的第一个星期日期间和北京<a href="https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%B7%AE">时间差</a>15小时，其余月份和<a href="https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E6%97%B6%E9%97%B4/410384">北京时间</a>差16小时 。例如Oct 02, 2009 at 07:00 PDT&#x3D; Oct 02, 2009 at 22:00 Beijing Time (7+15&#x3D;22)</p>
-]]></content>
-      <categories>
-        <category>knowledge</category>
       </categories>
   </entry>
   <entry>
@@ -1944,6 +1935,34 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
+    <title>vscode快捷键</title>
+    <url>/2021/06/11/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    <content><![CDATA[<h2 id="代码之间跳转"><a href="#代码之间跳转" class="headerlink" title="代码之间跳转"></a>代码之间跳转</h2><h3 id="调回之前的代码"><a href="#调回之前的代码" class="headerlink" title="调回之前的代码"></a>调回之前的代码</h3><p>Mac 下</p>
+<p><code>ctrl + &#39;-&#39;</code></p>
+<p>window 下</p>
+<p><code>alt + &#39;-&#39;</code></p>
+<h2 id="折叠、展开代码块"><a href="#折叠、展开代码块" class="headerlink" title="折叠、展开代码块"></a>折叠、展开代码块</h2><p>以下命令要确保光标在编辑区域</p>
+<ol>
+<li><p>折叠所有区域代码的快捷键：ctrl+k, ctrl+0;</p>
+<pre><code>            先按下ctrl和K，再按下ctrl和0; (ctrl 不要松开)
+</code></pre>
+</li>
+<li><p>展开所有折叠区域代码的快捷键：ctrl +k, ctrl+J;</p>
+<pre><code>            先按下ctrl和K，再按下ctrl和J 
+</code></pre>
+</li>
+<li><p>自动格式化代码的快捷键：ctrl+k, ctrl+f;</p>
+<pre><code>            先按下ctrl和K，再按下ctrl和f;
+</code></pre>
+</li>
+</ol>
+<h2 id="全局搜索"><a href="#全局搜索" class="headerlink" title="全局搜索"></a>全局搜索</h2><p>command + shift + F</p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>vitepress 如何开启 algolia 全文搜索</title>
     <url>/2022/11/01/vitepress-%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0-algolia-%E6%90%9C%E7%B4%A2/</url>
     <content><![CDATA[<blockquote>
@@ -1993,6 +2012,16 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
+    <title>Vsftp的PASV mode和Port模式配置文件的设置</title>
+    <url>/2017/11/20/vsftpdepasv-modeheportmoshipeizhiwenjiandeshezhi/</url>
+    <content><![CDATA[<p><a href="https://www.cnblogs.com/yjken/p/3917940.html">https://www.cnblogs.com/yjken/p/3917940.html</a></p>
+]]></content>
+      <categories>
+        <category>technology</category>
+        <category>Server</category>
+      </categories>
+  </entry>
+  <entry>
     <title>vscode 调试 js</title>
     <url>/2021/10/29/vscode-%E8%B0%83%E8%AF%95-js/</url>
     <content><![CDATA[<h3 id="调试-npm-script-命令"><a href="#调试-npm-script-命令" class="headerlink" title="调试 npm script 命令"></a>调试 npm script 命令</h3><p>注意：此为 configurations 中的一条配置，具体看下一条</p>
@@ -2006,41 +2035,12 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
-    <title>vscode快捷键</title>
-    <url>/2021/06/11/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
-    <content><![CDATA[<h2 id="代码之间跳转"><a href="#代码之间跳转" class="headerlink" title="代码之间跳转"></a>代码之间跳转</h2><h3 id="调回之前的代码"><a href="#调回之前的代码" class="headerlink" title="调回之前的代码"></a>调回之前的代码</h3><p>Mac 下</p>
-<p><code>ctrl + &#39;-&#39;</code></p>
-<p>window 下</p>
-<p><code>alt + &#39;-&#39;</code></p>
-<h2 id="折叠、展开代码块"><a href="#折叠、展开代码块" class="headerlink" title="折叠、展开代码块"></a>折叠、展开代码块</h2><p>以下命令要确保光标在编辑区域</p>
-<ol>
-<li><p>折叠所有区域代码的快捷键：ctrl+k, ctrl+0;</p>
-<pre><code>            先按下ctrl和K，再按下ctrl和0; (ctrl 不要松开)
-</code></pre>
-</li>
-<li><p>展开所有折叠区域代码的快捷键：ctrl +k, ctrl+J;</p>
-<pre><code>            先按下ctrl和K，再按下ctrl和J 
-</code></pre>
-</li>
-<li><p>自动格式化代码的快捷键：ctrl+k, ctrl+f;</p>
-<pre><code>            先按下ctrl和K，再按下ctrl和f;
-</code></pre>
-</li>
-</ol>
-<h2 id="全局搜索"><a href="#全局搜索" class="headerlink" title="全局搜索"></a>全局搜索</h2><p>command + shift + F</p>
+    <title>vue和react</title>
+    <url>/2020/01/10/vue%E5%92%8Creact/</url>
+    <content><![CDATA[<p>单向数据流<br>单向绑定，双向绑定<br>父子组件传值<br>声明式&#x2F;命令式</p>
 ]]></content>
       <categories>
         <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Vsftp的PASV mode和Port模式配置文件的设置</title>
-    <url>/2017/11/20/vsftpdepasv-modeheportmoshipeizhiwenjiandeshezhi/</url>
-    <content><![CDATA[<p><a href="https://www.cnblogs.com/yjken/p/3917940.html">https://www.cnblogs.com/yjken/p/3917940.html</a></p>
-]]></content>
-      <categories>
-        <category>technology</category>
-        <category>Server</category>
       </categories>
   </entry>
   <entry>
@@ -2057,15 +2057,6 @@ timeout(100).then((value) =&gt; &#123;
       <tags>
         <tag>vue</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>vue和react</title>
-    <url>/2020/01/10/vue%E5%92%8Creact/</url>
-    <content><![CDATA[<p>单向数据流<br>单向绑定，双向绑定<br>父子组件传值<br>声明式&#x2F;命令式</p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
   </entry>
   <entry>
     <title>vue数组双向绑定</title>
@@ -2159,28 +2150,6 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
-    <title>wordpress转移服务器遇到的问题</title>
-    <url>/2017/09/14/wordpresszhuanyifuwuqiyudaodewenti/</url>
-    <content><![CDATA[<p>1.更换数据库，数据库配置在wp-config.php里</p>
-<p>2.更换域名，修改数据库里wp_options表里的 siteurl（option_id&#x3D;1)和home(最新版本中option_id一般为2）的链接</p>
-<p>3.找回密码，邮箱无法发送邮件，报错</p>
-<p>无法发送电子邮件 可能原因：您的主机禁用了mail()函数</p>
-<p>Linux服务器安装sendmail</p>
-<p>Centos</p>
-<p>Yum install sendmail</p>
-<p>Ubuntu</p>
-<p>Apt-get install sendmail</p>
-<p>不报错了，但是还是无法收到邮件</p>
-<p>更改数据库wp_users表</p>
-<p>把密码字段修改为hello的MD5值</p>
-<p>5d41402abc4b2a76b9719d911017c592</p>
-<p>可以用hello登录，然后在后台更改密码。</p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>悟以往之不谏，知来者之可追</title>
     <url>/2017/10/09/wuyiwangzhibujianzhilaizhezhikezhui/</url>
     <content><![CDATA[<h1 id="归去来兮辞·并序"><a href="#归去来兮辞·并序" class="headerlink" title="归去来兮辞·并序"></a>归去来兮辞·并序</h1><p><a href="http://hanyu.baidu.com/s?wd=%E9%99%B6%E6%B8%8A%E6%98%8E">【作者】陶渊明 </a>【朝代】魏晋</p>
@@ -2205,6 +2174,28 @@ timeout(100).then((value) =&gt; &#123;
 ]]></content>
       <categories>
         <category>literature</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>wordpress转移服务器遇到的问题</title>
+    <url>/2017/09/14/wordpresszhuanyifuwuqiyudaodewenti/</url>
+    <content><![CDATA[<p>1.更换数据库，数据库配置在wp-config.php里</p>
+<p>2.更换域名，修改数据库里wp_options表里的 siteurl（option_id&#x3D;1)和home(最新版本中option_id一般为2）的链接</p>
+<p>3.找回密码，邮箱无法发送邮件，报错</p>
+<p>无法发送电子邮件 可能原因：您的主机禁用了mail()函数</p>
+<p>Linux服务器安装sendmail</p>
+<p>Centos</p>
+<p>Yum install sendmail</p>
+<p>Ubuntu</p>
+<p>Apt-get install sendmail</p>
+<p>不报错了，但是还是无法收到邮件</p>
+<p>更改数据库wp_users表</p>
+<p>把密码字段修改为hello的MD5值</p>
+<p>5d41402abc4b2a76b9719d911017c592</p>
+<p>可以用hello登录，然后在后台更改密码。</p>
+]]></content>
+      <categories>
+        <category>未分类</category>
       </categories>
   </entry>
   <entry>
@@ -2258,26 +2249,6 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
-    <title>不错的物理科普书</title>
-    <url>/2017/09/12/%E4%B8%8D%E9%94%99%E7%9A%84%E7%89%A9%E7%90%86%E7%A7%91%E6%99%AE%E4%B9%A6/</url>
-    <content><![CDATA[<ol>
-<li><p>《宇宙的琴弦》作者：B·格林</p>
-</li>
-<li><p>《时间的形状：相对论史话》 作者：汪洁 </p>
-</li>
-<li><p>《上帝掷骰（tou）子吗：量子物理史话》 作者：曹天元   </p>
-</li>
-<li><p>《七堂极简物理课》作者：卡洛 罗韦力 这个讲的比较简单 </p>
-</li>
-<li><p>《猫、爱因斯坦和密码学：我也能看懂的量子通信》 作者：秦罡（gang）</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>life</category>
-      </categories>
-  </entry>
-  <entry>
     <title>为什么说 Koa 基于洋葱模型，而 Express 不是</title>
     <url>/2022/04/06/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4-Koa-%E5%9F%BA%E4%BA%8E%E6%B4%8B%E8%91%B1%E6%A8%A1%E5%9E%8B-%E8%80%8C-Express-%E4%B8%8D%E6%98%AF/</url>
     <content><![CDATA[<p>最近看光哥的文章，说 Express 是洋葱模型。</p>
@@ -2306,6 +2277,26 @@ timeout(100).then((value) =&gt; &#123;
 ]]></content>
       <categories>
         <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>不错的物理科普书</title>
+    <url>/2017/09/12/%E4%B8%8D%E9%94%99%E7%9A%84%E7%89%A9%E7%90%86%E7%A7%91%E6%99%AE%E4%B9%A6/</url>
+    <content><![CDATA[<ol>
+<li><p>《宇宙的琴弦》作者：B·格林</p>
+</li>
+<li><p>《时间的形状：相对论史话》 作者：汪洁 </p>
+</li>
+<li><p>《上帝掷骰（tou）子吗：量子物理史话》 作者：曹天元   </p>
+</li>
+<li><p>《七堂极简物理课》作者：卡洛 罗韦力 这个讲的比较简单 </p>
+</li>
+<li><p>《猫、爱因斯坦和密码学：我也能看懂的量子通信》 作者：秦罡（gang）</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>life</category>
       </categories>
   </entry>
   <entry>
@@ -2384,14 +2375,6 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
-    <title>如何获取视频的缓存进度</title>
-    <url>/2022/07/11/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E8%A7%86%E9%A2%91%E7%9A%84%E7%BC%93%E5%AD%98%E8%BF%9B%E5%BA%A6/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>将进酒</title>
     <url>/2020/11/24/%E5%B0%86%E8%BF%9B%E9%85%92/</url>
     <content><![CDATA[<p>李白</p>
@@ -2399,6 +2382,14 @@ timeout(100).then((value) =&gt; &#123;
 ]]></content>
       <categories>
         <category>literature</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>如何获取视频的缓存进度</title>
+    <url>/2022/07/11/%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E8%A7%86%E9%A2%91%E7%9A%84%E7%BC%93%E5%AD%98%E8%BF%9B%E5%BA%A6/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>未分类</category>
       </categories>
   </entry>
   <entry>
@@ -2427,17 +2418,6 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
-    <title>晨兴理荒秽，带月荷锄归。</title>
-    <url>/2020/03/23/%E5%BD%92%E5%9B%AD%E7%94%B0%E5%B1%85%E5%85%B6%E4%B8%89/</url>
-    <content><![CDATA[<p>归园田居·其三</p>
-<p>陶渊明</p>
-<p>种豆南山下，草盛豆苗稀。<br>晨兴理荒秽，带月荷锄归。<br>道狭草木长，夕露沾我衣。<br>衣沾不足惜，但使愿无违。</p>
-]]></content>
-      <categories>
-        <category>literature</category>
-      </categories>
-  </entry>
-  <entry>
     <title>念奴娇赤壁怀古</title>
     <url>/2020/11/24/%E5%BF%B5%E5%A5%B4%E5%A8%87%E8%B5%A4%E5%A3%81%E6%80%80%E5%8F%A4/</url>
     <content><![CDATA[<p>苏轼</p>
@@ -2447,6 +2427,17 @@ timeout(100).then((value) =&gt; &#123;
 <p>大江之水滚滚不断向东流去，滔滔巨浪淘尽千古英雄人物。<br>那旧营垒的西边，人们说那就是三国时周郎大破曹兵的赤壁。<br>岸边乱石林立，像要刺破天空，惊人的巨浪拍击着江岸，激起的浪花好似千万堆白雪。<br>雄壮的江山奇丽如图画，一时间涌现出多少英雄豪杰。</p>
 <p>遥想当年的周瑜春风得意，小乔刚刚嫁给了他做妻子，英姿雄健风度翩翩神采照人。<br>手摇羽扇头戴纶巾，谈笑之间，就把强敌的战船烧得灰飞烟灭。<br>如今我身临古战场神游往昔，可笑我有如此多的怀古柔情，竟如同未老先衰般鬓发斑白。<br>人生犹如一场梦，且洒一杯酒祭奠江上的明月。</p>
 <p>转自：<a href="https://so.gushiwen.org/mingju/juv_2f2012ed6c86.aspx">https://so.gushiwen.org/mingju/juv_2f2012ed6c86.aspx</a></p>
+]]></content>
+      <categories>
+        <category>literature</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>晨兴理荒秽，带月荷锄归。</title>
+    <url>/2020/03/23/%E5%BD%92%E5%9B%AD%E7%94%B0%E5%B1%85%E5%85%B6%E4%B8%89/</url>
+    <content><![CDATA[<p>归园田居·其三</p>
+<p>陶渊明</p>
+<p>种豆南山下，草盛豆苗稀。<br>晨兴理荒秽，带月荷锄归。<br>道狭草木长，夕露沾我衣。<br>衣沾不足惜，但使愿无违。</p>
 ]]></content>
       <categories>
         <category>literature</category>
@@ -2638,6 +2629,16 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
 ]]></content>
   </entry>
   <entry>
+    <title>浏览器插件修改请求返回数据的原理</title>
+    <url>/2022/07/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E4%BF%AE%E6%94%B9%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE%E7%9A%84%E5%8E%9F%E7%90%86/</url>
+    <content><![CDATA[<h1 id="重写-fetch-和-XHR"><a href="#重写-fetch-和-XHR" class="headerlink" title="重写 fetch 和 XHR"></a>重写 fetch 和 XHR</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>重写 fetch 和 XHR，返回自定义数据。<br>把重写 fetch 和 XHR 的代码通过 <code>&lt;script&gt;&lt;/script&gt;</code> 标签 插入到 html 里</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>当你插入 <code>&lt;script&gt;&lt;/script&gt;</code> 标签的时候，请求可能已经发出了，所以此种方法不能保障拦截所有请求</p>
+<h1 id="tweak"><a href="#tweak" class="headerlink" title="tweak"></a>tweak</h1>]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>技能树</title>
     <url>/2019/07/11/%E6%8A%80%E8%83%BD%E6%A0%91/</url>
     <content><![CDATA[<ol>
@@ -2653,16 +2654,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       <categories>
         <category>technology</category>
         <category>front-end</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>浏览器插件修改请求返回数据的原理</title>
-    <url>/2022/07/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E4%BF%AE%E6%94%B9%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE%E7%9A%84%E5%8E%9F%E7%90%86/</url>
-    <content><![CDATA[<h1 id="重写-fetch-和-XHR"><a href="#重写-fetch-和-XHR" class="headerlink" title="重写 fetch 和 XHR"></a>重写 fetch 和 XHR</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>重写 fetch 和 XHR，返回自定义数据。<br>把重写 fetch 和 XHR 的代码通过 <code>&lt;script&gt;&lt;/script&gt;</code> 标签 插入到 html 里</p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>当你插入 <code>&lt;script&gt;&lt;/script&gt;</code> 标签的时候，请求可能已经发出了，所以此种方法不能保障拦截所有请求</p>
-<h1 id="tweak"><a href="#tweak" class="headerlink" title="tweak"></a>tweak</h1>]]></content>
-      <categories>
-        <category>未分类</category>
       </categories>
   </entry>
   <entry>
@@ -2689,21 +2680,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
 ]]></content>
       <categories>
         <category>literature</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>状态码</title>
-    <url>/2020/08/18/%E7%8A%B6%E6%80%81%E7%A0%81/</url>
-    <content><![CDATA[<h4 id="200"><a href="#200" class="headerlink" title="200"></a>200</h4><p>200 OK 请求成功<br>201 Created 已创建新资源<br>202 Accepted 已接受但未完成（异步处理）</p>
-<h4 id="300"><a href="#300" class="headerlink" title="300"></a>300</h4><p>301 Moved Permanently 资源（网页等）被永久转移到其它URL<br>302 Temporarily Moved &#x2F; Found<br>303 See Other</p>
-<h4 id="400"><a href="#400" class="headerlink" title="400"></a>400</h4><p>400 Bad Request<br>401 Unauthorized 请求要求用户的身份认证<br>403 Forbidden 服务器理解请求客户端的请求，但是拒绝执行此请求<br>404 Not Found 请求的资源（网页等）不存在<br>406 Not Acceptable<br>409 Conflict<br>412 Precondition Failed<br>415 Unsupported Media Type</p>
-<h4 id="500"><a href="#500" class="headerlink" title="500"></a>500</h4><p>500 Internal Server Error 内部服务器错误<br>503 Service Unavailable</p>
-<p>参考：<br><a href="https://www.runoob.com/http/http-status-codes.html">https://www.runoob.com/http/http-status-codes.html</a></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">100 &quot;continue&quot;</span><br><span class="line">101 &quot;switching protocols&quot;</span><br><span class="line">102 &quot;processing&quot;</span><br><span class="line">200 &quot;ok&quot;</span><br><span class="line">201 &quot;created&quot;</span><br><span class="line">202 &quot;accepted&quot;</span><br><span class="line">203 &quot;non-authoritative information&quot;</span><br><span class="line">204 &quot;no content&quot;</span><br><span class="line">205 &quot;reset content&quot;</span><br><span class="line">206 &quot;partial content&quot;</span><br><span class="line">207 &quot;multi-status&quot;</span><br><span class="line">208 &quot;already reported&quot;</span><br><span class="line">226 &quot;im used&quot;</span><br><span class="line">300 &quot;multiple choices&quot;</span><br><span class="line">301 &quot;moved permanently&quot;</span><br><span class="line">302 &quot;found&quot;</span><br><span class="line">303 &quot;see other&quot;</span><br><span class="line">304 &quot;not modified&quot;</span><br><span class="line">305 &quot;use proxy&quot;</span><br><span class="line">307 &quot;temporary redirect&quot;</span><br><span class="line">308 &quot;permanent redirect&quot;</span><br><span class="line">400 &quot;bad request&quot;</span><br><span class="line">401 &quot;unauthorized&quot;</span><br><span class="line">402 &quot;payment required&quot;</span><br><span class="line">403 &quot;forbidden&quot;</span><br><span class="line">404 &quot;not found&quot;</span><br><span class="line">405 &quot;method not allowed&quot;</span><br><span class="line">406 &quot;not acceptable&quot;</span><br><span class="line">407 &quot;proxy authentication required&quot;</span><br><span class="line">408 &quot;request timeout&quot;</span><br><span class="line">409 &quot;conflict&quot;</span><br><span class="line">410 &quot;gone&quot;</span><br><span class="line">411 &quot;length required&quot;</span><br><span class="line">412 &quot;precondition failed&quot;</span><br><span class="line">413 &quot;payload too large&quot;</span><br><span class="line">414 &quot;uri too long&quot;</span><br><span class="line">415 &quot;unsupported media type&quot;</span><br><span class="line">416 &quot;range not satisfiable&quot;</span><br><span class="line">417 &quot;expectation failed&quot;</span><br><span class="line">418 &quot;I&#x27;m a teapot&quot;</span><br><span class="line">422 &quot;unprocessable entity&quot;</span><br><span class="line">423 &quot;locked&quot;</span><br><span class="line">424 &quot;failed dependency&quot;</span><br><span class="line">426 &quot;upgrade required&quot;</span><br><span class="line">428 &quot;precondition required&quot;</span><br><span class="line">429 &quot;too many requests&quot;</span><br><span class="line">431 &quot;request header fields too large&quot;</span><br><span class="line">500 &quot;internal server error&quot;</span><br><span class="line">501 &quot;not implemented&quot;</span><br><span class="line">502 &quot;bad gateway&quot;</span><br><span class="line">503 &quot;service unavailable&quot;</span><br><span class="line">504 &quot;gateway timeout&quot;</span><br><span class="line">505 &quot;http version not supported&quot;</span><br><span class="line">506 &quot;variant also negotiates&quot;</span><br><span class="line">507 &quot;insufficient storage&quot;</span><br><span class="line">508 &quot;loop detected&quot;</span><br><span class="line">510 &quot;not extended&quot;</span><br><span class="line">511 &quot;network authentication required&quot;</span><br></pre></td></tr></table></figure>
-<p>参考：<a href="https://koa.bootcss.com/#response">https://koa.bootcss.com/#response</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
       </categories>
   </entry>
   <entry>
@@ -2741,6 +2717,21 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
 <li>冒泡排序(bubble sort)</li>
 <li>计数排序(counting sort)</li>
 </ol>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>状态码</title>
+    <url>/2020/08/18/%E7%8A%B6%E6%80%81%E7%A0%81/</url>
+    <content><![CDATA[<h4 id="200"><a href="#200" class="headerlink" title="200"></a>200</h4><p>200 OK 请求成功<br>201 Created 已创建新资源<br>202 Accepted 已接受但未完成（异步处理）</p>
+<h4 id="300"><a href="#300" class="headerlink" title="300"></a>300</h4><p>301 Moved Permanently 资源（网页等）被永久转移到其它URL<br>302 Temporarily Moved &#x2F; Found<br>303 See Other</p>
+<h4 id="400"><a href="#400" class="headerlink" title="400"></a>400</h4><p>400 Bad Request<br>401 Unauthorized 请求要求用户的身份认证<br>403 Forbidden 服务器理解请求客户端的请求，但是拒绝执行此请求<br>404 Not Found 请求的资源（网页等）不存在<br>406 Not Acceptable<br>409 Conflict<br>412 Precondition Failed<br>415 Unsupported Media Type</p>
+<h4 id="500"><a href="#500" class="headerlink" title="500"></a>500</h4><p>500 Internal Server Error 内部服务器错误<br>503 Service Unavailable</p>
+<p>参考：<br><a href="https://www.runoob.com/http/http-status-codes.html">https://www.runoob.com/http/http-status-codes.html</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">100 &quot;continue&quot;</span><br><span class="line">101 &quot;switching protocols&quot;</span><br><span class="line">102 &quot;processing&quot;</span><br><span class="line">200 &quot;ok&quot;</span><br><span class="line">201 &quot;created&quot;</span><br><span class="line">202 &quot;accepted&quot;</span><br><span class="line">203 &quot;non-authoritative information&quot;</span><br><span class="line">204 &quot;no content&quot;</span><br><span class="line">205 &quot;reset content&quot;</span><br><span class="line">206 &quot;partial content&quot;</span><br><span class="line">207 &quot;multi-status&quot;</span><br><span class="line">208 &quot;already reported&quot;</span><br><span class="line">226 &quot;im used&quot;</span><br><span class="line">300 &quot;multiple choices&quot;</span><br><span class="line">301 &quot;moved permanently&quot;</span><br><span class="line">302 &quot;found&quot;</span><br><span class="line">303 &quot;see other&quot;</span><br><span class="line">304 &quot;not modified&quot;</span><br><span class="line">305 &quot;use proxy&quot;</span><br><span class="line">307 &quot;temporary redirect&quot;</span><br><span class="line">308 &quot;permanent redirect&quot;</span><br><span class="line">400 &quot;bad request&quot;</span><br><span class="line">401 &quot;unauthorized&quot;</span><br><span class="line">402 &quot;payment required&quot;</span><br><span class="line">403 &quot;forbidden&quot;</span><br><span class="line">404 &quot;not found&quot;</span><br><span class="line">405 &quot;method not allowed&quot;</span><br><span class="line">406 &quot;not acceptable&quot;</span><br><span class="line">407 &quot;proxy authentication required&quot;</span><br><span class="line">408 &quot;request timeout&quot;</span><br><span class="line">409 &quot;conflict&quot;</span><br><span class="line">410 &quot;gone&quot;</span><br><span class="line">411 &quot;length required&quot;</span><br><span class="line">412 &quot;precondition failed&quot;</span><br><span class="line">413 &quot;payload too large&quot;</span><br><span class="line">414 &quot;uri too long&quot;</span><br><span class="line">415 &quot;unsupported media type&quot;</span><br><span class="line">416 &quot;range not satisfiable&quot;</span><br><span class="line">417 &quot;expectation failed&quot;</span><br><span class="line">418 &quot;I&#x27;m a teapot&quot;</span><br><span class="line">422 &quot;unprocessable entity&quot;</span><br><span class="line">423 &quot;locked&quot;</span><br><span class="line">424 &quot;failed dependency&quot;</span><br><span class="line">426 &quot;upgrade required&quot;</span><br><span class="line">428 &quot;precondition required&quot;</span><br><span class="line">429 &quot;too many requests&quot;</span><br><span class="line">431 &quot;request header fields too large&quot;</span><br><span class="line">500 &quot;internal server error&quot;</span><br><span class="line">501 &quot;not implemented&quot;</span><br><span class="line">502 &quot;bad gateway&quot;</span><br><span class="line">503 &quot;service unavailable&quot;</span><br><span class="line">504 &quot;gateway timeout&quot;</span><br><span class="line">505 &quot;http version not supported&quot;</span><br><span class="line">506 &quot;variant also negotiates&quot;</span><br><span class="line">507 &quot;insufficient storage&quot;</span><br><span class="line">508 &quot;loop detected&quot;</span><br><span class="line">510 &quot;not extended&quot;</span><br><span class="line">511 &quot;network authentication required&quot;</span><br></pre></td></tr></table></figure>
+<p>参考：<a href="https://koa.bootcss.com/#response">https://koa.bootcss.com/#response</a></p>
 ]]></content>
       <categories>
         <category>未分类</category>
@@ -2911,6 +2902,15 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </tags>
   </entry>
   <entry>
+    <title>草在结它的种子，风在摇它的叶子，我们站着，不说话，就十分美好</title>
+    <url>/2017/11/30/%E9%97%A8%E5%89%8D/</url>
+    <content><![CDATA[<h1 id="《门前》——顾城"><a href="#《门前》——顾城" class="headerlink" title="《门前》——顾城"></a>《门前》——顾城</h1><p>我多么希望，有一个门口<br>早晨，阳光照在草上<br>我们站着<br>扶着自己的门扇<br>门很低，但太阳是明亮的<br>草在结它的种子<br>风在摇它的叶子<br>我们站着，不说话<br>就十分美好<br>有门，不用开开<br>是我们的，就十分美好<br>早晨，黑夜还要流浪<br>我们把六弦琴交给他<br>我们不走了<br>我们需要土地<br>需要永不毁灭的土地<br>我们要乘着它<br>度过一生<br>土地是粗糙的，有时狭隘<br>然而，它有历史<br>有一份天空，一份月亮<br>一份露水和早晨<br>我们爱土地<br>我们站着<br>用木鞋挖着泥土<br>门也晒热了<br>我们轻轻靠着，十分美好<br>墙后的草<br>不会再长大了<br>它只用指尖，触了触</p>
+]]></content>
+      <categories>
+        <category>literature</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Samsung Galaxy Z Flip4</title>
     <url>/2022/11/17/AD/Samsung-Galaxy-Z-Flip4/</url>
     <content><![CDATA[<iframe width="1000" height="508" src="https://www.youtube.com/embed/lqP87f9lZ2M" title="Galaxy Z Flip4: Launch film | Samsung" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>]]></content>
@@ -2965,6 +2965,15 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </tags>
   </entry>
   <entry>
+    <title>你真的了解 addEventListner 吗?</title>
+    <url>/2023/06/16/fe/addEventListener/</url>
+    <content><![CDATA[<p><a href="https://www.cnblogs.com/ziyunfei/p/5545439.html">passive 的事件监听器</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>保时捷panamera行政加长版官方宣传片</title>
     <url>/2018/01/25/AD/%E4%BF%9D%E6%97%B6%E6%8D%B7panamera%E8%A1%8C%E6%94%BF%E5%8A%A0%E9%95%BF%E7%89%88%E5%AE%98%E6%96%B9%E5%AE%A3%E4%BC%A0%E7%89%87/</url>
     <content><![CDATA[<h1 id="一、30秒配音版（中文字幕）"><a href="#一、30秒配音版（中文字幕）" class="headerlink" title="一、30秒配音版（中文字幕）"></a>一、30秒配音版（中文字幕）</h1><iframe height=498 width=610 src="//player.bilibili.com/player.html?aid=8792900&cid=14502121&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -2987,15 +2996,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
         <tag>AD</tag>
         <tag>video</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>你真的了解 addEventListner 吗?</title>
-    <url>/2023/06/16/fe/addEventListener/</url>
-    <content><![CDATA[<p><a href="https://www.cnblogs.com/ziyunfei/p/5545439.html">passive 的事件监听器</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
   </entry>
   <entry>
     <title>iconfont 乱码</title>
@@ -3069,47 +3069,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       <categories>
         <category>未分类</category>
       </categories>
-  </entry>
-  <entry>
-    <title>自我价值感从何而来</title>
-    <url>/2017/09/25/psychology/%E4%BD%8E%E8%87%AA%E6%88%91%E4%BB%B7%E5%80%BC/</url>
-    <content><![CDATA[<p>我们很容易认为，一个人自我价值感高，是因为这个人够优秀，即他有很多优点和成就。一个人自我价值感低，是因为他的缺点与不足。这是一个最常见的误解。其实，我们很容易发现，自己身边的一些人，尽管外在条件看起来很优秀，但他就是自卑。这是因为，自我价值感的高低，尽管与外在的条件有些关系，但最主要的，还是源自获得的爱的多少。不管一个人外在条件多么出色，只要他曾有严重的爱的缺失，那么他一定会严重自卑。相反，不管一个人看似多么平常，只要他曾有充分的爱，那么他就会非常自信。看上去，自卑似乎是因为某方面的缺陷或缺点，但实质上，这是对自己不能获得爱的忧虑。 </p>
-<p>并且，自我价值感的形成，<strong>有一个关键期，就是1岁前</strong>。瑞士心理学家维雷娜·卡斯特在她的力作《克服焦虑》中写道： 我们认为，对6个月内的婴儿就必须表现出爱和关注，这样婴儿才会感觉舒适并且得到很好的发展。如果孩子因太少受到关注而不安吵闹的时候，亲近对象总是不能适当地给以抚慰，那么就会削弱孩子最初的信心，而这种信心正是形成足够稳定的自我价值感的基础。 </p>
-<p>一般认为，在最初的这6个月内，如果对孩子没有必要的爱与关注，如果不向孩子表明他是一个值得爱的人，那么孩子对这个世界的信任就会形成不稳定的基本状态。心理学家马拉泰斯塔认为，稳定的关系能力——也包括足够稳定的自我价值感——主要取决于在1岁前能否与抚养者交换快乐的感受。 </p>
-<p>对于这个观点，有一个例证。美国历史上最有名的连环炸弹杀手泰迪·卡辛克斯基，6个月大时因病住院，期间没有亲人陪伴和抚慰。结果，他出院以后，就从一个快乐的孩子变成了一个自闭的孩子。在卡辛克斯基一家中，弟弟大卫成长为一个颇有同情心的男子，而智商超过160的哥哥泰迪却在孤独中越陷越深，最终成为一名连环炸弹杀手。 </p>
-<p>其实，不止是1岁前的孩子特别需要爱与关注。心理学的研究还发现，一个2～3岁的孩子，如果和最重要的抚养者有两个星期以上的分离，也会造成难以逆转的心理创伤。 </p>
-<p>虽然大多数父母都很爱自己的孩子，但是，盲目爱自己孩子的父母很多，能够正确爱自己孩子的父母，不多。 </p>
-<p>典型的失败的父母：迈克尔.杰克逊的父亲，小甜甜布兰妮的妈妈，在他们的培养下，孩子的事业是成功的，但人生是失败的，生活是一败涂地，毫无幸福感可言的。 </p>
-<h1 id="四种不完全的爱："><a href="#四种不完全的爱：" class="headerlink" title="四种不完全的爱："></a>四种不完全的爱：</h1><h2 id="1、“有条件的爱”"><a href="#1、“有条件的爱”" class="headerlink" title="1、“有条件的爱”"></a><strong>1、“有条件的爱”</strong></h2><p>有的家长为孩子做了很多事，一心想要孩子出人头地，美其名为“要他将来有出息”，但是隐藏的潜意识可能是：“别让爸妈丢脸，你要为我争光，让我以你为荣。”</p>
-<p>类似的无意识的心声还有：“我要你实现我未曾实现的理想，达到我不曾达到的成就。我要你在这个世界上扬眉吐气，从而我也可以由你而扬眉吐气。”“不要让我失望。我为你牺牲了这么多。”“我爱你，而且也会一直爱你，只要你听话，按我说的去做。” </p>
-<h2 id="2、“不完全接纳的爱”"><a href="#2、“不完全接纳的爱”" class="headerlink" title="2、“不完全接纳的爱”"></a><strong>2、“不完全接纳的爱”</strong></h2><p>孩子成功时，父母很高兴，很爱孩子；失败时，父母很失望，不停地数落、唠叨、甚至痛骂小孩。   </p>
-<h2 id="3、“过度溺爱”"><a href="#3、“过度溺爱”" class="headerlink" title="3、“过度溺爱”"></a><strong>3、“过度溺爱”</strong></h2><p>从小，就照顾过度。长大了，还是包办很多事。孩子在家，只管玩，只管学习，其他事都不要他承担。这样的孩子，一方面很无能，自理能力、与人交往能力、社会独立性都很差，到社会上一看，才发现自己什么都不会做、不敢做，于是很自卑；另一方面，很自私，很冷漠，不会付出，不会爱别人。所以，常常看到一个家中，有一个能干强悍的妈妈，一个懦弱有气无力的儿子。 </p>
-<p>包办型溺爱的父母，他们其实剥夺了孩子自我探索的机会，不懂得尊重孩子的独立人格。那么，无论他们的安排多么完美，他们的孩子都会有一种感觉，他们好像不是为自己而活，学习也是为爸妈学习。所以，学习的主动性、克服困难的决心，都很弱。责任心也很差。因为，每个人只有为自己而活的时候，才是最有力量的。</p>
-<p>有的人，走路、做事都有气无力，没精打采，明显就没有生命力的样子。 </p>
-<h2 id="4、“忽视孩子精神世界的爱”"><a href="#4、“忽视孩子精神世界的爱”" class="headerlink" title="4、“忽视孩子精神世界的爱”"></a><strong>4、“忽视孩子精神世界的爱”</strong></h2><p>父母看起来也很爱孩子，孩子要什么买什么，物质上很大方。这样的家庭，看起来也是很和睦的，因为父母可能都很朴实，善良，都是好人。但是，由于父母本身的精神世界就不够开阔宏大，只会朴实地过日子，所以在这样的家庭中，很少会交流内心的情绪，思想，很难给孩子一个精神指引，世界观、价值观的确立。孩子有什么精神世界的困扰，只有自己默默忍受，在黑暗中困难的摸索。由于在家庭中，交流模式就很封闭，所以这样的孩子，在外界交往中，封闭的可能性很大。如果内外交流都不畅，这个孩子的发展，就处于危险之中。如果，在同龄人中，还有很好的可以无话不谈的朋友，这个孩子，至少还可以从同龄人中，学习相关知识。 </p>
-<p>比较完美的父母应该是什么样子？比较完美的父母，是无条件接纳你的父母；比较完美的父母，是关注你的情绪，给你情绪上的支持和认同的父母；比较完美的父母，是会关注你的精神状态，能够给予精神指引的人。儿女敢于跟这样的父母分享大部分，甚至所有的事情；不担心父母会批评他，有条件的爱他，或是惩罚性的不爱他； </p>
-<p>心理健康的孩子应该是什么样子？有安全感，自我接纳，不过分夸耀自己也不过分苛责自己。有自尊心，有进取心。 理智，现实，客观，能容忍生活中挫折的打击，无过度的幻想。有良好的人际关系，有爱人的能力和被爱的能力。有自己的个性，不过分寻求社会赞许。这样的孩子看起来，不退缩、不孤僻、不愁眉苦脸。这样的孩子，是自我价值感比较强的孩子。 </p>
-<h1 id="自我价值感从何而来？"><a href="#自我价值感从何而来？" class="headerlink" title="自我价值感从何而来？"></a><strong>自我价值感从何而来？</strong></h1><p>1、人们往往从外在去寻找自我价值感。但，它不完全来自于外在的成功，根源在内心，来自于父母无条件的接纳。 </p>
-<p>正因为父母无条件的接纳，于是“无论我怎样表现，他们都爱我，我都是有价值的”观念因此而树立。长大以后，这个孩子不惧怕失败，敢于尝试。</p>
-<p>没有被完全接纳过的孩子，也会只接纳自己好的一面，不接纳自己不好的一面。这样的孩子，会有什么样的表现呢？</p>
-<p>不敢冒险，不敢大胆尝试。主要是因为自己只接纳成功，不接纳自己可能的失败。</p>
-<p>挑剔别人，容易看到别人的缺点。</p>
-<p>追求完美。成功时，快乐的时间很短；不成功时，情绪低落的时间很长。 </p>
-<p>2、在情绪上没有得到足够关注的孩子，自我价值感是很低的。 </p>
-<p>从小，你的喜怒哀乐都没有人“共鸣”过，没有人和你一起快乐，陪伴你的悲伤，合理的释放你的愤怒，在精神上，你其实是孤独的。于是你会认为自己是没有太多价值的——情绪没人理会，当然没有价值！ </p>
-<p>为什么会这样？小小的你并不知道这是大人的过错，你只会认为，自己不够好。于是在潜意识里形成这样的观念：“我不够好，我是不值得别人关注的，我是没有价值的”。 </p>
-<p>自己不够好的潜意识，会使我们有什么样的表现呢？</p>
-<p>在公众场合，不敢大声说话，不敢发表自己的意见，不能尽情地展示自己，畏首畏尾，怕出丑。</p>
-<p>在人际交往上很被动。很少主动、大声与别人打招呼，（万一别人不理会我，怎么办？）我们会先观察，如果别人对我微笑，我就回应微笑；如果别人不理我，我也不理他！      </p>
-<p>做事时，疑虑很多。不敢全情投入，不敢喜怒形于色，一边做一边内心疑虑着：“这样做，别人会不会接受？这样做，好不好？”所以，故意显得面无表情，显得很不在乎的样子，显得我根本没有把你、把你们放在心上。甚至，显得很冷漠很酷的样子。其实，内心波澜起伏，脆弱易伤。   </p>
-<p>转载自百度经验：<a href="https://jingyan.baidu.com/article/0320e2c1ee2f6d1b86507b46.html">https://jingyan.baidu.com/article/0320e2c1ee2f6d1b86507b46.html</a></p>
-]]></content>
-      <categories>
-        <category>psychology</category>
-      </categories>
-      <tags>
-        <tag>低自我价值</tag>
-      </tags>
   </entry>
   <entry>
     <title>拒绝别人，你好意思吗？｜《可爱的诅咒：圣母型人格自助方法》</title>
@@ -3194,6 +3153,47 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       <categories>
         <category>psychology</category>
       </categories>
+  </entry>
+  <entry>
+    <title>自我价值感从何而来</title>
+    <url>/2017/09/25/psychology/%E4%BD%8E%E8%87%AA%E6%88%91%E4%BB%B7%E5%80%BC/</url>
+    <content><![CDATA[<p>我们很容易认为，一个人自我价值感高，是因为这个人够优秀，即他有很多优点和成就。一个人自我价值感低，是因为他的缺点与不足。这是一个最常见的误解。其实，我们很容易发现，自己身边的一些人，尽管外在条件看起来很优秀，但他就是自卑。这是因为，自我价值感的高低，尽管与外在的条件有些关系，但最主要的，还是源自获得的爱的多少。不管一个人外在条件多么出色，只要他曾有严重的爱的缺失，那么他一定会严重自卑。相反，不管一个人看似多么平常，只要他曾有充分的爱，那么他就会非常自信。看上去，自卑似乎是因为某方面的缺陷或缺点，但实质上，这是对自己不能获得爱的忧虑。 </p>
+<p>并且，自我价值感的形成，<strong>有一个关键期，就是1岁前</strong>。瑞士心理学家维雷娜·卡斯特在她的力作《克服焦虑》中写道： 我们认为，对6个月内的婴儿就必须表现出爱和关注，这样婴儿才会感觉舒适并且得到很好的发展。如果孩子因太少受到关注而不安吵闹的时候，亲近对象总是不能适当地给以抚慰，那么就会削弱孩子最初的信心，而这种信心正是形成足够稳定的自我价值感的基础。 </p>
+<p>一般认为，在最初的这6个月内，如果对孩子没有必要的爱与关注，如果不向孩子表明他是一个值得爱的人，那么孩子对这个世界的信任就会形成不稳定的基本状态。心理学家马拉泰斯塔认为，稳定的关系能力——也包括足够稳定的自我价值感——主要取决于在1岁前能否与抚养者交换快乐的感受。 </p>
+<p>对于这个观点，有一个例证。美国历史上最有名的连环炸弹杀手泰迪·卡辛克斯基，6个月大时因病住院，期间没有亲人陪伴和抚慰。结果，他出院以后，就从一个快乐的孩子变成了一个自闭的孩子。在卡辛克斯基一家中，弟弟大卫成长为一个颇有同情心的男子，而智商超过160的哥哥泰迪却在孤独中越陷越深，最终成为一名连环炸弹杀手。 </p>
+<p>其实，不止是1岁前的孩子特别需要爱与关注。心理学的研究还发现，一个2～3岁的孩子，如果和最重要的抚养者有两个星期以上的分离，也会造成难以逆转的心理创伤。 </p>
+<p>虽然大多数父母都很爱自己的孩子，但是，盲目爱自己孩子的父母很多，能够正确爱自己孩子的父母，不多。 </p>
+<p>典型的失败的父母：迈克尔.杰克逊的父亲，小甜甜布兰妮的妈妈，在他们的培养下，孩子的事业是成功的，但人生是失败的，生活是一败涂地，毫无幸福感可言的。 </p>
+<h1 id="四种不完全的爱："><a href="#四种不完全的爱：" class="headerlink" title="四种不完全的爱："></a>四种不完全的爱：</h1><h2 id="1、“有条件的爱”"><a href="#1、“有条件的爱”" class="headerlink" title="1、“有条件的爱”"></a><strong>1、“有条件的爱”</strong></h2><p>有的家长为孩子做了很多事，一心想要孩子出人头地，美其名为“要他将来有出息”，但是隐藏的潜意识可能是：“别让爸妈丢脸，你要为我争光，让我以你为荣。”</p>
+<p>类似的无意识的心声还有：“我要你实现我未曾实现的理想，达到我不曾达到的成就。我要你在这个世界上扬眉吐气，从而我也可以由你而扬眉吐气。”“不要让我失望。我为你牺牲了这么多。”“我爱你，而且也会一直爱你，只要你听话，按我说的去做。” </p>
+<h2 id="2、“不完全接纳的爱”"><a href="#2、“不完全接纳的爱”" class="headerlink" title="2、“不完全接纳的爱”"></a><strong>2、“不完全接纳的爱”</strong></h2><p>孩子成功时，父母很高兴，很爱孩子；失败时，父母很失望，不停地数落、唠叨、甚至痛骂小孩。   </p>
+<h2 id="3、“过度溺爱”"><a href="#3、“过度溺爱”" class="headerlink" title="3、“过度溺爱”"></a><strong>3、“过度溺爱”</strong></h2><p>从小，就照顾过度。长大了，还是包办很多事。孩子在家，只管玩，只管学习，其他事都不要他承担。这样的孩子，一方面很无能，自理能力、与人交往能力、社会独立性都很差，到社会上一看，才发现自己什么都不会做、不敢做，于是很自卑；另一方面，很自私，很冷漠，不会付出，不会爱别人。所以，常常看到一个家中，有一个能干强悍的妈妈，一个懦弱有气无力的儿子。 </p>
+<p>包办型溺爱的父母，他们其实剥夺了孩子自我探索的机会，不懂得尊重孩子的独立人格。那么，无论他们的安排多么完美，他们的孩子都会有一种感觉，他们好像不是为自己而活，学习也是为爸妈学习。所以，学习的主动性、克服困难的决心，都很弱。责任心也很差。因为，每个人只有为自己而活的时候，才是最有力量的。</p>
+<p>有的人，走路、做事都有气无力，没精打采，明显就没有生命力的样子。 </p>
+<h2 id="4、“忽视孩子精神世界的爱”"><a href="#4、“忽视孩子精神世界的爱”" class="headerlink" title="4、“忽视孩子精神世界的爱”"></a><strong>4、“忽视孩子精神世界的爱”</strong></h2><p>父母看起来也很爱孩子，孩子要什么买什么，物质上很大方。这样的家庭，看起来也是很和睦的，因为父母可能都很朴实，善良，都是好人。但是，由于父母本身的精神世界就不够开阔宏大，只会朴实地过日子，所以在这样的家庭中，很少会交流内心的情绪，思想，很难给孩子一个精神指引，世界观、价值观的确立。孩子有什么精神世界的困扰，只有自己默默忍受，在黑暗中困难的摸索。由于在家庭中，交流模式就很封闭，所以这样的孩子，在外界交往中，封闭的可能性很大。如果内外交流都不畅，这个孩子的发展，就处于危险之中。如果，在同龄人中，还有很好的可以无话不谈的朋友，这个孩子，至少还可以从同龄人中，学习相关知识。 </p>
+<p>比较完美的父母应该是什么样子？比较完美的父母，是无条件接纳你的父母；比较完美的父母，是关注你的情绪，给你情绪上的支持和认同的父母；比较完美的父母，是会关注你的精神状态，能够给予精神指引的人。儿女敢于跟这样的父母分享大部分，甚至所有的事情；不担心父母会批评他，有条件的爱他，或是惩罚性的不爱他； </p>
+<p>心理健康的孩子应该是什么样子？有安全感，自我接纳，不过分夸耀自己也不过分苛责自己。有自尊心，有进取心。 理智，现实，客观，能容忍生活中挫折的打击，无过度的幻想。有良好的人际关系，有爱人的能力和被爱的能力。有自己的个性，不过分寻求社会赞许。这样的孩子看起来，不退缩、不孤僻、不愁眉苦脸。这样的孩子，是自我价值感比较强的孩子。 </p>
+<h1 id="自我价值感从何而来？"><a href="#自我价值感从何而来？" class="headerlink" title="自我价值感从何而来？"></a><strong>自我价值感从何而来？</strong></h1><p>1、人们往往从外在去寻找自我价值感。但，它不完全来自于外在的成功，根源在内心，来自于父母无条件的接纳。 </p>
+<p>正因为父母无条件的接纳，于是“无论我怎样表现，他们都爱我，我都是有价值的”观念因此而树立。长大以后，这个孩子不惧怕失败，敢于尝试。</p>
+<p>没有被完全接纳过的孩子，也会只接纳自己好的一面，不接纳自己不好的一面。这样的孩子，会有什么样的表现呢？</p>
+<p>不敢冒险，不敢大胆尝试。主要是因为自己只接纳成功，不接纳自己可能的失败。</p>
+<p>挑剔别人，容易看到别人的缺点。</p>
+<p>追求完美。成功时，快乐的时间很短；不成功时，情绪低落的时间很长。 </p>
+<p>2、在情绪上没有得到足够关注的孩子，自我价值感是很低的。 </p>
+<p>从小，你的喜怒哀乐都没有人“共鸣”过，没有人和你一起快乐，陪伴你的悲伤，合理的释放你的愤怒，在精神上，你其实是孤独的。于是你会认为自己是没有太多价值的——情绪没人理会，当然没有价值！ </p>
+<p>为什么会这样？小小的你并不知道这是大人的过错，你只会认为，自己不够好。于是在潜意识里形成这样的观念：“我不够好，我是不值得别人关注的，我是没有价值的”。 </p>
+<p>自己不够好的潜意识，会使我们有什么样的表现呢？</p>
+<p>在公众场合，不敢大声说话，不敢发表自己的意见，不能尽情地展示自己，畏首畏尾，怕出丑。</p>
+<p>在人际交往上很被动。很少主动、大声与别人打招呼，（万一别人不理会我，怎么办？）我们会先观察，如果别人对我微笑，我就回应微笑；如果别人不理我，我也不理他！      </p>
+<p>做事时，疑虑很多。不敢全情投入，不敢喜怒形于色，一边做一边内心疑虑着：“这样做，别人会不会接受？这样做，好不好？”所以，故意显得面无表情，显得很不在乎的样子，显得我根本没有把你、把你们放在心上。甚至，显得很冷漠很酷的样子。其实，内心波澜起伏，脆弱易伤。   </p>
+<p>转载自百度经验：<a href="https://jingyan.baidu.com/article/0320e2c1ee2f6d1b86507b46.html">https://jingyan.baidu.com/article/0320e2c1ee2f6d1b86507b46.html</a></p>
+]]></content>
+      <categories>
+        <category>psychology</category>
+      </categories>
+      <tags>
+        <tag>低自我价值</tag>
+      </tags>
   </entry>
   <entry>
     <title>Apache 配置虚拟目录、虚拟主机</title>
@@ -3302,19 +3302,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </tags>
   </entry>
   <entry>
-    <title>axios发送application/x-www-form-urlencoded类型的请求</title>
-    <url>/2020/05/21/technology/axios%E5%8F%91%E9%80%81application-x-www-form-urlencoded%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%AF%B7%E6%B1%82/</url>
-    <content><![CDATA[<p>axios 默认发送 json<br>想要发送 application&#x2F;x-www-form-urlencoded 类型的数据<br>可以使用 qs 这个 node module 包</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import qs from &#x27;qs&#x27;;</span><br><span class="line">const data = &#123; name:&#x27;xxx&#x27; , age:&#x27;25&#x27;&#125;;  // 我们传的是 js 对象</span><br><span class="line">const options = &#123;</span><br><span class="line">  method: &#x27;POST&#x27;,</span><br><span class="line">  headers: &#123; &#x27;content-type&#x27;: &#x27;application/x-www-form-urlencoded&#x27; &#125;,</span><br><span class="line">  data: qs.stringify(data),   // 用 qs 将js对象转换为字符串 &#x27;name=edward&amp;age=25&#x27;</span><br><span class="line">  url: &#x27;http://www.xxx.com&#x27;</span><br><span class="line">&#125;; </span><br><span class="line">axios(options);</span><br></pre></td></tr></table></figure>
-
-
-<p>参考地址：<br><a href="https://www.cnblogs.com/edwardwzw/p/11694903.html">https://www.cnblogs.com/edwardwzw/p/11694903.html</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>axios跨域</title>
     <url>/2019/03/12/technology/axios%E8%B7%A8%E5%9F%9F/</url>
     <content><![CDATA[<h3 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h3><p>参考文档<br><a href="https://www.cnblogs.com/wancheng7/p/8987694.html">https://www.cnblogs.com/wancheng7/p/8987694.html</a><br><a href="https://www.cnblogs.com/cap-rq/p/10149789.html">https://www.cnblogs.com/cap-rq/p/10149789.html</a></p>
@@ -3333,6 +3320,19 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       <categories>
         <category>technology</category>
         <category>Server</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>axios发送application/x-www-form-urlencoded类型的请求</title>
+    <url>/2020/05/21/technology/axios%E5%8F%91%E9%80%81application-x-www-form-urlencoded%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%AF%B7%E6%B1%82/</url>
+    <content><![CDATA[<p>axios 默认发送 json<br>想要发送 application&#x2F;x-www-form-urlencoded 类型的数据<br>可以使用 qs 这个 node module 包</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import qs from &#x27;qs&#x27;;</span><br><span class="line">const data = &#123; name:&#x27;xxx&#x27; , age:&#x27;25&#x27;&#125;;  // 我们传的是 js 对象</span><br><span class="line">const options = &#123;</span><br><span class="line">  method: &#x27;POST&#x27;,</span><br><span class="line">  headers: &#123; &#x27;content-type&#x27;: &#x27;application/x-www-form-urlencoded&#x27; &#125;,</span><br><span class="line">  data: qs.stringify(data),   // 用 qs 将js对象转换为字符串 &#x27;name=edward&amp;age=25&#x27;</span><br><span class="line">  url: &#x27;http://www.xxx.com&#x27;</span><br><span class="line">&#125;; </span><br><span class="line">axios(options);</span><br></pre></td></tr></table></figure>
+
+
+<p>参考地址：<br><a href="https://www.cnblogs.com/edwardwzw/p/11694903.html">https://www.cnblogs.com/edwardwzw/p/11694903.html</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
       </categories>
   </entry>
   <entry>
@@ -3623,6 +3623,55 @@ pasv_max_port=40100
       </categories>
   </entry>
   <entry>
+    <title>CSS3</title>
+    <url>/2017/09/27/technology/front-end/css/css3/</url>
+    <content><![CDATA[<h1 id="一、边框"><a href="#一、边框" class="headerlink" title="一、边框"></a>一、边框</h1><p>border-radius:100%;<br>box-shadow:x偏移量，y偏移量，阴影模糊，阴影扩展，颜色，内外<br>border-image:url() 70 repeat; </p>
+<h1 id="二、颜色相关"><a href="#二、颜色相关" class="headerlink" title="二、颜色相关"></a>二、颜色相关</h1><p>rgba    如：background:rgba(255,255,255,0.5);<br>颜色渐变（线性渐变（linear）、**径向渐变(radial)**） 线性渐变 linear-gradient(方向，颜色（两个至多个））<br>例如：background-image:linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet); </p>
+<h1 id="三、文字与字体"><a href="#三、文字与字体" class="headerlink" title="三、文字与字体"></a>三、文字与字体</h1><p>文本溢出text-overflow <strong>text-overflow</strong>只是用来说明文字溢出时用什么方式显示，要实现溢出时产生<strong>省略号</strong>的效果，还须定义<strong>强制文本在一行内显示</strong>（white-space:nowrap）及<strong>溢出内容为隐藏</strong>（overflow:hidden），只有这样才能实现<strong>溢出文本显示省略号</strong>的效果，代码如下：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">text-overflow</span>: ellipsis; </span><br><span class="line"><span class="attribute">overflow</span>: hidden; </span><br><span class="line"><span class="attribute">white-space</span>: nowrap;</span><br></pre></td></tr></table></figure>
+<p>多行之后显示省略号</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">overflow</span>: hidden;</span><br><span class="line"><span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line"><span class="attribute">display</span>: -webkit-box;</span><br><span class="line">-webkit-box-orient: vertical;</span><br><span class="line">-webkit-line-clamp: <span class="number">2</span>; // 两行之后显示省略号</span><br></pre></td></tr></table></figure>
+
+<p>同时，<strong>word-wrap</strong>也可以用来设置<strong>文本行为</strong>，当前行超过指定容器的边界时是否断开转行。 嵌入字体@font-face<br>例如 @font-face { font-family: “MOOC Font”; src: url(“<a href="http://www.imooc.com/Amaranth-BoldItalic.otf">http://www.imooc.com/Amaranth-BoldItalic.otf</a>“); } 直接使用font-family: “MOOC Font”;   text-shadow: X-Offset Y-Offset blur color;</p>
+<p>X-Offset：表示阴影的水平偏移距离，其值为正值时阴影向右偏移，反之向左偏移；</p>
+<p>Y-Offset：是指阴影的垂直偏移距离，如果其值是正值时，阴影向下偏移，反之向上偏移；</p>
+<p>Blur：是指阴影的模糊程度，其值不能是负值，如果值越大，阴影越模糊，反之阴影越清晰，如果不需要阴影模糊可以将Blur值设置为0；</p>
+<p>Color：是指阴影的颜色，其可以使用rgba色。</p>
+<h1 id="四、与背景相关的样式"><a href="#四、与背景相关的样式" class="headerlink" title="四、与背景相关的样式"></a>四、与背景相关的样式</h1><p>background-origin</p>
+<p>设置元素背景图片的<strong>原始起始位置</strong>。 语法：</p>
+<p>background-origin ： border-box | padding-box | content-box;</p>
+<p>参数分别表示背景图片是从<strong>边框</strong>，还是<strong>内边距（默认值）</strong>，或者是<strong>内容区域</strong>开始显示。</p>
+<p>background-clip</p>
+<p>用来将背景图片做适当的<strong>裁剪</strong>以适应实际需要。 语法：</p>
+<p>background-clip ： border-box | padding-box | content-box | no-clip</p>
+<p>参数分别表示从<strong>边框、</strong>或<strong>内填充</strong>，或者<strong>内容区域</strong>向外裁剪背景。<strong>no-clip</strong>表示不裁切，和<strong>参数border-box</strong>显示同样的效果。<code>backgroud-clip</code>默认值为<strong>border-box</strong>。</p>
+<p> background-size</p>
+<p>设置背景图片的大小，以<strong>长度值</strong>或<strong>百分比</strong>显示，还可以通过<strong>cover</strong>和<strong>contain</strong>来对图片进行伸缩。 语法：</p>
+<p>background-size: auto | &lt;长度值&gt; | &lt;百分比&gt; | cover | contain</p>
+<p>取值说明： <strong>1、auto</strong>：默认值，不改变背景图片的原始高度和宽度； <strong>2、&lt;长度值&gt;<strong>：成对出现如200px 50px，将背景图片宽高依次设置为前面两个值，当设置一个值时，将其作为图片宽度值来</strong>等比缩放</strong>； <strong>3、&lt;百分比&gt;<strong>：0％~100％之间的任何值，将背景图片宽高依次设置为所在元素宽高乘以前面百分比得出的数值，当设置一个值时同上； <strong>4、cover</strong>：顾名思义为</strong>覆盖</strong>，即将背景图片等比缩放以<strong>填满整个容器</strong>； <strong>5、contain</strong>：容纳，即将背景图片等比缩放至<strong>某一边紧贴容器边缘为止</strong>。</p>
+<p>multiple backgrounds</p>
+<p>多重背景，也就是CSS2里<strong>background</strong>的属性外加<strong>origin</strong>、<strong>clip</strong>和<strong>size</strong>组成的新background的多次叠加，缩写时为用<strong>逗号</strong>隔开的每组值；用分解写法时，如果有多个背景图片，而其他属性只有一个（例如background-repeat只有一个），表明所有背景图片应用该属性值。 语法缩写如下：</p>
+<p>background ： [background-color] | [background-image] | [background-position][&#x2F;background-size] | [background-repeat] | [background-attachment] | [background-clip] | [background-origin],…</p>
+<p><strong>注意：</strong></p>
+<ol>
+<li>用逗号隔开每组 background 的缩写值；</li>
+<li>如果有 size 值，需要紧跟 position 并且用 “&#x2F;“ 隔开；</li>
+<li>如果有多个背景图片，而其他属性只有一个（例如 background-repeat 只有一个），表明所有背景图片应用该属性值。</li>
+<li>background-color 只能设置一个。</li>
+</ol>
+<p>导航综合练习 .nav li{background:linear-gradient(to bottom,#dd2926,#a82724,#dd2926) no-repeat right &#x2F; 1px 15px;}   </p>
+<h1 id="五、CSS3选择器"><a href="#五、CSS3选择器" class="headerlink" title="五、CSS3选择器"></a>五、CSS3选择器</h1><h1 id="六、变形与动画"><a href="#六、变形与动画" class="headerlink" title="六、变形与动画"></a>六、变形与动画</h1><h1 id="七、布局样式相关"><a href="#七、布局样式相关" class="headerlink" title="七、布局样式相关"></a>七、布局样式相关</h1><p>盒子模型content-box  border-box</p>
+<p>box-sizing: border-box;</p>
+<p>box-sizing: content-box;</p>
+<p><a href="https://www.imooc.com/article/18400">十天精通CSS3学后笔记</a></p>
+]]></content>
+      <categories>
+        <category>technology</category>
+        <category>front-end</category>
+        <category>css</category>
+      </categories>
+  </entry>
+  <entry>
     <title>CSS-flex</title>
     <url>/2021/06/07/technology/front-end/css/CSS-flex/</url>
     <content><![CDATA[<h2 id="容器的属性"><a href="#容器的属性" class="headerlink" title="容器的属性"></a>容器的属性</h2><h3 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a>flex-direction</h3><p>规定灵活项目的方向</p>
@@ -3676,55 +3725,6 @@ pasv_max_port=40100
       </categories>
   </entry>
   <entry>
-    <title>CSS3</title>
-    <url>/2017/09/27/technology/front-end/css/css3/</url>
-    <content><![CDATA[<h1 id="一、边框"><a href="#一、边框" class="headerlink" title="一、边框"></a>一、边框</h1><p>border-radius:100%;<br>box-shadow:x偏移量，y偏移量，阴影模糊，阴影扩展，颜色，内外<br>border-image:url() 70 repeat; </p>
-<h1 id="二、颜色相关"><a href="#二、颜色相关" class="headerlink" title="二、颜色相关"></a>二、颜色相关</h1><p>rgba    如：background:rgba(255,255,255,0.5);<br>颜色渐变（线性渐变（linear）、**径向渐变(radial)**） 线性渐变 linear-gradient(方向，颜色（两个至多个））<br>例如：background-image:linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet); </p>
-<h1 id="三、文字与字体"><a href="#三、文字与字体" class="headerlink" title="三、文字与字体"></a>三、文字与字体</h1><p>文本溢出text-overflow <strong>text-overflow</strong>只是用来说明文字溢出时用什么方式显示，要实现溢出时产生<strong>省略号</strong>的效果，还须定义<strong>强制文本在一行内显示</strong>（white-space:nowrap）及<strong>溢出内容为隐藏</strong>（overflow:hidden），只有这样才能实现<strong>溢出文本显示省略号</strong>的效果，代码如下：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">text-overflow</span>: ellipsis; </span><br><span class="line"><span class="attribute">overflow</span>: hidden; </span><br><span class="line"><span class="attribute">white-space</span>: nowrap;</span><br></pre></td></tr></table></figure>
-<p>多行之后显示省略号</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">overflow</span>: hidden;</span><br><span class="line"><span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line"><span class="attribute">display</span>: -webkit-box;</span><br><span class="line">-webkit-box-orient: vertical;</span><br><span class="line">-webkit-line-clamp: <span class="number">2</span>; // 两行之后显示省略号</span><br></pre></td></tr></table></figure>
-
-<p>同时，<strong>word-wrap</strong>也可以用来设置<strong>文本行为</strong>，当前行超过指定容器的边界时是否断开转行。 嵌入字体@font-face<br>例如 @font-face { font-family: “MOOC Font”; src: url(“<a href="http://www.imooc.com/Amaranth-BoldItalic.otf">http://www.imooc.com/Amaranth-BoldItalic.otf</a>“); } 直接使用font-family: “MOOC Font”;   text-shadow: X-Offset Y-Offset blur color;</p>
-<p>X-Offset：表示阴影的水平偏移距离，其值为正值时阴影向右偏移，反之向左偏移；</p>
-<p>Y-Offset：是指阴影的垂直偏移距离，如果其值是正值时，阴影向下偏移，反之向上偏移；</p>
-<p>Blur：是指阴影的模糊程度，其值不能是负值，如果值越大，阴影越模糊，反之阴影越清晰，如果不需要阴影模糊可以将Blur值设置为0；</p>
-<p>Color：是指阴影的颜色，其可以使用rgba色。</p>
-<h1 id="四、与背景相关的样式"><a href="#四、与背景相关的样式" class="headerlink" title="四、与背景相关的样式"></a>四、与背景相关的样式</h1><p>background-origin</p>
-<p>设置元素背景图片的<strong>原始起始位置</strong>。 语法：</p>
-<p>background-origin ： border-box | padding-box | content-box;</p>
-<p>参数分别表示背景图片是从<strong>边框</strong>，还是<strong>内边距（默认值）</strong>，或者是<strong>内容区域</strong>开始显示。</p>
-<p>background-clip</p>
-<p>用来将背景图片做适当的<strong>裁剪</strong>以适应实际需要。 语法：</p>
-<p>background-clip ： border-box | padding-box | content-box | no-clip</p>
-<p>参数分别表示从<strong>边框、</strong>或<strong>内填充</strong>，或者<strong>内容区域</strong>向外裁剪背景。<strong>no-clip</strong>表示不裁切，和<strong>参数border-box</strong>显示同样的效果。<code>backgroud-clip</code>默认值为<strong>border-box</strong>。</p>
-<p> background-size</p>
-<p>设置背景图片的大小，以<strong>长度值</strong>或<strong>百分比</strong>显示，还可以通过<strong>cover</strong>和<strong>contain</strong>来对图片进行伸缩。 语法：</p>
-<p>background-size: auto | &lt;长度值&gt; | &lt;百分比&gt; | cover | contain</p>
-<p>取值说明： <strong>1、auto</strong>：默认值，不改变背景图片的原始高度和宽度； <strong>2、&lt;长度值&gt;<strong>：成对出现如200px 50px，将背景图片宽高依次设置为前面两个值，当设置一个值时，将其作为图片宽度值来</strong>等比缩放</strong>； <strong>3、&lt;百分比&gt;<strong>：0％~100％之间的任何值，将背景图片宽高依次设置为所在元素宽高乘以前面百分比得出的数值，当设置一个值时同上； <strong>4、cover</strong>：顾名思义为</strong>覆盖</strong>，即将背景图片等比缩放以<strong>填满整个容器</strong>； <strong>5、contain</strong>：容纳，即将背景图片等比缩放至<strong>某一边紧贴容器边缘为止</strong>。</p>
-<p>multiple backgrounds</p>
-<p>多重背景，也就是CSS2里<strong>background</strong>的属性外加<strong>origin</strong>、<strong>clip</strong>和<strong>size</strong>组成的新background的多次叠加，缩写时为用<strong>逗号</strong>隔开的每组值；用分解写法时，如果有多个背景图片，而其他属性只有一个（例如background-repeat只有一个），表明所有背景图片应用该属性值。 语法缩写如下：</p>
-<p>background ： [background-color] | [background-image] | [background-position][&#x2F;background-size] | [background-repeat] | [background-attachment] | [background-clip] | [background-origin],…</p>
-<p><strong>注意：</strong></p>
-<ol>
-<li>用逗号隔开每组 background 的缩写值；</li>
-<li>如果有 size 值，需要紧跟 position 并且用 “&#x2F;“ 隔开；</li>
-<li>如果有多个背景图片，而其他属性只有一个（例如 background-repeat 只有一个），表明所有背景图片应用该属性值。</li>
-<li>background-color 只能设置一个。</li>
-</ol>
-<p>导航综合练习 .nav li{background:linear-gradient(to bottom,#dd2926,#a82724,#dd2926) no-repeat right &#x2F; 1px 15px;}   </p>
-<h1 id="五、CSS3选择器"><a href="#五、CSS3选择器" class="headerlink" title="五、CSS3选择器"></a>五、CSS3选择器</h1><h1 id="六、变形与动画"><a href="#六、变形与动画" class="headerlink" title="六、变形与动画"></a>六、变形与动画</h1><h1 id="七、布局样式相关"><a href="#七、布局样式相关" class="headerlink" title="七、布局样式相关"></a>七、布局样式相关</h1><p>盒子模型content-box  border-box</p>
-<p>box-sizing: border-box;</p>
-<p>box-sizing: content-box;</p>
-<p><a href="https://www.imooc.com/article/18400">十天精通CSS3学后笔记</a></p>
-]]></content>
-      <categories>
-        <category>technology</category>
-        <category>front-end</category>
-        <category>css</category>
-      </categories>
-  </entry>
-  <entry>
     <title>font-weight</title>
     <url>/2022/01/28/technology/front-end/css/font-weight/</url>
     <content><![CDATA[<h2 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h2><p>font-weight可取值：100～900和normal、bold、bolder、lighter。</p>
@@ -3770,6 +3770,23 @@ pasv_max_port=40100
       </categories>
   </entry>
   <entry>
+    <title>js 数据类型</title>
+    <url>/2021/01/11/technology/front-end/javascript/js%208%20%E7%A7%8D%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+    <content><![CDATA[<h2 id="js-8-种数据类型"><a href="#js-8-种数据类型" class="headerlink" title="js 8 种数据类型"></a>js 8 种数据类型</h2><p><img src="C:\Users\Yvan\AppData\Roaming\Typora\typora-user-images\image-20210111181230568.png" alt="image-20210111181230568"></p>
+<h2 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h2><p><img src="C:\Users\Yvan\AppData\Roaming\Typora\typora-user-images\image-20210111180636320.png" alt="image-20210111180636320"></p>
+<h2 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h2><p><img src="C:\Users\Yvan\AppData\Roaming\Typora\typora-user-images\image-20210111180709997.png" alt="image-20210111180709997"></p>
+<h3 id="myInstanceof"><a href="#myInstanceof" class="headerlink" title="myInstanceof"></a>myInstanceof</h3><p><img src="C:\Users\Yvan\AppData\Roaming\Typora\typora-user-images\image-20210111180815057.png" alt="image-20210111180815057"></p>
+<h2 id="Object-prototype-toString-call"><a href="#Object-prototype-toString-call" class="headerlink" title="Object.prototype.toString.call()"></a>Object.prototype.toString.call()</h2><p><img src="C:\Users\Yvan\AppData\Roaming\Typora\typora-user-images\image-20210111181005227.png" alt="image-20210111181005227"></p>
+<h2 id="通用的数据类型判断方法"><a href="#通用的数据类型判断方法" class="headerlink" title="通用的数据类型判断方法"></a>通用的数据类型判断方法</h2><p><img src="C:\Users\Yvan\AppData\Roaming\Typora\typora-user-images\image-20210111181129536.png" alt="image-20210111181129536"></p>
+]]></content>
+      <categories>
+        <category>technology</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JS 对象</title>
     <url>/2021/03/10/technology/front-end/javascript/Object/</url>
     <content><![CDATA[<h3 id="对象的属性"><a href="#对象的属性" class="headerlink" title="对象的属性"></a>对象的属性</h3><p>属性分两种：数据属性和访问器属性。</p>
@@ -3791,23 +3808,6 @@ pasv_max_port=40100
         <category>technology</category>
         <category>front-end</category>
       </categories>
-  </entry>
-  <entry>
-    <title>js 数据类型</title>
-    <url>/2021/01/11/technology/front-end/javascript/js%208%20%E7%A7%8D%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
-    <content><![CDATA[<h2 id="js-8-种数据类型"><a href="#js-8-种数据类型" class="headerlink" title="js 8 种数据类型"></a>js 8 种数据类型</h2><p><img src="C:\Users\Yvan\AppData\Roaming\Typora\typora-user-images\image-20210111181230568.png" alt="image-20210111181230568"></p>
-<h2 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h2><p><img src="C:\Users\Yvan\AppData\Roaming\Typora\typora-user-images\image-20210111180636320.png" alt="image-20210111180636320"></p>
-<h2 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h2><p><img src="C:\Users\Yvan\AppData\Roaming\Typora\typora-user-images\image-20210111180709997.png" alt="image-20210111180709997"></p>
-<h3 id="myInstanceof"><a href="#myInstanceof" class="headerlink" title="myInstanceof"></a>myInstanceof</h3><p><img src="C:\Users\Yvan\AppData\Roaming\Typora\typora-user-images\image-20210111180815057.png" alt="image-20210111180815057"></p>
-<h2 id="Object-prototype-toString-call"><a href="#Object-prototype-toString-call" class="headerlink" title="Object.prototype.toString.call()"></a>Object.prototype.toString.call()</h2><p><img src="C:\Users\Yvan\AppData\Roaming\Typora\typora-user-images\image-20210111181005227.png" alt="image-20210111181005227"></p>
-<h2 id="通用的数据类型判断方法"><a href="#通用的数据类型判断方法" class="headerlink" title="通用的数据类型判断方法"></a>通用的数据类型判断方法</h2><p><img src="C:\Users\Yvan\AppData\Roaming\Typora\typora-user-images\image-20210111181129536.png" alt="image-20210111181129536"></p>
-]]></content>
-      <categories>
-        <category>technology</category>
-      </categories>
-      <tags>
-        <tag>javascript</tag>
-      </tags>
   </entry>
   <entry>
     <title>JS 类</title>
@@ -3972,30 +3972,6 @@ pasv_max_port=40100
 ]]></content>
   </entry>
   <entry>
-    <title>nvm基本使用</title>
-    <url>/2019/12/24/technology/front-end/javascript/nvm%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<p>change mirror</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node</span><br></pre></td></tr></table></figure>
-<p>查看本地</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm list/ls</span><br></pre></td></tr></table></figure>
-<p>查看</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm ls-remote</span><br></pre></td></tr></table></figure>
-<p>安装</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm install &lt;version&gt;</span><br></pre></td></tr></table></figure>
-<p>切换版本</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm use &lt;version&gt;</span><br></pre></td></tr></table></figure>
-<p>查看当前版本</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm current</span><br></pre></td></tr></table></figure>
-<p>设置默认版本</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm alias default &lt;version&gt;</span><br></pre></td></tr></table></figure>
-
-<p>参考文档<br><a href="https://www.jianshu.com/p/e21e3783304f">https://www.jianshu.com/p/e21e3783304f</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>promise如何解决回调地狱</title>
     <url>/2021/02/24/technology/front-end/javascript/promise/</url>
     <content><![CDATA[<h3 id="promise如何解决回调地狱"><a href="#promise如何解决回调地狱" class="headerlink" title="promise如何解决回调地狱"></a>promise如何解决回调地狱</h3><p><img src="C:\Users\Yvan\AppData\Roaming\Typora\typora-user-images\image-20210224154744243.png" alt="image-20210224154744243"></p>
@@ -4041,6 +4017,30 @@ pasv_max_port=40100
       <categories>
         <category>technology</category>
         <category>front-end</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>nvm基本使用</title>
+    <url>/2019/12/24/technology/front-end/javascript/nvm%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>change mirror</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node</span><br></pre></td></tr></table></figure>
+<p>查看本地</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm list/ls</span><br></pre></td></tr></table></figure>
+<p>查看</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm ls-remote</span><br></pre></td></tr></table></figure>
+<p>安装</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm install &lt;version&gt;</span><br></pre></td></tr></table></figure>
+<p>切换版本</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm use &lt;version&gt;</span><br></pre></td></tr></table></figure>
+<p>查看当前版本</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm current</span><br></pre></td></tr></table></figure>
+<p>设置默认版本</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm alias default &lt;version&gt;</span><br></pre></td></tr></table></figure>
+
+<p>参考文档<br><a href="https://www.jianshu.com/p/e21e3783304f">https://www.jianshu.com/p/e21e3783304f</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
       </categories>
   </entry>
   <entry>
