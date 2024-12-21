@@ -10,15 +10,21 @@ tags:
 语法高亮也是帮助我们不要打错命令的好帮手。
 
 第一步，进入 zsh 插件目录，并 clone 项目到此目录中：
-cd "$ZSH_CUSTOM/plugins"
+```bash
+cd $ZSH_CUSTOM/plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 git clone https://github.com/zsh-users/zsh-autosuggestions.git
+```
 第二步，配置 .zshrc 文件
+```
 ... 上面省略
 plugins = (git zsh-autosuggestions zsh-syntax-highlighting)
 ... 下面省略
+```
 最后一步，让配置生效
+```bash
 zsh
+```
 完成！👍
 
 作者：万有引力万有
