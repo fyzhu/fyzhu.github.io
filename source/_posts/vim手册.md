@@ -96,3 +96,9 @@ ctrl+w 删除上一个单词
 7. () b
 8. {} B
 9. []
+
+### replace
+```shell
+:s/hello/hi/g  # 当前行替换所有匹配
+:%s/hello/hi/g # 整个文件替换所有匹配
+```
