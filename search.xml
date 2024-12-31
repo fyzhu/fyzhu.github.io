@@ -32,6 +32,17 @@
       </categories>
   </entry>
   <entry>
+    <title>Laravel报错解决方案</title>
+    <url>/2019/02/18/Laravel%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<h2 id="Malformed-UTF-8-characters-possibly-incorrectly-encoded"><a href="#Malformed-UTF-8-characters-possibly-incorrectly-encoded" class="headerlink" title="Malformed UTF-8 characters, possibly incorrectly encoded"></a>Malformed UTF-8 characters, possibly incorrectly encoded</h2><p>使用百度地图的 echart 中的地图压缩算法对 geojson 进行压缩完成后，使用 larevel 返回，会报这个错误</p>
+<p>参考文档<br><a href="https://www.e-learn.cn/content/wangluowenzhang/169226">https://www.e-learn.cn/content/wangluowenzhang/169226</a></p>
+<h2 id="could-not-find-driver"><a href="#could-not-find-driver" class="headerlink" title="could not find driver"></a>could not find driver</h2><p>打开 php 的数据库扩展（如：pgsql ）</p>
+]]></content>
+      <tags>
+        <tag>question</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Mac下使用mysql</title>
     <url>/2019/07/13/Mac%E4%B8%8B%E4%BD%BF%E7%94%A8mysql/</url>
     <content><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
@@ -44,17 +55,6 @@
       <tags>
         <tag>mysql</tag>
         <tag>Mac</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Laravel报错解决方案</title>
-    <url>/2019/02/18/Laravel%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<h2 id="Malformed-UTF-8-characters-possibly-incorrectly-encoded"><a href="#Malformed-UTF-8-characters-possibly-incorrectly-encoded" class="headerlink" title="Malformed UTF-8 characters, possibly incorrectly encoded"></a>Malformed UTF-8 characters, possibly incorrectly encoded</h2><p>使用百度地图的 echart 中的地图压缩算法对 geojson 进行压缩完成后，使用 larevel 返回，会报这个错误</p>
-<p>参考文档<br><a href="https://www.e-learn.cn/content/wangluowenzhang/169226">https://www.e-learn.cn/content/wangluowenzhang/169226</a></p>
-<h2 id="could-not-find-driver"><a href="#could-not-find-driver" class="headerlink" title="could not find driver"></a>could not find driver</h2><p>打开 php 的数据库扩展（如：pgsql ）</p>
-]]></content>
-      <tags>
-        <tag>question</tag>
       </tags>
   </entry>
   <entry>
@@ -86,26 +86,6 @@
       </categories>
   </entry>
   <entry>
-    <title>V8是如何执行一段JavaScript代码的</title>
-    <url>/2022/07/25/V8%E6%98%AF%E5%A6%82%E4%BD%95%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AE%B5JavaScript%E4%BB%A3%E7%A0%81%E7%9A%84/</url>
-    <content><![CDATA[<h2 id="代码如何执行"><a href="#代码如何执行" class="headerlink" title="代码如何执行"></a>代码如何执行</h2><p>使用高级语言编写的代码需要先编译为机器码（二进制代码）再执行</p>
-<p>执行方式有如下两种</p>
-<h3 id="编译执行"><a href="#编译执行" class="headerlink" title="编译执行"></a>编译执行</h3><p>代码 &#x3D;》 解析器 &#x3D;》 中间代码 &#x3D;》 编译器 &#x3D;》 机器码 &#x3D;》 执行结果</p>
-<p>把代码一次性编译为机器码，然后执行</p>
-<h3 id="解释执行"><a href="#解释执行" class="headerlink" title="解释执行"></a>解释执行</h3><p>代码 &#x3D;》 解析器 &#x3D;》 中间代码 &#x3D;》 解释器 &#x3D;》 执行结果</p>
-<p>编译一行代码，执行一行代码，一边编译一边执行</p>
-<h2 id="为何需要虚拟机"><a href="#为何需要虚拟机" class="headerlink" title="为何需要虚拟机"></a>为何需要虚拟机</h2><p>java 和 javascript 等语言需要虚拟机，是为了跨平台，抹平平台差异。</p>
-<h2 id="为何需要中间代码"><a href="#为何需要中间代码" class="headerlink" title="为何需要中间代码"></a>为何需要中间代码</h2><p>中间代码一般为字节码</p>
-<p>因为把源码编译为机器码占用太多空间，热代码需要缓存下来，避免重复编译。而使用字节码可以节省空间。</p>
-<p>当然字节码还能提升代码启动速度、降低代码负责度</p>
-<p><a href="https://time.geekbang.org/column/article/211682?cid=100048001">V8是如何执行一段JavaScript代码的？</a></p>
-<p><a href="https://time.geekbang.org/column/article/224206#null">字节码（一）：V8为什么又重新引入字节码？</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Python 虚拟环境</title>
     <url>/2020/07/13/Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/</url>
     <content><![CDATA[<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>pip install virtualenvwrapper-win</p>
@@ -127,6 +107,26 @@
       <tags>
         <tag>list</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>V8是如何执行一段JavaScript代码的</title>
+    <url>/2022/07/25/V8%E6%98%AF%E5%A6%82%E4%BD%95%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AE%B5JavaScript%E4%BB%A3%E7%A0%81%E7%9A%84/</url>
+    <content><![CDATA[<h2 id="代码如何执行"><a href="#代码如何执行" class="headerlink" title="代码如何执行"></a>代码如何执行</h2><p>使用高级语言编写的代码需要先编译为机器码（二进制代码）再执行</p>
+<p>执行方式有如下两种</p>
+<h3 id="编译执行"><a href="#编译执行" class="headerlink" title="编译执行"></a>编译执行</h3><p>代码 &#x3D;》 解析器 &#x3D;》 中间代码 &#x3D;》 编译器 &#x3D;》 机器码 &#x3D;》 执行结果</p>
+<p>把代码一次性编译为机器码，然后执行</p>
+<h3 id="解释执行"><a href="#解释执行" class="headerlink" title="解释执行"></a>解释执行</h3><p>代码 &#x3D;》 解析器 &#x3D;》 中间代码 &#x3D;》 解释器 &#x3D;》 执行结果</p>
+<p>编译一行代码，执行一行代码，一边编译一边执行</p>
+<h2 id="为何需要虚拟机"><a href="#为何需要虚拟机" class="headerlink" title="为何需要虚拟机"></a>为何需要虚拟机</h2><p>java 和 javascript 等语言需要虚拟机，是为了跨平台，抹平平台差异。</p>
+<h2 id="为何需要中间代码"><a href="#为何需要中间代码" class="headerlink" title="为何需要中间代码"></a>为何需要中间代码</h2><p>中间代码一般为字节码</p>
+<p>因为把源码编译为机器码占用太多空间，热代码需要缓存下来，避免重复编译。而使用字节码可以节省空间。</p>
+<p>当然字节码还能提升代码启动速度、降低代码负责度</p>
+<p><a href="https://time.geekbang.org/column/article/211682?cid=100048001">V8是如何执行一段JavaScript代码的？</a></p>
+<p><a href="https://time.geekbang.org/column/article/224206#null">字节码（一）：V8为什么又重新引入字节码？</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
   </entry>
   <entry>
     <title>钗头凤·红酥手</title>
@@ -164,18 +164,18 @@
       </categories>
   </entry>
   <entry>
-    <title>从今天开始学习爱自己</title>
-    <url>/2017/09/25/congjintiankaishixuexiaiziji/</url>
-    <content><![CDATA[<p>2017年9月25日15:44:09</p>
+    <title>导航滚动悬浮</title>
+    <url>/2017/11/08/daohanggundongxuanfu/</url>
+    <content><![CDATA[<p>做两个导航，第二个隐藏 下拉到一定位置，显示第二个，position:fixed $(function(){ $(window).scroll(function () {$(window).scroll(function () { var top &#x3D; $(document).scrollTop(); var m&#x3D;$(“.nav”); if (top &gt; m.offset().top) { m.next().css(‘display’,’block’) }else{ m.next().css(‘display’,’none’) } }) }</p>
 ]]></content>
       <categories>
         <category>未分类</category>
       </categories>
   </entry>
   <entry>
-    <title>导航滚动悬浮</title>
-    <url>/2017/11/08/daohanggundongxuanfu/</url>
-    <content><![CDATA[<p>做两个导航，第二个隐藏 下拉到一定位置，显示第二个，position:fixed $(function(){ $(window).scroll(function () {$(window).scroll(function () { var top &#x3D; $(document).scrollTop(); var m&#x3D;$(“.nav”); if (top &gt; m.offset().top) { m.next().css(‘display’,’block’) }else{ m.next().css(‘display’,’none’) } }) }</p>
+    <title>从今天开始学习爱自己</title>
+    <url>/2017/09/25/congjintiankaishixuexiaiziji/</url>
+    <content><![CDATA[<p>2017年9月25日15:44:09</p>
 ]]></content>
       <categories>
         <category>未分类</category>
@@ -229,6 +229,15 @@
       </categories>
   </entry>
   <entry>
+    <title>dom之scroll</title>
+    <url>/2021/07/01/dom%E4%B9%8Bscroll/</url>
+    <content><![CDATA[<p>参考：<br><a href="https://www.cnblogs.com/wangyihong/p/8056859.html">https://www.cnblogs.com/wangyihong/p/8056859.html</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>docker进入容器</title>
     <url>/2019/12/06/docker%E8%BF%9B%E5%85%A5%E5%AE%B9%E5%99%A8/</url>
     <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker exec [OPTIONS] CONTAINER COMMAND [ARG...]</span><br></pre></td></tr></table></figure>
@@ -251,15 +260,6 @@
       </tags>
   </entry>
   <entry>
-    <title>dom之scroll</title>
-    <url>/2021/07/01/dom%E4%B9%8Bscroll/</url>
-    <content><![CDATA[<p>参考：<br><a href="https://www.cnblogs.com/wangyihong/p/8056859.html">https://www.cnblogs.com/wangyihong/p/8056859.html</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>dreamlist</title>
     <url>/2019/02/18/dreamlist/</url>
     <content><![CDATA[<p>todolist</p>
@@ -270,6 +270,25 @@
       <tags>
         <tag>list</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>emmet快捷键</title>
+    <url>/2021/07/01/emmet%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    <content><![CDATA[<h3 id="快速选择相同项目"><a href="#快速选择相同项目" class="headerlink" title="快速选择相同项目"></a>快速选择相同项目</h3><p>Ctrl + D</p>
+<h3 id="回退一次选择"><a href="#回退一次选择" class="headerlink" title="回退一次选择"></a>回退一次选择</h3><p>Ctrl + U</p>
+<h3 id="跳过选中的项目"><a href="#跳过选中的项目" class="headerlink" title="跳过选中的项目"></a>跳过选中的项目</h3><p>Ctrl + K</p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>editorconfig 常用配置</title>
+    <url>/2021/12/13/editorconfig-%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">root = true</span><br><span class="line"></span><br><span class="line">[*]</span><br><span class="line">charset = utf-8</span><br><span class="line">end_of_line = lf</span><br><span class="line">indent_size = 2</span><br><span class="line">indent_style = space</span><br><span class="line">insert_final_newline = true</span><br><span class="line">trim_trailing_whitespace = true</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
   </entry>
   <entry>
     <title>elegant</title>
@@ -295,25 +314,6 @@
       <tags>
         <tag>english</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>editorconfig 常用配置</title>
-    <url>/2021/12/13/editorconfig-%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">root = true</span><br><span class="line"></span><br><span class="line">[*]</span><br><span class="line">charset = utf-8</span><br><span class="line">end_of_line = lf</span><br><span class="line">indent_size = 2</span><br><span class="line">indent_style = space</span><br><span class="line">insert_final_newline = true</span><br><span class="line">trim_trailing_whitespace = true</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>emmet快捷键</title>
-    <url>/2021/07/01/emmet%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
-    <content><![CDATA[<h3 id="快速选择相同项目"><a href="#快速选择相同项目" class="headerlink" title="快速选择相同项目"></a>快速选择相同项目</h3><p>Ctrl + D</p>
-<h3 id="回退一次选择"><a href="#回退一次选择" class="headerlink" title="回退一次选择"></a>回退一次选择</h3><p>Ctrl + U</p>
-<h3 id="跳过选中的项目"><a href="#跳过选中的项目" class="headerlink" title="跳过选中的项目"></a>跳过选中的项目</h3><p>Ctrl + K</p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
   </entry>
   <entry>
     <title>fiddler学习笔记</title>
@@ -354,6 +354,16 @@
       </categories>
   </entry>
   <entry>
+    <title>FTP主动模式和被动模式的区别</title>
+    <url>/2017/11/20/ftpzhudongmoshihebeidongmoshidequbie/</url>
+    <content><![CDATA[<p><a href="http://www.cnblogs.com/xiaohh/p/4789813.html">http://www.cnblogs.com/xiaohh/p/4789813.html</a></p>
+]]></content>
+      <categories>
+        <category>technology</category>
+        <category>Server</category>
+      </categories>
+  </entry>
+  <entry>
     <title>git commit 规范</title>
     <url>/2020/05/18/git-commit-%E8%A7%84%E8%8C%83/</url>
     <content><![CDATA[<h2 id="Commit-message格式"><a href="#Commit-message格式" class="headerlink" title="Commit message格式"></a>Commit message格式</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;type&gt;: &lt;subject&gt;</span><br></pre></td></tr></table></figure>
@@ -371,14 +381,15 @@
       </tags>
   </entry>
   <entry>
-    <title>FTP主动模式和被动模式的区别</title>
-    <url>/2017/11/20/ftpzhudongmoshihebeidongmoshidequbie/</url>
-    <content><![CDATA[<p><a href="http://www.cnblogs.com/xiaohh/p/4789813.html">http://www.cnblogs.com/xiaohh/p/4789813.html</a></p>
+    <title>不同操作系统下回车符不同导致的git warning</title>
+    <url>/2019/07/10/giterror/</url>
+    <content><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>windows下git报错warning: LF will be replaced by CRLF in ***. The file will have its original line endings in your working directory.</p>
+<h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>windows下和linux（mac)下换行符不一致导致的</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git config --global core.autocrlf false  //禁用自动转换    </span><br></pre></td></tr></table></figure>
 ]]></content>
-      <categories>
-        <category>technology</category>
-        <category>Server</category>
-      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
   </entry>
   <entry>
     <title>git如何忽略已经加入版本控制的文件</title>
@@ -392,27 +403,6 @@
       <tags>
         <tag>git</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>不同操作系统下回车符不同导致的git warning</title>
-    <url>/2019/07/10/giterror/</url>
-    <content><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>windows下git报错warning: LF will be replaced by CRLF in ***. The file will have its original line endings in your working directory.</p>
-<h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>windows下和linux（mac)下换行符不一致导致的</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git config --global core.autocrlf false  //禁用自动转换    </span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>gitmoji</title>
-    <url>/2022/01/27/gitmoji/</url>
-    <content><![CDATA[<p>Emoji	Raw Emoji Code	Description<br>🎉	:tada:	Initial Commit<br>✨	:sparkles:	when introducing New Features<br>🐎	:racehorse:	when improving performance<br>⚡	:zap:	when introducing Backward-InCompatible Features, maybe with @CHANGED Comment Tag<br>🚀	:rocket:	Anything related to Deployments&#x2F;DevOps<br>📚	:books:	when writing docs<br>🎨	:art:	when improving the format&#x2F;structure of the code<br>📝  :memo: Add or update documentation.<br>📝	:pencil:	when performing minor changes&#x2F;fixing the code or language<br>🐛	:bug:	when reporting a bug, with @FIXMEComment Tag<br>🔨	:hammer:	when refactoring code<br>🔧  :wrench: Add or update configuration files.<br>💄	:lipstick:	when improving UI&#x2F;Cosmetic<br>💅  :nail_care: style<br>🍻  :beers: Write code drunkenly.<br>📰	:newspaper:	when creating a new file<br>🚑	:ambulance:	when fixing a bug<br>🐧	:penguin:	when fixing something on Linux<br>🍎	:apple:	when fixing something on Mac OS<br>🏁	:checkered_flag:	when fixing something on Windows<br>🔥	:fire:	when removing code or files, maybe with @CHANGED Comment Tag<br>🚜	:tractor:	when change file structure. Usually together with 🎨<br>☔	:umbrella:	when adding tests<br>🔬	:microscope:	when adding code coverage<br>💚	:green_heart:	when fixing the CI build<br>🔒	:lock:	when dealing with security<br>⬆️	:arrow_up:	when upgrading dependencies<br>⬇️	:arrow_down:	when downgrading dependencies<br>⏩	:fast_forward:	when forward-porting features from an older version&#x2F;branch<br>⏪	:rewind:	when backporting features from a newer version&#x2F;branch<br>👕	:shirt:	when removing linter&#x2F;strict&#x2F;deprecation warnings<br>♿	:wheelchair:	when improving accessibility<br>🌐	:globe_with_meridians:	when dealing with globalization&#x2F;internationalization&#x2F;i18n&#x2F;g11n<br>🚧	:construction:	WIP(Work In Progress) Commits, maybe with @REVIEW Comment Tag<br>💎	:gem:	New Release<br>🥚	:egg:	New Release with Python egg<br>🎡	:ferris_wheel:	New Release with Python wheel package<br>🔖	:bookmark:	Version Tags<br>🔈	:speaker:	when Adding Logging<br>🔇	:mute:	when Reducing Logging<br>💡	:bulb:	New Idea, with @IDEA Comment Tag<br>❄️	:snowflake:	changing Configuration, Usually together with 🐧 or 🎀 or 🚀<br>🎀	:ribbon:	Customer requested application Customization, with @HACK Comment Tag<br>🐘	:elephant:	PostgreSQL Database specific (Migrations, Scripts, Extensions, …)<br>🐬	:dolphin:	MySQL Database specific (Migrations, Scripts, Extensions, …)<br>🍃	:leaves:	MongoDB Database specific (Migrations, Scripts, Extensions, …)<br>🏦	:bank:	Generic Database specific (Migrations, Scripts, Extensions, …)<br>🐳	:whale:	Docker Configuration<br>🤝	:handshake:	when Merge files<br>🍒	:cherries:	when Commit Arise from one or more Cherry-Pick Commit(s)  </p>
-<p>参考<br>链接：<a href="https://www.jianshu.com/p/0bfdf5c41696">https://www.jianshu.com/p/0bfdf5c41696</a><br><a href="https://gitmoji.dev/">https://gitmoji.dev/</a><br><a href="https://github.com/slashsBin/styleguide-git-commit-message">https://github.com/slashsBin/styleguide-git-commit-message</a>  </p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
   </entry>
   <entry>
     <title>git报错The following untracked working tree files would be overwritten by checkout</title>
@@ -514,6 +504,34 @@
       </tags>
   </entry>
   <entry>
+    <title>gitmoji</title>
+    <url>/2022/01/27/gitmoji/</url>
+    <content><![CDATA[<p>Emoji	Raw Emoji Code	Description<br>🎉	:tada:	Initial Commit<br>✨	:sparkles:	when introducing New Features<br>🐎	:racehorse:	when improving performance<br>⚡	:zap:	when introducing Backward-InCompatible Features, maybe with @CHANGED Comment Tag<br>🚀	:rocket:	Anything related to Deployments&#x2F;DevOps<br>📚	:books:	when writing docs<br>🎨	:art:	when improving the format&#x2F;structure of the code<br>📝  :memo: Add or update documentation.<br>📝	:pencil:	when performing minor changes&#x2F;fixing the code or language<br>🐛	:bug:	when reporting a bug, with @FIXMEComment Tag<br>🔨	:hammer:	when refactoring code<br>🔧  :wrench: Add or update configuration files.<br>💄	:lipstick:	when improving UI&#x2F;Cosmetic<br>💅  :nail_care: style<br>🍻  :beers: Write code drunkenly.<br>📰	:newspaper:	when creating a new file<br>🚑	:ambulance:	when fixing a bug<br>🐧	:penguin:	when fixing something on Linux<br>🍎	:apple:	when fixing something on Mac OS<br>🏁	:checkered_flag:	when fixing something on Windows<br>🔥	:fire:	when removing code or files, maybe with @CHANGED Comment Tag<br>🚜	:tractor:	when change file structure. Usually together with 🎨<br>☔	:umbrella:	when adding tests<br>🔬	:microscope:	when adding code coverage<br>💚	:green_heart:	when fixing the CI build<br>🔒	:lock:	when dealing with security<br>⬆️	:arrow_up:	when upgrading dependencies<br>⬇️	:arrow_down:	when downgrading dependencies<br>⏩	:fast_forward:	when forward-porting features from an older version&#x2F;branch<br>⏪	:rewind:	when backporting features from a newer version&#x2F;branch<br>👕	:shirt:	when removing linter&#x2F;strict&#x2F;deprecation warnings<br>♿	:wheelchair:	when improving accessibility<br>🌐	:globe_with_meridians:	when dealing with globalization&#x2F;internationalization&#x2F;i18n&#x2F;g11n<br>🚧	:construction:	WIP(Work In Progress) Commits, maybe with @REVIEW Comment Tag<br>💎	:gem:	New Release<br>🥚	:egg:	New Release with Python egg<br>🎡	:ferris_wheel:	New Release with Python wheel package<br>🔖	:bookmark:	Version Tags<br>🔈	:speaker:	when Adding Logging<br>🔇	:mute:	when Reducing Logging<br>💡	:bulb:	New Idea, with @IDEA Comment Tag<br>❄️	:snowflake:	changing Configuration, Usually together with 🐧 or 🎀 or 🚀<br>🎀	:ribbon:	Customer requested application Customization, with @HACK Comment Tag<br>🐘	:elephant:	PostgreSQL Database specific (Migrations, Scripts, Extensions, …)<br>🐬	:dolphin:	MySQL Database specific (Migrations, Scripts, Extensions, …)<br>🍃	:leaves:	MongoDB Database specific (Migrations, Scripts, Extensions, …)<br>🏦	:bank:	Generic Database specific (Migrations, Scripts, Extensions, …)<br>🐳	:whale:	Docker Configuration<br>🤝	:handshake:	when Merge files<br>🍒	:cherries:	when Commit Arise from one or more Cherry-Pick Commit(s)  </p>
+<p>参考<br>链接：<a href="https://www.jianshu.com/p/0bfdf5c41696">https://www.jianshu.com/p/0bfdf5c41696</a><br><a href="https://gitmoji.dev/">https://gitmoji.dev/</a><br><a href="https://github.com/slashsBin/styleguide-git-commit-message">https://github.com/slashsBin/styleguide-git-commit-message</a>  </p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>git简直就是来自未来的产品</title>
+    <url>/2018/05/21/git%E7%AE%80%E7%9B%B4%E5%B0%B1%E6%98%AF%E6%9D%A5%E8%87%AA%E6%9C%AA%E6%9D%A5%E7%9A%84%E4%BA%A7%E5%93%81/</url>
+    <content><![CDATA[<p>我第一次了解git的时候，就被这个产品的逻辑给震撼到了，只想说，世间怎么会有这么完美的产品，</p>
+<p>其实注册github的时候我对git并不是很了解，直到我开始学习使用git，才知道git原来是linux之父Linus Torvalds为了帮助管理 Linux 内核开发的。</p>
+<p>Linux和git两个伟大的产品，竟然是出自一人之手，不得不佩服大神Linus Torvalds</p>
+<p>详细的学习了git的使用之后真的是为它的优雅而倾倒，惊为天人，顶礼膜拜。</p>
+<p>git就是来自未来的产品</p>
+<p>2019&#x2F;02&#x2F;18更新</p>
+<p>只是各种冲突，问题，对小白用户不是很友好，不知使用客户端操作是不是好一点</p>
+]]></content>
+      <categories>
+        <category>thought</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于linux服务器用php发送邮件</title>
     <url>/2017/09/12/guanyulinuxfuwuqiyongphpfasongyoujian/</url>
     <content><![CDATA[<p>sendmail<br>yum&#x2F;apt-get install sendmail<br>开启fsockopen函数<br>服务器如何开启php的fsockopen函数？<br><a href="https://jingyan.baidu.com/article/09ea3eded1d8bcc0aede3920.html">https://jingyan.baidu.com/article/09ea3eded1d8bcc0aede3920.html</a><br>yum install openssl openssl-devel  <br>端口：25 阿里云已经禁用25端口 请改为：465并把协议换成ssl<br>详情查看文章：<a href="https://blog.hellozwh.com/?post=282">https://blog.hellozwh.com/?post=282</a></p>
@@ -547,24 +565,6 @@
       <categories>
         <category>未分类</category>
       </categories>
-  </entry>
-  <entry>
-    <title>git简直就是来自未来的产品</title>
-    <url>/2018/05/21/git%E7%AE%80%E7%9B%B4%E5%B0%B1%E6%98%AF%E6%9D%A5%E8%87%AA%E6%9C%AA%E6%9D%A5%E7%9A%84%E4%BA%A7%E5%93%81/</url>
-    <content><![CDATA[<p>我第一次了解git的时候，就被这个产品的逻辑给震撼到了，只想说，世间怎么会有这么完美的产品，</p>
-<p>其实注册github的时候我对git并不是很了解，直到我开始学习使用git，才知道git原来是linux之父Linus Torvalds为了帮助管理 Linux 内核开发的。</p>
-<p>Linux和git两个伟大的产品，竟然是出自一人之手，不得不佩服大神Linus Torvalds</p>
-<p>详细的学习了git的使用之后真的是为它的优雅而倾倒，惊为天人，顶礼膜拜。</p>
-<p>git就是来自未来的产品</p>
-<p>2019&#x2F;02&#x2F;18更新</p>
-<p>只是各种冲突，问题，对小白用户不是很友好，不知使用客户端操作是不是好一点</p>
-]]></content>
-      <categories>
-        <category>thought</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-      </tags>
   </entry>
   <entry>
     <title>idealist</title>
@@ -643,6 +643,14 @@
       </categories>
   </entry>
   <entry>
+    <title>lock文件是如何保证依赖确定性的</title>
+    <url>/2021/09/08/lock%E6%96%87%E4%BB%B6%E6%98%AF%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E4%BE%9D%E8%B5%96%E7%A1%AE%E5%AE%9A%E6%80%A7%E7%9A%84/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>超越自卑的活法live笔记</title>
     <url>/2017/08/29/live/</url>
     <content><![CDATA[<h2 id="1-自卑是人际排序的产物。"><a href="#1-自卑是人际排序的产物。" class="headerlink" title="1.自卑是人际排序的产物。"></a>1.自卑是人际排序的产物。</h2><p><img src="https://pic3.zhimg.com/v2-5e7494173cbbd7ec9c7a3f4435fdf352_b.jpg" alt="test"> 评价与被评价 努力被目标感驱动 努力被序列感驱动，对努力的模仿，被排序思维支配，追求优越感。   </p>
@@ -651,14 +659,6 @@
 ]]></content>
       <categories>
         <category>life</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>lock文件是如何保证依赖确定性的</title>
-    <url>/2021/09/08/lock%E6%96%87%E4%BB%B6%E6%98%AF%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E4%BE%9D%E8%B5%96%E7%A1%AE%E5%AE%9A%E6%80%A7%E7%9A%84/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>未分类</category>
       </categories>
   </entry>
   <entry>
@@ -803,21 +803,20 @@
       </categories>
   </entry>
   <entry>
-    <title>mariadb支持远程访问</title>
-    <url>/2019/03/11/mariadb%E6%94%AF%E6%8C%81%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/</url>
-    <content><![CDATA[<p>参考文档<a href="https://www.cnblogs.com/24la/p/mariadb-remoting-access.html">https://www.cnblogs.com/24la/p/mariadb-remoting-access.html</a></p>
-<p>首先配置允许访问的用户，采用授权的方式给用户权限</p>
-<p>1<br>GRANT ALL PRIVILEGES ON <em>.</em> TO ‘root‘@’%’IDENTIFIED BY ‘123456’ WITH GRANT OPTION;<br> 说明：root是登陆数据库的用户，123456是登陆数据库的密码，*就是意味着任何来源任何主机反正就是权限很大的样子。</p>
-<p>最后配置好权限之后不应该忘记刷新使之生效</p>
-<p>1<br>flush privileges;<br> 再次访问就可以了吧。</p>
+    <title>miniclass.com.cn</title>
+    <url>/2019/03/06/miniclass-com-cn/</url>
+    <content><![CDATA[<h3 id="slogan"><a href="#slogan" class="headerlink" title="slogan"></a>slogan</h3><p>mini小课，每节课只有一个知识点</p>
+<h4 id="广告文案"><a href="#广告文案" class="headerlink" title="广告文案"></a>广告文案</h4><ol>
+<li>三人行，必有我师<br> 这次你是老师</li>
+<li>衣服贵，包包贵，化妆品贵<br> 这节课却不收费</li>
+<li>来北京多年 还没出人头地<br> 但我相信你 总有过人之处</li>
+</ol>
 ]]></content>
       <categories>
-        <category>technology</category>
-        <category>database</category>
+        <category>idea</category>
       </categories>
       <tags>
-        <tag>mysql</tag>
-        <tag>mariaDB</tag>
+        <tag>idea</tag>
       </tags>
   </entry>
   <entry>
@@ -866,20 +865,21 @@
       </categories>
   </entry>
   <entry>
-    <title>miniclass.com.cn</title>
-    <url>/2019/03/06/miniclass-com-cn/</url>
-    <content><![CDATA[<h3 id="slogan"><a href="#slogan" class="headerlink" title="slogan"></a>slogan</h3><p>mini小课，每节课只有一个知识点</p>
-<h4 id="广告文案"><a href="#广告文案" class="headerlink" title="广告文案"></a>广告文案</h4><ol>
-<li>三人行，必有我师<br> 这次你是老师</li>
-<li>衣服贵，包包贵，化妆品贵<br> 这节课却不收费</li>
-<li>来北京多年 还没出人头地<br> 但我相信你 总有过人之处</li>
-</ol>
+    <title>mariadb支持远程访问</title>
+    <url>/2019/03/11/mariadb%E6%94%AF%E6%8C%81%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/</url>
+    <content><![CDATA[<p>参考文档<a href="https://www.cnblogs.com/24la/p/mariadb-remoting-access.html">https://www.cnblogs.com/24la/p/mariadb-remoting-access.html</a></p>
+<p>首先配置允许访问的用户，采用授权的方式给用户权限</p>
+<p>1<br>GRANT ALL PRIVILEGES ON <em>.</em> TO ‘root‘@’%’IDENTIFIED BY ‘123456’ WITH GRANT OPTION;<br> 说明：root是登陆数据库的用户，123456是登陆数据库的密码，*就是意味着任何来源任何主机反正就是权限很大的样子。</p>
+<p>最后配置好权限之后不应该忘记刷新使之生效</p>
+<p>1<br>flush privileges;<br> 再次访问就可以了吧。</p>
 ]]></content>
       <categories>
-        <category>idea</category>
+        <category>technology</category>
+        <category>database</category>
       </categories>
       <tags>
-        <tag>idea</tag>
+        <tag>mysql</tag>
+        <tag>mariaDB</tag>
       </tags>
   </entry>
   <entry>
@@ -1012,22 +1012,6 @@
       </categories>
   </entry>
   <entry>
-    <title>nginx配置及使用</title>
-    <url>/2021/07/04/nginx%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>401-7-4<br><img src="https://img.mukewang.com/szimg/5fa518a400014c8019201080.jpg" alt="nginx 配置"></p>
-<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>nginx</p>
-<h3 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h3><p>nginx -s stop</p>
-<h3 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h3><p>nginx -s reload</p>
-<h3 id="检查配置文件"><a href="#检查配置文件" class="headerlink" title="检查配置文件"></a>检查配置文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -t <span class="comment"># 可以查看配置文件所在路径</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server&#123;</span><br><span class="line">        listen 5000;</span><br><span class="line">        server_name localhost;</span><br><span class="line">        location = / &#123;</span><br><span class="line">            proxy_pass http://localhost:3000/;</span><br><span class="line">        &#125;</span><br><span class="line">        location /test &#123;</span><br><span class="line">            proxy_pass http://localhost:3000/test;</span><br><span class="line"></span><br><span class="line">            #   指定允许跨域的方法，*代表所有</span><br><span class="line">            add_header Access-Control-Allow-Methods *;</span><br><span class="line"></span><br><span class="line">            #   预检命令的缓存，如果不缓存每次会发送两次请求</span><br><span class="line">            add_header Access-Control-Max-Age 3600;</span><br><span class="line"></span><br><span class="line">            #   带cookie请求需要加上这个字段，并设置为true</span><br><span class="line">            add_header Access-Control-Allow-Credentials true;</span><br><span class="line"></span><br><span class="line">            #   表示允许这个域跨域调用（客户端发送请求的域名和端口） </span><br><span class="line">            #   $http_origin动态获取请求客户端请求的域   不用*的原因是带cookie的请求不支持*号</span><br><span class="line">            add_header Access-Control-Allow-Origin $http_origin;</span><br><span class="line"></span><br><span class="line">            #   表示请求头的字段 动态获取</span><br><span class="line">            add_header Access-Control-Allow-Headers </span><br><span class="line">            $http_access_control_request_headers;</span><br><span class="line"></span><br><span class="line">            #   OPTIONS预检命令，预检命令通过时才发送请求</span><br><span class="line">            #   检查请求的类型是不是预检命令</span><br><span class="line">            if ($request_method = OPTIONS)&#123;</span><br><span class="line">                return 200;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>参考：<a href="https://www.cnblogs.com/PengfeiSong/p/12993446.html">https://www.cnblogs.com/PengfeiSong/p/12993446.html</a></p>
-<h3 id="导入配置文件"><a href="#导入配置文件" class="headerlink" title="导入配置文件"></a>导入配置文件</h3><p><code>include servers/*;</code><br>相对于当前文件</p>
-<h3 id="配置多-server"><a href="#配置多-server" class="headerlink" title="配置多 server"></a>配置多 server</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        server_name a.com;</span><br><span class="line">        location = / &#123;</span><br><span class="line">            proxy_pass http://localhost:3000/;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        server_name b.com;</span><br><span class="line">        location = / &#123;</span><br><span class="line">            proxy_pass http://localhost:8000/;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>php composer基本使用</title>
     <url>/2020/06/02/php-composer%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<p>composer update 慢</p>
@@ -1048,6 +1032,22 @@
         <tag>php</tag>
         <tag>composer</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>nginx配置及使用</title>
+    <url>/2021/07/04/nginx%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>401-7-4<br><img src="https://img.mukewang.com/szimg/5fa518a400014c8019201080.jpg" alt="nginx 配置"></p>
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>nginx</p>
+<h3 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h3><p>nginx -s stop</p>
+<h3 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h3><p>nginx -s reload</p>
+<h3 id="检查配置文件"><a href="#检查配置文件" class="headerlink" title="检查配置文件"></a>检查配置文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -t <span class="comment"># 可以查看配置文件所在路径</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server&#123;</span><br><span class="line">        listen 5000;</span><br><span class="line">        server_name localhost;</span><br><span class="line">        location = / &#123;</span><br><span class="line">            proxy_pass http://localhost:3000/;</span><br><span class="line">        &#125;</span><br><span class="line">        location /test &#123;</span><br><span class="line">            proxy_pass http://localhost:3000/test;</span><br><span class="line"></span><br><span class="line">            #   指定允许跨域的方法，*代表所有</span><br><span class="line">            add_header Access-Control-Allow-Methods *;</span><br><span class="line"></span><br><span class="line">            #   预检命令的缓存，如果不缓存每次会发送两次请求</span><br><span class="line">            add_header Access-Control-Max-Age 3600;</span><br><span class="line"></span><br><span class="line">            #   带cookie请求需要加上这个字段，并设置为true</span><br><span class="line">            add_header Access-Control-Allow-Credentials true;</span><br><span class="line"></span><br><span class="line">            #   表示允许这个域跨域调用（客户端发送请求的域名和端口） </span><br><span class="line">            #   $http_origin动态获取请求客户端请求的域   不用*的原因是带cookie的请求不支持*号</span><br><span class="line">            add_header Access-Control-Allow-Origin $http_origin;</span><br><span class="line"></span><br><span class="line">            #   表示请求头的字段 动态获取</span><br><span class="line">            add_header Access-Control-Allow-Headers </span><br><span class="line">            $http_access_control_request_headers;</span><br><span class="line"></span><br><span class="line">            #   OPTIONS预检命令，预检命令通过时才发送请求</span><br><span class="line">            #   检查请求的类型是不是预检命令</span><br><span class="line">            if ($request_method = OPTIONS)&#123;</span><br><span class="line">                return 200;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>参考：<a href="https://www.cnblogs.com/PengfeiSong/p/12993446.html">https://www.cnblogs.com/PengfeiSong/p/12993446.html</a></p>
+<h3 id="导入配置文件"><a href="#导入配置文件" class="headerlink" title="导入配置文件"></a>导入配置文件</h3><p><code>include servers/*;</code><br>相对于当前文件</p>
+<h3 id="配置多-server"><a href="#配置多-server" class="headerlink" title="配置多 server"></a>配置多 server</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        server_name a.com;</span><br><span class="line">        location = / &#123;</span><br><span class="line">            proxy_pass http://localhost:3000/;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        server_name b.com;</span><br><span class="line">        location = / &#123;</span><br><span class="line">            proxy_pass http://localhost:8000/;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
   </entry>
   <entry>
     <title>PHP URL参数获取方式的四种例子</title>
@@ -1165,30 +1165,6 @@
       </tags>
   </entry>
   <entry>
-    <title>pm2实现开机自动启动</title>
-    <url>/2018/01/25/pm2shixiankaijizidongqidong/</url>
-    <content><![CDATA[<p>可以通过<code>pm2 startup</code>来实现开机自启动。细节可<a href="http://pm2.keymetrics.io/docs/usage/startup/">参考</a>。大致流程如下</p>
-<ol>
-<li>通过<code>pm2 save</code>保存当前进程状态。</li>
-<li>通过<code>pm2 startup [platform]</code>生成开机自启动的命令。</li>
-</ol>
-<p>例如： </p>
-<ol>
-<li>使用pm2启动node ：# pm2 start &#x2F;home&#x2F;wwwroot&#x2F;web.js –watch </li>
-<li>dump这些进程列表：# pm2 save </li>
-<li>生成自启动脚本：# pm2 startup centos</li>
-</ol>
-<p>转载<br><a href="https://www.cnblogs.com/chyingp/p/pm2-documentation.html">https://www.cnblogs.com/chyingp/p/pm2-documentation.html</a></p>
-]]></content>
-      <categories>
-        <category>technology</category>
-        <category>Server</category>
-      </categories>
-      <tags>
-        <tag>pm2</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>pm2的基本使用</title>
     <url>/2019/08/25/pm2%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ pm2 init</span><br><span class="line">$ pm2 ecosystem</span><br></pre></td></tr></table></figure>
@@ -1260,22 +1236,6 @@
       </tags>
   </entry>
   <entry>
-    <title>postgresql基本使用</title>
-    <url>/2019/12/24/postgresql%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h4 id="切换postgres用户"><a href="#切换postgres用户" class="headerlink" title="切换postgres用户"></a>切换postgres用户</h4><p><code>$ sudo su - postgres</code></p>
-<h4 id="登录PostgreSQL控制台"><a href="#登录PostgreSQL控制台" class="headerlink" title="登录PostgreSQL控制台"></a>登录PostgreSQL控制台</h4><p><code>$ psql</code><br><code>$ psql -U postgres</code></p>
-<h4 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h4><p><code>postgres-# \q</code></p>
-<h4 id="允许远程访问"><a href="#允许远程访问" class="headerlink" title="允许远程访问"></a>允许远程访问</h4><p>1.修改 <code>pg_hba.conf</code> 在最后面添加</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">host    all             all             0.0.0.0/0               md5</span><br></pre></td></tr></table></figure>
-<p>centos 默认在 &#x2F;var&#x2F;lib&#x2F;pgsql&#x2F;10&#x2F;data 下</p>
-<p>windows 一般在 &#x2F;program files&#x2F;postgresql&#x2F;10&#x2F;data 下</p>
-<p>2.查看 <code>postgresql.conf</code> 是否如下配置</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">listen_addresses = &#x27;*&#x27;</span><br><span class="line">port = 5432</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>postMessage</title>
     <url>/2022/05/16/postMessage/</url>
     <content><![CDATA[<p>postMessage 可用于解决以下方面的问题：</p>
@@ -1300,6 +1260,46 @@
 </ul>
 <p>————————————————<br>版权声明：本文为CSDN博主「huangpb0624」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/huangpb123/article/details/83692019">https://blog.csdn.net/huangpb123/article/details/83692019</a></p>
 ]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>pm2实现开机自动启动</title>
+    <url>/2018/01/25/pm2shixiankaijizidongqidong/</url>
+    <content><![CDATA[<p>可以通过<code>pm2 startup</code>来实现开机自启动。细节可<a href="http://pm2.keymetrics.io/docs/usage/startup/">参考</a>。大致流程如下</p>
+<ol>
+<li>通过<code>pm2 save</code>保存当前进程状态。</li>
+<li>通过<code>pm2 startup [platform]</code>生成开机自启动的命令。</li>
+</ol>
+<p>例如： </p>
+<ol>
+<li>使用pm2启动node ：# pm2 start &#x2F;home&#x2F;wwwroot&#x2F;web.js –watch </li>
+<li>dump这些进程列表：# pm2 save </li>
+<li>生成自启动脚本：# pm2 startup centos</li>
+</ol>
+<p>转载<br><a href="https://www.cnblogs.com/chyingp/p/pm2-documentation.html">https://www.cnblogs.com/chyingp/p/pm2-documentation.html</a></p>
+]]></content>
+      <categories>
+        <category>technology</category>
+        <category>Server</category>
+      </categories>
+      <tags>
+        <tag>pm2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>postgresql基本使用</title>
+    <url>/2019/12/24/postgresql%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h4 id="切换postgres用户"><a href="#切换postgres用户" class="headerlink" title="切换postgres用户"></a>切换postgres用户</h4><p><code>$ sudo su - postgres</code></p>
+<h4 id="登录PostgreSQL控制台"><a href="#登录PostgreSQL控制台" class="headerlink" title="登录PostgreSQL控制台"></a>登录PostgreSQL控制台</h4><p><code>$ psql</code><br><code>$ psql -U postgres</code></p>
+<h4 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h4><p><code>postgres-# \q</code></p>
+<h4 id="允许远程访问"><a href="#允许远程访问" class="headerlink" title="允许远程访问"></a>允许远程访问</h4><p>1.修改 <code>pg_hba.conf</code> 在最后面添加</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">host    all             all             0.0.0.0/0               md5</span><br></pre></td></tr></table></figure>
+<p>centos 默认在 &#x2F;var&#x2F;lib&#x2F;pgsql&#x2F;10&#x2F;data 下</p>
+<p>windows 一般在 &#x2F;program files&#x2F;postgresql&#x2F;10&#x2F;data 下</p>
+<p>2.查看 <code>postgresql.conf</code> 是否如下配置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">listen_addresses = &#x27;*&#x27;</span><br><span class="line">port = 5432</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>未分类</category>
       </categories>
@@ -1463,15 +1463,6 @@
       </tags>
   </entry>
   <entry>
-    <title>人性的弱点1之用户成长体系</title>
-    <url>/2017/10/27/renxingderuodian1zhiyonghuyangchengxitong/</url>
-    <content><![CDATA[<p>每个应用软件为了提高打开率，都加入了用户成长体系，最简单常见的就是签到，通过每天的签到获取积分换取奖励或者获得勋章，例如淘宝的淘金币，百度地图的签到抢地主，CF手游中的每天签到领奖励，淘票票每天登陆获取积分（购买电影票获取积分），网易云课堂每天打卡，百词斩每天背单词打卡，QQ音乐每天登陆提高等级，听一个歌手的歌曲达到一定时间获取歌手专属勋章，当然这其中最古老的先驱就是QQ等级了，每天登陆指定时间提高等级。 <img src="http://image.woshipm.com/wp-files/2016/11/1pWLP255zTUpAKn7SpHA.png"> 当然学习类的应用可以利用每日打卡激励学习者坚持每天的学习，但是其他的应用的签到打卡时间长了就会让人产生被绑架的感觉，必须每天坚持签到打卡，如果有一天断了，你所获得的奖励就会降低，或者无法获得勋章，例如淘宝的淘金币，第一天签到得5金币，第二天得10金币，每天多5金币，一直到30金币最高，如果有一天没签到当再签到时又会回到5金币。支付宝、淘宝、京东的会员系统，甚至在你购物达不到一定金额第二年会降级。 <img src="http://www.zhuyunfeng.com/wp-content/uploads/2017/10/2.jpg"> 各应用当然是为了利益最大化，驱使你每天打开APP，但是这却对用户造成了困扰，比方说QQ音乐的用户成长体系，你为了表示你对某位歌手的喜爱，你会不停的听他的歌曲，当连续7天听一个歌手的歌曲超过500分钟之后，你就会获得此歌手的专属勋章，当然勋章也分等级，刚开始是初级勋章，你为了提高勋章等级，就会每次打开QQ音乐的时候都特意听一下这位歌手的歌曲，因为每天只要听一首这位歌手的歌曲就会积20分，积分达到一定程度勋章就会升级，当然你如果真是喜欢这位歌手又不会为这些积分所累那就另说。 <img src="http://www.zhuyunfeng.com/wp-content/uploads/2017/10/3.jpg"> 你为了提高淘票票的等级需要不停的通过淘票票购买电影票；你为了提高支付宝等级不停的购物，使用支付宝支付，充值话费……；你为了获得鼓励金使用支付宝和微信的无现金支付想着今天我不去楼下超市买点东西我就亏了；你为了花掉商家给你的优惠券买一些并不是很需要的商品；你为了提高信用卡额度，消费的时候想是不是能刷这张卡（有点跑远了）。 你刚开始乐此不疲，感觉自己赚到了，时间一长你忽然发现这不是你想要的，你被商家领着往前走。 商家利用你的弱点来达到他们的目的，在这其中我们怎么样才能不受其所累，更好的做自己呢？ 嗯，这是一个值得思考的问题。</p>
-<h2 id="用户成长体系设计分析"><a href="#用户成长体系设计分析" class="headerlink" title="用户成长体系设计分析"></a><a href="http://www.woshipm.com/pd/447292.html">用户成长体系设计分析</a></h2>]]></content>
-      <categories>
-        <category>psychology</category>
-      </categories>
-  </entry>
-  <entry>
     <title>render函数</title>
     <url>/2020/08/13/render%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<h4 id="createElement-参数"><a href="#createElement-参数" class="headerlink" title="createElement 参数"></a>createElement 参数</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// @returns &#123;VNode&#125;</span><br><span class="line">createElement(</span><br><span class="line">  // &#123;String | Object | Function&#125;</span><br><span class="line">  // 一个 HTML 标签名、组件选项对象，或者</span><br><span class="line">  // resolve 了上述任何一种的一个 async 函数。必填项。</span><br><span class="line">  &#x27;div&#x27;,</span><br><span class="line"></span><br><span class="line">  // &#123;Object&#125;</span><br><span class="line">  // 一个与模板中 attribute 对应的数据对象。可选。</span><br><span class="line">  &#123;</span><br><span class="line">    // (详情见下一节)</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  // &#123;String | Array&#125;</span><br><span class="line">  // 子级虚拟节点 (VNodes)，由 `createElement()` 构建而成，</span><br><span class="line">  // 也可以使用字符串来生成“文本虚拟节点”。可选。</span><br><span class="line">  [</span><br><span class="line">    &#x27;先写一些文字&#x27;,</span><br><span class="line">    createElement(&#x27;h1&#x27;, &#x27;一则头条&#x27;),</span><br><span class="line">    createElement(MyComponent, &#123;</span><br><span class="line">      props: &#123;</span><br><span class="line">        someProp: &#x27;foobar&#x27;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
@@ -1499,6 +1490,15 @@
 ]]></content>
       <categories>
         <category>idea</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>人性的弱点1之用户成长体系</title>
+    <url>/2017/10/27/renxingderuodian1zhiyonghuyangchengxitong/</url>
+    <content><![CDATA[<p>每个应用软件为了提高打开率，都加入了用户成长体系，最简单常见的就是签到，通过每天的签到获取积分换取奖励或者获得勋章，例如淘宝的淘金币，百度地图的签到抢地主，CF手游中的每天签到领奖励，淘票票每天登陆获取积分（购买电影票获取积分），网易云课堂每天打卡，百词斩每天背单词打卡，QQ音乐每天登陆提高等级，听一个歌手的歌曲达到一定时间获取歌手专属勋章，当然这其中最古老的先驱就是QQ等级了，每天登陆指定时间提高等级。 <img src="http://image.woshipm.com/wp-files/2016/11/1pWLP255zTUpAKn7SpHA.png"> 当然学习类的应用可以利用每日打卡激励学习者坚持每天的学习，但是其他的应用的签到打卡时间长了就会让人产生被绑架的感觉，必须每天坚持签到打卡，如果有一天断了，你所获得的奖励就会降低，或者无法获得勋章，例如淘宝的淘金币，第一天签到得5金币，第二天得10金币，每天多5金币，一直到30金币最高，如果有一天没签到当再签到时又会回到5金币。支付宝、淘宝、京东的会员系统，甚至在你购物达不到一定金额第二年会降级。 <img src="http://www.zhuyunfeng.com/wp-content/uploads/2017/10/2.jpg"> 各应用当然是为了利益最大化，驱使你每天打开APP，但是这却对用户造成了困扰，比方说QQ音乐的用户成长体系，你为了表示你对某位歌手的喜爱，你会不停的听他的歌曲，当连续7天听一个歌手的歌曲超过500分钟之后，你就会获得此歌手的专属勋章，当然勋章也分等级，刚开始是初级勋章，你为了提高勋章等级，就会每次打开QQ音乐的时候都特意听一下这位歌手的歌曲，因为每天只要听一首这位歌手的歌曲就会积20分，积分达到一定程度勋章就会升级，当然你如果真是喜欢这位歌手又不会为这些积分所累那就另说。 <img src="http://www.zhuyunfeng.com/wp-content/uploads/2017/10/3.jpg"> 你为了提高淘票票的等级需要不停的通过淘票票购买电影票；你为了提高支付宝等级不停的购物，使用支付宝支付，充值话费……；你为了获得鼓励金使用支付宝和微信的无现金支付想着今天我不去楼下超市买点东西我就亏了；你为了花掉商家给你的优惠券买一些并不是很需要的商品；你为了提高信用卡额度，消费的时候想是不是能刷这张卡（有点跑远了）。 你刚开始乐此不疲，感觉自己赚到了，时间一长你忽然发现这不是你想要的，你被商家领着往前走。 商家利用你的弱点来达到他们的目的，在这其中我们怎么样才能不受其所累，更好的做自己呢？ 嗯，这是一个值得思考的问题。</p>
+<h2 id="用户成长体系设计分析"><a href="#用户成长体系设计分析" class="headerlink" title="用户成长体系设计分析"></a><a href="http://www.woshipm.com/pd/447292.html">用户成长体系设计分析</a></h2>]]></content>
+      <categories>
+        <category>psychology</category>
       </categories>
   </entry>
   <entry>
@@ -1660,6 +1660,15 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
+    <title>关于智能音箱以及下一代处理平台的一些思考</title>
+    <url>/2017/08/25/some-thoughts-about-smart-speaker-and-ai/</url>
+    <content><![CDATA[<p>语音识别和语音合成将是智能音箱以及人工智能发展的关键，这就像是电容屏之于智能手机，现在的语音识别和语音合成就像当年的电阻屏，如果能发展到电容屏的阶段，智能音箱以及人工智能将有一个质的飞跃。</p>
+]]></content>
+      <categories>
+        <category>technology</category>
+      </categories>
+  </entry>
+  <entry>
     <title>SSL证书</title>
     <url>/2021/12/23/ssl%E8%AF%81%E4%B9%A6/</url>
     <content><![CDATA[<h3 id="自签证书"><a href="#自签证书" class="headerlink" title="自签证书"></a>自签证书</h3><p>参考 <a href="https://www.jianshu.com/p/d22baeae50ea">https://www.jianshu.com/p/d22baeae50ea</a></p>
@@ -1672,6 +1681,17 @@ timeout(100).then((value) =&gt; &#123;
 ]]></content>
       <categories>
         <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>太平洋时间</title>
+    <url>/2017/09/12/taipingyangshijian/</url>
+    <content><![CDATA[<p><strong>PDT</strong>（Pacific Daylight Time）太平洋夏季时间。 相对应的是<a href="https://baike.baidu.com/item/PST"><strong>PST</strong></a>（Pacific Standard Time ）。 夏时制结束后就是PST。 <strong>PST是<a href="https://baike.baidu.com/item/%E5%A4%AA%E5%B9%B3%E6%B4%8B">太平洋</a>标准时间（西八区），与北京时间（东八区）时差-16个小时，也就是北京时间减去16就是PST时间。而PDT比PST早1个小时，就是说PDT与北京时间时差为-15小时。</strong> 在2006年以及之前，美国<a href="https://baike.baidu.com/item/%E5%A4%AA%E5%B9%B3%E6%B4%8B">太平洋</a>时区总是于每年<a href="https://baike.baidu.com/item/%E5%9B%9B%E6%9C%88/67790">四月</a>第一个星期日深夜二时正将本地时间（UTC−8）转成夏令时间（UTC−7） ，并于十月的最后一个星期日深夜二时<a href="https://baike.baidu.com/item/%E6%AD%A3%E8%BD%AC">正转</a>回本地时间。 于2007年生效的2005年能源政策法案，决定了<strong>美国太平洋时区的夏令时间始于每年三月的第二个星期六深夜二时正，并终于每年十一月的第一个<a href="https://baike.baidu.com/item/%E6%98%9F%E6%9C%9F%E6%97%A5/25447">星期日</a>深夜二时正。</strong>而加拿大亦跟随美国的夏令时间制度。</p>
+<p><strong>PDT转换成<a href="https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC/128981">北京</a>时间方法</strong></p>
+<p>PDT从每年3月的第二个星期日到11月的第一个星期日期间和北京<a href="https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%B7%AE">时间差</a>15小时，其余月份和<a href="https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E6%97%B6%E9%97%B4/410384">北京时间</a>差16小时 。例如Oct 02, 2009 at 07:00 PDT&#x3D; Oct 02, 2009 at 22:00 Beijing Time (7+15&#x3D;22)</p>
+]]></content>
+      <categories>
+        <category>knowledge</category>
       </categories>
   </entry>
   <entry>
@@ -1704,26 +1724,6 @@ timeout(100).then((value) =&gt; &#123;
 ]]></content>
       <categories>
         <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>关于智能音箱以及下一代处理平台的一些思考</title>
-    <url>/2017/08/25/some-thoughts-about-smart-speaker-and-ai/</url>
-    <content><![CDATA[<p>语音识别和语音合成将是智能音箱以及人工智能发展的关键，这就像是电容屏之于智能手机，现在的语音识别和语音合成就像当年的电阻屏，如果能发展到电容屏的阶段，智能音箱以及人工智能将有一个质的飞跃。</p>
-]]></content>
-      <categories>
-        <category>technology</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>太平洋时间</title>
-    <url>/2017/09/12/taipingyangshijian/</url>
-    <content><![CDATA[<p><strong>PDT</strong>（Pacific Daylight Time）太平洋夏季时间。 相对应的是<a href="https://baike.baidu.com/item/PST"><strong>PST</strong></a>（Pacific Standard Time ）。 夏时制结束后就是PST。 <strong>PST是<a href="https://baike.baidu.com/item/%E5%A4%AA%E5%B9%B3%E6%B4%8B">太平洋</a>标准时间（西八区），与北京时间（东八区）时差-16个小时，也就是北京时间减去16就是PST时间。而PDT比PST早1个小时，就是说PDT与北京时间时差为-15小时。</strong> 在2006年以及之前，美国<a href="https://baike.baidu.com/item/%E5%A4%AA%E5%B9%B3%E6%B4%8B">太平洋</a>时区总是于每年<a href="https://baike.baidu.com/item/%E5%9B%9B%E6%9C%88/67790">四月</a>第一个星期日深夜二时正将本地时间（UTC−8）转成夏令时间（UTC−7） ，并于十月的最后一个星期日深夜二时<a href="https://baike.baidu.com/item/%E6%AD%A3%E8%BD%AC">正转</a>回本地时间。 于2007年生效的2005年能源政策法案，决定了<strong>美国太平洋时区的夏令时间始于每年三月的第二个星期六深夜二时正，并终于每年十一月的第一个<a href="https://baike.baidu.com/item/%E6%98%9F%E6%9C%9F%E6%97%A5/25447">星期日</a>深夜二时正。</strong>而加拿大亦跟随美国的夏令时间制度。</p>
-<p><strong>PDT转换成<a href="https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC/128981">北京</a>时间方法</strong></p>
-<p>PDT从每年3月的第二个星期日到11月的第一个星期日期间和北京<a href="https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%B7%AE">时间差</a>15小时，其余月份和<a href="https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC%E6%97%B6%E9%97%B4/410384">北京时间</a>差16小时 。例如Oct 02, 2009 at 07:00 PDT&#x3D; Oct 02, 2009 at 22:00 Beijing Time (7+15&#x3D;22)</p>
-]]></content>
-      <categories>
-        <category>knowledge</category>
       </categories>
   </entry>
   <entry>
@@ -1780,31 +1780,6 @@ timeout(100).then((value) =&gt; &#123;
     <content><![CDATA[]]></content>
       <tags>
         <tag>question</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>touchmove &amp; mousemove</title>
-    <url>/2021/07/22/touchmove-mousemove/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>urb, urban, suburb, suburban lodge, cabin</title>
-    <url>/2017/08/23/urban-and-cabin/</url>
-    <content><![CDATA[<p>urb	英[‘ɜ:b]<br>美[‘ɜ:b]<br>abbr.	urban 都市的; urbanite 城市居民; urbanization 都市化; urbanist 城市规划专家;<br>[例句]Therefore, the paper puts forward encouraging domestic demand as a method for urban development and suggests relevant adaptation of urb.<br>在此基础上，提出了以扩大内需为主的城市发展思路。</p>
-<p>urban	英[ˈɜ:bən]<br>美[ˈɜ:rbən]<br>adj.	都市的; 具有城市或城市生活特点的; 市内;<br>[例句]Most of the population is an urban population<br>绝大多数人口都是城镇居民。</p>
-<p>suburb	英[ˈsʌbɜ:b]<br>美[ˈsʌbɜ:rb]<br>n.	郊区，城郊; 边缘; 附近，周围;<br>[例句]Anna was born in 1923 in Ardwick, a suburb of Manchester.<br>安娜于1923年出生在曼彻斯特的郊区阿德维克。<br>[其他]	复数：suburbs</p>
-<p>suburban	英[səˈbɜ:bən]<br>美[səˈbɜ:rbən]<br>adj.	城郊的，在郊区的，城郊住宅区的; 土气的; 见闻不广的;<br>n.	郊区居民;<br>[例句]His clothes are conservative and suburban.<br>他衣着保守而传统。</p>
-<p>cabin	英[ˈkæbɪn]<br>美[ˈkæbɪn]<br>n.	客舱; &lt;美&gt;小木屋; （轮船上工作或生活的） 隔间;<br>vt.	把…关在小屋里; 使受拘束;<br>vi.	住在小屋里;<br>[例句]He showed her to a small cabin.<br>他把她领到了一个小船舱。<br>[其他]	第三人称单数：cabins 复数：cabins 现在分词：cabining 过去式：cabined 过去分词：cabined</p>
-<p>lodge	英[lɒdʒ]<br>美[lɑ:dʒ]<br>vi.	存放; 暂住; 埋入; （权利、权威等） 归属;<br>vt.	提出（报告、要求、申诉等）; 容纳; 寄存; 把（权利、权威等）授予;<br>n.	&lt;古&gt;小屋，草屋; （北美印第安人的） 帐篷; （森林、猎场等的） 看守小屋; （学校、工厂等的） 传达室;<br>[例句]I drove out of the gates, past the keeper’s lodge.<br>我驶出大门，经过守门人的小屋。<br>[其他]	第三人称单数：lodges 复数：lodges 现在分词：lodging 过去式：lodged 过去分词：lodged</p>
-]]></content>
-      <categories>
-        <category>english</category>
-      </categories>
-      <tags>
-        <tag>english</tag>
       </tags>
   </entry>
   <entry>
@@ -1929,10 +1904,35 @@ timeout(100).then((value) =&gt; &#123;
 <li>{} B</li>
 <li>[]</li>
 </ol>
-]]></content>
+<h3 id="replace"><a href="#replace" class="headerlink" title="replace"></a>replace</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">:s/hello/hi/g  # 当前行替换所有匹配</span><br><span class="line">:%s/hello/hi/g # 整个文件替换所有匹配</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>未分类</category>
       </categories>
+  </entry>
+  <entry>
+    <title>touchmove &amp; mousemove</title>
+    <url>/2021/07/22/touchmove-mousemove/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>urb, urban, suburb, suburban lodge, cabin</title>
+    <url>/2017/08/23/urban-and-cabin/</url>
+    <content><![CDATA[<p>urb	英[‘ɜ:b]<br>美[‘ɜ:b]<br>abbr.	urban 都市的; urbanite 城市居民; urbanization 都市化; urbanist 城市规划专家;<br>[例句]Therefore, the paper puts forward encouraging domestic demand as a method for urban development and suggests relevant adaptation of urb.<br>在此基础上，提出了以扩大内需为主的城市发展思路。</p>
+<p>urban	英[ˈɜ:bən]<br>美[ˈɜ:rbən]<br>adj.	都市的; 具有城市或城市生活特点的; 市内;<br>[例句]Most of the population is an urban population<br>绝大多数人口都是城镇居民。</p>
+<p>suburb	英[ˈsʌbɜ:b]<br>美[ˈsʌbɜ:rb]<br>n.	郊区，城郊; 边缘; 附近，周围;<br>[例句]Anna was born in 1923 in Ardwick, a suburb of Manchester.<br>安娜于1923年出生在曼彻斯特的郊区阿德维克。<br>[其他]	复数：suburbs</p>
+<p>suburban	英[səˈbɜ:bən]<br>美[səˈbɜ:rbən]<br>adj.	城郊的，在郊区的，城郊住宅区的; 土气的; 见闻不广的;<br>n.	郊区居民;<br>[例句]His clothes are conservative and suburban.<br>他衣着保守而传统。</p>
+<p>cabin	英[ˈkæbɪn]<br>美[ˈkæbɪn]<br>n.	客舱; &lt;美&gt;小木屋; （轮船上工作或生活的） 隔间;<br>vt.	把…关在小屋里; 使受拘束;<br>vi.	住在小屋里;<br>[例句]He showed her to a small cabin.<br>他把她领到了一个小船舱。<br>[其他]	第三人称单数：cabins 复数：cabins 现在分词：cabining 过去式：cabined 过去分词：cabined</p>
+<p>lodge	英[lɒdʒ]<br>美[lɑ:dʒ]<br>vi.	存放; 暂住; 埋入; （权利、权威等） 归属;<br>vt.	提出（报告、要求、申诉等）; 容纳; 寄存; 把（权利、权威等）授予;<br>n.	&lt;古&gt;小屋，草屋; （北美印第安人的） 帐篷; （森林、猎场等的） 看守小屋; （学校、工厂等的） 传达室;<br>[例句]I drove out of the gates, past the keeper’s lodge.<br>我驶出大门，经过守门人的小屋。<br>[其他]	第三人称单数：lodges 复数：lodges 现在分词：lodging 过去式：lodged 过去分词：lodged</p>
+]]></content>
+      <categories>
+        <category>english</category>
+      </categories>
+      <tags>
+        <tag>english</tag>
+      </tags>
   </entry>
   <entry>
     <title>vitepress 如何开启 algolia 全文搜索</title>
@@ -1984,16 +1984,13 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
-    <title>vscode 调试 js</title>
-    <url>/2021/10/29/vscode-%E8%B0%83%E8%AF%95-js/</url>
-    <content><![CDATA[<h3 id="调试-npm-script-命令"><a href="#调试-npm-script-命令" class="headerlink" title="调试 npm script 命令"></a>调试 npm script 命令</h3><p>注意：此为 configurations 中的一条配置，具体看下一条</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Launch via NPM&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;launch&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;runtimeExecutable&quot;</span><span class="punctuation">:</span> <span class="string">&quot;npm&quot;</span><span class="punctuation">,</span> <span class="comment">//runtimeExecutable表示要使用的运行时，默认为node，这里我们配置成了npm</span></span><br><span class="line">  <span class="attr">&quot;runtimeArgs&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;run-script&quot;</span><span class="punctuation">,</span> <span class="string">&quot;dev&quot;</span>    <span class="comment">//这里的dev就对应package.json中的scripts中的dev</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;port&quot;</span><span class="punctuation">:</span> <span class="number">9229</span>    <span class="comment">//这个端口是调试的端口，不是项目启动的端口</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="调试指定-js-文件"><a href="#调试指定-js-文件" class="headerlink" title="调试指定 js 文件"></a>调试指定 js 文件</h3><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="comment">// Use IntelliSense to learn about possible attributes.</span></span><br><span class="line">  <span class="comment">// Hover to view descriptions of existing attributes.</span></span><br><span class="line">  <span class="comment">// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;configurations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;pwa-node&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;launch&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Launch Program&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;skipFiles&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;&lt;node_internals&gt;/**&quot;</span></span><br><span class="line">      <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;program&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;workspaceFolder&#125;/test/filelist.js&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="使用-nodemon-调试"><a href="#使用-nodemon-调试" class="headerlink" title="使用 nodemon 调试"></a>使用 nodemon 调试</h3><p>参考：<br><a href="https://www.cnblogs.com/little-ab/p/11796952.html">https://www.cnblogs.com/little-ab/p/11796952.html</a></p>
+    <title>Vsftp的PASV mode和Port模式配置文件的设置</title>
+    <url>/2017/11/20/vsftpdepasv-modeheportmoshipeizhiwenjiandeshezhi/</url>
+    <content><![CDATA[<p><a href="https://www.cnblogs.com/yjken/p/3917940.html">https://www.cnblogs.com/yjken/p/3917940.html</a></p>
 ]]></content>
       <categories>
-        <category>未分类</category>
+        <category>technology</category>
+        <category>Server</category>
       </categories>
   </entry>
   <entry>
@@ -2025,13 +2022,16 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
-    <title>Vsftp的PASV mode和Port模式配置文件的设置</title>
-    <url>/2017/11/20/vsftpdepasv-modeheportmoshipeizhiwenjiandeshezhi/</url>
-    <content><![CDATA[<p><a href="https://www.cnblogs.com/yjken/p/3917940.html">https://www.cnblogs.com/yjken/p/3917940.html</a></p>
+    <title>vscode 调试 js</title>
+    <url>/2021/10/29/vscode-%E8%B0%83%E8%AF%95-js/</url>
+    <content><![CDATA[<h3 id="调试-npm-script-命令"><a href="#调试-npm-script-命令" class="headerlink" title="调试 npm script 命令"></a>调试 npm script 命令</h3><p>注意：此为 configurations 中的一条配置，具体看下一条</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Launch via NPM&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;launch&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;runtimeExecutable&quot;</span><span class="punctuation">:</span> <span class="string">&quot;npm&quot;</span><span class="punctuation">,</span> <span class="comment">//runtimeExecutable表示要使用的运行时，默认为node，这里我们配置成了npm</span></span><br><span class="line">  <span class="attr">&quot;runtimeArgs&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;run-script&quot;</span><span class="punctuation">,</span> <span class="string">&quot;dev&quot;</span>    <span class="comment">//这里的dev就对应package.json中的scripts中的dev</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;port&quot;</span><span class="punctuation">:</span> <span class="number">9229</span>    <span class="comment">//这个端口是调试的端口，不是项目启动的端口</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="调试指定-js-文件"><a href="#调试指定-js-文件" class="headerlink" title="调试指定 js 文件"></a>调试指定 js 文件</h3><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="comment">// Use IntelliSense to learn about possible attributes.</span></span><br><span class="line">  <span class="comment">// Hover to view descriptions of existing attributes.</span></span><br><span class="line">  <span class="comment">// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;configurations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;pwa-node&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;launch&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Launch Program&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;skipFiles&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;&lt;node_internals&gt;/**&quot;</span></span><br><span class="line">      <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;program&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;workspaceFolder&#125;/test/filelist.js&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="使用-nodemon-调试"><a href="#使用-nodemon-调试" class="headerlink" title="使用 nodemon 调试"></a>使用 nodemon 调试</h3><p>参考：<br><a href="https://www.cnblogs.com/little-ab/p/11796952.html">https://www.cnblogs.com/little-ab/p/11796952.html</a></p>
 ]]></content>
       <categories>
-        <category>technology</category>
-        <category>Server</category>
+        <category>未分类</category>
       </categories>
   </entry>
   <entry>
@@ -2050,15 +2050,6 @@ timeout(100).then((value) =&gt; &#123;
       </tags>
   </entry>
   <entry>
-    <title>vue和react</title>
-    <url>/2020/01/10/vue%E5%92%8Creact/</url>
-    <content><![CDATA[<p>单向数据流<br>单向绑定，双向绑定<br>父子组件传值<br>声明式&#x2F;命令式</p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>vue数组双向绑定</title>
     <url>/2020/02/10/vue%E6%95%B0%E7%BB%84%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A/</url>
     <content><![CDATA[<p>问题1：如何把数组进行双向绑定</p>
@@ -2073,49 +2064,21 @@ timeout(100).then((value) =&gt; &#123;
       </tags>
   </entry>
   <entry>
+    <title>vue和react</title>
+    <url>/2020/01/10/vue%E5%92%8Creact/</url>
+    <content><![CDATA[<p>单向数据流<br>单向绑定，双向绑定<br>父子组件传值<br>声明式&#x2F;命令式</p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>webpack之babel</title>
     <url>/2017/08/31/webpackzhibabel/</url>
     <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">loader: &#x27;babel-loader&#x27;,//由babel变为babel-loader </span><br><span class="line">exclude:__dirname +&#x27;/node_modules/&#x27;,//这种方式更快 </span><br><span class="line">include:__dirname+&#x27;/src/&#x27;,//这种方式更快  </span><br><span class="line">exclude:path.resolve(__dirname ,&#x27;node_modules&#x27;),  </span><br><span class="line">include:path.resolve(__dirname ,&#x27;src&#x27;),</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>technology</category>
         <category>front-end</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>windows terminal</title>
-    <url>/2020/08/19/windows-terminal/</url>
-    <content><![CDATA[<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>请使用 nerd-fonts 字体， powerline fonts 字体，部分图标可能无法显示   </p>
-<h3 id="安装-windows-Terminal"><a href="#安装-windows-Terminal" class="headerlink" title="安装 windows Terminal"></a>安装 windows Terminal</h3><ol>
-<li>windows 应用商店安装</li>
-<li>github 下载安装</li>
-</ol>
-<h3 id="安装-powershell-7"><a href="#安装-powershell-7" class="headerlink" title="安装 powershell 7"></a>安装 powershell 7</h3><p>github 下载安装<br>如果继续使用 powershell 5.1  </p>
-<ol>
-<li>可能需要 Change the execution policy<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Set-ExecutionPolicy -ExecutionPolicy RemoteSigned</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Get-ExecutionPolicy -List</span><br></pre></td></tr></table></figure></li>
-<li>升级 PowerShellGet (否则接下来无法安装 PSReadline)<br>Windows PowerShell 5.1 comes with version 1.0.0.1 of PowerShellGet preinstalled.<br>This version of PowerShellGet has a limited features and doesn’t support the updated capabilities of the PowerShell Gallery. To be supported, you must update to the latest version.<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Install-Module -Name PowerShellGet -Force</span><br><span class="line">Exit</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="安装-powershell-插件"><a href="#安装-powershell-插件" class="headerlink" title="安装 powershell 插件"></a>安装 powershell 插件</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 1. 安装 PSReadline 包，该插件可以让命令行很好用，类似 zsh</span><br><span class="line">Install-Module -Name PSReadLine -AllowPrerelease -Force</span><br><span class="line"></span><br><span class="line"># 2. 安装 posh-git 包，让你的 git 更好用</span><br><span class="line">Install-Module posh-git -Scope CurrentUser</span><br><span class="line"></span><br><span class="line"># 3. 安装 oh-my-posh 包，让你的命令行更酷炫、优雅</span><br><span class="line">winget install JanDeDobbeleer.OhMyPosh -s winget</span><br></pre></td></tr></table></figure>
-<h3 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h3><p>安装字体，否则乱码   </p>
-<h4 id="nerd-fonts-推荐"><a href="#nerd-fonts-推荐" class="headerlink" title="nerd-fonts(推荐)"></a>nerd-fonts(推荐)</h4><ol>
-<li>下载安装(推荐)<br><a href="https://www.nerdfonts.com/">nerd fonts 官网</a><br><a href="https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip">Meslo下载地址</a> (推荐)<br>解压<br>进入 ttf 文件夹<br>双击字体文件依次安装 或 全选-》右键-》安装</li>
-<li>命令安装（beta，需要管理员身份)<br>oh-my-posh font install</li>
-</ol>
-<h4 id="powerline-fonts"><a href="#powerline-fonts" class="headerlink" title="powerline fonts"></a>powerline fonts</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/powerline/fonts.git</span><br><span class="line"><span class="built_in">cd</span> .\fonts\</span><br><span class="line">.\install.ps1</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line">del .\fonts\ -Recurse -Force</span><br></pre></td></tr></table></figure>
-
-<h3 id="配置-windows-Terminal"><a href="#配置-windows-Terminal" class="headerlink" title="配置 windows Terminal"></a>配置 windows Terminal</h3><ol>
-<li>可视化界面配置</li>
-<li>json 文件配置<br>guid 需要生成，文章末尾有生成 guid 的网站<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 默认的配置就是我们的新 powershell（重要！！！）</span><br><span class="line">&quot;defaultProfile&quot;: &quot;&#123;574e775e-4f2a-5b96-ac1e-a2962a402336&#125;&quot;,</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    // Powershell 7.1.0-preview.6 配置</span><br><span class="line">    &quot;guid&quot;: &quot;&#123;574e775e-4f2a-5b96-ac1e-a2962a402336&#125;&quot;,</span><br><span class="line">    &quot;hidden&quot;: false,</span><br><span class="line">    &quot;name&quot;: &quot;pwsh&quot;,</span><br><span class="line">    // -nologo 去掉启动时的logo等信息输出</span><br><span class="line">    &quot;commandline&quot;: &quot;D:/Program Files/PowerShell/7-preview/pwsh.exe -nologo&quot;,</span><br><span class="line">    &quot;icon&quot;: &quot;D:/Program Files/PowerShell/7-preview/assets/Powershell_avatar.ico&quot;,</span><br><span class="line">    //&quot;source&quot;: &quot;Windows.Terminal.PowershellCore&quot;,</span><br><span class="line">    // 启动菜单一定要设置为 &lt;.&gt;，否则后面重要的一步将会无效！</span><br><span class="line">    &quot;startingDirectory&quot;: &quot;.&quot;,</span><br><span class="line">    // 字体</span><br><span class="line">    &quot;fontFace&quot;: &quot;Fira Code&quot;,</span><br><span class="line">    &quot;fontSize&quot;: 11,</span><br><span class="line">    &quot;historySize&quot;: 9001,</span><br><span class="line">    &quot;padding&quot;: &quot;5, 5, 20, 25&quot;,</span><br><span class="line">    &quot;snapOnInput&quot;: true,</span><br><span class="line">    &quot;useAcrylic&quot;: false,</span><br><span class="line">    // 颜色方案</span><br><span class="line">    // &quot;colorScheme&quot;: &quot;Homebrew&quot;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="添加-Powershell-启动参数"><a href="#添加-Powershell-启动参数" class="headerlink" title="添加 Powershell 启动参数"></a>添加 Powershell 启动参数</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">notepad <span class="variable">$PROFILE</span> <span class="comment"># 打开配置文件</span></span><br></pre></td></tr></table></figure>
-<p>如果上面代码报错找不到文件，新建一个</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">New-Item -Path <span class="variable">$PROFILE</span> -Type File -Force</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#------------------------------- Import Modules BEGIN -------------------------------</span><br><span class="line"># 引入 posh-git</span><br><span class="line">Import-Module posh-git</span><br><span class="line"></span><br><span class="line"># 初始化 oh-my-posh 并设置 PowerShell 主题</span><br><span class="line">oh-my-posh init pwsh --config &quot;$env:POSH_THEMES_PATH\paradox.omp.json&quot; | Invoke-Expression</span><br><span class="line"># oh-my-posh init pwsh --config &quot;$env:POSH_THEMES_PATH\jandedobbeleer.omp.json&quot; | Invoke-Expression</span><br><span class="line">#------------------------------- Import Modules END   -------------------------------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#-------------------------------  Set Hot-keys BEGIN  -------------------------------</span><br><span class="line"># 设置 Tab 键补全</span><br><span class="line"># Set-PSReadlineKeyHandler -Key Tab -Function Complete</span><br><span class="line"></span><br><span class="line"># 设置 Ctrl+d 为菜单补全和 Intellisense</span><br><span class="line">Set-PSReadLineKeyHandler -Key &quot;Tab&quot; -Function MenuComplete</span><br><span class="line"></span><br><span class="line"># 设置 Ctrl+d 为退出 PowerShell</span><br><span class="line">Set-PSReadlineKeyHandler -Key &quot;Ctrl+d&quot; -Function ViExit</span><br><span class="line"></span><br><span class="line"># 设置 Ctrl+z 为撤销</span><br><span class="line">Set-PSReadLineKeyHandler -Key &quot;Ctrl+z&quot; -Function Undo</span><br><span class="line"></span><br><span class="line">#-------------------------------  Set Hot-keys END    -------------------------------</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>参考：<br><a href="https://ohmyposh.dev/">on-my-posh 官网</a><br><a href="https://www.cnblogs.com/Rohn/p/12940312.html">https://www.cnblogs.com/Rohn/p/12940312.html</a><br><a href="https://zhuanlan.zhihu.com/p/137595941">https://zhuanlan.zhihu.com/p/137595941</a><br><a href="https://blog.csdn.net/WPwalter/article/details/100159481">https://blog.csdn.net/WPwalter/article/details/100159481</a><br>字体：<br><a href="https://sspai.com/post/52907">https://sspai.com/post/52907</a><br>powershell 乱码，vscode 乱码 :<br><a href="https://zhuanlan.zhihu.com/p/51901035">https://zhuanlan.zhihu.com/p/51901035</a><br>其他：<br>guid 生成工具<br><a href="https://www.qvdv.com/tools/qvdv-guid.html">https://www.qvdv.com/tools/qvdv-guid.html</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
       </categories>
   </entry>
   <entry>
@@ -2166,6 +2129,43 @@ timeout(100).then((value) =&gt; &#123;
 <p>把密码字段修改为hello的MD5值</p>
 <p>5d41402abc4b2a76b9719d911017c592</p>
 <p>可以用hello登录，然后在后台更改密码。</p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>windows terminal</title>
+    <url>/2020/08/19/windows-terminal/</url>
+    <content><![CDATA[<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>请使用 nerd-fonts 字体， powerline fonts 字体，部分图标可能无法显示   </p>
+<h3 id="安装-windows-Terminal"><a href="#安装-windows-Terminal" class="headerlink" title="安装 windows Terminal"></a>安装 windows Terminal</h3><ol>
+<li>windows 应用商店安装</li>
+<li>github 下载安装</li>
+</ol>
+<h3 id="安装-powershell-7"><a href="#安装-powershell-7" class="headerlink" title="安装 powershell 7"></a>安装 powershell 7</h3><p>github 下载安装<br>如果继续使用 powershell 5.1  </p>
+<ol>
+<li>可能需要 Change the execution policy<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Set-ExecutionPolicy -ExecutionPolicy RemoteSigned</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Get-ExecutionPolicy -List</span><br></pre></td></tr></table></figure></li>
+<li>升级 PowerShellGet (否则接下来无法安装 PSReadline)<br>Windows PowerShell 5.1 comes with version 1.0.0.1 of PowerShellGet preinstalled.<br>This version of PowerShellGet has a limited features and doesn’t support the updated capabilities of the PowerShell Gallery. To be supported, you must update to the latest version.<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Install-Module -Name PowerShellGet -Force</span><br><span class="line">Exit</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="安装-powershell-插件"><a href="#安装-powershell-插件" class="headerlink" title="安装 powershell 插件"></a>安装 powershell 插件</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 1. 安装 PSReadline 包，该插件可以让命令行很好用，类似 zsh</span><br><span class="line">Install-Module -Name PSReadLine -AllowPrerelease -Force</span><br><span class="line"></span><br><span class="line"># 2. 安装 posh-git 包，让你的 git 更好用</span><br><span class="line">Install-Module posh-git -Scope CurrentUser</span><br><span class="line"></span><br><span class="line"># 3. 安装 oh-my-posh 包，让你的命令行更酷炫、优雅</span><br><span class="line">winget install JanDeDobbeleer.OhMyPosh -s winget</span><br></pre></td></tr></table></figure>
+<h3 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h3><p>安装字体，否则乱码   </p>
+<h4 id="nerd-fonts-推荐"><a href="#nerd-fonts-推荐" class="headerlink" title="nerd-fonts(推荐)"></a>nerd-fonts(推荐)</h4><ol>
+<li>下载安装(推荐)<br><a href="https://www.nerdfonts.com/">nerd fonts 官网</a><br><a href="https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip">Meslo下载地址</a> (推荐)<br>解压<br>进入 ttf 文件夹<br>双击字体文件依次安装 或 全选-》右键-》安装</li>
+<li>命令安装（beta，需要管理员身份)<br>oh-my-posh font install</li>
+</ol>
+<h4 id="powerline-fonts"><a href="#powerline-fonts" class="headerlink" title="powerline fonts"></a>powerline fonts</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/powerline/fonts.git</span><br><span class="line"><span class="built_in">cd</span> .\fonts\</span><br><span class="line">.\install.ps1</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line">del .\fonts\ -Recurse -Force</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置-windows-Terminal"><a href="#配置-windows-Terminal" class="headerlink" title="配置 windows Terminal"></a>配置 windows Terminal</h3><ol>
+<li>可视化界面配置</li>
+<li>json 文件配置<br>guid 需要生成，文章末尾有生成 guid 的网站<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 默认的配置就是我们的新 powershell（重要！！！）</span><br><span class="line">&quot;defaultProfile&quot;: &quot;&#123;574e775e-4f2a-5b96-ac1e-a2962a402336&#125;&quot;,</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    // Powershell 7.1.0-preview.6 配置</span><br><span class="line">    &quot;guid&quot;: &quot;&#123;574e775e-4f2a-5b96-ac1e-a2962a402336&#125;&quot;,</span><br><span class="line">    &quot;hidden&quot;: false,</span><br><span class="line">    &quot;name&quot;: &quot;pwsh&quot;,</span><br><span class="line">    // -nologo 去掉启动时的logo等信息输出</span><br><span class="line">    &quot;commandline&quot;: &quot;D:/Program Files/PowerShell/7-preview/pwsh.exe -nologo&quot;,</span><br><span class="line">    &quot;icon&quot;: &quot;D:/Program Files/PowerShell/7-preview/assets/Powershell_avatar.ico&quot;,</span><br><span class="line">    //&quot;source&quot;: &quot;Windows.Terminal.PowershellCore&quot;,</span><br><span class="line">    // 启动菜单一定要设置为 &lt;.&gt;，否则后面重要的一步将会无效！</span><br><span class="line">    &quot;startingDirectory&quot;: &quot;.&quot;,</span><br><span class="line">    // 字体</span><br><span class="line">    &quot;fontFace&quot;: &quot;Fira Code&quot;,</span><br><span class="line">    &quot;fontSize&quot;: 11,</span><br><span class="line">    &quot;historySize&quot;: 9001,</span><br><span class="line">    &quot;padding&quot;: &quot;5, 5, 20, 25&quot;,</span><br><span class="line">    &quot;snapOnInput&quot;: true,</span><br><span class="line">    &quot;useAcrylic&quot;: false,</span><br><span class="line">    // 颜色方案</span><br><span class="line">    // &quot;colorScheme&quot;: &quot;Homebrew&quot;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="添加-Powershell-启动参数"><a href="#添加-Powershell-启动参数" class="headerlink" title="添加 Powershell 启动参数"></a>添加 Powershell 启动参数</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">notepad <span class="variable">$PROFILE</span> <span class="comment"># 打开配置文件</span></span><br></pre></td></tr></table></figure>
+<p>如果上面代码报错找不到文件，新建一个</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">New-Item -Path <span class="variable">$PROFILE</span> -Type File -Force</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#------------------------------- Import Modules BEGIN -------------------------------</span><br><span class="line"># 引入 posh-git</span><br><span class="line">Import-Module posh-git</span><br><span class="line"></span><br><span class="line"># 初始化 oh-my-posh 并设置 PowerShell 主题</span><br><span class="line">oh-my-posh init pwsh --config &quot;$env:POSH_THEMES_PATH\paradox.omp.json&quot; | Invoke-Expression</span><br><span class="line"># oh-my-posh init pwsh --config &quot;$env:POSH_THEMES_PATH\jandedobbeleer.omp.json&quot; | Invoke-Expression</span><br><span class="line">#------------------------------- Import Modules END   -------------------------------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#-------------------------------  Set Hot-keys BEGIN  -------------------------------</span><br><span class="line"># 设置 Tab 键补全</span><br><span class="line"># Set-PSReadlineKeyHandler -Key Tab -Function Complete</span><br><span class="line"></span><br><span class="line"># 设置 Ctrl+d 为菜单补全和 Intellisense</span><br><span class="line">Set-PSReadLineKeyHandler -Key &quot;Tab&quot; -Function MenuComplete</span><br><span class="line"></span><br><span class="line"># 设置 Ctrl+d 为退出 PowerShell</span><br><span class="line">Set-PSReadlineKeyHandler -Key &quot;Ctrl+d&quot; -Function ViExit</span><br><span class="line"></span><br><span class="line"># 设置 Ctrl+z 为撤销</span><br><span class="line">Set-PSReadLineKeyHandler -Key &quot;Ctrl+z&quot; -Function Undo</span><br><span class="line"></span><br><span class="line">#-------------------------------  Set Hot-keys END    -------------------------------</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>参考：<br><a href="https://ohmyposh.dev/">on-my-posh 官网</a><br><a href="https://www.cnblogs.com/Rohn/p/12940312.html">https://www.cnblogs.com/Rohn/p/12940312.html</a><br><a href="https://zhuanlan.zhihu.com/p/137595941">https://zhuanlan.zhihu.com/p/137595941</a><br><a href="https://blog.csdn.net/WPwalter/article/details/100159481">https://blog.csdn.net/WPwalter/article/details/100159481</a><br>字体：<br><a href="https://sspai.com/post/52907">https://sspai.com/post/52907</a><br>powershell 乱码，vscode 乱码 :<br><a href="https://zhuanlan.zhihu.com/p/51901035">https://zhuanlan.zhihu.com/p/51901035</a><br>其他：<br>guid 生成工具<br><a href="https://www.qvdv.com/tools/qvdv-guid.html">https://www.qvdv.com/tools/qvdv-guid.html</a></p>
 ]]></content>
       <categories>
         <category>未分类</category>
@@ -2275,6 +2275,26 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
+    <title>人生的道路虽然漫长，但紧要处常常只有几步，特别是当人年轻的时候。</title>
+    <url>/2018/05/10/%E4%BA%BA%E7%94%9F%E7%9A%84%E9%81%93%E8%B7%AF%E8%99%BD%E7%84%B6%E6%BC%AB%E9%95%BF%EF%BC%8C%E4%BD%86%E7%B4%A7%E8%A6%81%E5%A4%84%E5%B8%B8%E5%B8%B8%E5%8F%AA%E6%9C%89%E5%87%A0%E6%AD%A5%EF%BC%8C%E7%89%B9%E5%88%AB%E6%98%AF%E5%BD%93%E4%BA%BA%E5%B9%B4%E8%BD%BB%E7%9A%84%E6%97%B6%E5%80%99%E3%80%82/</url>
+    <content><![CDATA[<div>
+<div>
+
+<p><em><strong>人生的道路虽然漫长，但紧要处常常只有几步，特别是当人年轻的时候。</strong></em></p>
+<p><em><strong>没有一个人的生活道路是笔直的、没有岔道的。有些岔道口，譬如政治上的岔道口，事业上的岔道口，个人生活上的岔道口，你走错一步，可以影响人生的一个时期，也可以影响一生。</strong></em></p>
+<p><em>**                                                                  &#8211;柳青**</em></p>
+</div>
+
+<p>作者：花开candy</p>
+<p>链接：<a href="https://www.jianshu.com/p/2431e8f44089">https://www.jianshu.com/p/2431e8f44089</a></p>
+<p>來源：简书</p>
+<p>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+</div>]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>为什么说 Koa 基于洋葱模型，而 Express 不是</title>
     <url>/2022/04/06/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4-Koa-%E5%9F%BA%E4%BA%8E%E6%B4%8B%E8%91%B1%E6%A8%A1%E5%9E%8B-%E8%80%8C-Express-%E4%B8%8D%E6%98%AF/</url>
     <content><![CDATA[<p>最近看光哥的文章，说 Express 是洋葱模型。</p>
@@ -2306,24 +2326,10 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
-    <title>人生的道路虽然漫长，但紧要处常常只有几步，特别是当人年轻的时候。</title>
-    <url>/2018/05/10/%E4%BA%BA%E7%94%9F%E7%9A%84%E9%81%93%E8%B7%AF%E8%99%BD%E7%84%B6%E6%BC%AB%E9%95%BF%EF%BC%8C%E4%BD%86%E7%B4%A7%E8%A6%81%E5%A4%84%E5%B8%B8%E5%B8%B8%E5%8F%AA%E6%9C%89%E5%87%A0%E6%AD%A5%EF%BC%8C%E7%89%B9%E5%88%AB%E6%98%AF%E5%BD%93%E4%BA%BA%E5%B9%B4%E8%BD%BB%E7%9A%84%E6%97%B6%E5%80%99%E3%80%82/</url>
-    <content><![CDATA[<div>
-<div>
-
-<p><em><strong>人生的道路虽然漫长，但紧要处常常只有几步，特别是当人年轻的时候。</strong></em></p>
-<p><em><strong>没有一个人的生活道路是笔直的、没有岔道的。有些岔道口，譬如政治上的岔道口，事业上的岔道口，个人生活上的岔道口，你走错一步，可以影响人生的一个时期，也可以影响一生。</strong></em></p>
-<p><em>**                                                                  &#8211;柳青**</em></p>
-</div>
-
-<p>作者：花开candy</p>
-<p>链接：<a href="https://www.jianshu.com/p/2431e8f44089">https://www.jianshu.com/p/2431e8f44089</a></p>
-<p>來源：简书</p>
-<p>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-</div>]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
+    <title>从wordpress向hexo导入博客</title>
+    <url>/2019/02/17/%E4%BB%8Ewordpress%E5%90%91hexo%E5%AF%BC%E5%85%A5%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<p>1使用rss导入会保留文章的格式，但Front-matter有误（categories会对应到tags上）<br>2使用wordpress导出xml再导入hexo，Front-matter正确，但文章格式没了</p>
+]]></content>
   </entry>
   <entry>
     <title>兰亭集序</title>
@@ -2355,12 +2361,6 @@ timeout(100).then((value) =&gt; &#123;
       </categories>
   </entry>
   <entry>
-    <title>从wordpress向hexo导入博客</title>
-    <url>/2019/02/17/%E4%BB%8Ewordpress%E5%90%91hexo%E5%AF%BC%E5%85%A5%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<p>1使用rss导入会保留文章的格式，但Front-matter有误（categories会对应到tags上）<br>2使用wordpress导出xml再导入hexo，Front-matter正确，但文章格式没了</p>
-]]></content>
-  </entry>
-  <entry>
     <title>前赤壁赋</title>
     <url>/2018/04/09/%E5%89%8D%E8%B5%A4%E5%A3%81%E8%B5%8B/</url>
     <content><![CDATA[<h1 id="前赤壁赋"><a href="#前赤壁赋" class="headerlink" title="前赤壁赋"></a>前赤壁赋</h1><p>作者：<a href="https://www.baidu.com/s?wd=%E8%8B%8F%E8%BD%BC&amp;usm=2&amp;ie=utf-8&amp;rsv_cq=%E8%B5%A4%E5%A3%81%E8%B5%8B&amp;rsv_dl=0_left_exactqa_detail_28239">苏轼</a></p>
@@ -2376,16 +2376,6 @@ timeout(100).then((value) =&gt; &#123;
 </div>
 </div>
 </div>]]></content>
-      <categories>
-        <category>literature</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>将进酒</title>
-    <url>/2020/11/24/%E5%B0%86%E8%BF%9B%E9%85%92/</url>
-    <content><![CDATA[<p>李白</p>
-<p>君不见黄河之水天上来，奔流到海不复回。<br>君不见高堂明镜悲白发，朝如青丝暮成雪。<br>人生得意须尽欢，莫使金樽空对月。<br>天生我材必有用，千金散尽还复来。<br>烹羊宰牛且为乐，会须一饮三百杯。<br>岑夫子，丹丘生，将进酒，君莫停。<br>与君歌一曲，请君为我侧耳听。<br>钟鼓馔玉不足贵，但愿长醉不愿醒。<br>古来圣贤皆寂寞，惟有饮者留其名。<br>陈王昔时宴平乐，斗酒十千恣欢谑。<br>主人何为言少钱，径须沽取对君酌。<br>五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。</p>
-]]></content>
       <categories>
         <category>literature</category>
       </categories>
@@ -2409,6 +2399,16 @@ timeout(100).then((value) =&gt; &#123;
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#triangle-topleft &#123;</span><br><span class="line">    width: 0;</span><br><span class="line">    height: 0;</span><br><span class="line">    border-top: 100px solid red;</span><br><span class="line">    border-right: 100px solid transparent;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>将进酒</title>
+    <url>/2020/11/24/%E5%B0%86%E8%BF%9B%E9%85%92/</url>
+    <content><![CDATA[<p>李白</p>
+<p>君不见黄河之水天上来，奔流到海不复回。<br>君不见高堂明镜悲白发，朝如青丝暮成雪。<br>人生得意须尽欢，莫使金樽空对月。<br>天生我材必有用，千金散尽还复来。<br>烹羊宰牛且为乐，会须一饮三百杯。<br>岑夫子，丹丘生，将进酒，君莫停。<br>与君歌一曲，请君为我侧耳听。<br>钟鼓馔玉不足贵，但愿长醉不愿醒。<br>古来圣贤皆寂寞，惟有饮者留其名。<br>陈王昔时宴平乐，斗酒十千恣欢谑。<br>主人何为言少钱，径须沽取对君酌。<br>五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。</p>
+]]></content>
+      <categories>
+        <category>literature</category>
       </categories>
   </entry>
   <entry>
@@ -2680,15 +2680,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </categories>
   </entry>
   <entry>
-    <title>东方欲晓，莫道君行早。踏遍青山人未老，风景这边独好。</title>
-    <url>/2020/03/23/%E6%B8%85%E5%B9%B3%E4%B9%90%E4%BC%9A%E6%98%8C/</url>
-    <content><![CDATA[<p>  清平乐·会昌<br>  ——   毛泽东<br>　东方欲晓，莫道君行早。踏遍青山人未老，风景这边独好。<br>　会昌城外高峰，颠连直接东溟（ming）。战士指看南粤，更加郁郁葱葱。</p>
-]]></content>
-      <categories>
-        <category>literature</category>
-      </categories>
-  </entry>
-  <entry>
     <title>状态码</title>
     <url>/2020/08/18/%E7%8A%B6%E6%80%81%E7%A0%81/</url>
     <content><![CDATA[<h4 id="200"><a href="#200" class="headerlink" title="200"></a>200</h4><p>200 OK 请求成功<br>201 Created 已创建新资源<br>202 Accepted 已接受但未完成（异步处理）</p>
@@ -2698,6 +2689,55 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
 <p>参考：<br><a href="https://www.runoob.com/http/http-status-codes.html">https://www.runoob.com/http/http-status-codes.html</a></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">100 &quot;continue&quot;</span><br><span class="line">101 &quot;switching protocols&quot;</span><br><span class="line">102 &quot;processing&quot;</span><br><span class="line">200 &quot;ok&quot;</span><br><span class="line">201 &quot;created&quot;</span><br><span class="line">202 &quot;accepted&quot;</span><br><span class="line">203 &quot;non-authoritative information&quot;</span><br><span class="line">204 &quot;no content&quot;</span><br><span class="line">205 &quot;reset content&quot;</span><br><span class="line">206 &quot;partial content&quot;</span><br><span class="line">207 &quot;multi-status&quot;</span><br><span class="line">208 &quot;already reported&quot;</span><br><span class="line">226 &quot;im used&quot;</span><br><span class="line">300 &quot;multiple choices&quot;</span><br><span class="line">301 &quot;moved permanently&quot;</span><br><span class="line">302 &quot;found&quot;</span><br><span class="line">303 &quot;see other&quot;</span><br><span class="line">304 &quot;not modified&quot;</span><br><span class="line">305 &quot;use proxy&quot;</span><br><span class="line">307 &quot;temporary redirect&quot;</span><br><span class="line">308 &quot;permanent redirect&quot;</span><br><span class="line">400 &quot;bad request&quot;</span><br><span class="line">401 &quot;unauthorized&quot;</span><br><span class="line">402 &quot;payment required&quot;</span><br><span class="line">403 &quot;forbidden&quot;</span><br><span class="line">404 &quot;not found&quot;</span><br><span class="line">405 &quot;method not allowed&quot;</span><br><span class="line">406 &quot;not acceptable&quot;</span><br><span class="line">407 &quot;proxy authentication required&quot;</span><br><span class="line">408 &quot;request timeout&quot;</span><br><span class="line">409 &quot;conflict&quot;</span><br><span class="line">410 &quot;gone&quot;</span><br><span class="line">411 &quot;length required&quot;</span><br><span class="line">412 &quot;precondition failed&quot;</span><br><span class="line">413 &quot;payload too large&quot;</span><br><span class="line">414 &quot;uri too long&quot;</span><br><span class="line">415 &quot;unsupported media type&quot;</span><br><span class="line">416 &quot;range not satisfiable&quot;</span><br><span class="line">417 &quot;expectation failed&quot;</span><br><span class="line">418 &quot;I&#x27;m a teapot&quot;</span><br><span class="line">422 &quot;unprocessable entity&quot;</span><br><span class="line">423 &quot;locked&quot;</span><br><span class="line">424 &quot;failed dependency&quot;</span><br><span class="line">426 &quot;upgrade required&quot;</span><br><span class="line">428 &quot;precondition required&quot;</span><br><span class="line">429 &quot;too many requests&quot;</span><br><span class="line">431 &quot;request header fields too large&quot;</span><br><span class="line">500 &quot;internal server error&quot;</span><br><span class="line">501 &quot;not implemented&quot;</span><br><span class="line">502 &quot;bad gateway&quot;</span><br><span class="line">503 &quot;service unavailable&quot;</span><br><span class="line">504 &quot;gateway timeout&quot;</span><br><span class="line">505 &quot;http version not supported&quot;</span><br><span class="line">506 &quot;variant also negotiates&quot;</span><br><span class="line">507 &quot;insufficient storage&quot;</span><br><span class="line">508 &quot;loop detected&quot;</span><br><span class="line">510 &quot;not extended&quot;</span><br><span class="line">511 &quot;network authentication required&quot;</span><br></pre></td></tr></table></figure>
 <p>参考：<a href="https://koa.bootcss.com/#response">https://koa.bootcss.com/#response</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>东方欲晓，莫道君行早。踏遍青山人未老，风景这边独好。</title>
+    <url>/2020/03/23/%E6%B8%85%E5%B9%B3%E4%B9%90%E4%BC%9A%E6%98%8C/</url>
+    <content><![CDATA[<p>  清平乐·会昌<br>  ——   毛泽东<br>　东方欲晓，莫道君行早。踏遍青山人未老，风景这边独好。<br>　会昌城外高峰，颠连直接东溟（ming）。战士指看南粤，更加郁郁葱葱。</p>
+]]></content>
+      <categories>
+        <category>literature</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>算法学习笔记</title>
+    <url>/2020/06/05/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h3 id="数据结构-线性结构-树形结构-图结构"><a href="#数据结构-线性结构-树形结构-图结构" class="headerlink" title="数据结构(线性结构&#x2F;树形结构&#x2F;图结构)"></a>数据结构(线性结构&#x2F;树形结构&#x2F;图结构)</h3><ol>
+<li>数组 array</li>
+<li>链表（动态数据结构）</li>
+<li>散列表 hashtable</li>
+<li>栈 stack(后进先出)(系统栈-子函数)</li>
+<li>队列 queue（先进先出）(循环队列，对普通队列进行优化)</li>
+<li>堆 heap</li>
+<li>树 tree</li>
+<li>二叉树 binary tree（动态数据结构）</li>
+<li>二分搜索树 binary search tree（每个节点的值大于其左子树所有节点的值，小于其右子树说有节点的值）（存储的元素必须有可比较性）</li>
+<li>集合 set (每个元素只能存在一次) （去重）（使用二分搜索树实现）</li>
+<li>映射 map （key value)</li>
+<li>优先队列 Priority Queue (使用堆可以高效实现)</li>
+<li>二叉堆 binary heap （使用树实现的堆，是一棵完全二叉树）（最大堆父节点的值大于子节点的值）（最小堆）（用数组可以实现）</li>
+<li>满二叉树</li>
+<li>完全二叉树</li>
+<li>图</li>
+</ol>
+<h3 id="查找算法"><a href="#查找算法" class="headerlink" title="查找算法"></a>查找算法</h3><ol>
+<li>简单查找</li>
+<li>二分查找</li>
+</ol>
+<h3 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h3><ol>
+<li>选择排序(selection sort)</li>
+<li>插入排序(insertion sort)</li>
+<li>希尔排序(shell sort)</li>
+<li>快速排序(Quick sort) 平均时间复杂度 O(nlogn)，最坏时间复杂度 O(n*n)</li>
+<li>归并排序(merge sort) 平均时间复杂度 O(nlogn)，采用二分法，空间复杂度 O(n)</li>
+<li>堆排序(heap sort)</li>
+<li>冒泡排序(bubble sort)</li>
+<li>计数排序(counting sort)</li>
+</ol>
 ]]></content>
       <categories>
         <category>未分类</category>
@@ -2767,46 +2807,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </categories>
   </entry>
   <entry>
-    <title>算法学习笔记</title>
-    <url>/2020/06/05/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h3 id="数据结构-线性结构-树形结构-图结构"><a href="#数据结构-线性结构-树形结构-图结构" class="headerlink" title="数据结构(线性结构&#x2F;树形结构&#x2F;图结构)"></a>数据结构(线性结构&#x2F;树形结构&#x2F;图结构)</h3><ol>
-<li>数组 array</li>
-<li>链表（动态数据结构）</li>
-<li>散列表 hashtable</li>
-<li>栈 stack(后进先出)(系统栈-子函数)</li>
-<li>队列 queue（先进先出）(循环队列，对普通队列进行优化)</li>
-<li>堆 heap</li>
-<li>树 tree</li>
-<li>二叉树 binary tree（动态数据结构）</li>
-<li>二分搜索树 binary search tree（每个节点的值大于其左子树所有节点的值，小于其右子树说有节点的值）（存储的元素必须有可比较性）</li>
-<li>集合 set (每个元素只能存在一次) （去重）（使用二分搜索树实现）</li>
-<li>映射 map （key value)</li>
-<li>优先队列 Priority Queue (使用堆可以高效实现)</li>
-<li>二叉堆 binary heap （使用树实现的堆，是一棵完全二叉树）（最大堆父节点的值大于子节点的值）（最小堆）（用数组可以实现）</li>
-<li>满二叉树</li>
-<li>完全二叉树</li>
-<li>图</li>
-</ol>
-<h3 id="查找算法"><a href="#查找算法" class="headerlink" title="查找算法"></a>查找算法</h3><ol>
-<li>简单查找</li>
-<li>二分查找</li>
-</ol>
-<h3 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h3><ol>
-<li>选择排序(selection sort)</li>
-<li>插入排序(insertion sort)</li>
-<li>希尔排序(shell sort)</li>
-<li>快速排序(Quick sort) 平均时间复杂度 O(nlogn)，最坏时间复杂度 O(n*n)</li>
-<li>归并排序(merge sort) 平均时间复杂度 O(nlogn)，采用二分法，空间复杂度 O(n)</li>
-<li>堆排序(heap sort)</li>
-<li>冒泡排序(bubble sort)</li>
-<li>计数排序(counting sort)</li>
-</ol>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>茅屋为秋风所破歌</title>
     <url>/2020/11/24/%E8%8C%85%E5%B1%8B%E4%B8%BA%E7%A7%8B%E9%A3%8E%E6%89%80%E7%A0%B4%E6%AD%8C/</url>
     <content><![CDATA[<p>杜甫</p>
@@ -2844,6 +2844,23 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </categories>
   </entry>
   <entry>
+    <title>调用天地图api跨域的问题</title>
+    <url>/2019/07/22/%E8%B0%83%E7%94%A8%E5%A4%A9%E5%9C%B0%E5%9B%BEapi%E8%B7%A8%E5%9F%9F%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h4 id="调用天地图api跨域的问题"><a href="#调用天地图api跨域的问题" class="headerlink" title="调用天地图api跨域的问题"></a>调用天地图api跨域的问题</h4><p>自2019年1月1日，访问天地图api需要使用token，一个token只能在一个域名下使用，开发时最好每人申请一个token，自己用自己的token就不会有跨域问题了</p>
+<h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h5><p>使用token调用天地图api获取地图瓦片时出现跨域问题</p>
+<h5 id="问题产生原因"><a href="#问题产生原因" class="headerlink" title="问题产生原因"></a>问题产生原因</h5><p>多个域名使用同一个token调用天地图api</p>
+<h5 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h5><p>每个域名申请一个token</p>
+]]></content>
+      <categories>
+        <category>technology</category>
+        <category>GIS</category>
+      </categories>
+      <tags>
+        <tag>跨域</tag>
+        <tag>map</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计算机如何表示小数</title>
     <url>/2022/03/29/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%A6%82%E4%BD%95%E8%A1%A8%E7%A4%BA%E5%B0%8F%E6%95%B0/</url>
     <content><![CDATA[<p>小数的表示分为「定点法」和「浮点法」</p>
@@ -2869,21 +2886,12 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </categories>
   </entry>
   <entry>
-    <title>调用天地图api跨域的问题</title>
-    <url>/2019/07/22/%E8%B0%83%E7%94%A8%E5%A4%A9%E5%9C%B0%E5%9B%BEapi%E8%B7%A8%E5%9F%9F%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h4 id="调用天地图api跨域的问题"><a href="#调用天地图api跨域的问题" class="headerlink" title="调用天地图api跨域的问题"></a>调用天地图api跨域的问题</h4><p>自2019年1月1日，访问天地图api需要使用token，一个token只能在一个域名下使用，开发时最好每人申请一个token，自己用自己的token就不会有跨域问题了</p>
-<h5 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h5><p>使用token调用天地图api获取地图瓦片时出现跨域问题</p>
-<h5 id="问题产生原因"><a href="#问题产生原因" class="headerlink" title="问题产生原因"></a>问题产生原因</h5><p>多个域名使用同一个token调用天地图api</p>
-<h5 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h5><p>每个域名申请一个token</p>
-]]></content>
+    <title>Samsung Galaxy Z Flip4</title>
+    <url>/2022/11/17/AD/Samsung-Galaxy-Z-Flip4/</url>
+    <content><![CDATA[<iframe width="1000" height="508" src="https://www.youtube.com/embed/lqP87f9lZ2M" title="Galaxy Z Flip4: Launch film | Samsung" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>]]></content>
       <categories>
-        <category>technology</category>
-        <category>GIS</category>
+        <category>AD</category>
       </categories>
-      <tags>
-        <tag>跨域</tag>
-        <tag>map</tag>
-      </tags>
   </entry>
   <entry>
     <title>跨域</title>
@@ -2914,14 +2922,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
 ]]></content>
       <categories>
         <category>literature</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Samsung Galaxy Z Flip4</title>
-    <url>/2022/11/17/AD/Samsung-Galaxy-Z-Flip4/</url>
-    <content><![CDATA[<iframe width="1000" height="508" src="https://www.youtube.com/embed/lqP87f9lZ2M" title="Galaxy Z Flip4: Launch film | Samsung" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>]]></content>
-      <categories>
-        <category>AD</category>
       </categories>
   </entry>
   <entry>
@@ -2971,15 +2971,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </tags>
   </entry>
   <entry>
-    <title>你真的了解 addEventListner 吗?</title>
-    <url>/2023/06/16/fe/addEventListener/</url>
-    <content><![CDATA[<p><a href="https://www.cnblogs.com/ziyunfei/p/5545439.html">passive 的事件监听器</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>保时捷panamera行政加长版官方宣传片</title>
     <url>/2018/01/25/AD/%E4%BF%9D%E6%97%B6%E6%8D%B7panamera%E8%A1%8C%E6%94%BF%E5%8A%A0%E9%95%BF%E7%89%88%E5%AE%98%E6%96%B9%E5%AE%A3%E4%BC%A0%E7%89%87/</url>
     <content><![CDATA[<h1 id="一、30秒配音版（中文字幕）"><a href="#一、30秒配音版（中文字幕）" class="headerlink" title="一、30秒配音版（中文字幕）"></a>一、30秒配音版（中文字幕）</h1><iframe height=498 width=610 src="//player.bilibili.com/player.html?aid=8792900&cid=14502121&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -3002,6 +2993,26 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
         <tag>AD</tag>
         <tag>video</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>你真的了解 addEventListner 吗?</title>
+    <url>/2023/06/16/fe/addEventListener/</url>
+    <content><![CDATA[<p><a href="https://www.cnblogs.com/ziyunfei/p/5545439.html">passive 的事件监听器</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>到底什么是 peerDependencies？</title>
+    <url>/2023/01/05/fe/peerDependencies/</url>
+    <content><![CDATA[<p>在开发插件时使用 peerDependencies</p>
+<p>peerDependencies 是为了解决 插件依赖的核心库的版本和主项目依赖的核心库的版本 不一致的问题</p>
+<p>参考：<a href="https://nodejs.org/es/blog/npm/peer-dependencies/">Peer Dependencies</a></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
   </entry>
   <entry>
     <title>iconfont 乱码</title>
@@ -3063,66 +3074,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
 ]]></content>
       <categories>
         <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>到底什么是 peerDependencies？</title>
-    <url>/2023/01/05/fe/peerDependencies/</url>
-    <content><![CDATA[<p>在开发插件时使用 peerDependencies</p>
-<p>peerDependencies 是为了解决 插件依赖的核心库的版本和主项目依赖的核心库的版本 不一致的问题</p>
-<p>参考：<a href="https://nodejs.org/es/blog/npm/peer-dependencies/">Peer Dependencies</a></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>拒绝别人，你好意思吗？｜《可爱的诅咒：圣母型人格自助方法》</title>
-    <url>/2018/01/26/psychology/%E5%9C%A3%E6%AF%8D%E5%9E%8B%E4%BA%BA%E6%A0%BC/</url>
-    <content><![CDATA[<blockquote>
-<p>圣母型人格的人不懂得拒绝别人，因此让自己非常的累，别人又得寸进尺的要求。 因此，学会拒绝别人，学会爱自己，才会让自己变得更好 本文分享一些处理的技巧和理念，欢迎阅读。</p>
-</blockquote>
-<p>别不好意思拒绝别人，因为那些好意思难你的人，都不是什么好人。</p>
-<p>——网络流行语</p>
-<p>-1-</p>
-<p>《爱自己的人自带光芒：圣母型人格心理自助手册》是英国注册心理医师雅基．马森根据临床的经验实践写给像我一样支持了别人，崩溃了自己的“可爱人物”。认真看了我上面故事的人，大约能够猜想我看到这本书时如遇知音和救世主的感激了。</p>
-<p>这本书主要是从观念的厘清和教大家一些可操作的自我救助方法帮助受了诅咒的“可爱人物“走出崩溃的困境。</p>
-<p>Q1、为什么怕拒绝别人呢？</p>
-<p>一种是“愤怒的逃避者“。他们不同程度地害怕冲突、别人的不喜欢和批评。像我害怕拒绝小学女同学的请求后，以后不再来往，我是典型的”愤怒逃避者“。</p>
-<p>二是“认可的追求者“。为了寻求别人的喜欢、赞扬、谢意和感激而让自己变得随和、奉献、做好事，不拒绝别人。这种类型的人更加的隐秘，需要更高的觉察能力。</p>
-<p>Q2、为何寻求认可呢？</p>
-<p>心理学先驱卡尔．罗杰斯对评价源分内、外两种，取决于你是自己评判自己的行动、工作、成就及行为举止（内评价源）， 还是受他人评价的影响（外评价源）。宁可委屈自己也不拒绝别的人获取评价是通过外评价源，也就是为了获得别人好的评价，那么她就不敢拒绝别人。</p>
-<p>Q3、为什么有些人会评价自己的权利给了别人呢？</p>
-<p>这个是有历史原因，有人说心理学的论调就是六岁之前形成的观念影响人的一生，但依据雅基．马森的临床经验来看，观念的形成并不只是童年时期，还有相当一部分是在青少年时期。</p>
-<p>错误的观念导致偏差的人生，及时地修正才能更好的接近幸福。</p>
-<p>因此，雅基．马森给她的咨询对象三个强有力的“新观念“和三个可以自我救助的方法。</p>
-<p>1、聆听身体的感受、及时地检视自己的身体。</p>
-<p>身体会比我们的大脑诚实，可以帮助我们捕捉和识别各种情绪，对于为难自己的事会发出拒绝的信息。比如当一群人正在聊天时，你想去厕所小便 ，你会中断谈话然后去厕所吗？聆听身体的人会收到信号，依据身体的指示行事，但是害怕拒绝的人会忍，忍到谈话结束。</p>
-<p>2、正视我们内心的暴徒——批判性思维。</p>
-<p>这点对于有“一日三省吾身“”做到批评与自我批评“相结合的中国人来说，可能会认为批判性思维是好的。但是批判性思维就像电影里的反派人物，阻碍我们自由、清晰地表达自己。</p>
-<p>如果细细地觉察，我们发现这些批判性思维发出的声音竟是来自过去那些对我们有重要意义的人，比如母亲、爷爷、老师等。</p>
-<p>批判性的话通常是负面，比如我妈最喜欢说我”蠢得跟头猪一样“”养条狗还会叫你几声，养你没用“这类负面的信息会影响自信心，也会影响个人对事情的判断。因此，正视内心的暴徒，肯定自己，才能自我成长。</p>
-<p>3、好好地爱自己。</p>
-<p>这句话现在都被用滥了，好好地爱自己是指试着在内心做自己温和的父母，自我肯定，给自己独留时间、精力和资源，让自己成长得更好。</p>
-<p>比如通过“一日三好“的日记，记下自己做的值得称赞的事情，将注意力转移至积极的事情上将大大地改善精神健康。</p>
-<p>4、挑战让你不敢改变的恐惧。</p>
-<p>恐惧之下的人是没有理性，只是知道怕，但不知道在怕什么。想要改变的话，找出一张纸，列出自己的恐惧清单，标注每件事的恐惧级别，然后从恐惧级别低的事情开始改变。</p>
-<p>比如网购时害怕退货被拒绝，恐惧级别是3，那么你可以尝试退掉不想要的东西，看看是否和自己预想的情景一模一样。通过逐级地挑战自己的恐惧，慢慢地就会发现自己没有那么害怕了。</p>
-<p>这个方法的好处是让莫名的恐惧有了级别，自己也有战胜恐惧的方法。</p>
-<p>5、高级行为实验：敢于让别人失望。</p>
-<p>对于自己不太熟悉的人的聚会或活动和自己不喜欢的活动时，勇敢地拒绝吧。不要去猜测和预设别人的态度，因为你不她。</p>
-<p>不要担心别人会失望，即使失望，因为你不需要为他人的情绪负责。</p>
-<p>让人失望和辜负别人是不一样，让人失望是你的精力有限，辜负别人则是你有意让人失望了。</p>
-<p>6、BEAR法——呼吸、赞扬、接受、尊重。</p>
-<p>这一招主要是应对突出其来的恐惧感，指导你缓和令人恐惧的人的情绪，使他们产生安全感，而你自己不会再感动他们的攻击性。</p>
-<p>比如在一些平台上写作，有人留言攻击你写得烂，这个如果让你感到恐惧的话，那么你试试BRAR法：当你恐惧时，深呼吸让自己平静下来（呼吸），然后回复留言：谢谢你的关注和建议（赞扬），你花了时间和心思阅读我的文章，我表示很感激（接受），但是写作是私人的事，我会坚持这样的写作，直到有一天我自己愿意改变（尊重自己的意愿）。“</p>
-<p>作者雅基．马森会写这样的书，原因之一她也是一位受了诅咒的“可爱人物”，她去寻找督导师的帮助，也在治疗的过程中帮助各种不同的“可爱人物”。</p>
-<p>目的并不是阻止人们对世界表达善意。而是鼓励像我一样过度付出而委屈，过度卑微而不敢拒绝的人为自己争取更多的时间和自由，更动的主动权以及更精彩的人生。</p>
-<p>文&#x2F;灵林玖玖</p>
-<p><a href="https://baike.baidu.com/tashuo/browse/content?id=1740794e3cd470704de2f22a">原文链接</a></p>
-]]></content>
-      <categories>
-        <category>psychology</category>
       </categories>
   </entry>
   <entry>
@@ -3220,6 +3171,55 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       <tags>
         <tag>apache</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>拒绝别人，你好意思吗？｜《可爱的诅咒：圣母型人格自助方法》</title>
+    <url>/2018/01/26/psychology/%E5%9C%A3%E6%AF%8D%E5%9E%8B%E4%BA%BA%E6%A0%BC/</url>
+    <content><![CDATA[<blockquote>
+<p>圣母型人格的人不懂得拒绝别人，因此让自己非常的累，别人又得寸进尺的要求。 因此，学会拒绝别人，学会爱自己，才会让自己变得更好 本文分享一些处理的技巧和理念，欢迎阅读。</p>
+</blockquote>
+<p>别不好意思拒绝别人，因为那些好意思难你的人，都不是什么好人。</p>
+<p>——网络流行语</p>
+<p>-1-</p>
+<p>《爱自己的人自带光芒：圣母型人格心理自助手册》是英国注册心理医师雅基．马森根据临床的经验实践写给像我一样支持了别人，崩溃了自己的“可爱人物”。认真看了我上面故事的人，大约能够猜想我看到这本书时如遇知音和救世主的感激了。</p>
+<p>这本书主要是从观念的厘清和教大家一些可操作的自我救助方法帮助受了诅咒的“可爱人物“走出崩溃的困境。</p>
+<p>Q1、为什么怕拒绝别人呢？</p>
+<p>一种是“愤怒的逃避者“。他们不同程度地害怕冲突、别人的不喜欢和批评。像我害怕拒绝小学女同学的请求后，以后不再来往，我是典型的”愤怒逃避者“。</p>
+<p>二是“认可的追求者“。为了寻求别人的喜欢、赞扬、谢意和感激而让自己变得随和、奉献、做好事，不拒绝别人。这种类型的人更加的隐秘，需要更高的觉察能力。</p>
+<p>Q2、为何寻求认可呢？</p>
+<p>心理学先驱卡尔．罗杰斯对评价源分内、外两种，取决于你是自己评判自己的行动、工作、成就及行为举止（内评价源）， 还是受他人评价的影响（外评价源）。宁可委屈自己也不拒绝别的人获取评价是通过外评价源，也就是为了获得别人好的评价，那么她就不敢拒绝别人。</p>
+<p>Q3、为什么有些人会评价自己的权利给了别人呢？</p>
+<p>这个是有历史原因，有人说心理学的论调就是六岁之前形成的观念影响人的一生，但依据雅基．马森的临床经验来看，观念的形成并不只是童年时期，还有相当一部分是在青少年时期。</p>
+<p>错误的观念导致偏差的人生，及时地修正才能更好的接近幸福。</p>
+<p>因此，雅基．马森给她的咨询对象三个强有力的“新观念“和三个可以自我救助的方法。</p>
+<p>1、聆听身体的感受、及时地检视自己的身体。</p>
+<p>身体会比我们的大脑诚实，可以帮助我们捕捉和识别各种情绪，对于为难自己的事会发出拒绝的信息。比如当一群人正在聊天时，你想去厕所小便 ，你会中断谈话然后去厕所吗？聆听身体的人会收到信号，依据身体的指示行事，但是害怕拒绝的人会忍，忍到谈话结束。</p>
+<p>2、正视我们内心的暴徒——批判性思维。</p>
+<p>这点对于有“一日三省吾身“”做到批评与自我批评“相结合的中国人来说，可能会认为批判性思维是好的。但是批判性思维就像电影里的反派人物，阻碍我们自由、清晰地表达自己。</p>
+<p>如果细细地觉察，我们发现这些批判性思维发出的声音竟是来自过去那些对我们有重要意义的人，比如母亲、爷爷、老师等。</p>
+<p>批判性的话通常是负面，比如我妈最喜欢说我”蠢得跟头猪一样“”养条狗还会叫你几声，养你没用“这类负面的信息会影响自信心，也会影响个人对事情的判断。因此，正视内心的暴徒，肯定自己，才能自我成长。</p>
+<p>3、好好地爱自己。</p>
+<p>这句话现在都被用滥了，好好地爱自己是指试着在内心做自己温和的父母，自我肯定，给自己独留时间、精力和资源，让自己成长得更好。</p>
+<p>比如通过“一日三好“的日记，记下自己做的值得称赞的事情，将注意力转移至积极的事情上将大大地改善精神健康。</p>
+<p>4、挑战让你不敢改变的恐惧。</p>
+<p>恐惧之下的人是没有理性，只是知道怕，但不知道在怕什么。想要改变的话，找出一张纸，列出自己的恐惧清单，标注每件事的恐惧级别，然后从恐惧级别低的事情开始改变。</p>
+<p>比如网购时害怕退货被拒绝，恐惧级别是3，那么你可以尝试退掉不想要的东西，看看是否和自己预想的情景一模一样。通过逐级地挑战自己的恐惧，慢慢地就会发现自己没有那么害怕了。</p>
+<p>这个方法的好处是让莫名的恐惧有了级别，自己也有战胜恐惧的方法。</p>
+<p>5、高级行为实验：敢于让别人失望。</p>
+<p>对于自己不太熟悉的人的聚会或活动和自己不喜欢的活动时，勇敢地拒绝吧。不要去猜测和预设别人的态度，因为你不她。</p>
+<p>不要担心别人会失望，即使失望，因为你不需要为他人的情绪负责。</p>
+<p>让人失望和辜负别人是不一样，让人失望是你的精力有限，辜负别人则是你有意让人失望了。</p>
+<p>6、BEAR法——呼吸、赞扬、接受、尊重。</p>
+<p>这一招主要是应对突出其来的恐惧感，指导你缓和令人恐惧的人的情绪，使他们产生安全感，而你自己不会再感动他们的攻击性。</p>
+<p>比如在一些平台上写作，有人留言攻击你写得烂，这个如果让你感到恐惧的话，那么你试试BRAR法：当你恐惧时，深呼吸让自己平静下来（呼吸），然后回复留言：谢谢你的关注和建议（赞扬），你花了时间和心思阅读我的文章，我表示很感激（接受），但是写作是私人的事，我会坚持这样的写作，直到有一天我自己愿意改变（尊重自己的意愿）。“</p>
+<p>作者雅基．马森会写这样的书，原因之一她也是一位受了诅咒的“可爱人物”，她去寻找督导师的帮助，也在治疗的过程中帮助各种不同的“可爱人物”。</p>
+<p>目的并不是阻止人们对世界表达善意。而是鼓励像我一样过度付出而委屈，过度卑微而不敢拒绝的人为自己争取更多的时间和自由，更动的主动权以及更精彩的人生。</p>
+<p>文&#x2F;灵林玖玖</p>
+<p><a href="https://baike.baidu.com/tashuo/browse/content?id=1740794e3cd470704de2f22a">原文链接</a></p>
+]]></content>
+      <categories>
+        <category>psychology</category>
+      </categories>
   </entry>
   <entry>
     <title>Apache 配置虚拟主机三种方式</title>
@@ -3331,6 +3331,17 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
       </tags>
   </entry>
   <entry>
+    <title>centos 下chmod</title>
+    <url>/2017/08/31/technology/centos-chmod/</url>
+    <content><![CDATA[<p>chmod也可以用数字来表示权限如 chmod 777 file<br>语法为：chmod abc file<br>其中a,b,c各为一个数字，分别表示User、Group、及Other的权限。<br>r&#x3D;4，w&#x3D;2，x&#x3D;1<br>若要rwx属性则4+2+1&#x3D;7；<br>若要rw-属性则4+2&#x3D;6；<br>若要r-x属性则4+1&#x3D;5。</p>
+<p>给文件夹及文件夹里面的所有文件加权限<br>chmod -R 777 folder</p>
+]]></content>
+      <categories>
+        <category>technology</category>
+        <category>Server</category>
+      </categories>
+  </entry>
+  <entry>
     <title>centos下压缩解压.zip文件</title>
     <url>/2017/08/31/technology/centos-zip/</url>
     <content><![CDATA[<p>以下命令均在 &#x2F;home 目录下操作</p>
@@ -3382,17 +3393,6 @@ Swap:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1539&nbsp;&nbsp;&nbsp
 <p>1</p>
 <p>cd &#x2F;etc&#x2F;httpd&#x2F;conf.d #进入HTTPD的SSL配置目录 vim ssl.conf #编辑SSL配置文件</p>
 <p>      转载至<a href="https://www.iyunv.com/thread-84322-1-1.html">https://www.iyunv.com/thread-84322-1-1.html</a>     总结： 1.安装mod_ssl模块 2.vim ssl.conf #编辑SSL配置文件 文件路径以及名称可能不一样 我的路径以及名称&#x2F;etc&#x2F;httpd&#x2F;conf.d&#x2F;ssl.conf</p>
-]]></content>
-      <categories>
-        <category>technology</category>
-        <category>Server</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>centos 下chmod</title>
-    <url>/2017/08/31/technology/centos-chmod/</url>
-    <content><![CDATA[<p>chmod也可以用数字来表示权限如 chmod 777 file<br>语法为：chmod abc file<br>其中a,b,c各为一个数字，分别表示User、Group、及Other的权限。<br>r&#x3D;4，w&#x3D;2，x&#x3D;1<br>若要rwx属性则4+2+1&#x3D;7；<br>若要rw-属性则4+2&#x3D;6；<br>若要r-x属性则4+1&#x3D;5。</p>
-<p>给文件夹及文件夹里面的所有文件加权限<br>chmod -R 777 folder</p>
 ]]></content>
       <categories>
         <category>technology</category>
@@ -3480,6 +3480,18 @@ pasv_max_port=40100
       </tags>
   </entry>
   <entry>
+    <title>centos服务自动启动</title>
+    <url>/2019/12/24/technology/centos%E6%9C%8D%E5%8A%A1%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8/</url>
+    <content><![CDATA[<h1 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h1><h2 id="service-命令"><a href="#service-命令" class="headerlink" title="service 命令"></a>service 命令</h2><p><code>service start/stop/status/restart servicename</code></p>
+<h2 id="systemctl-命令"><a href="#systemctl-命令" class="headerlink" title="systemctl 命令"></a>systemctl 命令</h2><p><code>systemctl start/stop/status/restart servicename</code></p>
+<h1 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h1><h2 id="chkconfig-命令"><a href="#chkconfig-命令" class="headerlink" title="chkconfig 命令"></a>chkconfig 命令</h2><p>添加到 chkconfig 列表<br><code>chkconfig --add servicename</code><br>开启&#x2F;关闭<br><code>chkconfig servicename on/off</code><br>查询当前所有自动启动的服务<br><code>chkconfig --list</code><br>查询指定的服务<br><code>chkconfig --list servicename</code></p>
+<h2 id="systemctl-命令-1"><a href="#systemctl-命令-1" class="headerlink" title="systemctl 命令"></a>systemctl 命令</h2><p><code>systemctl enable/disable servicename</code></p>
+]]></content>
+      <categories>
+        <category>未分类</category>
+      </categories>
+  </entry>
+  <entry>
     <title>centos关闭防火墙</title>
     <url>/2019/03/11/technology/centos%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99/</url>
     <content><![CDATA[<p>参考文档<br>防火墙设置<br>查看所有打开的端口： firewall-cmd –zone&#x3D;public –list-ports<br>启动： systemctl start firewalld<br>关闭： systemctl stop firewalld<br>查看状态： systemctl status firewalld<br>开机禁用  ： systemctl disable firewalld<br>开机启用  ： systemctl enable firewalld</p>
@@ -3500,18 +3512,6 @@ pasv_max_port=40100
       <tags>
         <tag>centos</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>centos服务自动启动</title>
-    <url>/2019/12/24/technology/centos%E6%9C%8D%E5%8A%A1%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8/</url>
-    <content><![CDATA[<h1 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h1><h2 id="service-命令"><a href="#service-命令" class="headerlink" title="service 命令"></a>service 命令</h2><p><code>service start/stop/status/restart servicename</code></p>
-<h2 id="systemctl-命令"><a href="#systemctl-命令" class="headerlink" title="systemctl 命令"></a>systemctl 命令</h2><p><code>systemctl start/stop/status/restart servicename</code></p>
-<h1 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h1><h2 id="chkconfig-命令"><a href="#chkconfig-命令" class="headerlink" title="chkconfig 命令"></a>chkconfig 命令</h2><p>添加到 chkconfig 列表<br><code>chkconfig --add servicename</code><br>开启&#x2F;关闭<br><code>chkconfig servicename on/off</code><br>查询当前所有自动启动的服务<br><code>chkconfig --list</code><br>查询指定的服务<br><code>chkconfig --list servicename</code></p>
-<h2 id="systemctl-命令-1"><a href="#systemctl-命令-1" class="headerlink" title="systemctl 命令"></a>systemctl 命令</h2><p><code>systemctl enable/disable servicename</code></p>
-]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
   </entry>
   <entry>
     <title>设计模式</title>
@@ -3629,55 +3629,6 @@ pasv_max_port=40100
       </categories>
   </entry>
   <entry>
-    <title>CSS3</title>
-    <url>/2017/09/27/technology/front-end/css/css3/</url>
-    <content><![CDATA[<h1 id="一、边框"><a href="#一、边框" class="headerlink" title="一、边框"></a>一、边框</h1><p>border-radius:100%;<br>box-shadow:x偏移量，y偏移量，阴影模糊，阴影扩展，颜色，内外<br>border-image:url() 70 repeat; </p>
-<h1 id="二、颜色相关"><a href="#二、颜色相关" class="headerlink" title="二、颜色相关"></a>二、颜色相关</h1><p>rgba    如：background:rgba(255,255,255,0.5);<br>颜色渐变（线性渐变（linear）、**径向渐变(radial)**） 线性渐变 linear-gradient(方向，颜色（两个至多个））<br>例如：background-image:linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet); </p>
-<h1 id="三、文字与字体"><a href="#三、文字与字体" class="headerlink" title="三、文字与字体"></a>三、文字与字体</h1><p>文本溢出text-overflow <strong>text-overflow</strong>只是用来说明文字溢出时用什么方式显示，要实现溢出时产生<strong>省略号</strong>的效果，还须定义<strong>强制文本在一行内显示</strong>（white-space:nowrap）及<strong>溢出内容为隐藏</strong>（overflow:hidden），只有这样才能实现<strong>溢出文本显示省略号</strong>的效果，代码如下：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">text-overflow</span>: ellipsis; </span><br><span class="line"><span class="attribute">overflow</span>: hidden; </span><br><span class="line"><span class="attribute">white-space</span>: nowrap;</span><br></pre></td></tr></table></figure>
-<p>多行之后显示省略号</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">overflow</span>: hidden;</span><br><span class="line"><span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line"><span class="attribute">display</span>: -webkit-box;</span><br><span class="line">-webkit-box-orient: vertical;</span><br><span class="line">-webkit-line-clamp: <span class="number">2</span>; // 两行之后显示省略号</span><br></pre></td></tr></table></figure>
-
-<p>同时，<strong>word-wrap</strong>也可以用来设置<strong>文本行为</strong>，当前行超过指定容器的边界时是否断开转行。 嵌入字体@font-face<br>例如 @font-face { font-family: “MOOC Font”; src: url(“<a href="http://www.imooc.com/Amaranth-BoldItalic.otf">http://www.imooc.com/Amaranth-BoldItalic.otf</a>“); } 直接使用font-family: “MOOC Font”;   text-shadow: X-Offset Y-Offset blur color;</p>
-<p>X-Offset：表示阴影的水平偏移距离，其值为正值时阴影向右偏移，反之向左偏移；</p>
-<p>Y-Offset：是指阴影的垂直偏移距离，如果其值是正值时，阴影向下偏移，反之向上偏移；</p>
-<p>Blur：是指阴影的模糊程度，其值不能是负值，如果值越大，阴影越模糊，反之阴影越清晰，如果不需要阴影模糊可以将Blur值设置为0；</p>
-<p>Color：是指阴影的颜色，其可以使用rgba色。</p>
-<h1 id="四、与背景相关的样式"><a href="#四、与背景相关的样式" class="headerlink" title="四、与背景相关的样式"></a>四、与背景相关的样式</h1><p>background-origin</p>
-<p>设置元素背景图片的<strong>原始起始位置</strong>。 语法：</p>
-<p>background-origin ： border-box | padding-box | content-box;</p>
-<p>参数分别表示背景图片是从<strong>边框</strong>，还是<strong>内边距（默认值）</strong>，或者是<strong>内容区域</strong>开始显示。</p>
-<p>background-clip</p>
-<p>用来将背景图片做适当的<strong>裁剪</strong>以适应实际需要。 语法：</p>
-<p>background-clip ： border-box | padding-box | content-box | no-clip</p>
-<p>参数分别表示从<strong>边框、</strong>或<strong>内填充</strong>，或者<strong>内容区域</strong>向外裁剪背景。<strong>no-clip</strong>表示不裁切，和<strong>参数border-box</strong>显示同样的效果。<code>backgroud-clip</code>默认值为<strong>border-box</strong>。</p>
-<p> background-size</p>
-<p>设置背景图片的大小，以<strong>长度值</strong>或<strong>百分比</strong>显示，还可以通过<strong>cover</strong>和<strong>contain</strong>来对图片进行伸缩。 语法：</p>
-<p>background-size: auto | &lt;长度值&gt; | &lt;百分比&gt; | cover | contain</p>
-<p>取值说明： <strong>1、auto</strong>：默认值，不改变背景图片的原始高度和宽度； <strong>2、&lt;长度值&gt;<strong>：成对出现如200px 50px，将背景图片宽高依次设置为前面两个值，当设置一个值时，将其作为图片宽度值来</strong>等比缩放</strong>； <strong>3、&lt;百分比&gt;<strong>：0％~100％之间的任何值，将背景图片宽高依次设置为所在元素宽高乘以前面百分比得出的数值，当设置一个值时同上； <strong>4、cover</strong>：顾名思义为</strong>覆盖</strong>，即将背景图片等比缩放以<strong>填满整个容器</strong>； <strong>5、contain</strong>：容纳，即将背景图片等比缩放至<strong>某一边紧贴容器边缘为止</strong>。</p>
-<p>multiple backgrounds</p>
-<p>多重背景，也就是CSS2里<strong>background</strong>的属性外加<strong>origin</strong>、<strong>clip</strong>和<strong>size</strong>组成的新background的多次叠加，缩写时为用<strong>逗号</strong>隔开的每组值；用分解写法时，如果有多个背景图片，而其他属性只有一个（例如background-repeat只有一个），表明所有背景图片应用该属性值。 语法缩写如下：</p>
-<p>background ： [background-color] | [background-image] | [background-position][&#x2F;background-size] | [background-repeat] | [background-attachment] | [background-clip] | [background-origin],…</p>
-<p><strong>注意：</strong></p>
-<ol>
-<li>用逗号隔开每组 background 的缩写值；</li>
-<li>如果有 size 值，需要紧跟 position 并且用 “&#x2F;“ 隔开；</li>
-<li>如果有多个背景图片，而其他属性只有一个（例如 background-repeat 只有一个），表明所有背景图片应用该属性值。</li>
-<li>background-color 只能设置一个。</li>
-</ol>
-<p>导航综合练习 .nav li{background:linear-gradient(to bottom,#dd2926,#a82724,#dd2926) no-repeat right &#x2F; 1px 15px;}   </p>
-<h1 id="五、CSS3选择器"><a href="#五、CSS3选择器" class="headerlink" title="五、CSS3选择器"></a>五、CSS3选择器</h1><h1 id="六、变形与动画"><a href="#六、变形与动画" class="headerlink" title="六、变形与动画"></a>六、变形与动画</h1><h1 id="七、布局样式相关"><a href="#七、布局样式相关" class="headerlink" title="七、布局样式相关"></a>七、布局样式相关</h1><p>盒子模型content-box  border-box</p>
-<p>box-sizing: border-box;</p>
-<p>box-sizing: content-box;</p>
-<p><a href="https://www.imooc.com/article/18400">十天精通CSS3学后笔记</a></p>
-]]></content>
-      <categories>
-        <category>technology</category>
-        <category>front-end</category>
-        <category>css</category>
-      </categories>
-  </entry>
-  <entry>
     <title>CSS-flex</title>
     <url>/2021/06/07/technology/front-end/css/CSS-flex/</url>
     <content><![CDATA[<h2 id="容器的属性"><a href="#容器的属性" class="headerlink" title="容器的属性"></a>容器的属性</h2><h3 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a>flex-direction</h3><p>规定灵活项目的方向</p>
@@ -3731,14 +3682,47 @@ pasv_max_port=40100
       </categories>
   </entry>
   <entry>
-    <title>font-weight</title>
-    <url>/2022/01/28/technology/front-end/css/font-weight/</url>
-    <content><![CDATA[<h2 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h2><p>font-weight可取值：100～900和normal、bold、bolder、lighter。</p>
-<p>字体所拥有的字重的数量实际上很少存在满足有9个字重刚好跟100～900的CSS字重一一对应的情况，通常字体拥有的字重数量为4至6个。</p>
-<p>不必担心，起码400和700对应的字重至少是每种字体必备的，譬如常见的 Arial、Helvetica、Georgia等等，只有400(normal)和700(bold)。</p>
-<h2 id="normal、bold"><a href="#normal、bold" class="headerlink" title="normal、bold"></a>normal、bold</h2><p>400 等同于 normal，而 700 等同于 bold。</p>
-<h2 id="bolder、lighter"><a href="#bolder、lighter" class="headerlink" title="bolder、lighter"></a>bolder、lighter</h2><p>bolder、lighter表示其字重值是基于从其父元素继承而来的字重计算所得的，与normal、bold所代表的字重并无关系。  </p>
-<p>参考<br>作者：人不中二枉少年<br>链接：<a href="https://www.jianshu.com/p/f9c6f9729fbb">https://www.jianshu.com/p/f9c6f9729fbb</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+    <title>CSS3</title>
+    <url>/2017/09/27/technology/front-end/css/css3/</url>
+    <content><![CDATA[<h1 id="一、边框"><a href="#一、边框" class="headerlink" title="一、边框"></a>一、边框</h1><p>border-radius:100%;<br>box-shadow:x偏移量，y偏移量，阴影模糊，阴影扩展，颜色，内外<br>border-image:url() 70 repeat; </p>
+<h1 id="二、颜色相关"><a href="#二、颜色相关" class="headerlink" title="二、颜色相关"></a>二、颜色相关</h1><p>rgba    如：background:rgba(255,255,255,0.5);<br>颜色渐变（线性渐变（linear）、**径向渐变(radial)**） 线性渐变 linear-gradient(方向，颜色（两个至多个））<br>例如：background-image:linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet); </p>
+<h1 id="三、文字与字体"><a href="#三、文字与字体" class="headerlink" title="三、文字与字体"></a>三、文字与字体</h1><p>文本溢出text-overflow <strong>text-overflow</strong>只是用来说明文字溢出时用什么方式显示，要实现溢出时产生<strong>省略号</strong>的效果，还须定义<strong>强制文本在一行内显示</strong>（white-space:nowrap）及<strong>溢出内容为隐藏</strong>（overflow:hidden），只有这样才能实现<strong>溢出文本显示省略号</strong>的效果，代码如下：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">text-overflow</span>: ellipsis; </span><br><span class="line"><span class="attribute">overflow</span>: hidden; </span><br><span class="line"><span class="attribute">white-space</span>: nowrap;</span><br></pre></td></tr></table></figure>
+<p>多行之后显示省略号</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">overflow</span>: hidden;</span><br><span class="line"><span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line"><span class="attribute">display</span>: -webkit-box;</span><br><span class="line">-webkit-box-orient: vertical;</span><br><span class="line">-webkit-line-clamp: <span class="number">2</span>; // 两行之后显示省略号</span><br></pre></td></tr></table></figure>
+
+<p>同时，<strong>word-wrap</strong>也可以用来设置<strong>文本行为</strong>，当前行超过指定容器的边界时是否断开转行。 嵌入字体@font-face<br>例如 @font-face { font-family: “MOOC Font”; src: url(“<a href="http://www.imooc.com/Amaranth-BoldItalic.otf">http://www.imooc.com/Amaranth-BoldItalic.otf</a>“); } 直接使用font-family: “MOOC Font”;   text-shadow: X-Offset Y-Offset blur color;</p>
+<p>X-Offset：表示阴影的水平偏移距离，其值为正值时阴影向右偏移，反之向左偏移；</p>
+<p>Y-Offset：是指阴影的垂直偏移距离，如果其值是正值时，阴影向下偏移，反之向上偏移；</p>
+<p>Blur：是指阴影的模糊程度，其值不能是负值，如果值越大，阴影越模糊，反之阴影越清晰，如果不需要阴影模糊可以将Blur值设置为0；</p>
+<p>Color：是指阴影的颜色，其可以使用rgba色。</p>
+<h1 id="四、与背景相关的样式"><a href="#四、与背景相关的样式" class="headerlink" title="四、与背景相关的样式"></a>四、与背景相关的样式</h1><p>background-origin</p>
+<p>设置元素背景图片的<strong>原始起始位置</strong>。 语法：</p>
+<p>background-origin ： border-box | padding-box | content-box;</p>
+<p>参数分别表示背景图片是从<strong>边框</strong>，还是<strong>内边距（默认值）</strong>，或者是<strong>内容区域</strong>开始显示。</p>
+<p>background-clip</p>
+<p>用来将背景图片做适当的<strong>裁剪</strong>以适应实际需要。 语法：</p>
+<p>background-clip ： border-box | padding-box | content-box | no-clip</p>
+<p>参数分别表示从<strong>边框、</strong>或<strong>内填充</strong>，或者<strong>内容区域</strong>向外裁剪背景。<strong>no-clip</strong>表示不裁切，和<strong>参数border-box</strong>显示同样的效果。<code>backgroud-clip</code>默认值为<strong>border-box</strong>。</p>
+<p> background-size</p>
+<p>设置背景图片的大小，以<strong>长度值</strong>或<strong>百分比</strong>显示，还可以通过<strong>cover</strong>和<strong>contain</strong>来对图片进行伸缩。 语法：</p>
+<p>background-size: auto | &lt;长度值&gt; | &lt;百分比&gt; | cover | contain</p>
+<p>取值说明： <strong>1、auto</strong>：默认值，不改变背景图片的原始高度和宽度； <strong>2、&lt;长度值&gt;<strong>：成对出现如200px 50px，将背景图片宽高依次设置为前面两个值，当设置一个值时，将其作为图片宽度值来</strong>等比缩放</strong>； <strong>3、&lt;百分比&gt;<strong>：0％~100％之间的任何值，将背景图片宽高依次设置为所在元素宽高乘以前面百分比得出的数值，当设置一个值时同上； <strong>4、cover</strong>：顾名思义为</strong>覆盖</strong>，即将背景图片等比缩放以<strong>填满整个容器</strong>； <strong>5、contain</strong>：容纳，即将背景图片等比缩放至<strong>某一边紧贴容器边缘为止</strong>。</p>
+<p>multiple backgrounds</p>
+<p>多重背景，也就是CSS2里<strong>background</strong>的属性外加<strong>origin</strong>、<strong>clip</strong>和<strong>size</strong>组成的新background的多次叠加，缩写时为用<strong>逗号</strong>隔开的每组值；用分解写法时，如果有多个背景图片，而其他属性只有一个（例如background-repeat只有一个），表明所有背景图片应用该属性值。 语法缩写如下：</p>
+<p>background ： [background-color] | [background-image] | [background-position][&#x2F;background-size] | [background-repeat] | [background-attachment] | [background-clip] | [background-origin],…</p>
+<p><strong>注意：</strong></p>
+<ol>
+<li>用逗号隔开每组 background 的缩写值；</li>
+<li>如果有 size 值，需要紧跟 position 并且用 “&#x2F;“ 隔开；</li>
+<li>如果有多个背景图片，而其他属性只有一个（例如 background-repeat 只有一个），表明所有背景图片应用该属性值。</li>
+<li>background-color 只能设置一个。</li>
+</ol>
+<p>导航综合练习 .nav li{background:linear-gradient(to bottom,#dd2926,#a82724,#dd2926) no-repeat right &#x2F; 1px 15px;}   </p>
+<h1 id="五、CSS3选择器"><a href="#五、CSS3选择器" class="headerlink" title="五、CSS3选择器"></a>五、CSS3选择器</h1><h1 id="六、变形与动画"><a href="#六、变形与动画" class="headerlink" title="六、变形与动画"></a>六、变形与动画</h1><h1 id="七、布局样式相关"><a href="#七、布局样式相关" class="headerlink" title="七、布局样式相关"></a>七、布局样式相关</h1><p>盒子模型content-box  border-box</p>
+<p>box-sizing: border-box;</p>
+<p>box-sizing: content-box;</p>
+<p><a href="https://www.imooc.com/article/18400">十天精通CSS3学后笔记</a></p>
 ]]></content>
       <categories>
         <category>technology</category>
@@ -3747,27 +3731,14 @@ pasv_max_port=40100
       </categories>
   </entry>
   <entry>
-    <title>纯CSS绘制三角形（各种角度）</title>
-    <url>/2018/01/10/technology/front-end/css/%E7%BA%AFCSS%E7%BB%98%E5%88%B6%E4%B8%89%E8%A7%92%E5%BD%A2/</url>
-    <content><![CDATA[<p>CSS三角形绘制方法，学会了这个，其它的也就简单。</p>
-<p>我们的网页因为 CSS 而呈现千变万化的风格。这一看似简单的样式语言在使用中非常灵活，只要你发挥创意就能实现很多比人想象不到的效果。特别是随着 CSS3 的广泛使用，更多新奇的 CSS 作品涌现出来。 今天给大家带来 CSS 三角形绘制方法 <img src="http://files.jb51.net/file_images/article/201310/201310290941121.jpg?201392994443"></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-up</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-left</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-right</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-bottom</span>: <span class="number">100px</span> solid red; &#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="http://files.jb51.net/file_images/article/201310/201310290941322.jpg?201392994757"></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-down</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-left</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-right</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-top</span>: <span class="number">100px</span> solid red; &#125;</span><br></pre></td></tr></table></figure>
-<p><img src="http://files.jb51.net/file_images/article/201310/201310290941433.jpg?201392994835"></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-left</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-top</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-right</span>: <span class="number">100px</span> solid red; <span class="attribute">border-bottom</span>: <span class="number">50px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
-<p><img src="http://files.jb51.net/file_images/article/201310/201310290941534.jpg?20139299495"></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-right</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-top</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-left</span>: <span class="number">100px</span> solid red; <span class="attribute">border-bottom</span>: <span class="number">50px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
-<p><img src="http://files.jb51.net/file_images/article/201310/201310290942025.jpg?201392994926"></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-topleft</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-top</span>: <span class="number">100px</span> solid red; <span class="attribute">border-right</span>: <span class="number">100px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
-<p><img src="http://files.jb51.net/file_images/article/201310/201310290942136.jpg?201392994948"></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-topright</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-top</span>: <span class="number">100px</span> solid red; <span class="attribute">border-left</span>: <span class="number">100px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
-<p><img src="http://files.jb51.net/file_images/article/201310/201310290942227.jpg?20139299509"></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-bottomleft</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-bottom</span>: <span class="number">100px</span> solid red; <span class="attribute">border-right</span>: <span class="number">100px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
-<p><img src="http://files.jb51.net/file_images/article/201310/201310290942328.jpg?201392995028"></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-bottomright</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-bottom</span>: <span class="number">100px</span> solid red; <span class="attribute">border-left</span>: <span class="number">100px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
-<p>转载自<a href="http://www.jb51.net/article/42513.htm">http://www.jb51.net/article/42513.htm</a></p>
+    <title>font-weight</title>
+    <url>/2022/01/28/technology/front-end/css/font-weight/</url>
+    <content><![CDATA[<h2 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h2><p>font-weight可取值：100～900和normal、bold、bolder、lighter。</p>
+<p>字体所拥有的字重的数量实际上很少存在满足有9个字重刚好跟100～900的CSS字重一一对应的情况，通常字体拥有的字重数量为4至6个。</p>
+<p>不必担心，起码400和700对应的字重至少是每种字体必备的，譬如常见的 Arial、Helvetica、Georgia等等，只有400(normal)和700(bold)。</p>
+<h2 id="normal、bold"><a href="#normal、bold" class="headerlink" title="normal、bold"></a>normal、bold</h2><p>400 等同于 normal，而 700 等同于 bold。</p>
+<h2 id="bolder、lighter"><a href="#bolder、lighter" class="headerlink" title="bolder、lighter"></a>bolder、lighter</h2><p>bolder、lighter表示其字重值是基于从其父元素继承而来的字重计算所得的，与normal、bold所代表的字重并无关系。  </p>
+<p>参考<br>作者：人不中二枉少年<br>链接：<a href="https://www.jianshu.com/p/f9c6f9729fbb">https://www.jianshu.com/p/f9c6f9729fbb</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 ]]></content>
       <categories>
         <category>technology</category>
@@ -3816,6 +3787,35 @@ pasv_max_port=40100
       </tags>
   </entry>
   <entry>
+    <title>纯CSS绘制三角形（各种角度）</title>
+    <url>/2018/01/10/technology/front-end/css/%E7%BA%AFCSS%E7%BB%98%E5%88%B6%E4%B8%89%E8%A7%92%E5%BD%A2/</url>
+    <content><![CDATA[<p>CSS三角形绘制方法，学会了这个，其它的也就简单。</p>
+<p>我们的网页因为 CSS 而呈现千变万化的风格。这一看似简单的样式语言在使用中非常灵活，只要你发挥创意就能实现很多比人想象不到的效果。特别是随着 CSS3 的广泛使用，更多新奇的 CSS 作品涌现出来。 今天给大家带来 CSS 三角形绘制方法 <img src="http://files.jb51.net/file_images/article/201310/201310290941121.jpg?201392994443"></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-up</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-left</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-right</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-bottom</span>: <span class="number">100px</span> solid red; &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://files.jb51.net/file_images/article/201310/201310290941322.jpg?201392994757"></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-down</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-left</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-right</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-top</span>: <span class="number">100px</span> solid red; &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://files.jb51.net/file_images/article/201310/201310290941433.jpg?201392994835"></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-left</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-top</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-right</span>: <span class="number">100px</span> solid red; <span class="attribute">border-bottom</span>: <span class="number">50px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://files.jb51.net/file_images/article/201310/201310290941534.jpg?20139299495"></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-right</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-top</span>: <span class="number">50px</span> solid transparent; <span class="attribute">border-left</span>: <span class="number">100px</span> solid red; <span class="attribute">border-bottom</span>: <span class="number">50px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://files.jb51.net/file_images/article/201310/201310290942025.jpg?201392994926"></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-topleft</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-top</span>: <span class="number">100px</span> solid red; <span class="attribute">border-right</span>: <span class="number">100px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://files.jb51.net/file_images/article/201310/201310290942136.jpg?201392994948"></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-topright</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-top</span>: <span class="number">100px</span> solid red; <span class="attribute">border-left</span>: <span class="number">100px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://files.jb51.net/file_images/article/201310/201310290942227.jpg?20139299509"></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-bottomleft</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-bottom</span>: <span class="number">100px</span> solid red; <span class="attribute">border-right</span>: <span class="number">100px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://files.jb51.net/file_images/article/201310/201310290942328.jpg?201392995028"></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#triangle-bottomright</span> &#123; <span class="attribute">width</span>: <span class="number">0</span>; <span class="attribute">height</span>: <span class="number">0</span>; <span class="attribute">border-bottom</span>: <span class="number">100px</span> solid red; <span class="attribute">border-left</span>: <span class="number">100px</span> solid transparent; &#125;</span><br></pre></td></tr></table></figure>
+<p>转载自<a href="http://www.jb51.net/article/42513.htm">http://www.jb51.net/article/42513.htm</a></p>
+]]></content>
+      <categories>
+        <category>technology</category>
+        <category>front-end</category>
+        <category>css</category>
+      </categories>
+  </entry>
+  <entry>
     <title>JS 类</title>
     <url>/2021/03/10/technology/front-end/javascript/js%20class/</url>
     <content><![CDATA[<h3 id="es5-与-es6-类的区别"><a href="#es5-与-es6-类的区别" class="headerlink" title="es5 与 es6 类的区别"></a>es5 与 es6 类的区别</h3><ol>
@@ -3831,6 +3831,15 @@ pasv_max_port=40100
       <categories>
         <category>technology</category>
         <category>front-end</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>js 深浅拷贝</title>
+    <url>/2021/01/13/technology/front-end/javascript/js%E6%B7%B1%E6%8B%B7%E8%B4%9D/</url>
+    <content><![CDATA[<h2 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h2><h3 id="object-assign"><a href="#object-assign" class="headerlink" title="object.assign"></a>object.assign</h3><h3 id="扩展运算符"><a href="#扩展运算符" class="headerlink" title="扩展运算符"></a>扩展运算符</h3><h3 id="concat-数组"><a href="#concat-数组" class="headerlink" title="concat (数组)"></a>concat (数组)</h3><h3 id="sblice-数组"><a href="#sblice-数组" class="headerlink" title="sblice (数组)"></a>sblice (数组)</h3><h2 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h2><h3 id="JSON-stringfy"><a href="#JSON-stringfy" class="headerlink" title="JSON.stringfy()"></a>JSON.stringfy()</h3><h3 id="手写递归实现"><a href="#手写递归实现" class="headerlink" title="手写递归实现"></a>手写递归实现</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let obj1 = &#123;</span><br><span class="line">  a: &#123;</span><br><span class="line">    b: 1,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">function deepClone(obj) &#123;</span><br><span class="line">  let cloneObj = Array.isArray(obj) ? [] : &#123;&#125;;</span><br><span class="line"></span><br><span class="line">  for (let key in obj) &#123;</span><br><span class="line">    //遍历</span><br><span class="line"></span><br><span class="line">    if (typeof obj[key] === &quot;object&quot;) &#123;</span><br><span class="line">      cloneObj[key] = deepClone(obj[key]); //是对象就再次调用该函数递归</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      cloneObj[key] = obj[key]; //基本类型的话直接复制值</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return cloneObj;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let obj2 = deepClone(obj1);</span><br><span class="line"></span><br><span class="line">obj1.a.b = 2;</span><br><span class="line"></span><br><span class="line">console.log(obj2); //  &#123;a:&#123;b:1&#125;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="改进后递归实现"><a href="#改进后递归实现" class="headerlink" title="改进后递归实现"></a>改进后递归实现</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const isComplexDataType = (obj) =&gt;</span><br><span class="line">  (typeof obj === &quot;object&quot; || typeof obj === &quot;function&quot;) &amp;&amp; obj !== null;</span><br><span class="line"></span><br><span class="line">const deepClone = function (obj, hash = new WeakMap()) &#123;</span><br><span class="line">  if (obj.constructor === Date) return new Date(obj); // 日期对象直接返回一个新的日期对象</span><br><span class="line"></span><br><span class="line">  if (obj.constructor === RegExp) return new RegExp(obj); //正则对象直接返回一个新的正则对象</span><br><span class="line"></span><br><span class="line">  //如果循环引用了就用 weakMap 来解决</span><br><span class="line"></span><br><span class="line">  if (hash.has(obj)) return hash.get(obj);</span><br><span class="line"></span><br><span class="line">  let allDesc = Object.getOwnPropertyDescriptors(obj);</span><br><span class="line"></span><br><span class="line">  //遍历传入参数所有键的特性</span><br><span class="line"></span><br><span class="line">  let cloneObj = Object.create(Object.getPrototypeOf(obj), allDesc);</span><br><span class="line"></span><br><span class="line">  //继承原型链</span><br><span class="line"></span><br><span class="line">  hash.set(obj, cloneObj);</span><br><span class="line"></span><br><span class="line">  for (let key of Reflect.ownKeys(obj)) &#123;</span><br><span class="line">    cloneObj[key] =</span><br><span class="line">      isComplexDataType(obj[key]) &amp;&amp; typeof obj[key] !== &quot;function&quot;</span><br><span class="line">        ? deepClone(obj[key], hash)</span><br><span class="line">        : obj[key];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return cloneObj;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// 下面是验证代码</span><br><span class="line"></span><br><span class="line">let obj = &#123;</span><br><span class="line">  num: 0,</span><br><span class="line"></span><br><span class="line">  str: &quot;&quot;,</span><br><span class="line"></span><br><span class="line">  boolean: true,</span><br><span class="line"></span><br><span class="line">  unf: undefined,</span><br><span class="line"></span><br><span class="line">  nul: null,</span><br><span class="line"></span><br><span class="line">  obj: &#123; name: &quot;我是一个对象&quot;, id: 1 &#125;,</span><br><span class="line"></span><br><span class="line">  arr: [0, 1, 2],</span><br><span class="line"></span><br><span class="line">  func: function () &#123;</span><br><span class="line">    console.log(&quot;我是一个函数&quot;);</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  date: new Date(0),</span><br><span class="line"></span><br><span class="line">  reg: new RegExp(&quot;/我是一个正则/ig&quot;),</span><br><span class="line"></span><br><span class="line">  [Symbol(&quot;1&quot;)]: 1,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Object.defineProperty(obj, &quot;innumerable&quot;, &#123;</span><br><span class="line">  enumerable: false,</span><br><span class="line">  value: &quot;不可枚举属性&quot;,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">obj = Object.create(obj, Object.getOwnPropertyDescriptors(obj));</span><br><span class="line"></span><br><span class="line">obj.loop = obj; // 设置loop成循环引用的属性</span><br><span class="line"></span><br><span class="line">let cloneObj = deepClone(obj);</span><br><span class="line"></span><br><span class="line">cloneObj.arr.push(4);</span><br><span class="line"></span><br><span class="line">console.log(&quot;obj&quot;, obj);</span><br><span class="line"></span><br><span class="line">console.log(&quot;cloneObj&quot;, cloneObj);</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>未分类</category>
       </categories>
   </entry>
   <entry>
@@ -3870,15 +3879,6 @@ pasv_max_port=40100
 </ol>
 <p>参考：<a href="https://blog.csdn.net/yaya07755/article/details/96834875">https://blog.csdn.net/yaya07755/article/details/96834875</a></p>
 ]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>js 深浅拷贝</title>
-    <url>/2021/01/13/technology/front-end/javascript/js%E6%B7%B1%E6%8B%B7%E8%B4%9D/</url>
-    <content><![CDATA[<h2 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h2><h3 id="object-assign"><a href="#object-assign" class="headerlink" title="object.assign"></a>object.assign</h3><h3 id="扩展运算符"><a href="#扩展运算符" class="headerlink" title="扩展运算符"></a>扩展运算符</h3><h3 id="concat-数组"><a href="#concat-数组" class="headerlink" title="concat (数组)"></a>concat (数组)</h3><h3 id="sblice-数组"><a href="#sblice-数组" class="headerlink" title="sblice (数组)"></a>sblice (数组)</h3><h2 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h2><h3 id="JSON-stringfy"><a href="#JSON-stringfy" class="headerlink" title="JSON.stringfy()"></a>JSON.stringfy()</h3><h3 id="手写递归实现"><a href="#手写递归实现" class="headerlink" title="手写递归实现"></a>手写递归实现</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let obj1 = &#123;</span><br><span class="line">  a: &#123;</span><br><span class="line">    b: 1,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">function deepClone(obj) &#123;</span><br><span class="line">  let cloneObj = Array.isArray(obj) ? [] : &#123;&#125;;</span><br><span class="line"></span><br><span class="line">  for (let key in obj) &#123;</span><br><span class="line">    //遍历</span><br><span class="line"></span><br><span class="line">    if (typeof obj[key] === &quot;object&quot;) &#123;</span><br><span class="line">      cloneObj[key] = deepClone(obj[key]); //是对象就再次调用该函数递归</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      cloneObj[key] = obj[key]; //基本类型的话直接复制值</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return cloneObj;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let obj2 = deepClone(obj1);</span><br><span class="line"></span><br><span class="line">obj1.a.b = 2;</span><br><span class="line"></span><br><span class="line">console.log(obj2); //  &#123;a:&#123;b:1&#125;&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="改进后递归实现"><a href="#改进后递归实现" class="headerlink" title="改进后递归实现"></a>改进后递归实现</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const isComplexDataType = (obj) =&gt;</span><br><span class="line">  (typeof obj === &quot;object&quot; || typeof obj === &quot;function&quot;) &amp;&amp; obj !== null;</span><br><span class="line"></span><br><span class="line">const deepClone = function (obj, hash = new WeakMap()) &#123;</span><br><span class="line">  if (obj.constructor === Date) return new Date(obj); // 日期对象直接返回一个新的日期对象</span><br><span class="line"></span><br><span class="line">  if (obj.constructor === RegExp) return new RegExp(obj); //正则对象直接返回一个新的正则对象</span><br><span class="line"></span><br><span class="line">  //如果循环引用了就用 weakMap 来解决</span><br><span class="line"></span><br><span class="line">  if (hash.has(obj)) return hash.get(obj);</span><br><span class="line"></span><br><span class="line">  let allDesc = Object.getOwnPropertyDescriptors(obj);</span><br><span class="line"></span><br><span class="line">  //遍历传入参数所有键的特性</span><br><span class="line"></span><br><span class="line">  let cloneObj = Object.create(Object.getPrototypeOf(obj), allDesc);</span><br><span class="line"></span><br><span class="line">  //继承原型链</span><br><span class="line"></span><br><span class="line">  hash.set(obj, cloneObj);</span><br><span class="line"></span><br><span class="line">  for (let key of Reflect.ownKeys(obj)) &#123;</span><br><span class="line">    cloneObj[key] =</span><br><span class="line">      isComplexDataType(obj[key]) &amp;&amp; typeof obj[key] !== &quot;function&quot;</span><br><span class="line">        ? deepClone(obj[key], hash)</span><br><span class="line">        : obj[key];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return cloneObj;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// 下面是验证代码</span><br><span class="line"></span><br><span class="line">let obj = &#123;</span><br><span class="line">  num: 0,</span><br><span class="line"></span><br><span class="line">  str: &quot;&quot;,</span><br><span class="line"></span><br><span class="line">  boolean: true,</span><br><span class="line"></span><br><span class="line">  unf: undefined,</span><br><span class="line"></span><br><span class="line">  nul: null,</span><br><span class="line"></span><br><span class="line">  obj: &#123; name: &quot;我是一个对象&quot;, id: 1 &#125;,</span><br><span class="line"></span><br><span class="line">  arr: [0, 1, 2],</span><br><span class="line"></span><br><span class="line">  func: function () &#123;</span><br><span class="line">    console.log(&quot;我是一个函数&quot;);</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  date: new Date(0),</span><br><span class="line"></span><br><span class="line">  reg: new RegExp(&quot;/我是一个正则/ig&quot;),</span><br><span class="line"></span><br><span class="line">  [Symbol(&quot;1&quot;)]: 1,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Object.defineProperty(obj, &quot;innumerable&quot;, &#123;</span><br><span class="line">  enumerable: false,</span><br><span class="line">  value: &quot;不可枚举属性&quot;,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">obj = Object.create(obj, Object.getOwnPropertyDescriptors(obj));</span><br><span class="line"></span><br><span class="line">obj.loop = obj; // 设置loop成循环引用的属性</span><br><span class="line"></span><br><span class="line">let cloneObj = deepClone(obj);</span><br><span class="line"></span><br><span class="line">cloneObj.arr.push(4);</span><br><span class="line"></span><br><span class="line">console.log(&quot;obj&quot;, obj);</span><br><span class="line"></span><br><span class="line">console.log(&quot;cloneObj&quot;, cloneObj);</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>未分类</category>
       </categories>
@@ -3939,14 +3939,6 @@ pasv_max_port=40100
       </categories>
   </entry>
   <entry>
-    <title>nvm-windows踩坑之旅</title>
-    <url>/2020/04/17/technology/front-end/javascript/nvm-windows/</url>
-    <content><![CDATA[<h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><p><a href="https://github.com/coreybutler/nvm-windows/releases">https://github.com/coreybutler/nvm-windows/releases</a></p>
-<h3 id="安装路径不要有空格"><a href="#安装路径不要有空格" class="headerlink" title="安装路径不要有空格"></a>安装路径不要有空格</h3><p>nvm-windows 对空格支持的不是很好，安装路径最好不要有空格<br>作者说会在1.1.8这个版本解决这个问题<br>This issue should be resolved as of version 1.1.8. Please note I’m woefully behind in cutting this new release, but am working on a new release process. In the meantime, it’s possible to download the source or use a patched version from <a href="https://github.com/s-h-a-d-o-w/nvm-windows/releases">https://github.com/s-h-a-d-o-w/nvm-windows/releases</a> (from the person who submitted the fix).</p>
-<h3 id="使用淘宝镜像"><a href="#使用淘宝镜像" class="headerlink" title="使用淘宝镜像"></a>使用淘宝镜像</h3><p>如果用 nvm 安装 node 和 npm 很慢，可以配置 nvm 使用淘宝镜像<br>nvm node_mirror <a href="https://npm.taobao.org/mirrors/node/">https://npm.taobao.org/mirrors/node/</a><br>nvm npm_mirror <a href="https://npm.taobao.org/mirrors/npm/">https://npm.taobao.org/mirrors/npm/</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>npm和yarn和pnpm</title>
     <url>/2019/08/10/technology/front-end/javascript/npm%E5%92%8Cyarn/</url>
     <content><![CDATA[<h2 id="全局操作"><a href="#全局操作" class="headerlink" title="全局操作"></a>全局操作</h2><p>npm 加参数 <code>-g/--global</code></p>
@@ -3978,28 +3970,12 @@ pasv_max_port=40100
       </tags>
   </entry>
   <entry>
-    <title>nvm基本使用</title>
-    <url>/2019/12/24/technology/front-end/javascript/nvm%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<p>change mirror</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node</span><br></pre></td></tr></table></figure>
-<p>查看本地</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm list/ls</span><br></pre></td></tr></table></figure>
-<p>查看</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm ls-remote</span><br></pre></td></tr></table></figure>
-<p>安装</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm install &lt;version&gt;</span><br></pre></td></tr></table></figure>
-<p>切换版本</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm use &lt;version&gt;</span><br></pre></td></tr></table></figure>
-<p>查看当前版本</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm current</span><br></pre></td></tr></table></figure>
-<p>设置默认版本</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm alias default &lt;version&gt;</span><br></pre></td></tr></table></figure>
-
-<p>参考文档<br><a href="https://www.jianshu.com/p/e21e3783304f">https://www.jianshu.com/p/e21e3783304f</a></p>
+    <title>nvm-windows踩坑之旅</title>
+    <url>/2020/04/17/technology/front-end/javascript/nvm-windows/</url>
+    <content><![CDATA[<h3 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h3><p><a href="https://github.com/coreybutler/nvm-windows/releases">https://github.com/coreybutler/nvm-windows/releases</a></p>
+<h3 id="安装路径不要有空格"><a href="#安装路径不要有空格" class="headerlink" title="安装路径不要有空格"></a>安装路径不要有空格</h3><p>nvm-windows 对空格支持的不是很好，安装路径最好不要有空格<br>作者说会在1.1.8这个版本解决这个问题<br>This issue should be resolved as of version 1.1.8. Please note I’m woefully behind in cutting this new release, but am working on a new release process. In the meantime, it’s possible to download the source or use a patched version from <a href="https://github.com/s-h-a-d-o-w/nvm-windows/releases">https://github.com/s-h-a-d-o-w/nvm-windows/releases</a> (from the person who submitted the fix).</p>
+<h3 id="使用淘宝镜像"><a href="#使用淘宝镜像" class="headerlink" title="使用淘宝镜像"></a>使用淘宝镜像</h3><p>如果用 nvm 安装 node 和 npm 很慢，可以配置 nvm 使用淘宝镜像<br>nvm node_mirror <a href="https://npm.taobao.org/mirrors/node/">https://npm.taobao.org/mirrors/node/</a><br>nvm npm_mirror <a href="https://npm.taobao.org/mirrors/npm/">https://npm.taobao.org/mirrors/npm/</a></p>
 ]]></content>
-      <categories>
-        <category>未分类</category>
-      </categories>
   </entry>
   <entry>
     <title>promise如何解决回调地狱</title>
@@ -4082,19 +4058,28 @@ pasv_max_port=40100
       </categories>
   </entry>
   <entry>
-    <title>Vue2源码学习</title>
-    <url>/2021/04/20/technology/front-end/javascript/vue%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/</url>
-    <content><![CDATA[<h3 id="new-Vue-都发生了什么"><a href="#new-Vue-都发生了什么" class="headerlink" title="new Vue 都发生了什么"></a>new Vue 都发生了什么</h3><p>new vue &#x3D;&gt; init &#x3D;&gt; $mount &#x3D;&gt; compile &#x3D;&gt; render &#x3D;&gt; vnode &#x3D;&gt; patch &#x3D;&gt; DOM</p>
-<h3 id="响应式原理"><a href="#响应式原理" class="headerlink" title="响应式原理"></a>响应式原理</h3><h4 id="依赖收集"><a href="#依赖收集" class="headerlink" title="依赖收集"></a>依赖收集</h4><h4 id="依赖触发"><a href="#依赖触发" class="headerlink" title="依赖触发"></a>依赖触发</h4><h4 id="nextTick"><a href="#nextTick" class="headerlink" title="nextTick"></a>nextTick</h4><h4 id="如何实现"><a href="#如何实现" class="headerlink" title="如何实现"></a>如何实现</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Object.defineProperty()</span><br></pre></td></tr></table></figure>
+    <title>nvm基本使用</title>
+    <url>/2019/12/24/technology/front-end/javascript/nvm%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>change mirror</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node</span><br></pre></td></tr></table></figure>
+<p>查看本地</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm list/ls</span><br></pre></td></tr></table></figure>
+<p>查看</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm ls-remote</span><br></pre></td></tr></table></figure>
+<p>安装</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm install &lt;version&gt;</span><br></pre></td></tr></table></figure>
+<p>切换版本</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm use &lt;version&gt;</span><br></pre></td></tr></table></figure>
+<p>查看当前版本</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm current</span><br></pre></td></tr></table></figure>
+<p>设置默认版本</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nvm alias default &lt;version&gt;</span><br></pre></td></tr></table></figure>
 
-<h3 id="Virtural-Dom"><a href="#Virtural-Dom" class="headerlink" title="Virtural Dom"></a>Virtural Dom</h3><h3 id="编译原理"><a href="#编译原理" class="headerlink" title="编译原理"></a>编译原理</h3>]]></content>
+<p>参考文档<br><a href="https://www.jianshu.com/p/e21e3783304f">https://www.jianshu.com/p/e21e3783304f</a></p>
+]]></content>
       <categories>
-        <category>technology</category>
-        <category>front-end</category>
+        <category>未分类</category>
       </categories>
-      <tags>
-        <tag>vue</tag>
-      </tags>
   </entry>
   <entry>
     <title>为什么 js 的 forEach 不支持 await</title>
@@ -4115,5 +4100,20 @@ pasv_max_port=40100
         <category>front-end</category>
         <category>js</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Vue2源码学习</title>
+    <url>/2021/04/20/technology/front-end/javascript/vue%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/</url>
+    <content><![CDATA[<h3 id="new-Vue-都发生了什么"><a href="#new-Vue-都发生了什么" class="headerlink" title="new Vue 都发生了什么"></a>new Vue 都发生了什么</h3><p>new vue &#x3D;&gt; init &#x3D;&gt; $mount &#x3D;&gt; compile &#x3D;&gt; render &#x3D;&gt; vnode &#x3D;&gt; patch &#x3D;&gt; DOM</p>
+<h3 id="响应式原理"><a href="#响应式原理" class="headerlink" title="响应式原理"></a>响应式原理</h3><h4 id="依赖收集"><a href="#依赖收集" class="headerlink" title="依赖收集"></a>依赖收集</h4><h4 id="依赖触发"><a href="#依赖触发" class="headerlink" title="依赖触发"></a>依赖触发</h4><h4 id="nextTick"><a href="#nextTick" class="headerlink" title="nextTick"></a>nextTick</h4><h4 id="如何实现"><a href="#如何实现" class="headerlink" title="如何实现"></a>如何实现</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Object.defineProperty()</span><br></pre></td></tr></table></figure>
+
+<h3 id="Virtural-Dom"><a href="#Virtural-Dom" class="headerlink" title="Virtural Dom"></a>Virtural Dom</h3><h3 id="编译原理"><a href="#编译原理" class="headerlink" title="编译原理"></a>编译原理</h3>]]></content>
+      <categories>
+        <category>technology</category>
+        <category>front-end</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
   </entry>
 </search>
